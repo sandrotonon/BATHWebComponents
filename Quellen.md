@@ -1,0 +1,2 @@
+- http://www.peterkroener.de/web-components-erklaert-teil-1-was-sind-web-components/
+- http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/
