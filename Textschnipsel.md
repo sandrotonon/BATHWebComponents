@@ -9,6 +9,6 @@ Translation: Let's say you have a style tag in the shadow DOM that specifies all
 
 And if, at some point, the parent document goes looking for h3's with $('h3'), the shadow boundary will prevent any exploration into the shadow root and the selection will only return h3's that are external to the shadow DOM.
 
-**This level of privacy is something that we've dreamed about and worked around for years. To say that it will change the way we build web applications is a total understatement.**
+*This level of privacy is something that we've dreamed about and worked around for years. To say that it will change the way we build web applications is a total understatement.*
 
 Source: https://css-tricks.com/modular-future-web-components/
