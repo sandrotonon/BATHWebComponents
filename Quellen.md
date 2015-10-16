@@ -2,6 +2,7 @@
 
 - http://www.peterkroener.de/web-components-erklaert-teil-1-was-sind-web-components/
 - Shadow Dom 101: http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/
+- https://css-tricks.com/modular-future-web-components/
 
 
 ## Web Components erklärt Serie:
