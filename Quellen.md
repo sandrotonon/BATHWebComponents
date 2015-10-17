@@ -4,6 +4,10 @@
 - Shadow Dom 101: http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/
 - https://css-tricks.com/modular-future-web-components/
 
+### Custom Elements
+- http://www.html5rocks.com/en/tutorials/webcomponents/customelements/
+- http://webcomponents.org/polyfills/custom-elements/
+
 
 ## Web Components erklärt Serie:
 

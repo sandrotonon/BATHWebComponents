@@ -2,7 +2,6 @@
 
 (Entwickelt wird in einer Virtuellen Maschine unter Virtual Box, die erstellt wird mit Hilfe von Vagrant. Dies bietet Vorteile in Geschwindigkeit und Flexibilität. In dieser VM kann dann mit Hilfe von Node.js ein präprocessor für LESS erstellt werden. Weitere Vorteile folgen.)
 
-<<<<<<< HEAD
 auf computer installieren:
 - node.js
 - grunt
@@ -13,10 +12,6 @@ auf computer installieren:
 
 siehe tut: https://www.youtube.com/watch?v=ATPXN1-AWs8
 
-
-=======
->>>>>>> 1726317cfc64edbf8f1879a8ea040362a5b1ddc0
-Entwickelt wird in einem XAMPP Container unter Windows, sowie LAMPP unter MAC OS X.
 
 Zur Hilfe genommen wird ebenfalls GIT und ein öffentliches Repository auf Github.
 

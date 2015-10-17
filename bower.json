@@ -1,7 +1,9 @@
 {
   "name": "thesis",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "webcomponentsjs": "~0.7.15"
+  },
   "devDependencies": {
     "chai": "~3.3.0",
     "mocha": "~2.3.3"
