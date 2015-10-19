@@ -1,1 +1,22 @@
 # Inhaltsverzeichnis
+
+- Einführung
+  - Entwicklungsumgebung
+- Web Components
+  - Problemlösung
+  - Web Components Technology Stack
+    - Custom Elements
+    - ShadowDOM
+    - HTML Templates
+    - HTML Imports
+    - Beispiele
+  - Polyfill webcomponents.js
+    - Unterstüzung
+    - Performance
+  - Barrierefreiheit
+  - Vorteile für Seitenbau
+  - Bedeutung für Seitenbau
+  - Vorteile durch Nichtnutzung
+- Polymer 1.0
+  - Zusammenhang mit Angular
+- Zukunftsprognose
