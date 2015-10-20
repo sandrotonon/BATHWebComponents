@@ -22,3 +22,8 @@ https://www.youtube.com/watch?v=8OJ7ih8EE7s (pros von WC bei 32:52)
 
 *Talk über den CSS + Web Components Zusammenhang*
 https://www.youtube.com/watch?v=QHxrr6Q82yI
+
+*A No-Nonsense Guide to Web Components*
+http://cbateman.com/blog/a-no-nonsense-guide-to-web-components-part-1-the-specs/
+http://cbateman.com/blog/a-no-nonsense-guide-to-web-components-part-2-practical-use/
+http://cbateman.com/blog/web-components-in-angular-ember-and-react/
