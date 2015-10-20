@@ -10,6 +10,7 @@
 - http://www.html5rocks.com/en/tutorials/webcomponents/customelements/
 - http://webcomponents.org/polyfills/custom-elements/
 - http://www.w3.org/TR/custom-elements/
+- https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Object/create
 
 ### ShadowDOM
 - http://robdodson.me/shadow-dom-css-cheat-sheet/

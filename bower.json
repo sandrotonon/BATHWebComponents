@@ -2,7 +2,8 @@
   "name": "thesis",
   "private": true,
   "dependencies": {
-    "webcomponentsjs": "~0.7.15"
+    "webcomponentsjs": "~0.7.15",
+    "highlightjs": "~8.8.0"
   },
   "devDependencies": {
     "chai": "~3.3.0",

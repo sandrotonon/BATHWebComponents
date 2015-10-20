@@ -36,3 +36,7 @@ Die Web-Component-Performance-Problematik löst sich also im Laufe der Zeit von 
 
 ## Github benutzt Web Components
 https://github.com/github/time-elements
+
+
+## Vorteile / Nachteile
++ Wartbar
