@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Custom-Elements - Snippets - Thesis</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/bower_components/highlightjs/styles/github.css">
+    <style>
+      :unresolved {
+        color: red;
+      }
+    </style>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    <div class="hero-unit">
+      <a href="/">Startseite</a>
+
+      <ul>
+        <li><a href="#unregistered">Unregistered Custom Element</a></li>
+        <li><a href="#registered">Registered Custom Element</a></li>
+        <li><a href="#extended">Extended HTML Element</a></li>
+        <li><a href="#functional">Extended und functional HTML Element</a></li>
+        <li><a href="#shadow">Custom Element im ShadowDOM HTML Element</a></li>
+        <li><a href="#template">Custom Element aus einem Template</a></li>
+        <li><a href="#quellen">Quellen</a></li>
+      </ul>
+
+      <section id="unregistered">
+        <h2>Unresolved Custom Element</h2>
+        <p>Dieses Snippet zeigt die Umsetzung eines unregistered 'Custom Elements'.</p>
+
+        <p><unregistered-element>Ich bin unresolved!</unregistered-element></p>
+        <pre><code>
+          &lt;style&gt;
+            :unresolved {
+              color: red;
+            }
+          &lt;/style&gt;
+
+          &lt;unregistered-element&gt;Ich bin unresolved!&lt;/unregistered-element&gt;
+        </code></pre>
+      </section>
+
+      <section id="registered">
+        <h2>Registered Custom Element</h2>
+        <p>Dieses Snippet zeigt die Umsetzung eines registered 'Custom Elements'.</p>
+
+        <p><registered-element>Ich bin registered!</registered-element></p>
+        <pre><code>
+          &lt;style&gt;
+            :unresolved {
+              color: red;
+            }
+          &lt;/style&gt;
+
+          &lt;registered-element&gt;Ich bin registered!&lt;/registered-element&gt;
+        </code></pre>
+
+        <script>
+          var Registered = document.registerElement('registered-element');
+          document.body.appendChild(new Registered());
+        </script>
+      </section>
+
+      <section id="extended">
+        <h2>Extended HTML Element</h2>
+        <p>Dieses Snippet zeigt die Umsetzung eines extended HTML Elements. In diesem Fall ein Button.</p>
+
+        <p><button is="extended-button">Ich bin ein extended-button!</button></p>
+        <pre><code>
+          &lt;button is="extended-button"&gt;Ich bin ein extended-button!&lt;/button&gt;
+        </code></pre>
+
+        <script>
+          var ExtendedButton = document.registerElement('extended-button', {
+            prototype: Object.create(HTMLButtonElement.prototype),
+            extends: 'button'
+          });
+        </script>
+      </section>
+
+      <section id="functional">
+        <h2>Functional HTML Element</h2>
+        <p>Dieses Snippet zeigt die Umsetzung eines funktionellen HTML Elements. In diesem Fall ein Button.</p>
+
+        <p><button is="functional-button">Ich bin ein functional-button!</button></p>
+        <pre><code>
+          &lt;button is="functional-button"&gt;Ich bin ein functional-button!&lt;/button&gt;
+        </code></pre>
+
+        <script>
+          // Functional Button:
+          var funcButton = Object.create(HTMLElement.prototype, {
+            number: {
+              get: function() { return 42; },
+            },
+            value: {
+              value: "foo"
+            },
+            alert: {
+              value: function() {
+                alert("Ich bin ein Alert!");
+              }
+            }
+          });
+          funcButton.createdCallback = function() {
+            this.addEventListener('click', function(e) {
+              alert('Der Button wurde geklickt!');
+            });
+          };
+          var FunctionalButton = document.registerElement(
+            'functional-button',
+            {
+              prototype: funcButton,
+              extends: "button"
+            }
+          );
+        </script>
+      </section>
+
+      <section id="shadow">
+        <h2>ShadowDOM Custom Element</h2>
+        <p>Dieses Snippet zeigt die Umsetzung eines Custom Elements im ShadowDOM.</p>
+
+        <p><shadow-element>Dieser Text sollte nicht angezeigt werden!</shadow-element></p>
+        <pre><code>
+          &lt;shadow-element&gt;Dieser Text sollte nicht angezeigt werden!&lt;/shadow-element&gt;
+        </code></pre>
+
+        <script>
+          // ShadowDOM Element:
+          var ShadowElementProto = Object.create(HTMLElement.prototype);
+          ShadowElementProto.createdCallback = function() {
+            var shadow = this.createShadowRoot();
+            shadow.innerHTML = "<b>Ich bin im ShadowDOM!</b>";
+          };
+
+          var ShadowElement = document.registerElement('shadow-element', {prototype: ShadowElementProto});
+        </script>
+      </section>
+
+      <section id="template">
+        <h2>Element aus einem Template</h2>
+        <p>Dieses Snippet zeigt die Umsetzung eines Custom Elements im ShadowDOM aus einem Template.</p>
+
+        <template id="mytemplate">
+          <style>
+            p {
+              color: blue;
+            }
+          </style>
+          <p>Ich bin im Shadow DOM und wurde aus einem &lt;template&gt; erzeugt!</p>
+        </template>
+
+        <p><shadowdom-template>Dieser Text sollte nicht angezeigt werden!</shadowdom-template></p>
+        <pre><code>
+          &lt;shadowdom-template&gt;Dieser Text sollte nicht angezeigt werden!&lt;/shadowdom-template&gt;
+        </code></pre>
+
+        <script>
+          var shadow = Object.create(HTMLElement.prototype, {
+            createdCallback: {
+              value: function() {
+                var template = document.querySelector('#mytemplate');
+                var node = document.importNode(template.content, true);
+                this.createShadowRoot().appendChild(node);
+              }
+            }
+          });
+          document.registerElement('shadowdom-template', {prototype: shadow});
+          </script>
+      </section>
+
+      <section id="quellen">
+        <h3>Quellen</h3>
+        <ul>
+          <li><a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Object/create">https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Object/create</a></li>
+          <li><a href="http://www.html5rocks.com/en/tutorials/webcomponents/customelements/">http://www.html5rocks.com/en/tutorials/webcomponents/customelements/</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get</a></li>
+          <li><a href="https://developer.mozilla.org/de/docs/Web/HTML/Element/template">https://developer.mozilla.org/de/docs/Web/HTML/Element/template</a></li>
+        </ul>
+      </section>
+    </div>
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/webcomponentsjs/webcomponents.js"></script>
+    <script src="/bower_components/highlightjs/highlight.pack.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
