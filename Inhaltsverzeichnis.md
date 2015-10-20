@@ -2,21 +2,32 @@
 
 - Einführung
   - Entwicklungsumgebung
-- Web Components
+- Web Components nach W3C
   - Problemlösung
   - Web Components Technology Stack
     - Custom Elements
+      - Erzeugen
+      - Erweitern - type extensions
     - ShadowDOM
+      - Insertion Points
     - HTML Templates
     - HTML Imports
     - Beispiele
+    - Performance
   - Polyfill webcomponents.js
     - Unterstüzung
+      - Dringlichkeit bei Microsoft
     - Performance
   - Barrierefreiheit
+  - Responsive Design mit WebComponents
+  - SEO
+  - Probleme
   - Vorteile für Seitenbau
   - Bedeutung für Seitenbau
   - Vorteile durch Nichtnutzung
 - Polymer 1.0
+  - How-To
+  - Beispiele
+  - Architektur
   - Zusammenhang mit Angular
 - Zukunftsprognose
