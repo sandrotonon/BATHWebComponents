@@ -14,7 +14,7 @@
 
 ### ShadowDOM
 - http://robdodson.me/shadow-dom-css-cheat-sheet/
-- http://www.w3.org/TR/shadow-dom/
+- http://w3c.github.io/webcomponents/spec/shadow/#concepts
 
 ### HTML Templates
 - https://frontend.namics.com/2014/03/20/web-components-html-templates-2/

@@ -1,5 +1,4 @@
 # Notizen
-
 Shadow Dom ist für Screenreader uä. kein problem
 
 ## Erste Schritte
@@ -40,3 +39,8 @@ https://github.com/github/time-elements
 
 ## Vorteile / Nachteile
 + Wartbar
+
+## Styling
+- http://philipwalton.com/articles/extending-styles/
+- https://www.polymer-project.org/1.0/docs/devguide/styling.html#style-modules
+  |- Shared Styles (Polymer - Auch ohne Polymer umsetzbar?)
