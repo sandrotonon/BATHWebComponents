@@ -18,4 +18,5 @@ Zur Hilfe genommen wird ebenfalls GIT und ein öffentliches Repository auf Githu
 Eingesetzte Tools:
 - Sublime Text
 - Git
-- Google Chrome
+- Google Chrome (v46)
+- Firefox (v41.0.2)
