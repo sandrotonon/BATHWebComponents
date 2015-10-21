@@ -44,3 +44,8 @@ https://github.com/github/time-elements
 - http://philipwalton.com/articles/extending-styles/
 - https://www.polymer-project.org/1.0/docs/devguide/styling.html#style-modules
   |- Shared Styles (Polymer - Auch ohne Polymer umsetzbar?)
+
+## Polymer Methapher
+HTML standard-Tags sind Atome. Polymer / Web Components bauen Atome zusammen zu Molekülen, die Komponenten
+Aus der verdrahtung der kleinen Teile wird zu Engeneering
+ermöglich libraries, plattformen die wiederverwendbar sind
