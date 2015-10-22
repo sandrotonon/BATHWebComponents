@@ -1,5 +1,5 @@
 # Notizen
-Shadow Dom ist für Screenreader uä. kein problem
+- Shadow Dom ist für Screenreader uä. kein problem
 
 ## Erste Schritte
 
@@ -40,12 +40,30 @@ https://github.com/github/time-elements
 ## Vorteile / Nachteile
 + Wartbar
 
+
 ## Styling
 - http://philipwalton.com/articles/extending-styles/
 - https://www.polymer-project.org/1.0/docs/devguide/styling.html#style-modules
   |- Shared Styles (Polymer - Auch ohne Polymer umsetzbar?)
 
+
+- Mozilla - The state of WebComponents: https://hacks.mozilla.org/2015/06/the-state-of-web-components/
+
+
+## Microsoft und WebComponents
+- https://entwickler.de/online/web/web-components-microsoft-edge-167732.html
+
+
 ## Polymer Methapher
 HTML standard-Tags sind Atome. Polymer / Web Components bauen Atome zusammen zu Molekülen, die Komponenten
 Aus der verdrahtung der kleinen Teile wird zu Engeneering
 ermöglich libraries, plattformen die wiederverwendbar sind
+
+
+## https://blogs.windows.com/msedgedev/2015/07/14/bringing-componentization-to-the-web-an-overview-of-web-components/
+Bringing Componentization to the Web: An Overview of Web Components (part 1):
+
+The goal of web components is to reduce complexity by isolating a related group of HTML, CSS, and JavaScript to perform a common function within the context of a single page.
+
+### CSS style isolation
+There is no great way to componentize CSS natively in the platform today (though tools like Sass can certainly help). A component model must support a way to *isolate some set of CSS from another* such that the rules defined in one don’t interfere with the other. Additionally, component styles should apply only to the necessary parts of the component and nothing else.

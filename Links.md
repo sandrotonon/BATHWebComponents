@@ -28,3 +28,9 @@ https://www.youtube.com/watch?v=QHxrr6Q82yI
 http://cbateman.com/blog/a-no-nonsense-guide-to-web-components-part-1-the-specs/
 http://cbateman.com/blog/a-no-nonsense-guide-to-web-components-part-2-practical-use/
 http://cbateman.com/blog/web-components-in-angular-ember-and-react/
+
+*CSS Custom Properties*
+http://www.w3.org/TR/css-variables/
+
+*Web Components - Vom Aussterben bedroht?*
+https://entwickler.de/online/web/web-components-vom-aussterben-bedroht-165829.html

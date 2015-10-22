@@ -11,6 +11,7 @@
 - http://webcomponents.org/polyfills/custom-elements/
 - http://www.w3.org/TR/custom-elements/
 - https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Object/create
+- http://www.smashingmagazine.com/2014/03/introduction-to-custom-elements/
 
 ### ShadowDOM
 - http://robdodson.me/shadow-dom-css-cheat-sheet/

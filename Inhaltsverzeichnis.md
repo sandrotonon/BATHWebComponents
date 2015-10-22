@@ -1,5 +1,6 @@
 # Inhaltsverzeichnis
 
+- Fix:
 - Einführung
   - Entwicklungsumgebung
 - Web Components nach W3C
@@ -12,22 +13,25 @@
       - Insertion Points
     - HTML Templates
     - HTML Imports
+    - (Custom Properties)
     - Beispiele
     - Performance
   - Polyfill webcomponents.js
-    - Unterstüzung
-      - Dringlichkeit bei Microsoft
+    - Unterstützung
     - Performance
-  - Barrierefreiheit
+
+- Nicht Fix:
+  - (Barrierefreiheit)
   - Responsive Design mit WebComponents
-  - SEO
+  - (SEO)
+  - CSS Styling
   - Probleme
   - Vorteile für Seitenbau
   - Bedeutung für Seitenbau
   - Vorteile durch Nichtnutzung
 - Polymer 1.0
   - How-To
-  - Beispiele
   - Architektur
+  - Beispiele
   - Zusammenhang mit Angular
 - Zukunftsprognose
