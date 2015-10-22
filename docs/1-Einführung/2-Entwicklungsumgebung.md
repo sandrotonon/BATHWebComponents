@@ -1,3 +1,0 @@
-# Entwicklungsumgebung
-
--- TODO: complete

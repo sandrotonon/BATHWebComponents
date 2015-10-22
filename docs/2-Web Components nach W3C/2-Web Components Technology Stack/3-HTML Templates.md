@@ -1,3 +1,0 @@
-# HTML Templates
-
--- TODO: complete

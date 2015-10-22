@@ -1,3 +1,0 @@
-# Shadow DOM
-
--- TODO: complete
