@@ -1,37 +1,37 @@
 # Inhaltsverzeichnis
 
 - Fix:
-- Einführung
-  - Entwicklungsumgebung
-- Web Components nach W3C
-  - Problemlösung
-  - Web Components Technology Stack
-    - Custom Elements
-      - Erzeugen
-      - Erweitern - type extensions
-    - ShadowDOM
-      - Insertion Points
-    - HTML Templates
-    - HTML Imports
-    - (Custom Properties)
-    - Beispiele
-    - Performance
-  - Polyfill webcomponents.js
-    - Unterstützung
-    - Performance
+  - Einführung
+    - Entwicklungsumgebung
+  - Web Components nach W3C
+    - Problemlösung
+    - Web Components Technology Stack
+      - Custom Elements
+        - Erzeugen
+        - Erweitern - type extensions
+      - ShadowDOM
+        - Insertion Points
+      - HTML Templates
+      - HTML Imports
+      - (Custom Properties)
+      - Beispiele
+      - Performance
+    - Polyfill webcomponents.js
+      - Unterstützung
+      - Performance
 
 - Nicht Fix:
-  - (Barrierefreiheit)
-  - Responsive Design mit WebComponents
-  - (SEO)
-  - CSS Styling
-  - Probleme
-  - Vorteile für Seitenbau
-  - Bedeutung für Seitenbau
-  - Vorteile durch Nichtnutzung
-- Polymer 1.0
-  - How-To
-  - Architektur
-  - Beispiele
-  - Zusammenhang mit Angular
-- Zukunftsprognose
+    - (Barrierefreiheit)
+    - Responsive Design mit WebComponents
+    - (SEO)
+    - CSS Styling
+    - Probleme
+    - Vorteile für Seitenbau
+    - Bedeutung für Seitenbau
+    - Vorteile durch Nichtnutzung
+  - Polymer 1.0
+    - How-To
+    - Architektur
+    - Beispiele
+    - Zusammenhang mit Angular
+  - Zukunftsprognose
