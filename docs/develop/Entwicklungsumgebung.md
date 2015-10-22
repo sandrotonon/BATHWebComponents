@@ -1,7 +1,5 @@
 # Entwicklungsumgebung
 
-(Entwickelt wird in einer Virtuellen Maschine unter Virtual Box, die erstellt wird mit Hilfe von Vagrant. Dies bietet Vorteile in Geschwindigkeit und Flexibilität. In dieser VM kann dann mit Hilfe von Node.js ein präprocessor für LESS erstellt werden. Weitere Vorteile folgen.)
-
 auf computer installieren:
 - node.js
 - grunt
