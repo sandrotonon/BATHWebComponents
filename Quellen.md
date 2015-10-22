@@ -21,9 +21,7 @@
 - https://frontend.namics.com/2014/03/20/web-components-html-templates-2/
 - https://html.spec.whatwg.org/multipage/scripting.html#the-template-element
 
-
 ## Web Components erklärt Serie:
-
 - Teil 1: http://www.peterkroener.de/web-components-erklaert-teil-1-was-sind-web-components/
 - Teil 2: http://www.peterkroener.de/web-components-erklaert-teil-2-web-components-mit-polymer-erstellen/
 - Teil 3: http://www.peterkroener.de/web-components-erklaert-teil-3-native-html-elemente-erweitern/
