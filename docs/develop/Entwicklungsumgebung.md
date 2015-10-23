@@ -7,6 +7,7 @@ auf computer installieren:
 - yeoman
 - webapp
 - reload
+- generator-element
 
 siehe tut: https://www.youtube.com/watch?v=ATPXN1-AWs8
 
