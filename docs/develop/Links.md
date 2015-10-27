@@ -16,6 +16,7 @@ https://ele.io
 https://customelements.io/
 http://builtwithpolymer.org/
 http://web-components.in/
+http://bosonic.github.io/
 
 *Web Performance mit HTTP/2*
 https://schepp.github.io/HTTP-2/
@@ -43,6 +44,7 @@ http://webcomponents.org/articles/introduction-to-custom-elements/
 
 *Shadow DOM*
 http://meowni.ca/posts/styling-the-dome/
+http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/
 
 *HTML Templates*
 

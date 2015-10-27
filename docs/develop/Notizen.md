@@ -39,6 +39,7 @@ https://github.com/github/time-elements
 
 ## Vorteile / Nachteile
 + Wartbar
++ Vorteile hier: https://medium.com/@kaelig/why-web-components-will-make-the-web-a-better-place-for-our-users-38dc3154fc1d#.vnd37gx9h
 - Einige Nachteile hier: http://ianfeather.co.uk/practical-questions-around-web-components/
 
 
