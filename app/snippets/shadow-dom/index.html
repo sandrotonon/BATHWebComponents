@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Shadow DOM - Snippets - Thesis</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/bower_components/highlightjs/styles/github.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    <div class="hero-unit">
+      <a href="/">Startseite</a>
+
+      <ul>
+        <li><a href="#instertion">Insertion Point</a></li>
+        <li><a href="#multipleinsertionpoints">Mehrere Insertion Points in einer Komponente</a></li>
+        <li><a href="#quellen">Quellen</a></li>
+      </ul>
+
+      <section id="instertion">
+        <h2>Insertion Point <small>1)</small></h2>
+        <p>Dieses Snippet zeigt den 'Insertion Point' bei einem template.</p>
+
+        <!-- Inhalt wird nur angezeigt, wenn im template das content tag eingebaut ist
+        - der Insertion Point -->
+        <div id="name">Fo<o/div>
+        <template id="myTemplate">
+          <style>
+            .test {
+              color: red;
+            }
+          </style>
+
+          <div class="test">
+            Hallo <content></content>
+          </div>
+        </template>
+
+        <script>
+          var shadow = document.querySelector('#name').createShadowRoot();
+          var template = document.querySelector('#myTemplate');
+          var clone = document.importNode(template.content, true);
+          shadow.appendChild(clone);
+        </script>
+      </section>
+
+      <section id="multipleinsertionpoints">
+        <h2>Insertion Point <small>1)</small></h2>
+        <p>Dieses Snippet zeigt mehrere 'Insertion Points' in einem template.</p>
+
+        <!-- Inhalt wird nur angezeigt, wenn im template das content tag eingebaut ist - der Insertion Point -->
+        <div id="multiple">
+          <div class="foo">div Foo</div>
+          <p>Dieser Paragraph steht vor den divs, wird aber später gerendert</p>
+          <div class="bar">div Bar</div>
+          <p>Paragraph 2</p>
+        </div>
+        <template id="myMultipleTemplate">
+          <style>
+            .test {
+              color: red;
+            }
+          </style>
+
+          <div class="test">
+            <content select=".foo"></content>
+            <content select="p"></content>
+          </div>
+        </template>
+
+        <script>
+          var shadow = document.querySelector('#multiple').createShadowRoot();
+          var template = document.querySelector('#myMultipleTemplate');
+          var clone = document.importNode(template.content, true);
+          shadow.appendChild(clone);
+        </script>
+      </section>
+
+      <section id="quellen">
+        <h3>Quellen</h3>
+        <ul>
+          <li><a href="http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/">1) http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/</a></li>
+        </ul>
+      </section>
+    </div>
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/webcomponentsjs/webcomponents.js"></script>
+    <script src="/bower_components/highlightjs/highlight.pack.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

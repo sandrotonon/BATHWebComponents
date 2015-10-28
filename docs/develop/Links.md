@@ -9,10 +9,14 @@
 - http://webkrauts.de/artikel/2014/das-web-der-zukunft
 - https://blog.selfhtml.org/2014/12/09/web-components-eine-einfuehrung/
 
+*Custom Element Online Editor and Sharer*
+https://ele.io
+
 *Datenbank von Web Components*
 https://customelements.io/
 http://builtwithpolymer.org/
 http://web-components.in/
+http://bosonic.github.io/
 
 *Web Performance mit HTTP/2*
 https://schepp.github.io/HTTP-2/
@@ -39,6 +43,8 @@ http://cbateman.com/blog/web-components-in-angular-ember-and-react/
 http://webcomponents.org/articles/introduction-to-custom-elements/
 
 *Shadow DOM*
+http://meowni.ca/posts/styling-the-dome/
+http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/
 
 *HTML Templates*
 
