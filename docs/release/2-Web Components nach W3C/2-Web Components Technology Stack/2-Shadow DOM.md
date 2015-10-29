@@ -6,7 +6,7 @@
 
 
 ## Einführung
-![Image of Yaktocat](/thesis/app/imgages/input_type_password.jpg)
+![Image of Yaktocat](https://github.com/Glur4k/BATHWebComponents/blob/master/app/images/input_type_password.jpg)
 - Shadow DOM Beispiel mit einem &lt;input type="password"&gt; bei dem man im Shadow DOM den plaintext sieht
 
 
