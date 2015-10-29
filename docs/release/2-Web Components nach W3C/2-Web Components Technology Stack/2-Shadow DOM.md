@@ -5,10 +5,15 @@
   - Content projecting mehr Inhalt
   - Beispiel
 
+- Ausformulieren:
+  - Complete
+
 
 ## Einführung
 ![Bild eines input type="password"](https://github.com/Glur4k/BATHWebComponents/blob/master/app/images/input_type_password.jpg)
-- Shadow DOM Beispiel mit einem &lt;input type="password"&gt; bei dem man im Shadow DOM den plaintext sieht
+- Shadow DOM Beispiel mit einem &lt;input type="password"&gt; bei dem man im Shadow DOM den Plaintext sieht.
+- Bild von W3C mit dem Light DOM, Shadow DOM und der Boundary
+- Shadow DOM liegt neben dem Light DOM
 
 
 ## Content projecting
@@ -54,7 +59,7 @@
   - CCS Variablen
     (http://dev.w3.org/csswg/css-variables/)
     - Eine Komponente hält im Inneren Variablen für das Aussehen, somit wir das Styling nach außen gegeben
-      z.b.:
+      z.B.:
 
       ```CSS
       my-button {
