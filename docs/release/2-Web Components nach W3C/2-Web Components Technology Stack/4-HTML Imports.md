@@ -1,9 +1,12 @@
 # HTML Imports
 
--- TODO: complete
+- TODO:
+  - Einführung
+  - Performance
 
-- Praktisch alle Plattformen erlauben es, Code zum Importieren, nicht nicht das Web.
-- Sind HTML Imports nicht schlecht für die Performance? Noch: JA, aber ab HTTP2 nicht mehr! (*Vulcanize.js*)
+
+## Einführung
+- Praktisch alle Plattformen erlauben es, Code zum Importieren, nur nicht das Web.
 
 
 ## Performance
@@ -16,7 +19,10 @@
 
 > Die Web-Component-Performance-Problematik löst sich also im Laufe der Zeit von selbst. Bis dahin kann man sich mit *Vulcanize*, einem Tool zum Zusammenfassen von HTML-Imports inklusive aller Ressourcen in eine einzige Datei, behelfen.
 
+Quelle: 1)
+
 
 ## Quellen
+1) http://www.peterkroener.de/fragen-zu-html5-und-co-beantwortet-15-web-components-performance-css-variablen-data-urls-async/
 - http://www.hongkiat.com/blog/html-import/
 - http://webcomponents.org/articles/introduction-to-html-imports/
