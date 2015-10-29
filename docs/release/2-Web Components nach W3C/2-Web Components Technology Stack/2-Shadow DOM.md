@@ -47,7 +47,7 @@
 
       ```CSS
       my-button {
-        color: var(--button-theme-color, red); #(red wäre default)
+        color: var(--button-theme-color, red);  // (red wäre default)
         font-family: var(--button-theme-font);
       }
       ```
