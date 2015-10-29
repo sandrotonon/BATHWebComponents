@@ -33,7 +33,8 @@
     (http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/#toc-distributed)
     - Elemente, die in ein &lt;content> projiziert werden, können auch von innen gestyled werden
       z.b. (in einer Komponente):
-      ```
+
+      ```CSS
       ::content p {
         color: red;
       }
@@ -43,14 +44,16 @@
     (http://dev.w3.org/csswg/css-variables/)
     - Eine Komponente hält im Inneren Variablen für das Aussehen, somit wir das Styling nach außen gegeben
       z.b.:
-      ```
+
+      ```CSS
       my-button {
         color: var(--button-theme-color, red); (pink wäre default)
         font-family: var(--button-theme-font);
       }
       ```
       Der Entwickler kann nun von außen die Variablen instanzieren mit
-      ```
+
+      ```CSS
       #host {
         --button-theme-color: red;
         --button-theme-font:  Arial;
