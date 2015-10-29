@@ -23,14 +23,14 @@
 
 ## Styling mit CSS
 - Shadow Boundary: Styles gehen nicht aus Shadow Dom raus, und keine rein.
-  -> Style Kapselung out of the Box!
-- Styling des host-elements mit :host selector
+  -> Style Kapselung "out of the box"!
+- Styling des host-Elements mit :host *selector*
   -> Allerdings überschreiben die inneren Styles nicht die Inneren!
   (Siehe snippets/shadow-dom/#styling)
   -> Wichtig bei "Reacting to user states"
 - Styling des Hosts in abhängigkeit des Kontextes mit :host-context
   (https://drafts.csswg.org/css-scoping/#selectordef-host-context)
-  z.b. :host-context(.wrapper)
+  z.B. :host-context(.wrapper)
 - Styling des Shadow DOM von außerhalb
   - ::shadow
     - z.b.: my-element::shadow .content {} spricht .content elemente IN einem Shadow DOM an
@@ -38,12 +38,12 @@
   - >>> (ehem. /deep/)
     (https://drafts.csswg.org/css-scoping-1/#deep-combinator)
     - z.b.: my-element >>> .different spricht ALLE .different Elemente in my-element an, egal wieviele Shadow DOMS noch darunter geschachtelt sind
-    - So können z.b. "Style-hooks" erzeugt werden, die es Entwicklern ermöglicht eigene Styles auf ein Component zu binden
+    - So können z.B. "Style-hooks" erzeugt werden, die es Entwicklern ermöglicht eigene Styles auf ein Component zu binden
       some-element >>> .custom-theme { ... }
   - ::slotted (ehem. ::content)
     (http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/#toc-distributed)
     - Elemente, die in ein &lt;content> projiziert werden, können auch von innen gestyled werden
-      z.b. (in einer Komponente):
+      z.B. (in einer Komponente):
 
       ```CSS
       ::content p {
@@ -70,7 +70,7 @@
         --button-theme-font:  Arial;
       }
       ```
-  - Mit ::shadow und >>> können native Elemente, die einen Shadow DOM benutzen, gestyled werden, z.b &lt;video&gt; oder &lt;input&gt; Elemente
+  - Mit ::shadow und >>> können native Elemente, die einen Shadow DOM benutzen, gestyled werden, wie z.B. &lt;video&gt; oder &lt;input&gt; Elemente
   - Jedoch sprengt das das Prinzip der Kapselung, das man mit Web Components versucht zu gewinnen, jedoch sollten Web Entwickler natürlich dennoch die Möglichkeit haben, fremde Components zu stylen, wenn sie wissen was sie machen.
 - Alles wird durch Polyfills abgedeckt
 
