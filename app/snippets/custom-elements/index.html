@@ -149,7 +149,7 @@
           // ShadowDOM Element:
           var ShadowElementProto = Object.create(HTMLElement.prototype);
           ShadowElementProto.createdCallback = function() {
-            var shadow = this.createShadowRoot();
+            var shadow = this.createShadowRoot({mode: 'open'});
             shadow.innerHTML = "<b>Ich bin im ShadowDOM!</b>";
           };
 
