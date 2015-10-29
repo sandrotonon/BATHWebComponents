@@ -11,6 +11,7 @@
       - Erweitern - type extensions
     - ShadowDOM
       - Insertion Points
+      - CSS Styling
     - HTML Templates
     - HTML Imports
     - (Custom Properties)
@@ -19,9 +20,8 @@
   - Polyfill webcomponents.js
     - Unterstützung
     - Performance
-  - Responsive Design mit WebComponents
+  - (Responsive Design mit WebComponents)
   - (SEO)
-  - CSS Styling
   - Probleme
 
 :: ~60%
