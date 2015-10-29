@@ -62,3 +62,6 @@ http://blogs.windows.com/msedgedev/2015/07/15/microsoft-edge-and-web-components/
 
 *Polymer Einführungs Beispiel*
 http://www.smashingmagazine.com/2015/10/responsive-material-design-app-with-polymer-starter-kit/
+
+#Präsentation über Web Components - relativ aktuell*
+https://philipwalton.github.io/talks/2015-10-26/#1
