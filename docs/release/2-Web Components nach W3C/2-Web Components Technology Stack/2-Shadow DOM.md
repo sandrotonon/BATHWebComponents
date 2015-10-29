@@ -1,8 +1,7 @@
 # Shadow DOM
 
--- TODO: complete
-
-Wichtig: http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/
+-- TODO: - Einführung
+         - Insertion Points
 
 ## Einführung
 - Shadow DOM Beispiel mit einem &lt;input type="password"&gt; bei dem man im Shadow DOM den plaintext sieht
