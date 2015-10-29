@@ -1,7 +1,8 @@
 # Shadow DOM
 
--- TODO: - Einführung
-         - Insertion Points
+- TODO:
+  - Einführung
+  - Insertion Points
 
 ## Einführung
 - Shadow DOM Beispiel mit einem &lt;input type="password"&gt; bei dem man im Shadow DOM den plaintext sieht
