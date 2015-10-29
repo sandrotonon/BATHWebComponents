@@ -2,11 +2,12 @@
 
 - TODO:
   - Einführung
-  - Insertion Points
+  - Content projecting mehr Inhalt
+  - Beispiel
 
 
 ## Einführung
-![Image of Yaktocat](https://github.com/Glur4k/BATHWebComponents/blob/master/app/images/input_type_password.jpg)
+![Bild eines input type="password"](https://github.com/Glur4k/BATHWebComponents/blob/master/app/images/input_type_password.jpg)
 - Shadow DOM Beispiel mit einem &lt;input type="password"&gt; bei dem man im Shadow DOM den plaintext sieht
 
 
@@ -33,7 +34,7 @@
 - Styling des Shadow DOM von außerhalb
   - ::shadow
     - z.b.: my-element::shadow .content {} spricht .content elemente IN einem Shadow DOM an
-    - Styles alle elemente in DIESEM Shadow DOM
+    - Styled alle elemente in DIESEM Shadow DOM
   - >>> (ehem. /deep/)
     (https://drafts.csswg.org/css-scoping-1/#deep-combinator)
     - z.b.: my-element >>> .different spricht ALLE .different Elemente in my-element an, egal wieviele Shadow DOMS noch darunter geschachtelt sind
@@ -72,6 +73,9 @@
   - Mit ::shadow und >>> können native Elemente, die einen Shadow DOM benutzen, gestyled werden, z.b &lt;video&gt; oder &lt;input&gt; Elemente
   - Jedoch sprengt das das Prinzip der Kapselung, das man mit Web Components versucht zu gewinnen, jedoch sollten Web Entwickler natürlich dennoch die Möglichkeit haben, fremde Components zu stylen, wenn sie wissen was sie machen.
 - Alles wird durch Polyfills abgedeckt
+
+
+## Beispiel eines Shadow DOMs mit Template und CSS Styles
 
 
 ## Quellen
