@@ -4,15 +4,20 @@
   - Einführung
   - Insertion Points
 
+
 ## Einführung
 - Shadow DOM Beispiel mit einem &lt;input type="password"&gt; bei dem man im Shadow DOM den plaintext sieht
 
+
 ## Content projecting
+
 ### Insertion Points
 - Nodes die aus dem Host ein den Shadow Tree projiziert werden heißen "distributed nodes"
 - HTML Elemente, die via &lt;content&gt; und &lt;content select="element"&gt; in den Light DOM "durchgereicht" werden, können somit auch von außen gestyled werden (zusätzlich auch via ::content - siehe "Styling mit CSS")
+
 ### Shadow Insertion Points
 - Man kann mehrere Shadow Roots einem Shadow Host hinzufügen, allerdings wird nur der letzte (younger tree) gerendert (LIFO rendering)
+
 
 ## Styling mit CSS
 - Shadow Boundary: Styles gehen nicht aus Shadow Dom raus, und keine rein.
