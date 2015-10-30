@@ -72,10 +72,12 @@ Vagrant.configure(2) do |config|
     curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
     sudo apt-get install -y nodejs
     sudo rm -rf /var/www
-    sudo ln -fs /vagrant /var/www | echo 'Generated symbolic link'
-    alias work='cd /var/www' | echo 'Generated "work" alias for switching to working directory'
-    sudo npm install -g bower | echo 'Installed Bower'
-    sudo npm install -g yo | echo 'Installed Yeoman'
+    sudo ln -fs /vagrant /var/www
+    echo Generated symbolic link
+    alias work='cd /var/www'
+    echo Generated *work* alias for switching to working directory
+    sudo npm install -g bower
+    sudo npm install -g yo
     sudo chown -R vagrant ~/.config
     bower install
   SHELL
