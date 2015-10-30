@@ -73,7 +73,7 @@ Vagrant.configure(2) do |config|
     sudo apt-get install -y nodejs
     sudo rm -rf /var/www
     sudo ln -fs /vagrant /var/www | echo 'Generated symbolic link'
-    alias work='cd /var/www' 'Generated "work" alias for switching to working directory'
+    alias work='cd /var/www' | echo 'Generated "work" alias for switching to working directory'
     sudo npm install -g bower | echo 'Installed Bower'
     sudo npm install -g yo | echo 'Installed Yeoman'
     sudo chown -R vagrant ~/.config
