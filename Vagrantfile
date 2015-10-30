@@ -64,21 +64,5 @@ Vagrant.configure(2) do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  config.vm.provision "shell", inline: <<-SHELL
-    sudo apt-get update
-    sudo apt-get install -y apache2
-    sudo apt-get install -y git
-    sudo apt-get install -y curl
-    curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
-    sudo apt-get install -y nodejs
-    sudo rm -rf /var/www
-    sudo ln -fs /vagrant /var/www
-    echo Generated symbolic link
-    alias work='cd /var/www'
-    echo Generated *work* alias for switching to working directory
-    sudo npm install -g bower
-    sudo npm install -g yo
-    sudo chown -R vagrant ~/.config
-    bower install
-  SHELL
+  config.vm.provision "shell", path: './provision.sh'
 end
