@@ -22,7 +22,7 @@
 
 
 
-## Vorhandene Elemente erweitern
+## Vorhandene Elemente erweitern (Type extensions)
 
 
 ## Browserunterstützung
