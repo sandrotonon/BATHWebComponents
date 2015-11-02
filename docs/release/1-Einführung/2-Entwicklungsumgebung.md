@@ -7,7 +7,6 @@
 - bower
 - yeoman
 - webapp
-- reload
 - generator-element
 - generator-polymer
 
