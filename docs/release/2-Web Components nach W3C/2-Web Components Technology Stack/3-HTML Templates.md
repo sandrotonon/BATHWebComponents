@@ -82,11 +82,14 @@ document.body.appendChild(templateClone);                         // (3)
   z.B. `document.getElementById('#mytemplate') == null`
 - Mit JavaScript kann auf das Template zugegriffen werden und es an anderer Stelle dynamisch einbinden
 - Es muss mit Javascript kein Code erzeugt werden, man kann ihn einfach aus dem DOM nehmen und wiederbenutzen
-- Sind standartisiert (http://www.w3.org/TR/html5/scripting-1.html#the-template-element) (als einzige Technologie des Web Components Technology Stacks)
-- Browserunterstüzung gut, bis auf Internet Explorer und Edge
 
 *Hinweis:*
 Geschachtelte `<template>` Tags müssen manuell aktiviert werden!
+
+## Browserunterstützung
+
+- Sind standartisiert (http://www.w3.org/TR/html5/scripting-1.html#the-template-element) (als einzige Technologie des Web Components Technology Stacks)
+- Browserunterstützung dementsprechend gut, bis auf Internet Explorer und Edge
 
 ![Bild: Brwoserunterstützung des HTML Template Tags](https://raw.githubusercontent.com/Glur4k/BATHWebComponents/master/docs/release/2-Web%20Components%20nach%20W3C/2-Web%20Components%20Technology%20Stack/images/Templates_Browserunterstuetzung.jpg "Template Tag Browserunterstzützung. Quelle: http://caniuse.com/#search=template")
 
