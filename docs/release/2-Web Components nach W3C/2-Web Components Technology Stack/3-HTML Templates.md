@@ -92,7 +92,7 @@ Geschachtelte `<template>` Tags müssen manuell aktiviert werden!
 
 
 ## Quellen
-- O'Reilly Buch "Developing Web Components"
+- O'Reilly Buch "Developing Web Components", S.101-107
 - https://developer.mozilla.org/de/docs/Web/HTML/Element/template
 - http://www.html5rocks.com/en/tutorials/webcomponents/template/
 - http://webcomponents.org/articles/introduction-to-template-element/
