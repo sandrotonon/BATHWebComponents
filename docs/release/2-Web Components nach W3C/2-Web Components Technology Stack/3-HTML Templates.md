@@ -7,8 +7,8 @@
 
 ## Einführung
 
-- Bisher nur im Backend verfügbar in PHP oder Ruby z.B.
-- Kommt jetzt auch in den Browser
+- Templates für Code sind bisher nur im Backend verfügbar in PHP oder Ruby z.B.
+- Erhält Einzug in den Browser
 - Bisher durch Mustache.js oder Handlebars.js
 
 
