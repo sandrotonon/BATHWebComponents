@@ -1,7 +1,7 @@
 # HTML Templates
 
 - TODO:
-  - <script>-tag Nachteile
+  - `<script>`-tag Nachteile
   - Benutzung
 
 ## Einführung
@@ -42,7 +42,7 @@
 - TODO
 
 
-## <template> Tag
+## `<template>` Tag
 
 ```
 <template id="mytemplate">
@@ -55,8 +55,8 @@
 
 - Fertiges Gerüst an HTML
 - Werden in DOM geladen, aber nicht angezeigt
-- <script> Tags werden nicht ausgeführt, Stylesheets/Bilder nicht geladen, Medien nicht abgespielt
-- Sind im Dokument versteckt, man kann nicht in den DOM des <templates> traversieren
+- `<script>` Tags werden nicht ausgeführt, Stylesheets/Bilder nicht geladen, Medien nicht abgespielt
+- Sind im Dokument versteckt, man kann nicht in den DOM des `<templates>` traversieren
   z.B. `document.querySelector('#mytemplate .text') == null`
 - Mit JavaScript kann auf das Template zugegriffen werden und es an anderer Stelle dynamisch einbinden
 - Es muss mit Javascript kein Code erzeugt werden, man kann ihn einfach aus dem DOM nehmen und wiederbenutzen
