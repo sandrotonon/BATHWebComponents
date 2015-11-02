@@ -24,6 +24,7 @@ Quelle: 1.
 
 ## Quellen
 
-1. http://www.peterkroener.de/fragen-zu-html5-und-co-beantwortet-15-web-components-performance-css-variablen-data-urls-async/
-2. http://www.hongkiat.com/blog/html-import/
-3. http://webcomponents.org/articles/introduction-to-html-imports/
+- http://www.peterkroener.de/fragen-zu-html5-und-co-beantwortet-15-web-components-performance-css-variablen-data-urls-async/
+- http://www.hongkiat.com/blog/html-import/
+- http://webcomponents.org/articles/introduction-to-html-imports/
+- http://www.html5rocks.com/en/tutorials/webcomponents/imports/
