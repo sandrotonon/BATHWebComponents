@@ -3,7 +3,9 @@
   "private": true,
   "dependencies": {
     "webcomponentsjs": "~0.7.15",
-    "highlightjs": "~8.8.0"
+    "highlightjs": "~8.8.0",
+    "polymer": "Polymer/polymer#~1.2.1",
+    "iron-elements": "PolymerElements/iron-elements#~1.0.4"
   },
   "devDependencies": {
     "chai": "~3.3.0",
