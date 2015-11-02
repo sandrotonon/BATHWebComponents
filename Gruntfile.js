@@ -57,6 +57,53 @@ module.exports = function (grunt) {
       }
     },
 
+    browserSync: {
+      options: {
+        notify: false,
+        background: true,
+        watchOptions: {
+          ignored: ''
+        }
+      },
+      livereload: {
+        options: {
+          files: [
+            '<%= config.app %>/{,*/}*.html',
+            '.tmp/styles/{,*/}*.css',
+            '<%= config.app %>/images/{,*/}*',
+            '.tmp/scripts/{,*/}*.js'
+          ],
+          port: 9000,
+          server: {
+            baseDir: ['.tmp', config.app],
+            routes: {
+              '/bower_components': './bower_components'
+            }
+          }
+        }
+      },
+      test: {
+        options: {
+          port: 9001,
+          open: false,
+          logLevel: 'silent',
+          host: 'localhost',
+          server: {
+            baseDir: ['.tmp', './test', config.app],
+            routes: {
+              '/bower_components': './bower_components'
+            }
+          }
+        }
+      },
+      dist: {
+        options: {
+          background: false,
+          server: '<%= config.dist %>'
+        }
+      }
+    },
+
     // Empties folders to start fresh
     clean: {
       dist: {

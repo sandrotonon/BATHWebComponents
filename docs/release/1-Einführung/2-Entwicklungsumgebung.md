@@ -20,6 +20,9 @@ Zu erst VirtualBox (Link: https://www.virtualbox.org/wiki/Downloads) installiere
 Wenn nun versucht wird mit "vagrant ssh" eine ssh verbindung zu der box zu öffnen werden die ssh anmeldeinformationen angezeigt.
 Also muss eine neue Verbindung in xShell angelegt werden unter "Datei" > "Neu". Dort wird der bevorzugte Name der Verbindung und die Anmeldeinformationen eingetragen *(Details? Anmeldeart key und speicherort etc?)*. Unter "Datei" > "Öffnen" ist jetzt die Verbindung angelegt und sie kann geöffnet werden. Nun sind wir in der Ubuntu32 Virtuellen Maschine angemeldet. Als nächstes muss ein webserver installiert werden. In diesem Fall Apache2, somit wird der Befehl "sudo apt-get install apache2" ausgeführt und der Server wird installiert.
 Wenn nun im Browser die IP "192.168.33.10" geöffnet wird, erscheint die Webseite "It Works!". Die Seite ligt in der VM unter "/var/www". Um nicht in der VM, sondern in Windows/OSX zu arbeiten wird ein Symlink zu dem vagrant ordner auf unserem Desktop/Schreibtisch erstellt. Zuerst wird der /var/www Ordner gelöscht, danach der Symlink mit "sudo ln -fs /vagrant /var/www" erzeugt. Wenn nun der Browser geöffnet und aktualiesiert wird, wird das *Arbeitsverzeichnis* angezeigt.
+
+
+hosts-datei anpassen, ip von vagrantfile angeben als *dev.thesis.de*
 *DEPRECIATED END*
 
 
