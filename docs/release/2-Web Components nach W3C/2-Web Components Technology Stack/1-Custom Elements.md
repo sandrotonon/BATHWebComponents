@@ -1,6 +1,8 @@
 # Custom Elements
 
 - TODO:
+  - Beispiel für Seite mit Div-Suppe
+  - Beispiel für bessere Seite
 
 - Ausformulieren:
   - Complete
@@ -21,7 +23,7 @@
 
 - Laut W3C Spezifikation muss ein Custom Element ein Bindestrich im Namen haben, z.B. `my-element` (http://w3c.github.io/webcomponents/spec/custom/#concepts)
 - Ein neues Element wir mit der Funktion `var MyElement = document.registerElement('my-element');` registriert
-- Als zweiter Parameter kann der `prototype` mitangegeben werden
+- Als zweiter Parameter kann der `prototype` mit angegeben werden
 ```javascript
 var MyElement = document.registerElement('my-element', {
   prototype: Object.create(HTMLElement.prototype)
