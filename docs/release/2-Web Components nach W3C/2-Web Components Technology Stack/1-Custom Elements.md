@@ -3,14 +3,15 @@
 - TODO:
   - Beispiel für Seite mit Div-Suppe
   - Beispiel für bessere Seite
+  - Custom Element Life Cycles
 
 - Ausformulieren:
   - Complete
 
 ## Einführung
 
-- Momentan: Suppe von Divs, die nicht aussagekräftig sind (Beispiel so einer Webseite)
-- Besser: Elemente, die semantisch aussagekräftig sind (Beispiel wie man es besser machen kann)
+- Momentan: Suppe von Divs, die nicht aussagekräftig sind (TODO: Beispiel so einer Webseite)
+- Besser: Elemente, die semantisch aussagekräftig sind (TODO: Beispiel wie man es besser machen kann)
   -> Beispiel von http://www.html5rocks.com/en/tutorials/webcomponents/customelements/ verwenden?
 - Custom Elements ermöglichen es
   - neue DOM Elemente zu definieren
@@ -31,7 +32,8 @@ var MyElement = document.registerElement('my-element', {
 ```
 - Dadurch steht es in der Registry des Browsers, welche dazu verwendet wird um die Definitionen der Elemente aufzulösen
 - Nachdem das Element registriert wurde, kann es per JavaScript oder HTML Deklaration verwendet werden
-[Developing Web Components, S.107-138]
+
+[Quelle: Developing Web Components 2015]
 
 JavaScript
 ```javascript
@@ -52,6 +54,7 @@ HTML
 - Unangemeldete, unregistrierte Custom Tags wie z.B. `<myelement>` benutzen das Interface HTMLUknownElement
 - Angemeldete, registrierte Custom Elements wie z.B. `<my-element>` benutzen das Interface HTMLElement
 - Somit können für neue HTML Elemente eigene APIs erzeugt werden, indem eigene Eigenschaften und Methoden hinzugefügt werden
+
 [Quelle: http://www.html5rocks.com/en/tutorials/webcomponents/customelements/]
 
 
@@ -61,7 +64,7 @@ HTML
 - Kann verhindert werden, in dem man den `:unresolved`-Selector benutzt und die Elemente ausblendet
 
   ```
-  mein-tag:unresolved {
+  my-element:unresolved {
     display: none;
   }
   ```
@@ -74,7 +77,7 @@ HTML
 - Um einen erweitertes `button` zu erzeugen muss also folgendes gemacht werden:
 
 ```javascript
-var ButtonExtended = document.registerElement('button-extended', {
+var ButtonExtendedProto = document.registerElement('button-extended', {
   prototype: Object.create(HTMLButtonElement.prototype),
   extends: 'button'
 });
@@ -88,7 +91,7 @@ var buttonExtended  = document.createElement('button', 'button-extended');
 
 // Oder
 
-var buttonExtended = new ButtonExtended();
+var buttonExtended = new ButtonExtendedProto();
 ```
 
 HTML:
@@ -113,7 +116,70 @@ HTML:
 - `is="time-ago"` ist die Erweiterung des `time` Elements
 - Der Inhalt des `time` Elements zeigt die relative Zeit an
 - Falls der Browser nun keine Custom Elements (mit Polyfill) unterstützt oder JavaScript deaktiviert ist, wird dennoch das "normale" `time` Element mit der absoluten Zeit angezeigt
+
 [Quelle: http://webcomponents.org/articles/introduction-to-custom-elements/]
+
+
+## Eigenschaften und Methoden definieren
+
+- Custom Elements machen erst so richtig Sinn, wenn man für diese auch eigene Eigenschaften und Methoden definieren kann
+- Wie bei nativen HTML Elementen ist dies bei Custom Elements möglich, dies geschieht auf die gleiche Weise
+
+```javascript
+// Methode definieren
+ButtonExtendedProto.prototype.alert = function () {
+  alert('foo');
+};
+
+// Eigenschaft definieren
+ButtonExtendedProto.prototype.answer = 42;
+```
+
+[Quelle: Developing Web Components]
+
+
+## Custom Element Life Cycles - TODO?
+
+### createdCallback
+
+- TODO
+
+
+### attachedCallback
+
+- TODO
+
+
+### detachedCallback
+
+- TODO
+
+
+### attributeChangedCallback
+
+- TODO
+
+
+## Styling von Custom Elements
+
+- Custom Elements können wie native HTML Elemente gestyled werden
+
+```css
+my-element {
+  foo: bar;
+}
+```
+
+- Element-Erweiterungen können per Attribut-Selektor angesprochen werden
+
+```css
+[is="button-extended"] {
+  foo: bar;
+}
+```
+
+[Quelle: Developing Web Components 2015]
+
 
 ## Browserunterstützung
 
