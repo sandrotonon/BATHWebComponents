@@ -101,8 +101,17 @@ HTML:
 
 ### Verwendung bei Github
 
+- Die "Latest commit" Angaben eines Repositories auf Github sind ein erweitertes time-Element (Type Extension Custom Element mit time-Element)
+- Statt des Commit-Datums und der Zeit, wird - wenn JavaScript aktiviert ist - die berechnete Zeit seit dem letzten Commit angezeigt
 
+![Bild: Github Einsatz eines Custom Element](https://raw.githubusercontent.com/glur4k/BATHWebComponents/master/docs/release/2-Web%20Components%20nach%20W3C/2-Web%20Components%20Technology%20Stack/images/2-Custom-elements_Github_time-element.jpg "Github Einsatz eines Custom Element. Quelle: https://github.com/polymer/polymer - Quelltext")
 
+- Dabei dient das `time` Element als Basis
+- Das `datetime` Attribut gibt die absolute Zeit des Commits an
+- `is="time-ago"` ist die Erweiterung des `time` Elements
+- Der Inhalt des `time` Elements zeigt die relative Zeit an
+- Falls der Browser nun keine Custom Elements (mit Polyfill) unterstützt oder JavaScript deaktiviert ist, wird dennoch das "normale" `time` Element mit der absoluten Zeit angezeigt
+[Quelle: http://webcomponents.org/articles/introduction-to-custom-elements/]
 
 ## Browserunterstützung
 
