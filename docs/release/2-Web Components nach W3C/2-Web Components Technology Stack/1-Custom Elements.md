@@ -188,6 +188,8 @@ my-element {
 
 ![Bild: Browserunterstützung von Custom Elements](https://raw.githubusercontent.com/glur4k/BATHWebComponents/master/docs/release/2-Web%20Components%20nach%20W3C/2-Web%20Components%20Technology%20Stack/images/2-Custom-elements_browserunterstuetzung.jpg "Custom Elements Browserunterstzützung. Quelle: http://caniuse.com/#feat=custom-elements")
 
+[Quelle: http://caniuse.com/#feat=custom-elements]
+
 
 ## Quellen
 - http://w3c.github.io/webcomponents/spec/custom/
