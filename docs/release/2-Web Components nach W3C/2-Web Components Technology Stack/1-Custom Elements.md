@@ -1,7 +1,6 @@
 # Custom Elements
 
 - TODO:
-  - Complete
 
 - Ausformulieren:
   - Complete
@@ -18,18 +17,89 @@
   - die APIs vorhandener DOM Elemente zu erweitern
 
 
-## Vorteile von Custom Elements
-
-- Unangemeldete, unregistrierte Custom Elements benutzen das Interface HTMLUknownElement
-- Angemeldete, registrierte Custom Elements benutzen das Interface HTMLElement
-
-
 ## Neue Elemente registrieren
 
+- Laut W3C Spezifikation muss ein Custom Element ein Bindestrich im Namen haben, z.B. `my-element` (http://w3c.github.io/webcomponents/spec/custom/#concepts)
+- Ein neues Element wir mit der Funktion `var MyElement = document.registerElement('my-element');` registriert
+- Als zweiter Parameter kann der `prototype` mitangegeben werden
+```javascript
+var MyElement = document.registerElement('my-element', {
+  prototype: Object.create(HTMLElement.prototype)
+});
+```
+- Dadurch steht es in der Registry des Browsers, welche dazu verwendet wird um die Definitionen der Elemente aufzulösen
+- Nachdem das Element registriert wurde, kann es per JavaScript oder HTML Deklaration verwendet werden
+[Developing Web Components, S.107-138]
 
+JavaScript
+```javascript
+var myelement = document.createElement('my-element');
+document.body.appendChild(myelement);
+```
+
+HTML
+```html
+<div class="wrapper">
+  <my-element><my-element>
+</div>
+```
+
+
+## Vorteile von Custom Elements
+
+- Unangemeldete, unregistrierte Custom Tags wie z.B. `<myelement>` benutzen das Interface HTMLUknownElement
+- Angemeldete, registrierte Custom Elements wie z.B. `<my-element>` benutzen das Interface HTMLElement
+- Somit können für neue HTML Elemente eigene APIs erzeugt werden, indem eigene Eigenschaften und Methoden hinzugefügt werden
+[Quelle: http://www.html5rocks.com/en/tutorials/webcomponents/customelements/]
+
+
+### Nachteil
+
+- Eventueller FOUC (Flash of unstyled content), da das Element schon im DOM steht, aber erst noch registriert werden muss
+- Kann verhindert werden, in dem man den `:unresolved`-Selector benutzt und die Elemente ausblendet
+
+  ```
+  mein-tag:unresolved {
+    display: none;
+  }
+  ```
 
 
 ## Vorhandene Elemente erweitern (Type extensions)
+
+- Statt neue Elemente zu erzeugen, können vorhandene auch erweitert werden
+- So können native HTML Elemente erweitert werden
+- Um einen erweitertes `button` zu erzeugen muss also folgendes gemacht werden:
+
+```javascript
+var ButtonExtended = document.registerElement('button-extended', {
+  prototype: Object.create(HTMLButtonElement.prototype),
+  extends: 'button'
+});
+```
+
+- Ein erweitertes Element kann nun wie folgt vie JavaScript oder HTML Deklaration verwendet werden:
+
+JavaScript:
+```javascript
+var buttonExtended  = document.createElement('button', 'button-extended');
+
+// Oder
+
+var buttonExtended = new ButtonExtended();
+```
+
+HTML:
+```html
+  <div class="wrapper">
+    <button is="button-extended"></button>
+  </div>
+```
+
+[Quelle: http://webcomponents.org/articles/introduction-to-custom-elements/]
+
+
+### Verwendung bei Github
 
 
 
@@ -43,6 +113,7 @@
 
 
 ## Quellen
+- http://w3c.github.io/webcomponents/spec/custom/
 - O'Reilly Buch "Developing Web Components", S.107-138
 - http://webcomponents.org/articles/introduction-to-custom-elements/
 - http://www.html5rocks.com/en/tutorials/webcomponents/customelements/
