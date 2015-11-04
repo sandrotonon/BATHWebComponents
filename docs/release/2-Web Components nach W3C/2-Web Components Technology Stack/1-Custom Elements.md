@@ -33,8 +33,6 @@ var MyElement = document.registerElement('my-element', {
 - Dadurch steht es in der Registry des Browsers, welche dazu verwendet wird um die Definitionen der Elemente aufzulösen
 - Nachdem das Element registriert wurde, kann es per JavaScript oder HTML Deklaration verwendet werden
 
-[Developing Web Components 2015]
-
 JavaScript
 ```javascript
 var myelement = document.createElement('my-element');
@@ -47,6 +45,8 @@ HTML
   <my-element><my-element>
 </div>
 ```
+
+[Developing Web Components 2015]
 
 
 ## Vorteile von Custom Elements
