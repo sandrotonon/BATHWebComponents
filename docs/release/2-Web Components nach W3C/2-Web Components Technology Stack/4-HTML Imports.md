@@ -1,13 +1,16 @@
 # HTML Imports
 
 - TODO:
-  - Einführung
-  - Performance
+  + Complete
+
+- Ausformulieren
+  + Complete
 
 
 ## Einführung
 - Praktisch alle Plattformen erlauben es, Code zum Importieren, nur nicht das Web.
-- Es gibt viele Möglichkeiten Files zu importieren, aber keine davon ermöglicht es JavaScript, CSS, HTML, etc. via einer einzigen Resource zu importieren
+- Bisher ist es nur möglich JavaScript, CSS, Images etc. in ein HTML Dokument zu importieren, HTML selbst hingegen nicht
+- ebenso gibt es keine Möglichkeit JavaScript, CSS, HTML, etc. via einer einzigen Resource zu importieren
 - HTML Imports sollen dieses Problem lösen
 
 
@@ -21,6 +24,14 @@
   <link rel="import" href="/imports/myimport.html">
 </head>
 ```
+
+- Ein HTML Import wird nur einmal geladen, d.h. enthaltenes JavaScript wird nur einmal ausgeführt
+- HTML Imports von einer anderen Domain sind eine Sicherheitslücke, wenn man aber dennoch eine HTML Datei von einer anderen Seite importieren will, muss CORS (Cross Origin Resource Sharing) aktiviert sein
+
+> Using only one URL, you can package together a single relocatable bundle of web goodness for others to consume.
+[Eric Bidelman 2013]
+
+[Developing Web Components 2015]
 
 
 ## Performance
@@ -43,12 +54,14 @@ Quelle: 1.
 
 ![Bild: HTML Imports Browserunterstützung](https://raw.githubusercontent.com/glur4k/BATHWebComponents/93d15c398717d7124f42d193f99000a1e4979cbe/docs/release/2-Web%20Components%20nach%20W3C/2-Web%20Components%20Technology%20Stack/images/4-HTML-Imports_Browserunterstuetzung.jpg "HTML Imports Browserunterstützung. Quelle: http://caniuse.com/#search=imports")
 
+[http://caniuse.com/#search=imports 2015]
+
 
 ## Quellen
 
 - [Developing Web Components 2015] Jarrod Overson & Jason Strimpel, Developing Web Components, O'Reilly 2015, S.139-147
+- http://www.w3.org/TR/html-imports/
 - http://www.peterkroener.de/fragen-zu-html5-und-co-beantwortet-15-web-components-performance-css-variablen-data-urls-async/
 - http://www.hongkiat.com/blog/html-import/
 - http://webcomponents.org/articles/introduction-to-html-imports/
-- http://www.html5rocks.com/en/tutorials/webcomponents/imports/
-- http://www.w3.org/TR/html-imports/
+- [Eric Bidelman 2013] http://www.html5rocks.com/en/tutorials/webcomponents/imports/
