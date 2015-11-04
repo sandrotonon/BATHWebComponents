@@ -5,9 +5,9 @@ GitRepository meiner Bachelor Thesis im Rahmen des Studiums "Angewandte Informat
 
 ### Quellen
 
-Quellen werden inline via einem [Quelle: *titel*] "Tag" angegeben.
+Quellen werden inline via einem `[<Quelle> <Jahr>]` "Tag" angegeben.
 Am Ende des Dokumentes ist eine Unterüberschrift *Quellen*, in der alle benutzten Quellen angegeben werden.
 
 ### Bilder
 
-![Bild: <Beschreibung>](*link* "<Beschreibung>. Quelle: <Quelle>")
+`![Bild: <Beschreibung>](*link* "<Beschreibung>. Quelle: <Quelle>")`
