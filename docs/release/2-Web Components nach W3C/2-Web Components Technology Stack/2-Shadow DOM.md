@@ -11,7 +11,7 @@
 
 ## Einführung
 ![Bild eines input type="password"](https://github.com/Glur4k/BATHWebComponents/blob/master/app/images/input_type_password.jpg)
-- Shadow DOM Beispiel mit einem &lt;input type="password"&gt; bei dem man im Shadow DOM den Plaintext sieht.
+- Shadow DOM Beispiel mit einem `<input type="password">` bei dem man im Shadow DOM den Plaintext sieht.
 - Bild von W3C mit dem Light DOM, Shadow DOM und der Boundary
 - Shadow DOM liegt neben dem Light DOM
 
@@ -20,7 +20,7 @@
 
 ### Insertion Points
 - Nodes die aus dem Host ein den Shadow Tree projiziert werden heißen "distributed nodes"
-- HTML Elemente, die via &lt;content&gt; und &lt;content select="element"&gt; in den Light DOM "durchgereicht" werden, können somit auch von außen gestyled werden (zusätzlich auch via ::content - siehe "Styling mit CSS")
+- HTML Elemente, die via `<content>` und `<content select="element">` in den Light DOM "durchgereicht" werden, können somit auch von außen gestyled werden (zusätzlich auch via ::content - siehe "Styling mit CSS")
 
 ### Shadow Insertion Points
 - Man kann mehrere Shadow Roots einem Shadow Host hinzufügen, allerdings wird nur der letzte (younger tree) gerendert (LIFO rendering)
@@ -30,10 +30,10 @@
 - Shadow Boundary: Styles gehen nicht aus Shadow Dom raus, und keine rein.
   -> Style Kapselung "out of the box"!
 - Styling des host-Elements mit :host *selector*
-  -> Allerdings überschreiben die inneren Styles nicht die Inneren!
+  -> Allerdings überschreiben die inneren Styles nicht die Äußeren!
   (Siehe snippets/shadow-dom/#styling)
   -> Wichtig bei "Reacting to user states"
-- Styling des Hosts in abhängigkeit des Kontextes mit :host-context
+- Styling des Hosts in Abhängigkeit des Kontextes mit :host-context
   (https://drafts.csswg.org/css-scoping/#selectordef-host-context)
   z.B. :host-context(.wrapper)
 - Styling des Shadow DOM von außerhalb
@@ -47,15 +47,14 @@
       some-element >>> .custom-theme { ... }
   - ::slotted (ehem. ::content)
     (http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/#toc-distributed)
-    - Elemente, die in ein &lt;content> projiziert werden, können auch von innen gestyled werden
-      z.B. (in einer Komponente):
+    - Elemente, die in ein `<content>` projiziert werden, können auch von innen gestyled werden, z.B. (in einer Komponente):
 
       ```CSS
-      ::content p {
+      ::slotted p {
         color: red;
       }
       ```
-      spricht alle &lt;p>s in einem &lt;content>-Tag an, die in dem Light DOM projiziert werden.
+      - Spricht alle `<p>` in einem `<content>` Tag an, die in dem Light DOM projiziert werden.
   - CCS Variablen
     (http://dev.w3.org/csswg/css-variables/)
     - Eine Komponente hält im Inneren Variablen für das Aussehen, somit wir das Styling nach außen gegeben
@@ -75,7 +74,7 @@
         --button-theme-font:  Arial;
       }
       ```
-  - Mit ::shadow und >>> können native Elemente, die einen Shadow DOM benutzen, gestyled werden, wie z.B. &lt;video&gt; oder &lt;input&gt; Elemente
+  - Mit ::shadow und >>> können native Elemente, die einen Shadow DOM benutzen, gestyled werden, wie z.B. `<video>` oder `<input>` Elemente
   - Jedoch sprengt das das Prinzip der Kapselung, das man mit Web Components versucht zu gewinnen, jedoch sollten Web Entwickler natürlich dennoch die Möglichkeit haben, fremde Components zu stylen, wenn sie wissen was sie machen.
 - Alles wird durch Polyfills abgedeckt
 

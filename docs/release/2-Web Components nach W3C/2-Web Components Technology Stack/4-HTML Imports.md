@@ -1,9 +1,8 @@
 # HTML Imports
 
 - TODO:
-  + Abhängigkeiten verwalten und Sub-Imports
+  + Vulcanize
   + Performance
-  + Anwendungsmöglichkeiten
 
 - Ausformulieren
   + Complete
@@ -27,7 +26,7 @@
 </head>
 ```
 
-- Ein HTML Import wird nur einmal geladen, d.h. enthaltenes JavaScript wird nur einmal ausgeführt
+- Ein HTML Import wird nur einmal geladen, auch wenn ein Request auf eine HTML Datei mehrmals erfolgt, d.h. enthaltenes JavaScript wird nur einmal ausgeführt
 - HTML Imports von einer anderen Domain sind eine Sicherheitslücke, wenn man aber dennoch eine HTML Datei von einer anderen Seite importieren will, muss CORS (Cross Origin Resource Sharing) aktiviert sein
 [Developing Web Components 2015]
 
@@ -85,7 +84,44 @@ HTML Import:
 ```
 
 
-## Abhängigkeiten verwalten und Sub-Imports - TODO
+## Abhängigkeiten verwalten und Sub-Imports
+
+### Sub-Imports
+
+- HTML Dateien die in einem HTML Dokument importiert werden, können selbst auch HTML Dateien importieren
+- Somit können andere Komponenten wiederverwendet und erweitert werden
+- Wenn eine Komponente A eine Abhängigkeit von einer Komponenten B hat und es eine neue Version von Komponente B gibt, kann diess einfach in dem Import des Sub-Imports angepasst werden ohne JavaScript ändern zu müssen
+
+
+### Abhänigkeiten verwalten
+
+- Wenn mehrere HTML Imports die gleichen Abhängigkeiten - z.B. jQuery - haben, wird das jQuery.js dennoch automatisch nur einmal vom Browser heruntergeladen
+
+index.html
+```html
+<link rel="import" href="component1.html">
+<link rel="import" href="component2.html">
+```
+
+component1.html
+```html
+<script src="jQuery.html"></script>
+```
+
+component2.html
+```html
+<script src="jQuery.html"></script>
+```
+
+jQuery.html
+```html
+<script src="js/jquery.js"></script>
+```
+
+- Des Weiteren muss auch nicht auf die Reihenfolge der Imports geachtet werden, da diese selbst ihre Abhängigkeiten beinhalten
+
+[Eiji Kitamura 2015]
+
 
 ## Performance - TODO
 
@@ -100,7 +136,18 @@ HTML Import:
 [Peter Kröner 2014]
 
 
-## Anwendungsmöglichkeiten - TODO
+### "Vulcanize" - TODO
+
+
+## Anwendungen
+
+- Ganze Web Applikationen mit HTML/JavaScript/CSS können in eine Datei geschrieben und von anderen Importiert werden
+- Code Organisation: Einzelne Abschnitte einer Anwendung oder von Code können in einzelne Dateien ausgelagert werden, was Web Applikationen modular und wiederverwendbar macht
+- HTML Imports können ein oder mehrere Custom Elements beinhalten und in eine Applikation einbinden. Somit wird das Interface des Elements und dessen Definition gekapselt
+- Abhängigkeitsverwaltung: Resourcen werden automatisch nur einmal geladen
+- Einzelne kleine JavaScripts werden schneller ausgeführt als wenn der Browser eine große JavaScript Library parsen und dann ausführen muss
+
+[Eric Bidelman 2013]
 
 
 ## Browserunterstüzung
@@ -121,5 +168,5 @@ HTML Import:
 - http://www.w3.org/TR/html-imports/
 - [Peter Kröner 2014] Peter Kröner, http://www.peterkroener.de/fragen-zu-html5-und-co-beantwortet-15-web-components-performance-css-variablen-data-urls-async/
 - http://www.hongkiat.com/blog/html-import/
-- http://webcomponents.org/articles/introduction-to-html-imports/
+- [Eiji Kitamura 2015] Eiji Kitamura, Introduction to HTML Imports, http://webcomponents.org/articles/introduction-to-html-imports/
 - http://tjvantoll.com/2014/08/12/the-problem-with-using-html-imports-for-dependency-management/
