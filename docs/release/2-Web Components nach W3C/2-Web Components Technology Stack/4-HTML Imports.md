@@ -7,6 +7,20 @@
 
 ## Einführung
 - Praktisch alle Plattformen erlauben es, Code zum Importieren, nur nicht das Web.
+- Es gibt viele Möglichkeiten Files zu importieren, aber keine davon ermöglicht es JavaScript, CSS, HTML, etc. via einer einzigen Resource zu importieren
+- HTML Imports sollen dieses Problem lösen
+
+
+## HTML importieren
+
+- HTML Imports werden, wie andere Imports auch, per `<link>` Tag deklariert
+- Als `rel` Attribut wird "import" angegeben
+
+```html
+<head>
+  <link rel="import" href="/imports/myimport.html">
+</head>
+```
 
 
 ## Performance
@@ -22,9 +36,18 @@
 Quelle: 1.
 
 
+## Browserunterstüzung
+
+- HTML Imports wurden noch nicht vom W3C standardisiert, sondern sind noch ein Working Draft (http://www.w3.org/TR/html-imports/)
+- Deshalb werden sie bisher auch nur in Chrome und Opera unterstützt
+
+![Bild: HTML Imports Browserunterstützung](https://raw.githubusercontent.com/glur4k/BATHWebComponents/93d15c398717d7124f42d193f99000a1e4979cbe/docs/release/2-Web%20Components%20nach%20W3C/2-Web%20Components%20Technology%20Stack/images/4-HTML-Imports_Browserunterstuetzung.jpg "HTML Imports Browserunterstützung. Quelle: http://caniuse.com/#search=imports")
+
+
 ## Quellen
 
 - http://www.peterkroener.de/fragen-zu-html5-und-co-beantwortet-15-web-components-performance-css-variablen-data-urls-async/
 - http://www.hongkiat.com/blog/html-import/
 - http://webcomponents.org/articles/introduction-to-html-imports/
 - http://www.html5rocks.com/en/tutorials/webcomponents/imports/
+- http://www.w3.org/TR/html-imports/
