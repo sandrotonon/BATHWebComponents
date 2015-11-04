@@ -46,6 +46,7 @@ Quelle: 1.
 
 ## Quellen
 
+- [Developing Web Components 2015] Jarrod Overson & Jason Strimpel, Developing Web Components, O'Reilly 2015, S.139-147
 - http://www.peterkroener.de/fragen-zu-html5-und-co-beantwortet-15-web-components-performance-css-variablen-data-urls-async/
 - http://www.hongkiat.com/blog/html-import/
 - http://webcomponents.org/articles/introduction-to-html-imports/
