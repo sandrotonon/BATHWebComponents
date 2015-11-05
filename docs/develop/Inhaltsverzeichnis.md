@@ -15,8 +15,7 @@
     - HTML Templates
     - HTML Imports
     - (Custom Properties)
-    - Beispiele
-    - Performance
+    - Beispiel
   - Polyfill webcomponents.js
     - Unterstützung
     - Performance

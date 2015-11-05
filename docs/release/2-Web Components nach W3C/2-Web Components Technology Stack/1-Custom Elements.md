@@ -33,8 +33,6 @@ var MyElement = document.registerElement('my-element', {
 - Dadurch steht es in der Registry des Browsers, welche dazu verwendet wird um die Definitionen der Elemente aufzulösen
 - Nachdem das Element registriert wurde, kann es per JavaScript oder HTML Deklaration verwendet werden
 
-[Quelle: Developing Web Components 2015]
-
 JavaScript
 ```javascript
 var myelement = document.createElement('my-element');
@@ -48,6 +46,8 @@ HTML
 </div>
 ```
 
+[Developing Web Components 2015]
+
 
 ## Vorteile von Custom Elements
 
@@ -55,7 +55,7 @@ HTML
 - Angemeldete, registrierte Custom Elements wie z.B. `<my-element>` benutzen das Interface HTMLElement
 - Somit können für neue HTML Elemente eigene APIs erzeugt werden, indem eigene Eigenschaften und Methoden hinzugefügt werden
 
-[Quelle: http://www.html5rocks.com/en/tutorials/webcomponents/customelements/]
+[Eric Bidelman 2015]
 
 
 ### Nachteil
@@ -69,6 +69,7 @@ HTML
   }
   ```
 
+[Peter Gasston 2014]
 
 ## Vorhandene Elemente erweitern (Type extensions)
 
@@ -101,7 +102,7 @@ HTML:
   </div>
 ```
 
-[Quelle: http://webcomponents.org/articles/introduction-to-custom-elements/]
+[Eiji Kitamura 2014]
 
 
 ### Verwendung bei Github
@@ -117,7 +118,7 @@ HTML:
 - Der Inhalt des `time` Elements zeigt die relative Zeit an
 - Falls der Browser nun keine Custom Elements (mit Polyfill) unterstützt oder JavaScript deaktiviert ist, wird dennoch das "normale" `time` Element mit der absoluten Zeit angezeigt
 
-[Quelle: http://webcomponents.org/articles/introduction-to-custom-elements/]
+[Eiji Kitamura 2014]
 
 
 ## Eigenschaften und Methoden definieren
@@ -135,7 +136,7 @@ ButtonExtendedProto.prototype.alert = function () {
 ButtonExtendedProto.prototype.answer = 42;
 ```
 
-[Quelle: Developing Web Components]
+[Developing Web Components 2015]
 
 
 ## Custom Element Life Cycles - TODO?
@@ -178,7 +179,7 @@ my-element {
 }
 ```
 
-[Quelle: Developing Web Components 2015]
+[Developing Web Components 2015]
 
 
 ## Browserunterstützung
@@ -188,12 +189,13 @@ my-element {
 
 ![Bild: Browserunterstützung von Custom Elements](https://raw.githubusercontent.com/glur4k/BATHWebComponents/master/docs/release/2-Web%20Components%20nach%20W3C/2-Web%20Components%20Technology%20Stack/images/2-Custom-elements_browserunterstuetzung.jpg "Custom Elements Browserunterstzützung. Quelle: http://caniuse.com/#feat=custom-elements")
 
-[Quelle: http://caniuse.com/#feat=custom-elements]
+[Can I Use 2015]
 
 
 ## Quellen
+- [Developing Web Components 2015] Jarrod Overson & Jason Strimpel, Developing Web Components, O'Reilly 2015, S.127-138
+- [Eiji Kitamura 2014] Eiji Kitamura, Introduction to Custom Elements, http://webcomponents.org/articles/introduction-to-custom-elements/
 - http://w3c.github.io/webcomponents/spec/custom/
-- O'Reilly Buch "Developing Web Components", S.107-138
-- http://webcomponents.org/articles/introduction-to-custom-elements/
-- http://www.html5rocks.com/en/tutorials/webcomponents/customelements/
-- http://www.smashingmagazine.com/2014/03/introduction-to-custom-elements/
+- [Eric Bidelman 2013] Eric Bidelman, Custom Elements, http://www.html5rocks.com/en/tutorials/webcomponents/customelements/
+- [Can I Use 2015] Can I Use, http://caniuse.com/#feat=custom-elements
+- [Peter Gasstton 2015] Peter Gasstton, A Detailed Introduction To Custom Elements, http://www.smashingmagazine.com/2014/03/introduction-to-custom-elements/
