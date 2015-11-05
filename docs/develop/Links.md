@@ -38,7 +38,6 @@ http://cbateman.com/blog/a-no-nonsense-guide-to-web-components-part-1-the-specs/
 http://cbateman.com/blog/a-no-nonsense-guide-to-web-components-part-2-practical-use/
 http://cbateman.com/blog/web-components-in-angular-ember-and-react/
 
-
 *Custom Elements*
 http://webcomponents.org/articles/introduction-to-custom-elements/
 
@@ -70,3 +69,9 @@ https://philipwalton.github.io/talks/2015-10-26/#1
 *Web Componente mit Polymer bauen + Prognosen etc.*
 http://webkrauts.de/artikel/2014/das-web-der-zukunft
 http://www.peterkroener.de/responsive-web-components/
+
+*Polymer Projekte*
+https://gaming.youtube.com/
+
+*Styling Polymer Elemente*
+https://www.youtube.com/watch?v=IbOaJwqLgog&list=PLNYkxOF6rcICdISJclfQhj2S8QZGjXV8J&index=10
