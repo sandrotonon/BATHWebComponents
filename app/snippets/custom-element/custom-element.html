@@ -1,0 +1,85 @@
+<template id="myElementTemplate">
+  <style>
+    .outer {
+      border: 2px solid black;
+      font-size: 16pt;
+      width: 10em;
+      height: 7em;
+      text-align: center;
+      padding: 10pt;
+    }
+    .style1 {
+      color: green;
+    }
+    .style2 {
+      color: blue;
+    }
+    .name {
+      font-size: 35pt;
+      padding-top: 0.5em;
+    }
+  </style>
+
+  <div class="outer">
+    Welcome in the Web Component
+    <div class="name">
+      <content></content>
+    </div>
+  </div>
+</template>
+
+<script>
+  // Refers to the "importee", which is src/hello-world.html
+  var importDoc = document.currentScript.ownerDocument;
+
+  // Creates an object based in the HTML Element prototype
+  var CustomElementProto = Object.create(HTMLElement.prototype);
+
+  // Creates the "who" attribute and sets a default value
+  CustomElementProto.theme = 'style1';
+
+  // Fires when an instance of the element is created
+  CustomElementProto.createdCallback = function() {
+
+    // Creates the shadow root
+    var shadow = this.createShadowRoot();
+
+    // Gets content from <template>
+    var content = importDoc.querySelector('#myElementTemplate').content;
+
+    // Adds a template clone into shadow root
+    shadow.appendChild(content.cloneNode(true));
+
+    // Caches .outer DOM query
+    this.outer = shadow.querySelector('.outer');
+
+    // Checks if the "theme" attribute has been overwritten
+    if (this.hasAttribute('theme')) {
+      var theme = this.getAttribute('theme');
+      this.setTheme(theme);
+    }
+    else {
+      this.setTheme(this.theme);
+    }
+  };
+
+  // Fires when an attribute was added, removed, or updated
+  CustomElementProto.attributeChangedCallback = function(attr, oldVal, newVal) {
+    if (attr === 'theme') {
+      this.setTheme(newVal);
+    }
+  };
+
+  // Sets new value to "theme" attribute
+  CustomElementProto.setTheme = function(val) {
+    this.theme = val;
+    // Sets "theme" value to the .outer element
+    console.log("setting to: " + this.theme);
+    this.outer.className = this.outer.className + " " + this.theme;
+  };
+
+  // Registers <custom-element> in the main document
+  document.registerElement("custom-element", {
+    prototype: CustomElementProto
+  });
+</script>
