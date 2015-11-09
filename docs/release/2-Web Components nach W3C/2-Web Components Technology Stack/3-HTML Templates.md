@@ -49,10 +49,10 @@
 ```html
 <template id="mytemplate">
   <style>
-    // Styles
+    <!-- Styles -->
   </style>
   <script>
-    // JavaScript
+    <!-- JavaScript -->
   </script>
   <img src=""> <!-- Kann zur Laufzeit dynamisch gesetzt werden -->
   <div class="text"></div>
@@ -95,6 +95,7 @@ Geschachtelte `<template>` Tags müssen manuell aktiviert werden!
 
 
 ## Quellen
+
 - O'Reilly Buch "Developing Web Components", S.101-107
 - https://developer.mozilla.org/de/docs/Web/HTML/Element/template
 - http://www.html5rocks.com/en/tutorials/webcomponents/template/

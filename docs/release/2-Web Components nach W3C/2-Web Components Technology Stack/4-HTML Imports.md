@@ -169,4 +169,5 @@ jQuery.html
 - [Peter Kröner 2014] Peter Kröner, http://www.peterkroener.de/fragen-zu-html5-und-co-beantwortet-15-web-components-performance-css-variablen-data-urls-async/
 - http://www.hongkiat.com/blog/html-import/
 - [Eiji Kitamura 2015] Eiji Kitamura, Introduction to HTML Imports, http://webcomponents.org/articles/introduction-to-html-imports/
+
 - http://tjvantoll.com/2014/08/12/the-problem-with-using-html-imports-for-dependency-management/

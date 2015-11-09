@@ -221,6 +221,7 @@ my-element {
 
 
 ## Quellen
+
 - [Developing Web Components 2015] Jarrod Overson & Jason Strimpel, Developing Web Components, O'Reilly 2015, S.127-138
 - [Eiji Kitamura 2014] Eiji Kitamura, Introduction to Custom Elements, http://webcomponents.org/articles/introduction-to-custom-elements/
 - http://w3c.github.io/webcomponents/spec/custom/
