@@ -1,8 +1,6 @@
 # Custom Elements
 
 - TODO:
-  - Beispiel für Seite mit Div-Suppe
-  - Beispiel für bessere Seite
   - Custom Element Life Cycles
 
 - Ausformulieren:
@@ -10,14 +8,30 @@
 
 ## Einführung
 
-- Momentan: Suppe von Divs, die nicht aussagekräftig sind (TODO: Beispiel so einer Webseite)
-- Besser: Elemente, die semantisch aussagekräftig sind (TODO: Beispiel wie man es besser machen kann)
-  -> Beispiel von http://www.html5rocks.com/en/tutorials/webcomponents/customelements/ verwenden?
+- Momentan: Suppe von Divs, die nicht aussagekräftig sind, siehe folgender Ausschnitt der Inbox der Google-Mail Webseite
+  ![Bild: Webseite mit semantisch nicht aussagekräftigem Markup](https://raw.githubusercontent.com/glur4k/BATHWebComponents/deba05dcaa2d0c1879f4cd65138e80dda8e76006/docs/release/2-Web%20Components%20nach%20W3C/2-Web%20Components%20Technology%20Stack/images/3-Custom-elements_div_suppe.jpg "Webseite mit semantisch nicht aussagekräftigem Markup. Quelle: https://mail.google.com/")
+- Besser: Elemente, die semantisch aussagekräftig sind. So könnte die Google-Mail Webseite folgender Maßen aussehen
+  ```html
+  <hangout-module>
+    <hangout-chat from="Paul, Addy">
+      <hangout-discussion>
+        <hangout-message from="Paul" profile="profile.png"
+            profile="118075919496626375791" datetime="2013-07-17T12:02">
+          <p>Feelin' this Web Components thing.</p>
+          <p>Heard of it?</p>
+        </hangout-message>
+      </hangout-discussion>
+    </hangout-chat>
+    <hangout-chat>...</hangout-chat>
+  </hangout-module>
+  ```
 - Custom Elements ermöglichen es
   - neue DOM Elemente zu definieren
   - Elemente zu definieren, die vorhandene Elemente erweitern
   - eigene Funktionalitäten in einem Element zu bündeln
   - die APIs vorhandener DOM Elemente zu erweitern
+
+[Eric Bidelman 2013]
 
 
 ## Neue Elemente registrieren
@@ -139,26 +153,38 @@ ButtonExtendedProto.prototype.answer = 42;
 [Developing Web Components 2015]
 
 
-## Custom Element Life Cycles - TODO?
+## Custom Element Life Cycle Callbacks - TODO?
 
-### createdCallback
+- Custom Elements bieten eine standardisierte API um verschiedene Methoden zu unterschiedlichen Zeitpunkten im "Leben" eines Custom Elements auszuführen. Diese ermöglicht es zu bestimmen, wie und wann ein bestimmter Code des Custom Elements ausgeführt wird.
 
-- TODO
+#### createdCallback
+
+- Wird ausgeführt, wenn eine Instanz des Custom Elements erzeugt wird. Beispiel: `document.createElement('custom-element');`
+
+#### attachedCallback
+
+- Wird ausgeführt, wenn ein Custom Element dem DOM angehängt wird. Beispiel: ` document.body.appendChild();`
+
+#### detachedCallback
+
+- Wird ausgeführt, wenn ein Custom Element aus dem DOM entfernt wird. Beispiel: ` document.body.removeChild();`
+
+#### attributeChangedCallback
+
+- Wird ausgeführt, wenn ein Attribut eines Custom ELements geändert wird. Beispiel: `MyElement.setAttribute();`
 
 
-### attachedCallback
+### Beispiel mit `button-extended`
 
-- TODO
+Anhand des `button-extended` Beispiels würde dies folgender Maßen funktionieren:
+```javascript
+var ButtonExtendedProto = Object.create(HTMLElement.prototype);
 
+ButtonExtendedProto.createdCallback = function() {...};
+ButtonExtendedProto.attachedCallback = function() {...};
 
-### detachedCallback
-
-- TODO
-
-
-### attributeChangedCallback
-
-- TODO
+var ButtonExtended = document.registerElement('button-extended', {prototype: ButtonExtendedProto});
+```
 
 
 ## Styling von Custom Elements
