@@ -188,7 +188,7 @@ shadow.appendChild(clone);
 - Noch nicht standardtisiert, sind noch ein Working Draft (http://www.w3.org/TR/shadow-dom/)
 - Deshalb bisher auch nur in Chrome und Opera unterstützt
 
-![Bild: Shadow DOM Browserunterstützung](2-Shadow-dom_browserunterstuetzung.jpg "Shadow DOM Browserunterstützung. Quelle: http://caniuse.com/#search=shadow%20dom")
+![Bild: Shadow DOM Browserunterstützung](https://raw.githubusercontent.com/glur4k/BATHWebComponents/master/docs/release/2-Web%20Components%20nach%20W3C/2-Web%20Components%20Technology%20Stack/images/2-Shadow-dom_browserunterstuetzung.jpg "Shadow DOM Browserunterstützung. Quelle: http://caniuse.com/#search=shadow%20dom")
 
 [Can I Use 2015]
 
