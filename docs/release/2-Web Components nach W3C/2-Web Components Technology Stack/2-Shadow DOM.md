@@ -1,7 +1,6 @@
 # Shadow DOM
 
 - TODO:
-  - Beispiel
 
 - Ausformulieren:
   - Complete
