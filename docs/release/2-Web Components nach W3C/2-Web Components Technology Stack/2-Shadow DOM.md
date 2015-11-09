@@ -10,8 +10,11 @@
 
 
 ## Einführung
+
+- Der Shadow DOM ist ein Sub-DOM unterhalb einem HTML Element, der es ermöglicht, HTML und CSS in sich zu kapseln und zu verstecken
+- Wird Shadow DOM wird bereits in HTML5 standardmäßig eingesetzt, z.b. in dem `<video>` Tag. Beim Inspizieren wird deutlich, dass das `<video>` Tag einen Shadow DOM beinhaltet, welcher die Steuerelemente des Videos erzeugt
+- Ebenso sind die verschiedenen `<input>` Elemente, wie z.B. das `<input type="password">` mit einem Shadow-DOM ausgestattet:
 ![Bild eines input type="password"](https://github.com/Glur4k/BATHWebComponents/blob/master/app/images/input_type_password.jpg)
-- Shadow DOM Beispiel mit einem `<input type="password">` bei dem man im Shadow DOM den Plaintext sieht.
 - Bild von W3C mit dem Light DOM, Shadow DOM und der Boundary
 - Shadow DOM liegt neben dem Light DOM
 
@@ -82,5 +85,16 @@
 ## Beispiel eines Shadow DOMs mit Template und CSS Styles
 
 
+## Browserunterstützung
+
+- Noch nicht standardtisiert, sind noch ein Working Draft (http://www.w3.org/TR/shadow-dom/)
+- Deshalb bisher auch nur in Chrome und Opera unterstützt
+
+![Bild: Shadow DOM Browserunterstützung](2-Shadow-dom_browserunterstuetzung.jpg "<Beschreibung>. Quelle: http://caniuse.com/#search=shadow%20dom")
+
+[Can I Use 2015]
+
+
 ## Quellen
 - http://robdodson.me/shadow-dom-css-cheat-sheet/
+- [Can I Use 2015] Can I Use, http://caniuse.com/#search=shadow%20dom

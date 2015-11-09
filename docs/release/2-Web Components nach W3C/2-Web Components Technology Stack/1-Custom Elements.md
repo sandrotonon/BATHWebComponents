@@ -8,7 +8,7 @@
 ## Einführung
 
 - Momentan: Suppe von Divs, die nicht aussagekräftig sind, siehe folgender Ausschnitt der Inbox der Google-Mail Webseite
-  ![Bild: Webseite mit semantisch nicht aussagekräftigem Markup](https://raw.githubusercontent.com/glur4k/BATHWebComponents/deba05dcaa2d0c1879f4cd65138e80dda8e76006/docs/release/2-Web%20Components%20nach%20W3C/2-Web%20Components%20Technology%20Stack/images/3-Custom-elements_div_suppe.jpg "Webseite mit semantisch nicht aussagekräftigem Markup. Quelle: https://mail.google.com/")
+  ![Bild: Webseite mit semantisch nicht aussagekräftigem Markup](https://raw.githubusercontent.com/glur4k/BATHWebComponents/deba05dcaa2d0c1879f4cd65138e80dda8e76006/docs/release/2-Web%20Components%20nach%20W3C/2-Web%20Components%20Technology%20Stack/images/1-Custom-elements_div_suppe.jpg "Webseite mit semantisch nicht aussagekräftigem Markup. Quelle: https://mail.google.com/")
 - Besser: Elemente, die semantisch aussagekräftig sind. So könnte die Google-Mail Webseite folgender Maßen aussehen
 
 ```html
@@ -125,7 +125,7 @@ HTML:
 - Die "Latest commit" Angaben eines Repositories auf Github sind ein erweitertes time-Element (Type Extension Custom Element mit time-Element)
 - Statt des Commit-Datums und der Zeit, wird - wenn JavaScript aktiviert ist - die berechnete Zeit seit dem letzten Commit angezeigt
 
-![Bild: Github Einsatz eines Custom Element](https://raw.githubusercontent.com/glur4k/BATHWebComponents/master/docs/release/2-Web%20Components%20nach%20W3C/2-Web%20Components%20Technology%20Stack/images/2-Custom-elements_Github_time-element.jpg "Github Einsatz eines Custom Element. Quelle: https://github.com/polymer/polymer - Quelltext")
+![Bild: Github Einsatz eines Custom Element](https://raw.githubusercontent.com/glur4k/BATHWebComponents/master/docs/release/2-Web%20Components%20nach%20W3C/2-Web%20Components%20Technology%20Stack/images/1-Custom-elements_Github_time-element.jpg "Github Einsatz eines Custom Element. Quelle: https://github.com/polymer/polymer - Quelltext")
 
 - Dabei dient das `time` Element als Basis
 - Das `datetime` Attribut gibt die absolute Zeit des Commits an
@@ -187,6 +187,7 @@ ButtonExtendedProto.attachedCallback = function() {...};
 var ButtonExtended = document.registerElement('button-extended', {prototype: ButtonExtendedProto});
 ```
 
+[Raoul Schaffranek 2014]
 
 ## Styling von Custom Elements
 
@@ -214,7 +215,7 @@ my-element {
 - Noch nicht standardtisiert, sind noch ein Working Draft (http://w3c.github.io/webcomponents/spec/custom/)
 - Deshalb bisher auch nur in Chrome und Opera unterstützt
 
-![Bild: Browserunterstützung von Custom Elements](https://raw.githubusercontent.com/glur4k/BATHWebComponents/master/docs/release/2-Web%20Components%20nach%20W3C/2-Web%20Components%20Technology%20Stack/images/2-Custom-elements_browserunterstuetzung.jpg "Custom Elements Browserunterstzützung. Quelle: http://caniuse.com/#feat=custom-elements")
+![Bild: Browserunterstützung von Custom Elements](https://raw.githubusercontent.com/glur4k/BATHWebComponents/master/docs/release/2-Web%20Components%20nach%20W3C/2-Web%20Components%20Technology%20Stack/images/1-Custom-elements_browserunterstuetzung.jpg "Custom Elements Browserunterstzützung. Quelle: http://caniuse.com/#feat=custom-elements")
 
 [Can I Use 2015]
 
@@ -226,3 +227,4 @@ my-element {
 - [Eric Bidelman 2013] Eric Bidelman, Custom Elements, http://www.html5rocks.com/en/tutorials/webcomponents/customelements/
 - [Can I Use 2015] Can I Use, http://caniuse.com/#feat=custom-elements
 - [Peter Gasstton 2015] Peter Gasstton, A Detailed Introduction To Custom Elements, http://www.smashingmagazine.com/2014/03/introduction-to-custom-elements/
+- [Raoul Schaffranek 2014] Raoul Schaffranek, Web Components – eine Einführung, https://blog.selfhtml.org/2014/12/09/web-components-eine-einfuehrung/
