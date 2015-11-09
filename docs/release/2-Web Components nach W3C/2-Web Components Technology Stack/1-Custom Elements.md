@@ -1,7 +1,6 @@
 # Custom Elements
 
 - TODO:
-  - Custom Element Life Cycles
 
 - Ausformulieren:
   - Complete
@@ -11,20 +10,22 @@
 - Momentan: Suppe von Divs, die nicht aussagekräftig sind, siehe folgender Ausschnitt der Inbox der Google-Mail Webseite
   ![Bild: Webseite mit semantisch nicht aussagekräftigem Markup](https://raw.githubusercontent.com/glur4k/BATHWebComponents/deba05dcaa2d0c1879f4cd65138e80dda8e76006/docs/release/2-Web%20Components%20nach%20W3C/2-Web%20Components%20Technology%20Stack/images/3-Custom-elements_div_suppe.jpg "Webseite mit semantisch nicht aussagekräftigem Markup. Quelle: https://mail.google.com/")
 - Besser: Elemente, die semantisch aussagekräftig sind. So könnte die Google-Mail Webseite folgender Maßen aussehen
-  ```html
-  <hangout-module>
-    <hangout-chat from="Paul, Addy">
-      <hangout-discussion>
-        <hangout-message from="Paul" profile="profile.png"
-            profile="118075919496626375791" datetime="2013-07-17T12:02">
-          <p>Feelin' this Web Components thing.</p>
-          <p>Heard of it?</p>
-        </hangout-message>
-      </hangout-discussion>
-    </hangout-chat>
-    <hangout-chat>...</hangout-chat>
-  </hangout-module>
-  ```
+
+```html
+<hangout-module>
+  <hangout-chat from="Paul, Addy">
+    <hangout-discussion>
+      <hangout-message from="Paul" profile="profile.png"
+          profile="118075919496626375791" datetime="2013-07-17T12:02">
+        <p>Feelin' this Web Components thing.</p>
+        <p>Heard of it?</p>
+      </hangout-message>
+    </hangout-discussion>
+  </hangout-chat>
+  <hangout-chat>...</hangout-chat>
+</hangout-module>
+```
+
 - Custom Elements ermöglichen es
   - neue DOM Elemente zu definieren
   - Elemente zu definieren, die vorhandene Elemente erweitern
