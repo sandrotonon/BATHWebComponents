@@ -136,6 +136,8 @@ jQuery.html
 [Peter Kröner 2014]
 
 
+### HTTP/2 - TODO
+
 ### "Vulcanize" - TODO
 
 
@@ -170,4 +172,3 @@ jQuery.html
 - http://www.hongkiat.com/blog/html-import/
 - [Eiji Kitamura 2015] Eiji Kitamura, Introduction to HTML Imports, http://webcomponents.org/articles/introduction-to-html-imports/
 
-- http://tjvantoll.com/2014/08/12/the-problem-with-using-html-imports-for-dependency-management/
