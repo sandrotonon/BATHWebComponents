@@ -75,3 +75,6 @@ https://gaming.youtube.com/
 
 *Styling Polymer Elemente*
 https://www.youtube.com/watch?v=IbOaJwqLgog&list=PLNYkxOF6rcICdISJclfQhj2S8QZGjXV8J&index=10
+
+*Vergleich Polymer und AngularJS*
+http://de.slideshare.net/ohader/vergleich-polymer-angularjs

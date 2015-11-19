@@ -6,7 +6,8 @@
     "highlightjs": "~8.8.0",
     "polymer": "Polymer/polymer#~1.2.1",
     "iron-elements": "PolymerElements/iron-elements#~1.0.4",
-    "hello-world-element": "~1.1.0"
+    "hello-world-element": "~1.1.0",
+    "paper-card": "PolymerElements/paper-card#~1.0.7"
   },
   "devDependencies": {
     "chai": "~3.3.0",
