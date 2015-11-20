@@ -12,12 +12,12 @@
 - Wird Shadow DOM wird bereits in HTML5 standardmäßig eingesetzt, z.b. in dem `<video>` Tag. Beim Inspizieren wird deutlich, dass das `<video>` Tag einen Shadow DOM beinhaltet, welcher die Steuerelemente des Videos erzeugt
 - Ebenso sind die verschiedenen `<input>` Elemente, wie z.B. das `<input type="password">` mit einem Shadow-DOM ausgestattet:
 
-![Bild: input type='password' Element](images/2-shadow-dom-input-type-password.jpg?raw=true "input type='password' Element. Quelle: Selbst erstellt")
+![Bild: input type='password' Element](images/2-shadow-dom-input-type-password.jpg "input type='password' Element. Quelle: Selbst erstellt")
 
 - Der Shadow DOM liegt dabei parallel zu dem DOM Knoten des beinhaltenden Elementes (Siehe Bild). Ein Knoten im Document tree (links) wird als Shadow DOM beihaltendes Element (shadow host) markiert. Die gestrichelte Linie zeigt die Referenz zu der entsprechenden Shadow DOM Wurzel, dem "shadow root". Die Referenz geht dabei durch die sogenannte "Shadow Boundary", welche es ermöglicht, den Shadow DOM, und alles was dieser beinhaltet, zu kapseln
 - Die Kapselung des Shadow DOM mittels der Shadow Boundary verhindert, dass CSS oder JavaScript in den Shadow DOM hinein oder hinaus kommen
 
-![Bild: Shadow DOM und Shadow Boundary nach W3C](images/2-shadow-dom-shadow-boundary.png?raw=true "Shadow DOM und Shadow Boundary nach W3C. Quelle: http://www.sitepoint.com/the-basics-of-the-shadow-dom/")
+![Bild: Shadow DOM und Shadow Boundary nach W3C](images/2-shadow-dom-shadow-boundary.png "Shadow DOM und Shadow Boundary nach W3C. Quelle: http://www.sitepoint.com/the-basics-of-the-shadow-dom/")
 
 - Ein Element kann auch mehrere Shadow DOM Wurzeln referenzieren, allerdings wird nur die zuletzt hinzugefügte gerendert, der Browser benutzt beim Rendern einen LIFO Stack
 - Der zuletzt hinzugefügte Shadow Tree wird "youngest tree" genannt, der jeweils zuvor hinzugefügte Shadow Tree wird "older tree" genannt
@@ -175,7 +175,7 @@ shadow.appendChild(clone);
 
 - Das Beispiel oben wird vom Browser wie folgt gerendert:
 
-![Bild: Shadow DOM Beispiel](images/2-shadow-dom-beispiel.jpg?raw=true "Shadow DOM Beispiel. Quelle: Selbst erstellt")
+![Bild: Shadow DOM Beispiel](images/2-shadow-dom-beispiel.jpg "Shadow DOM Beispiel. Quelle: Selbst erstellt")
 
 - Hier sind einige Dinge anzumerken:
   + Es werde per select im `<content>` nur die divs aus dem Shadow Root mit der ID "hello" gerendert, der Paragrapg mit der ID "hidden wird nicht gerendert
@@ -188,7 +188,7 @@ shadow.appendChild(clone);
 - Noch nicht standardtisiert, sind noch ein Working Draft (http://www.w3.org/TR/shadow-dom/)
 - Deshalb bisher auch nur in Chrome und Opera unterstützt
 
-![Bild: Shadow DOM Browserunterstützung](images/2-shadow-dom-browserunterstuetzung.jpg?raw=true "Shadow DOM Browserunterstützung. Quelle: http://caniuse.com/#search=shadow%20dom")
+![Bild: Shadow DOM Browserunterstützung](images/2-shadow-dom-browserunterstuetzung.jpg "Shadow DOM Browserunterstützung. Quelle: http://caniuse.com/#search=shadow%20dom")
 
 [Can I Use 2015]
 

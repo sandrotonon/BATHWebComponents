@@ -91,7 +91,7 @@ Geschachtelte `<template>` Tags müssen manuell aktiviert werden!
 - Sind standardisiert (http://www.w3.org/TR/html5/scripting-1.html#the-template-element) (als einzige Technologie des Web Components Technology Stacks)
 - Browserunterstützung dementsprechend gut, bis auf Internet Explorer und Edge
 
-![Bild: Brwoserunterstützung des HTML Template Tags](images/3-html-templates-browserunterstuetzung.jpg?raw=true "Template Tag Browserunterstzützung. Quelle: http://caniuse.com/#search=template")
+![Bild: Brwoserunterstützung des HTML Template Tags](images/3-html-templates-browserunterstuetzung.jpg "Template Tag Browserunterstzützung. Quelle: http://caniuse.com/#search=template")
 
 
 ## Quellen
