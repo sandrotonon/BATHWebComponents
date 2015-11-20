@@ -8,7 +8,7 @@
 ## Einführung
 
 - Momentan: Suppe von Divs, die nicht aussagekräftig sind, siehe folgender Ausschnitt der Inbox der Google-Mail Webseite
-  ![Bild: Webseite mit semantisch nicht aussagekräftigem Markup](images/1-custom-elements-div-suppe.jpg?raw=true "Webseite mit semantisch nicht aussagekräftigem Markup. Quelle: https://mail.google.com/")
+  ![Bild: Webseite mit semantisch nicht aussagekräftigem Markup](images/1-custom-elements-div-suppe.jpg "Webseite mit semantisch nicht aussagekräftigem Markup. Quelle: https://mail.google.com/")
 - Besser: Elemente, die semantisch aussagekräftig sind. So könnte die Google-Mail Webseite folgender Maßen aussehen
 
 ```html
@@ -125,7 +125,7 @@ HTML:
 - Die "Latest commit" Angaben eines Repositories auf Github sind ein erweitertes time-Element (Type Extension Custom Element mit time-Element)
 - Statt des Commit-Datums und der Zeit, wird - wenn JavaScript aktiviert ist - die berechnete Zeit seit dem letzten Commit angezeigt
 
-![Bild: Github Einsatz eines Custom Element](images/1-custom-elements-Github-time-element.jpg?raw=true "Github Einsatz eines Custom Element. Quelle: https://github.com/polymer/polymer - Quelltext")
+![Bild: Github Einsatz eines Custom Element](images/1-custom-elements-github-time-element.jpg "Github Einsatz eines Custom Element. Quelle: https://github.com/polymer/polymer - Quelltext")
 
 - Dabei dient das `time` Element als Basis
 - Das `datetime` Attribut gibt die absolute Zeit des Commits an
