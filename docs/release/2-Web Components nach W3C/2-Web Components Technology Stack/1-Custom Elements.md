@@ -8,7 +8,7 @@
 ## Einführung
 
 - Momentan: Suppe von Divs, die nicht aussagekräftig sind, siehe folgender Ausschnitt der Inbox der Google-Mail Webseite
-  ![Bild: Webseite mit semantisch nicht aussagekräftigem Markup](https://raw.githubusercontent.com/glur4k/BATHWebComponents/deba05dcaa2d0c1879f4cd65138e80dda8e76006/docs/release/2-Web%20Components%20nach%20W3C/2-Web%20Components%20Technology%20Stack/images/1-Custom-elements_div_suppe.jpg "Webseite mit semantisch nicht aussagekräftigem Markup. Quelle: https://mail.google.com/")
+  ![Bild: Webseite mit semantisch nicht aussagekräftigem Markup](images/1-Custom-elements-div-suppe.jpg?raw=true "Webseite mit semantisch nicht aussagekräftigem Markup. Quelle: https://mail.google.com/")
 - Besser: Elemente, die semantisch aussagekräftig sind. So könnte die Google-Mail Webseite folgender Maßen aussehen
 
 ```html
@@ -125,7 +125,7 @@ HTML:
 - Die "Latest commit" Angaben eines Repositories auf Github sind ein erweitertes time-Element (Type Extension Custom Element mit time-Element)
 - Statt des Commit-Datums und der Zeit, wird - wenn JavaScript aktiviert ist - die berechnete Zeit seit dem letzten Commit angezeigt
 
-![Bild: Github Einsatz eines Custom Element](https://raw.githubusercontent.com/glur4k/BATHWebComponents/master/docs/release/2-Web%20Components%20nach%20W3C/2-Web%20Components%20Technology%20Stack/images/1-Custom-elements_Github_time-element.jpg "Github Einsatz eines Custom Element. Quelle: https://github.com/polymer/polymer - Quelltext")
+![Bild: Github Einsatz eines Custom Element](images/1-Custom-elements-Github-time-element.jpg?raw=true "Github Einsatz eines Custom Element. Quelle: https://github.com/polymer/polymer - Quelltext")
 
 - Dabei dient das `time` Element als Basis
 - Das `datetime` Attribut gibt die absolute Zeit des Commits an
@@ -215,7 +215,7 @@ my-element {
 - Noch nicht standardtisiert, sind noch ein Working Draft (http://w3c.github.io/webcomponents/spec/custom/)
 - Deshalb bisher auch nur in Chrome und Opera unterstützt
 
-![Bild: Browserunterstützung von Custom Elements](https://raw.githubusercontent.com/glur4k/BATHWebComponents/master/docs/release/2-Web%20Components%20nach%20W3C/2-Web%20Components%20Technology%20Stack/images/1-Custom-elements_browserunterstuetzung.jpg "Custom Elements Browserunterstzützung. Quelle: http://caniuse.com/#feat=custom-elements")
+![Bild: Browserunterstützung von Custom Elements](images/1-custom-elements-browserunterstuetzung.jpg "Custom Elements Browserunterstzützung. Quelle: http://caniuse.com/#feat=custom-elements")
 
 [Can I Use 2015]
 

@@ -157,7 +157,7 @@ jQuery.html
 - HTML Imports wurden noch nicht vom W3C standardisiert, sondern sind noch ein Working Draft (http://www.w3.org/TR/html-imports/)
 - Deshalb werden sie bisher auch nur in Chrome und Opera unterstützt
 
-![Bild: HTML Imports Browserunterstützung](https://raw.githubusercontent.com/glur4k/BATHWebComponents/93d15c398717d7124f42d193f99000a1e4979cbe/docs/release/2-Web%20Components%20nach%20W3C/2-Web%20Components%20Technology%20Stack/images/4-HTML-Imports_Browserunterstuetzung.jpg "HTML Imports Browserunterstützung. Quelle: http://caniuse.com/#search=imports")
+![Bild: HTML Imports Browserunterstützung](images/4-html-imports-browserunterstuetzung.jpg?raw=true "HTML Imports Browserunterstützung. Quelle: http://caniuse.com/#search=imports")
 
 [Can I Use 2015]
 
