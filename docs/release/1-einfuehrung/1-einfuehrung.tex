@@ -1,0 +1,63 @@
+\section{Einführung}\label{einfuxfchrung}
+
+Der Begriff ``Web Components'' ist ein Dachbegriff für mehrere
+entstehende Standards {[}SelfHTML 2014{]}, die es für Webentwickler
+ermöglichen sollen, komplexe Anwendungsentwicklungen mit einer neuen
+Sammlung an Werkzeugen zu vereinfachen. Diese sollen die Wartbarkeit,
+Interoperabilität und Kapselung verbessern und somit ein Plugin-System
+für das Web schaffen. Durch die neuen Standards soll das Web zu einer
+Plattform werden, die es ermöglicht die Web-Sprache selbst, \ac{HTML},
+zu erweitern. Dies ist bisher nicht möglich, da die HTML-Technologie,
+und somit die Möglichkeiten HTML-Tags zu benutzen, vom \ac{W3C}
+definiert und standardisiert wird. Unter den wichtigsten der neuen
+Standard sind die folgenden vier Technologien aufzuführen: Custom
+Elements, Shadow DOM, HTML Templates und HTML Imports. Custom Elements
+ermöglichen es einem Webentwickler eigene HTML-Tags und deren Verhalten
+zu definieren, oder bereits vorhandene oder native HTML-Tags zu
+erweitern. Das Shadow DOM (Document Object Model) stellt einen Sub-DOM
+in einem HTML Element bereit, welcher dem Element zugehöriges Markup,
+CSS und JavaScript kapselt. HTML Templates stellen, wie der Name
+impliziert, einen Template-Mechanismus für HTML bereit {[}Peter Kröner
+2014{]}. HTML Imports erlauben das Laden von HTML-Dokumenten in andere
+HTML-Dokumente {[}Peter Kröner 2 2014{]}.
+
+Diese neuen Technologien werden allerdings noch nicht von den
+populärsten Browsern, zu welchen Google Chrome, Mozilla Firefox, Opera
+und der Internet Explorer beziehungsweise Edge gehören, unterstützt. Des
+Weiteren ist das Implementieren einer Applikation, welche diese
+Technologien nativ benutzt, bisher sehr komplex und schwierig zu
+organisieren. Im Zuge dessen, entwickelt Google aktiv an einer
+Bibliothek namens Polymer, welche sich diesen Problemen annimmt.
+
+Polymer stellt eine Sammlung von Polyfills (webcomponents.js) bereit,
+die älteren Browsern die nötigen Features für den Einsatz von Web
+Components beibringen. Ebenso soll das Erstellen von eigenen
+HTML-Elementen mit der Polymer-Bibliothek, und der damit
+bereitgestellten API, für Entwickler komfortabel gemacht werden. Um nun
+bereits entwickelte Web Components einfach wiederverwenden zu können,
+stellt Polymer eine Sammlung von fertigen Polymer-Elementen bereit.
+
+Im Rahmen dieser Bachelorarbeit sollen die verschiedenen Technologien
+unter dem Dachbegriff Web Components, sowie deren Funktionsweise ohne,
+als auch mit der Polymer Bibliothek, untersucht werden. Zur
+Veranschaulichung soll eine Web Komponente mit Hilfe von Polymer
+implementiert werden und mit einer ähnlichen Implementierung mit
+AngularJS verglichen werden. Am Beispiel einer Web Komponente in Form
+einer Multi-Navigations-Applikation sollen die Vor- und Nachteile des
+Einsatzes von Polymer in Hinblick auf Implementierung und Performanz
+dargestellt werden.
+
+\subsection{Quellen}\label{quellen}
+
+\begin{itemize}
+\item
+  {[}Peter Kröner 2014{]} Peter Kröner, Web Components erklärt - Teil 1:
+  Was sind Web Components?, 2014,
+  /http://www.peterkroener.de/web-components-erklaert-teil-1-was-sind-web-components/
+\item
+  {[}Peter Kröner 2 2014{]} Peter Kröner, Das Web der Zukunft, 2014,
+  http://webkrauts.de/artikel/2014/das-web-der-zukunft
+\item
+  {[}SelfHTML 2014{]} SelfHTML, Web Components - eine Einführung, 2014,
+  https://blog.selfhtml.org/2014/12/09/web-components-eine-einfuehrung/
+\end{itemize}

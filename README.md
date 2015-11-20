@@ -11,3 +11,8 @@ Am Ende des Dokumentes ist eine Unterüberschrift *Quellen*, in der alle benutzt
 ### Bilder
 
 `![Bild: <Beschreibung>](*link* "<Beschreibung>. Quelle: <Quelle>")`
+
+
+## Markdown in LaTeX konvertieren
+
+`pandoc -f markdown -t latex markdownfile.md -o latexfile.tex`
