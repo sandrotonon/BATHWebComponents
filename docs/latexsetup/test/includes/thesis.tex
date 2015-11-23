@@ -1,13 +1,9 @@
+
 \documentclass[11pt,a4paper]{report}		                                   
 
 \usepackage{graphicx}
 \usepackage{a4}
 \usepackage{german}
-\usepackage{acronym}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-
-\def\tightlist{}
 
 
 \newcommand{\thema}{$[$Thema der Bachelorarbeit$]$}
@@ -28,37 +24,12 @@
 \newcommand{\studiengang}{$[$Software-Engineering/Technische Informatik/Wirtschaftsinformatik$]$}
 
 
-% DOCUMENT START -------------------------------
-
 \begin{document}
 
-% HTWG Seiten
 \include{cover}
 \include{title}
 \include{abstract}
 \include{affidavit}
-
-% Inhaltsverzeichnis anzeigen
-\tableofcontents
-
-\newpage
-
-% Abkürzungsverzeichnis anzeigen
-\include{glossary}
-
-
-% EIGENE INHALTE ANFANG
-% --------------------
-
-\input{../release/1-einleitung/1-einleitung.tex}
-
-% --------------------
-% EIGENE INHALTE ENDE
-
-% Quellenverzeichnis anzeigen
-\nocite{*}
-\bibliographystyle{apalike}
-\bibliography{library}
 
 \end{document}
 

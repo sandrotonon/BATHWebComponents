@@ -1,0 +1,544 @@
+\documentclass[11pt,a4paper]{report}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{hyperref}
+\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
+\hypersetup{unicode=true,
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+\newcommand{\ImportTok}[1]{{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+\newcommand{\BuiltInTok}[1]{{#1}}
+\newcommand{\ExtensionTok}[1]{{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ADD YOUR \usepackage{...} COMMANDS HERE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\thema}{[Thema der Bachelorarbeit]}
+\newcommand{\schlagworte}{[Platz, f\"ur, spezifische, Schlagworte, zur, Ausarbeitung ]}
+\newcommand{\zusammenfassung}{[Text der Zusammenfassung etwa 150 Worte. Es soll der
+  L"osungsweg beschrieben sein.]}
+\newcommand{\ausgabedatum}{[Datum]}
+\newcommand{\abgabedatum}{[Datum]}
+\newcommand{\autor}{[Vor- und Zuname des/der Bachelorkandidaten/in]}
+\newcommand{\autorStrasse}{[Stra"se]}
+\newcommand{\autorPLZ}{[PLZ]}
+\newcommand{\autorOrt}{[Ort]}
+\newcommand{\autorGeburtsort}{[Geburtsort]}
+\newcommand{\autorGeburtsdatum}{[Datum]}
+\newcommand{\prueferA}{[Titel, Vor- und Zuname des 1. Pr"ufers]}
+\newcommand{\prueferB}{[Titel, Vor- und Zuname des 2. Pr"ufers]}
+\newcommand{\firma}{[HTWG oder Firmenname]}
+\newcommand{\studiengang}{[Software-Engineering/Technische Informatik/Wirtschaftsinformatik]}
+
+\date{}
+
+\begin{document}
+
+\include{includes/cover}
+\include{includes/title}
+\include{includes/abstract}
+\include{includes/affidavit}
+
+
+\chapter{Custom Elements}\label{custom-elements}
+
+\begin{itemize}
+\item
+  TODO:
+\item
+  Ausformulieren:
+\item
+  Complete
+\end{itemize}
+
+\section{Einführung}\label{einfuxfchrung}
+
+\begin{itemize}
+\tightlist
+\item
+  Momentan: Suppe von Divs, die nicht aussagekräftig sind, siehe
+  folgender Ausschnitt der Inbox der Google-Mail Webseite
+  \includegraphics{images/1-custom-elements-div-suppe.jpg}
+\item
+  Besser: Elemente, die semantisch aussagekräftig sind. So könnte die
+  Google-Mail Webseite folgender Maßen aussehen
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{<hangout-module>}
+  \KeywordTok{<hangout-chat}\OtherTok{ from=}\StringTok{"Paul, Addy"}\KeywordTok{>}
+    \KeywordTok{<hangout-discussion>}
+      \KeywordTok{<hangout-message}\OtherTok{ from=}\StringTok{"Paul"}\OtherTok{ profile=}\StringTok{"profile.png"}
+\OtherTok{          profile=}\StringTok{"118075919496626375791"}\OtherTok{ datetime=}\StringTok{"2013-07-17T12:02"}\KeywordTok{>}
+        \KeywordTok{<p>}\NormalTok{Feelin' this Web Components thing.}\KeywordTok{</p>}
+        \KeywordTok{<p>}\NormalTok{Heard of it?}\KeywordTok{</p>}
+      \KeywordTok{</hangout-message>}
+    \KeywordTok{</hangout-discussion>}
+  \KeywordTok{</hangout-chat>}
+  \KeywordTok{<hangout-chat>}\NormalTok{...}\KeywordTok{</hangout-chat>}
+\KeywordTok{</hangout-module>}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  Custom Elements ermöglichen es
+\item
+  neue DOM Elemente zu definieren
+\item
+  Elemente zu definieren, die vorhandene Elemente erweitern
+\item
+  eigene Funktionalitäten in einem Element zu bündeln
+\item
+  die APIs vorhandener DOM Elemente zu erweitern
+\end{itemize}
+
+{[}Eric Bidelman 2013{]}
+
+\section{Neue Elemente registrieren}\label{neue-elemente-registrieren}
+
+\begin{itemize}
+\item
+  Laut W3C Spezifikation muss ein Custom Element ein Bindestrich im
+  Namen haben, z.B. \texttt{my-element}
+  (http://w3c.github.io/webcomponents/spec/custom/\#concepts)
+\item
+  Ein neues Element wir mit der Funktion
+  \texttt{var\ MyElement\ =\ document.registerElement(\textquotesingle{}my-element\textquotesingle{});}
+  registriert
+\item
+  Als zweiter Parameter kann der \texttt{prototype} mit angegeben werden
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{var} \NormalTok{MyElement }\OperatorTok{=} \VariableTok{document}\NormalTok{.}\AttributeTok{registerElement}\NormalTok{(}\StringTok{'my-element'}\OperatorTok{,} \OperatorTok{\{}
+  \DataTypeTok{prototype}\OperatorTok{:} \VariableTok{Object}\NormalTok{.}\AttributeTok{create}\NormalTok{(}\VariableTok{HTMLElement}\NormalTok{.}\AttributeTok{prototype}\NormalTok{)}
+\OperatorTok{\}}\NormalTok{)}\OperatorTok{;}
+\end{Highlighting}
+\end{Shaded}
+\item
+  Dadurch steht es in der Registry des Browsers, welche dazu verwendet
+  wird um die Definitionen der Elemente aufzulösen
+\item
+  Nachdem das Element registriert wurde, kann es per JavaScript oder
+  HTML Deklaration verwendet werden
+\end{itemize}
+
+JavaScript
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{var} \NormalTok{myelement }\OperatorTok{=} \VariableTok{document}\NormalTok{.}\AttributeTok{createElement}\NormalTok{(}\StringTok{'my-element'}\NormalTok{)}\OperatorTok{;}
+\VariableTok{document}\NormalTok{.}\VariableTok{body}\NormalTok{.}\AttributeTok{appendChild}\NormalTok{(myelement)}\OperatorTok{;}
+\end{Highlighting}
+\end{Shaded}
+
+HTML
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{<div}\OtherTok{ class=}\StringTok{"wrapper"}\KeywordTok{>}
+  \KeywordTok{<my-element><my-element>}
+\KeywordTok{</div>}
+\end{Highlighting}
+\end{Shaded}
+
+{[}Developing Web Components 2015{]}
+
+\section{Vorteile von Custom
+Elements}\label{vorteile-von-custom-elements}
+
+\begin{itemize}
+\tightlist
+\item
+  Unangemeldete, unregistrierte Custom Tags wie z.B.
+  \texttt{\textless{}myelement\textgreater{}} benutzen das Interface
+  HTMLUknownElement
+\item
+  Angemeldete, registrierte Custom Elements wie z.B.
+  \texttt{\textless{}my-element\textgreater{}} benutzen das Interface
+  HTMLElement
+\item
+  Somit können für neue HTML Elemente eigene APIs erzeugt werden, indem
+  eigene Eigenschaften und Methoden hinzugefügt werden
+\end{itemize}
+
+{[}Eric Bidelman 2015{]}
+
+\subsection{Nachteil}\label{nachteil}
+
+\begin{itemize}
+\tightlist
+\item
+  Eventueller FOUC (Flash of unstyled content), da das Element schon im
+  DOM steht, aber erst noch registriert werden muss
+\item
+  Kann verhindert werden, in dem man den \texttt{:unresolved}-Selector
+  benutzt und die Elemente ausblendet
+\end{itemize}
+
+\texttt{my-element:unresolved\ \{\ \ \ \ \ display:\ none;\ \ \ \}}
+
+{[}Peter Gasston 2014{]}
+
+\section{Vorhandene Elemente erweitern (Type
+extensions)}\label{vorhandene-elemente-erweitern-type-extensions}
+
+\begin{itemize}
+\tightlist
+\item
+  Statt neue Elemente zu erzeugen, können vorhandene auch erweitert
+  werden
+\item
+  So können native HTML Elemente erweitert werden
+\item
+  Um einen erweitertes \texttt{button} zu erzeugen muss also folgendes
+  gemacht werden:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{var} \NormalTok{ButtonExtendedProto }\OperatorTok{=} \VariableTok{document}\NormalTok{.}\AttributeTok{registerElement}\NormalTok{(}\StringTok{'button-extended'}\OperatorTok{,} \OperatorTok{\{}
+  \DataTypeTok{prototype}\OperatorTok{:} \VariableTok{Object}\NormalTok{.}\AttributeTok{create}\NormalTok{(}\VariableTok{HTMLButtonElement}\NormalTok{.}\AttributeTok{prototype}\NormalTok{)}\OperatorTok{,}
+  \DataTypeTok{extends}\OperatorTok{:} \StringTok{'button'}
+\OperatorTok{\}}\NormalTok{)}\OperatorTok{;}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  Ein erweitertes Element kann nun wie folgt vie JavaScript oder HTML
+  Deklaration verwendet werden:
+\end{itemize}
+
+JavaScript:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{var} \NormalTok{buttonExtended  }\OperatorTok{=} \VariableTok{document}\NormalTok{.}\AttributeTok{createElement}\NormalTok{(}\StringTok{'button'}\OperatorTok{,} \StringTok{'button-extended'}\NormalTok{)}\OperatorTok{;}
+
+\CommentTok{// Oder}
+
+\KeywordTok{var} \NormalTok{buttonExtended }\OperatorTok{=} \KeywordTok{new} \AttributeTok{ButtonExtendedProto}\NormalTok{()}\OperatorTok{;}
+\end{Highlighting}
+\end{Shaded}
+
+HTML:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \KeywordTok{<div}\OtherTok{ class=}\StringTok{"wrapper"}\KeywordTok{>}
+    \KeywordTok{<button}\OtherTok{ is=}\StringTok{"button-extended"}\KeywordTok{></button>}
+  \KeywordTok{</div>}
+\end{Highlighting}
+\end{Shaded}
+
+{[}Eiji Kitamura 2014{]}
+
+\subsection{Verwendung bei Github}\label{verwendung-bei-github}
+
+\begin{itemize}
+\tightlist
+\item
+  Die ``Latest commit'' Angaben eines Repositories auf Github sind ein
+  erweitertes time-Element (Type Extension Custom Element mit
+  time-Element)
+\item
+  Statt des Commit-Datums und der Zeit, wird - wenn JavaScript aktiviert
+  ist - die berechnete Zeit seit dem letzten Commit angezeigt
+\end{itemize}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{images/1-custom-elements-github-time-element.jpg}
+\caption{Bild: Github Einsatz eines Custom Element}
+\end{figure}
+
+\begin{itemize}
+\tightlist
+\item
+  Dabei dient das \texttt{time} Element als Basis
+\item
+  Das \texttt{datetime} Attribut gibt die absolute Zeit des Commits an
+\item
+  \texttt{is="time-ago"} ist die Erweiterung des \texttt{time} Elements
+\item
+  Der Inhalt des \texttt{time} Elements zeigt die relative Zeit an
+\item
+  Falls der Browser nun keine Custom Elements (mit Polyfill) unterstützt
+  oder JavaScript deaktiviert ist, wird dennoch das ``normale''
+  \texttt{time} Element mit der absoluten Zeit angezeigt
+\end{itemize}
+
+{[}Eiji Kitamura 2014{]}
+
+\section{Eigenschaften und Methoden
+definieren}\label{eigenschaften-und-methoden-definieren}
+
+\begin{itemize}
+\tightlist
+\item
+  Custom Elements machen erst so richtig Sinn, wenn man für diese auch
+  eigene Eigenschaften und Methoden definieren kann
+\item
+  Wie bei nativen HTML Elementen ist dies bei Custom Elements möglich,
+  dies geschieht auf die gleiche Weise
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{// Methode definieren}
+\VariableTok{ButtonExtendedProto}\NormalTok{.}\VariableTok{prototype}\NormalTok{.}\AttributeTok{alert} \OperatorTok{=} \KeywordTok{function} \NormalTok{() }\OperatorTok{\{}
+  \AttributeTok{alert}\NormalTok{(}\StringTok{'foo'}\NormalTok{)}\OperatorTok{;}
+\OperatorTok{\};}
+
+\CommentTok{// Eigenschaft definieren}
+\VariableTok{ButtonExtendedProto}\NormalTok{.}\VariableTok{prototype}\NormalTok{.}\AttributeTok{answer} \OperatorTok{=} \DecValTok{42}\OperatorTok{;}
+\end{Highlighting}
+\end{Shaded}
+
+{[}Developing Web Components 2015{]}
+
+\section{Custom Element Life Cycle Callbacks -
+TODO?}\label{custom-element-life-cycle-callbacks---todo}
+
+\begin{itemize}
+\tightlist
+\item
+  Custom Elements bieten eine standardisierte API um verschiedene
+  Methoden zu unterschiedlichen Zeitpunkten im ``Leben'' eines Custom
+  Elements auszuführen. Diese ermöglicht es zu bestimmen, wie und wann
+  ein bestimmter Code des Custom Elements ausgeführt wird.
+\end{itemize}
+
+\subsubsection{createdCallback}\label{createdcallback}
+
+\begin{itemize}
+\tightlist
+\item
+  Wird ausgeführt, wenn eine Instanz des Custom Elements erzeugt wird.
+  Beispiel:
+  \texttt{document.createElement(\textquotesingle{}custom-element\textquotesingle{});}
+\end{itemize}
+
+\subsubsection{attachedCallback}\label{attachedcallback}
+
+\begin{itemize}
+\tightlist
+\item
+  Wird ausgeführt, wenn ein Custom Element dem DOM angehängt wird.
+  Beispiel: \texttt{document.body.appendChild();}
+\end{itemize}
+
+\subsubsection{detachedCallback}\label{detachedcallback}
+
+\begin{itemize}
+\tightlist
+\item
+  Wird ausgeführt, wenn ein Custom Element aus dem DOM entfernt wird.
+  Beispiel: \texttt{document.body.removeChild();}
+\end{itemize}
+
+\subsubsection{attributeChangedCallback}\label{attributechangedcallback}
+
+\begin{itemize}
+\tightlist
+\item
+  Wird ausgeführt, wenn ein Attribut eines Custom ELements geändert
+  wird. Beispiel: \texttt{MyElement.setAttribute();}
+\end{itemize}
+
+\subsection{\texorpdfstring{Beispiel mit
+\texttt{button-extended}}{Beispiel mit button-extended}}\label{beispiel-mit-button-extended}
+
+Anhand des \texttt{button-extended} Beispiels würde dies folgender Maßen
+funktionieren:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{var} \NormalTok{ButtonExtendedProto }\OperatorTok{=} \VariableTok{Object}\NormalTok{.}\AttributeTok{create}\NormalTok{(}\VariableTok{HTMLElement}\NormalTok{.}\AttributeTok{prototype}\NormalTok{)}\OperatorTok{;}
+
+\VariableTok{ButtonExtendedProto}\NormalTok{.}\AttributeTok{createdCallback} \OperatorTok{=} \KeywordTok{function}\NormalTok{() }\OperatorTok{\{}\NormalTok{...}\OperatorTok{\};}
+\VariableTok{ButtonExtendedProto}\NormalTok{.}\AttributeTok{attachedCallback} \OperatorTok{=} \KeywordTok{function}\NormalTok{() }\OperatorTok{\{}\NormalTok{...}\OperatorTok{\};}
+
+\KeywordTok{var} \NormalTok{ButtonExtended }\OperatorTok{=} \VariableTok{document}\NormalTok{.}\AttributeTok{registerElement}\NormalTok{(}\StringTok{'button-extended'}\OperatorTok{,} \OperatorTok{\{}\DataTypeTok{prototype}\OperatorTok{:} \NormalTok{ButtonExtendedProto}\OperatorTok{\}}\NormalTok{)}\OperatorTok{;}
+\end{Highlighting}
+\end{Shaded}
+
+{[}Raoul Schaffranek 2014{]}
+
+\section{Styling von Custom Elements}\label{styling-von-custom-elements}
+
+\begin{itemize}
+\tightlist
+\item
+  Custom Elements können wie native HTML Elemente gestyled werden
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{my-element }\KeywordTok{\{}
+  \KeywordTok{foo:} \NormalTok{bar}\KeywordTok{;}
+\KeywordTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  Element-Erweiterungen können per Attribut-Selektor angesprochen werden
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CharTok{[is=}\StringTok{"button-extended"}\CharTok{]} \KeywordTok{\{}
+  \KeywordTok{foo:} \NormalTok{bar}\KeywordTok{;}
+\KeywordTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+{[}Developing Web Components 2015{]}
+
+\section{Browserunterstützung}\label{browserunterstuxfctzung}
+
+\begin{itemize}
+\tightlist
+\item
+  Noch nicht standardtisiert, sind noch ein Working Draft
+  (http://w3c.github.io/webcomponents/spec/custom/)
+\item
+  Deshalb bisher auch nur in Chrome und Opera unterstützt
+\end{itemize}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{images/1-custom-elements-browserunterstuetzung.jpg}
+\caption{Bild: Browserunterstützung von Custom Elements}
+\end{figure}
+
+{[}Can I Use 2015{]}
+
+\section{Quellen}\label{quellen}
+
+\begin{itemize}
+\tightlist
+\item
+  {[}Developing Web Components 2015{]} Jarrod Overson \& Jason Strimpel,
+  Developing Web Components, O'Reilly 2015, S.127-138
+\item
+  {[}Eiji Kitamura 2014{]} Eiji Kitamura, Introduction to Custom
+  Elements,
+  http://webcomponents.org/articles/introduction-to-custom-elements/
+\item
+  http://w3c.github.io/webcomponents/spec/custom/
+\item
+  {[}Eric Bidelman 2013{]} Eric Bidelman, Custom Elements,
+  http://www.html5rocks.com/en/tutorials/webcomponents/customelements/
+\item
+  {[}Can I Use 2015{]} Can I Use,
+  http://caniuse.com/\#feat=custom-elements
+\item
+  {[}Peter Gasstton 2015{]} Peter Gasstton, A Detailed Introduction To
+  Custom Elements,
+  http://www.smashingmagazine.com/2014/03/introduction-to-custom-elements/
+\item
+  {[}Raoul Schaffranek 2014{]} Raoul Schaffranek, Web Components -- eine
+  Einführung,
+  https://blog.selfhtml.org/2014/12/09/web-components-eine-einfuehrung/
+\end{itemize}
+
+\chapter{Was anderes}\label{was-anderes}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore id
+minus dolorem architecto, neque voluptatibus et, culpa fugiat ad,
+voluptas perspiciatis magni earum. Ex ipsum eum mollitia, eius sint,
+est.
+
+\end{document}

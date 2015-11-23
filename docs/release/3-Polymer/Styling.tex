@@ -1,0 +1,201 @@
+\section{CSS Styling und externe
+Stylesheets}\label{css-styling-und-externe-stylesheets}
+
+\subsection{Einführung}\label{einfuxfchrung}
+
+\begin{itemize}
+\tightlist
+\item
+  Komponenten können CSS Properties (also Variablen) nach außen sichtbar
+  machen, damit diese von außerhalb der Komponente gesetzt werden können
+  um somit das CSS in einer gekapselten Komponente bestimmen zu können
+\item
+  Hierbei können auch Standardangaben gemacht werden, die von der
+  Komponente übernommen werden, wenn die Variable nicht definiert wird
+\item
+  Beispiel:
+\end{itemize}
+
+x-element Komponente
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{<dom-module}\OtherTok{ id=}\StringTok{"x-element"}\KeywordTok{>}
+  \KeywordTok{<template>}
+    \KeywordTok{<style>}
+      \FloatTok{.x-element-container} \NormalTok{> button }\KeywordTok{\{}
+        \KeywordTok{color:} \NormalTok{var(--x-element-button-color, }\DataTypeTok{red}\NormalTok{)}\KeywordTok{;}
+      \KeywordTok{\}}
+    \KeywordTok{</style>} 
+  \KeywordTok{</template>}
+\KeywordTok{</dom-module>}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  Das HTML, das die Komponente benutzt kann nun die Variable
+  \texttt{-\/-x-element-button-color} instanziieren
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{<style}\OtherTok{ is=}\StringTok{"custom-style"}\KeywordTok{>}
+  \NormalTok{x-element }\KeywordTok{\{}
+    \KeywordTok{--x-element-button-color:} \DataTypeTok{green}\KeywordTok{;}
+  \KeywordTok{\}}
+\KeywordTok{</style>}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  Das \texttt{is="custom-style"} Attribut des
+  \texttt{\textless{}style\textgreater{}} Tags ist für den Polyfill, da
+  CSS Properties noch nicht in den Browsern implementiert sind
+\item
+  Nun soll jedoch nicht für jedes CSS Attribut eine Variable angelegt
+  werden
+\item
+  Um mehrere CSS Attribute einer Komponente zu ändern können Mixins
+  erstellt werden, welche eine Sammlung an Styles auf eine Komponente
+  anwenden
+\item
+  Wenn wird das x-element Beispiel erweitert:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{<style}\OtherTok{ is=}\StringTok{"custom-style"}\KeywordTok{>}
+  \NormalTok{x-element }\KeywordTok{\{}
+    \KeywordTok{--x-element-button-color:} \DataTypeTok{green}\KeywordTok{;}
+    \KeywordTok{--x-element:} \NormalTok{\{}
+        \NormalTok{padding: }\DataTypeTok{10px}\KeywordTok{;}
+        \KeywordTok{margin:} \DataTypeTok{10px}\KeywordTok{;}
+    \KeywordTok{\}}\NormalTok{;}
+  \NormalTok{\}}
+\KeywordTok{</style>}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  Um das Mixin auf das x-element anzuwenden, muss im
+  \texttt{\textless{}style\textgreater{}} des x-element das Mixin via
+  einem \texttt{@apply\ (\textless{}mixin-name\textgreater{});}
+  angegeben werden.
+\item
+  Somit sieht das x-element Beispiel wie folgt aus:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{<dom-module}\OtherTok{ id=}\StringTok{"x-element"}\KeywordTok{>}
+  \KeywordTok{<template>}
+    \KeywordTok{<style>}
+      \FloatTok{.x-element-container} \NormalTok{> button }\KeywordTok{\{}
+        \KeywordTok{color:} \NormalTok{var(--x-element-button-color, }\DataTypeTok{red}\NormalTok{)}\KeywordTok{;}
+
+        \ErrorTok{@apply(--x-element);}
+      \KeywordTok{\}}
+    \KeywordTok{</style>} 
+  \KeywordTok{</template>}
+\KeywordTok{</dom-module>}
+\end{Highlighting}
+\end{Shaded}
+
+{[}Monica Dinculescu 2015{]}
+
+\subsection{Gemeinsame Styles mehrerer
+Komponenten}\label{gemeinsame-styles-mehrerer-komponenten}
+
+\begin{itemize}
+\tightlist
+\item
+  Styling für mehrere Komponenten erfolgt mit sog.
+  \texttt{style-modules}
+\item
+  Externe Stylesheets werden von Polymer ab Version 1.1 nicht mehr
+  unterstützt
+\end{itemize}
+
+{[}Polymer Developer Guide - Styling local DOM 2015{]}
+
+\subsubsection{Style Module anlegen}\label{style-module-anlegen}
+
+\begin{itemize}
+\tightlist
+\item
+  Will man Styles für mehrere Komponenten erstellen, kann eine
+  Komponente für diesen Zweck angelegt werden. Diese wird von all jenem
+  Komponenten importiert, welche diese Styles benutzen sollen
+\item
+  Ein Style Module kann dabei folgender Maßen aussehen:
+\end{itemize}
+
+shared-styles.html
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{<dom-module}\OtherTok{ id=}\StringTok{"shared-styles"}\KeywordTok{>}
+  \KeywordTok{<template>}
+    \KeywordTok{<style>}
+      \FloatTok{.red} \KeywordTok{\{} \KeywordTok{color:} \DataTypeTok{red}\KeywordTok{;} \KeywordTok{\}}
+    \KeywordTok{</style>} 
+  \KeywordTok{</template>}
+\KeywordTok{</dom-module>}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Style Module benutzen}\label{style-module-benutzen}
+
+\begin{itemize}
+\tightlist
+\item
+  Damit eine Komponente diese Styles nutzen kann, muss sie zwei Dinge
+  erfüllen:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Es muss einen \texttt{\textless{}link\textgreater{}} Tag definieren,
+    der das Style Module importiert
+  \item
+    Es muss einen \texttt{\textless{}style\textgreater{}} Tag
+    definieren, der die Styles an der richtigen Stelle inkludiert
+  \end{itemize}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{<!-- import the module  -->}
+\KeywordTok{<link}\OtherTok{ rel=}\StringTok{"import"}\OtherTok{ href=}\StringTok{"../shared-styles/shared-styles.html"}\KeywordTok{>}
+\KeywordTok{<dom-module}\OtherTok{ id=}\StringTok{"x-element"}\KeywordTok{>}
+  \KeywordTok{<template>}
+    \CommentTok{<!-- include the style module by name -->}
+    \KeywordTok{<style}\OtherTok{ include=}\StringTok{"shared-styles"}\KeywordTok{></style>}
+\ErrorTok{    <style>:host \{ display: block; \}</style>}
+    \NormalTok{Hi}
+  \KeywordTok{</template>}
+  \KeywordTok{<script>}\AttributeTok{Polymer}\NormalTok{(}\OperatorTok{\{}\DataTypeTok{is}\OperatorTok{:} \StringTok{'x-element'}\OperatorTok{\}}\NormalTok{)}\OperatorTok{;<}\SpecialStringTok{/script>}
+\SpecialStringTok{</dom}\OperatorTok{-}\NormalTok{module}\OperatorTok{>}
+\end{Highlighting}
+\end{Shaded}
+
+{[}Polymer Developer Guide - Styling local DOM 2015{]}
+
+\subsection{Quellen}\label{quellen}
+
+\begin{itemize}
+\tightlist
+\item
+  {[}Polymer Developer Guide - Styling local DOM 2015{]} Polymer,
+  Styling local DOM, 2015,
+  https://www.polymer-project.org/1.0/docs/devguide/styling.html\#style-modules
+\item
+  {[}Monica Dinculescu 2015{]} Monica Dinculescu, Polymer's Styling
+  System, 2015, https://www.youtube.com/watch?v=IbOaJwqLgog
+\end{itemize}
