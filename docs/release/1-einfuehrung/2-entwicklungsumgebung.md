@@ -1,6 +1,8 @@
 # Entwicklungsumgebung
 
--- TODO: complete
+-- TODO:
+
+-- Ausformulieren: complete
 
 Im Folgenden wird die für die Abschlussarbeit zugrunde liegende Entwicklungsumgebung und die dafür verwendeten Programme erläutert. Wichtiger Bestandteil dieser Abschlussarbeit sind kleine Code-Fragmente, welche verschiedene Implementierungen zeigen sollen. Für die Entwicklung dieser Code-Fragmente wird Sublime Text 3 verwendet, für die grundliegende Ausführung aller Code-Fragmente wird Google Chrome in der aktuellsten Version (46) benutzt. Jegliche dargestellten Implementierungen in dieser Abschlussarbeit werden von diesem Browser unterstützt.
 

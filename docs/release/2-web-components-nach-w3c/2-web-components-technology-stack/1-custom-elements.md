@@ -1,15 +1,15 @@
 # Custom Elements
 
-- TODO:
+Der erste Begriff unter dem Dachbegriff Web Components ist Custom Elements, auf dessen API wird im Folgenden eingegangen.
 
-- Ausformulieren:
-  - Complete
+## Einleitung
 
-## Einführung
+Webseiten werden mit sogenannten Elementen, oder auch Tags, aufgebaut. Das Set an verfügbaren Elementen wird vom W3C definiert und standardisiert. Somit ist die Auswahl an den verfügbaren Elementen stark begrenzt und nicht von Entwicklern erweiterbar, sodass diese ihre eigenen, von ihrer Applikation benötigten Elemente, definieren können. Betrachtet man den Quelltext einer Webseite im Internet, wird schnell deutlich, worin das Problem liegt.
 
-- Momentan: Suppe von Divs, die nicht aussagekräftig sind, siehe folgender Ausschnitt der Inbox der Google-Mail Webseite
   ![Bild: Webseite mit semantisch nicht aussagekräftigem Markup](images/1-custom-elements-div-suppe.jpg "Webseite mit semantisch nicht aussagekräftigem Markup. Quelle: https://mail.google.com/")
-- Besser: Elemente, die semantisch aussagekräftig sind. So könnte die Google-Mail Webseite folgender Maßen aussehen
+
+Die Webseite der Google Mail Applikation ist stark geschachtelt in `<div>`-Elemente. Diese sind notwendig um der Webseite die gewünschte Funktionalität und Aussehen zu verleihen. Die Probleme dieser Struktur bzw. des DOM sind deutlich: Es ist sehr schwer zu erkennen, welches Element nun was darstellt und welche Funktion hat. Abgesehen von der fehlenden, schnell ersichtlichen Semantik, also der Zuordnung der Bedeutung zu einem Element, ist der gesamte DOM nur schwer wartbar.
+Dieser Problematik widmen sich die Custom Elements. Sie bieten eine neue API, welche es ermöglicht eigene, semantisch aussagekräftige, HTML-Elemente sowie deren Eigenschaften und Funktionen zu definieren. Würde das obige Beispiel nun also mit Hilfe von Custom Elements umgesetzt werden, so könnte der zugehörige DOM folgender Maßen aussehen [citeulike:13844982].
 
 ```html
 <hangout-module>
@@ -26,18 +26,13 @@
 </hangout-module>
 ```
 
-- Custom Elements ermöglichen es
-  - neue DOM Elemente zu definieren
-  - Elemente zu definieren, die vorhandene Elemente erweitern
-  - eigene Funktionalitäten in einem Element zu bündeln
-  - die APIs vorhandener DOM Elemente zu erweitern
-
-[Eric Bidelman 2013]
+Die Spezifikation des W3C ermöglicht nicht nur das Erstellen eigener Elemente, sondern auch das Erstellen von eigenen Elementen, die native Elemente erweitern. Somit können die APIs von nativen HTML Elementen um eigene Eigenschaften und Funktionen erweitert werden. Dies ermöglicht es, eigene gewünschte Funktionalitäten in eigens erstellten HTML Elementen zu bündeln.
 
 
 ## Neue Elemente registrieren
 
-- Laut W3C Spezifikation muss ein Custom Element ein Bindestrich im Namen haben, z.B. `my-element` (http://w3c.github.io/webcomponents/spec/custom/#concepts)
+Um nun ein eigenes Custom Element zu definieren, muss der Name des Custom Elements, laut der W3C Spezifikation, zwingend einen Bindestrich enthalten, beispielsweise `my-element`. Somit ist gewährleistet, dass der Parser des Browsers die Custom Elements von den nativen Elementen unterscheiden kann [citeulike:13845061].
+
 - Ein neues Element wir mit der Funktion `var MyElement = document.registerElement('my-element');` registriert
 - Als zweiter Parameter kann der `prototype` mit angegeben werden
 ```javascript
@@ -61,7 +56,7 @@ HTML
 </div>
 ```
 
-[Developing Web Components 2015]
+[citeulike:13844979]
 
 
 ## Vorteile von Custom Elements
@@ -117,7 +112,7 @@ HTML:
   </div>
 ```
 
-[Eiji Kitamura 2014]
+[citeulike:13752379]
 
 
 ### Verwendung bei Github
@@ -132,8 +127,6 @@ HTML:
 - `is="time-ago"` ist die Erweiterung des `time` Elements
 - Der Inhalt des `time` Elements zeigt die relative Zeit an
 - Falls der Browser nun keine Custom Elements (mit Polyfill) unterstützt oder JavaScript deaktiviert ist, wird dennoch das "normale" `time` Element mit der absoluten Zeit angezeigt
-
-[Eiji Kitamura 2014]
 
 
 ## Eigenschaften und Methoden definieren
@@ -151,7 +144,7 @@ ButtonExtendedProto.prototype.alert = function () {
 ButtonExtendedProto.prototype.answer = 42;
 ```
 
-[Developing Web Components 2015]
+[citeulike:13844979]
 
 
 ## Custom Element Life Cycle Callbacks - TODO?
@@ -187,7 +180,7 @@ ButtonExtendedProto.attachedCallback = function() {...};
 var ButtonExtended = document.registerElement('button-extended', {prototype: ButtonExtendedProto});
 ```
 
-[Raoul Schaffranek 2014]
+[citeulike:13844988]
 
 ## Styling von Custom Elements
 
@@ -207,7 +200,7 @@ my-element {
 }
 ```
 
-[Developing Web Components 2015]
+[citeulike:13844979]
 
 
 ## Browserunterstützung
@@ -217,15 +210,16 @@ my-element {
 
 ![Bild: Browserunterstützung von Custom Elements](images/1-custom-elements-browserunterstuetzung.jpg "Custom Elements Browserunterstzützung. Quelle: http://caniuse.com/#feat=custom-elements")
 
-[Can I Use 2015]
+[citeulike:13844983]
 
 
 ## Quellen
 
-- [Developing Web Components 2015] Jarrod Overson & Jason Strimpel, Developing Web Components, O'Reilly 2015, S.127-138
-- [Eiji Kitamura 2014] Eiji Kitamura, Introduction to Custom Elements, http://webcomponents.org/articles/introduction-to-custom-elements/
+- [citeulike:13844979] Jarrod Overson & Jason Strimpel, Developing Web Components, O'Reilly 2015, S.127-138
+- [citeulike:13845061] W3C Custom Elements, http://w3c.github.io/webcomponents/spec/custom/#concepts
+- [citeulike:13752379] Eiji Kitamura, Introduction to Custom Elements, http://webcomponents.org/articles/introduction-to-custom-elements/
 - http://w3c.github.io/webcomponents/spec/custom/
-- [Eric Bidelman 2013] Eric Bidelman, Custom Elements, http://www.html5rocks.com/en/tutorials/webcomponents/customelements/
-- [Can I Use 2015] Can I Use, http://caniuse.com/#feat=custom-elements
-- [Peter Gasstton 2015] Peter Gasstton, A Detailed Introduction To Custom Elements, http://www.smashingmagazine.com/2014/03/introduction-to-custom-elements/
-- [Raoul Schaffranek 2014] Raoul Schaffranek, Web Components – eine Einführung, https://blog.selfhtml.org/2014/12/09/web-components-eine-einfuehrung/
+- [citeulike:13844982] Eric Bidelman, Custom Elements, http://www.html5rocks.com/en/tutorials/webcomponents/customelements/
+- [citeulike:13844983] Can I Use, http://caniuse.com/#feat=custom-elements
+- [citeulike:13844984] Peter Gasstton, A Detailed Introduction To Custom Elements, http://www.smashingmagazine.com/2014/03/introduction-to-custom-elements/
+- [citeulike:13844988] Raoul Schaffranek, Web Components – eine Einführung, https://blog.selfhtml.org/2014/12/09/web-components-eine-einfuehrung/
