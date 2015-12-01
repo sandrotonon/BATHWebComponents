@@ -1,41 +1,30 @@
 # Shadow DOM
 
-- TODO:
-
-- Ausformulieren:
-  - Complete
+Eine weitere Technologie der Web Components ist der so genannte Shadow DOM, welcher es ermöglicht, JavaScript, HTML und CSS in einem neuen Sub-DOM zu kapseln.
 
 
-## Einführung
+## Einleitung
 
-- Der Shadow DOM ist ein Sub-DOM unterhalb einem HTML Element, der es ermöglicht, HTML und CSS in sich zu kapseln und zu verstecken
-- Wird Shadow DOM wird bereits in HTML5 standardmäßig eingesetzt, z.b. in dem `<video>` Tag. Beim Inspizieren wird deutlich, dass das `<video>` Tag einen Shadow DOM beinhaltet, welcher die Steuerelemente des Videos erzeugt
-- Ebenso sind die verschiedenen `<input>` Elemente, wie z.B. das `<input type="password">` mit einem Shadow-DOM ausgestattet:
+Durch Kapselung ist es möglich, Details eines Objektes von anderen Teilen des Programms zu verstecken. Das Programm muss nur wissen, wie es auf die benötigten Funktionen zugreift, jedoch nicht, wie das Objekt die Funktionen intern umsetzt. Dieses Konzept ist in allen objektorientierten Programmiersprachen umgesetzt, jedoch nicht in der Webentwicklung. Beispielsweise kann das CSS oder JavaScript, das für ein Element geschrieben ist, auch das CSS oder JavaScript anderer Elemente beeinflussen, wenn es nicht konsequent geschrieben wurde. Je größer das Projekt wird, desto unübersichtlicher und komplexer wird es zu gewährleisten, dass CSS oder JavaScript sich nicht ungewollt auf andere Teile der Webseite auswirkt. Diesem Problem widmet sich der Shadow DOM, welcher ein Sub-DOM unterhalb eines Elementes darstellt und es ermöglicht, HTML und CSS in sich zu kapseln und zu verstecken. Der Shadow DOM wird bereits in HTML5 standardmäßig eingesetzt, wie beispielsweise in dem `<video>`-Tag. Beim Inspizieren des Elements mit Hilfe der Chrome Developer Tools oder den Firefox Entwicklungs-Werkzeugen, wird deutlich, dass das `<video>` Tag einen Shadow DOM beinhaltet, welcher die Steuerelemente des Videos erzeugt. Neben dem `<video>`-Tag sind auch die verschiedenen `<input>` Elemente, wie z.B. das `<input type="password">` mit einem Shadow-DOM ausgestattet [citeulike:13851424].
 
 ![Bild: input type='password' Element](images/2-shadow-dom-input-type-password.jpg "input type='password' Element. Quelle: Selbst erstellt")
 
-- Der Shadow DOM liegt dabei parallel zu dem DOM Knoten des beinhaltenden Elementes (Siehe Bild). Ein Knoten im Document tree (links) wird als Shadow DOM beihaltendes Element (shadow host) markiert. Die gestrichelte Linie zeigt die Referenz zu der entsprechenden Shadow DOM Wurzel, dem "shadow root". Die Referenz geht dabei durch die sogenannte "Shadow Boundary", welche es ermöglicht, den Shadow DOM, und alles was dieser beinhaltet, zu kapseln
-- Die Kapselung des Shadow DOM mittels der Shadow Boundary verhindert, dass CSS oder JavaScript in den Shadow DOM hinein oder hinaus kommen
+
+## Shadow DOM nach W3C
 
 ![Bild: Shadow DOM und Shadow Boundary nach W3C](images/2-shadow-dom-shadow-boundary.png "Shadow DOM und Shadow Boundary nach W3C. Quelle: http://www.sitepoint.com/the-basics-of-the-shadow-dom/")
 
-- Ein Element kann auch mehrere Shadow DOM Wurzeln referenzieren, allerdings wird nur die zuletzt hinzugefügte gerendert, der Browser benutzt beim Rendern einen LIFO Stack
-- Der zuletzt hinzugefügte Shadow Tree wird "youngest tree" genannt, der jeweils zuvor hinzugefügte Shadow Tree wird "older tree" genannt
-
-[Colin Ihrig 2012], [Peter Kröner 2014]
+Wie auf Abbildung X zu sehen, liegt der Shadow DOM dabei parallel zu dem DOM Knoten des beinhaltenden Elementes. Ein Knoten im Document tree (links) wird als Shadow DOM beihaltendes Element (shadow host) markiert. Die gestrichelte Linie zeigt die Referenz zu der entsprechenden Shadow DOM Wurzel, dem "shadow root". Die Referenz geht dabei durch die sogenannte "Shadow Boundary", welche es ermöglicht, den Shadow DOM, und alles was dieser beinhaltet, zu kapseln [citeulike:13851350]. Die Kapselung des Shadow DOM mittels der Shadow Boundary verhindert, dass CSS oder JavaScript in den Shadow DOM das interne CSS oder JavaScript beeinflusst, und andersrum. Ein Element kann auch mehrere Shadow DOM Wurzeln referenzieren, allerdings wird nur die zuletzt hinzugefügte vom Browser gerendert, da dieser zum Rendern einen LIFO Stack benutzt. Dabei wird der zuletzt hinzugefügte Shadow Tree "youngest tree" genannt, der jeweils zuvor hinzugefügte Shadow Tree wird "older tree" genannt. Das dynamische hinzufügen von Shadow DOMs ermöglicht es, die Inhalte der Webseite dynamisch, nach dem rendern zu ändern.
 
 
-## Content projecting
+## Content Projection
 
-- Neben dem vom Shadow DOM vorgegebenen HTML Markup, können auch Inhalte aus dem Shadow DOM in den Light DOM, den DOM des Dokumentes, projiziert werden.
-- Der Shadow DOM ermöglicht somit die Möglichkeit gekapseltes HTML im Shadow DOM, sowie dynamische Inhalte im Light DOM anzuzeigen
-- Diese Projektion der Inhalte in den Light DOM erfolgt mittels "Insertion Points", wobei zwischen zwei Arten von "Insertion Points" unterschieden wird:
+Neben dem vom Shadow DOM vorgegebenen HTML, können auch Inhalte aus dem Light DOM, den DOM des Dokumentes, in den Shadow DOM projiziert werden. Der Shadow DOM nimmt dabei die zu projizierenden Inhalte und projiziert sie an der vorgegebenen Stelle im Shadow DOM. Die Inhalte bleiben dabei an der ursprünglichen Stelle im DOM stehen und werden nicht verschoben, gelöscht oder geändert. Der Shadow DOM ermöglicht es somit eigenes, gekapseltes HTML, sowie dynamische Inhalte des Light DOM anzuzeigen. Diese Projektion der Inhalte aus dem Light DOM in den Shadow DOM erfolgt mittels sogenannten "Insertion Points". Diese sind vom Entwickler definierte Stellen oder Punkte im Shadow DOM, in welche der Inhalt projiziert wird. Es kann hierbei zwischen zwei Arten von Insertion Points unterschieden werden.
 
 
 ### Insertion Points
 
-- Um das zu präsentierende HTML von dem notwendigen zu trennen, wird ein `<template>` Tag benutzt. Dieses beinhaltet alles Markup, das im Shadow DOM stehen und nicht nach außen sichtbar oder manipuliert werden soll
-- Das `<template>` Tag kann nun ein `<content>` Tag beinhalten, welches die Inhalte von außen in den Light DOM hineinprojiziert. Der Light DOM ist der DOM des HTML Dokumentes
+Um das zu präsentierende HTML und den Inhalt zu trennen, wird ein `<template>` Tag benutzt. Dieses beinhaltet das komplette Markup, das im Shadow DOM stehen und nicht nach außen sichtbar sein oder von CSS oder JavaScript von außen manipuliert werden soll. Um nun Inhalte aus dem Light DOM in den DOM des `<template>`-Tags zu projizieren, muss das `<template>`-Tag einen `<content>`-Tag beinhalten, in dem die Inhalte von außen dargestellt werden sollen. Mittels `createShadowRoot()` wird das ausgewählte Element zu einem ein Shadow Host, also dem Shadow DOM beinhaltendem Element gemacht. Der Inhalt des Templates wird geklont und dem Shadow Host angehängt. Der Shadow DOM projoziert nun alle Inhalte des Shadow Roots in den `<content>`-Tag [citeulike:13851404].
 
 ```html
 <div id="shadow">Content</div>
@@ -47,28 +36,18 @@
 ```
 
 ```javascript
-<script>
 var shadow = document.querySelector('#shadow').createShadowRoot();
 var template = document.querySelector('#myTemplate');
 var clone = document.importNode(template.content, true);
 shadow.appendChild(clone);
-</script>
 ```
 
-- Gerendert wird dabei nur "Content" des divs mit der id "shadow", der Wrapper um das `<content>` Tag wird nicht gerendert, da dieser im Shadow DOM steht
-- Somit wurde eine Trennung des Inhalts und der Darstellung erreicht, der Inhalt steht im Dokument, die Darstellung erfolgt im Shadow DOM
-- Nodes die aus dem Host ein den Shadow Tree projiziert werden heißen "distributed nodes"
-- Es können auch nur bestimmte Elemente in den Light DOM projiziert werden, ermöglicht wird dies mit dem Attribut `select` des `content` Tags. Dabei können Elemente, sowie CSS Selektoren verwendet werden
-- HTML Elemente, die via `<content>` und `<content select="element">` in den Light DOM projiziert werden, können somit auch von außen gestyled werden (zusätzlich auch via ::content - siehe "Styling mit CSS")
- 
-[Eric Bidelman 2013]
+Im Light DOM gerendert wird dabei nur der Text "Content" des divs mit der id "shadow", der Wrapper um das `<content>` Tag wird nicht gerendert, da dieser im Shadow DOM steht. Somit wurde eine Trennung des präsentierenden HTML und dem Inhalt erreicht, die Präsentation erfolgt im Shadow DOM, der Inhalt steht im Light DOM. Werden nun mehrere HTML Elemente oder Knoten in den Shadow DOM projiziert, werden diese "Distributed Nodes" genannt. Diese Distributed Nodes sind nicht wirklich im Shadow DOM, sondern werden nur in diesem gerendert, das bedeutet, dass sie auch von außen gestylt werden können, mehr dazu im Abschnitt "Styling mit CSS". Des Weiteren können auch nur bestimmte Elemente in den Shadow DOM projiziert werden, ermöglicht wird dies mit dem Attribut `select="selector"` des `<content>` Tags. Dabei können sowohl Namen von Elementen, als auch CSS Selektoren verwendet werden [citeulike:13851402]. Der Inhalt des `<content>`-Tags können mit JavaScript nicht traversiert werden, beispielsweise gibt `console.log(shadow.querySelector('content'));` `null` aus. Allerdings ist es erlaubt die Distributed Nodes, mittels `.getDistributedNodes()` auszugeben. Dies lässt darauf schließen, dass der Shadow DOM nicht als Sicherheits-Feature angedacht ist, da die Inhalte nicht komplett isoliert sind.
+
 
 ### Shadow Insertion Points
 
-- `<shadow>` Insertion Points sind, ebenso wie `<content>` Insertion Points, Platzhalter, doch statt einem Platzhalter für den Inhalt eines Hosts, sind sie Platzhalter für Shadow Trees
-- Wenn nun mehrere Shadow Trees gerendert werden sollen, muss im zuletzt hinzugefügten Shadow Tree (younger tree) ein `<shadow>` Tag stehen, dieser rendert den zuvor hinzugefügten Shadow Tree (older tree), somit wird eine Shadow DOM Schachtelung ermöglicht
-
-[Eric Bidelman 2014]
+Neben den Insertion Points für Inhalte, also dem `<content>` Insertion Point, gibt es auch Insertion Points für andere Shadow DOMs, die `<shadow>` Insertion Points, welche Shadow Insertion Points genannt werden. Shadow Insertion Points sind, ebenso wie Insertion Points, Platzhalter, doch statt einem Platzhalter für den Inhalt eines Hosts, sind sie Platzhalter für Shadow DOMs. Falls jedoch mehrere Shadow Insertion Points in einem Shadow DOM sind, wird nur der erste berücksichtigt, die restlichen werden ignoriert. Wenn nun mehrere Shadow DOMs projiziert werden sollen, muss im zuletzt hinzugefügten Shadow DOM (younger tree) ein `<shadow>` Tag stehen, dieser rendert den zuvor hinzugefügten Shadow DOM (older tree), somit wird eine Shadow DOM Schachtelung ermöglicht [citeulike:13851421].
 
 
 ## Styling mit CSS
@@ -124,7 +103,7 @@ shadow.appendChild(clone);
   - Jedoch sprengt das das Prinzip der Kapselung, das man mit Web Components versucht zu gewinnen, jedoch sollten Web Entwickler natürlich dennoch die Möglichkeit haben, fremde Components zu stylen, wenn sie wissen was sie machen.
 - Alles wird durch Polyfills abgedeckt
 
-[Eric Bidelman 2014], [Rob Dodson 2014]
+[citeulike:13851421], [citeulike:13851334]
 
 
 ## Beispiel eines Shadow DOMs mit Template und CSS Styles
@@ -195,11 +174,10 @@ shadow.appendChild(clone);
 
 ## Quellen
 
-- [Developing Web Components 2015] Jarrod Overson & Jason Strimpel, Developing Web Components, O'Reilly 2015, S.109-126
-- [Rob Dodson 2014] Rob Dodson, Shadow DOM CSS Cheat Sheet, 2014, http://robdodson.me/shadow-dom-css-cheat-sheet/
+- [citeulike:13851424] Jarrod Overson & Jason Strimpel, Developing Web Components, O'Reilly 2015, S.109-126
+- [citeulike:13851334] Rob Dodson, Shadow DOM CSS Cheat Sheet, 2014, http://robdodson.me/shadow-dom-css-cheat-sheet/
+- [citeulike:13851350] Colin Ihrig, The Basics of the Shadow DOM, 2012, http://www.sitepoint.com/the-basics-of-the-shadow-dom/
+- [citeulike:13851404] Dominic Cooney, Shadow DOM 101, 2013, http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/
+- [citeulike:13851421] Eric Bidelman, Shadow DOM 201, 2014, http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/
+- [citeulike:13851402] Eric Bidelman, Shadow DOM 301, 2013, http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-301/
 - [Can I Use 2015] Can I Use, http://caniuse.com/#search=shadow%20dom
-- [Peter Kröner 2014] Peter Kröner, Das Web der Zukunft, 2014, http://webkrauts.de/artikel/2014/das-web-der-zukunft
-- [Colin Ihrig 2012] Colin Ihrig, The Basics of the Shadow DOM, 2012, http://www.sitepoint.com/the-basics-of-the-shadow-dom/
-- [Dominic Cooney 2013] Dominic Cooney, Shadow DOM 101, 2013, http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/
-- [Eric Bidelman 2014] Eric Bidelman, Shadow DOM 201, 2014, http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201//
-- [Eric Bidelman 2013] Eric Bidelman, Shadow DOM 301, 2013, http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-301/

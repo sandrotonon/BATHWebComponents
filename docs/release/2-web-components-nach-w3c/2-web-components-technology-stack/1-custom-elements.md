@@ -1,6 +1,7 @@
 # Custom Elements
 
-Der erste Begriff unter dem Dachbegriff Web Components ist Custom Elements, auf dessen API wird im Folgenden eingegangen.
+Der erste Begriff unter dem Dachbegriff Web Components sind die Custom Elements, die es ermöglichen eigene HTML Elemente zu definieren.
+
 
 ## Einleitung
 
@@ -31,17 +32,7 @@ Die Spezifikation des W3C ermöglicht nicht nur das Erstellen eigener Elemente, 
 
 ## Neue Elemente registrieren
 
-Um nun ein eigenes Custom Element zu definieren, muss der Name des Custom Elements, laut der W3C Spezifikation, zwingend einen Bindestrich enthalten, beispielsweise `my-element`. Somit ist gewährleistet, dass der Parser des Browsers die Custom Elements von den nativen Elementen unterscheiden kann [citeulike:13845061].
-
-- Ein neues Element wir mit der Funktion `var MyElement = document.registerElement('my-element');` registriert
-- Als zweiter Parameter kann der `prototype` mit angegeben werden
-```javascript
-var MyElement = document.registerElement('my-element', {
-  prototype: Object.create(HTMLElement.prototype)
-});
-```
-- Dadurch steht es in der Registry des Browsers, welche dazu verwendet wird um die Definitionen der Elemente aufzulösen
-- Nachdem das Element registriert wurde, kann es per JavaScript oder HTML Deklaration verwendet werden
+Um nun ein eigenes Custom Element zu definieren, muss der Name des Custom Elements, laut der W3C Spezifikation, zwingend einen Bindestrich enthalten, beispielsweise `my-element`. Somit ist gewährleistet, dass der Parser des Browsers die Custom Elements von den nativen Elementen unterscheiden kann [citeulike:13845061]. Ein neues Element wird mittels JavaScript mit der Funktion `var MyElement = document.registerElement('my-element');` registriert. Zusätzlich zum Namen des Elementes, kann optional der Prototyp des Elementes angegeben werden. Dieser ist jedoch standardmäßig ein `HTMLElement`, somit also erst wichtig, wenn es darum geht vorhandene Elemente zu erweitern, auf dieses Thema wird jedoch gesondert eingegangen. Durch das Registrieren des Elementes wird es in die Registry des Browsers geschrieben, welche dazu verwendet wird die Definitionen der HTML-Elemente aufzulösen. Nachdem das Element registriert wurde, muss es zunächst mittels `document.createElement(tagName)` erzeugt werden, der `tagName` ist hierbei der Name des zuvor registrierten Elementes. Danach kann es per JavaScript oder HTML-Deklaration im Dokument verwendet werden [citeulike:13844979].
 
 JavaScript
 ```javascript
@@ -51,41 +42,32 @@ document.body.appendChild(myelement);
 
 HTML
 ```html
-<div class="wrapper">
+<div class="some-html">
   <my-element><my-element>
 </div>
 ```
 
-[citeulike:13844979]
-
 
 ## Vorteile von Custom Elements
 
-- Unangemeldete, unregistrierte Custom Tags wie z.B. `<myelement>` benutzen das Interface HTMLUknownElement
-- Angemeldete, registrierte Custom Elements wie z.B. `<my-element>` benutzen das Interface HTMLElement
-- Somit können für neue HTML Elemente eigene APIs erzeugt werden, indem eigene Eigenschaften und Methoden hinzugefügt werden
-
-[Eric Bidelman 2015]
+Ist ein Element noch nicht definiert und nicht beim Browser registiert, steht aber im Markup der Webseite, beispielsweise `<myelement>`, wird dies kein Fehler verursachen, da dieses Element das Interface von `HTMLUnkownElement` benutzen muss [citeulike:13851253]. Ist es jedoch definiert oder beim Browser registriert worden, beispielsweise `<my-element>`, so benutzt es das Interface eines `HTMLElement`. Dies bedeutet, dass für neue eigene Elemente, eigene APIs für dieses Element erzeugt werden können, indem eigene Eigenschaften und Methoden hinzugefügt werden [citeulike:13844982]. Eigene Elemente, mit einem spezifischen Eigenverhalten und Aussehen, wie beispielsweise ein neuer Video-Player, sind dadurch mit einem Tag, statt mit einem Gerüst aus Divs oder ähnlichen umsetzbar.
 
 
 ### Nachteil
 
-- Eventueller FOUC (Flash of unstyled content), da das Element schon im DOM steht, aber erst noch registriert werden muss
-- Kann verhindert werden, in dem man den `:unresolved`-Selector benutzt und die Elemente ausblendet
+Ein Custom Element, das zwar standardkonform deklariert oder erstellt, aber noch nicht beim Browser registriert wurde, ist es ein `Unresolved Element`. Steht dieses Element am Anfang des DOM, wird jedoch erst später registriert, kann es nicht von CSS angesprochen werden. Dadurch kann ein FOUC entstehen, was bedeutet, dass das Element beim Laden der Seite nicht gestylt dargestellt wird, sondern erst nachdem es registriert wurde, das definierte Aussehen übernimmt. Um dies zu verhindern, sieht die HTML Spezifikation eine neue CSS-Pseudoklasse `:unresolved` vor, welche deklarierte aber nicht registrierte Elemente anspricht. Somit können diese Elemente initial beim Laden der Seite ausgeblendet, und nach dem Registrieren wieder eingeblendet werden. Dadurch wird ein ungewolltes Anzeigen von ungestylten Inhalten verhindert [citeulike:13844984].
 
-  ```
-  my-element:unresolved {
-    display: none;
-  }
-  ```
+```
+my-element:unresolved {
+  display: none;
+}
+```
 
-[Peter Gasston 2014]
+
 
 ## Vorhandene Elemente erweitern (Type extensions)
 
-- Statt neue Elemente zu erzeugen, können vorhandene auch erweitert werden
-- So können native HTML Elemente erweitert werden
-- Um einen erweitertes `button` zu erzeugen muss also folgendes gemacht werden:
+Statt neue Elemente zu erzeugen können sowohl native HTML Elemente, als auch eigene erstellte HTML Elemente, um Funktionen und Eigenschaften erweitert werden, auch "Type extensions" genannt. Diese erben von einem spezifischen HTMLElement, also "Element X ist ein Y". Zusätzlich zum Namen des erweiterten Elementes wird nun der Prototyp, sowie der Name des zu erweiternden Elementes der `registerElement`-Funktion als Parameter übergeben. Soll nun ein erweitertes `button`-Element erzeugt werden, muss folgendes gemacht werden:
 
 ```javascript
 var ButtonExtendedProto = document.registerElement('button-extended', {
@@ -94,16 +76,17 @@ var ButtonExtendedProto = document.registerElement('button-extended', {
 });
 ```
 
-- Ein erweitertes Element kann nun wie folgt vie JavaScript oder HTML Deklaration verwendet werden:
+Das registrierte, erweiterte Element kann nun mit dem Namen des zu erweiternden Elementes als erstem Parameter und dem Namen des erweiterten Elementes als zweitem Parameter erzeugt werden. Alternativ kann es auch mit Hilfe des Konstruktors erzeugt werden.
 
 JavaScript:
 ```javascript
 var buttonExtended  = document.createElement('button', 'button-extended');
 
-// Oder
-
+// Alternativ
 var buttonExtended = new ButtonExtendedProto();
 ```
+
+Um es nun im DOM zu benutzen, muss der Name des erweiterten Elementes via dem Attribut `is="elementName"` des erweiternden Elementes angegeben werden.
 
 HTML:
 ```html
@@ -117,60 +100,50 @@ HTML:
 
 ### Verwendung bei Github
 
-- Die "Latest commit" Angaben eines Repositories auf Github sind ein erweitertes time-Element (Type Extension Custom Element mit time-Element)
-- Statt des Commit-Datums und der Zeit, wird - wenn JavaScript aktiviert ist - die berechnete Zeit seit dem letzten Commit angezeigt
+Eine Umsetzung der Type extensions ist auf der Webseite von GitHub zu finden. Dort werden die "Latest commit" Angaben eines Repositories als ein erweitertes time-Element dargestellt. Statt des Commit-Datums und der Zeit, wird die berechnete Zeit seit dem letzten Commit angezeigt.
 
 ![Bild: Github Einsatz eines Custom Element](images/1-custom-elements-github-time-element.jpg "Github Einsatz eines Custom Element. Quelle: https://github.com/polymer/polymer - Quelltext")
 
-- Dabei dient das `time` Element als Basis
-- Das `datetime` Attribut gibt die absolute Zeit des Commits an
-- `is="time-ago"` ist die Erweiterung des `time` Elements
-- Der Inhalt des `time` Elements zeigt die relative Zeit an
-- Falls der Browser nun keine Custom Elements (mit Polyfill) unterstützt oder JavaScript deaktiviert ist, wird dennoch das "normale" `time` Element mit der absoluten Zeit angezeigt
+GitHub verwendet hierzu ein selbst erzeugtes `time-ago`-Element, welches eine Type extension auf Basis des `time`-Elementes umsetzt. Mittels dem `datetime`-Attribut wird die absolute Zeit des Commits an das interne JavaScript weitergegeben. Als Inhalt des `time`-Elements wird dann die mit JavaScript berechnete relative Zeit ausgegeben. Falls der Browser nun keine Custom Elements unterstützt oder JavaScript deaktiviert ist, wird dennoch das nicht erweiterte, native HTML `time` Element mit der absoluten Zeit angezeigt.
 
 
 ## Eigenschaften und Methoden definieren
 
-- Custom Elements machen erst so richtig Sinn, wenn man für diese auch eigene Eigenschaften und Methoden definieren kann
-- Wie bei nativen HTML Elementen ist dies bei Custom Elements möglich, dies geschieht auf die gleiche Weise
+Anhand des Beispiels auf GitHub wird deutlich, wie ein Custom Element eingesetzt werden kann, jedoch sind die internen JavaScript Mechanismen nicht ersichtlich. Custom Elements machen allerdings erst so richtig Sinn, wenn man für diese auch eigene Eigenschaften und Methoden definieren kann. Wie bei nativen HTML Elementen, ist das auch bei Custom Elements auf analoge Weise möglich [citeulike:13844979]. So kann einem Element eine Funktion zugewiesen werden, in dem diese dessen Prototyp mittels einem noch freien Namen angegeben wird. Selbiges gilt für eine neue Eigenschaft.
 
 ```javascript
 // Methode definieren
-ButtonExtendedProto.prototype.alert = function () {
+ButtonExtendedProto.alert = function () {
   alert('foo');
 };
 
 // Eigenschaft definieren
-ButtonExtendedProto.prototype.answer = 42;
+ButtonExtendedProto.answer = 42;
 ```
 
-[citeulike:13844979]
 
+## Custom Element Life Cycle Callbacks
 
-## Custom Element Life Cycle Callbacks - TODO?
-
-- Custom Elements bieten eine standardisierte API um verschiedene Methoden zu unterschiedlichen Zeitpunkten im "Leben" eines Custom Elements auszuführen. Diese ermöglicht es zu bestimmen, wie und wann ein bestimmter Code des Custom Elements ausgeführt wird.
+Custom Elements bieten eine standardisierte API an speziellen Methoden, den `Custom Element Life Cycle Callbacks`, welche es ermöglichen Funktionen zu unterschiedlichen Zeitpunkten, vom Registrieren bis zum löschen eines Custom Elements, auszuführen. Diese ermöglichen es zu bestimmen, wann und wie ein bestimmter Code des Custom Elements ausgeführt werden soll.
 
 #### createdCallback
 
-- Wird ausgeführt, wenn eine Instanz des Custom Elements erzeugt wird. Beispiel: `document.createElement('custom-element');`
+Die `createdCallback`-Funktion Wird ausgeführt, wenn eine Instanz des Custom Elements erzeugt mittels `var mybutton = document.createElement('custom-element')` wird.
 
 #### attachedCallback
 
-- Wird ausgeführt, wenn ein Custom Element dem DOM angehängt wird. Beispiel: ` document.body.appendChild();`
+Die `attachedCallback`-Funktion wird ausgeführt, wenn ein Custom Element dem DOM mittels `document.body.appendChild(mybutton)` angehängt wird.
 
 #### detachedCallback
 
-- Wird ausgeführt, wenn ein Custom Element aus dem DOM entfernt wird. Beispiel: ` document.body.removeChild();`
+Die `detachedCallback`-Funktion wird ausgeführt, wenn ein Custom Element aus dem DOM mittels `document.body.removeChild(mybutton)` entfernt wird.
 
 #### attributeChangedCallback
 
-- Wird ausgeführt, wenn ein Attribut eines Custom ELements geändert wird. Beispiel: `MyElement.setAttribute();`
+Die `attributeChangedCallback`-Funktion wird ausgeführt, wenn ein Attribut eines Custom Elements mittels `MyElement.setAttribute()` geändert wird.
 
+So können die Life Cycle Callbacks für ein neues erweitertes Button-Element  wie folgt definiert werden [citeulike:13844988].
 
-### Beispiel mit `button-extended`
-
-Anhand des `button-extended` Beispiels würde dies folgender Maßen funktionieren:
 ```javascript
 var ButtonExtendedProto = Object.create(HTMLElement.prototype);
 
@@ -180,35 +153,29 @@ ButtonExtendedProto.attachedCallback = function() {...};
 var ButtonExtended = document.registerElement('button-extended', {prototype: ButtonExtendedProto});
 ```
 
-[citeulike:13844988]
 
 ## Styling von Custom Elements
 
-- Custom Elements können wie native HTML Elemente gestyled werden
+Das Styling von eigenen Custom Elements funktioniert analog dem Styling von nativen HTML Elementen in dem der Name des Elementes als CSS Selektor angegeben wird. Erweiterte Elemente können mittels dem Attribut-Selektor in CSS angesprochen werden [citeulike:13844979].
 
 ```css
+/* Eigenes Custom Element */
 my-element {
-  foo: bar;
+  color: black;
 }
-```
 
-- Element-Erweiterungen können per Attribut-Selektor angesprochen werden
-
-```css
+/* Erweitertes natives HTML Element*/
 [is="button-extended"] {
-  foo: bar;
+  color: black;
 }
 ```
-
-[citeulike:13844979]
 
 
 ## Browserunterstützung
 
-- Noch nicht standardtisiert, sind noch ein Working Draft (http://w3c.github.io/webcomponents/spec/custom/)
-- Deshalb bisher auch nur in Chrome und Opera unterstützt
+Custom Elements wurden vom W3C noch nicht standardisiert, sondern befinden sich noch im Status eines "Working Draft" [citeulike:13845061]. Sie werden deshalb bisher nur von Google Chrome ab Version 43 und Opera ab Version 32 nativ unterstützt.
 
-![Bild: Browserunterstützung von Custom Elements](images/1-custom-elements-browserunterstuetzung.jpg "Custom Elements Browserunterstzützung. Quelle: http://caniuse.com/#feat=custom-elements")
+![Bild: Browserunterstützung von Custom Elements](images/1-custom-elements-browserunterstuetzung.jpg "Custom Elements Browserunterstützung. Quelle: http://caniuse.com/#feat=custom-elements")
 
 [citeulike:13844983]
 
@@ -223,3 +190,4 @@ my-element {
 - [citeulike:13844983] Can I Use, http://caniuse.com/#feat=custom-elements
 - [citeulike:13844984] Peter Gasstton, A Detailed Introduction To Custom Elements, http://www.smashingmagazine.com/2014/03/introduction-to-custom-elements/
 - [citeulike:13844988] Raoul Schaffranek, Web Components – eine Einführung, https://blog.selfhtml.org/2014/12/09/web-components-eine-einfuehrung/
+- [citeulike:13851253] WHATWG, HTML Specification, https://html.spec.whatwg.org/multipage/dom.html#htmlunknownelement
