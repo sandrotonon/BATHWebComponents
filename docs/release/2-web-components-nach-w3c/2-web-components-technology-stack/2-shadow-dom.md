@@ -52,8 +52,9 @@ Neben den Insertion Points für Inhalte, also dem `<content>` Insertion Point, g
 
 ## Styling mit CSS
 
-- Shadow Boundary: Styles gehen nicht aus Shadow Dom raus, und keine rein.
-  -> Style Kapselung "out of the box"!
+Eines der Hauptfeatures des Shadow DOM ist die Shadow Boundary, welche Kapselung von Stylesheets standardmäßig mit sich bringt. Sie gewährleistet, dass Stylesheets des Light DOM nicht in den Shadow DOM rein kommen und anders rum. Dies gilt jedoch nur für die Präsentation des Inhalts, nicht für den Inhalt selbst, welcher über den ::slotted CSS-Pseudoselektor angesprochen werden kann.
+
+
 - Styling des host-Elements mit :host *selector*
   -> Allerdings überschreiben die inneren Styles nicht die Äußeren!
   (Siehe snippets/shadow-dom/#styling)
@@ -91,7 +92,7 @@ Neben den Insertion Points für Inhalte, also dem `<content>` Insertion Point, g
         font-family: var(--button-theme-font);
       }
       ```
-      Der Entwickler kann nun von außen die Variablen instanzieren mit
+      Der Entwickler kann nun von außen die Variablen instanziieren mit
 
       ```CSS
       #host {
