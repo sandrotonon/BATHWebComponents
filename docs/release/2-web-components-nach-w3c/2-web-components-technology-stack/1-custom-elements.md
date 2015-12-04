@@ -173,7 +173,7 @@ my-element {
 
 ## Browserunterstützung
 
-Custom Elements wurden vom W3C noch nicht standardisiert, sondern befinden sich noch im Status eines "Working Draft" [citeulike:13845061]. Sie werden deshalb bisher nur von Google Chrome ab Version 43 und Opera ab Version 32 nativ unterstützt.
+HTML Imports sind noch nicht vom W3C standardisiert, sondern befinden sich noch im Status eines "Working Draft" [citeulike:13845061]. Sie werden deshalb bisher nur von Google Chrome ab Version 43 und Opera ab Version 33 nativ unterstützt.
 
 ![Bild: Browserunterstützung von Custom Elements](images/1-custom-elements-browserunterstuetzung.jpg "Custom Elements Browserunterstützung. Quelle: http://caniuse.com/#feat=custom-elements")
 

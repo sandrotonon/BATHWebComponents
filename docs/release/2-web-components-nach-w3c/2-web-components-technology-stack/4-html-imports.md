@@ -15,7 +15,7 @@ HTML Imports ist eine Technologie, die es erlaubt HTML Dateien in einer Webseite
 Bisher erlauben es praktisch alle Plattformen, Codeteile zu Importieren und zu verwenden, nur nicht das Web, bzw. HTML. Das heutige HTML ermöglicht es externe Stylesheets, JavaScript Dateien, Bilder etc. in ein HTML Dokument zu importieren, HTML-Dateien selbst können jedoch nicht importiert werden. Auch ist es nicht möglich, alle benötigten Dateien in einer Ressource zu bündeln und als einzige Abhängigkeit zu importieren. HTML Imports versuchen eben dieses Problem zu lösen. So soll es möglich sein, HTML-Dateien und wiederum HTML-Dateien in HTML-Dateien zu importieren. So können auch verschiedene benötigte Dateien in einer HTML-Datei gesammelt, und mit nur einem Import in die Seite eingebunden werden. Doppelte Abhängigkeiten sollen dadurch automatisch aufgelöst werden, sodass Dateien, die mehrmals eingebunden werden sollten, automatisch effektiv nur einmal heruntergeladen werden.
 
 
-## HTML importieren
+## HTML Dateien importieren
 
 Imports von HTML Dateien selbst werden, wie andere Imports auch, per `<link>` Tag deklariert. Neu ist jedoch der Wert des `rel`-Attributes, welcher auf `import` gesetzt wird.
 
@@ -25,7 +25,7 @@ Imports von HTML Dateien selbst werden, wie andere Imports auch, per `<link>` Ta
 </head>
 ```
 
-Sollte nun ein HTML Import mehrfach vorkommen, oder eine HTML-Datei eine Datei anfordern die schon geladen wurde, so wird die Abhängigkeit automatisch ignoriert und die Datei nur ein einziges Mal übertragen. Dadurch wird eventuell in den HTML-Dateien enthaltenes JavaScript auch nur ein mal ausgeführt. Es ist jedoch zu beachten, dass HTML Imports nur auf Ressourcen der gleichen Quelle, also dem gleichen Host, respektive der gleichen Domain zugreifen können. Imports von HTML-Dateien von verschiedenen Quellen stellen eine Sicherheitslücke dar, da Webbrowser die SOP verfolgen. 
+Sollte nun ein HTML Import mehrfach aufgeführt sein, oder eine HTML-Datei anfordern die schon geladen wurde, so wird die Abhängigkeit automatisch ignoriert und die Datei nur ein einziges Mal übertragen. Dadurch wird eventuell in den HTML-Dateien enthaltenes JavaScript auch nur ein mal ausgeführt. Es ist jedoch zu beachten, dass HTML Imports nur auf Ressourcen der gleichen Quelle, also dem gleichen Host, respektive der gleichen Domain zugreifen können. Imports von HTML-Dateien von verschiedenen Quellen stellen eine Sicherheitslücke dar, da Webbrowser die SOP verfolgen. 
 
 > The same-origin policy restricts how a document or script loaded from one origin can interact with a resource from another origin. It is a critical security mechanism for isolating potentially malicious documents.
 
@@ -33,18 +33,19 @@ Sollte nun ein HTML Import mehrfach vorkommen, oder eine HTML-Datei eine Datei a
 
 Sollte das jedoch dennoch erlaubt werden, so muss das CORS für die entsprechende Domain auf dem Server aktiviert werden.
 
-[Developing Web Components 2015]
+> These restrictions prevent a client-side Web application running from one origin from obtaining data retrieved from another origin, and also limit unsafe HTTP requests that can be automatically launched toward destinations that differ from the running application's origin.
+
+[citeulike:13853643]
 
 
 ## Vorteil
 
-- HTML Imports ermöglichen es eine gesamte App via HTML Import zu importieren
-- So kann beispielsweise das Einbinden von Bootstrap stark vereinfacht werden
+Durch HTML Imports ist es möglich komplette Applikationen mit mehreren oder gar nur einer einzigen Anweisung zu importieren. Dies gilt sowohl für eigene Applikationen oder kleinere Komponenten, wie beispielsweise einem Slider oder ähnlichem, als auch fremde Frameworks oder Komponenten. Durch die HTML Imports wird die Abhängigkeiten-Verwaltung stark vereinfacht und automatisiert.
 
 > Using only one URL, you can package together a single relocatable bundle of web goodness for others to consume.
-[Eric Bidelman 2013]
+[citeulike:13853647]
 
-Bisher:
+So kann beispielsweise das Bootstrap-Framework statt, wie bisher, mit mehreren Imports mit nur einem Import eingebunden werden. Bisher könnte die Einbindung unter Berücksichtigung der Abhängigkeiten wie folgt aussehen.
 
 ```html
 <link rel="stylesheet" href="bootstrap.css">
@@ -55,10 +56,8 @@ Bisher:
 <script src="bootstrap-dropdown.js"></script>
 ```
 
-- Stattdessen kann dieses Markup nun in ein einziges HTML Dokument, welches alle Abhängigkeiten verwaltet, geschrieben werden
-- Dieses wird dann mit einem einzigen Import in das eigene HTML Dokument importiert
 
-HTML Import:
+Stattdessen kann dieses Markup nun in ein einziges HTML Dokument, welches alle Abhängigkeiten verwaltet, geschrieben werden. Dieses wird dann mit einem einzigen Import in das eigene HTML Dokument importiert.
 
 ```html
 <head>
@@ -69,9 +68,7 @@ HTML Import:
 
 ## HTML Imports verwenden
 
-- Importierte HTML Dateien werden nicht nur in das Dokument eingefügt, sondern vom Parser verarbeitet, das bedeutet, dass mit JavaScript auf den DOM des Imports zugegriffen werden kann
-- Um auf den Inhalt des Imports zuzugreifen muss die `.import` Eigenschaft des `<link>` zugegriffen werden `var content = document.querySelector('link[rel="import"]').import;`
-- Nun kann auf den DOM des `content` zugegriffen werden. Beispielsweise kann ein Element mit der Klasse `.element` geklont und dann in das eigene HTML eingefügt werden
+Importierte HTML Dateien werden nicht nur in das Dokument eingefügt, sondern vom Parser verarbeitet, das bedeutet, dass mit JavaScript auf den DOM des Imports zugegriffen werden kann. Wenn sie vom Parser verarbeitet worden sind, sind sie zwar verfügbar, allerdings werden die Inhalte nicht angezeigt bis sie mittels JavaScript in den DOM eingefügt werden. Ihre enthaltenen Scripte werden also ausgeführt, Styles und HTML Knoten werden jedoch ignoriert. Um nun die Inhalte eines Imports auf der Seite einzubinden und auf sie zuzugreifen muss auf die `.import` Eigenschaft des `<link>`-Tags mit dem Import zugegriffen werden `var content = document.querySelector('link[rel="import"]').import;`. Nun kann mit auf den DOM des Imports, dem `content`, zugegriffen werden. Beispielsweise kann ein enthaltenes Element mit der Klasse `.element` mit `var el = element.querySelector('.element');` geklont und anschließend durch `document.body.appendChild(el.cloneNode(true));` in den eigenen DOM eingefügt werden. Falls es nun jedoch mehrere Imports geben sollte, können den Imports IDs zugewiesen werden, anhand derer die Imports voneinander unterschieden werden können [citeulike:13853724]. Der komplette Prozess wird in dem folgenden Beispiel skizziert.
 
 ```html
 <head>
@@ -79,9 +76,9 @@ HTML Import:
 </head>
 <body>
   <script>
-    var content = document.querySelector('link[rel="import"]').import;
+    var element = document.querySelector('link[rel="import"]').import;
 
-    var el = content.querySelector('.element');
+    var el = element.querySelector('.element');
 
     document.body.appendChild(el.cloneNode(true));
   </script>
@@ -89,11 +86,9 @@ HTML Import:
 ```
 
 
-## Abhängigkeiten verwalten und Sub-Imports
+## Abhängigkeiten verwalten
 
-### Abhängigkeiten verwalten
-
-- Wenn mehrere HTML Imports die gleichen Abhängigkeiten - z.B. jQuery - haben, wird das jQuery.js dennoch automatisch nur einmal vom Browser heruntergeladen
+Doch wie sieht es nun mit Abhängigkeiten von Imports selbst aus? So kommt es des öfteren vor, dass verschiedene Bibliotheken die auf der Seite eingebunden werden die gleichen Abhängigkeiten haben und diese verwaltet werden müssen. Sollte dies nicht sauber gemacht werden, können unerwartete Fehler auftreten, die mitunter nur schwer zu identifizieren sind. HTML Imports verwalten diese automatisch. Um das zu erreichen, wird jede Abhängigkeit in eine zu importierende HTML-Datei geschrieben, welche diese bündelt. Haben nun mehrere solcher Imports die gleichen Abhängigkeiten, werden diese vom Browser erkannt und nur einmal heruntergeladen und eingebunden. Mehrfachdownloads und Konflikte der Abhängigkeiten werden so verhindert. Das folgende Beispiel von [citeulike:13853700] verdeutlicht dieses Szenario.
 
 index.html
 ```html
@@ -116,15 +111,12 @@ jQuery.html
 <script src="js/jquery.js"></script>
 ```
 
-- Des Weiteren muss auch nicht auf die Reihenfolge der Imports geachtet werden, da diese selbst ihre Abhängigkeiten beinhalten
+Selbst wenn die jQuery Bibliothek in mehreren Dateien eingebunden wird, wird hier sie dennoch nur einmal übertragen. Wenn nun fremde HTML-Dateien eingebunden werden muss auch nicht auf die auf die Reihenfolge der Imports geachtet werden, da diese selbst ihre Abhängigkeiten beinhalten.
 
-[Eiji Kitamura 2015]
 
-### Sub-Imports
+## Sub-Imports
 
-- HTML Dateien die in einem HTML Dokument importiert werden, können selbst auch HTML Dateien importieren
-- Somit können andere Komponenten wiederverwendet und erweitert werden
-- Wenn eine Komponente A eine Abhängigkeit von einer Komponenten B hat und es eine neue Version von Komponente B gibt, kann diess einfach in dem Import des Sub-Imports angepasst werden ohne JavaScript ändern zu müssen
+Das obige Beispiel zeigt, dass HTML Imports selbst auch HTML Imports beinhalten können. Diese Imports werden Sub-Imports genannt und ermöglichen einen einfachen Austausch oder eine Erweiterungen von Abhängigkeiten innerhalb einer Komponente. Wenn eine Komponente A eine Abhängigkeit von einer Komponenten B hat und eine neue Version von Komponente B verfügbar ist, kann dies einfach in dem Import des Sub-Imports angepasst werden ohne den Import in der Eltern-HTML-Datei anpassen zu müssen [citeulike:13853647].
 
 
 ## Performance - TODO
@@ -137,7 +129,7 @@ jQuery.html
 
 > Die Web-Component-Performance-Problematik löst sich also im Laufe der Zeit von selbst. Bis dahin kann man sich mit *Vulcanize*, einem Tool zum Zusammenfassen von HTML-Imports inklusive aller Ressourcen in eine einzige Datei, behelfen.
 
-[Peter Kröner 2014]
+[citeulike:13853714]
 
 
 ### HTTP/2 - TODO
@@ -147,33 +139,25 @@ jQuery.html
 
 ## Anwendungen
 
-- Ganze Web Applikationen mit HTML/JavaScript/CSS können in eine Datei geschrieben und von anderen Importiert werden
-- Code Organisation: Einzelne Abschnitte einer Anwendung oder von Code können in einzelne Dateien ausgelagert werden, was Web Applikationen modular und wiederverwendbar macht
-- HTML Imports können ein oder mehrere Custom Elements beinhalten und in eine Applikation einbinden. Somit wird das Interface des Elements und dessen Definition gekapselt
-- Abhängigkeitsverwaltung: Resourcen werden automatisch nur einmal geladen
-- Einzelne kleine JavaScripts werden schneller ausgeführt als wenn der Browser eine große JavaScript Library parsen und dann ausführen muss
-
-[Eric Bidelman 2013]
+Besonders einfach machen HTML Imports das einbinden ganzer Web Applikationen mit HTML/JavaScript/CSS. Diese können in eine Datei geschrieben, ihre Abhängigkeiten definieren und von anderen Importiert werden. Dies macht es sehr einfach den Code zu organisieren, so können etwa einzelne Abschnitte einer Anwendung oder von Code in einzelne Dateien ausgelagert werden, was Web Applikationen modular, austauschbar und wiederverwendbar macht. Falls nun ein oder mehrere Cutom Elements in einem HTML Import enthalten sind, so werden dessen Interface und Definitionen automatisch gekapselt. Auch wird die Abhängigkeitsverwaltung in Betracht auf die Performance stark verbessert, da der Browser nicht eine große JavaScript Bibliothek, sondern einzelne kleinere JavaScript Abschnitte parsen und ausführen muss. Diese werden durch die HTML Imports parallel geparst, was mit einen enormen Performance-Schub einher geht [citeulike:13853647].
 
 
 ## Browserunterstüzung
 
-- HTML Imports wurden noch nicht vom W3C standardisiert, sondern sind noch ein Working Draft (http://www.w3.org/TR/html-imports/)
-- Deshalb werden sie bisher auch nur in Chrome und Opera unterstützt
+HTML Imports sind noch nicht vom W3C standardisiert, sondern befinden sich noch im Status eines "Working Draft" [citeulike:13853711]. Sie werden deshalb bisher nur von Google Chrome ab Version 43 und Opera ab Version 33 nativ unterstützt.
 
 ![Bild: HTML Imports Browserunterstützung](images/4-html-imports-browserunterstuetzung.jpg "HTML Imports Browserunterstützung. Quelle: http://caniuse.com/#search=imports")
-
-[Can I Use 2015]
 
 
 ## Quellen
 
 - [Developing Web Components 2015] Jarrod Overson & Jason Strimpel, Developing Web Components, O'Reilly 2015, S.139-147
-- [Eric Bidelman 2013] http://www.html5rocks.com/en/tutorials/webcomponents/imports/
-- [Can I Use 2015] Can I Use, http://caniuse.com/#search=imports
+- [citeulike:13853647] http://www.html5rocks.com/en/tutorials/webcomponents/imports/
+- [citeulike:13853711] Can I Use, http://caniuse.com/#search=imports
 - http://www.w3.org/TR/html-imports/
-- [Peter Kröner 2014] Peter Kröner, http://www.peterkroener.de/fragen-zu-html5-und-co-beantwortet-15-web-components-performance-css-variablen-data-urls-async/
-- http://www.hongkiat.com/blog/html-import/
-- [Eiji Kitamura 2015] Eiji Kitamura, Introduction to HTML Imports, http://webcomponents.org/articles/introduction-to-html-imports/
+- [citeulike:13853714] Peter Kröner, http://www.peterkroener.de/fragen-zu-html5-und-co-beantwortet-15-web-components-performance-css-variablen-data-urls-async/
+- [citeulike:13853724] http://www.hongkiat.com/blog/html-import/
+- [citeulike:13853700] http://webcomponents.org/articles/introduction-to-html-imports/
 - [citeulike:13853253] https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy
+- [citeulike:13853643] http://www.w3.org/TR/cors/
 
