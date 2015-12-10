@@ -2,13 +2,6 @@
 
 HTML Imports ist eine Technologie, die es erlaubt HTML Dateien in einer Webseite zu inkludieren. Sie sollen es ermöglichen die Webseite in einzelne, kleine, auswechselbare Teile aufzuteilen. In dem folgenden Kapitel wird auf den Begriff HTML Imports des Web Components Technology Stacks im Genaueren eingegangen.
 
-- TODO:
-  + Vulcanize
-  + Performance
-
-- Ausformulieren
-  + Complete
-
 
 ## Einleitung
 
@@ -116,35 +109,35 @@ Selbst wenn die jQuery Bibliothek in mehreren Dateien eingebunden wird, wird hie
 
 ## Sub-Imports
 
-Das obige Beispiel zeigt, dass HTML Imports selbst auch HTML Imports beinhalten können. Diese Imports werden Sub-Imports genannt und ermöglichen einen einfachen Austausch oder eine Erweiterungen von Abhängigkeiten innerhalb einer Komponente. Wenn eine Komponente A eine Abhängigkeit von einer Komponenten B hat und eine neue Version von Komponente B verfügbar ist, kann dies einfach in dem Import des Sub-Imports angepasst werden ohne den Import in der Eltern-HTML-Datei anpassen zu müssen [citeulike:13853647].
+Das obige Beispiel zeigt, dass HTML Imports selbst wiederum auch HTML Imports beinhalten können. Diese Imports werden Sub-Imports genannt und ermöglichen einen einfachen Austausch oder eine Erweiterungen von Abhängigkeiten innerhalb einer Komponente. Wenn eine Komponente A eine Abhängigkeit von einer Komponenten B hat und eine neue Version von Komponente B verfügbar ist, kann dies einfach in dem Import des Sub-Imports angepasst werden ohne den Import in der Eltern-HTML-Datei anpassen zu müssen [citeulike:13853647].
 
 
-## Performance - TODO
+## Performance
 
-> Sind Web Components nicht eine Katastrophe für die Performance? So spaltet sich doch die komplette Seite in hundert Einzel-Downloads auf, jede Komponente lädt jedes Mal neu jQuery … oder gibt es da einen Trick?
-
-> Heutzutage ist das möglicherweise tatsächlich ein Problem, das sich aber in Zukunft von selbst in Luft auflösen wird. Das Doppel-Download-Problem besteht in Browsern mit nativer Unterstützung für Web Components gar nicht erst, da hier Doppel-Requests automatisch dedupliziert werden (so liest man jedenfalls allerorten; in konkreten Specs habe ich nichts gefunden, das das verlangt). Im Polymer-Polyfill passiert das einfach anhand des Ressourcen-Pfades, die native Implementierung soll auch identische Ressourcen aus unterschiedlichen Quellen deduplizieren können.
-
-> Dass Web Components dann immer noch zu vielen Einzel-Requests führen, ist in nicht all zu ferner Zukunft ein Feature und kein Bug. Mit HTTP/2 bzw. SPDY als Netzwerkprotokoll hat man, anders als beim HTTP 1.1 von heute, keinen Vorteil mehr, wenn man Ressourcen zusammenfasst. Im Gegenteil: wenn man sein Frontend in viele kleine Teile aufsplittet, hat man den Vorteil, dass bei der Änderung einer einzigen Icongrafik der Nutzer nicht mehr das komplette Bild-Sprite, sondern wirklich nur eine einzige Winzdatei neu herunterladen muss. Anders gesagt übernimmt HTTP/2 das Zusammenfassen von Dateien auf Protokollebene und Webentwickler müssen es nicht mehr selbst machen. Und nur die üblichen Verdächtigen (d.h. IE und Safari) können das nicht bereits heute. Mehr Infos zum Thema gibt es in einem epischen Slide Deck aus der Feder von Performance-Papst Schepp.
-
-> Die Web-Component-Performance-Problematik löst sich also im Laufe der Zeit von selbst. Bis dahin kann man sich mit *Vulcanize*, einem Tool zum Zusammenfassen von HTML-Imports inklusive aller Ressourcen in eine einzige Datei, behelfen.
+Ein Signifikantes Problem der HTML Imports ist die Performance, welche bei komplexen Anwendungen schnell abfallen kann. Werden auf einer Seite mehrere Imports eingebunden, die selbst wiederum Imports beinhalten können, so steigt die Anzahl an Requests an den Server schnell exponentiell an, was die Webseite stark verlangsamen kann. Auch das vorkommen von doppelten Abhängigkeiten kann die Anzahl an Requests in die Höhe treiben, doch da Browser die Abhängigkeiten nativ schon selbst de-duplizieren, kann dieses Problem in diesem Zusammenhang ignoriert werden.
 
 [citeulike:13853714]
 
 
-### HTTP/2 - TODO
+### HTTP/2
 
-### "Vulcanize" - TODO
+Dennoch sind viele Einzel-Requests ein gewünschtes Verhalten von Web Components, sie sind also ein Feature und kein Bug. Dieses Feature kommt jedoch erst zum Tragen, wenn HTTP in Version Zwei in allen Browsern Standard ist. HTTP/2 bietet eine Reihe an Vorteilen gegenüber dem heute benutzen HTTP/1.1. So können mehrere Requests in einer TCP-Verbindung übertragen werden, wobei die Reihenfolge der Antworten auf die Requests keine Rolle spielt. Des weiteren kann der Client, also der Absender der Requests, die Priorität der angeforderten Dateien bestimmen, somit kann der Server Dateien mit einer hohen Priorität vor Dateien mit niedrigerer Priorität schicken. Um die Größe der zu sendenden Pakete zu reduzieren, setzt HTTP/2 eine drastische Header-Kompression ein, welche die Bruttogröße der zu übertragenden Pakete verkleinert. Neu sind außerdem die sogenannten "Server Pushes" welche es dem Server ermöglicht Nachrichten an den Client zu schicken, ohne dass dieser sie anfordern muss.
+Durch diese Reihe an neuen Features bietet es also keinen Vorteil mehr, möglichst wenige Requests an den Server zu schicken um die Ladezeit der Webseite zu optimieren. HTTP/2 sieht es also vor, seine Webseite in mehrere kleine Dateien zu unterteilen, sodass bei kleinen Änderungen einer Datei, wie beispielsweise einem Icon, nicht mehr das gesamte Bild-Sprite, also das konkatenierte Bild, welches sich aus allen Einzelbildern zusammensetzt, sondern eben nur das neue, geänderte Icon neu übertragen werden muss. Ebenso können einzelne Teile einer Webseite wie Bild-Slider, Navigations-Menüs, komplexe Widgets, etc. schnell ausgewechselt werden, ohne die komplette Seite bei jeder Anfrage übertragen zu müssen. Das Zusammenfassen von Dateien wird folglich auf Protokollebene von HTTP/2 übernommen, die Entwickler einer Webseite müssen sich nicht selbst um dieses Problem kümmern. Voraussetzung hierfür ist jedoch die Unterstützung des neuen Protokolls seitens des Browsers. Bis auf den Internet Explorer und Safari unterstützen jedoch alle Browser HTTP/2 schon ab frühen Versionen, hier muss allerdings darauf hingewiesen werden, dass auch dort TLS als Verschlüsselung von Webseiten verwendet werden muss, damit das HTTP/2 Protokoll benutzt werden kann [citeulike:13879562]. Auch wenn das Protokoll schon standardisiert werden ist, liegt der Market Share an Verbindungen mit HTTP/2 momentan bei ca. 3% [citeulike:13879575], es muss de facto darauf verzichtet werden und eine alternative Lösung für das Problem der vielen Requests gefunden werden.
+
+
+### Request Minimierung mit "Vulcanize"
+
+Webseiten können viele verschiedene, modular aufgebaute Stylesheets, JavaScript Dateien etc. beinhalten, welche die Anzahl an Requests erhöhen. Um die Anzahl an Requests zu verringern gibt es in der Webentwicklung bereits mehrere verschiedene Hilfsmittel. So werden die einzelnen Stylesheets oder auch JavaScript Dateien zu einer einzigen Datei konkateniert, sodass für das komplette Styling und JavaScript jeweils eine Große Datei entsteht, welche nur einen Request an den Server benötigen. Zusätzlich können die konkatenierten Dateien noch minifiziert werden, um ihre Größe zu verringern und die Ladezeiten zu verkürzen. Selbiges Prinzip kann auch auf die HTML Imports angewendet werden. Google stellt hierfür das Tool *Vulcanize* [citeulike:13879681] bereit, welches serverseitig ermöglicht, einzelne kleine Web Components eine einzige große Web Component zu konkatenieren. Benannt nach der Vulkanisation, werden metaphorisch die einzelnen Elemente in ein beständigere Materialien umgewandelt. Vulcanize reduziert dabei eine HTML Datei und ihre zu importierenden HTML Dateien in eine einzige Datei. Somit werden die unterschiedlichen Requests in nur einem einzigen Request gebündelt und Ladezeiten und Bandbreite minimiert.
 
 
 ## Anwendungen
 
-Besonders einfach machen HTML Imports das einbinden ganzer Web Applikationen mit HTML/JavaScript/CSS. Diese können in eine Datei geschrieben, ihre Abhängigkeiten definieren und von anderen Importiert werden. Dies macht es sehr einfach den Code zu organisieren, so können etwa einzelne Abschnitte einer Anwendung oder von Code in einzelne Dateien ausgelagert werden, was Web Applikationen modular, austauschbar und wiederverwendbar macht. Falls nun ein oder mehrere Cutom Elements in einem HTML Import enthalten sind, so werden dessen Interface und Definitionen automatisch gekapselt. Auch wird die Abhängigkeitsverwaltung in Betracht auf die Performance stark verbessert, da der Browser nicht eine große JavaScript Bibliothek, sondern einzelne kleinere JavaScript Abschnitte parsen und ausführen muss. Diese werden durch die HTML Imports parallel geparst, was mit einen enormen Performance-Schub einher geht [citeulike:13853647].
+Besonders einfach machen HTML Imports das einbinden ganzer Web Applikationen mit HTML/JavaScript/CSS. Diese können in eine Datei geschrieben, ihre Abhängigkeiten definieren und von anderen Importiert werden. Dies macht es sehr einfach den Code zu organisieren, so können etwa einzelne Abschnitte einer Anwendung oder von Code in einzelne Dateien ausgelagert werden, was Web Applikationen modular, austauschbar und wiederverwendbar macht. Falls nun ein oder mehrere Custom Elements in einem HTML Import enthalten sind, so werden dessen Interface und Definitionen automatisch gekapselt. Auch wird die Abhängigkeitsverwaltung in Betracht auf die Performance stark verbessert, da der Browser nicht eine große JavaScript Bibliothek, sondern einzelne kleinere JavaScript Abschnitte parsen und ausführen muss. Diese werden durch die HTML Imports parallel geparst, was mit einen enormen Performance-Schub einher geht [citeulike:13853647].
 
 
 ## Browserunterstüzung
 
-HTML Imports sind noch nicht vom W3C standardisiert, sondern befinden sich noch im Status eines "Working Draft" [citeulike:13853711]. Sie werden deshalb bisher nur von Google Chrome ab Version 43 und Opera ab Version 33 nativ unterstützt.
+HTML Imports sind noch nicht vom W3C standardisiert, sondern befinden sich noch im Status eines "Working Draft" [citeulike:13853711]. Sie werden deshalb bisher nur von Google Chrome ab Version 43 und Opera ab Version 33 nativ unterstützt. Seitens Mozilla und dessen Firefox Browser, wird es für HTML Imports auch keine Unterstützung geben, da ihrer Meinung nach, der Bedarf an HTML Imports nach der Einführung von ECMAScript 6 Modules, nicht mehr existiert und da Abhängigkeiten schon mit Tools wie Vulcanize aufgelöst werden können [citeulike:13881144]. Auf Details zu ECMAScript 6 Modules wird an dieser Stelle nicht eingegangen, da diesen den Umfang dieser Arbeit überschreiten.
 
 ![Bild: HTML Imports Browserunterstützung](images/4-html-imports-browserunterstuetzung.jpg "HTML Imports Browserunterstützung. Quelle: http://caniuse.com/#search=imports")
 
@@ -154,10 +147,13 @@ HTML Imports sind noch nicht vom W3C standardisiert, sondern befinden sich noch 
 - [Developing Web Components 2015] Jarrod Overson & Jason Strimpel, Developing Web Components, O'Reilly 2015, S.139-147
 - [citeulike:13853647] http://www.html5rocks.com/en/tutorials/webcomponents/imports/
 - [citeulike:13853711] Can I Use, http://caniuse.com/#search=imports
+- [citeulike:13853711] Can I Use, http://caniuse.com/#search=http
+- [citeulike:13879681] Vulcanize, https://github.com/polymer/vulcanize
 - http://www.w3.org/TR/html-imports/
 - [citeulike:13853714] Peter Kröner, http://www.peterkroener.de/fragen-zu-html5-und-co-beantwortet-15-web-components-performance-css-variablen-data-urls-async/
 - [citeulike:13853724] http://www.hongkiat.com/blog/html-import/
 - [citeulike:13853700] http://webcomponents.org/articles/introduction-to-html-imports/
 - [citeulike:13853253] https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy
 - [citeulike:13853643] http://www.w3.org/TR/cors/
+- [citeulike:13881144] https://hacks.mozilla.org/2015/06/the-state-of-web-components/
 

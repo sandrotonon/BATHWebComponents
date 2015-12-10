@@ -52,16 +52,22 @@ Neben den Insertion Points für Inhalte, also dem `<content>` Insertion Point, g
 
 ## Styling mit CSS
 
-Eines der Hauptfeatures des Shadow DOM ist die Shadow Boundary, welche Kapselung von Stylesheets standardmäßig mit sich bringt. Sie gewährleistet, dass Stylesheets des Light DOM nicht in den Shadow DOM rein kommen und anders rum. Dies gilt jedoch nur für die Präsentation des Inhalts, nicht für den Inhalt selbst, welcher über den ::slotted CSS-Pseudoselektor angesprochen werden kann.
+Eines der Hauptfeatures des Shadow DOM ist die Shadow Boundary, welche Kapselung von Stylesheets standardmäßig mit sich bringt. Sie gewährleistet, dass Stylings des Light DOM nicht in den Shadow DOM rein kommen und anders rum. Dies gilt jedoch nur für die Präsentation des Inhalts, nicht für den Inhalt selbst, welcher über den ::slotted CSS-Pseudoselektor angesprochen werden kann. Nachfolgend wird auf die wichtigsten Selektoren für das Styling eingegangen.
 
 
-- Styling des host-Elements mit :host *selector*
-  -> Allerdings überschreiben die inneren Styles nicht die Äußeren!
-  (Siehe snippets/shadow-dom/#styling)
-  -> Wichtig bei "Reacting to user states"
+### :host
+
+Das Host-Element des Shadow DOM kann mittels dem Pseudoselektor *:host* angesprochen werden. Dabei kann dem Selektor optional auch ein Selektor mit übergeben werden wie beispielsweise mit :host(.myHostElement). Mit diesem Selektor ist es möglich nur Hosts anzusprechen, welche diese Klasse haben. Zu beachten ist, dass das Host Element von außen gestylt werden kann, also die Regeln des :host Selektors überschreiben kann. Des Weiteren funktioniert der :host Selektor nur im Kontext eines Shadow DOM, man kann ihn also nicht außerhalb benutzen. Besonders wichtig ist dieser Selektor, wenn auf die Aktivität der Benutzer reagiert werden muss. So kann innerhalb des Shadow DOMs angegeben werden, wie das Host Element beispielsweise beim Hovern mit der Maus auszusehen hat.
+
+### :host-context()
+
+
+
 - Styling des Hosts in Abhängigkeit des Kontextes mit :host-context
   (https://drafts.csswg.org/css-scoping/#selectordef-host-context)
   z.B. :host-context(.wrapper)
+
+  
 - Styling des Shadow DOM von außerhalb
   - ::shadow
     - z.b.: my-element::shadow .content {} spricht .content elemente IN einem Shadow DOM an
@@ -163,10 +169,10 @@ Eines der Hauptfeatures des Shadow DOM ist die Shadow Boundary, welche Kapselung
   + Die CSS Regel `.styled { color: green; }` greift, da der div mit der Klasse ".styled" in den Light DOM projiziert wird
   + Innerhalb des Templates können CSS Regeln für die beinhaltenden Elemente definiert werden
 
+
 ## Browserunterstützung
 
-- Noch nicht standardtisiert, sind noch ein Working Draft (http://www.w3.org/TR/shadow-dom/)
-- Deshalb bisher auch nur in Chrome und Opera unterstützt
+Der Shadow DOM ist noch nicht vom W3C standardisiert, sondern befindet sich noch im Status eines "Working Draft" [citeulike:13879687]. Er wird deshalb bisher nur von Google Chrome ab Version 43 und Opera ab Version 33 nativ unterstützt.
 
 ![Bild: Shadow DOM Browserunterstützung](images/2-shadow-dom-browserunterstuetzung.jpg "Shadow DOM Browserunterstützung. Quelle: http://caniuse.com/#search=shadow%20dom")
 
@@ -182,3 +188,4 @@ Eines der Hauptfeatures des Shadow DOM ist die Shadow Boundary, welche Kapselung
 - [citeulike:13851421] Eric Bidelman, Shadow DOM 201, 2014, http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/
 - [citeulike:13851402] Eric Bidelman, Shadow DOM 301, 2013, http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-301/
 - [Can I Use 2015] Can I Use, http://caniuse.com/#search=shadow%20dom
+- [citeulike:13879687] W3C Shadow DOM ,http://www.w3.org/TR/shadow-dom/

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.20)  24 NOV 2015 13:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.20)  10 DEC 2015 11:40
 entering extended mode
 **thesis.tex
 (thesis.tex
@@ -83,8 +83,8 @@ Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
-)
-No file thesis.aux.
+) (thesis.aux
+(cover.aux) (title.aux) (abstract.aux) (affidavit.aux) (glossary.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
@@ -97,6 +97,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
+
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count91
@@ -126,12 +127,6 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 14.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 14.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 17.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 19.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 19.
 [1
 
 
@@ -139,6 +134,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 o.pdf>]) (title.tex
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 17.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 17.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 17.
 
 Overfull \hbox (0.90353pt too wide) in paragraph at lines 26--26
 []\OT1/cmr/m/n/10.95 Bachelorkandidat:| 
@@ -165,10 +164,31 @@ Overfull \hbox (12.39159pt too wide) in paragraph at lines 9--24
 ) [2
 
 
-]
-No file thesis.toc.
+] (affidavit.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+
+Overfull \hbox (20.621pt too wide) in paragraph at lines 7--16
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--21
+
+ []
+
+) [3
+
+
+
+] (thesis.toc
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¼ in font cmr10!
+)
 \tf@toc=\write4
-[3
+ [4
 
 
 ]
@@ -176,31 +196,42 @@ Missing character: There is no Ã in font cmbx12!
 Missing character: There is no ¼ in font cmbx12!
 
 
-LaTeX Warning: Citation `WebComponentsC24:online' on page 4 undefined on input 
-line 42.
+LaTeX Warning: Citation `WebComponentsC24:online' on page 5 undefined on input 
+line 43.
 
-[4]
+[5] (glossary.tex
+Missing character: There is no Ã in font cmbx12!
+Missing character: There is no ¼ in font cmbx12!
+ [6
 
-! LaTeX Error: File `../release/1-einfuehrung/1-einfuehrung.tex' not found.
+] (thesis.aux (cover.aux) (title.aux) (abstract.aux)
+(affidavit.aux) (glossary.aux))
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: tex)
+LaTeX Warning: There were undefined references.
 
-Enter file name: 
-! Emergency stop.
-<read *> 
-         
-l.47 ..../release/1-einfuehrung/1-einfuehrung.tex}
-                                                  
-*** (cannot \read from terminal in nonstop modes)
-
- 
+ ) )
+(\end occurred when \iftrue on line 50 was incomplete)
+(\end occurred when \ifnum on line 50 was incomplete) 
 Here is how much of TeX's memory you used:
- 1921 strings out of 493673
- 25518 string characters out of 3141526
- 85156 words of memory out of 3000000
- 5276 multiletter control sequences out of 15000+200000
- 12178 words of font info for 42 fonts, out of 3000000 for 9000
+ 1972 strings out of 493673
+ 26000 string characters out of 3141526
+ 86693 words of memory out of 3000000
+ 5297 multiletter control sequences out of 15000+200000
+ 12524 words of font info for 43 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  27i,9n,19p,286b,230s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+<C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmss17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmti10.pfb>
+Output written on thesis.pdf (7 pages, 154757 bytes).
+PDF statistics:
+ 67 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+
