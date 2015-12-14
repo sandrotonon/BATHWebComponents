@@ -14,19 +14,18 @@
       - CSS Styling
     - HTML Templates
     - HTML Imports
-    - (Custom Properties)
     - Beispiel
   - Polyfill webcomponents.js
     - Unterstützung
     - Performance
-  - (Responsive Design mit WebComponents)
-  - (SEO)
   - Probleme
 
 :: ~60%
 - Polymer 1.0
   - How-To
   - Architektur
+  - Performance
+  - Styling
   - Beispiele
   - Zusammenhang mit Angular
 - Beispiel mit polymer

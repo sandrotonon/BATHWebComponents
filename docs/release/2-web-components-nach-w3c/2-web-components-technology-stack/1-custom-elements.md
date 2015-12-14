@@ -76,7 +76,7 @@ var ButtonExtendedProto = document.registerElement('button-extended', {
 });
 ```
 
-Das registrierte, erweiterte Element kann nun mit dem Namen des zu erweiternden Elementes als erstem Parameter und dem Namen des erweiterten Elementes als zweitem Parameter erzeugt werden. Alternativ kann es auch mit Hilfe des Konstruktors erzeugt werden.
+Das registrierte, erweiterte Element kann nun mit dem Namen des zu erweiternden Elementes als erstem Parameter und dem Namen des erweiterten Elementes als zweitem Parameter erzeugt werden. Alternativ kann es auch mit Hilfe des Konstruktors erzeugt werden [citeulike:13752379].
 
 JavaScript:
 ```javascript
@@ -94,8 +94,6 @@ HTML:
     <button is="button-extended"></button>
   </div>
 ```
-
-[citeulike:13752379]
 
 
 ### Verwendung bei Github
@@ -175,9 +173,7 @@ my-element {
 
 HTML Imports sind noch nicht vom W3C standardisiert, sondern befinden sich noch im Status eines "Working Draft" [citeulike:13845061]. Sie werden deshalb bisher nur von Google Chrome ab Version 43 und Opera ab Version 33 nativ unterstützt.
 
-![Bild: Browserunterstützung von Custom Elements](images/1-custom-elements-browserunterstuetzung.jpg "Custom Elements Browserunterstützung. Quelle: http://caniuse.com/#feat=custom-elements")
-
-[citeulike:13844983]
+![Bild: Browserunterstützung von Custom Elements](images/1-custom-elements-browserunterstuetzung.jpg "Custom Elements Browserunterstützung. Quelle: [citeulike:13844983]")
 
 
 ## Quellen

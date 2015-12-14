@@ -52,70 +52,47 @@ Neben den Insertion Points für Inhalte, also dem `<content>` Insertion Point, g
 
 ## Styling mit CSS
 
-Eines der Hauptfeatures des Shadow DOM ist die Shadow Boundary, welche Kapselung von Stylesheets standardmäßig mit sich bringt. Sie gewährleistet, dass Stylings des Light DOM nicht in den Shadow DOM rein kommen und anders rum. Dies gilt jedoch nur für die Präsentation des Inhalts, nicht für den Inhalt selbst, welcher über den ::slotted CSS-Pseudoselektor angesprochen werden kann. Nachfolgend wird auf die wichtigsten Selektoren für das Styling eingegangen.
+Eines der Hauptfeatures des Shadow DOM ist die Shadow Boundary, welche Kapselung von Stylesheets standardmäßig mit sich bringt. Sie gewährleistet, dass Stylings des Light DOM nicht in den Shadow DOM rein kommen und anders rum [citeulike:13851334]. Dies gilt jedoch nur für die Präsentation des Inhalts, nicht für den Inhalt selbst. Nachfolgend wird auf die wichtigsten Selektoren für das Styling eingegangen.
 
 
 ### :host
 
-Das Host-Element des Shadow DOM kann mittels dem Pseudoselektor *:host* angesprochen werden. Dabei kann dem Selektor optional auch ein Selektor mit übergeben werden wie beispielsweise mit :host(.myHostElement). Mit diesem Selektor ist es möglich nur Hosts anzusprechen, welche diese Klasse haben. Zu beachten ist, dass das Host Element von außen gestylt werden kann, also die Regeln des :host Selektors überschreiben kann. Des Weiteren funktioniert der :host Selektor nur im Kontext eines Shadow DOM, man kann ihn also nicht außerhalb benutzen. Besonders wichtig ist dieser Selektor, wenn auf die Aktivität der Benutzer reagiert werden muss. So kann innerhalb des Shadow DOMs angegeben werden, wie das Host Element beispielsweise beim Hovern mit der Maus auszusehen hat.
+Das Host-Element des Shadow DOM kann mittels dem Pseudoselektor *:host* angesprochen werden. Dabei kann dem Selektor optional auch ein Selektor mit übergeben werden wie beispielsweise mit :host(.myHostElement). Mit diesem Selektor ist es möglich nur Hosts anzusprechen, welche diese Klasse haben. Zu beachten ist, dass das Host Element von außen gestylt werden kann, also die Regeln des :host Selektors überschreiben kann. Des Weiteren funktioniert der :host Selektor nur im Kontext eines Shadow DOM, man kann ihn also nicht außerhalb benutzen. Besonders wichtig ist dieser Selektor, wenn auf die Aktivität der Benutzer reagiert werden muss. So kann innerhalb des Shadow DOMs angegeben werden, wie das Host Element beispielsweise beim Hover mit der Maus auszusehen hat.
+
 
 ### :host-context()
 
+Je nach Kontext eines Elementes, kann es vorkommen, dass Elemente unterschiedlich dargestellt werden müssen. Das wohl am häufigsten Auftretende Beispiel hierfür sind Themes. Themes ermöglichen es, Webseiteninhalte auf unterschiedliche Arten darzustellen. Oftmals bietet eine Webseite oder eine Applikation mehrere Themes für die Benutzer an, zwischen welchen sie wechseln können. Mit dem `:host-context()` Selektor wird es möglich ein Host-Element je nach Klasse des übergeordneten Elementes, dem parent-Element, zu definieren. Hat ein Host-Element mehrere Styledefinitionen, so werden diese nach der Klasse des parent-Elementes getriggert. Soll eine Styledefinition beispielsweise nur angewendet werden, wenn das umschließende Element die Klasse `theme-1` hat, so kann das mit `:host-context(.theme-1)` erreicht werden.
 
 
-- Styling des Hosts in Abhängigkeit des Kontextes mit :host-context
-  (https://drafts.csswg.org/css-scoping/#selectordef-host-context)
-  z.B. :host-context(.wrapper)
+## Styling des Shadow DOM von außerhalb
 
-  
-- Styling des Shadow DOM von außerhalb
-  - ::shadow
-    - z.b.: my-element::shadow .content {} spricht .content elemente IN einem Shadow DOM an
-    - Styled alle elemente in DIESEM Shadow DOM
-  - >>> (ehem. /deep/)
-    (https://drafts.csswg.org/css-scoping-1/#deep-combinator)
-    - z.b.: my-element >>> .different spricht ALLE .different Elemente in my-element an, egal wieviele Shadow DOMS noch darunter geschachtelt sind
-    - So können z.B. "Style-hooks" erzeugt werden, die es Entwicklern ermöglicht eigene Styles auf ein Component zu binden
-      some-element >>> .custom-theme { ... }
-  - ::slotted (ehem. ::content)
-    (http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/#toc-distributed)
-    - Elemente, die in ein `<content>` projiziert werden, können auch von innen gestyled werden, z.B. (in einer Komponente):
+Trotz der Kapselung von Shadow DOMs, ist es mit speziellen Selektoren möglich die Shadow Boundary zu durchbrechen. So können Styleregeln für Shadow Hosts oder in ihm enthaltene Elemente vom Elterndokument definiert werden [citeulike:13883067]. 
 
-      ```CSS
-      ::slotted p {
-        color: red;
-      }
-      ```
-      - Spricht alle `<p>` in einem `<content>` Tag an, die in dem Light DOM projiziert werden.
-  - CCS Variablen
-    (http://dev.w3.org/csswg/css-variables/)
-    - Eine Komponente hält im Inneren Variablen für das Aussehen, somit wir das Styling nach außen gegeben
-      z.B.:
 
-      ```CSS
-      my-button {
-        color: var(--button-theme-color, red);  #(red wäre default)
-        font-family: var(--button-theme-font);
-      }
-      ```
-      Der Entwickler kann nun von außen die Variablen instanziieren mit
+### ::shadow
 
-      ```CSS
-      #host {
-        --button-theme-color: red;
-        --button-theme-font:  Arial;
-      }
-      ```
-  - Mit ::shadow und >>> können native Elemente, die einen Shadow DOM benutzen, gestyled werden, wie z.B. `<video>` oder `<input>` Elemente
-  - Jedoch sprengt das das Prinzip der Kapselung, das man mit Web Components versucht zu gewinnen, jedoch sollten Web Entwickler natürlich dennoch die Möglichkeit haben, fremde Components zu stylen, wenn sie wissen was sie machen.
-- Alles wird durch Polyfills abgedeckt
+Falls ein Element nun einen Shadow Tree beinhalten sollte, so kann dieses mit der entsprechenden Klasse oder ID, sowie dem `::shadow` Selektor angesprochen werden. Jedoch können mit diesem Selektor keine allgemeingültigen Regeln erstellt werden. Stattdessen muss stets ein in dem Shadow Tree enthaltener Elementname angesprochen werden. Nimmt man sich nun die Content Insertion Points zur Hilfe, so ist es dennoch möglich Regeln für mehrere unterschiedliche Elemente zu definieren. Die Selektor-Kombination `#my-element::shadow content` Spricht nun alle `<content>` Tags an, welche im Shadow Tree des `#my-element` vorhanden sind. Da in diesem `<content>` Tag wiederum die Inhalte hineinprojiziert werden, werden die Regeln für die projizierten Elemente angewendet. Sollten nun noch weitere Shadow DOMs in diesem Element geschachtelt sein, so werden die Regeln jedoch nicht für diese angewandt, sondern nur für das direkt folgende Kind des `#my-element`.
 
-[citeulike:13851421], [citeulike:13851334]
+
+### >>> (ehem. /deep/)
+
+Der `>>>` Kombinator ist ähnlich dem `::shadow` Selektor. Er bricht jedoch durch sämtliche Shadow Boundaries und wendet die Regeln auf alle gefundenen Elemente an. Dies gilt, im Gegensatz zum `::shadow` Selektor, auch für geschachtelte Shadow Trees. Mit dem Selektor `my-element >>> span` werden also alle in `<my-element>`, sowie in dessen geschachtelten Shadow Trees, enthaltenen `<span>` Elemente angesprochen.
+
+
+### ::slotted (ehem. ::content)
+
+Die Methode der `#my-element::shadow content` Kombination zeigt die Möglichkeit, wie die Inhalte eine Shadow DOMs von außen gestylt werden können. Sollen jene in den Content Insertion Points enthaltenen ELemente jedoch von innerhalb gestylt werden, so ist dies mit dem `::slotted` Selektor möglich. Ist innerhalb eines Elements die Regel `::slotted p` definiert, so werden alle in den Shadow DOM projizierten `<p>` Tags angesprochen.
+
+
+### CSS Variablen
+
+Die oben gezeigten Selektoren und Kombinatoren eignen sich hervorragend um die Shadow Boundary zu durchdringen und eigene Styles den Elementen aufzuzwingen. Jedoch sprengen sie das Prinzip der Kapselung, das man mit Web Components versucht zu gewinnen. Dennoch haben sie ihre Existenzberechtigung. Sie ermöglichen es den Entwicklern fremde Components sowie native HTML Elemente, die einen Shadow DOM benutzen, wie z.B. `<video>` oder `<input>` Elemente, zu stylen. Allerdings sollte bei ihrer Anwendung äußerst vorsichtig gearbeitet werden, besonders da sie schnell missbraucht werden können. Statt die Barriere nun zu durchbrechen, können Elemente miteinander Kommunizieren. Diese Kommunikation erfolgt in Form von CSS Variablen. Mit ihnen können Elemente in ihrem Shadow DOM Variablen für die inneren Styles bereit halten, welche von außerhalb des Shadow DOMs instanziiert werden können. Dadurch ist es möglich das innere Styling eines Elementes nach außen zu reichen. Es wird somit eine Style-Schnittstelle geschaffen [citeulike:13883381]. Ein Element `my-element` kann nun in dessen Shadow DOM beispielsweise die Schriftfarbe mit `color` definieren. Doch statt einem Wert wird nun der Name der nach außen sichtbaren Variaben angegeben. Die Syntax hierfür lautet `var(--varable-name, red)`, wobei `red` hier der Standardwert ist, falls die Variable `--variable-name` von außen nicht gesetzt wird. Nachdem die Variable definiert wurde, kann sie von außerhalb des Shadow DOM mittels der Regel `#my-shadow-host { --varable-name: blue; }` überschrieben werden.
 
 
 ## Beispiel eines Shadow DOMs mit Template und CSS Styles
 
-- Soll nun ein einfacher Shadow DOM mit gekapseltem CSS und JavaScript erzeugt werden, könnte dies folgendermaßen erfolgen:
+Das folgende Beispiel zeigt eine exemplarische Implementierung eines Shadow DOMs, der gekapseltes CSS und JavaScript beinhaltet.
 
 ```html
 <style>
@@ -130,8 +107,9 @@ Das Host-Element des Shadow DOM kann mittels dem Pseudoselektor *:host* angespro
 <div id="hello">
   <div>Hello</div>
   <div class="styled">Styled</div>
-  <p class="hidden">Hidden Content</p>
+  <p class="hidden">Inhalt der vom Shadow DOM überschrieben wird.</p>
 </div>
+
 <template id="myTemplate">
   <style>
     .wrapper {
@@ -159,24 +137,19 @@ Das Host-Element des Shadow DOM kann mittels dem Pseudoselektor *:host* angespro
 </script>
 ```
 
-- Das Beispiel oben wird vom Browser wie folgt gerendert:
+Das obige Beispiel wird vom Browser wie folgt gerendert:
 
 ![Bild: Shadow DOM Beispiel](images/2-shadow-dom-beispiel.jpg "Shadow DOM Beispiel. Quelle: Selbst erstellt")
 
-- Hier sind einige Dinge anzumerken:
-  + Es werde per select im `<content>` nur die divs aus dem Shadow Root mit der ID "hello" gerendert, der Paragrapg mit der ID "hidden wird nicht gerendert
-  + Die CSS Regel `.content { background-color: khaki; }` des HTML Dokumentes greift nicht durch die Shadow Boundary
-  + Die CSS Regel `.styled { color: green; }` greift, da der div mit der Klasse ".styled" in den Light DOM projiziert wird
-  + Innerhalb des Templates können CSS Regeln für die beinhaltenden Elemente definiert werden
+
+Anhand des gerenderten Outputs werden einige Dinge deutlich. Mit der Angabe des `select`-Attributs, werden im `<content>` Tag nur die `<div>` Tags mit der ID "hello" aus dem Shadow Root, welcher per `var root = document.querySelector('#hello').createShadowRoot()` erzeugt wird, gerendert. Der Paragraph mit der ID "hidden" wird hingegen nicht gerendert, da er nicht im `select` mit inbegriffen ist. Die CSS Regel `.content { background-color: khaki; }` des Eltern HTML Dokumentes greift nicht, da die Styles des Shadow Roots durch die Shadow Boundary gekapselt werden. Die CSS Regel `.styled { color: green; }` greift allerdings, da das `div` Element mit der Klasse ".styled" aus dem Light DOM in den Shadow DOM projiziert wird. Außerdem können Innerhalb des Templates CSS Regeln für die beinhaltenden Elemente definiert werden, somit wird das `div` Element ohne eine zugehörige Klasse mit der Regel `.content { color: red; }` auch dementsprechend in Rot gerendert.
 
 
 ## Browserunterstützung
 
 Der Shadow DOM ist noch nicht vom W3C standardisiert, sondern befindet sich noch im Status eines "Working Draft" [citeulike:13879687]. Er wird deshalb bisher nur von Google Chrome ab Version 43 und Opera ab Version 33 nativ unterstützt.
 
-![Bild: Shadow DOM Browserunterstützung](images/2-shadow-dom-browserunterstuetzung.jpg "Shadow DOM Browserunterstützung. Quelle: http://caniuse.com/#search=shadow%20dom")
-
-[Can I Use 2015]
+![Bild: Shadow DOM Browserunterstützung](images/2-shadow-dom-browserunterstuetzung.jpg "Shadow DOM Browserunterstützung. Quelle: [citeulike:13883407]")
 
 
 ## Quellen
@@ -187,5 +160,7 @@ Der Shadow DOM ist noch nicht vom W3C standardisiert, sondern befindet sich noch
 - [citeulike:13851404] Dominic Cooney, Shadow DOM 101, 2013, http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/
 - [citeulike:13851421] Eric Bidelman, Shadow DOM 201, 2014, http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/
 - [citeulike:13851402] Eric Bidelman, Shadow DOM 301, 2013, http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-301/
-- [Can I Use 2015] Can I Use, http://caniuse.com/#search=shadow%20dom
+- [citeulike:13883407] Can I Use, http://caniuse.com/#search=shadow%20dom
 - [citeulike:13879687] W3C Shadow DOM ,http://www.w3.org/TR/shadow-dom/
+- [citeulike:13883067] CSS Scoping Module Level 1, https://drafts.csswg.org/css-scoping/
+- [citeulike:13883381] CSS Custom Properties for Cascading Variables Module Level 1, https://drafts.csswg.org/css-variables/
