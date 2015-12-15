@@ -44,7 +44,7 @@
 
 ## Quellen
 
-- [Building Polyfills] - http://www.amazon.de/gp/product/144937073X?keywords=polyfills&qid=1450181081&ref_=sr_1_3&sr=8-3
+- [Building Polyfills] - http://www.amazon.de/gp/product/144937073X?keywords=polyfills&qid=1450181081&ref_=sr_1_3&sr=8-3, http://cdn.oreillystatic.com/oreilly/booksamplers/9781449370732_sampler.pdf
 - [Microsoft Edge Platform Status] https://dev.windows.com/en-us/microsoft-edge/platform/status/?filter=f3f0000bf&search=web%20components
 - [webcomponents.js] https://github.com/webcomponents/webcomponentsjs
 - [AreWeComponentizedYet] http://jonrimmer.github.io/are-we-componentized-yet/
