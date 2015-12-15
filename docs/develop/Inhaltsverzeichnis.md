@@ -18,18 +18,17 @@
   - Polyfill webcomponents.js
     - Unterstützung
     - Performance
-  - Probleme
 
 :: ~60%
 - Polymer 1.0
+  - Einleitung
   - How-To
   - Architektur
   - Performance
   - Styling
-  - Beispiele
-  - Zusammenhang mit Angular
 - Beispiel mit polymer
   - Mit Yeoman etc.
+  - Vergleich mit Angular
 - Vorteile für Seitenbau
 - Bedeutung für Seitenbau
 - Vorteile durch Nichtnutzung
