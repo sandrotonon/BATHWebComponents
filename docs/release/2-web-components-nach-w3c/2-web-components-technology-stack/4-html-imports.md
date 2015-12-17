@@ -1,5 +1,7 @@
 # HTML Imports
 
+- Ausformulieren: Asynchrones Laden von Imports
+
 HTML Imports ist eine Technologie, die es erlaubt HTML Dateien in einer Webseite zu inkludieren. Sie sollen es ermöglichen die Webseite in einzelne, kleine, auswechselbare Teile aufzuteilen. In dem folgenden Kapitel wird auf den Begriff HTML Imports des Web Components Technology Stacks im Genaueren eingegangen.
 
 
@@ -121,6 +123,17 @@ Ein Signifikantes Problem der HTML Imports ist die Performance, welche bei kompl
 
 Dennoch sind viele Einzel-Requests ein gewünschtes Verhalten von Web Components, sie sind also ein Feature und kein Bug. Dieses Feature kommt jedoch erst zum Tragen, wenn HTTP in Version Zwei in allen Browsern Standard ist. HTTP/2 bietet eine Reihe an Vorteilen gegenüber dem heute benutzen HTTP/1.1. So können mehrere Requests in einer TCP-Verbindung übertragen werden, wobei die Reihenfolge der Antworten auf die Requests keine Rolle spielt. Des weiteren kann der Client, also der Absender der Requests, die Priorität der angeforderten Dateien bestimmen, somit kann der Server Dateien mit einer hohen Priorität vor Dateien mit niedrigerer Priorität schicken. Um die Größe der zu sendenden Pakete zu reduzieren, setzt HTTP/2 eine drastische Header-Kompression ein, welche die Bruttogröße der zu übertragenden Pakete verkleinert. Neu sind außerdem die sogenannten "Server Pushes" welche es dem Server ermöglicht Nachrichten an den Client zu schicken, ohne dass dieser sie anfordern muss.
 Durch diese Reihe an neuen Features bietet es also keinen Vorteil mehr, möglichst wenige Requests an den Server zu schicken um die Ladezeit der Webseite zu optimieren. HTTP/2 sieht es also vor, seine Webseite in mehrere kleine Dateien zu unterteilen, sodass bei kleinen Änderungen einer Datei, wie beispielsweise einem Icon, nicht mehr das gesamte Bild-Sprite, also das konkatenierte Bild, welches sich aus allen Einzelbildern zusammensetzt, sondern eben nur das neue, geänderte Icon neu übertragen werden muss. Ebenso können einzelne Teile einer Webseite wie Bild-Slider, Navigations-Menüs, komplexe Widgets, etc. schnell ausgewechselt werden, ohne die komplette Seite bei jeder Anfrage übertragen zu müssen. Das Zusammenfassen von Dateien wird folglich auf Protokollebene von HTTP/2 übernommen, die Entwickler einer Webseite müssen sich nicht selbst um dieses Problem kümmern. Voraussetzung hierfür ist jedoch die Unterstützung des neuen Protokolls seitens des Browsers. Bis auf den Internet Explorer und Safari unterstützen jedoch alle Browser HTTP/2 schon ab frühen Versionen, hier muss allerdings darauf hingewiesen werden, dass auch dort TLS als Verschlüsselung von Webseiten verwendet werden muss, damit das HTTP/2 Protokoll benutzt werden kann [citeulike:13879562]. Auch wenn das Protokoll schon standardisiert werden ist, liegt der Market Share an Verbindungen mit HTTP/2 momentan bei ca. 3% [citeulike:13879575], es muss de facto darauf verzichtet werden und eine alternative Lösung für das Problem der vielen Requests gefunden werden.
+
+
+### Asynchrones Laden von Imports
+
+- Ohne HTTP/2 nicht möglich
+- Das Rendern der Seite kann mit unter sehr lange dauern, da das beinhaltende JavaScript das Rendern blockiert
+- Um die Dateien schnell laden zu können, ist ein `async`-Attribut vorgesehen
+- Ermöglicht es, dass mehrere Dateien asynchron geladen werden
+- JavaScript in den Imports blockieren somit nicht das Anzeigen von bereits geladenem HTML Code
+- Alternativ kann statt `async` das `defer`-Attribut gesetzt und die Imports am Ende der Seite gesetzt werden
+- Damit werden die Scripte erst ausgeführt, wenn die Seite geladen ist
 
 
 ### Request Minimierung mit "Vulcanize"

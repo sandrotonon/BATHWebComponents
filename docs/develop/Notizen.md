@@ -1,28 +1,26 @@
 # Notizen
 - Shadow Dom ist für Screenreader uä. kein problem
 
+## CSS
+
+Pseudoklassen:
+
+:Pseudoklasse
+
+
+Pseudoelement:
+
+::Pseudoelement
+
+
 ## Erste Schritte
 
 - webcomponents.js mit bower installieren (http://webcomponents.org/polyfills/)
 
 
-## HTML Templates
-- Sind bereits standard (alle anderen APIs nicht - https://html.spec.whatwg.org/multipage/scripting.html#the-template-element)
-
-## Shadow DOM
-
-- Passwort in einem <input type="password"> sichtbar!
-- Insertion Points nachsehen!
-   - Es kann mehrere contents geben, die ein select attribut haben um nur spezielle inhalte "durchlassen"
-
-
 ## Production?
 - JA: http://developer.telerik.com/featured/web-components-ready-production/
 - NEIN: http://developer.telerik.com/featured/web-components-arent-ready-production-yet/
-
-
-## Github benutzt Web Components
-https://github.com/github/time-elements
 
 
 ## Vorteile / Nachteile
@@ -37,17 +35,10 @@ https://github.com/github/time-elements
   |- Shared Styles (Polymer - Auch ohne Polymer umsetzbar?)
 
 
-- Mozilla - The state of WebComponents: https://hacks.mozilla.org/2015/06/the-state-of-web-components/
-
-
 ## Microsoft und WebComponents
 - https://entwickler.de/online/web/web-components-microsoft-edge-167732.html
 
 
-## Polymer Methapher
-HTML standard-Tags sind Atome. Polymer / Web Components bauen Atome zusammen zu Molekülen, die Komponenten
-Aus der verdrahtung der kleinen Teile wird zu Engeneering
-ermöglich libraries, plattformen die wiederverwendbar sind
 
 
 ## https://blogs.windows.com/msedgedev/2015/07/14/bringing-componentization-to-the-web-an-overview-of-web-components/
@@ -55,8 +46,6 @@ Bringing Componentization to the Web: An Overview of Web Components (part 1):
 
 The goal of web components is to reduce complexity by isolating a related group of HTML, CSS, and JavaScript to perform a common function within the context of a single page.
 
-### CSS style isolation
-There is no great way to componentize CSS natively in the platform today (though tools like Sass can certainly help). A component model must support a way to *isolate some set of CSS from another* such that the rules defined in one don’t interfere with the other. Additionally, component styles should apply only to the necessary parts of the component and nothing else.
 
 ## Accessebility - https://css-tricks.com/modular-future-web-components/
 Obviously when you're hiding markup in secret shadow DOM sandboxes the issue of accessibility becomes pretty important. Steve Faulkner took a look at accessibility in shadow DOM and seemed to be satisfied with what he found.
