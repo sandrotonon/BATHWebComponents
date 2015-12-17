@@ -2,7 +2,7 @@ BOGER
 
 - Polymer Implementierung zeigen
 - Beispielimplementierung in VanillaJS?
-- Verlängerung -> In Firma geklärt, Andreas bis 10. Jan im Urlaub
+- Verlängerung -> In Firma geklärt, Andreas bis 15. Jan im Urlaub
 
 
 ANDREAS
@@ -17,6 +17,5 @@ ANDREAS
         * Polymer Grundsätzliches
         * Polymer features mit Registration and lifecycle, declared properties, Local DOM, Styling, Events etc. (seihe Developer Guide)
         * Zusätzliche Punkte aus Polymer summits (performance, gestures etc.)
-
 
 
