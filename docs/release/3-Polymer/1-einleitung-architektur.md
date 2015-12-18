@@ -1,5 +1,7 @@
 # Einleitung
 
+    * Polymer Grundsätzliches (Architektur - Native, Polyfills, Polymer.js, Elemente Katalog)
+
 ## Polymer Methapher
 
 HTML Standard-Tags sind Atome. Polymer / Web Components bauen Atome zusammen zu Molekülen, den Komponenten
@@ -10,6 +12,7 @@ Ermöglicht Libraries, Plattformen die wiederverwendbar sind
 ## Architektur
 
 Siehe Bild mit Layers
+
 
 ### Elemente Katalog
 

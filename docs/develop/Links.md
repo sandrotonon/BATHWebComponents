@@ -1,3 +1,21 @@
+# Web Components
+
+
+# Polymer
+
+*grundsätzliches*
+http://moduscreate.com/hands-on-with-polymer-1-0/
+
+*polymer vs. angular*
+http://www.binpress.com/blog/2014/06/26/polymer-vs-angular/
+https://www.accelebrate.com/blog/web-components-angular-polymer-and-react/
+https://www.linkedin.com/pulse/angularjs-20-vs-google-polymer-harshit-pandey
+http://mflo.io/2015/07/25/polymer-element-vs-angular-directive/
+
+*polymer and angular in einer app*
+http://jcrowther.io/2015/05/26/using-polymer-webcomponents-with-angular-js/
+
+
 # Nützliche Links
 
 - http://getawesomeness.com/get/webcomponents (Link mit haufenweise guten Links zum Thema WC)
@@ -6,14 +24,6 @@
 - http://component.kitchen/ (Tutorial und Componenten Demos)
 - http://webkrauts.de/artikel/2014/das-web-der-zukunft
 - https://blog.selfhtml.org/2014/12/09/web-components-eine-einfuehrung/
-
-
-# Web Components
-
-# Polymer
-
-*polymer vs. angular*
-http://www.binpress.com/blog/2014/06/26/polymer-vs-angular/
 
 
 # -----------------------------

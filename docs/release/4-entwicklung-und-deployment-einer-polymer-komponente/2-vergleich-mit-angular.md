@@ -1,0 +1,1 @@
+## Vergleich mit Angular Implementierung

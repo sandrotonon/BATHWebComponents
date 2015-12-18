@@ -7,9 +7,6 @@ Eingehen auf Entwicklungsumgebung
 
 # Entwicklung
 
-## Vergleich mit Angular Implementierung
-
-
 # Deployment mit Bower
 
 # Quellen
