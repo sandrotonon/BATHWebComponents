@@ -70,6 +70,13 @@
 - gute kontroller darüber welcher code in das element fließt
 - behaviors sind globale objekte
 - sehen aus wie ein polymer element mit properties oder listener objects etc.
+- Sind im Elemente Katalog in Iron-Elements und Neon-Elements enthalten um verhschiedene Funktionalitäten zu bieten
+
+
+## Quellen
+
+- https://www.youtube.com/watch?v=YrlmieL3Z0k&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN&index=2&feature=iv&src_vid=Lwvi1u4XXzc&annotation_id=annotation_1360810993
+- https://www.polymer-project.org/1.0/docs/devguide/behaviors.html
 
 
 ## Syntax
