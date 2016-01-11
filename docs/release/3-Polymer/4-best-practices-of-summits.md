@@ -59,3 +59,58 @@ https://chrome.google.com/webstore/detail/polymer-devtools-extensio/mmpfaamodhhl
 
 
 # Gesture System
+
+- wichtig weil die App flüssig auf Input reagieren muss
+- können auf Smartphones, Tablets, Desktop und Uhren benutzt werden
+- Devices verhalten sich mit Maus und Touch unterschiedlich
+- der Entwickler muss sich um beides kümmern
+- das Polymer gesture system kümmert sich automatisch darum
+- Vereint die Events von Maus und Touch in 4 Events die für alle Plattformen gleich sind
+- `down & up`, `tap`, `track` Events feuern konsistent auf Touch und Klick Umgebungen, sollten also statt den spezifischen klick und touch events Gegenstücken benutzt werden
+
+
+## Down & up
+
+- Wird gefeuert wenn der Finger / die Maus auf das Element drückt oder es loslässt
+- einfachsten Gesten aber sind bei den meisten Anforderungen ausreichend
+- können eingesetzt werden um zu visualisieren welches Element gerade geklickt wird
+- normaler weise sind dafür vier events nötig: touchstart, touchend, mousedown, mouseup
+- touch events hören nur auf das getouchte Element, die mouse events ändern ihr ziel beim bewegen des cursors d.h. man hört auf das gesamte dokument um auf den mouseup zu warten
+- mit polymer braucht man 2 lsiteners `down` und `up`
+```
+Polymer({
+    is: 'my-element',
+    listeners: {
+        'down': 'startFunction',
+        'up': 'endFunction'
+    },
+    startFunction: function() { ... },
+    endFunction: function() { ... }
+    });
+```
+
+
+## Tap
+
+- Verbindet Down und up 
+- ein Event für auswählen und pressen eines Elements auf allen Devices
+- funktioniert gleich für Maus und touch, gesture layer kümmert sich um die plattformunterschiede
+- wird am meisten benutzt weil die meisten Aktionen der User tap/click sind
+
+
+## Track
+
+- wird gefeuert wenn der Finger / die Maus beim drücken eines Elements bewegt wird
+- Wird bei allen Aktionen eingesetzt die dragging benötigen (z.b. slider)
+- funktioniert bei der maus nativ mit HTML5 drag&drop, manche Plattformen haben touch events aber das funktioniert meist nicht überall und ist sehr kompliziert
+- mouse und touch unterscheiden sich beim draggen stark
+- Elemente mit dem `track` event listener verhindern standardmäßig das scrollen da bei touch devices zwischen scrollen und draggen untschieden werden muss
+- beim initialisieren des Elements sollte das Scrollverhalten wieder hergestellt werden `this.setScrollDirection(direction, node);` wird für `direction` der wert `'y'` angegeben, so kann über dem element auf der vertikalen Achse gescrollt werden, wobei das draggen des Elements in horizontaler Achse funktioniert
+- `node` ist hier standardmäßig `this`, also das zu trackende Element
+- das track event hat 3 verschiedene stati `start` `track` und `end` mit denen das Verhalten für den aktuellen Status definiert werden kann
+
+
+# Quellen
+
+- https://www.youtube.com/watch?v=EUpUz3RUvdc&list=PLNYkxOF6rcICdISJclfQhj2S8QZGjXV8J&index=13
+- https://www.polymer-project.org/1.0/docs/devguide/events.html#gestures
