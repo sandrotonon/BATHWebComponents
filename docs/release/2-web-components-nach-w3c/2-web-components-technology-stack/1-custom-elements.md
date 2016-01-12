@@ -50,7 +50,7 @@ HTML
 
 ## Vorteile von Custom Elements
 
-Ist ein Element noch nicht definiert und nicht beim Browser registiert, steht aber im Markup der Webseite, beispielsweise `<myelement>`, wird dies kein Fehler verursachen, da dieses Element das Interface von `HTMLUnkownElement` benutzen muss [citeulike:13851253]. Ist es jedoch definiert oder beim Browser registriert worden, beispielsweise `<my-element>`, so benutzt es das Interface eines `HTMLElement`. Dies bedeutet, dass für neue eigene Elemente, eigene APIs für dieses Element erzeugt werden können, indem eigene Eigenschaften und Methoden hinzugefügt werden [citeulike:13844982]. Eigene Elemente, mit einem spezifischen Eigenverhalten und Aussehen, wie beispielsweise ein neuer Video-Player, sind dadurch mit einem Tag, statt mit einem Gerüst aus Divs oder ähnlichen umsetzbar.
+Ist ein Element noch nicht definiert und nicht beim Browser registriert, steht aber im Markup der Webseite, beispielsweise `<myelement>`, wird dies kein Fehler verursachen, da dieses Element das Interface von `HTMLUnkownElement` benutzen muss [citeulike:13851253]. Ist es jedoch definiert oder beim Browser registriert worden, beispielsweise `<my-element>`, so benutzt es das Interface eines `HTMLElement`. Dies bedeutet, dass für neue eigene Elemente, eigene APIs für dieses Element erzeugt werden können, indem eigene Eigenschaften und Methoden hinzugefügt werden [citeulike:13844982]. Eigene Elemente, mit einem spezifischen Eigenverhalten und Aussehen, wie beispielsweise ein neuer Video-Player, sind dadurch mit einem Tag, statt mit einem Gerüst aus `<div>`-Tags oder ähnlichen umsetzbar.
 
 
 ### Nachteil
@@ -62,7 +62,6 @@ my-element:unresolved {
   display: none;
 }
 ```
-
 
 
 ## Vorhandene Elemente erweitern (Type extensions)
@@ -120,9 +119,9 @@ ButtonExtendedProto.answer = 42;
 ```
 
 
-## Custom Element Life Cycle Callbacks
+## Custom Element Lifecycle callbacks
 
-Custom Elements bieten eine standardisierte API an speziellen Methoden, den `Custom Element Life Cycle Callbacks`, welche es ermöglichen Funktionen zu unterschiedlichen Zeitpunkten, vom Registrieren bis zum löschen eines Custom Elements, auszuführen. Diese ermöglichen es zu bestimmen, wann und wie ein bestimmter Code des Custom Elements ausgeführt werden soll.
+Custom Elements bieten eine standardisierte API an speziellen Methoden, den `Custom Element Lifecycle callbacks`, welche es ermöglichen Funktionen zu unterschiedlichen Zeitpunkten, vom Registrieren bis zum löschen eines Custom Elements, auszuführen. Diese ermöglichen es zu bestimmen, wann und wie ein bestimmter Code des Custom Elements ausgeführt werden soll.
 
 #### createdCallback
 
