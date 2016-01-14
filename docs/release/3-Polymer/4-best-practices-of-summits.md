@@ -14,16 +14,16 @@
 - Bereits das Laden der webcomponents Polyfills blockiert in einem script-tag das weitere Laden der Seite -> Lösung: <script src="webcomponents.js" async></script> (async Attribut)
 - HTML Imports blockieren zwar nicht das Laden, aber das rendern der Webseite, da Scripts und Stylesheets in den Imports das rendern blockieren können -> Lösung: <link rel="stylesheet" href="element.html" async> (async attribut)
 - -> Nichts blockiert das Rendern
-- `unresolved` attribut auf dem body muss entfernt werden (es versteckt alle inhalte bis sie komplett geladen wurden)
+- `unresolved` Attribut auf dem body muss entfernt werden (es versteckt alle inhalte bis sie komplett geladen wurden)
 - Lazy load scripts - webcomponents.js nur laden wenn sie benötigt werden
 ```var webComponentsSupported = ('registerElement' in document
      && 'import' in document.createElement('link')
      && 'content' in document.createElement('template'));
 ```
-- Dadurch werden die inhalte direkt angezeigt, allerdings ungestyled
-- Der dadruch entstehende FOUC muss manuell gehandhabt werden
-- Lösung: Grobe Styles für das ungefähre aussehen der app als `<style>` definieren
-- Die custom elements werden denn nach und nach in die container geladen, die grobe app wird direkt angezeigt und die app wird schnell geladen
+- Dadurch werden die Inhalte direkt angezeigt, allerdings ungestyled
+- Der dadurch entstehende FOUC muss manuell gehandhabt werden
+- Lösung: Grobe Styles für das ungefähre aussehen der App als `<style>` definieren
+- Die custom elements werden denn nach und nach in die Container geladen, die grobe app wird direkt angezeigt und die app wird schnell geladen
 
 
 ## Render - Optimization tips for a fluent app
@@ -43,7 +43,7 @@ https://http2.github.io/faq/#whats-the-benefit-of-server-push
 
 ## Tools
 
-- Polymer DevTools Extension gibt informationen über polymer elemente auf einer seite
+- Polymer DevTools Extension gibt Informationen über polymer Elemente auf einer Seite
 
 https://chrome.google.com/webstore/detail/polymer-devtools-extensio/mmpfaamodhhlbadloaibpocmcomledcg
 
@@ -72,9 +72,9 @@ https://chrome.google.com/webstore/detail/polymer-devtools-extensio/mmpfaamodhhl
 - Wird gefeuert wenn der Finger / die Maus auf das Element drückt oder es loslässt
 - einfachsten Gesten aber sind bei den meisten Anforderungen ausreichend
 - können eingesetzt werden um zu visualisieren welches Element gerade geklickt wird
-- normaler weise sind dafür vier events nötig: touchstart, touchend, mousedown, mouseup
+- normaler weise sind dafür vier Events nötig: touchstart, touchend, mousedown, mouseup
 - touch events hören nur auf das getouchte Element, die mouse events ändern ihr ziel beim bewegen des cursors d.h. man hört auf das gesamte dokument um auf den mouseup zu warten
-- mit polymer braucht man 2 lsiteners `down` und `up`
+- mit polymer braucht man 2 listeners `down` und `up`
 ```
 Polymer({
     is: 'my-element',
@@ -100,7 +100,7 @@ Polymer({
 
 - wird gefeuert wenn der Finger / die Maus beim drücken eines Elements bewegt wird
 - Wird bei allen Aktionen eingesetzt die dragging benötigen (z.b. slider)
-- funktioniert bei der maus nativ mit HTML5 drag&drop, manche Plattformen haben touch events aber das funktioniert meist nicht überall und ist sehr kompliziert
+- funktioniert bei der Maus nativ mit HTML5 drag&drop, manche Plattformen haben touch events aber das funktioniert meist nicht überall und ist sehr kompliziert
 - mouse und touch unterscheiden sich beim draggen stark
 - Elemente mit dem `track` event listener verhindern standardmäßig das scrollen da bei touch devices zwischen scrollen und draggen untschieden werden muss
 - beim initialisieren des Elements sollte das Scrollverhalten wieder hergestellt werden `this.setScrollDirection(direction, node);` wird für `direction` der wert `'y'` angegeben, so kann über dem element auf der vertikalen Achse gescrollt werden, wobei das draggen des Elements in horizontaler Achse funktioniert
@@ -121,7 +121,7 @@ Polymer({
 - Wird groß geschrieben bei Polymer
 - Paper Elements werden nach und nach alle barrierefrei refactored
 - Iron Elements bieten accessibility bahaviors welche von eigenen Elementen importiert werden können und das programmieren von barrierefreien Elementen vereinfachen
-- Wenn Barrierefreiheit komplett unabhängig erreicht werden soll bietet Polymer das `hostAttributes` Objekt an (Siehe "Fokus / Tastatur")
+- Wenn Barrierefreiheit komplett unabhängig erreicht werden soll bietet sich das Polymer `hostAttributes` Objekt an (Siehe "Fokus / Tastatur" und "analogie custom Elements hostAttributes")
 
 
 ## Fokus / Tastatur
@@ -138,7 +138,7 @@ Polymer({
     + 0, das Element kann in der normalen Reihenfolge des DOMs fokussiert werden
     + > 0 das Element kann in einer manuellen Reihenfolge fokussiert werden
 - letzteres sollte allerdings in einem Shadow DOM vermieden werden weil man nicht weiß in welcher Reihenfolge das Element auf der Seite zum Einsatz kommt
-- Der Tabindex des Elements kann in einem `hostAttributes` Objekt in dem Polymer Objekt definiert werden (Siehe Zeile X Beispiel)
+- Der Tabindex des Elements kann in dem Polymer `hostAttributes` Objekt definiert werden (Siehe Zeile X Beispiel)
 - Wenn ein Element fokussierbar ist, muss der Fokus auch sichtbar sein
 - Hierfür kann in den Styles des Elements die Pseudoklasse `:focus` definiert werden (Siehe Zeile X Beispiel) oder alternativ das Behavior (Siehe Behaviors) `PaperInkyFocusBehavior` dem Element hinzugefügt werden
 - Nachdem ein Element fokussiert ist muss auch damit interagiert werden können
@@ -156,7 +156,7 @@ Polymer({
 - Wichtig für User mit eingeschränktem Sehvermögen
 - Diese benutzen Screenreader und die Tastatur um durch die Seite zu navigieren
 - Elemente werden zu einem Accessibility Node im Accessibility Tree der assistierenden Software wie dem Screenreader (http://www.w3.org/WAI/PF/aria-implementation/#intro_treetypes)
-- Dieser Knoten kann die ARIA Attribute Role, Value, State und Properties haben, welches Das Element im Detail beschreiben und wird ebenso wie der tabindex im `hostAttributes` Objekt definiert (siehe Zeile X Beispiel)
+- Dieser Knoten kann die ARIA Attribute Role, Value, State und Properties haben, welches Das Element im Detail beschreiben und wird ebenso wie der `tabindex` im `hostAttributes` Objekt definiert (siehe Zeile X Beispiel)
 - Alternativ können die Attribute auch deklarativ im HTML Markup des Templates gemacht werden `<dom-module>`
 - Wenn der Screenreader ein ihm unbekanntes Element findet und diese Attribute nicht definiert sind, wird standardmäßig die Rolle `group` angenommen, beim Vorlesen des Elementes bekommt der User also nur `group` zu hören und weiß somit nicht was der Sinn des Elementes sein soll
 - Falls das Element keinen Text beinhalten, keine sichtbare Beschreibung haben sollte oder nur als Interaktions-Mittel für einen Inhalt dient (wie z.b. eine Checkbox oder ein Input-Feld) ist es wichtig ein ARIA `label` oder `labelledby` zu definieren, was eben diesen Inhalt angibt (siehe Zeile X Beispiel)
@@ -171,12 +171,12 @@ Polymer({
 
 - Die App sollte auch für User mit einer Farbschwäche angepasst sein
 - Farben sollten nicht als einziges Medium zum Übertragen von Informationen dienen
-- zusätzlich muss eine weitere farbunabhängige Darstellung gewählt werden, wie z.b. ein Hinweistext bei einem falsch ausgefüllten Input-Feld
+- zusätzlich muss eine weitere Farben-unabhängige Darstellung gewählt werden, wie z.b. ein Hinweistext bei einem falsch ausgefüllten Input-Feld
 - Abgesehen von Farbtönen können User auch Probleme mit der Farbintensität haben, verschiedene Grautöne beispielsweise können nicht mehr wahrgenommen werden
 - Deshalb sollte immer ein ausreichend großer Kontrast für die Informationen gewählt werden .z.b dunkler Text auf hellem Hintergrund
 - `Contrast (Minimum): The visual presentation of text and images of text has a contrast ratio of at least 4.5:1` (http://www.w3.org/TR/WCAG20/)
 - User mit einer schwachen Sehstärke o.ä. müssen unter Umständen die Seite vergrößern um sie lesen zu können
-- Es muss gewährleistet werden, dass die Seite auch bei einem Zoomfaktor größer 100 korrekt dargestellt wird
+- Es muss gewährleistet werden, dass die Seite auch bei einem Zoom-Faktor größer 100 korrekt dargestellt wird
 
 
 ## Beispiel

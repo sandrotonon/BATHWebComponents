@@ -106,7 +106,7 @@ GitHub verwendet hierzu ein selbst erzeugtes `time-ago`-Element, welches eine Ty
 
 ## Eigenschaften und Methoden definieren
 
-Anhand des Beispiels auf GitHub wird deutlich, wie ein Custom Element eingesetzt werden kann, jedoch sind die internen JavaScript Mechanismen nicht ersichtlich. Custom Elements machen allerdings erst so richtig Sinn, wenn man für diese auch eigene Eigenschaften und Methoden definieren kann. Wie bei nativen HTML Elementen, ist das auch bei Custom Elements auf analoge Weise möglich [citeulike:13844979]. So kann einem Element eine Funktion zugewiesen werden, in dem diese dessen Prototyp mittels einem noch freien Namen angegeben wird. Selbiges gilt für eine neue Eigenschaft.
+Anhand des Beispiels auf GitHub wird deutlich, wie ein Custom Element eingesetzt werden kann, jedoch sind die internen JavaScript Mechanismen nicht ersichtlich. Custom Elements machen allerdings erst so richtig Sinn, wenn man für diese auch eigene Eigenschaften und Methoden definieren kann. Wie bei nativen HTML Elementen, ist das auch bei Custom Elements auf analoge Weise möglich [citeulike:13844979]. So kann einem Element eine Funktion zugewiesen werden, in dem diese dessen Prototyp mittels einem nicht reservierten Namen angegeben wird. Selbiges gilt für eine neue Eigenschaft. Die Eigenschaften können, nachdem sie im Prototyp definiert wurden, im HTML Markup deklarativ konfiguriert werden.
 
 ```javascript
 // Methode definieren
@@ -125,21 +125,21 @@ Custom Elements bieten eine standardisierte API an speziellen Methoden, den `Cus
 
 #### createdCallback
 
-Die `createdCallback`-Funktion Wird ausgeführt, wenn eine Instanz des Custom Elements erzeugt mittels `var mybutton = document.createElement('custom-element')` wird.
+Die `createdCallback`-Funktion Wird ausgeführt, wenn eine Instanz des Custom Elements erzeugt mittels `var mybutton = document.createElement('custom-element')` wurde.
 
 #### attachedCallback
 
-Die `attachedCallback`-Funktion wird ausgeführt, wenn ein Custom Element dem DOM mittels `document.body.appendChild(mybutton)` angehängt wird.
+Die `attachedCallback`-Funktion wird ausgeführt, wenn ein Custom Element dem DOM mittels `document.body.appendChild(mybutton)` angehängt wurde.
 
 #### detachedCallback
 
-Die `detachedCallback`-Funktion wird ausgeführt, wenn ein Custom Element aus dem DOM mittels `document.body.removeChild(mybutton)` entfernt wird.
+Die `detachedCallback`-Funktion wird ausgeführt, wenn ein Custom Element aus dem DOM mittels `document.body.removeChild(mybutton)` entfernt wurde.
 
 #### attributeChangedCallback
 
-Die `attributeChangedCallback`-Funktion wird ausgeführt, wenn ein Attribut eines Custom Elements mittels `MyElement.setAttribute()` geändert wird.
+Die `attributeChangedCallback`-Funktion wird ausgeführt, wenn ein Attribut eines Custom Elements mittels `MyElement.setAttribute()` geändert wurde.
 
-So können die Life Cycle Callbacks für ein neues erweitertes Button-Element  wie folgt definiert werden [citeulike:13844988].
+So können die Lifecycle Callbacks für ein neues erweitertes Button-Element  wie folgt definiert werden [citeulike:13844988].
 
 ```javascript
 var ButtonExtendedProto = Object.create(HTMLElement.prototype);

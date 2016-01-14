@@ -84,6 +84,7 @@ General polymer settings    <script> Polymer = { … }; </script>
 - Neon Elements
 - Platinum Elements
 - Molecules
+- Carbon: solving Application Level structural problems (routing, layout, lazy loading). framework oriented elements
 
 
 ## Quellen

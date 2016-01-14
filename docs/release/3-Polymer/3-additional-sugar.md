@@ -42,12 +42,12 @@
 - Wenn eine property geändert wird, feuert das Element einen changed-event. Ein anderes element das an die property gebunden ist hört auf das changed-event und ändert seinen wert
 - z.b. `attribute={{foo}}`
 - foo hat einen foo-changed eventListener und es gibt einen attribute-changed eventListener
-- wenn sich der wert des attributes ändert wird das attribute-changed event gefeuert und die property foo wird geändert
+- wenn sich der wert des Attributes ändert wird das attribute-changed event gefeuert und die property foo wird geändert
 
 
 ## Binden von nativen Attributen
 
-- Um Werte an Attribute statt an Properties zu binden muss die Attribut-Binding Syntax `=$` verwendet werden, da mit der normalen `=` Zuweisung der Wert an die entsprechende Property gebunden wird
+- Um Werte an Attribute, also das `hostAttributes` Objekt (siehe Kapitel X), statt an Properties zu binden muss die Attribut-Binding Syntax `=$` verwendet werden, da mit der normalen `=` Zuweisung der Wert an die entsprechende Property gebunden wird
 - Beispiel: `<div class=$"myClass"></div>`
 - resultiert in `<div>.setAttribute('class', myClass);`
 - Sind immer One-Way - host-to-child
@@ -66,14 +66,14 @@
 # Behaviors
 
 - Codemodule den man in ein Element mixin kann
-- gute Kontrolle darüber welcher code in das element fließt
+- gute Kontrolle darüber welcher Code in das Element fließt
 - Sind im Elemente Katalog vorhanden um verschiedene Funktionalitäten zu bieten
 - z.b. in Iron-Elements um Input Validierungen zu machen oder in Neon-Elements um Elemente zu animieren
 
 
 ## Syntax
 
-- Behaviors sind globale objekte und sollten in einem eigenem Namespace definiert werden, die von Polymer erstellten Behaviors sind im Polymer Objekt
+- Behaviors sind globale Objekte und sollten in einem eigenem Namespace definiert werden, die von Polymer erstellten Behaviors sind im Polymer Objekt
 ```
 window.MyBehaviors = window.MyBehaviors || {};
 ```
@@ -101,7 +101,7 @@ Polymer({
 ```
 
 
-## Behavoirs erweitern
+## Behaviors erweitern
 
 - Statt neue Behaviors anzulegen, können existierende auch erweitert werden
 - Um ein Behavior zu erweitern müssen zunächst alle Behaviors importiert werden, welche das neue Behavior haben soll
