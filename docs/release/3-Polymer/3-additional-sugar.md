@@ -25,13 +25,13 @@
 ### Host to Child
 
 - [[]]
-- readOnly nicht definiert oder mit false initialisiert
+- readOnly der Eigenschaft im Prototyp nicht definiert oder mit false initialisiert
 
 
 ### Child to Host
 
 - [[]]
-- Von unten nach oben kann erreicht werden, wenn das readOnly Flag auf true gesetzt wird
+- Von unten nach oben wird erreicht, wenn readOnly und notify der Eigenschaft im Prototyp auf true gesetzt sind
 
 
 ## Two-Way Data Binding

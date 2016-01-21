@@ -4,8 +4,12 @@ BOGER
 ANDREAS
 
 Kapitel 3-Polymer/3-additional-sugar:
-    - Binden von srtukturierten Daten?
+    - Binden von strukturierten Daten?
     - Binden von Arrays?
-Polymer Analogie zu native: HTML Imports reicht zu sagen, dass es analog funktioniert?
+
+
+Architektur Micro - Mini - Standard? Inhalte danach sortieren oder in den Kapiteln darauf verweisen? Oder nur in der Einleitung erwähnen?
+
+Note? Abgabe beim Prof?
 
 

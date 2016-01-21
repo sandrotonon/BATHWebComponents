@@ -15,6 +15,9 @@ Siehe Bild mit Layers
 
 - Setzt sich zusammen aus den Schichten `polymer-micro`, `polymer-mini` und `polymer`
 
+
+
+
 Feature layering
 EXPERIMENTAL: API MAY CHANGE.
 

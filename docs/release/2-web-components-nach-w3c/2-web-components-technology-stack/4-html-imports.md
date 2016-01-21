@@ -146,7 +146,7 @@ Webseiten können viele verschiedene, modular aufgebaute Stylesheets, JavaScript
 Besonders einfach machen HTML Imports das einbinden ganzer Web Applikationen mit HTML/JavaScript/CSS. Diese können in eine Datei geschrieben, ihre Abhängigkeiten definieren und von anderen Importiert werden. Dies macht es sehr einfach den Code zu organisieren, so können etwa einzelne Abschnitte einer Anwendung oder von Code in einzelne Dateien ausgelagert werden, was Web Applikationen modular, austauschbar und wiederverwendbar macht. Falls nun ein oder mehrere Custom Elements in einem HTML Import enthalten sind, so werden dessen Interface und Definitionen automatisch gekapselt. Auch wird die Abhängigkeitsverwaltung in Betracht auf die Performance stark verbessert, da der Browser nicht eine große JavaScript Bibliothek, sondern einzelne kleinere JavaScript Abschnitte parsen und ausführen muss. Diese werden durch die HTML Imports parallel geparst, was mit einen enormen Performance-Schub einher geht [citeulike:13853647].
 
 
-## Browserunterstüzung
+## Browserunterstützung
 
 HTML Imports sind noch nicht vom W3C standardisiert, sondern befinden sich noch im Status eines "Working Draft" [citeulike:13853711]. Sie werden deshalb bisher nur von Google Chrome ab Version 43 und Opera ab Version 33 nativ unterstützt. Seitens Mozilla und dessen Firefox Browser, wird es für HTML Imports auch keine Unterstützung geben, da ihrer Meinung nach, der Bedarf an HTML Imports nach der Einführung von ECMAScript 6 Modules, nicht mehr existiert und da Abhängigkeiten schon mit Tools wie Vulcanize aufgelöst werden können [citeulike:13881144]. Auf Details zu ECMAScript 6 Modules wird an dieser Stelle nicht eingegangen, da diese den Umfang dieser Arbeit überschreiten.
 
