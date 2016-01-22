@@ -1,12 +1,12 @@
 
     * Additional Sugar - Zusätzliche Polymer Schicht mit Data-binding, Behaviours etc.
 
-# Einleitung
+# Additional Sugar
 
 - Polymer bietet zusätzliche Application Schicht mit einigen hilfreichen Features
 
 
-# One-Way und Two-Way Data Binding
+## One-Way und Two-Way Data Binding
 
 - Daten können in dem lokalen DOM des Elements gebunden und damit zwischen Elementen ausgetauscht werden
 - Mediator Pattern: Daten können nicht zwischen 2 Elementen direkt ausgetauscht werden, sondern Daten müssen über ein Eltern-Element propagiert werden
@@ -17,24 +17,24 @@
 - wenn es ein Observer für die Eigenschaft gibt, wird einfach dieser in dem setter aufgerufen
 
 
-## One-Way Data Binding
+### One-Way Data Binding
 
 - [[]]
-- eventListener für das Attribut `attribute-changed` wird nicht angelegt somit werden die Daten nicht geupdated
+- eventListener für das Attribut `attribute-changed` wird nicht angelegt somit werden die Daten nicht upgedatet
 
-### Host to Child
+#### Host to Child
 
 - [[]]
 - readOnly der Eigenschaft im Prototyp nicht definiert oder mit false initialisiert
 
 
-### Child to Host
+#### Child to Host
 
 - [[]]
 - Von unten nach oben wird erreicht, wenn readOnly und notify der Eigenschaft im Prototyp auf true gesetzt sind
 
 
-## Two-Way Data Binding
+### Two-Way Data Binding
 
 - {{}} automatic binding
 - funktioniert nur, wenn die property `notify: true` gesetzt hat -> {{}} macht es hauptsächlich übersichtlicher
@@ -45,7 +45,7 @@
 - wenn sich der wert des Attributes ändert wird das attribute-changed event gefeuert und die property foo wird geändert
 
 
-## Binden von nativen Attributen
+### Binden von nativen Attributen
 
 - Um Werte an Attribute, also das `hostAttributes` Objekt (siehe Kapitel X), statt an Properties zu binden muss die Attribut-Binding Syntax `=$` verwendet werden, da mit der normalen `=` Zuweisung der Wert an die entsprechende Property gebunden wird
 - Beispiel: `<div class=$"myClass"></div>`
@@ -54,16 +54,16 @@
 - Sollte verwendet werden, wenn `style`, `href`, `class`, `for` oder `data-*` Attribute gesetzt werden
 
 
-## Binden von srtukturierten Daten?
-## Binden von Arrays?
+### Binden von srtukturierten Daten?
+### Binden von Arrays?
 
 
-## Quellen
+### Quellen
 
 - https://www.chromium.org/developers/polymer-1-0#TOC-Achieving-data-binding-nirvana
 
 
-# Behaviors
+## Behaviors
 
 - Codemodule den man in ein Element mixin kann
 - gute Kontrolle darüber welcher Code in das Element fließt
@@ -71,7 +71,7 @@
 - z.b. in Iron-Elements um Input Validierungen zu machen oder in Neon-Elements um Elemente zu animieren
 
 
-## Syntax
+### Syntax
 
 - Behaviors sind globale Objekte und sollten in einem eigenem Namespace definiert werden, die von Polymer erstellten Behaviors sind im Polymer Objekt
 ```
@@ -101,7 +101,7 @@ Polymer({
 ```
 
 
-## Behaviors erweitern
+### Behaviors erweitern
 
 - Statt neue Behaviors anzulegen, können existierende auch erweitert werden
 - Um ein Behavior zu erweitern müssen zunächst alle Behaviors importiert werden, welche das neue Behavior haben soll
@@ -116,14 +116,14 @@ Polymer({
 ```
 
 
-## Quellen
+### Quellen
 
 - https://github.com/Polymer/polycasts/blob/master/ep21-behaviors/behaviors-demo/elements/pressed-behavior/pressed-behavior.html
 - https://www.youtube.com/watch?v=YrlmieL3Z0k&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN&index=2&feature=iv&src_vid=Lwvi1u4XXzc&annotation_id=annotation_1360810993
 - https://www.polymer-project.org/1.0/docs/devguide/behaviors.html
 
 
-# Events
+## Events
 
 - Dem Host Element können Event Listeners hinzugefügt werden, die auf bestimmte Aktionen mit dem Element reagieren
 - Es können auch Kind-Elementen in dem Host Element Event Listeners mit der Syntax `nodeID.eventName` hinzugefügt werden
@@ -131,7 +131,7 @@ Polymer({
 - So kann beim "Tap" (Näheres siehe "Kapitel Gestures") auf ein Element mit der ID `nodeID` eine Funktion - der Event Handler - aufgerufen werden
 
 
-## Deklarative Events
+### Deklarative Events
 
 - Alternativ zur imperativen Definition von Events können diese auch deklarativ im Markup des Elementes im Templates angegeben werden
 - Ein DOM Element muss dazu die `on-eventName` Annotation benutzen
@@ -141,7 +141,7 @@ Polymer({
 - allerdings wird dadurch HTML und JavaScript gemischt
 
 
-## Selbst definierte Events
+### Selbst definierte Events
 
 - Vom Host Element und dessen Kind Elemente können auch selbst definierte Events ausgelöst werden
 - Hierfür muss die Hilfsfunktion `fire(eventName, data);` aufgerufen werden
@@ -171,6 +171,6 @@ Polymer({
 ```
 
 
-## Quellen
+### Quellen
 
 - https://www.polymer-project.org/1.0/docs/devguide/events.html
