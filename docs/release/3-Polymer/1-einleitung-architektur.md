@@ -2,6 +2,10 @@
 
     * Polymer Grundsätzliches (Architektur - Native, Polyfills, Polymer.js, Elemente Katalog)
 
+- Polymer in Version 1.2 verfügbar
+- `There is an element for that`
+
+
 ## Polymer Methapher
 
 HTML Standard-Tags sind Atome. Polymer / Web Components bauen Atome zusammen zu Molekülen, den Komponenten
