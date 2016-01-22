@@ -1,7 +1,5 @@
 # HTML Imports
 
-- Ausformulieren: Asynchrones Laden von Imports
-
 HTML Imports ist eine Technologie, die es erlaubt HTML Dateien in einer Webseite zu inkludieren. Sie sollen es ermöglichen die Webseite in einzelne, kleine, auswechselbare Teile aufzuteilen. In dem folgenden Kapitel wird auf den Begriff HTML Imports des Web Components Technology Stacks im Genaueren eingegangen.
 
 
@@ -12,7 +10,7 @@ Bisher erlauben es praktisch alle Plattformen, Codeteile zu Importieren und zu v
 
 ## HTML Dateien importieren
 
-Imports von HTML Dateien selbst werden, wie andere Imports auch, per `<link>` Tag deklariert. Neu ist jedoch der Wert des `rel`-Attributes, welches auf `import` gesetzt wird.
+Imports von HTML Dateien selbst werden, wie andere Imports auch, per `<link>` Tag deklariert. Neu ist jedoch der Wert des `rel`-Attributes, welches auf `import` gesetzt wird. \cite[S. 139-147]{citeulike:13844975}
 
 ```html
 <head>
@@ -127,13 +125,7 @@ Durch diese Reihe an neuen Features bietet es also keinen Vorteil mehr, möglich
 
 ### Asynchrones Laden von Imports
 
-- Ohne HTTP/2 nicht möglich
-- Das Rendern der Seite kann mit unter sehr lange dauern, da das beinhaltende JavaScript das Rendern blockiert
-- Um die Dateien schnell laden zu können, ist ein `async`-Attribut vorgesehen
-- Ermöglicht es, dass mehrere Dateien asynchron geladen werden
-- JavaScript in den Imports blockieren somit nicht das Anzeigen von bereits geladenem HTML Code
-- Alternativ kann statt `async` das `defer`-Attribut gesetzt und die Imports am Ende der Seite gesetzt werden
-- Damit werden die Scripte erst ausgeführt, wenn die Seite geladen ist
+Das Rendern der Seite kann unter Umständen sehr lange dauern, da das in den Imports enthaltene JavaScript das Rendern blockiert. Um das zu verhindern und alle Dateien möglichst schnell laden zu können, ist ein `async`-Attribut vorgesehen. Dieses funktioniert jedoch nur, wenn als Protokoll HTTP/2 gewählt wird. Das Attribut ermöglicht es, dass mehrere Dateien asynchron geladen werden können. In den Imports enthaltenes JavaScript blockiert somit nicht das Rendern von bereits geladenem HTML Code. Falls HTTP/2 nicht vorhanden sein sollte, kann alternativ das `defer`-Attribut gewählt werden, wodurch das JavaScipt erst nach vollständigem Parsen des HTML ausgeführt wird. Eine weitere Methode ist das Laden der Imports am Ende der Seite. Somit wird sichergestellt, dass die Scripte erst ausgeführt werden, wenn die Seite geladen und gerendert wurde.
 
 
 ### Request Minimierung mit "Vulcanize"
@@ -155,7 +147,7 @@ HTML Imports sind noch nicht vom W3C standardisiert, sondern befinden sich noch 
 
 ## Quellen
 
-- [Developing Web Components 2015] Jarrod Overson & Jason Strimpel, Developing Web Components, O'Reilly 2015, S.139-147
+- [citeulike:13844975] Jarrod Overson & Jason Strimpel, Developing Web Components, O'Reilly 2015, S.139-147
 - [citeulike:13853647] http://www.html5rocks.com/en/tutorials/webcomponents/imports/
 - [citeulike:13853711] Can I Use, http://caniuse.com/#search=imports
 - [citeulike:13853711] Can I Use, http://caniuse.com/#search=http
