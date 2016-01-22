@@ -40,7 +40,7 @@
 - Mit dem Einsatz der webcomponents.js Polyfills werden die Web Components auch auf den Internet Explorer, Firefox und Safari Portiert
 - Eine genaue Matrix der Browserunterstützung ist in dem folgenden Bild dargestellt
 
-![Bild: Browserunterstützung der Web Components Technologien mit webcomponents.js](images/1-webcomponentsjs-browserunterstützung.jpg "Browserunterstützung der Web Components Technologien mit webcomponents.js. Quelle: [citeulike:13914238]")
+![Bild: Browserunterstützung der Web Components Technologien mit webcomponents.js](images/6-webcomponentsjs-browserunterstützung.jpg "Browserunterstützung der Web Components Technologien mit webcomponents.js. Quelle: [citeulike:13914238]")
 
 - Jedoch werden auch trotz Einsatz des Polyfills nur die aktuelleren Versionen des jeweiligen Browsers unterstützt
 - Darin sind nach wie vor beispielsweise nicht der Internet Explorer in Version 8 oder 9 enthalten
