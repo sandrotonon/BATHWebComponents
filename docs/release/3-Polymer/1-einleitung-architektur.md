@@ -1,4 +1,4 @@
-# Einleitung
+# Polymer
 
     * Polymer Grundsätzliches (Architektur - Native, Polyfills, Polymer.js, Elemente Katalog)
 
@@ -40,58 +40,66 @@ This layering is subject to change in the future and the number of layers may be
 Polymer micro features
 The Polymer micro layer provides bare-minimum Custom Element sugaring.
 
-FEATURE USAGE
-Custom element constructor  Polymer.Class({ … });
-Custom element registration Polymer({ is: ‘…’, … }};
-Custom constructor support  constructor: function() { … }
-Basic lifecycle callbacks   created, attached, detached, attributeChanged
-Native HTML element extension   extends: ‘…’
-Declared properties properties: { … }
-Attribute deserialization to property   properties: { <property>: <Type> }
-Static attributes on host   hostAttributes: { <attribute>: <value> }
-Behaviors   behaviors: [ … ]
-Polymer mini features
-The Polymer mini layer provides features related to local DOM: Template contents cloned into the custom element’s local DOM, DOM APIs and tree lifecycle.
-
-FEATURE USAGE
-Template stamping into local DOM    <dom-module><template>…</template></dom-module>
-DOM distribution    <content>
-DOM API Polymer.dom
-Configuring default values  properties: <prop>: { value: <primitive>|<function> }
-Bottom-up callback after configuration  ready: function() { … }
-
-Polymer standard features
-The Polymer standard layer adds declarative data binding, events, property notifications and utility methods.
-
-FEATURE USAGE
-Automatic node finding  this.$.<id>
-Event listener setup    listeners: { ‘<node>.<event>’: ‘function’, … }
-Annotated event listener setup  <element on-[event]=”function”>
-Property change callbacks   properties: <prop>: { observer: ‘function’ }
-Annotated property binding  <element prop=”{{property|path}}”>
-Property change notification    properties: { <prop>: { notify: true } }
-Binding to structured data  <element prop=”{{obj.sub.path}}”>
-Path change notification    set(<path>, <value>)
-Declarative attribute binding   <element attr$=”{{property|path}}”>
-Reflecting properties to attributes properties: { <prop>: { reflectToAttribute: true } }
-Computed properties computed: { <property>: ‘computeFn(dep1, dep2)’ }
-Computed bindings   <span>{{computeFn(dep1, dep2)}}</span>
-Read-only properties    properties: { <prop>: { readOnly: true } }
-Utility functions   toggleClass, toggleAttribute, fire, async, …
-Scoped styling  <style> in <dom-module>, Shadow-DOM styling rules (:host, …)
-General polymer settings    <script> Polymer = { … }; </script>
 
 
 ### Elemente Katalog
 
-- Iron Elements
-- Paper Elements
-- Google Web Components
-- Gold Elements
-- Neon Elements
-- Platinum Elements
-- Molecules
-- Carbon: solving Application Level structural problems (routing, layout, lazy loading). framework oriented elements
+- Die oberste Schicht von Polymer bilden die Elemente
+- Sie bilden eine Sammlung von Komponenten, welche die von Google vorgeschlagenen Lösungen für wiederkehrende Probleme implementieren
+- Alle Elemente werden von Google in dem Elemente Katalog gesammelt und können von Entwicklern optional benutzt und angepasst werden, sind für den Bau einer Applikation mit Hilfe von Polymer aber nicht zwingend notwendig
+- Der Katalog besteht aus 7 Kategorien (Stand Januar 2016), welche die Komponenten nach Anwendungsfällen kategorisieren
+- Nachfolgend werden die Kategorien aufgelistet und erläutert
+
+
+**Iron Elements - Fe**
+
+- Iron Elemente bilden den Kern von Polymer und das Zentrum der Polymer Elemente
+- Sie sind die wichtigsten Elemente, welche man in vielen Projekten brauchen kann
+- Richten sich nach der Metapher von Elementen
+- Metaphorisch für den Erdkern, der das Zentrum der Erde ist
+
+
+**Paper Elements - Md**
+
+- Elemente die Googles Design Philosphie Material Design gehorchen, wie Listen, Menüs, Tabs
+- Paper ist eine Metapher für erweitertes Papier, es kann zusammengesteckt werden, sich transformieren, Schatten werden etc.
+
+
+**Google Web Components - Go**
+
+- Google kapselt Komponenten für eigene Services und APIs
+- Dadurch können Maps, Drive etc. eingebunden und einfach angesprochen werden
+
+
+**Gold Elements - Au**
+
+- Sammlung an Elementen, welche im Bereich E-Commerce eingesetzt werden können, wie Zahlungsmethoden, Kreditkarteninformationen etc.
+- Sind golden da sich mit ihnen Geld verdienen lässt
+
+
+**Neon Elements - Ne**
+
+- Bunt und verspielt
+- Elemente um andere Elemente zu animieren
+
+
+**Platinum Elements - Pt**
+
+- sehr wertvoll
+- nicht UI orientiert, sondern für services die im Hintergrund laufen wie push, offline etc.
+- Bringen viele neue Lösungen für sehr komplexe Probleme
+
+
+**Molecules - Mo**
+
+- Weitere Elemente, welche Wrapper für third-party Bibliotheken bilden
+
+
+**Carbon Elements - C (in Entwicklung)**
+
+- Sind noch nicht fertiggestellt
+- Metaphorisch sehr gewichtige Elemente, besitzen Fähigkeit zur Bildung komplexer Moleküle, sind somit essenziell für lebende Strukturen
+- Framework orientierte Elemente, Werden sich um strukturelle Probleme auf Applikations-Ebene kümmern
 
 
 ## Quellen
