@@ -1,9 +1,9 @@
-# Einleitung
+# Entwicklung und Deployment einer Polymer Komponente
 
-Eingehen auf Entwicklungsumgebung
+- Eingehen auf Entwicklungsumgebung
 
 
-# Seed download mit yeoman
+# Yeoman
 
 # Entwicklung
 

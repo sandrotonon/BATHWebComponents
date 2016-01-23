@@ -119,22 +119,16 @@
 
 ## HTML Imports
 
-- Um mehrere Polymer Komponenten oder Komponenten innerhalb Komponenten zu benutzen, verwendet Polymer HTML Imports
-- Diese funktionieren analog zu der Verwendung mit der nativen HTML Import Technologie (siehe Kapitel 2 # HTML Imports)
-- Dabei kommen die gleichen Vor- und Nachteile auf
-- Ist ein `<linkg rel="import">` in einer Komponente enthalten, so kümmert sich Polymer automatisch im Hintergrund um die korrekte Einbindung der HTML Dateien und macht sie im Dokument verfügbar
-- Dadurch muss auf keine spezielle JavaScript Methoden oder Eigenschaften wie die `import` Eigenschaft des importierten Elementes zugegriffen werden
+Um mehrere Polymer Komponenten oder Komponenten innerhalb Komponenten zu benutzen, verwendet Polymer HTML Imports. Diese funktionieren analog zu der Verwendung mit der nativen HTML Import Technologie (siehe Abschnitt 2.5 - HTML Imports), wobei die selben Vor- und Nachteile auftreten. Polymer kümmert sich dabei lediglich automatisch im Hintergrund um die korrekte Einbindung der HTML Dateien und dessen Bereitstellung im Dokument, falls ein `<linkg rel="import">` in einer Komponente enthalten ist. Das manuelle Einbinden mittels der speziellen JavaScript Methoden oder Eigenschaften, wie die `import` Eigenschaft des importierten Elementes, wird somit hinfällig.
 
 
-### Dynamisches Nachladen von HTML
+**Dynamisches Nachladen von HTML**
 
-- Polymer bietet zusätzlich eine Hilfsfunktion an, mit der HTML Imports nachträglich geladen werden können
-- Die `importHref(href, onload, onerror);` importiert beim Aufruf dynamisch ein HTML Dokument
-- Sie erstellt dabei ein `<link rel="import">` Element mit der angegeben URL und fügt es dem Dokument hinzu, sodass dieser geladen werden kann
-- Wenn der Link fertig geladen ist, also der `onload` Callback aufgerufen wird, ist die `import` Eigenschaft des Links der Inhalt des importierten HTML Dokumentes
+Falls HTML Dateien dynamisch zur Laufzeit nachgeladen werden sollen, bietet Polymer zusätzlich eine Hilfsfunktion an, mit der HTML Imports nachträglich ausgeführt werden können [citeulike:13914840]. Die hierfür bereitgestellte Funktion `importHref(url, onload, onerror);` importiert beim Aufruf dynamisch eine HTML Datei in das Dokument. Sie erstellt dabei ein `<link rel="import">` Element mit der angegeben URL und fügt es dem Dokument hinzu, sodass dieser ausgeführt werden kann. Wenn der Link geladen wurde, also der `onload` Callback aufgerufen wird, ist die `import` Eigenschaft des Links der Inhalt des zurückgegebenen, importierten HTML Dokumentes. Der Parameter `onerror` ist dabei eine optionale Callback-Funktion, die beim Auftreten eines Fehlers aufgerufen wird.
+
 
 ### Quellen
 
-- http://polymer.github.io/polymer/
+- [citeulike:13914840] http://polymer.github.io/polymer/
 
 
