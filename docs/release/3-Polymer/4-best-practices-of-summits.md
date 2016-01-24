@@ -95,7 +95,7 @@ Der letzte Punkt ist das erstellen einer UI, welche sich flexibel an die Bedürf
 
 >Contrast (Minimum): The visual presentation of text and images of text has a contrast ratio of at least 4.5:1` [citeulike:13915310]
 
-Des weiteren müssen Benutzer mit einer schwachen Sehstärke die Webseite unter Umständen vergrößern können um sie lesen zu können. Es sollte deshalb immer gewährleistet werden, dass die Seite auch bei einem Zoom-Faktor größer 100 korrekt dargestellt wird.
+Darüber hinaus müssen Benutzer mit einer schwachen Sehstärke die Webseite unter Umständen vergrößern können um sie lesen zu können. Es sollte deshalb immer gewährleistet werden, dass die Seite auch bei einem Zoom-Faktor größer 100 korrekt dargestellt wird.
 
 
 **Beispiel einer barrierefreien Komponente**
