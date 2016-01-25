@@ -1,5 +1,8 @@
 BOGER
 
+- Zitat bei Bildern? Quelle in BibFile oder Link unter das Bild
+- Titel
+
 
 ANDREAS
 

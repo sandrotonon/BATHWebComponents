@@ -57,3 +57,14 @@ Am Ende des Dokumentes ist eine Unterüberschrift *Quellen*, in der alle benutzt
 ## Markdown in LaTeX konvertieren
 
 `pandoc -f markdown -t latex markdownfile.md -o latexfile.tex`
+
+
+### Sublime Build System
+
+Markdown.sublime-build
+```
+{
+  "shell_cmd": "pandoc -f markdown -t latex $file_name -o $file_base_name.tex --chapter",
+  "selector": "text.html.markdown"
+}
+```
