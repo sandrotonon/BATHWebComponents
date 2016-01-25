@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: htwg/cover.aux
+A level-1 auxiliary file: htwg/title.aux
+A level-1 auxiliary file: htwg/abstract.aux
+A level-1 auxiliary file: htwg/affidavit.aux
+A level-1 auxiliary file: kapitel-1-einleitung/1-einleitung.aux
+A level-1 auxiliary file: kapitel-2-web-components-nach-w3c/6-polyfills.aux
+A level-1 auxiliary file: kapitel2/grundlagen.aux
+A level-1 auxiliary file: kapitel-2-web-components-nach-w3c/1-problemloesung.aux
+A level-1 auxiliary file: kapitel3/thema1.aux
+A level-1 auxiliary file: kapitel3/thema2.aux
+A level-1 auxiliary file: kapitel3/thema3.aux
+A level-1 auxiliary file: kapitel3/thema4.aux
+A level-1 auxiliary file: kapitel-5-zukunftsprognose/5-zukunftsprognose.aux
+The style file: apalike.bst
+Database file #1: library.bib
+Warning--I didn't find a database entry for "haase"
+You've used 3 entries,
+            1935 wiz_defined-function locations,
+            498 strings with 4458 characters,
+and the built_in function-call counts, 752 in all, are:
+= -- 78
+> -- 21
+< -- 3
++ -- 7
+- -- 6
+* -- 45
+:= -- 154
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 18
+chr.to.int$ -- 2
+cite$ -- 3
+duplicate$ -- 30
+empty$ -- 46
+format.name$ -- 9
+if$ -- 136
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 18
+num.names$ -- 9
+pop$ -- 9
+preamble$ -- 1
+purify$ -- 18
+quote$ -- 0
+skip$ -- 27
+stack$ -- 0
+substring$ -- 36
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 18
+warning$ -- 0
+while$ -- 6
+width$ -- 0
+write$ -- 38
+(There was 1 warning)
