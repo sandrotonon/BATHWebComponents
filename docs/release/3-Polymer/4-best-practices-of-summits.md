@@ -18,7 +18,8 @@ Applikationen und Webseiten in dem modernen Web müssen möglichst schnell Laden
 ### Ladezeiten und initiales Rendern optimieren
 
 Ohne ein besonderes Augenmerk auf die Performanz zu werfen bleibt die Seite oder die Applikation beim initialen Laden sehr lange weiß und der Benutzer sitzt vor einem weißen Bildschirm. Wenn alle Ressourcen fertig geladen wurden, wird der Inhalt dann plötzlich und unerwartet eingeblendet. Das erste blockierende Element sind bereits die webcomponents.js Polyfills, da diese in einem `<script>` Tag stehen und somit sequenziell geladen werden müssen und die Ladezeit verlängern. Dies kann jedoch verhindert werden, indem dem Tag das `async` Attribut hinzugefügt wird `<script src="webcomponents.js" async></script>`, alle anderen Ressourcen können dann asynchron geladen werden und die Applikation muss nicht auf die Polyfills warten. Um die Ladezeit weiter zu verkürzen, kann mittels einer JavaScript Überprüfung ermittelt werden, ob die Polyfills optional geladen werden müssen (Lazy Load) wenn diese vom Browser nicht unterstützt werden.
-```var webComponentsSupported = ('registerElement' in document
+```
+var webComponentsSupported = ('registerElement' in document
      && 'import' in document.createElement('link')
      && 'content' in document.createElement('template'));
 ```
