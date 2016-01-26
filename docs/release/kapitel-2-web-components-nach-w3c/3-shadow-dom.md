@@ -87,7 +87,7 @@ Die oben gezeigten Selektoren und Kombinatoren eignen sich hervorragend um die S
 
 ### Beispiel eines Shadow DOMs mit Template und CSS Styles
 
-Das folgende Beispiel zeigt eine exemplarische Implementierung eines Shadow DOMs, der gekapseltes CSS und JavaScript beinhaltet.
+Das folgende Beispiel zeigt eine exemplarische Implementierung eines Shadow DOMs, welcher gekapseltes CSS und JavaScript beinhaltet.
 
 ```html
 <style>

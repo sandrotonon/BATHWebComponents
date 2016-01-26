@@ -9,29 +9,24 @@ Imports von HTML Dateien selbst werden, wie andere Imports auch, per `<link>` Ta
 
 ```html
 <head>
-  <link rel="import" href="/myimport.html">
+  <link rel="import" href="/my-import.html">
 </head>
 ```
 
 Sollte nun ein HTML Import mehrfach aufgeführt sein, oder eine HTML-Datei anfordern die schon geladen wurde, so wird die Abhängigkeit automatisch ignoriert und die Datei nur ein einziges Mal übertragen. Dadurch wird eventuell in den HTML-Dateien enthaltenes JavaScript auch nur ein mal ausgeführt. Es ist jedoch zu beachten, dass HTML Imports nur auf Ressourcen der gleichen Quelle, also dem gleichen Host, respektive der gleichen Domain zugreifen können. Imports von HTML-Dateien von verschiedenen Quellen stellen eine Sicherheitslücke dar, da Webbrowser die SOP verfolgen. 
 
-> The same-origin policy restricts how a document or script loaded from one origin can interact with a resource from another origin. It is a critical security mechanism for isolating potentially malicious documents.
-
-[citeulike:13853253]
+> The same-origin policy restricts how a document or script loaded from one origin can interact with a resource from another origin. It is a critical security mechanism for isolating potentially malicious documents. [citeulike:13853253]
 
 Sollte das jedoch dennoch erlaubt werden, so muss das CORS für die entsprechende Domain auf dem Server aktiviert werden.
 
-> These restrictions prevent a client-side Web application running from one origin from obtaining data retrieved from another origin, and also limit unsafe HTTP requests that can be automatically launched toward destinations that differ from the running application's origin.
-
-[citeulike:13853643]
+> These restrictions prevent a client-side Web application running from one origin from obtaining data retrieved from another origin, and also limit unsafe HTTP requests that can be automatically launched toward destinations that differ from the running application's origin. [citeulike:13853643]
 
 
 ### Vorteil
 
 Durch HTML Imports ist es möglich komplette Applikationen mit mehreren oder gar nur einer einzigen Anweisung zu importieren. Dies gilt sowohl für eigene Applikationen oder kleinere Komponenten, wie beispielsweise einem Slider oder ähnlichem, als auch fremde Frameworks oder Komponenten. Durch die HTML Imports wird die Abhängigkeiten-Verwaltung stark vereinfacht und automatisiert.
 
-> Using only one URL, you can package together a single relocatable bundle of web goodness for others to consume.
-[citeulike:13853647]
+> Using only one URL, you can package together a single relocatable bundle of web goodness for others to consume. [citeulike:13853647]
 
 So kann beispielsweise das Bootstrap-Framework statt, wie bisher, mit mehreren Imports mit nur einem Import eingebunden werden. Bisher könnte die Einbindung unter Berücksichtigung der Abhängigkeiten wie folgt aussehen.
 

@@ -29,13 +29,13 @@
 </template>
 
 <script>
-  // Refers to the "importee", which is src/hello-world.html
+  // Refers to the "importee", which is index.html
   var importDoc = document.currentScript.ownerDocument;
 
   // Creates an object based in the HTML Element prototype
   var CustomElementProto = Object.create(HTMLElement.prototype);
 
-  // Creates the "who" attribute and sets a default value
+  // Creates the "theme" attribute and sets a default value
   CustomElementProto.theme = 'style1';
 
   // Fires when an instance of the element is created

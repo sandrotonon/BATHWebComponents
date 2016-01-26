@@ -12,7 +12,7 @@ In den vorherigen Kapiteln wurde gezeigt was Polymer an Mehrwert für die Entwic
 
 Applikationen und Webseiten in dem modernen Web müssen möglichst schnell Laden, sowie ein flüssiges Arbeiten ermöglichen, damit sie von den Benutzern akzeptiert und genutzt werden. In Abbildung X wird deutlich, dass Applikationen mit einer Ladezeit von ca. 1000 Millisekunden oder mehr sich negativ auf die Zufriedenheit der Nutzer auswirken [citeulike:13262776].
 
-![Bild: Verschiedene Wahrnehmung der Benutzer bei unterschiedlichen Ladezeiten](images/performance-user-perception-reaction-times.jpg "Verschiedene Wahrnehmung der Benutzer bei unterschiedlichen Ladezeiten")
+![Bild: Verschiedene Wahrnehmung der Benutzer bei unterschiedlichen Ladezeiten](images/4-performance-user-perception-reaction-times.jpg "Verschiedene Wahrnehmung der Benutzer bei unterschiedlichen Ladezeiten")
 
 
 ### Ladezeiten und initiales Rendern optimieren
