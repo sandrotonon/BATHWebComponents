@@ -1,11 +1,11 @@
-# Polymer
+# Einführung in Polymer
 
 - TODO: Architektur: Abbildung X
 
 - In Kapitel 2 wurden die nativen HTML Web Component Standards gezeigt
 - Auf diese setzt die Bibliothek Polymer auf, die den Umgang mit ihnen vereinfachen sowie deren Funktionalitäten erweitern soll
-- Daduch will polymer es ermöglichen gekapselte Komponenten zu bauen welche wiederum von Komponenten verwendet, oder mit anderen Komponenten verbunden werden können um komplexe Applikationen zu entwickeln
-- Polymer ("Poly" - mehrere, "mer" - Teile) ist dabei eine Metapher für die polymerisation von einzelnen Monomeren, den nativen HTML Elementen, zu einem großen Molekül, einer Web Komponente
+- Dadurch will polymer es ermöglichen gekapselte Komponenten zu bauen welche wiederum von Komponenten verwendet, oder mit anderen Komponenten verbunden werden können um komplexe Applikationen zu entwickeln
+- Polymer ("Poly" - mehrere, "mer" - Teile) ist dabei eine Metapher für die Polymerisation von einzelnen Monomeren, den nativen HTML Elementen, zu einem großen Molekül, einer Web Komponente
 - Abschnitt 3.1 zeigt die Architektur von Polymer
 - In abschnitt 3.2. wird gezeigt, wie Polymer Funktioniert in Anbetracht der Analogien zu den Nativen Web Components 
 - In Abschnitt 3.3 werden zusätzliche Features von Polymer dargestellt
@@ -49,7 +49,7 @@
 
 **Paper Elements - Md**
 
-- Elemente die Googles Design Philosphie Material Design gehorchen, wie Listen, Menüs, Tabs
+- Elemente die Googles Design Philosophie Material Design gehorchen, wie Listen, Menüs, Tabs
 - Paper ist eine Metapher für erweitertes Papier, es kann zusammengesteckt werden, sich transformieren, Schatten werden etc.
 
 
@@ -74,7 +74,7 @@
 **Platinum Elements - Pt**
 
 - sehr wertvoll
-- nicht UI orientiert, sondern für services die im Hintergrund laufen wie push, offline etc.
+- nicht UI orientiert, sondern für Services die im Hintergrund laufen wie push, offline etc.
 - Bringen viele neue Lösungen für sehr komplexe Probleme
 
 
@@ -92,8 +92,8 @@
 
 ### Alternative Sammlung von Komponenten
 
-- Statt den Polymer komponenten können auch selbst entwickelte oder aus anderen Quellen stammende Komponenten verwendet werden
+- Statt den Polymer Komponenten können auch selbst entwickelte oder aus anderen Quellen stammende Komponenten verwendet werden
 - Der Elemente Katalog wird nur von Google vertrieben und erlaubt keine Komponenten, welche nicht von Google entwickelt wurden
-- Als anternative hierfür kann der Customelements Katalog [citeulike:13916423] angesehen werden
+- Als Alternative hierfür kann der Customelements Katalog [citeulike:13916423] angesehen werden
 - In diesem sind bereits mehrere tausend Komponenten gesammelt, welche von google unabhängigen Entwicklern für die unterschiedlichsten Anwendungsfälle entwickelt wurden
 

@@ -12,7 +12,7 @@
 
 - Die Intention der Polymer Bibliothek ist das erstellen eigener Komponenten oder Elementen, den Custom Elements
 - Das Erstellen, Erweitern und Verwalten von Custom Elements kann mit den nativen Mitteln bei steigender Komplexität mitunter schwierig werden
-- Polymer bietet hierfür eine Reihe an hilfreicher Funktionen bereit, die das Arbeiten mit den Web Components Standards erleichtern und erweitern sollen
+- Polymer stellt hierfür eine Reihe an hilfreicher Funktionen bereit, die das Arbeiten mit den Web Components Standards erleichtern und erweitern sollen [citeulike:13915080]
 
 
 ### Neues Element registrieren
@@ -107,11 +107,6 @@
 - So werden die Callbacks eines Elementes in der Reihenfolge `created`, `ready`, `factoryImpl` und `attached`
 
 
-### Quellen
-
-- https://www.polymer-project.org/1.0/docs/devguide/registering-elements.html
-
-
 ## Shadow DOM / HTML Templates
 
 - TODO
@@ -126,9 +121,5 @@ Um mehrere Polymer Komponenten oder Komponenten innerhalb Komponenten zu benutze
 
 Falls HTML Dateien dynamisch zur Laufzeit nachgeladen werden sollen, bietet Polymer zusätzlich eine Hilfsfunktion an, mit der HTML Imports nachträglich ausgeführt werden können [citeulike:13914840]. Die hierfür bereitgestellte Funktion `importHref(url, onload, onerror);` importiert beim Aufruf dynamisch eine HTML Datei in das Dokument. Sie erstellt dabei ein `<link rel="import">` Element mit der angegeben URL und fügt es dem Dokument hinzu, sodass dieser ausgeführt werden kann. Wenn der Link geladen wurde, also der `onload` Callback aufgerufen wird, ist die `import` Eigenschaft des Links der Inhalt des zurückgegebenen, importierten HTML Dokumentes. Der Parameter `onerror` ist dabei eine optionale Callback-Funktion, die beim Auftreten eines Fehlers aufgerufen wird.
 
-
-### Quellen
-
-- [citeulike:13914840] http://polymer.github.io/polymer/
 
 

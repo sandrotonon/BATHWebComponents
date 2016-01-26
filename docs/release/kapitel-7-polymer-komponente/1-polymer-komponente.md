@@ -16,7 +16,3 @@
 
 ## Deployment mit Bower
 
-
-## Quellen
-
-- [citeulike:13916358] http://yeoman.io/
