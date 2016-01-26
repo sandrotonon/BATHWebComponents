@@ -84,6 +84,8 @@ Anhand der vorhergehenden Abschnitte wird in diesem Abschnitt die Implementierun
 ### Shadow DOM zur Kapselung benutzen
 
 
+
+
 ### Element importieren und verwenden
 
 ```html
