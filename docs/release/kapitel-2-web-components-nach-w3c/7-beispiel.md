@@ -4,7 +4,7 @@
     - Abbildung X
     - "TODO Verweis" 2x
 
-Anhand der vorhergehenden Abschnitte wird in diesem Abschnitt die Implementierung der Web Komponente `<custom-element>` mit den nativen HTML APIs erläutert. Diese soll dabei das Markup in einem Shadow DOM kapseln und den übergebenen Inhalt darstellen. Des Weiteren soll die Schriftfarbe über das Attribut `theme` optional konfiguriert werden können. Die gerenderte Komponente wird in Abbildung X dargestellt.
+Anhand der vorhergehenden Abschnitte wird in diesem Abschnitt die Implementierung der Web Komponente `<custom-element>` mit den nativen HTML APIs erläutert. Diese soll dabei das Markup in einem Shadow DOM kapseln und den übergebenen Inhalt darstellen. Des Weiteren soll dessen Farbe über das Attribut `theme` optional konfiguriert werden können. Die gerenderte Komponente wird in Abbildung X dargestellt.
 
 ![Bild: Gerenderte Web Komponente mit nativen APIs](images/7-beispiel.jpg "Gerenderte Web Komponente mit nativen APIs")
 
