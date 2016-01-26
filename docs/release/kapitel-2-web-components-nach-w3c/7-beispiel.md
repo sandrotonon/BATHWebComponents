@@ -83,7 +83,7 @@ Anhand der vorhergehenden Abschnitte wird in diesem Abschnitt die Implementierun
 - Hierzu muss es dem Shadow Root hinzugefügt werden, was in dem nachfolgenden Abschnitt veranschaulicht wird
 
 
-### Shadow DOM zur Kapselung benutzen
+### Template bereitstellen und Shadow DOM zur Kapselung benutzen
 
 - Bevor das erstellte Template eingebunden werden kann, muss zuerst ein Shadow Root mittels `var shadow = this.createShadowRoot();` erzeugt werden
 - Dies geschieht in der `createdCallback` Funktion, damit der Shadow DOM sofort erzeugt werden kann, wenn das Element erzeugt wurde
