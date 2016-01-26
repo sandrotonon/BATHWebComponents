@@ -13,7 +13,7 @@ Anhand der vorhergehenden Abschnitte wird in diesem Abschnitt die Implementierun
 
 - Zunächst wird ein `HTMLElement` Prototyp mittels `Object.create(HTMLElement.prototype)` erstellt
 - Dieser wird zunächst um die Eigenschaft `theme` und dessen Standardwert `style1` erweitert `CustomElementProto.theme = 'style1';`, welches das deklarativ konfigurierbare Attribut `theme` darstellt
-- Anschließend werden Lifecycle-CallBack-Funktionen `createdCallback` und `attributeChangedCallback` der Komponente definiert
+- Anschließend werden Lifecycle-Callback-Funktionen `createdCallback` und `attributeChangedCallback` der Komponente definiert
 
 ```javascript
   CustomElementProto.createdCallback = function() {
@@ -46,11 +46,13 @@ Anhand der vorhergehenden Abschnitte wird in diesem Abschnitt die Implementierun
 
 - Sie setzt den übergebenen Parameter, das `theme` Attribut, als Klasse auf den umschließenden Wrapper `.outer`
 - Die gesetzte Klasse bestimmt dabei den zu verwendenden Style der Komponente
+- Da der Prototyp nun alle erforderlichen Eigenschaften besitzt, kann er mit `document.registerElement("custom-element", { prototype: CustomElementProto });` als HTML Tag `custom-element` in dem importierenden Dokument verfügbar gemacht werden
 
 
 ### Template erstellen und Styles definieren
 
-- Um nun wiederverwendbares Markup definieren zu können, wird ein `<template>` mit der ID `myElementTemplate` angelegt, welches die für die Komponente notwendige HTML Struktur beinhaltet
+- Das Element benötigt außerdem noch enthaltenes HTML Markup, also ein Template
+- Hierfür wird ein `<template>` mit der ID `myElementTemplate` angelegt, welches die für die Komponente notwendige HTML Struktur beinhaltet
 
 ```html
 <template id="myElementTemplate">
@@ -83,17 +85,19 @@ Anhand der vorhergehenden Abschnitte wird in diesem Abschnitt die Implementierun
 
 ### Shadow DOM zur Kapselung benutzen
 
-
+- Bevor das erstellte Template eingebunden werden kann, muss zuerst ein Shadow Root mittels `var shadow = this.createShadowRoot();` erzeugt werden
+- Dies geschieht in der `createdCallback` Funktion, damit der Shadow DOM sofort erzeugt werden kann, wenn das Element erzeugt wurde
+- Nun kann der Inhalt des Templates mit der ID `myElementTemplate` mittels `var template = importDoc.querySelector('#myElementTemplate').content;` importiert und mit der Anweisung `shadow.appendChild(template.cloneNode(true));` dem Shadow Root hinzugefügt werden
+- die `importDoc` Variable stellt dabei die Referenz auf die importierte Komponente, also das `<custom-element>` Element, dar
+- Diese kann mittels der Funktion `var importDoc = document.currentScript.ownerDocument;` ermittelt werden
+- Wird dies nicht getan, so würde der `querySelector` auf das Eltern Dokument der eingebetteten Komponente zugreifen und das Template nicht finden
+- Nun ist der Inhalt des Templates als Shadow DOM innerhalb des Elements gekapselt und nach Außen nicht sichtbar
 
 
 ### Element importieren und verwenden
 
-```html
-  <link rel="import" href="elements/custom-element.html">
-
-  <custom-element theme="style1">Reader</custom-element>
-```
-
-
-Das komplette Beispiel der Komponente (TODO Verweis), sowie dessen Einbindung in ein HTML Dokument (TODO Verweis), sind im Anhang zu finden.
+- Das Element ist somit vollständig und kann in einer beliebigen Webseite oder Applikation eingesetzt werden
+- Hierzu muss diese das Element mittels `<link rel="import" href="elements/custom-element.html">` zunächst importieren
+- Es kann dann mit entsprechenden Attributen und Inhalt auf der Seite eingebettet werden, wie beispielsweise mit der Konfiguration `<custom-element theme="style1">Reader</custom-element>`
+- Das komplette Beispiel der Komponente (TODO Verweis), sowie dessen Einbindung in ein HTML Dokument (TODO Verweis), sind im Anhang zu finden.
 
