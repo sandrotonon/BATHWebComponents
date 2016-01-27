@@ -52,7 +52,9 @@ Am Ende des Dokumentes ist eine Unterüberschrift *Quellen*, in der alle benutzt
 
 ### Bilder
 
-`![Bild: <Beschreibung>](*link* "<Beschreibung>. Quelle: <Quelle>")`
+Die Bilder müssen immer im Text referenziert werden. Die Angabe der Quelle des Bildes ist ebenfalls im Text zu machen.
+
+`![Bild: <Beschreibung>](*link* "<Beschreibung>")`
 
 
 ## Markdown in LaTeX konvertieren
