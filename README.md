@@ -1,9 +1,8 @@
 # BATHWebComponents
-GitRepository meiner Bachelor Thesis im Rahmen des Studiums "Angewandte Informatik" an der HTWG-Konstanz in Kooperation mit der Firma Seitenbau GmbH.
+GitRepository meiner Bachelor Thesis "Web-Component-basierte Entwicklung mit Polymer" im Rahmen des Studiums "Angewandte Informatik" an der HTWG-Konstanz in Kooperation mit der Firma Seitenbau GmbH.
+
 
 # Inhaltsverzeichnis
-
-[Visit GitHub](https://www.github.com)
 
 - Kapitel 1 - [Einleitung](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-1-einleitung/1-einleitung.md) : Clean
 - Kapitel 2 - Web Components nach dem vorläufigen W3C Standard
