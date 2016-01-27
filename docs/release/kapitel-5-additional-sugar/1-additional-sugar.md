@@ -4,17 +4,17 @@
 - (siehe Abschnitt 3.2. Declared Properties)
 - (siehe Kapitel 3.2. - hostAttributes)
 
-Polymer bietet eine zusätzliche Applikations-Schicht mit einigen hilfreichen Funktionalitäten, die das Arbeiten mit den Komponenten vereinfachen. Die wichtigsten, wie One-Way und Two-Way Data Binding, Behaviors und Events, werden in diesem Abschnitt dargestellt.
+Polymer bietet eine zusätzliche Applikations-Schicht mit einigen hilfreichen Funktionalitäten, die das Arbeiten mit den Komponenten vereinfachen. Die wichtigsten, wie One-Way und Two-Way Data-Binding, Behaviors und Events, werden in diesem Abschnitt dargestellt.
 
 
-## One-Way und Two-Way Data Binding
+## One-Way und Two-Way Data-Binding
 
-Für den Transport von Daten zwischen Komponenten sieht Polymer das One-Way und Two-Way Data Binding vor. Die Daten können dabei zwischen einer Eigenschaft einer Custom Elements (das Host-Element) und dessen lokalen DOM (Kind Element) gebunden und somit zwischen Komponenten ausgetauscht werden. Hierfür sieht Polymer das Mediator Pattern vor, welches besagt, dass Daten zwischen zwei nebenstehenden Komponenten ihre Daten über eine übergeordnete Komponente propagieren müssen. Dies erfolgt mittels einer hierfür vorgesehenen Syntax für Attribute eines Elements, wie zum Beispiel: `<my-element some-property={{value}}></my-element>`. Durch die doppelten Klammern kann die Eigenschaft `value` des Host Elements Daten in das Attribut `some-property` des Kind Elements weitergeben. Hierzu wird von Polymer für jede Eigenschaft eines Elements ein `propertyEffect` Objekt und ein entsprechender Setter angelegt. Wenn die Eigenschaft zur Laufzeit geändert wird, wird über das Array aus propertyEffects iteriert und bei entsprechender Eigenschaft mittels dem Setter der neue Wert gesetzt, falls dieser sich von dem alten Wert unterscheidet. Wird die Eigenschaft von einem Observer (Siehe Abschnitt 2.X - Property Oberserver) überwacht, so wird dieser in dem Setter aufgerufen, statt die werte direkt zu ändern. Für das Binden stehen unterschiedlichen Annotationen zur Verfügung, welche nachfolgend erläutert werden [citeulike:13914892].
+Für den Transport von Daten zwischen Komponenten sieht Polymer das One-Way und Two-Way Data-Binding vor. Die Daten können dabei zwischen einer Eigenschaft einer Custom Elements (das Host-Element) und dessen lokalen DOM (Kind Element) gebunden und somit zwischen Komponenten ausgetauscht werden. Hierfür sieht Polymer das Mediator Pattern vor, welches besagt, dass Daten zwischen zwei nebenstehenden Komponenten ihre Daten über eine übergeordnete Komponente propagieren müssen. Dies erfolgt mittels einer hierfür vorgesehenen Syntax für Attribute eines Elements, wie zum Beispiel: `<my-element some-property={{value}}></my-element>`. Durch die doppelten Klammern kann die Eigenschaft `value` des Host Elements Daten in das Attribut `some-property` des Kind Elements weitergeben. Hierzu wird von Polymer für jede Eigenschaft eines Elements ein `propertyEffect` Objekt und ein entsprechender Setter angelegt. Wenn die Eigenschaft zur Laufzeit geändert wird, wird über das Array aus propertyEffects iteriert und bei entsprechender Eigenschaft mittels dem Setter der neue Wert gesetzt, falls dieser sich von dem alten Wert unterscheidet. Wird die Eigenschaft von einem Observer (Siehe Abschnitt 2.X - Property Oberserver) überwacht, so wird dieser in dem Setter aufgerufen, statt die werte direkt zu ändern. Für das Binden stehen unterschiedlichen Annotationen zur Verfügung, welche nachfolgend erläutert werden [citeulike:13914892].
 
 
-### One-Way Data Binding
+### One-Way Data-Binding
 
-Das One-Way Data Binding erlaubt Attributen nur das Lesen der entsprechenden Eigenschaft seiner Komponente, ein schreibender Zugriff wird jedoch untersagt. Meist wird es verwendet um Texte basierend der Eigenschaft anzuzeigen, der Text jedoch soll nicht verändert oder die Eigenschaft überschreiben. Erreicht wird das One-Way Data Binding mit der doppelten eckigen Klammer Syntax [[]]. Intern legt Polymer für die Eigenschaft keinen eventListener `attributeName-changed` für das Attribut `attributeName` an, somit wird die Eigenschaft, falls das Attribut geändert werden sollte, nicht upgedatet. Beim One-Way Data Binding kann dabei zwischen zwei Möglichkeiten unterschieden werden.
+Das One-Way Data-Binding erlaubt Attributen nur das Lesen der entsprechenden Eigenschaft seiner Komponente, ein schreibender Zugriff wird jedoch untersagt. Meist wird es verwendet um Texte basierend der Eigenschaft anzuzeigen, der Text jedoch soll nicht verändert oder die Eigenschaft überschreiben. Erreicht wird das One-Way Data-Binding mit der doppelten eckigen Klammer Syntax [[]]. Intern legt Polymer für die Eigenschaft keinen eventListener `attributeName-changed` für das Attribut `attributeName` an, somit wird die Eigenschaft, falls das Attribut geändert werden sollte, nicht upgedatet. Beim One-Way Data-Binding kann dabei zwischen zwei Möglichkeiten unterschieden werden.
 
 **Host to Child**
 
@@ -25,9 +25,9 @@ Das Transportieren der Daten erfolgt nur von Host Element zum Kind Element. Hier
 Der Transport der Daten erfolgt nur von Kind Element zu Host Element. Hierzu müssen die `notify` und `readOnly` Parameter mit true initialisiert werden.
 
 
-### Two-Way Data Binding
+### Two-Way Data-Binding
 
-Mittels dem Two-Way Data Binding, auch automatic Binding genannt, können Daten von Host zu Kind Element und andersrum geschrieben werden. Hierzu ist es zwingend notwendig den `notify` Parameter mit true zu initialisieren und zusätzlich die doppelte geschweifte Klammer Syntax {{}} zu verwenden. Sobald eine der beiden Eigenschaften, die des Kindes oder die des Hosts, geändert werden, wird von dem jeweiligen Element ein `propertyName-changed-event` abgefeuert. Wenn nun ein anderes Element an diese Eigenschaft gebunden ist, bekommt es das Event mit und ändert darauf hin den eigenen Wert. Hierdurch ist es möglich eine API für eine Komponente bereit zu stellen um Daten nach außen sichtbar zu machen. Somit können Daten zwischen zwei oder mehr Komponenten ausgetauscht werden.
+Mittels dem Two-Way Data-Binding, auch automatic Binding genannt, können Daten von Host zu Kind Element und andersrum geschrieben werden. Hierzu ist es zwingend notwendig den `notify` Parameter mit true zu initialisieren und zusätzlich die doppelte geschweifte Klammer Syntax {{}} zu verwenden. Sobald eine der beiden Eigenschaften, die des Kindes oder die des Hosts, geändert werden, wird von dem jeweiligen Element ein `propertyName-changed-event` abgefeuert. Wenn nun ein anderes Element an diese Eigenschaft gebunden ist, bekommt es das Event mit und ändert darauf hin den eigenen Wert. Hierdurch ist es möglich eine API für eine Komponente bereit zu stellen um Daten nach außen sichtbar zu machen. Somit können Daten zwischen zwei oder mehr Komponenten ausgetauscht werden.
 
 
 ### Binden von nativen Attributen

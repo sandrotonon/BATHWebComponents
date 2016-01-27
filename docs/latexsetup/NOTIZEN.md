@@ -1,25 +1,27 @@
 - Bei mehreren Autoren wird "and" statt "und" geschrieben.
-Lösung:
+LÃ¶sung:
 \bibliographystyle{apalike-mystyle}
 
 
 - Fehler im Template, bei PLZ und Autor
-Lösung:
-{} als Leerzeichen hinzufügen
+LÃ¶sung:
+{} als Leerzeichen hinzufÃ¼gen
 
 
 - Zitate:
     + WEB: Wenn kein Jahr, im Jahresfeld "web" eintragen
     + IMMER "Electronic Citation" statt "Misc.."
     + ACHTUNG: Wenn gleiche webseite mehrmals, wird das "Seite weba", "Seite webb" angezeigt
-        * Lösung: Autor-feld leer lassen und die Seite mit unterschiedlichen Titeln ins sort Feld schreiben z.b. Can I use - Custom Elements
+        * LÃ¶sung: Autor-feld leer lassen und die Seite mit unterschiedlichen Titeln ins sort Feld schreiben z.b. Can I use - Custom Elements
     + Wenn Blogeintrag: normal mit Autor und Jahr
     + BUCH: wenn mehrere unterschiedliche Seiten \cite[S. 2-4]{sortkey}
+    + Blockzitat: Quelle als BibVerweis an das Ende des Zitats
+    + Bild: Im Text auf das Bild verweisen und die Quelle im Text angeben (siehe Abbildung X [Quelle])
 
 
 - Bilder:
     + Immer im Text auf Bilder verweisen!
-    + Keine Transparenz in png oä.
+    + Keine Transparenz in png oÃ¤.
 
 
 - Abschnittsverweise: 

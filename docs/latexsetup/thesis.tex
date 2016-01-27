@@ -1,51 +1,54 @@
-\documentclass[11pt,a4paper]{report}
+\documentclass[
+		11pt,
+		a4paper,
+		toc=listof, %% Abbildungs-, Tabellenverzeichnis mit ins Inhaltsverzeichni
+		bibliography=totoc %% Quellenverzeichnis mit ins Inhaltsverzeichnis
+		]{scrreprt}	 %% KOMA Script
 
-\usepackage{graphicx}
-\usepackage{a4}
-\usepackage{german}
-\usepackage{acronym}
-\usepackage{cite}
-
-
-\newcommand{\thema}{$[$Thema der Bachelorarbeit$]$}
-\newcommand{\schlagworte}{$[$Platz, f\"ur, spezifische, Schlagworte, zur, Ausarbeitung $]$}
-\newcommand{\zusammenfassung}{$[$Text der Zusammenfassung etwa 150 Worte. Es soll der
-	L"osungsweg beschrieben sein.$]$}
-\newcommand{\ausgabedatum}{$[$Datum$]$}
-\newcommand{\abgabedatum}{15.01.2016}
-\newcommand{\autor}{Sandro Tonon}
-\newcommand{\autorStrasse}{$[$Stra"se$]$}
-\newcommand{\autorPLZ}{$[$PLZ$]$}
-\newcommand{\autorOrt}{$[$Ort$]$}
-\newcommand{\autorGeburtsort}{Test}
-\newcommand{\autorGeburtsdatum}{02.07.1990}
-\newcommand{\prueferA}{$[$Titel, Vor- und Zuname des 1. Pr"ufers$]$}
-\newcommand{\prueferB}{$[$Titel, Vor- und Zuname des 2. Pr"ufers$]$}
-\newcommand{\firma}{$[$HTWG oder Firmenname$]$}
-\newcommand{\studiengang}{$[$Software-Engineering/Technische Informatik/Wirtschaftsinformatik$]$}
+\input{preamble/packete}
+\input{preamble/optionen}
+\input{preamble/variablen}
 
 
 \begin{document}
+%% Nummerierung aus
+\pagenumbering{gobble}
 
-\include{cover}
-\include{title}
-\include{abstract}
-\include{affidavit}
+% HTWG Tempaltes fuer Titelseite etc.
+\include{htwg/cover}
+\include{htwg/title}
+\include{htwg/abstract}
 
-% Inhaltsverzeichnis anzeigen
+\pagenumbering{Roman}
+\include{htwg/affidavit}
+
 \tableofcontents
 
-\newpage
+% Literaturverzeichnis
+\input{glossary}
+
+%% Starte Paginierung
+\cleardoublepage
+\pagenumbering{arabic}
 
 
-\include{thesis/kapitel-2/1-custom-elements.md}
+\include{kapitel2/grundlagen}
+
+\include{kapitel3/thema1}
+\include{kapitel3/thema2}
+\include{kapitel3/thema3}
+\include{kapitel3/thema4}
 
 
+\listoffigures
+\lstlistoflistings
+\listoftables
 
-\include{glossary}
+% REMOVE THIS!
+\listoftodos[TODOs]
+% REMOVE THIS!
 
-
-\bibliographystyle{plain}
+\bibliographystyle{apalike}
 \bibliography{library}
 \end{document}
 
