@@ -3,15 +3,17 @@ GitRepository meiner Bachelor Thesis im Rahmen des Studiums "Angewandte Informat
 
 # Inhaltsverzeichnis
 
-- Kapitel 1 - Einleitung : Clean
+[Visit GitHub](https://www.github.com)
+
+- Kapitel 1 - [Einleitung](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-1-einleitung/1-einleitung.md) : Clean
 - Kapitel 2 - Web Components nach dem vorläufigen W3C Standard
-  + 2.1 Problemlösung : Clean
-  + 2.2 Custom Elements : Clean
-  + 2.3 Shadow DOM : Clean
-  + 2.4 HTML Templates : Clean
-  + 2.5 HTML Imports : Clean
-  + 2.6 Polyfills mit webcomponents.js : Clean
-  + 2.7 Implementierung einer Komponente mit den nativen Web Component APIs : Contents
+  + 2.1 [Problemlösung](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/1-problemloesung.md) : Clean
+  + 2.2 [Custom Elements](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/2-custom-elements.md) : Clean
+  + 2.3 [Shadow DOM](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/3-shadow-dom.md) : Clean
+  + 2.4 [HTML Templates](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/4-html-templates.md) : Clean
+  + 2.5 [HTML Imports](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/5-html-imports.md) : Clean
+  + 2.6 [Polyfills mit webcomponents.js](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/6-polyfills.md) : Clean
+  + 2.7 [Implementierung einer Komponente mit den nativen Web Component APIs](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/7-beispiel.md) : Contents
 - Kapitel 3 - Einführung in Polymer
   + 3.1 - Architektur : Clean
   + 3.2 - Elemente Katalog : Clean
@@ -31,7 +33,8 @@ GitRepository meiner Bachelor Thesis im Rahmen des Studiums "Angewandte Informat
   + 7.1 Entwicklung der Komponente : TODO
   + 7.2 Vergleich mit AngularJS Implementierung : In Progress
 - Kapitel 8 - Zukunftsprognose : Clean
-- Anhang
+- Anhang : In Progress
+
 
 
 - TODO: Der Inhalt muss noch erstellt werden
