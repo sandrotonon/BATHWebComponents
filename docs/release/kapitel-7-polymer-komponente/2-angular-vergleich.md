@@ -1,11 +1,14 @@
 >Polymer beschreibst du ja schon in den vorherigen Kapiteln, für Angular würde denke ich eine grobe Architektur-/Konzepte-Übersicht (https://docs.angularjs.org/guide/concepts) reichen, dann ein Abschnitt, welche Probleme von beiden Frameworks gelöst werden mit Gemeinsamkeiten/Unterschieden und ein Abschnitt mit Themen, die nur jeweils eins der beiden Frameworks angeht.
 
 
+- TODO: 
+  + wie in Abbildung X dargestellt
+
 ## Vergleich mit AngularJS Implementierung
 
 - TODO
 
-- Die mit Polymer implementierte Multi-Navigations-Applikation wurde möglichst ähnlich mit Angular nachgebaut
+- Die mit Polymer implementierte Multi-Navigations-Applikation wird möglichst ähnlich mit Angular nachgebaut
 - Diese beiden unterschiedlichen Implementierungen, sowie generelle Unterschiede beider Frameworks bzw. Bibliotheken werden in diesem Abschnitt miteinander verglichen
 
 (Notwendig?)
@@ -13,9 +16,31 @@
 
 ### AngularJS Einstieg
 
-*Einleitung, Architektur und Konzepte*
+*Einleitung*
 
-- Two-Way Data-Binding: Änderungen am Model werden automatisch im DOM abgebildet, Benutzerinteraktionen innerhalb des Views werden auf das Model angewendet
+- Häufig mit Polymer in Zusammenhang gebracht wird AngularJS
+- AngularJS ist ein, ebenfalls von Google entwickeltes, clientseitiges open-source JavaScript-Framework zur Erstellung von dynamischen SPAs
+- Ebenso wie Polymer erlaubt es Angular eigene HTML Elemente, unter AngularJS `Directives` genannt, zu erstellen, welche die native Sammlung an HTML Elementen erweitern können
+
+
+*Architektur* (mit Einleitung zusammenfassen?)
+
+- Ist ein `Fat-Client` Framework, welches die gesamte Logik, sowie die Präsentations-Schicht auf dem Client hält und an ein serverseitiges Model, welches die Daten hält, angebunden werden kann
+- AngularJS verfolgt den MVVM-Modell Ansatz, wie in Abbildung X dargestellt [citeulike:13920434]
+- Eine Erweiterung des MVC Models, wobei die Controller-Schicht durch eine ViewModel-Schicht ersetzt wird
+- Die ViewModel-Schicht kann als eine Art Proxy aufgefasst werden, welche der View-Schicht nur die Daten des Models liefert, die sie tatsächlich benötigt und transformiert sie, damit sie von der View-Schicht ausgegeben werden können
+- Ebenso stellt sie die von der View-Schicht benötigten Funktionalitäten zum ändern der Daten bereit
+
+
+![Bild: Model-View-ViewModel Darstellung](images/1-model-view-viewmodel.png "Model-View-ViewModel Darstellung")
+
+
+*Konzepte*
+
+- Grundkonzepte von AngularJS
+- Two-Way Data-Binding: Datenbindung in zwei Richtungen, Änderungen am Model werden automatisch im DOM abgebildet, Benutzerinteraktionen innerhalb des Views werden auf das Model angewendet. Dadurch fällt die Manipulation des DOMs mithilfe von JavaScript bzw. jQuery weg. Diese wird von Angular intern mittels der jQuery-lite, einer vereinfachten, leichteren Version von jQuery bewerkstelligt
+- Controllers: TODO
+- Direktiven: HTML um eigene Elemente und Attribute erweitern, dessen Logik in den Direktiven gekapselt wird
 
 
 ### Problemlösungen von Polymer und AngularJS
