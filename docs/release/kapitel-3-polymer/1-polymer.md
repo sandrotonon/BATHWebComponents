@@ -34,7 +34,7 @@
 - DOM Rendering (Animationen, Paper Elements)
 
 - Die oberste Schicht von Polymer bilden die Polymer Elemente
-- Sie bilden eine Sammlung von Komponenten, welche die von Google vorgeschlagenen Lösungen für wiederkehrende Probleme implementieren
+- Sie bilden eine Sammlung an Komponenten, welche die von Google vorgeschlagenen Implementierungen als Lösungen von einfachen bis komplexen wiederkehrenden Problemen sind
 - Alle Elemente werden von Google in dem Elemente Katalog [citeulike:13916374] gesammelt und können von Entwicklern optional benutzt und angepasst werden, sind für den Bau einer Applikation mit Hilfe von Polymer aber nicht zwingend notwendig
 - Der Elemente Katalog versucht das Google Polymer Manifest `There is an element for that` zu verwirklichen
 - Er wurde seit Beginn des Projekts stark ausgebaut und nach wie vor stets erweitert und aktualisiert
@@ -97,6 +97,6 @@
 
 - Statt den Polymer Komponenten können auch selbst entwickelte oder aus anderen Quellen stammende Komponenten verwendet werden
 - Der Elemente Katalog wird nur von Google vertrieben und erlaubt keine Komponenten, welche nicht von Google entwickelt wurden
-- Als Alternative hierfür kann der Customelements Katalog [citeulike:13916423] angesehen werden
+- Als Alternative hierfür kann der customelements.io Katalog [citeulike:13916423] angesehen werden
 - In diesem sind bereits mehrere tausend Komponenten gesammelt, welche von google unabhängigen Entwicklern für die unterschiedlichsten Anwendungsfälle entwickelt wurden
 

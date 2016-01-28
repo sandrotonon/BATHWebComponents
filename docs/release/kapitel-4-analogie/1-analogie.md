@@ -1,4 +1,4 @@
-# Analogie mit nativen Web Components
+# Analogie zu nativen Web Components
 
 - Polymer vereinfacht das Erstellen und den Umgang mit Custom Elements
 - Dabei werden die von den Web Components Standards definierten Prämissen versucht einzuhalten und zu erweitern
@@ -81,7 +81,7 @@
 - Selbiges gilt für Arrays, wird in einem Array ein Wert geändert, hinzugefügt, entfernt oder verschoben, kann eine entsprechende Funktion aufgerufen werden
 
 
-### hostAttributes
+### Das hostAttributes-Objekt
 
 - Zusätzlich zu den Declared Properties können auch HTML Element Attribute im Polymer Prototyp definiert werden
 - Polymer bietet dafür das `hostAttributes` Objekt an

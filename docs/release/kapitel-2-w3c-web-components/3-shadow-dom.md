@@ -1,6 +1,6 @@
 ## Shadow DOM
 
-Durch Kapselung ist es möglich, Details eines Objektes von anderen Teilen des Programms zu verstecken. Das Programm muss nur wissen, wie es auf die benötigten Funktionen zugreift, jedoch nicht, wie das Objekt die Funktionen intern umsetzt. Dieses Konzept ist in allen objektorientierten Programmiersprachen umgesetzt, jedoch nicht in der Webentwicklung. Beispielsweise kann das CSS oder JavaScript, das für ein Element geschrieben ist, auch das CSS oder JavaScript anderer Elemente beeinflussen, wenn es nicht konsequent geschrieben wurde. Je größer das Projekt wird, desto unübersichtlicher und komplexer wird es zu gewährleisten, dass CSS oder JavaScript sich nicht ungewollt auf andere Teile der Webseite auswirkt. Diesem Problem widmet sich der Shadow DOM, welcher ein Sub-DOM unterhalb eines Elementes darstellt und es ermöglicht, HTML und CSS in sich zu kapseln und zu verstecken. Der Shadow DOM wird bereits in HTML5 standardmäßig eingesetzt, wie beispielsweise in dem `<video>`-Tag. Beim Inspizieren des Elements mit Hilfe der Chrome Developer Tools oder den Firefox Entwicklungs-Werkzeugen, wird deutlich, dass das `<video>` Tag einen Shadow DOM beinhaltet, welcher die Steuerelemente des Videos erzeugt. Neben dem `<video>`-Tag sind auch die verschiedenen `<input>` Elemente, wie z.B. das `<input type="password">` mit einem Shadow-DOM ausgestattet [citeulike:13851424].
+Durch Kapselung ist es möglich, Details eines Objektes von anderen Teilen des Programms zu verstecken. Das Programm muss nur wissen, wie es auf die benötigten Funktionen zugreift, jedoch nicht, wie das Objekt die Funktionen intern umsetzt. Dieses Konzept ist in allen objektorientierten Programmiersprachen umgesetzt, jedoch nicht in der Webentwicklung. Beispielsweise kann das CSS oder JavaScript, das für ein Element geschrieben ist, auch das CSS oder JavaScript anderer Elemente beeinflussen, wenn es nicht konsequent geschrieben wurde. Je größer das Projekt wird, desto unübersichtlicher und komplexer wird es zu gewährleisten, dass CSS oder JavaScript sich nicht ungewollt auf andere Teile der Webseite auswirkt. Diesem Problem widmet sich der Shadow DOM, welcher ein Sub-DOM unterhalb eines Elementes darstellt und es ermöglicht, HTML und CSS in sich zu kapseln und zu verstecken. Der Shadow DOM wird bereits in HTML5 standardmäßig eingesetzt, wie beispielsweise in dem `<video>` Tag. Beim Inspizieren des Elements mit Hilfe der Chrome Developer Tools oder den Firefox Entwicklungswerkzeugen, wird deutlich, dass das `<video>` Tag einen Shadow DOM beinhaltet, welcher die Steuerelemente des Videos erzeugt. Neben dem `<video>`-Tag sind auch die verschiedenen `<input>` Elemente, wie z.B. das `<input type="password">` mit einem Shadow DOM ausgestattet [citeulike:13851424].
 
 ![Bild: input type='password' Element](images/3-shadow-dom-input-type-password.jpg "input type='password' Element. Quelle: Selbst erstellt")
 
@@ -19,7 +19,7 @@ Neben dem vom Shadow DOM vorgegebenen HTML, können auch Inhalte aus dem Light D
 
 ### Insertion Points
 
-Um das zu präsentierende HTML und den Inhalt zu trennen, wird ein `<template>` Tag benutzt. Dieses beinhaltet das komplette Markup, das im Shadow DOM stehen und nicht nach außen sichtbar sein oder von CSS oder JavaScript von außen manipuliert werden soll. Um nun Inhalte aus dem Light DOM in den DOM des `<template>`-Tags zu projizieren, muss das `<template>`-Tag einen `<content>`-Tag beinhalten, in dem die Inhalte von außen dargestellt werden sollen. Mittels `createShadowRoot()` wird das ausgewählte Element zu einem ein Shadow Host, also dem Shadow DOM beinhaltendem Element gemacht. Der Inhalt des Templates wird geklont und dem Shadow Host angehängt. Der Shadow DOM projiziert nun alle Inhalte des Shadow Roots in den `<content>`-Tag [citeulike:13851404].
+Um das zu präsentierende HTML und den Inhalt zu trennen, wird ein `<template>` Tag benutzt. Dieses beinhaltet das komplette Markup, das im Shadow DOM stehen und nicht nach außen sichtbar sein oder von CSS oder JavaScript von außen manipuliert werden soll. Um nun Inhalte aus dem Light DOM in den DOM des `<template>`-Tags zu projizieren, muss das `<template>`-Tag einen `<content>` Tag beinhalten, in dem die Inhalte von außen dargestellt werden sollen. Mittels `createShadowRoot()` wird das ausgewählte Element zu einem ein Shadow Host, also dem Shadow DOM beinhaltendem Element gemacht. Der Inhalt des Templates wird geklont und dem Shadow Host angehängt. Der Shadow DOM projiziert nun alle Inhalte des Shadow Roots in den `<content>` Tag [citeulike:13851404].
 
 ```html
 <div id="shadow">Content</div>
@@ -137,7 +137,7 @@ Das obige Beispiel wird vom Browser wie folgt gerendert:
 ![Bild: Shadow DOM Beispiel](images/3-shadow-dom-beispiel.jpg "Shadow DOM Beispiel. Quelle: Selbst erstellt")
 
 
-Anhand des gerenderten Outputs werden einige Dinge deutlich. Mit der Angabe des `select`-Attributs, werden im `<content>` Tag nur die `<div>` Tags mit der ID "hello" aus dem Shadow Root, welcher per `var root = document.querySelector('#hello').createShadowRoot()` erzeugt wird, gerendert. Der Paragraph mit der ID "hidden" wird hingegen nicht gerendert, da er nicht im `select` mit inbegriffen ist. Die CSS Regel `.content { background-color: khaki; }` des Eltern HTML Dokumentes greift nicht, da die Styles des Shadow Roots durch die Shadow Boundary gekapselt werden. Die CSS Regel `.styled { color: green; }` greift allerdings, da das `div` Element mit der Klasse ".styled" aus dem Light DOM in den Shadow DOM projiziert wird. Außerdem können Innerhalb des Templates CSS Regeln für die beinhaltenden Elemente definiert werden, somit wird das `div` Element ohne eine zugehörige Klasse mit der Regel `.content { color: red; }` auch dementsprechend in Rot gerendert.
+Anhand des gerenderten Outputs werden einige Dinge deutlich. Mit der Angabe des `select`-Attributs, werden im `<content>`-Tag nur die `<div>`-Tags mit der ID "hello" aus dem Shadow Root, welcher per `var root = document.querySelector('#hello').createShadowRoot()` erzeugt wird, gerendert. Der Paragraph mit der ID "hidden" wird hingegen nicht gerendert, da er nicht im `select` mit inbegriffen ist. Die CSS Regel `.content { background-color: khaki; }` des Eltern HTML Dokumentes greift nicht, da die Styles des Shadow Roots durch die Shadow Boundary gekapselt werden. Die CSS Regel `.styled { color: green; }` greift allerdings, da das `<div>` Element mit der Klasse ".styled" aus dem Light DOM in den Shadow DOM projiziert wird. Außerdem können Innerhalb des Templates CSS-Regeln für die beinhaltenden Elemente definiert werden, somit wird das `<div>` Element ohne eine zugehörige Klasse mit der Regel `.content { color: red; }` auch dementsprechend in Rot gerendert.
 
 
 ### Browserunterstützung
@@ -145,17 +145,3 @@ Anhand des gerenderten Outputs werden einige Dinge deutlich. Mit der Angabe des 
 Der Shadow DOM ist noch nicht vom W3C standardisiert, sondern befindet sich noch im Status eines "Working Draft" [citeulike:13879687]. Er wird deshalb bisher nur von Google Chrome ab Version 43 und Opera ab Version 33 nativ unterstützt.
 
 ![Bild: Shadow DOM Browserunterstützung](images/3-shadow-dom-browserunterstuetzung.jpg "Shadow DOM Browserunterstützung. Quelle: [citeulike:13883407]")
-
-
-### Quellen
-
-- [citeulike:13851424] Jarrod Overson & Jason Strimpel, Developing Web Components, O'Reilly 2015, S.109-126
-- [citeulike:13851334] Rob Dodson, Shadow DOM CSS Cheat Sheet, 2014, http://robdodson.me/shadow-dom-css-cheat-sheet/
-- [citeulike:13851350] Colin Ihrig, The Basics of the Shadow DOM, 2012, http://www.sitepoint.com/the-basics-of-the-shadow-dom/
-- [citeulike:13851404] Dominic Cooney, Shadow DOM 101, 2013, http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/
-- [citeulike:13851421] Eric Bidelman, Shadow DOM 201, 2014, http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/
-- [citeulike:13851402] Eric Bidelman, Shadow DOM 301, 2013, http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-301/
-- [citeulike:13883407] Can I Use, http://caniuse.com/#search=shadow%20dom
-- [citeulike:13879687] W3C Shadow DOM ,http://www.w3.org/TR/shadow-dom/
-- [citeulike:13883067] CSS Scoping Module Level 1, https://drafts.csswg.org/css-scoping/
-- [citeulike:13883381] CSS Custom Properties for Cascading Variables Module Level 1, https://drafts.csswg.org/css-variables/

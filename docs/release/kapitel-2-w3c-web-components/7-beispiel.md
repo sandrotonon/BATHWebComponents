@@ -99,5 +99,5 @@ Anhand der vorhergehenden Abschnitte wird in diesem Abschnitt die Implementierun
 - Das Element ist somit vollständig und kann in einer beliebigen Webseite oder Applikation eingesetzt werden
 - Hierzu muss diese das Element mittels `<link rel="import" href="elements/custom-element.html">` zunächst importieren
 - Es kann dann mit entsprechenden Attributen und Inhalt auf der Seite eingebettet werden, wie beispielsweise mit der Konfiguration `<custom-element theme="style1">Reader</custom-element>`
-- Das komplette Beispiel der Komponente (TODO Verweis), sowie dessen Einbindung in ein HTML Dokument (TODO Verweis), sind im Anhang zu finden.
+- Das komplette Beispiel der Komponente (TODO Verweis), sowie dessen Einbindung in ein HTML Dokument (TODO Verweis), sind im Anhang zu finden
 
