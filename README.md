@@ -36,10 +36,10 @@ GitRepository meiner Bachelor Thesis "Web-Component-basierte Entwicklung mit Pol
 
 
 ```
-**TODO**:        Der Inhalt muss noch erstellt werden
-**Contents**:    Der Inhalt ist vorhanden, muss aber noch reingeschrieben werden
-**Clean**:       Der Inhalt ist reingeschrieben
-**In Progress**: Der Inhalt wird erstellt
+TODO:        Der Inhalt muss noch erstellt werden
+Contents:    Der Inhalt ist vorhanden, muss aber noch reingeschrieben werden
+Clean:       Der Inhalt ist reingeschrieben
+In Progress: Der Inhalt wird erstellt
 ```
 
 
