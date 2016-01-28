@@ -50,7 +50,7 @@ In Progress: Der Inhalt wird erstellt
 
 - Englische Namen ohne Bindestrich - Shadow DOM, Custom Element
 - Zusammengesetzte Wörter (Englisch/Code/Abkürzung/Deutsch) mit Bindestrich - CSS-Regeln, `<div>`-Tag
-- Code-Bestandteile mit ```` markieren - `<div>`
+- Code-Bestandteile mit `` `` markieren - `<div>`
 
 
 ### Quellen
