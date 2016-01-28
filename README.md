@@ -23,7 +23,8 @@ GitRepository meiner Bachelor Thesis "Web-Component-basierte Entwicklung mit Pol
 - Kapitel 5 - Zusätzliche Polymer Funktionalitäten
   + 5.1 [One-Way und Two-Way Data-Binding](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-5-additional-sugar/1-additional-sugar.md) : **Clean**
   + 5.2 [Visit GitHub](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-5-additional-sugar/1-additional-sugar.md) : **Clean**
-  + 5.3 [Behaviors](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-5-additional-sugar/1-additional-sugar.md)Events : **Clean**
+  + 5.3 [Behaviors](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-5-additional-sugar/1-additional-sugar.md) : **Clean**
+  + 5.4 [Events](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-5-additional-sugar/1-additional-sugar.md) : **Clean**
 - Kapitel 6 - Polymer Best Practices
   + 6.1 [UI Performance Patterns](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-6-best-practices/1-best-practices.md) : **Clean**
   + 6.2 [Gesture System](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-6-best-practices/1-best-practices.md) : **Clean**
