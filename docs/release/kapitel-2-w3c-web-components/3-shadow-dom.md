@@ -40,12 +40,12 @@ shadow.appendChild(clone);
 Im Light DOM gerendert wird dabei nur der Text "Content" des `<div>`-Tags mit der ID `shadow`, der Wrapper um das `<content>`-Tag wird nicht gerendert, da dieser im Shadow DOM steht. Somit wurde eine Trennung des präsentierenden HTML und dem Inhalt erreicht, die Präsentation erfolgt im Shadow DOM, der Inhalt steht im Light DOM. Werden nun mehrere HTML-Elemente oder Knoten in den Shadow DOM projiziert, werden diese "Distributed Nodes" genannt. Diese Distributed Nodes sind nicht wirklich im Shadow DOM, sondern werden nur in diesem gerendert, das bedeutet, dass sie auch von außen gestylt werden können, mehr dazu im Abschnitt "Styling mit CSS". Des Weiteren können auch nur bestimmte Elemente in den Shadow DOM projiziert werden, ermöglicht wird dies mit dem Attribut `select="selector"` des `<content>`-Tags. Dabei können sowohl Namen von Elementen, als auch CSS Selektoren verwendet werden [citeulike:13851402]. Der Inhalt des `<content>`-Tags können mit JavaScript nicht traversiert werden, beispielsweise gibt `console.log(shadow.querySelector('content'));` `null` aus. Allerdings ist es erlaubt die Distributed Nodes, mittels `.getDistributedNodes()` auszugeben. Dies lässt darauf schließen, dass der Shadow DOM nicht als Sicherheits-Feature angedacht ist, da die Inhalte nicht komplett isoliert sind.
 
 
-## Shadow Insertion Points
+### Shadow Insertion Points
 
 Neben den Insertion Points für Inhalte, also dem `<content>` Insertion Point, gibt es auch Insertion Points für andere Shadow DOMs, die `<shadow>` Insertion Points, welche Shadow Insertion Points genannt werden. Shadow Insertion Points sind, ebenso wie Insertion Points, Platzhalter, doch statt einem Platzhalter für den Inhalt eines Hosts, sind sie Platzhalter für Shadow DOMs. Falls jedoch mehrere Shadow Insertion Points in einem Shadow DOM sind, wird nur der erste berücksichtigt, die restlichen werden ignoriert. Wenn nun mehrere Shadow DOMs projiziert werden sollen, muss im zuletzt hinzugefügten Shadow DOM (younger tree) ein `<shadow>`-Tag stehen, dieser rendert den zuvor hinzugefügten Shadow DOM (older tree), somit wird eine Shadow DOM Schachtelung ermöglicht [citeulike:13851421].
 
 
-## Styling mit CSS
+### Styling mit CSS
 
 Eines der Hauptfeatures des Shadow DOM ist die Shadow Boundary, welche Kapselung von Stylesheets standardmäßig mit sich bringt. Sie gewährleistet, dass Style-Regeln des Light DOM nicht in den Shadow DOM rein kommen und andersrum [citeulike:13851334]. Dies gilt jedoch nur für die Präsentation des Inhalts, nicht für den Inhalt selbst. Nachfolgend wird auf die wichtigsten Selektoren für das Styling eingegangen.
 

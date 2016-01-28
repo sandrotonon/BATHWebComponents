@@ -17,7 +17,7 @@ x-element Komponente
 </dom-module>
 ```
 
-- Das HTML, das die Komponente benutzt kann nun die Variable `--x-element-button-color` instanziieren
+- Das HTML, das die Komponente benutzt kann nun die Variable `--x-element-button-color` definieren
 
 ```html
 <style is="custom-style">
@@ -28,9 +28,9 @@ x-element Komponente
 ```
 
 - Das `is="custom-style"` Attribut des `<style>` Tags ist für den Polyfill, da CSS Properties noch nicht in den Browsern implementiert sind
-- Nun soll jedoch nicht für jedes CSS Attribut eine Variable angelegt werden
+- Nun soll jedoch nicht für jedes CSS-Attribut eine Variable angelegt werden
 - Um mehrere CSS Attribute einer Komponente zu ändern können Mixins erstellt werden, welche eine Sammlung an Styles auf eine Komponente anwenden
-- Wenn wird das x-element Beispiel erweitert:
+- So kann das obige Beispiel um das `--x-element` Mixin erweitert werden:
 
 ```html
 <style is="custom-style">
@@ -91,18 +91,17 @@ shared-styles.html
 ### Style Module benutzen
 
 - Damit eine Komponente diese Styles nutzen kann, muss sie zwei Dinge erfüllen:
-    + Es muss einen `<link>` Tag definieren, der das Style Module importiert
-    + Es muss einen `<style>` Tag definieren, der die Styles an der richtigen Stelle inkludiert
+    + Es muss einen `<link>`-Tag definieren, der das Style Module importiert
+    + Es muss einen `<style>`-Tag definieren, der die Styles an der richtigen Stelle inkludiert
 
 ```html
-<!-- import the module  -->
 <link rel="import" href="../shared-styles/shared-styles.html">
 <dom-module id="x-element">
   <template>
     <!-- include the style module by name -->
     <style include="shared-styles"></style>
     <style>:host { display: block; }</style>
-    Hi
+    Some local DOM
   </template>
   <script>Polymer({is: 'x-element'});</script>
 </dom-module>

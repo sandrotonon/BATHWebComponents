@@ -98,7 +98,7 @@
 
 ### Lifecycle Callbacks
 
-- Lifecycle Callbacks (Siehe Kapitel 2 - 2) werden ebenso von Polymer unterstützt
+- Lifecycle Callbacks (Siehe Kapitel 2.2) werden ebenso von Polymer unterstützt
 - diese können in dem Prototyp als Attribut bei ihrem normalen Namen oder in verkürzter Form angegeben werden, so heißt beispielsweise die `createdCallback` Methode `created`, die `attachedCallback` heißt `attached` etc.
 - Beispiel: `created: function { ... }`
 - Zusätzlich bietet Polymer einen `readyCallback`, welcher aufgerufen wird, nachdem Polymer das Element erstellt und den lokalen DOM initialisiert hat (Zusammenfassung von createdCallback und Element ist registriert), also nachdem alle im lokalen DOM befindlichen Elemente konfiguriert wurden und jeweils ihre `ready` Methode aufgerufen haben
@@ -110,7 +110,7 @@
 ## Shadow DOM und HTML Templates
 
 - Die erzeugten Custom Elements existieren bisher nur ohne eigenes Markup
-- Wie bei den nativen Technologien, können auch mit Polymer erzeugte Custom Elements um HTML-Markup, den lokalen DOM, erweitert werden
+- Wie bei den nativen Technologien, können auch mit Polymer erzeugte Custom Elements um HTML-Markup, den lokalen DOM, erweitert werden [citeulike:13915080]
 - Hierzu muss das Polymer `<dom-module>`-Element benutzt werden
 - Diesem muss der Wert `is`-Eigenschaft des Polymer-Prototyps als ID zugewiesen werden
 - Der definierte HTML Markup muss dann in einem `<template>`-Tag dem `<dom-module>` hinzugefügt werden
@@ -132,14 +132,42 @@
 - Der deklarative Teil des Elements, das `<dom-module>` und dessen Inhalte, sowie der Imperative Teil mit dem `Polymer({ ... })` Aufruf können entweder in der selben oder in getrennten HTML-Dateien stehen
 - Hierbei spielt es jedoch keine Rolle ob das `<script`-Tag innerhalb oder außerhalb des `<dom-module>`-Tags steht, solange das Template vor dem Polymer-Funktionsaufruf geparst wird
 
-- https://www.polymer-project.org/1.0/docs/devguide/local-dom.html
+
+### Shady DOM
+
+- Wie in Kapitel 2.3.9 gezeigt, wird der Shadow DOM nicht von allen Browsern unterstützt, ebenso ist der Polyfill aufgrund dessen schlechter Performanz (siehe Kapitel 2.7.4) für diesen nur als aller letzte Instanz zu sehen
+- Aus diesen Gründen ist in Polymer der sogenannte "Shady DOM" implementiert [citeulike:13886251]
+- Dieser bietet einen Shadow DOM ähnlichen Scope für den DOM Tree, dabei rendert er den DOM als wenn kein Shadow DOM in dem Element vorhanden wäre
+- Dies bringt wiederum auch die dadurch Nachteile mit sich, dass internes Markup nach Außen sichtbar ist, keine Shadow Boundary verfügbar ist usw.
+- Der Vorteil ist jedoch, dass der Shady DOM genug Methoden für einen Scope bereitstellt um sich wie ein Shadow DOM verhalten zu können
+- Hierzu ist es jedoch zwingend notwendig die eigens entwickelte Shady DOM API im Umgang mit dem DOM Tree zu benutzen
+- Erreicht wird das mit der `Polymer.dom(node)` Funktion
+- Will man beispielsweise alle Kinder mit der `children`-Eigenschaft des Shadow Host Elements `<my-element>` selektieren, so erfolgt dies mit der Shady DOM API mittels `var children = Polymer.dom(my-element).children;` statt mit der normalen DOM API mittels `var children =  document.getElementsByTagName("my-element")[0].children;`
+- Die Shady DOM API bildet dabei alle Funktionen der nativen DOM API ab und ist performanter als der Shadow DOM Polyfill, da nicht dessen Verhalten, sondern nur ein eigener DOM Scope implementiert ist
+- Jedoch beschränkt sich Polymer nicht nur auf den Shady DOM, vielmehr ist er mit dem nativen Shadow DOM kompatibel, sodass die Shady DOM API auf den nativen Shadow DOM zugreifen kann, falls dieser von dem Browser unterstützt wird
+- Es kann also eine Applikation implementiert werden, die auf allen Plattformen mit einer verbesserten Performanz funktioniert
+- Besonders die mobilen Browser profitieren hiervon
+- Standardmäßig benutzt Polymer jedoch immer die eigene Shady DOM API, wie das verhindert werden kann wird in Kapitel 6.1.2 dargestellt
 
 
 ### Content Projection
 
-- Insertion Points gleich wie bei nativ (DOM Distribution):
-    + In shadow DOM, the browser maintains separate light DOM and shadow DOM trees, and creates a merged view (the composed tree) for rendering purposes.
-    + In shady DOM, Polymer maintains its own light DOM and shady DOM trees. The document’s DOM tree is effectively the composed tree.
+- Ebenso wie mit den nativen Technologien, können auch in Polymer in Custom Elements geschachtelte Kind Elemente (Light DOM) in den Shady DOM hineinprojiziert werden
+- Hierzu dient das schon bekannte `<content>`-Element, welches einen Insertion Point im lokalen DOM der Komponente für den Light DOM darstellt
+- Wie auch bei den nativen Insertion Points, kann das `<content>`-Element auch nur selektierte Inhalte annehmen, in dem das `select`-Attribut mit einem entsprechenden Selektor gesetzt wird
+- Falls der Shadow DOM in Polymer verfügbar ist, so wird (wie nativ auch), eine Zusammenstellung des Shadow DOM Tress und dem Light DOM gerendert
+- Ist der Shadow DOM jedoch nicht verfügbar und der Shady DOM wird verwendet, so ist der zusammengesetzte DOM der tatsächliche DOM des Elements
+- Auch kann in Polymer mittels der `_observer`-Eigenschaft überwacht werden, ob Kind-Elemente der Komponente hinzugefügt oder von ihr entfernt werden
+- Dazu wird dieser die Funktion `observeNodes(callback)` übergeben, welche ausgeführt wird, wenn Elemente hinzugefügt oder entfernt werden
+- Der Parameter `callback` ist dabei eine anonyme Funktion, welche als Übergabewert das Objekt `info` hat, in welchem die hinzugefügten oder entfernten Knoten enthalten sind
+- Eine Implementierung der Überwachung des `contentNode`-Knotens auf Änderungen könnte dabei wie folgt aussehen:
+
+```javascript
+this._observer = Polymer.dom(this.$.contentNode).observeNodes(function(info) {
+  this.processNewNodes(info.addedNodes);
+  this.processRemovedNodes(info.removedNodes);
+});
+```
 
 
 ### Styling
@@ -157,16 +185,6 @@ siehe styling.md
 - Jedoch werden nur die statisch erzeugten DOM Knoten hinzugefügt, dynamisch mittels `dom-repeat` oder `dom-if` hinzugefügte Knoten allerdings nicht
 - Dynamisch hinzugefügte Knoten können mit der `$$`-Funktion selektiert werden
 - So liefert die Funktion `this.$$(selector);` das erste Element mit der ID `selector` des Templates
-
-
-### Shady DOM
-
-Performance under iOS is great with Shady DOM, at the expense of needing to use its APIs to get the effects of DOM scoping and composition.
-
-- https://www.polymer-project.org/1.0/articles/shadydom.html
-
-
-### DOM API
 
 
 ## HTML Imports
