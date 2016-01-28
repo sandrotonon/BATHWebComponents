@@ -16,7 +16,7 @@ GitRepository meiner Bachelor Thesis "Web-Component-basierte Entwicklung mit Pol
 - Kapitel 3 - Einführung in Polymer
   + 3.1 - [Architektur](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-3-polymer/1-polymer.md) : **Clean**
   + 3.2 - [Elemente Katalog](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-3-polymer/1-polymer.md) : **Clean**
-- Kapitel 4 - Analogie mit nativen Web Components
+- Kapitel 4 - Analogie zu nativen Web Components
   + 4.1 [Custom Elements](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-4-analogie/1-analogie.md) : **Contents**
   + 4.2 [Shadow DOM / Templates](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-4-analogie/1-analogie.md) : **TODO**
   + 4.3 [HTML Imports](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-4-analogie/1-analogie.md) : **Clean**
@@ -31,7 +31,7 @@ GitRepository meiner Bachelor Thesis "Web-Component-basierte Entwicklung mit Pol
   + 6.3 [A11y - Barrierefreiheit in Polymer](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-6-best-practices/1-best-practices.md) : **Clean**
 - Kapitel 7 - Entwicklung einer Polymer Komponente und Vergleich mit AngularJS
   + 7.1 [Entwicklung der Komponente](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-7-polymer-komponente/1-polymer-komponente.md) : **TODO**
-  + 7.2 [Vergleich mit AngularJS Implementierung](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-7-polymer-komponente/2-angular-vergleich.md) : **In Progress**
+  + 7.2 [Vergleich mit AngularJS Implementierung](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-7-polymer-komponente/2-angular-vergleich.md) : **Contents**
 - Kapitel 8 - [Zukunftsprognose](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-8-zukunftsprognose/1-zukunftsprognose.md) : **Clean**
 - Anhang : **In Progress**
 
@@ -45,6 +45,13 @@ In Progress: Der Inhalt wird erstellt
 
 
 ## Konventionen
+
+### Schreibweisen
+
+- Englische Namen ohne Bindestrich - Shadow DOM, Custom Element
+- Zusammengesetzte Wörter (Englisch/Code/Abkürzung/Deutsch) mit Bindestrich - CSS-Regeln, `<div>`-Tag
+- Code-Bestandteile mit ```` markieren - `<div>`
+
 
 ### Quellen
 
