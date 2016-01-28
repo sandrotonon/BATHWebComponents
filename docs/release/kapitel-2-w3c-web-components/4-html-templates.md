@@ -4,7 +4,7 @@ Bisher gibt es ohne ein Framework keine Möglichkeit im Browser Templates zu ren
 
 Im Kontext der Entwicklung einer MVC-Applikation ist der Mechanismus der Darstellung der Präsentations-Schicht, also dem View, besonders wichtig. Bisher ist dies ohne weiteres problemlos serverseitig in PHP, Ruby oder ähnlichem möglich, da diese Sprachen für die Webentwicklung bereits vorhandene Codes für die Darstellung wiederverwenden können, die sogenannten Templates. Im Gegensatz zu den serverseitigen Technologien, existieren Client-seitige Lösungen bisher nur als Framework, wie beispielsweise Mustache.js oder Handlebars.js [citeulike:13853015]. Eine native Möglichkeit Templates auf der Client-Seite zu benutzen fehlt bisher hingegen vollständig. An diese Problematik setzen die HTML Templates an, durch welche diese Technik auch Einzug in den Browser erhält.
 
-"Das HTML template-Element <template> dient dazu, Client-seitige Inhalte zu gruppieren, die nicht gerendert werden, wenn die Seite geladen wird, sondern anschließend zur Laufzeit mittels JavaScript gerendert werden können. Template kann als Inhaltsfragment aufgefasst werden, das für eine spätere Verwendung im Dokument gespeichert wird." [citeulike:13852997]
+>Das HTML template-Element <template> dient dazu, Client-seitige Inhalte zu gruppieren, die nicht gerendert werden, wenn die Seite geladen wird, sondern anschließend zur Laufzeit mittels JavaScript gerendert werden können. Template kann als Inhaltsfragment aufgefasst werden, das für eine spätere Verwendung im Dokument gespeichert wird. [citeulike:13852997]
 
 
 ### Bisherige Umsetzung von Templates im Browser
@@ -24,7 +24,7 @@ Das folgende Beispiel zeigt die Umsetzung eines Templates mit Hilfe eines `<div>
 </div>
 ```
 
-Der entscheidende Nachteil dieser Methode ist, dass alle Ressourcen, also alle verlinkten Dateien, beim Laden der Webseite auch heruntergeladen werden. Zwar werden sie nicht angezeigt, dennoch verursachen sie eine große Datenmenge die initial übertragen werden muss. Dies geschieht in diesem Fall selbst wenn die Ressourcen eventuell erst später oder gar nicht benötigt werden, was eine massive Einschränkung der verfügbaren Bandbreite und Browser-Performance mit sich bringen kann. Des weiteren kann es sich als schwierig erweisen ein solches Code-Fragment zu stylen oder gar Themes auf mehrere solcher Fragmente anzuwenden. Eine Webseite, die das Template verwendet, muss alle CSS Regeln für das Template mit `#mydivtemplate` erstellen, welche sich unter Umständen auf andere Teile der Webseite auswirken können. Eine Kapselung wird hier somit nicht vorgesehen.
+Der entscheidende Nachteil dieser Methode ist, dass alle Ressourcen, also alle verlinkten Dateien, beim Laden der Webseite auch heruntergeladen werden. Zwar werden sie nicht angezeigt, dennoch verursachen sie eine große Datenmenge die initial übertragen werden muss. Dies geschieht in diesem Fall selbst wenn die Ressourcen eventuell erst später oder gar nicht benötigt werden, was eine massive Einschränkung der verfügbaren Bandbreite und Browser-Performance mit sich bringen kann. Des weiteren kann es sich als schwierig erweisen ein solches Code-Fragment zu stylen oder gar Themes auf mehrere solcher Fragmente anzuwenden. Eine Webseite, die das Template verwendet, muss alle CSS-Regeln für das Template mit `#mydivtemplate` erstellen, welche sich unter Umständen auf andere Teile der Webseite auswirken können. Eine Kapselung wird hier somit nicht vorgesehen.
 
 
 **Via `script`-Element:**
@@ -74,14 +74,15 @@ Falls nun jedoch in einem Template mehrere weitere Templates geschachtelt sind, 
 
 ### Browserunterstützung
 
-HTML Templates sind bis dato als einzige Technologie des Web Components Technology Stacks vom W3C als Standard erklärt worden [citeulike:13853159]. Somit ist auch die Browserunterstützung in den aktuellen Browsern, bis auf den Internet Explorer, sehr gut. Sie sind des weiteren die einzige Technologie der Web Components, die bisher von Microsofts Edge ab Version 13 unterstützt werden.
+HTML Templates sind zum Stand dieser Arbeit als einzige Technologie des Web Components Technology Stacks vom W3C als Standard erklärt worden [citeulike:13853159]. Somit ist auch die Browserunterstützung in den aktuellen Browsern, bis auf den Internet Explorer, sehr gut. Sie sind des weiteren die einzige Technologie der Web Components, die bisher von Microsofts Edge ab Version 13 unterstützt werden.
 
 ![Bild: Browserunterstützung des HTML Template Tags](images/4-html-templates-browserunterstuetzung.jpg "Template Tag Browserunterstzützung. Quelle: http://caniuse.com/#search=template")
 
 
 ### Quellen
 
-- O'Reilly Buch "Developing Web Components", S.101-107- [citeulike:13852997] MDN, <template>, https://developer.mozilla.org/de/docs/Web/HTML/Element/template
+- O'Reilly Buch "Developing Web Components", S.101-107
+- [citeulike:13852997] MDN, <template>, https://developer.mozilla.org/de/docs/Web/HTML/Element/template
 - [citeulike:13853015] https://frontend.namics.com/2014/03/20/web-components-html-templates-2/
 - [citeulike:13853013] http://www.html5rocks.com/en/tutorials/webcomponents/template/
 - [citeulike:13853018] http://webcomponents.org/articles/introduction-to-template-element/

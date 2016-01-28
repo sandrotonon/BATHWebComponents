@@ -5,12 +5,12 @@
 - Ebenso wie bei bei dem nativen Erzeugen einer eigenen Komponente, werden bei Polymer für jede Komponente HTML einzelne HTML Dateien erstellt, welche die Elemente repräsentieren
 - Darin werden alle JavaScript, CSS und HTML Strukturen gesammelt und gekapselt
 - Man distanziert sich somit von der Code-Trennung, stattdessen werden alle Element-spezifischen Inhalte in einer Datei gebündelt
-- Wie funktioniert das und wie werden die Technologien mit Polymer umgesetzt wird jetzt gezeigt
+- Wie funktioniert das und wie werden die Technologien mit Polymer umgesetzt wird in diesem Kapitel dargestellt
 
 
 ## Custom Elements
 
-- Die Intention der Polymer Bibliothek ist das erstellen eigener Komponenten oder Elementen, den Custom Elements
+- Die Intention der Polymer Library ist das erstellen eigener Komponenten oder Elementen, den Custom Elements
 - Das Erstellen, Erweitern und Verwalten von Custom Elements kann mit den nativen Mitteln bei steigender Komplexität mitunter schwierig werden
 - Polymer stellt hierfür eine Reihe an hilfreicher Funktionen bereit, die das Arbeiten mit den Web Components Standards erleichtern und erweitern sollen [citeulike:13915080]
 
@@ -107,19 +107,76 @@
 - So werden die Callbacks eines Elementes in der Reihenfolge `created`, `ready`, `factoryImpl` und `attached`
 
 
-## Shadow DOM / HTML Templates
+## Shadow DOM und HTML Templates
 
-- TODO
+- Die erzeugten Custom Elements existieren bisher nur ohne eigenes Markup
+- Wie bei den nativen Technologien, können auch mit Polymer erzeugte Custom Elements um HTML-Markup, den lokalen DOM, erweitert werden
+- Hierzu muss das Polymer `<dom-module>`-Element benutzt werden
+- Diesem muss der Wert `is`-Eigenschaft des Polymer-Prototyps als ID zugewiesen werden
+- Der definierte HTML Markup muss dann in einem `<template>`-Tag dem `<dom-module>` hinzugefügt werden
+- Auf das Klonen des Inhalts des Templates mittels der `importNode`-Funktion (siehe Kapitel 2.4.3) kann hierbei verzichtet werden, da Polymer diesen automatisch in den lokalen DOM des Elements klont
+- Soll also der lokale DOM des `<element-name>`-Tags deklariert werden, so wird dies solchermaßen erreicht:
+
+```html
+<dom-module id="element-name">
+  <template>Local DOM / Inner HTML markup</template>
+
+  <script>
+    Polymer({
+      is: 'element-name'
+    });
+  </script>
+</dom-module>
+```
+
+- Der deklarative Teil des Elements, das `<dom-module>` und dessen Inhalte, sowie der Imperative Teil mit dem `Polymer({ ... })` Aufruf können entweder in der selben oder in getrennten HTML-Dateien stehen
+- Hierbei spielt es jedoch keine Rolle ob das `<script`-Tag innerhalb oder außerhalb des `<dom-module>`-Tags steht, solange das Template vor dem Polymer-Funktionsaufruf geparst wird
+
+- https://www.polymer-project.org/1.0/docs/devguide/local-dom.html
+
+
+### Content Projection
+
+- Insertion Points gleich wie bei nativ (DOM Distribution):
+    + In shadow DOM, the browser maintains separate light DOM and shadow DOM trees, and creates a merged view (the composed tree) for rendering purposes.
+    + In shady DOM, Polymer maintains its own light DOM and shady DOM trees. The document’s DOM tree is effectively the composed tree.
+
+
+### Styling
+
+siehe styling.md
+
+- https://www.polymer-project.org/1.0/docs/devguide/styling.html
+
+
+### DOM Knoten automatisch finden
+
+- Um das traversieren in dem lokalen DOM zu beschleunigen, bietet Polymer eine Hilfsfunktion für das sogenannte automatische Knoten-Finden oder auch "Automatic node finding"
+- Hierzu wird intern ein Mapping zu den statisch erzeugten DOM Elementen erzeugt in dem jedes Element des lokalen DOM-Templates, für welches eine ID definiert wurde, in dem `this.$` Hash gespeichert wird
+- Hat nun also das Element `<div id="wrapper"></div>` in dem Template die ID `wrapper`, so kann es in Polymer mittels `this.$.wrapper` selektiert werden
+- Jedoch werden nur die statisch erzeugten DOM Knoten hinzugefügt, dynamisch mittels `dom-repeat` oder `dom-if` hinzugefügte Knoten allerdings nicht
+- Dynamisch hinzugefügte Knoten können mit der `$$`-Funktion selektiert werden
+- So liefert die Funktion `this.$$(selector);` das erste Element mit der ID `selector` des Templates
+
+
+### Shady DOM
+
+Performance under iOS is great with Shady DOM, at the expense of needing to use its APIs to get the effects of DOM scoping and composition.
+
+- https://www.polymer-project.org/1.0/articles/shadydom.html
+
+
+### DOM API
 
 
 ## HTML Imports
 
-Um mehrere Polymer Komponenten oder Komponenten innerhalb Komponenten zu benutzen, verwendet Polymer HTML Imports. Diese funktionieren analog zu der Verwendung mit der nativen HTML Import Technologie (siehe Abschnitt 2.5 - HTML Imports), wobei die selben Vor- und Nachteile auftreten. Polymer kümmert sich dabei lediglich automatisch im Hintergrund um die korrekte Einbindung der HTML Dateien und dessen Bereitstellung im Dokument, falls ein `<linkg rel="import">` in einer Komponente enthalten ist. Das manuelle Einbinden mittels der speziellen JavaScript Methoden oder Eigenschaften, wie die `import` Eigenschaft des importierten Elementes, wird somit hinfällig.
+Um mehrere Polymer Komponenten oder Komponenten innerhalb anderer Komponenten zu benutzen, verwendet Polymer HTML Imports. Diese funktionieren analog zu der Verwendung mit der nativen HTML Imports Technologie (siehe Abschnitt 2.5 - HTML Imports), wobei die selben Vor- und Nachteile auftreten. Polymer kümmert sich dabei lediglich automatisch im Hintergrund um die korrekte Einbindung der HTML-Dateien und dessen Bereitstellung im Dokument, falls ein `<link rel="import">` in einer Komponente enthalten ist. Das manuelle Einbinden mittels der speziellen JavaScript Methoden oder Eigenschaften, wie beispielsweise der `import`-Eigenschaft des importierten Elementes, wird somit hinfällig.
 
 
 ### Dynamisches Nachladen von HTML
 
-Falls HTML Dateien dynamisch zur Laufzeit nachgeladen werden sollen, bietet Polymer zusätzlich eine Hilfsfunktion an, mit der HTML Imports nachträglich ausgeführt werden können [citeulike:13914840]. Die hierfür bereitgestellte Funktion `importHref(url, onload, onerror);` importiert beim Aufruf dynamisch eine HTML Datei in das Dokument. Sie erstellt dabei ein `<link rel="import">` Element mit der angegeben URL und fügt es dem Dokument hinzu, sodass dieser ausgeführt werden kann. Wenn der Link geladen wurde, also der `onload` Callback aufgerufen wird, ist die `import` Eigenschaft des Links der Inhalt des zurückgegebenen, importierten HTML Dokumentes. Der Parameter `onerror` ist dabei eine optionale Callback-Funktion, die beim Auftreten eines Fehlers aufgerufen wird.
+Falls HTML-Dateien dynamisch zur Laufzeit nachgeladen werden sollen, bietet Polymer zusätzlich eine Hilfsfunktion an, mit der HTML Imports nachträglich ausgeführt werden können [citeulike:13914840]. Die hierfür bereitgestellte Funktion `importHref(url, onload, onerror);` importiert beim Aufruf dynamisch die angegebene HTML-Datei in das Dokument. Sie erstellt dabei ein `<link rel="import">`-Element mit der angegeben URL und fügt es dem Dokument hinzu, sodass dieser ausgeführt werden kann. Wenn der Link geladen wurde, also der `onload`-Callback aufgerufen wird, ist die `import`-Eigenschaft des Links der Inhalt des zurückgegebenen, importierten HTML-Dokumentes. Der Parameter `onerror` ist dabei eine optionale Callback-Funktion, die beim Auftreten eines Fehlers aufgerufen wird.
 
 
 

@@ -44,19 +44,19 @@ In Progress: Der Inhalt wird erstellt
 ```
 
 
+## Sonstige TODOs
+
+- Bilder im Text referenzieren
+
+
 ## Konventionen
 
 ### Schreibweisen
 
 - Englische Namen ohne Bindestrich - Shadow DOM, Custom Element
 - Zusammengesetzte Wörter (Englisch/Code/Abkürzung/Deutsch) mit Bindestrich - CSS-Regeln, `<div>`-Tag
-- **Code**-Bestandteile mit \`\` markieren - `` `<div>` ``
+- Nur **Code**-Bestandteile mit \`\` markieren - `` `<div>` ``
 
-
-### Quellen
-
-Quellen werden inline via einem `[<Quelle> <Jahr>]` "Tag" angegeben.
-Am Ende des Dokumentes ist eine Unterüberschrift *Quellen*, in der alle benutzten Quellen angegeben werden.
 
 ### Bilder
 

@@ -9,7 +9,7 @@
 - Abschnitt 3.1 zeigt die Architektur von Polymer
 - In abschnitt 3.2. wird gezeigt, wie Polymer Funktioniert in Anbetracht der Analogien zu den Nativen Web Components 
 - In Abschnitt 3.3 werden zusätzliche Features von Polymer dargestellt
-- In Abschnitt 3.4 werden Best practices für performante und optimal bedienbare Applikationen, die mit Polymer gebaut wurden, gezeigt
+- In Abschnitt 3.4 werden Best practices für performante und optimal bedienbare, mit Polymer gebaute Applikationen gezeigt
 
 
 ## Architektur

@@ -1,6 +1,6 @@
 # Web Components nach dem vorläufigen W3C Standard
 
-In diesem Kapitel wird auf die Problemlösungen der Web Components nach den Vorstellungen des W3C eingegangen. In Abschnitt 2.2 wird die erste Technologie vorgestellt, die Custom Elements, in Abschnitt 2.3 wird auf den Shadow DOM eingegangen, Abschnitt 2.4 widmet sich den HTML Templates und Abschnitt 2.5 zeigt die letzte Technologie, die HTML Imports. In Abschnitt 2.6 werden die Polyfills erklärt, welche für die Technologien noch zwingend notwendig sind.
+In diesem Kapitel wird auf die Problemlösungen der Web Components nach den Vorstellungen des W3C eingegangen. In Abschnitt 2.2 wird die erste Technologie vorgestellt, die Custom Elements, in Abschnitt 2.3 wird auf den Shadow DOM eingegangen, Abschnitt 2.4 widmet sich den HTML Templates und Abschnitt 2.5 zeigt die letzte Technologie, die HTML Imports. In Abschnitt 2.6 werden die Polyfills erklärt, welche für die Technologien noch zwingend notwendig sind. Abschließend wird in Kapitel 2.7, anhand der in diesem Kapitel erklärten Technologien, eine exemplarische Komponente implementiert.
 
 
 ## Problemlösung

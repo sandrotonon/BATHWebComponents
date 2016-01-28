@@ -4,7 +4,7 @@
 - (siehe Abschnitt 3.2. Declared Properties)
 - (siehe Kapitel 3.2. - hostAttributes)
 
-Polymer bietet eine zusätzliche Applikations-Schicht mit einigen hilfreichen Funktionalitäten, die das Arbeiten mit den Komponenten vereinfachen. Die wichtigsten, wie One-Way und Two-Way Data-Binding, Behaviors und Events, werden in diesem Abschnitt dargestellt.
+Polymer bietet eine zusätzliche Applikations-Schicht mit einigen hilfreichen Funktionalitäten, die das Arbeiten mit den Komponenten vereinfachen. Die wichtigsten, wie One-Way und Two-Way Data-Binding, Behaviors und Events, werden in diesem Kapitel dargestellt.
 
 
 ## One-Way und Two-Way Data-Binding

@@ -1,7 +1,5 @@
 # CSS Styling und externe Stylesheets
 
-## Einführung
-
 - Komponenten können CSS Properties (also Variablen) nach außen sichtbar machen, damit diese von außerhalb der Komponente gesetzt werden können um somit das CSS in einer gekapselten Komponente bestimmen zu können
 - Hierbei können auch Standardangaben gemacht werden, die von der Komponente übernommen werden, wenn die Variable nicht definiert wird
 - Beispiel:
@@ -111,6 +109,11 @@ shared-styles.html
 ```
 
 [Polymer Developer Guide - Styling local DOM 2015]
+
+
+## Unterschiede
+
+- http://unobfuscated.blogspot.de/2015/03/polymer-and-web-component-accessibility.html
 
 
 ## Quellen

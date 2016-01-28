@@ -1,6 +1,6 @@
 ## Vergleich mit AngularJS Implementierung
 
-- Die mit Polymer implementierte Multi-Navigation-Applikation wird möglichst ähnlich mit Angular nachgebaut
+- Die mit Polymer implementierte Multi-Navigation-Applikation wird möglichst ähnlich mit Angular nachgebaut (https://github.com/glur4k/angular-multi-navigation-app)
 - Diese beiden unterschiedlichen Implementierungen, sowie generelle Unterschiede beider Frameworks bzw. Bibliotheken werden in diesem Abschnitt miteinander verglichen
 
 
@@ -48,10 +48,3 @@
 - Mit Polymer entwickelte Komponenten können einfach mit anderen Custom Elements interagieren, da sie normaler DOM sind, AngularJS mit anderen SPA-Frameworks zu kombinieren ist nur sehr schwierig umsetzbar
 - Deployment von AngularJS Direktiven ist nicht so einfach wie in Polymer, da die Templates immer relativ zum Projekt oder Domain-Root liegen müssen (Zusätzlicher Build schritt nötig, der das template in den Template-Cache schreiben muss, oder Template in die Direktive serialisieren)
 
-
-
-
-- http://www.binpress.com/blog/2014/06/26/polymer-vs-angular/ 
-- http://www.oyecode.com/2015/05/angularjs-20-or-polymer-open-discussion.html
-- http://slides.com/jshcrowthe/polymer-webcomponents-and-angularjs#/24
-- https://github.com/Polymer/project/issues/1
