@@ -30,3 +30,6 @@ Lösung:
 
 - Drucken:
     + Treiber laden! (Seiten unterschiedlich dunkel)
+
+- Hurenkind und Schusterjunge
+\widowpenalty und \clubpenalty

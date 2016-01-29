@@ -172,6 +172,8 @@ this._observer = Polymer.dom(this.$.contentNode).observeNodes(function(info) {
 
 ### Styling
 
+- TODO
+
 siehe styling.md
 
 - https://www.polymer-project.org/1.0/docs/devguide/styling.html
