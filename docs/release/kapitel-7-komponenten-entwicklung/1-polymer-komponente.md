@@ -64,6 +64,7 @@ auf Computer installieren:
 `![Bild: <Darstellung der multi-navigation-app Komponente>](images/1-multi-navigation-app.jpg "<Darstellung der multi-navigation-app Komponente>")`
 
 - Die Komponente steht unter Versionskontrolle und ist auf GitHub unter der Adresse https://github.com/glur4k/multi-navigation-app sowie im Anhang zu finden
+- Sie kann nun mittels dem Tag `<multi-navigation-app>` auf allen Webseiten und Applikationen eingebunden werden
 
 
 ### Deployment mit Bower
