@@ -22,16 +22,15 @@ GitRepository meiner Bachelor Thesis "Web-Component-basierte Entwicklung mit Pol
   + 4.3 [HTML Imports](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-4-analogie/1-analogie.md) : **Clean**
 - Kapitel 5 - Zusätzliche Polymer Funktionalitäten
   + 5.1 [One-Way und Two-Way Data-Binding](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-5-additional-sugar/1-additional-sugar.md) : **Clean**
-  + 5.2 [Visit GitHub](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-5-additional-sugar/1-additional-sugar.md) : **Clean**
-  + 5.3 [Behaviors](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-5-additional-sugar/1-additional-sugar.md) : **Clean**
-  + 5.4 [Events](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-5-additional-sugar/1-additional-sugar.md) : **Clean**
+  + 5.2 [Behaviors](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-5-additional-sugar/1-additional-sugar.md) : **Clean**
+  + 5.3 [Events](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-5-additional-sugar/1-additional-sugar.md) : **Clean**
 - Kapitel 6 - Polymer Best Practices
   + 6.1 [UI Performance Patterns](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-6-best-practices/1-best-practices.md) : **Clean**
   + 6.2 [Gesture System](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-6-best-practices/1-best-practices.md) : **Clean**
   + 6.3 [A11y - Barrierefreiheit in Polymer](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-6-best-practices/1-best-practices.md) : **Clean**
-- Kapitel 7 - Entwicklung einer Polymer Komponente und Vergleich mit AngularJS
-  + 7.1 [Entwicklung der Komponente](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-7-polymer-komponente/1-polymer-komponente.md) : **TODO**
-  + 7.2 [Vergleich mit AngularJS Implementierung](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-7-polymer-komponente/2-angular-vergleich.md) : **Contents**
+- Kapitel 7 - Komponenten Entwicklung
+  + 7.1 [Entwicklung und Deployment einer Polymer Komponente](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-7-komponenten-entwicklung/1-polymer-komponente.md) : **In Progress**
+  + 7.2 [Vergleich mit Komponentenentwicklung in AngularJS](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-7-komponenten-entwicklung/2-angular-vergleich.md) : **Contents**
 - Kapitel 8 - [Zukunftsprognose](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-8-zukunftsprognose/1-zukunftsprognose.md) : **Clean**
 - Anhang : **In Progress**
 
@@ -47,6 +46,7 @@ In Progress: Der Inhalt wird erstellt
 ## Sonstige TODOs
 
 - Bilder im Text referenzieren
+- HTML Templates vor Shadow DOM
 
 
 ## Konventionen
