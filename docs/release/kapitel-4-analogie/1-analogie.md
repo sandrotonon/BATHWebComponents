@@ -24,7 +24,7 @@
 - Anschließend muss das Element erstellt und dem DOM hinzugefügt werden
 - Dies geschieht imperativ und deklarativ analog zu dem Erstellen und Anhängen der nativen Methode mit `var element = document.createElement('element-name');` bzw. mit dem zurückgegebenen Konstruktor oder im HTML Markup mit dem erstellen HTML Tag `<element-name></element-name>`
 - Will man statt dem standardmäßig erstellen Konstruktor einen Konstruktor erstellen, dem man Argumente übergeben kann, so muss in dem Prototyp die Methode `factoryImpl` mit den entsprechenden Argumenten definiert werden
-- diese feuert nach dem Ausführen einen `factoryImpl` Callback (siehe Lifecycle Callbacks)
+- diese feuert nach dem Ausführen einen `factoryImpl` Callback (siehe Lifecycle-Callback-Funktionen)
 - `factoryImpl` wird allerdings nur aufgerufen, wenn ein Element mit dem Konstruktor, nicht jedoch beim Verwenden der `document.createElement` Methode oder im HTML Markup erzeugt wird
 
 
@@ -96,9 +96,9 @@
 - Um Daten von einem HTML Element an das hostAttributes Objekt zu propagieren muss auf eine alternative Syntax zugegriffen werden (siehe Kapitel ## Binden von nativen Attributen)
 
 
-### Lifecycle Callbacks
+### Lifecycle-Callback Funktionen
 
-- Lifecycle Callbacks (Siehe Kapitel 2.2) werden ebenso von Polymer unterstützt
+- Lifecycle-Callback Funktionen (Siehe Kapitel 2.2) werden ebenso von Polymer unterstützt
 - diese können in dem Prototyp als Attribut bei ihrem normalen Namen oder in verkürzter Form angegeben werden, so heißt beispielsweise die `createdCallback` Methode `created`, die `attachedCallback` heißt `attached` etc.
 - Beispiel: `created: function { ... }`
 - Zusätzlich bietet Polymer einen `readyCallback`, welcher aufgerufen wird, nachdem Polymer das Element erstellt und den lokalen DOM initialisiert hat (Zusammenfassung von createdCallback und Element ist registriert), also nachdem alle im lokalen DOM befindlichen Elemente konfiguriert wurden und jeweils ihre `ready` Methode aufgerufen haben

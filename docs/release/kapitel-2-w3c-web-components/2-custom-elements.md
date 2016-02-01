@@ -114,9 +114,9 @@ ButtonExtendedProto.answer = 42;
 ```
 
 
-### Custom Element lifecycle callbacks
+### Custom Element Lifecycle-Callbacks
 
-Custom Elements bieten eine standardisierte API an speziellen Methoden, den "Custom Element lifecycle callbacks", welche es ermöglichen Funktionen zu unterschiedlichen Zeitpunkten, vom Registrieren bis zum löschen eines Custom Elements, auszuführen. Diese ermöglichen es zu bestimmen, wann und wie ein bestimmter Code des Custom Elements ausgeführt werden soll.
+Custom Elements bieten eine standardisierte API an speziellen Methoden, den "Custom Element Lifecycle-Callbacks", welche es ermöglichen Funktionen zu unterschiedlichen Zeitpunkten, vom Registrieren bis zum löschen eines Custom Elements, auszuführen. Diese ermöglichen es zu bestimmen, wann und wie ein bestimmter Code des Custom Elements ausgeführt werden soll.
 
 **createdCallback**
 
@@ -134,7 +134,7 @@ Die `detachedCallback`-Funktion wird ausgeführt, wenn ein Custom Element aus de
 
 Die `attributeChangedCallback`-Funktion wird ausgeführt, wenn ein Attribut eines Custom Elements mittels `MyElement.setAttribute()` geändert wurde.
 
-So können die Lifecycle Callbacks für ein neues erweitertes Button-Element  wie folgt definiert werden [citeulike:13844988].
+So können die Lifecycle-Callbacks für ein neues erweitertes Button-Element  wie folgt definiert werden [citeulike:13844988].
 
 ```javascript
 var ButtonExtendedProto = Object.create(HTMLElement.prototype);

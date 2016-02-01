@@ -14,8 +14,8 @@ GitRepository meiner Bachelor Thesis "Web-Component-basierte Entwicklung mit Pol
   + 2.6 [Polyfills mit webcomponents.js](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/6-polyfills.md) : **Clean**
   + 2.7 [Implementierung einer Komponente mit den nativen Web Component APIs](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/7-beispiel.md) : **Clean**
 - Kapitel 3 - Einführung in Polymer
-  + 3.1 - [Architektur](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-3-polymer/1-polymer.md) : **Clean**
-  + 3.2 - [Elemente Katalog](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-3-polymer/1-polymer.md) : **Clean**
+  + 3.1 - [Architektur](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-3-polymer/1-polymer.md) : **Contents**
+  + 3.2 - [Elemente Katalog](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-3-polymer/1-polymer.md) : **Contents**
 - Kapitel 4 - Analogie zu nativen Web Components
   + 4.1 [Custom Elements](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-4-analogie/1-analogie.md) : **Contents**
   + 4.2 [Shadow DOM / Templates](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-4-analogie/1-analogie.md) : **Contents**
@@ -29,8 +29,8 @@ GitRepository meiner Bachelor Thesis "Web-Component-basierte Entwicklung mit Pol
   + 6.2 [Gesture System](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-6-best-practices/1-best-practices.md) : **Clean**
   + 6.3 [A11y - Barrierefreiheit in Polymer](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-6-best-practices/1-best-practices.md) : **Clean**
 - Kapitel 7 - Komponenten Entwicklung
-  + 7.1 [Entwicklung und Deployment einer Polymer Komponente](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-7-komponenten-entwicklung/1-polymer-komponente.md) : **Contents**
-  + 7.2 [Vergleich mit Komponentenentwicklung in AngularJS](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-7-komponenten-entwicklung/2-angular-vergleich.md) : **Contents**
+  + 7.1 [Entwicklung und Deployment einer Polymer Komponente](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-7-komponenten-entwicklung/1-polymer-komponente.md) : **Clean**
+  + 7.2 [Vergleich mit Komponenten-Entwicklung in AngularJS](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-7-komponenten-entwicklung/2-angular-vergleich.md) : **Contents**
 - Kapitel 8 - [Zukunftsprognose](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-8-zukunftsprognose/1-zukunftsprognose.md) : **Clean**
 - Anhang : **In Progress**
 

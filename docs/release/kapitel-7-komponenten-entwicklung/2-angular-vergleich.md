@@ -1,4 +1,4 @@
-## Vergleich mit Komponentenentwicklung in AngularJS
+## Vergleich mit Komponenten-Entwicklung in AngularJS
 
 - Die mit Polymer implementierte Multi-Navigation-Applikation wird möglichst ähnlich mit Angular nachgebaut (https://github.com/glur4k/angular-multi-navigation-app)
 - Diese beiden unterschiedlichen Implementierungen, sowie generelle Unterschiede beider Frameworks bzw. Bibliotheken werden in diesem Abschnitt miteinander verglichen
