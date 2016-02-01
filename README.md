@@ -12,7 +12,7 @@ GitRepository meiner Bachelor Thesis "Web-Component-basierte Entwicklung mit Pol
   + 2.4 [HTML Templates](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/4-html-templates.md) : **Clean**
   + 2.5 [HTML Imports](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/5-html-imports.md) : **Clean**
   + 2.6 [Polyfills mit webcomponents.js](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/6-polyfills.md) : **Clean**
-  + 2.7 [Implementierung einer Komponente mit den nativen Web Component APIs](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/7-beispiel.md) : **Contents**
+  + 2.7 [Implementierung einer Komponente mit den nativen Web Component APIs](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/7-beispiel.md) : **Clean**
 - Kapitel 3 - Einführung in Polymer
   + 3.1 - [Architektur](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-3-polymer/1-polymer.md) : **Clean**
   + 3.2 - [Elemente Katalog](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-3-polymer/1-polymer.md) : **Clean**
