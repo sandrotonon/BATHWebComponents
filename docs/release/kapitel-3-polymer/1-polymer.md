@@ -2,20 +2,13 @@
 
 - TODO: Architektur: Abbildung X
 
-- In Kapitel 2 wurden die nativen HTML Web Component Standards gezeigt
-- Auf diese setzt die Bibliothek Polymer auf, die den Umgang mit ihnen vereinfachen sowie deren Funktionalitäten erweitern soll
-- Dadurch will polymer es ermöglichen gekapselte Komponenten zu bauen welche wiederum von Komponenten verwendet, oder mit anderen Komponenten verbunden werden können um komplexe Applikationen zu entwickeln
-- Polymer ("Poly" - mehrere, "mer" - Teile) ist dabei eine Metapher für die Polymerisation von einzelnen Monomeren, den nativen HTML Elementen, zu einem großen Molekül, einer Web Komponente
-- Abschnitt 3.1 zeigt die Architektur von Polymer
-- In abschnitt 3.2. wird gezeigt, wie Polymer Funktioniert in Anbetracht der Analogien zu den Nativen Web Components 
-- In Abschnitt 3.3 werden zusätzliche Features von Polymer dargestellt
-- In Abschnitt 3.4 werden Best practices für performante und optimal bedienbare, mit Polymer gebaute Applikationen gezeigt
+Die Library Polymer setzt auf die in Kapitel zwei gezeigten Web Components Standards auf und soll den Umgang mit ihnen vereinfachen sowie deren Funktionalitäten erweitern. Dadurch will es Polymer ermöglichen gekapselte Komponenten zu bauen, welche wiederum von Komponenten verwendet oder mit anderen Komponenten verbunden werden können um komplexe Applikationen zu entwickeln. Der Name Polymer ("Poly" - mehrere, "mer" - Teile) ist dabei eine Metapher für die Polymerisation von einzelnen Monomeren, den nativen HTML Elementen, zu einem großen Molekül, einer Web Komponente. In diesem Kapitel wird in Abschnitt 3.1 die Architektur der Library gezeigt, in Abschnitt 3.2 wird der darauf aufsetzende Elemente Katalog dargestellt.
 
 
 ## Architektur
 
-- Eine Applikation, welche mittels Polymer implementiert wird lässt sich in folgende Schichten, wie in Abbildung X illustriert, aufteilen
-- Die Browser Schicht stellt die nativen APIs der Web Technologien dar, welche von der webcomponents.js Schicht (siehe Abschnitt 2.6 - Polyfills mit webcomponents.js) ersetzt oder erweitert werden können, falls der Browser die notwendige Technologie nicht unterstützen sollte
+Eine mit Hilfe von Polymer implementierte Komponente lässt sich in die in Abbildung X dargestellten Schichten unterteilen. Die Browser-Schicht stellt die nativen APIs der Web Technologien dar, welche von der Polyfill-Schicht, den webcomponents.js Polyfills (siehe Abschnitt 2.6), ersetzt oder erweitert werden können, falls der Browser die notwendige Technologie nicht unterstützt. Polymer kann dabei als Konformitäts-Schicht aufgefasst werden, welche auf die nativen Technologien bzw. den Polyfills aufsetzt. Diese selbst setzt sich wiederum aus folgenden drei Schichten zusammen [citeulike:13915080].
+
 - Polymer kann dabei als Konformitäts-Schicht aufgefasst werden, welche auf die nativen Technologien bzw. den Polyfills aufsetzt
 - Diese selbst setzt sich wiederum aus folgenden drei Schichten zusammen [citeulike:13915080]
 - Der `polymer-micro` Schicht, welche die fundamentalen Funktionalitäten für das Erzeugen von Custom Elements bietet, die `polymer-mini` Schicht, welche den Umgang mit einem lokalen DOM in einer Polymer Komponente erweitert und erleichtert, und zuletzt der `polymer` Schicht, der Standard Schicht die zusätzliche, allgemeine Funktionalitäten für den Umgang mit Web Components bietet
@@ -83,7 +76,7 @@
 
 **Molecules - Mo**
 
-- Weitere Elemente, welche Wrapper für third-party Bibliotheken bilden
+- Weitere Elemente, welche Wrapper für third-party Libraries bilden
 
 
 **Carbon Elements - C (in Entwicklung)**
