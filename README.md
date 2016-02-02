@@ -30,7 +30,7 @@ GitRepository meiner Bachelor Thesis "Web-Component-basierte Entwicklung mit Pol
   + 6.3 [A11y - Barrierefreiheit in Polymer](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-6-best-practices/1-best-practices.md) : **Clean**
 - Kapitel 7 - Komponenten Entwicklung
   + 7.1 [Entwicklung und Deployment einer Polymer Komponente](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-7-komponenten-entwicklung/1-polymer-komponente.md) : **Clean**
-  + 7.2 [Vergleich mit Komponenten-Entwicklung in AngularJS](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-7-komponenten-entwicklung/2-angular-vergleich.md) : **Contents**
+  + 7.2 [Vergleich mit Komponenten-Entwicklung in AngularJS](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-7-komponenten-entwicklung/2-angular-vergleich.md) : **Clean**
 - Kapitel 8 - [Zukunftsprognose](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-8-zukunftsprognose/1-zukunftsprognose.md) : **Clean**
 - Anhang : **In Progress**
 
@@ -47,6 +47,13 @@ In Progress: Der Inhalt wird erstellt
 
 - Bilder im Text referenzieren
 - HTML Templates vor Shadow DOM
+- Abschnitte am Anfang eines Kapitels erläutern:
+  + Kapitel 2 - Clean
+  + Kapitel 3 - Clean
+  + Kapitel 4 - Clean
+  + Kapitel 5
+  + Kapitel 6
+  + Kapitel 7 - Clean
 
 
 ## Konventionen
@@ -56,6 +63,11 @@ In Progress: Der Inhalt wird erstellt
 - Englische Namen ohne Bindestrich - Shadow DOM, Custom Element
 - Zusammengesetzte Wörter (Englisch/Code/Abkürzung/Deutsch) mit Bindestrich - CSS-Regeln, `<div>`-Tag
 - Nur **Code**-Bestandteile mit \`\` markieren - `` `<div>` ``
+
+
+### Definitionen
+
+- das Shadow DOM - des Shadow DOMs, des Dokuments, des Elements
 
 
 ### Bilder

@@ -39,7 +39,7 @@ Die Gold Elements sind eine Sammlung an buchstäblich wertvollen, goldenen Eleme
 
 **Neon Elements - Ne**
 
-Die Neon Elements sind bunt und verspielt. Mit ihnen können beispielsweise Animationen erstellt werden.
+Die Neon Elements sind neben den Paper Elements auf UI-Ebene einsetzbar. Mit ihnen können beispielsweise Animationen erstellt werden.
 
 
 **Platinum Elements - Pt**
@@ -49,7 +49,7 @@ Wie die Gold Elements sind auch die Platinum Elements sehr wertvoll, jedoch in e
 
 **Molecules - Mo**
 
-Die Molecules sind weitere Elemente als Wrapper für third-party Libraries.
+Die Molecules sind weitere Elemente als Wrapper für third-party-Libraries.
 
 
 **Carbon Elements - C (in Entwicklung)**
