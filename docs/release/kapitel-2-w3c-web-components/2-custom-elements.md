@@ -52,7 +52,7 @@ Ist ein Element noch nicht definiert und nicht beim Browser registriert, steht a
 
 Ein Custom Element, das zwar standardkonform deklariert oder erstellt, aber noch nicht beim Browser registriert wurde, ist es ein "Unresolved Element". Steht dieses Element am Anfang des DOM, wird jedoch erst später registriert, kann es nicht von CSS angesprochen werden. Dadurch kann ein FOUC entstehen, was bedeutet, dass das Element beim Laden der Seite nicht gestylt dargestellt wird, sondern erst nachdem es registriert wurde, das definierte Aussehen übernimmt. Um dies zu verhindern, sieht die HTML Spezifikation eine neue CSS-Pseudoklasse `:unresolved` vor, welche deklarierte aber nicht registrierte Elemente anspricht. Somit können diese Elemente initial beim Laden der Seite ausgeblendet, und nach dem Registrieren wieder eingeblendet werden. Dadurch wird ein ungewolltes Anzeigen von ungestylten Inhalten verhindert [citeulike:13844984].
 
-```
+```html
 my-element:unresolved {
   display: none;
 }
@@ -84,9 +84,9 @@ Um es nun im DOM zu benutzen, muss der Name des erweiterten Elementes via dem At
 
 HTML:
 ```html
-  <div class="wrapper">
-    <button is="button-extended"></button>
-  </div>
+<div class="wrapper">
+  <button is="button-extended"></button>
+</div>
 ```
 
 

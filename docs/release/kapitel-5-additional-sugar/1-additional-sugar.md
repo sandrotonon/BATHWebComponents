@@ -35,15 +35,6 @@ Mittels dem Two-Way Data-Binding, auch automatic Binding genannt, können Daten 
 Um Werte an von HTML reservierte Attribute, also das `hostAttributes` Objekt (siehe Kapitel 3.2. - hostAttributes), statt an Eigenschaften der Komponente zu binden (was mit der normalen `=` Syntax erreicht wird), muss die hierfür vorgesehene `=$` Attribut-Binding Syntax verwendet werden. So wird beispielsweise in dem Element `<div class=$"{{myClass}}"></div>` die Eigenschaft `myClass` tatsächlich dem Attribut `class`, statt der Eigenschaft zugewiesen. Polymer wandelt hierbei bei Verwendung der `=$` Syntax die Zuweisung in die Anweisung `<div>.setAttribute('class', myClass);` um. Das Binden von nativen Attributen ist somit automatisch immer nur in eine Richtung, also One-Way von Host zu Kind Element. Im Allgemeinen sollte die Syntax immer dann verwendet werden, wenn das `style`, `href`, `class`, `for` oder auch `data-*` Attribute gesetzt werden sollen.
 
 
-### Binden von srtukturierten Daten?
-### Binden von Arrays?
-
-
-### Quellen
-
-- [citeulike:13914892] https://www.chromium.org/developers/polymer-1-0#TOC-Achieving-data-binding-nirvana
-
-
 ## Behaviors
 
 Auch wenn in Polymer nur ein beschränktes Vererben mit Hilfe von Type Extensions möglich ist, gibt es dennoch die Möglichkeit Komponenten mit geteilten Code-Modulen zu erweitern [citeulike:13915080]. Diese Module werden innerhalb von Polymer Behaviors genannt. Behaviors erlauben es, einen Code in mehrere Komponenten einzubinden um diese mit einem gewissen Verhalten oder mit zusätzlichen Funktionalitäten auszurüsten. Mit Hilfe der Behaviors haben Entwickler eine gute Kontrolle darüber, welche externen Codes in die eigene Komponente fließen. Sie können im Elemente Katalog gefunden und eingesehen werden. Dort sind sie unter Anderem in den Iron Elementen mit Input-Validierungen oder in den Neon Elementen mit Animationsverhalten auffindbar.
@@ -53,15 +44,16 @@ Auch wenn in Polymer nur ein beschränktes Vererben mit Hilfe von Type Extension
 
 Behaviors sind globale Objekte und sollten in einem eigenem Namespace, wie z.B. dem `window` Namespace mit `window.MyBehaviors = window.MyBehaviors || {};`, definiert werden, da die von Polymer intern benutzten Behaviors sind im Polymer Objekt verankert sind. Dadurch können Kollisionen mit zukünftigen Behaviors von Polymer verhindert werden. 
 Behaviors haben eine starke Ähnlichkeit zu normalen Polymer Elementen, sie besitzen ebenso Properties, Listener Ojbekte etc. Ein simples Behavior könnte beispielsweise wie folgt definiert werden [citeulike:13915079].
-```
+
+```javascript
 MyBehaviors.HelloBehavior = {
-    properties: { ... },
-    listeners: {
-        mousedown: '_sayHello',
-    },
-    _sayHello: function() {
-        alert('Hello!');
-    }
+  properties: { ... },
+  listeners: {
+    mousedown: '_sayHello',
+  },
+  _sayHello: function() {
+    alert('Hello!');
+  }
 }
 ```
 
@@ -71,19 +63,14 @@ Dieses Behavior würde, falls es von einer Polymer Komponente benutzt würde, ei
 ### Behaviors erweitern
 
 Wie auch Komponenten wiederum andere Komponenten erweitern können, können ebenso Behaviors erweitert werden. Somit können auch Behaviors untereinander geteilte Funktionalitäten einbinden. Um ein Behavior zu erweitern, müssen zunächst alle Behaviors importiert werden, welche das neue Behavior beinhalten soll. Anschließend wird das Verhalten des neuen Behaviors implementiert. Um das neue Behavior nun tatsächlich mit den anderen Behaviors zu erweitern, wird es als Array aus den importieren Behaviors und dem neu implementieren Behavior definiert, wie in dem folgenden Beispiel dargestellt.
-```
+
+```html
 <link rel="import" href="oldbehavior.html">
 <script>
-    NewBehavior = { ... }
-    NewBehavior = [ OldBehavior, NewBehavior ]
+  NewBehavior = { ... }
+  NewBehavior = [ OldBehavior, NewBehavior ]
 </script>
 ```
-
-
-### Quellen
-
-- [citeulike:13915079] https://github.com/Polymer/polycasts/blob/master/ep21-behaviors/behaviors-demo/elements/pressed-behavior/pressed-behavior.html
-- https://www.youtube.com/watch?v=YrlmieL3Z0k&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN&index=2&feature=iv&src_vid=Lwvi1u4XXzc&annotation_id=annotation_1360810993
 
 
 ## Events
@@ -99,30 +86,26 @@ Alternativ zur imperativen Definition von Events mittels dem `listeners` Objekt,
 ### Selbst definierte Events
 
 Falls das gewünschte Event nicht existieren sollte, können von Host Elementen und dessen Kind Elementen auch selbst definierte Events ausgelöst werden. Hierfür muss von der Komponente die Hilfsfunktion `fire(eventName, data);` aufgerufen werden, welches wiederum von anderen Events ausgelöst werden kann. Im folgenden Beispiel wird das Auslösen eines selbst erstellten Events mit der deklarativen Methode verdeutlicht. Der Button in Zeile 3 ruft die Funktion `postClick` auf, wenn er geklickt wird. Diese wiederum feuert mittels der Hilfsfunktion `fire` das Event `fire`. Nun kann aus dem umschließenden Dokument, der eigenen Komponente oder aus anderen Komponenten auf das Event gehört werden, in dem die Funktion `addEventListener` (Zeile 17) auf das Event abfeuernde Element gebunden wird.
-```
-<dom-module id="my-element">
-    <template>
-      <button on-click="postClick">Click Me</button>
-    </template>
 
-    <script>
-        Polymer({
-            is: 'my-element',
-            postClick: function(e, detail) {
-                this.fire('fire', {data: 'fired'});
-            }
-        });
-    </script>
+```html
+<dom-module id="my-element">
+  <template>
+    <button on-click="postClick">Click Me</button>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'my-element',
+      postClick: function(e, detail) {
+        this.fire('fire', {data: 'fired'});
+      }
+    });
+  </script>
 </dom-module>
 
 <script>
-    document.querySelector('my-element').addEventListener('fire', function (e) {
-        alert(e.detail.data);
-    })
+  document.querySelector('my-element').addEventListener('fire', function (e) {
+    alert(e.detail.data);
+  })
 </script>
 ```
-
-
-## Quellen
-
-- [citeulike:13915080] https://www.polymer-project.org/1.0/docs/devguide/feature-overview.html

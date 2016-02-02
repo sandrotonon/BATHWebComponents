@@ -14,29 +14,29 @@ Anhand der vorhergehenden Abschnitte wird in diesem Abschnitt die Implementierun
 Um ein neues Custom Element zu registrieren, wird zunächst ein `HTMLElement` Prototyp `CustomElementProto` mittels `Object.create(HTMLElement.prototype)` erstellt. Dieser wird anschließend um die Eigenschaft `theme` und dessen Standardwert `style1` erweitert, welches das deklarativ konfigurierbare Attribut `theme` abbildet. Nun können die Lifecycle-Callback-Funktionen `createdCallback` und `attributeChangedCallback` der Komponente definiert werden.
 
 ```javascript
-  CustomElementProto.createdCallback = function() {
-    if (this.hasAttribute('theme')) {
-      var theme = this.getAttribute('theme');
-      this.setTheme(theme);
-    } else {
-      this.setTheme(this.theme);
-    }
-  };
+CustomElementProto.createdCallback = function() {
+  if (this.hasAttribute('theme')) {
+    var theme = this.getAttribute('theme');
+    this.setTheme(theme);
+  } else {
+    this.setTheme(this.theme);
+  }
+};
 
-  CustomElementProto.attributeChangedCallback = function(attr, oldVal, newVal) {
-    if (attr === 'theme') {
-      this.setTheme(newVal);
-    }
-  };
+CustomElementProto.attributeChangedCallback = function(attr, oldVal, newVal) {
+  if (attr === 'theme') {
+    this.setTheme(newVal);
+  }
+};
 ```
 
 Die `createdCallback`-Funktion soll zunächst prüfen ob das Attribut `theme` beim Verwenden des `<custom-element>`-Tags verwendet und ein entsprechender Wert gesetzt wurde und übergibt dieses der Hilfsfunktion `setTheme`. Wird das Attribut nicht gesetzt, wird der Standardwert `style1` übergeben. Falls das `style`-Attribut von Außen geändert wird, soll die `attributeChangedCallback` Funktion gewährleisten, dass die Änderung auch von der Komponente übernommen wird, indem sie das Attribut der Hilfsfunktion `setTheme` übergibt. Um das Setzen und Ändern des `theme`-Attributs zu implementieren wird zuletzt die Hilfsfunktion `setTheme` für den Prototyp definiert.
 
 ```javascript
-  CustomElementProto.setTheme = function(val) {
-    this.theme = val;
-    this.outer.className = "outer " + this.theme;
-  };
+CustomElementProto.setTheme = function(val) {
+  this.theme = val;
+  this.outer.className = "outer " + this.theme;
+};
 ```
 
 Diese setzt den übergebenen Parameter, das `theme`-Attribut, als Klasse auf den umschließenden Wrapper `.outer`, welche dabei den zu verwendenden Style der Komponente bestimmt. Da der Prototyp nun alle erforderlichen Eigenschaften besitzt, kann er mit `document.registerElement("custom-element", { prototype: CustomElementProto });` als HTML-Tag `custom-element` in dem importierenden Dokument verfügbar gemacht werden.

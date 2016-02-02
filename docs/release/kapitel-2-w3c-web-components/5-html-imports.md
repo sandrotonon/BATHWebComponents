@@ -133,20 +133,3 @@ Besonders einfach machen HTML Imports das einbinden ganzer Web Applikationen mit
 HTML Imports sind noch nicht vom W3C standardisiert, sondern befinden sich noch im Status eines "Working Draft" [citeulike:13853711]. Sie werden deshalb bisher nur von Google Chrome ab Version 43 und Opera ab Version 33 nativ unterstützt. Seitens Mozilla und dessen Firefox Browser, wird es für HTML Imports auch keine Unterstützung geben, da ihrer Meinung nach, der Bedarf an HTML Imports nach der Einführung von ECMAScript 6 Modules, nicht mehr existiert und da Abhängigkeiten schon mit Tools wie Vulcanize aufgelöst werden können [citeulike:13881144]. Auf Details zu ECMAScript 6 Modules wird an dieser Stelle nicht eingegangen, da diese den Umfang dieser Arbeit überschreiten.
 
 ![Bild: HTML Imports Browserunterstützung](images/5-html-imports-browserunterstuetzung.jpg "HTML Imports Browserunterstützung. Quelle: http://caniuse.com/#search=imports")
-
-
-### Quellen
-
-- [citeulike:13844975] Jarrod Overson & Jason Strimpel, Developing Web Components, O'Reilly 2015, S.139-147
-- [citeulike:13853647] http://www.html5rocks.com/en/tutorials/webcomponents/imports/
-- [citeulike:13853711] Can I Use, http://caniuse.com/#search=imports
-- [citeulike:13853711] Can I Use, http://caniuse.com/#search=http
-- [citeulike:13879681] Vulcanize, https://github.com/polymer/vulcanize
-- http://www.w3.org/TR/html-imports/
-- [citeulike:13853714] Peter Kröner, http://www.peterkroener.de/fragen-zu-html5-und-co-beantwortet-15-web-components-performance-css-variablen-data-urls-async/
-- [citeulike:13853724] http://www.hongkiat.com/blog/html-import/
-- [citeulike:13853700] http://webcomponents.org/articles/introduction-to-html-imports/
-- [citeulike:13853253] https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy
-- [citeulike:13853643] http://www.w3.org/TR/cors/
-- [citeulike:13881144] https://hacks.mozilla.org/2015/06/the-state-of-web-components/
-

@@ -18,7 +18,7 @@ GitRepository meiner Bachelor Thesis "Web-Component-basierte Entwicklung mit Pol
   + 3.2 - [Elemente Katalog](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-3-polymer/1-polymer.md) : **Clean**
 - Kapitel 4 - Analogie zu nativen Web Components
   + 4.1 [Custom Elements](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-4-analogie/1-analogie.md) : **Clean**
-  + 4.2 [Shadow DOM / Templates](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-4-analogie/1-analogie.md) : **Contents**
+  + 4.2 [Shadow DOM / Templates](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-4-analogie/1-analogie.md) : **Clean**
   + 4.3 [HTML Imports](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-4-analogie/1-analogie.md) : **Clean**
 - Kapitel 5 - Zusätzliche Polymer Funktionalitäten
   + 5.1 [One-Way und Two-Way Data-Binding](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-5-additional-sugar/1-additional-sugar.md) : **Clean**

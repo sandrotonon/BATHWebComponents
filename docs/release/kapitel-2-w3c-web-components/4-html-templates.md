@@ -77,15 +77,3 @@ Falls nun jedoch in einem Template mehrere weitere Templates geschachtelt sind, 
 HTML Templates sind zum Stand dieser Arbeit als einzige Technologie des Web Components Technology Stacks vom W3C als Standard erklärt worden [citeulike:13853159]. Somit ist auch die Browserunterstützung in den aktuellen Browsern, bis auf den Internet Explorer, sehr gut. Sie sind des weiteren die einzige Technologie der Web Components, die bisher von Microsofts Edge ab Version 13 unterstützt werden.
 
 ![Bild: Browserunterstützung des HTML Template Tags](images/4-html-templates-browserunterstuetzung.jpg "Template Tag Browserunterstzützung. Quelle: http://caniuse.com/#search=template")
-
-
-### Quellen
-
-- O'Reilly Buch "Developing Web Components", S.101-107
-- [citeulike:13852997] MDN, <template>, https://developer.mozilla.org/de/docs/Web/HTML/Element/template
-- [citeulike:13853015] https://frontend.namics.com/2014/03/20/web-components-html-templates-2/
-- [citeulike:13853013] http://www.html5rocks.com/en/tutorials/webcomponents/template/
-- [citeulike:13853018] http://webcomponents.org/articles/introduction-to-template-element/
-- http://caniuse.com/#search=template
-- [citeulike:13853159] http://www.w3.org/TR/html5/scripting-1.html#the-template-element
-

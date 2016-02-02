@@ -77,20 +77,17 @@ Der deklarative Teil des Elements, das `<dom-module>` und dessen Inhalte, sowie 
 
 ### Shady DOM
 
-Wie in Kapitel 2.3.9 gezeigt, wird der Shadow DOM nicht von allen Browsern unterstützt, ebenso ist der Polyfill für diesen, aufgrund dessen schlechter Performanz (siehe Kapitel 2.7.4), nur als aller letzte Instanz zu sehen. Aus diesen Gründen ist in Polymer der sogenannte "Shady DOM" implementiert [citeulike:13886251]. Dieser bietet einen Shadow DOM ähnlichen Scope für den DOM Tree, dabei rendert er den DOM als wenn kein Shadow DOM in dem Element vorhanden wäre. Dies bringt wiederum auch die dadurch entstehenden Nachteile mit sich, wie dass internes Markup nach Außen sichtbar ist oder keine Shadow Boundary verfügbar ist. Der Vorteil ist jedoch, dass der Shady DOM genug Methoden für seinen Scope bereitstellt um sich wie ein Shadow DOM verhalten zu können ohne die Performanz zu mindern. Hierzu ist es jedoch zwingend notwendig die eigens entwickelte Shady DOM API im Umgang mit dem DOM zu benutzen, was mit der `Polymer.dom(node)`-Funktion erreicht wird. Will man beispielsweise alle Kinder mit der `children`-Eigenschaft des Shadow Host Elements `<my-element>` selektieren, so erfolgt dies mit der Shady DOM API mittels `var children = Polymer.dom(my-element).children;` statt mit der normalen DOM API mittels `var children =  document.getElementsByTagName("my-element")[0].children;`. Diese gibt dann nur die von dem light DOM übergebenen Elemente zurück, ohne die Elemente des internen Markups des Templates zu berücksichtigen. Die Shady DOM API bildet dabei alle Funktionen der nativen DOM API ab und ist performanter als der Shadow DOM Polyfill, da nicht dessen Verhalten, sondern nur ein eigener DOM Scope implementiert ist. Jedoch beschränkt sich Polymer nicht nur auf den eigenen Shady DOM, vielmehr ist er mit dem nativen Shadow DOM kompatibel, sodass die Shady DOM API auf den nativen Shadow DOM zugreifen kann, falls dieser von dem Browser unterstützt wird. Dadurch kann eine Applikation implementiert werden, die auf allen Plattformen mit einer verbesserten Performanz ausgeführt wird, wovon besonders die mobilen Plattformen profitieren. Standardmäßig benutzt Polymer jedoch immer die eigene Shady DOM API, wie das verhindert werden kann wird in Abschnitt 6.1.2 dargestellt.
+Wie in Kapitel 2.3.9 gezeigt, wird der Shadow DOM nicht von allen Browsern unterstützt, ebenso ist der Polyfill für diesen, aufgrund dessen schlechter Performanz (siehe Kapitel 2.7.4), nur als aller letzte Instanz zu sehen. Aus diesen Gründen ist in Polymer der sogenannte "Shady DOM" implementiert [citeulike:13886251]. Dieser bietet einen Shadow DOM ähnlichen Scope für den DOM Tree, dabei rendert er den DOM als wenn kein Shadow DOM in dem Element vorhanden wäre. Dies bringt wiederum auch die dadurch entstehenden Nachteile mit sich, wie dass internes Markup nach Außen sichtbar ist oder keine Shadow Boundary verfügbar ist. Der Vorteil ist jedoch, dass der Shady DOM genug Methoden für seinen Scope bereitstellt um sich wie ein Shadow DOM verhalten zu können ohne die Performanz zu mindern. Hierzu ist es jedoch zwingend notwendig die eigens entwickelte Shady DOM API im Umgang mit dem DOM zu benutzen, was mit der `Polymer.dom(node)`-Funktion erreicht wird. Will man beispielsweise alle Kinder mit der `children`-Eigenschaft des Shadow Host Elements `<my-element>` selektieren, so erfolgt dies mit der Shady DOM API mittels `var children = Polymer.dom(my-element).children;` statt mit der normalen DOM API mittels `var children =  document.getElementsByTagName("my-element")[0].children;`. Diese gibt dann nur die von außen übergebenen (Light DOM) Elemente zurück, ohne die Elemente des internen Markups des Templates zu berücksichtigen. Die Shady DOM API bildet dabei alle Funktionen der nativen DOM API ab und ist performanter als der Shadow DOM Polyfill, da nicht dessen Verhalten, sondern nur ein eigener DOM Scope implementiert ist. Jedoch beschränkt sich Polymer nicht nur auf den eigenen Shady DOM, vielmehr ist er mit dem nativen Shadow DOM kompatibel, sodass die Shady DOM API auf den nativen Shadow DOM zugreifen kann, falls dieser von dem Browser unterstützt wird. Dadurch kann eine Applikation implementiert werden, die auf allen Plattformen mit einer verbesserten Performanz ausgeführt wird, wovon besonders die mobilen Plattformen profitieren. Standardmäßig benutzt Polymer jedoch immer die eigene Shady DOM API, wie das verhindert werden kann ist in Abschnitt 6.1.2 dargestellt.
+
+
+### DOM Knoten automatisch finden
+
+Um Das traversieren in dem lokalen DOM zu beschleunigen, bietet Polymer eine Hilfsfunktion für das automatisches Finden eines Elements oder auch "Automatic node finding" an. Hierzu wird intern ein Mapping zu den statisch erzeugten DOM-Elementen erzeugt in dem jedes Element des lokalen DOM-Templates, für welches eine ID definiert wurde, in dem `this.$`-Hash gespeichert wird. Hat nun also das Element `<div id="wrapper"></div>` in dem Template die ID `wrapper`, so kann es in Polymer mittels `this.$.wrapper` selektiert werden. Jedoch werden dem Hash nur die statisch erzeugten DOM-Knoten hinzugefügt, dynamisch mittels `dom-repeat` oder `dom-if` hinzugefügte Knoten allerdings nicht. Die dynamisch hinzugefügten Knoten können mit der `this.$$`-Funktion selektiert werden. So liefert die Funktion `this.$$(selector);` das erste Element mit der ID `selector` des Templates.
 
 
 ### Content Projection
 
-- Ebenso wie mit den nativen Technologien, können auch in Polymer in Custom Elements geschachtelte Kind Elemente (Light DOM) in den Shady DOM hineinprojiziert werden
-- Hierzu dient das schon bekannte `<content>`-Element, welches einen Insertion Point im lokalen DOM der Komponente für den Light DOM darstellt
-- Wie auch bei den nativen Insertion Points, kann das `<content>`-Element auch nur selektierte Inhalte annehmen, in dem das `select`-Attribut mit einem entsprechenden Selektor gesetzt wird
-- Falls der Shadow DOM in Polymer verfügbar ist, so wird (wie nativ auch), eine Zusammenstellung des Shadow DOM Tress und dem Light DOM gerendert
-- Ist der Shadow DOM jedoch nicht verfügbar und der Shady DOM wird verwendet, so ist der zusammengesetzte DOM der tatsächliche DOM des Elements
-- Auch kann in Polymer mittels der `_observer`-Eigenschaft überwacht werden, ob Kind-Elemente der Komponente hinzugefügt oder von ihr entfernt werden
-- Dazu wird dieser die Funktion `observeNodes(callback)` übergeben, welche ausgeführt wird, wenn Elemente hinzugefügt oder entfernt werden
-- Der Parameter `callback` ist dabei eine anonyme Funktion, welche als Übergabewert das Objekt `info` hat, in welchem die hinzugefügten oder entfernten Knoten enthalten sind
-- Eine Implementierung der Überwachung des `contentNode`-Knotens auf Änderungen könnte dabei wie folgt aussehen:
+Um nun Elemente des Light DOMs in den lokalen DOM der Komponente zu injizieren, bietet Polymer ebenso das von den nativen Methoden bekannte `<content>`-Element an, welches einen Insertion Point des Light DOM im lokalen DOM der Komponente darstellt. Wie auch bei den nativen Insertion Points, kann das `<content>`-Element auch nur selektierte Inhalte injizieren, in dem das `select`-Attribut mit einem entsprechenden Selektor gesetzt wird. Falls der Shadow DOM in Polymer verfügbar ist, so wird eine Zusammenstellung des Shadow DOM und dem Light DOM gerendert. Ist der Shadow DOM jedoch nicht verfügbar und der Shady DOM wird verwendet, so ist der zusammengesetzte DOM der tatsächliche DOM des Elements. Auch kann in Polymer mittels der `_observer`-Eigenschaft überwacht werden, ob Kind-Elemente der Komponente hinzugefügt oder von ihr entfernt werden. Dazu wird dieser die Funktion `observeNodes(callback)` zugewiesen, welche ausgeführt wird, wenn Elemente hinzugefügt oder entfernt werden. Der Parameter `callback` ist dabei eine anonyme Funktion, welche als Übergabewert das Objekt `info` hat, in welchem die hinzugefügten oder entfernten Knoten enthalten sind. Eine Implementierung der Überwachung des `contentNode`-Knotens auf Änderungen könnte dabei wie folgt aussehen:
 
 ```javascript
 this._observer = Polymer.dom(this.$.contentNode).observeNodes(function(info) {
@@ -100,22 +97,9 @@ this._observer = Polymer.dom(this.$.contentNode).observeNodes(function(info) {
 ```
 
 
-### DOM Knoten automatisch finden
-
-- Um das traversieren in dem lokalen DOM zu beschleunigen, bietet Polymer eine Hilfsfunktion für das sogenannte automatische Knoten-Finden oder auch "Automatic node finding"
-- Hierzu wird intern ein Mapping zu den statisch erzeugten DOM Elementen erzeugt in dem jedes Element des lokalen DOM-Templates, für welches eine ID definiert wurde, in dem `this.$` Hash gespeichert wird
-- Hat nun also das Element `<div id="wrapper"></div>` in dem Template die ID `wrapper`, so kann es in Polymer mittels `this.$.wrapper` selektiert werden
-- Jedoch werden nur die statisch erzeugten DOM Knoten hinzugefügt, dynamisch mittels `dom-repeat` oder `dom-if` hinzugefügte Knoten allerdings nicht
-- Dynamisch hinzugefügte Knoten können mit der `$$`-Funktion selektiert werden
-- So liefert die Funktion `this.$$(selector);` das erste Element mit der ID `selector` des Templates
-
-
 ### CSS Styling
 
-- Die in Kapiel X gezeigten Regeln für das Stylen des Shadow DOM sind auch unter Polymer und dessen Shady DOM gültig [citeulike:13915080]
-- Zusätzlich können Komponenten CSS Properties (also Variablen) nach außen sichtbar machen, damit diese von außerhalb der Komponente gesetzt werden können um somit das CSS in einer gekapselten Komponente bestimmen zu können
-- Hierbei können auch Standardangaben gemacht werden, die von der Komponente übernommen werden, wenn die Variable nicht definiert wird
-- Beispiel:
+Die in Abschnitt 2.3.5 gezeigten Regeln für das Stylen des Shadow DOM sind auch unter Polymer und dessen Shady DOM gültig [citeulike:13915080]. Zusätzlich können Komponenten CSS Properties (also Variablen) nach Außen sichtbar machen, damit diese von außerhalb der Komponente gesetzt werden können um somit das CSS in einer gekapselten Komponente zu bestimmen. Hierbei können auch Standardangaben gemacht werden, die von der Komponente übernommen werden, wenn die Variable nicht definiert wird. Um eine Variable bereitzustellen muss diese der entsprechenden Eigenschaft mit der Syntax `var(--variable-name, default)` in den Style-Regeln der Komponente angegeben werden. Das folgende Beispiel zeigt den DOM eines `x-element`, welches die CSS-Variable `x-element-button-color` und dem zugewiesenen Standardwert `red` für einen Button in einem `<div>`-Tag mit der Klasse `x-element-container` bereitstellt.
 
 x-element Komponente
 ```html
@@ -125,12 +109,15 @@ x-element Komponente
       .x-element-container > button {
         color: var(--x-element-button-color, red);
       }
-    </style> 
+    </style>
+    <div class="x-element-container">
+      <button>Click me</button>
+    </div>
   </template>
 </dom-module>
 ```
 
-- Das HTML, das die Komponente benutzt kann nun die Variable `--x-element-button-color` definieren
+Die Applikation, welche die Komponente benutzt kann nun die Variable `--x-element-button-color` definieren, wie nachfolgend gezeigt wird.
 
 ```html
 <style is="custom-style">
@@ -140,10 +127,22 @@ x-element Komponente
 </style>
 ```
 
-- Das `is="custom-style"` Attribut des `<style>` Tags ist für den Polyfill, da CSS Properties noch nicht in den Browsern implementiert sind
-- Nun soll jedoch nicht für jedes CSS-Attribut eine Variable angelegt werden
-- Um mehrere CSS Attribute einer Komponente zu ändern können Mixins erstellt werden, welche eine Sammlung an Styles auf eine Komponente anwenden
-- So kann das obige Beispiel um das `--x-element` Mixin erweitert werden:
+Das Attribut `is="custom-style"` des `<style>`-Tag dient dabei als Anweisung für den Polyfill, da CSS Properties noch nicht von allen Browsern unterstützt werden. Nun soll jedoch nicht für jedes CSS-Attribut eine Variable angelegt werden, da dies schnell unübersichtlich werden kann. Um mehrere CSS-Attribute einer Komponente ändern zu können, können sogenannte Mixins erstellt werden. Diese sind eine Sammlung an Styles, die auf eine Komponente angewendet werden können. Sie werden wie eine CSS-Variable definiert, mit dem Unterschied, dass der Wert ein Objekt ist welches ein oder mehrere Regeln definiert. Um ein Mixin nach Außen bereit zu stellen muss es in der Komponente in den CSS-Regeln mit `@apply(--mixin-name)` bereitgestellt werden. Es kann dann von der verwendenden Applikation verwendet werden. So kann das obige Beispiel um das `--x-element` Mixin erweitert werden:
+
+```html
+<dom-module id="x-element">
+  <template>
+    <style>
+      .x-element-container > button {
+        color: var(--x-element-button-color, red);
+        @apply(--x-element);
+      }
+    </style> 
+  </template>
+</dom-module>
+```
+
+Wobei es wie folgt von der einsetzenden Applikation verwendet werden könnte.
 
 ```html
 <style is="custom-style">
@@ -157,41 +156,21 @@ x-element Komponente
 </style>
 ```
 
-- Um das Mixin auf das x-element anzuwenden, muss im `<style>` des x-element das Mixin via einem `@apply (<mixin-name>);` angegeben werden.
-- Somit sieht das x-element Beispiel wie folgt aus:
-
-```html
-<dom-module id="x-element">
-  <template>
-    <style>
-      .x-element-container > button {
-        color: var(--x-element-button-color, red);
-
-        @apply(--x-element);
-      }
-    </style> 
-  </template>
-</dom-module>
-```
-
 
 ## Gemeinsame Styles mehrerer Komponenten
 
-- Externe Stylesheets werden von Polymer ab Version 1.1 nicht mehr unterstützt
-- Styling für mehrere Komponenten erfolgt mit sog. `style-modules`
+Um nun Style-Regeln auf mehrere Komponenten anzuwenden, stellt Polymer die sogenannten "Style Modules" bereit. Diese ersetzen die ab Version 1.1 nicht mehr unterstützte Möglichkeit externe Stylesheets zu verwenden. Style Modules sind dabei nichts anderes als Komponenten, welche von allen Komponenten importiert werden können, die diese Styles anwenden sollen.
 
 
 ### Style Module anlegen
 
-- Will man Styles für mehrere Komponenten erstellen, kann eine Komponente für diesen Zweck angelegt werden. Diese wird von all jenen Komponenten importiert, welche diese Styles benutzen sollen 
-- Ein Style Module kann dabei folgender Maßen aussehen:
+Um eine Komponente mit geteiltes Style-Regeln zu erstellen genügt es, dass diese die Style-Regeln in einem `<dom-module>`-Tag mit einer beliebigen ID definiert. Dies wird in dem folgenden Beispiel der Datei "shared-styles.html" gezeigt. Darin wird eine Style-Regeln definiert, die den Text aller Elemente mit der Klasse `wrapper` Rot anzeigen lässt.
 
-shared-styles.html
 ```html
 <dom-module id="shared-styles">
   <template>
     <style>
-      .red { color: red; }
+      .wrapper { color: red; }
     </style> 
   </template>
 </dom-module>
@@ -200,17 +179,14 @@ shared-styles.html
 
 ### Style Module benutzen
 
-- Damit eine Komponente diese Styles nutzen kann, muss sie zwei Dinge erfüllen:
-    + Es muss einen `<link>`-Tag definieren, der das Style Module importiert
-    + Es muss einen `<style>`-Tag definieren, der die Styles an der richtigen Stelle inkludiert
+Damit eine Komponente diese Styles nutzen kann, muss sie sie zunächst importieren und anschließend einen `<style>`-Tag definieren, welcher als `include`-Attribut den Namen der Komponente mit den geteilten Style-Regeln hat. Die Styles werden darin importiert und auf die gesamte Komponente angewendet. Somit wird der Text des `<div>`-Tags mit der Klasse `wrapper` rot dargestellt.
 
 ```html
 <link rel="import" href="shared-styles.html">
 <dom-module id="x-element">
   <template>
     <style include="shared-styles"></style>
-    <style>:host { display: block; }</style>
-    Some local DOM
+    <div class="wrapper">Wrapper with red text</div>
   </template>
   <script>Polymer({is: 'x-element'});</script>
 </dom-module>

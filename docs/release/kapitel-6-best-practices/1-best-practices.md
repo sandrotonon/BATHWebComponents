@@ -18,10 +18,10 @@ Applikationen und Webseiten in dem modernen Web müssen möglichst schnell Laden
 ### Ladezeiten und initiales Rendern optimieren
 
 Ohne ein besonderes Augenmerk auf die Performanz zu werfen bleibt die Seite oder die Applikation beim initialen Laden sehr lange weiß und der Benutzer sitzt vor einem weißen Bildschirm. Wenn alle Ressourcen fertig geladen wurden, wird der Inhalt dann plötzlich und unerwartet eingeblendet. Das erste blockierende Element sind bereits die webcomponents.js Polyfills, da diese in einem `<script>` Tag stehen und somit sequenziell geladen werden müssen und die Ladezeit verlängern. Dies kann jedoch verhindert werden, indem dem Tag das `async` Attribut hinzugefügt wird `<script src="webcomponents.js" async></script>`, alle anderen Ressourcen können dann asynchron geladen werden und die Applikation muss nicht auf die Polyfills warten. Um die Ladezeit weiter zu verkürzen, kann mittels einer JavaScript Überprüfung ermittelt werden, ob die Polyfills optional geladen werden müssen (Lazy Load) wenn diese vom Browser nicht unterstützt werden.
-```
+```javascript
 var webComponentsSupported = ('registerElement' in document
-     && 'import' in document.createElement('link')
-     && 'content' in document.createElement('template'));
+   && 'import' in document.createElement('link')
+   && 'content' in document.createElement('template'));
 ```
 
 Neben den Polyfills blockieren importierte HTML Dateien, also andere Komponenten, zwar nicht das Laden der Applikation, jedoch dessen Rendern, da diese selbst wiederum sowohl `<script>` Tags als auch Stylesheets beinhalten. Diese blockieren ebenso das Rendern der Webseite, da der Browser die importieren CSS Dateien erst parsen muss. Hier kann ebenfalls das `async` Attribut gesetzt werden um dieses Problem zu lösen. Somit wird die Webseite sofort nach dem Laden aller Ressourcen gerendert, jedoch auch ohne Anwendung der Style-Regeln. Der hierdurch entstehende FOUC muss also manuell verhindert werden, indem grobe Container in einem `<style>` Tag für das ungefähre Aussehen der Applikation definiert werden. Dadurch werden die Komponenten nach und nach in die Container geladen, es wird somit sofort eine Vorschau der Applikation angezeigt und die Applikation schnell geladen [citeulike:13915203].
@@ -43,15 +43,15 @@ Wie bereits in dem vorangegangenen Abschnitt angeschnitten wird, sind flüssige 
 
 Die `down` und `up` Events werden ausgelöst, wenn der Finger oder die Maus auf das Element drückt oder es loslässt. Sie bilden einfachsten Gesten des Gesture Systems, sind aber bei den meisten Anforderungen ausreichend. Diese Events können beispielsweise dazu eingesetzt werden um zu visualisieren welches Element gerade berührt oder geklickt wird. Ohne die `down` und `up` Events müssten die vier nativen Events `touchstart`, `touchend`, `mousedown` und `mouseup` implementiert werden. Dabei hören die Touch Events nur auf das berührte Element, die Maus Events ändern ihr Ziel beim Bewegen des Mauszeigers, weshalb auf das gesamte Dokument gehört werden muss um auf das `mouseup` Event zu warten, was besonders beim Scrollen zu Komplikationen führen kann. Mit Polymer sind hierfür nur die beiden Events `down` und `up` notwendig, wie im folgenden Beispiel dargestellt.
 
-```
+```javascript
 Polymer({
-    is: 'my-element',
-    listeners: {
-        'down': 'startFunction',
-        'up': 'endFunction'
-    },
-    startFunction: function() { ... },
-    endFunction: function() { ... }
+  is: 'my-element',
+  listeners: {
+    'down': 'startFunction',
+    'up': 'endFunction'
+  },
+  startFunction: function() { ... },
+  endFunction: function() { ... }
 });
 ```
 
@@ -103,30 +103,30 @@ Darüber hinaus müssen Benutzer mit einer schwachen Sehstärke die Webseite unt
 
 Das folgende Beispiel stellt die in diesem Abschnitt erklären Methoden zum Erstellen einer barrierefreien Komponenten dar.
 
-```
+```html
 <link rel="import" href="../iron-a11y-keys-behavior.html">
 <dom-module id="my-element">
-    <template>
-        <style>
-            :host:focus #element {
-                boder: 1px solid red;
-            }
-        </style>
-        <div id="element" aria-label="Impoartant article">Some important text</div>
-    </template>
-    <script>
-        Polymer({
-            is: 'my-element',
-            hostAttributes: {
-                tabindex: '0',
-                role: 'article',
-            },
-            keyBindings: {
-                'space enter': '_action'
-            },
-            _action: function(event) { ... }
-        });
-    </script>
+  <template>
+    <style>
+      :host:focus #element {
+        boder: 1px solid red;
+      }
+    </style>
+    <div id="element" aria-label="Impoartant article">Some important text</div>
+  </template>
+  <script>
+    Polymer({
+      is: 'my-element',
+      hostAttributes: {
+        tabindex: '0',
+        role: 'article',
+      },
+      keyBindings: {
+        'space enter': '_action'
+      },
+      _action: function(event) { ... }
+    });
+  </script>
 </dom-module>
 ```
 
