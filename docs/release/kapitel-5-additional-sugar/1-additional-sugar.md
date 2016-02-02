@@ -4,7 +4,7 @@
 - (siehe Abschnitt 3.2. Declared Properties)
 - (siehe Kapitel 3.2. - hostAttributes)
 
-Polymer bietet eine zusätzliche Applikations-Schicht mit einigen hilfreichen Funktionalitäten, die das Arbeiten mit den Komponenten vereinfachen. Die wichtigsten, wie One-Way und Two-Way Data-Binding, Behaviors und Events, werden in diesem Kapitel dargestellt.
+Polymer bietet eine zusätzliche Applikations-Schicht mit einigen hilfreichen Funktionalitäten, die das Arbeiten mit den Komponenten vereinfachen. Die wichtigsten werden in diesem Kapitel dargestellt. Abschnitt 5.1 widmet sich dabei um das One-Way und Two-Way Data-Binding, Abschnitt 5.2 erläutert die Behaviors und in Abschnitt 5.3 erklärt abschließend die Events.
 
 
 ## One-Way und Two-Way Data-Binding
@@ -32,7 +32,7 @@ Mittels dem Two-Way Data-Binding, auch automatic Binding genannt, können Daten 
 
 ### Binden von nativen Attributen
 
-Um Werte an von HTML reservierte Attribute, also das `hostAttributes` Objekt (siehe Kapitel 3.2. - hostAttributes), statt an Eigenschaften der Komponente zu binden (was mit der normalen `=` Syntax erreicht wird), muss die hierfür vorgesehene `=$` Attribut-Binding Syntax verwendet werden. So wird beispielsweise in dem Element `<div class=$"{{myClass}}"></div>` die Eigenschaft `myClass` tatsächlich dem Attribut `class`, statt der Eigenschaft zugewiesen. Polymer wandelt hierbei bei Verwendung der `=$` Syntax die Zuweisung in die Anweisung `<div>.setAttribute('class', myClass);` um. Das Binden von nativen Attributen ist somit automatisch immer nur in eine Richtung, also One-Way von Host zu Kind Element. Im Allgemeinen sollte die Syntax immer dann verwendet werden, wenn das `style`, `href`, `class`, `for` oder auch `data-*` Attribute gesetzt werden sollen.
+Um Werte an von HTML reservierte Attribute, also das `hostAttributes` Objekt (siehe Abschnitt 3.2.), statt an Eigenschaften der Komponente zu binden (was mit der normalen `=` Syntax erreicht wird), muss die hierfür vorgesehene `=$` Attribut-Binding Syntax verwendet werden. So wird beispielsweise in dem Element `<div class=$"{{myClass}}"></div>` die Eigenschaft `myClass` tatsächlich dem Attribut `class`, statt der Eigenschaft zugewiesen. Polymer wandelt hierbei bei Verwendung der `=$` Syntax die Zuweisung in die Anweisung `<div>.setAttribute('class', myClass);` um. Das Binden von nativen Attributen ist somit automatisch immer nur in eine Richtung, also One-Way von Host zu Kind Element. Im Allgemeinen sollte die Syntax immer dann verwendet werden, wenn das `style`, `href`, `class`, `for` oder auch `data-*` Attribute gesetzt werden sollen.
 
 
 ## Behaviors
@@ -52,7 +52,7 @@ MyBehaviors.HelloBehavior = {
     mousedown: '_sayHello',
   },
   _sayHello: function() {
-    alert('Hello!');
+    alert('Hallo!');
   }
 }
 ```
@@ -90,7 +90,7 @@ Falls das gewünschte Event nicht existieren sollte, können von Host Elementen 
 ```html
 <dom-module id="my-element">
   <template>
-    <button on-click="postClick">Click Me</button>
+    <button on-click="postClick">Ich bin ein Button</button>
   </template>
 
   <script>

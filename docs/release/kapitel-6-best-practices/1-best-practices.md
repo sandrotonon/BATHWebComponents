@@ -5,7 +5,7 @@
   - (siehe Abschnitt 3.2.3 - Events)
   - (siehe Abschnitt 3.2.1 - Custom Elements - hostAttributes)
 
-In den vorherigen Kapiteln wurde gezeigt was Polymer an Mehrwert für die Entwickler bringt und wie die Bibliothek eingesetzt wird. In diesem Kapitel werden UI Performance Patterns für eine möglichst performante Applikation und das Gesture System erläutert, sowie von Polymer bereitgestellte Mittel für eine möglichst barrierefreie Applikation gezeigt.
+In den vorherigen Kapiteln wurde gezeigt was Polymer an Mehrwert für die Entwickler bringt und wie die Bibliothek eingesetzt wird. In diesem Kapitel werden in Abschnitt 6.1 einige UI Performance Patterns für eine möglichst performante Applikation sowie in Abschnitt 6.2 das Gesture System erläutert. Abschnitt 6.3 erläutert die von Polymer bereitgestellten Mittel um eine möglichst barrierefreie Applikation zu ermöglichen.
 
 
 ## UI Performance Patterns
@@ -112,7 +112,7 @@ Das folgende Beispiel stellt die in diesem Abschnitt erklären Methoden zum Erst
         boder: 1px solid red;
       }
     </style>
-    <div id="element" aria-label="Impoartant article">Some important text</div>
+    <div id="element" aria-label="Impoartant article">Hier steht wichtiger Text</div>
   </template>
   <script>
     Polymer({

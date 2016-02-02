@@ -60,9 +60,7 @@ Importierte HTML Dateien werden nicht nur in das Dokument eingefügt, sondern vo
 <body>
   <script>
     var element = document.querySelector('link[rel="import"]').import;
-
     var el = element.querySelector('.element');
-
     document.body.appendChild(el.cloneNode(true));
   </script>
 </body>

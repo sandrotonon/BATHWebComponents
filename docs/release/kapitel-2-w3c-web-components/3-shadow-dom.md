@@ -103,7 +103,7 @@ Das folgende Beispiel zeigt eine exemplarische Implementierung eines Shadow DOMs
 <div id="hello">
   <div>Hello</div>
   <div class="styled">Styled</div>
-  <p class="hidden">Inhalt der vom Shadow DOM überschrieben wird.</p>
+  <p class="hidden">Inhalt, der vom Shadow DOM überschrieben wird.</p>
 </div>
 
 <template id="myTemplate">

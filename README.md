@@ -47,12 +47,16 @@ In Progress: Der Inhalt wird erstellt
 
 - Bilder im Text referenzieren
 - HTML Templates vor Shadow DOM
+
+
+### Erledigte TODOs
+
 - Abschnitte am Anfang eines Kapitels erläutern:
   + Kapitel 2 - Clean
   + Kapitel 3 - Clean
   + Kapitel 4 - Clean
-  + Kapitel 5
-  + Kapitel 6
+  + Kapitel 5 - Clean
+  + Kapitel 6 - Clean
   + Kapitel 7 - Clean
 
 
@@ -63,6 +67,7 @@ In Progress: Der Inhalt wird erstellt
 - Englische Namen ohne Bindestrich - Shadow DOM, Custom Element
 - Zusammengesetzte Wörter (Englisch/Code/Abkürzung/Deutsch) mit Bindestrich - CSS-Regeln, `<div>`-Tag
 - Nur **Code**-Bestandteile mit \`\` markieren - `` `<div>` ``
+- Code-Block-Inhalte in deutsch!
 
 
 ### Definitionen

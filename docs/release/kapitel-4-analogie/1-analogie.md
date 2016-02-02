@@ -62,7 +62,7 @@ Die bisher gezeigten Methoden ermöglichen das Erstellen einer Polymer Komponent
 
 ```html
 <dom-module id="element-name">
-  <template>Local DOM / Inner HTML markup</template>
+  <template>Local DOM / Inneres HTML Markup</template>
 
   <script>
     Polymer({
@@ -111,7 +111,7 @@ x-element Komponente
       }
     </style>
     <div class="x-element-container">
-      <button>Click me</button>
+      <button>Ich bin ein Button</button>
     </div>
   </template>
 </dom-module>
@@ -186,7 +186,7 @@ Damit eine Komponente diese Styles nutzen kann, muss sie sie zunächst importier
 <dom-module id="x-element">
   <template>
     <style include="shared-styles"></style>
-    <div class="wrapper">Wrapper with red text</div>
+    <div class="wrapper">Wrapper mit rotem Text</div>
   </template>
   <script>Polymer({is: 'x-element'});</script>
 </dom-module>

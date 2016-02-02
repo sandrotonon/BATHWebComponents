@@ -13,8 +13,7 @@ Dieser Problematik widmen sich die Custom Elements. Sie bieten eine neue API, we
     <hangout-discussion>
       <hangout-message from="Paul" profile="profile.png"
           profile="118075919496626375791" datetime="2013-07-17T12:02">
-        <p>Feelin' this Web Components thing.</p>
-        <p>Heard of it?</p>
+        <p>Hier werden Web Components eingesetzt.</p>
       </hangout-message>
     </hangout-discussion>
   </hangout-chat>
@@ -113,8 +112,8 @@ ButtonExtendedProto.alert = function () {
 ButtonExtendedProto.answer = 42;
 </script>
 
-<!-- Beispiel  -->
-// TODO: Deklarative Konfiguration
+<!-- Beispiel einer deklarativen Konfiguration -->
+<button-extended answer="41">Ich bin ein Button</button-extended>
 ```
 
 

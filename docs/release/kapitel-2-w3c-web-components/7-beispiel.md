@@ -61,7 +61,7 @@ Das Template enthält dabei einen Insertion Point `<content>`, in welchem die Ki
 
 ```html
 <style>
-  .outer { /* Some minor styles */ }
+  .outer { /* Generelle Styles */ }
   .style1 { color: green; }
   .style2 { color: blue; }
   .name { font-size: 35pt; padding-top: 0.5em; }
