@@ -7,89 +7,56 @@ Die Library Polymer setzt auf die in Kapitel zwei gezeigten Web Components Stand
 
 ## Architektur
 
-Eine mit Hilfe von Polymer implementierte Komponente lässt sich in die in Abbildung X dargestellten Schichten unterteilen. Die Browser-Schicht stellt die nativen APIs der Web Technologien dar, welche von der Polyfill-Schicht, den webcomponents.js Polyfills (siehe Abschnitt 2.6), ersetzt oder erweitert werden können, falls der Browser die notwendige Technologie nicht unterstützt. Polymer kann dabei als Konformitäts-Schicht aufgefasst werden, welche auf die nativen Technologien bzw. den Polyfills aufsetzt. Diese selbst setzt sich wiederum aus folgenden drei Schichten zusammen [citeulike:13915080].
-
-- Polymer kann dabei als Konformitäts-Schicht aufgefasst werden, welche auf die nativen Technologien bzw. den Polyfills aufsetzt
-- Diese selbst setzt sich wiederum aus folgenden drei Schichten zusammen [citeulike:13915080]
-- Der `polymer-micro` Schicht, welche die fundamentalen Funktionalitäten für das Erzeugen von Custom Elements bietet, die `polymer-mini` Schicht, welche den Umgang mit einem lokalen DOM in einer Polymer Komponente erweitert und erleichtert, und zuletzt der `polymer` Schicht, der Standard Schicht die zusätzliche, allgemeine Funktionalitäten für den Umgang mit Web Components bietet
-- Die Polymer Elemente bilden eine weitere Schicht, welche auf die Polymer Schicht aufgesetzt werden kann und mittels dem Elemente Katalog, welcher im folgenden Abschnitt erläutert wird, repräsentiert wird
-- Diese sind diverse Komponenten sowohl für das UI, als auch für Kernfunktionen, welche mit Polymer umgesetzt wurden und für die Applikation verwendet werden können
+Eine mit Hilfe von Polymer implementierte Komponente lässt sich in die in Abbildung X dargestellten Schichten unterteilen. Die Browser-Schicht stellt die nativen APIs der Web Technologien dar, welche von der Polyfill-Schicht, den webcomponents.js Polyfills (siehe Abschnitt 2.6), ersetzt oder erweitert werden können, falls der Browser die notwendige Technologie nicht unterstützt. Polymer kann dabei als Konformitäts-Schicht aufgefasst werden, welche auf die nativen Technologien bzw. den Polyfills aufsetzt. Diese selbst setzt sich wiederum aus folgenden drei Schichten zusammen [citeulike:13915080]. Der `polymer-micro`-Schicht, welche die grundlegenden Funktionalitäten für das Erzeugen von Custom Elements bietet, die `polymer-mini`-Schicht, welche den Umgang mit einem lokalen DOM in einer Polymer Komponente erweitert und erleichtert, und zuletzt der `polymer`-Schicht mit allgemeinen und zusätzlichen Funktionalitäten für den Umgang mit Web Components. Auf die Polymer-Schicht können die Polymer Elemente aufgesetzt werden. Diese bilden eine weitere Schicht, welche durch den Elemente Katalog [citeulike:13916374] repräsentiert wird. In dem Elemente Katalog sind diverse mit Polymer umgesetzte Komponenten sowohl für das UI als auch für Kernfunktionen zum Entwickeln von Applikationen vorhanden.
 
 ![Bild: Schichtenmodell von Polymer](images/1-architecture.jpg "Schichtenmodell von Polymer. Quelle: http://hiloki.github.io/s/150221-frontrend_conference/src/polymer.png")
 
 
-
 ## Elemente Katalog
 
-- `There is an element for that`
-- Alles ist ein Element, auch remote API Interaktionen (ajax-element)
-- Browser API Interaktionen (offline, push, etc.)
-- DOM Rendering (Animationen, Paper Elements)
-
-- Die oberste Schicht von Polymer bilden die Polymer Elemente
-- Sie bilden eine Sammlung an Komponenten, welche die von Google vorgeschlagenen Implementierungen als Lösungen von einfachen bis komplexen wiederkehrenden Problemen sind
-- Alle Elemente werden von Google in dem Elemente Katalog [citeulike:13916374] gesammelt und können von Entwicklern optional benutzt und angepasst werden, sind für den Bau einer Applikation mit Hilfe von Polymer aber nicht zwingend notwendig
-- Der Elemente Katalog versucht das Google Polymer Manifest `There is an element for that` zu verwirklichen
-- Er wurde seit Beginn des Projekts stark ausgebaut und nach wie vor stets erweitert und aktualisiert
-- Der Katalog besteht aus 7 Kategorien (Stand Januar 2016), welche die Komponenten nach Anwendungsfällen kategorisieren
-- Nachfolgend werden die Kategorien aufgelistet und erläutert
+Der von Google verwaltete Elemente Katalog verkörpert die Polymer Philosophie `There is an element for that`. Sie bilden eine Sammlung an Komponenten, welche die von Google vorgeschlagenen Implementierungen als Lösungen von einfachen bis komplexen wiederkehrenden Problemen sind. Entwickler können diese in ihrer eigenen Applikation optional einsetzen, sie sind im Einsatz mit Polymer aber nicht zwingend notwendig. Es werden dabei allerlei Anwendungsmöglichkeiten angesprochen, von DOM Rendering in Form von Animationen, über Browser-API-Interaktionen durch Push-Nachrichten, bis hin zu Remote-API-Interaktionen mittels Ajax-Requests. Der Katalog besteht aus 7 Kategorien (Stand Januar 2016), welche die Komponenten nach Anwendungsfällen sortieren. Nachfolgend werden die Kategorien aufgelistet und erläutert.
 
 
 **Iron Elements - Fe**
 
-- Iron Elemente bilden den Kern von Polymer und das Zentrum der Polymer Elemente
-- Sie sind die wichtigsten Elemente, welche man in vielen Projekten brauchen kann
-- Richten sich nach der Metapher von Elementen
-- Metaphorisch für den Erdkern, der das Zentrum der Erde ist
+Eisen ist der Kern der Erde. Daran orientiert sich die Metapher der Iron Elements, welche den Kern von Polymer und das Zentrum der Polymer Elemente bilden. Sie sind die wichtigsten Elemente, welche in vielen Projekten benötigt werden.
 
 
 **Paper Elements - Md**
 
-- Elemente die Googles Design Philosophie Material Design gehorchen, wie Listen, Menüs, Tabs
-- Paper ist eine Metapher für erweitertes Papier, es kann zusammengesteckt werden, sich transformieren, Schatten werden etc.
+Die Paper Elements sind Googles Design Philosophie Material Design (Md) gehorchende Elemente wie Listen, Menüs, Tabs. Sie ermöglichen das Erstellen einer UI. Paper ist dabei eine Metapher für ein erweitertes Papier, es kann zusammengesteckt werden, sich transformieren oder Schatten werfen.
 
 
 **Google Web Components - Go**
 
-- Google kapselt Komponenten für eigene Services und APIs
-- Dadurch können Maps, Drive etc. eingebunden und einfach angesprochen werden
+Um die eigenen Services leichter verwendbar zu machen stellt Google die Google Web Components bereit. Sie kapseln diese Services und APIs in Komponenten, wodurch Google Maps oder auch Google Drive usw. in der eigenen Applikation eingebunden und verwendet werden können.
 
 
 **Gold Elements - Au**
 
-- Sammlung an Elementen, welche im Bereich E-Commerce eingesetzt werden können, wie Zahlungsmethoden, Kreditkarteninformationen etc.
-- Sind golden da sich mit ihnen Geld verdienen lässt
+Die Gold Elements sind eine Sammlung an buchstäblich wertvollen, goldenen Elementen, welche im Bereich E-Commerce eingesetzt werden können. Sie sind Komponenten für das Arbeiten mit Zahlungsmethoden oder Kreditkarteninformationen und können dabei Helfen mit der Applikation Umsatz zu generieren.
 
 
 **Neon Elements - Ne**
 
-- Bunt und verspielt
-- Elemente um andere Elemente zu animieren
+Die Neon Elements sind bunt und verspielt. Mit ihnen können beispielsweise Animationen erstellt werden.
 
 
 **Platinum Elements - Pt**
 
-- sehr wertvoll
-- nicht UI orientiert, sondern für Services die im Hintergrund laufen wie push, offline etc.
-- Bringen viele neue Lösungen für sehr komplexe Probleme
+Wie die Gold Elements sind auch die Platinum Elements sehr wertvoll, jedoch in einer anderen Hinsicht. Sie sind nicht kommerziell orientiert, sondern für im Hintergrund laufende Services wie Push- oder Offline-Funktionalitäten etc. gedacht. Sie sind Lösungen für sehr komplexe Probleme, welche nur schwer zu lösen sind.
 
 
 **Molecules - Mo**
 
-- Weitere Elemente, welche Wrapper für third-party Libraries bilden
+Die Molecules sind weitere Elemente als Wrapper für third-party Libraries.
 
 
 **Carbon Elements - C (in Entwicklung)**
 
-- Sind noch nicht fertiggestellt
-- Metaphorisch sehr gewichtige Elemente, besitzen Fähigkeit zur Bildung komplexer Moleküle, sind somit essenziell für lebende Strukturen
-- Framework orientierte Elemente, Werden sich um strukturelle Probleme auf Applikations-Ebene kümmern
+Die Carbon Elements befinden sich zum Stand dieser Arbeit noch in Entwicklung und sind noch nicht fertiggestellt. Sie sind metaphorisch sehr gewichtige Elemente und besitzen die Fähigkeit zur Bildung komplexer Moleküle die essenziell für lebende Strukturen sind. Im übertragenen Sinn sind sie Framework orientierte Elemente und werden sich um strukturelle Probleme auf Applikations-Ebene kümmern.
 
 
 ### Alternative Sammlung von Komponenten
 
-- Statt den Polymer Komponenten können auch selbst entwickelte oder aus anderen Quellen stammende Komponenten verwendet werden
-- Der Elemente Katalog wird nur von Google vertrieben und erlaubt keine Komponenten, welche nicht von Google entwickelt wurden
-- Als Alternative hierfür kann der customelements.io Katalog [citeulike:13916423] angesehen werden
-- In diesem sind bereits mehrere tausend Komponenten gesammelt, welche von google unabhängigen Entwicklern für die unterschiedlichsten Anwendungsfälle entwickelt wurden
-
+Statt den Polymer Komponenten können auch selbst entwickelte oder aus anderen Quellen stammende Komponenten in eigenen Projekten verwendet werden. Der Elemente Katalog wird dabei nur von Google vertrieben und erlaubt keine nicht von Google entwickelten Komponenten. Als eine mögliche Alternative hierfür kann der customelements.io Katalog [citeulike:13916423] herangezogen werden. In diesem sind bereits mehrere tausend Komponenten gesammelt, welche von Google-unabhängigen Entwicklern für die unterschiedlichsten Anwendungsfälle entwickelt wurden.
