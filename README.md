@@ -40,6 +40,7 @@ TODO:        Der Inhalt muss noch erstellt werden
 Contents:    Der Inhalt ist vorhanden, muss aber noch reingeschrieben werden
 Clean:       Der Inhalt ist reingeschrieben
 In Progress: Der Inhalt wird erstellt
+Transferred: Der Inhalt wurde in LaTeX konvertiert, das Markdown sollte nicht mehr angefasst werden
 ```
 
 
@@ -48,9 +49,13 @@ In Progress: Der Inhalt wird erstellt
 - Bilder im Text referenzieren
 - HTML Templates vor Shadow DOM
 - Performanz -> Performance
+- zwei, drei etc. in 2, 3 etc. umwandeln
+
+- Aufbau in Einleitung
+- AngularJS App in Anhang
 
 
-### Erledigte TODOs
+### Erledigt
 
 - Abschnitte am Anfang eines Kapitels erläutern:
   + Kapitel 2 - Clean
