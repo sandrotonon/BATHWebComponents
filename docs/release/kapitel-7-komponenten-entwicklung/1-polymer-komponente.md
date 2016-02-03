@@ -10,7 +10,7 @@ Als Beispielimplementierung einer Polymer-Komponente wird eine responsive SPA Na
 
 ### Entwicklungsumgebung
 
-Für die Entwicklung muss zunächst eine Entwicklungsumgebung eingerichtet werden. Hierzu wird ein Windows-System mit installiertem Node.js gewählt. Für Node werden zusätzlich die Pakete "Grunt", einem automatisierungs-Tool, das Package-Management Tool "Bower", sowie das Scaffolding-Tool "Yeoman" installiert. Als Editor wird Sublime Text in Version 3 verwendet. Zum testen der Komponente wird Chrome 48 eingesetzt.
+Für die Entwicklung muss zunächst eine Entwicklungsumgebung eingerichtet werden. Hierzu wird ein Windows-System mit installiertem Node.js gewählt. Für Node werden zusätzlich die Pakete "Grunt", einem automatisierungs-Tool, das Package-Management-Tool "Bower", sowie das Scaffolding-Tool "Yeoman" installiert. Als Editor wird Sublime Text in Version 3 verwendet. Zum testen der Komponente wird Chrome 48 eingesetzt.
 
 
 ### Yeoman

@@ -47,6 +47,7 @@ In Progress: Der Inhalt wird erstellt
 
 - Bilder im Text referenzieren
 - HTML Templates vor Shadow DOM
+- Performanz -> Performance
 
 
 ### Erledigte TODOs
@@ -67,12 +68,14 @@ In Progress: Der Inhalt wird erstellt
 - Englische Namen ohne Bindestrich - Shadow DOM, Custom Element
 - Zusammengesetzte Wörter (Englisch/Code/Abkürzung/Deutsch) mit Bindestrich - CSS-Regeln, `<div>`-Tag
 - Nur **Code**-Bestandteile mit \`\` markieren - `` `<div>` ``
-- Code-Block-Inhalte in deutsch!
+- Code-Block-Inhalte in **deutsch**!
 
 
 ### Definitionen
 
 - das Shadow DOM - des Shadow DOMs, des Dokuments, des Elements
+- des **W**eiteren (nicht des weiteren)
+- XHR statt Ajax-Request oder XHTTPRequest
 
 
 ### Bilder
