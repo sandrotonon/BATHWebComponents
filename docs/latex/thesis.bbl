@@ -1,3 +1,205 @@
 \begin{thebibliography}{}
 
+\bibitem[Bateman 2014]{citeulike:13914379}
+Bateman, C. (2014).
+\newblock {A No-Nonsense Guide to Web Components}.
+
+\bibitem[Bidelman 2013a]{citeulike:13844982}
+Bidelman, E. (2013a).
+\newblock {Custom Elements: defining new elements in HTML}.
+\newblock http://www.html5rocks.com/en/tutorials/webcomponents/customelements/.
+
+\bibitem[Bidelman 2013b]{citeulike:13851402}
+Bidelman, E. (2013b).
+\newblock {Shadow DOM 301: Advanced Concepts \& DOM APIs}.
+\newblock http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-301/.
+
+\bibitem[Bidelman 2014]{citeulike:13851421}
+Bidelman, E. (2014).
+\newblock {Shadow DOM 201: CSS and Styling}.
+\newblock http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/.
+
+\bibitem[Can I Use - Custom Elements web]{citeulike:13844983}
+Can I Use - Custom Elements (web).
+\newblock {Can I use - Custom Elements}.
+\newblock http://caniuse.com/\#feat=custom-elements.
+
+\bibitem[Can I Use - HTML Imports web]{citeulike:13853711}
+Can I Use - HTML Imports (web).
+\newblock {Can I use - HTML Imports}.
+\newblock http://caniuse.com/\#search=imports.
+
+\bibitem[Can I Use - Shadow DOM web]{citeulike:13883407}
+Can I Use - Shadow DOM (web).
+\newblock {Can I use - Shadow DOM}.
+\newblock http://caniuse.com/\#search=shadow\%20dom.
+
+\bibitem[Cooney und Bidelman 2013]{citeulike:13851404}
+Cooney, D. and Bidelman, E. (2013).
+\newblock {Shadow DOM 101}.
+\newblock http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/.
+
+\bibitem[Dodson 2014]{citeulike:13851334}
+Dodson, R. (2014).
+\newblock {Shadow DOM CSS Cheat Sheet}.
+\newblock http://robdodson.me/shadow-dom-css-cheat-sheet/.
+
+\bibitem[Gasston 2014]{citeulike:13844984}
+Gasston, P. (2014).
+\newblock {A Detailed Introduction To Custom Elements}.
+\newblock
+  http://www.smashingmagazine.com/2014/03/introduction-to-custom-elements/.
+
+\bibitem[Glazkov 2015]{citeulike:13845061}
+Glazkov, D. (2015).
+\newblock {W3C - Custom Elements}.
+\newblock http://w3c.github.io/webcomponents/spec/custom/\#concepts.
+
+\bibitem[Google web]{citeulike:13879681}
+Google (web).
+\newblock {Vulcanize}.
+\newblock https://github.com/polymer/vulcanize.
+
+\bibitem[Group 2015]{citeulike:13851253}
+Group, W. H. A. T.~W. (2015).
+\newblock {HTML Standard}.
+\newblock Technical report.
+
+\bibitem[Hacks 2015]{citeulike:13881144}
+Hacks, M. (2015).
+\newblock {The state of Web Components}.
+\newblock https://hacks.mozilla.org/2015/06/the-state-of-web-components/.
+
+\bibitem[Hongkiat 2014]{citeulike:13853724}
+Hongkiat (2014).
+\newblock {Append And Reuse HTML Docs With HTML Import}.
+\newblock http://www.hongkiat.com/blog/html-import/.
+
+\bibitem[Ihrig 2012]{citeulike:13851350}
+Ihrig, C. (2012).
+\newblock {The Basics of the Shadow DOM}.
+\newblock http://www.sitepoint.com/the-basics-of-the-shadow-dom/.
+
+\bibitem[Kitamura 2014]{citeulike:13752379}
+Kitamura, E. (2014).
+\newblock {Introduction to Custom Elements}.
+\newblock http://webcomponents.org/articles/introduction-to-custom-elements/.
+
+\bibitem[Kr\"{o}ner 2014a]{citeulike:13842701}
+Kr\"{o}ner, P. (2014a).
+\newblock {Das Web der Zukunft}.
+\newblock http://webkrauts.de/artikel/2014/das-web-der-zukunft.
+
+\bibitem[Kr\"{o}ner 2014b]{citeulike:13842702}
+Kr\"{o}ner, P. (2014b).
+\newblock {Web Components erkl\"{a}rt, Teil 1: Was sind Web Components?}
+\newblock
+  http://www.peterkroener.de/web-components-erklaert-teil-1-was-sind-web-components.
+
+\bibitem[Microsoft web]{citeulike:13914237}
+Microsoft (web).
+\newblock {Developer Resources : Microsoft Edge Dev}.
+
+\bibitem[Namics 2014]{citeulike:13853015}
+Namics (2014).
+\newblock {Web Components: HTML Templates}.
+\newblock
+  https://frontend.namics.com/2014/03/20/web-components-html-templates-2/.
+
+\bibitem[Network 2015a]{citeulike:13853253}
+Network, M.~D. (2015a).
+\newblock {Same-origin policy}.
+\newblock
+  https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin\_policy.
+
+\bibitem[Network 2015b]{citeulike:13852997}
+Network, M.~D. (2015b).
+\newblock {<template> - HTML}.
+\newblock https://developer.mozilla.org/de/docs/Web/HTML/Element/template.
+
+\bibitem[Overson und Strimpel 2015]{citeulike:13844975}
+Overson, J. and Strimpel, J. (2015).
+\newblock {\em {Developing Web Components: UI from jQuery to Polymer}}.
+\newblock O'Reilly Media, 1 edition.
+
+\bibitem[Perterkroener 2014]{citeulike:13853714}
+Perterkroener (2014).
+\newblock {Fragen zu HTML5 und Co beantwortet 15 - Web Components versus
+  Performance und Async, CSS-Variablen, Data-URLs}.
+\newblock
+  http://www.peterkroener.de/fragen-zu-html5-und-co-beantwortet-15-web-components-performance-css-variablen-data-urls-async/.
+
+\bibitem[Polymer - Shady DOM web]{citeulike:13886251}
+Polymer - Shady DOM (web).
+\newblock {What is shady DOM? - Polymer 1.0}.
+\newblock https://www.polymer-project.org/1.0/articles/shadydom.html.
+
+\bibitem[Rocks 2013]{citeulike:13853647}
+Rocks, H. (2013).
+\newblock {HTML Imports: \#include for the web}.
+\newblock http://www.html5rocks.com/en/tutorials/webcomponents/imports/.
+
+\bibitem[Satrom 2014]{citeulike:13914234}
+Satrom, B. (2014).
+\newblock {\em {Building Polyfills}}.
+\newblock O'Reilly Media, 1 edition.
+
+\bibitem[Schaffranek 2014]{citeulike:13844988}
+Schaffranek, R. (2014).
+\newblock {Web Components – eine Einf\"{u}hrung}.
+\newblock
+  https://blog.selfhtml.org/2014/12/09/web-components-eine-einfuehrung/.
+
+\bibitem[Sharp 2010]{citeulike:13914241}
+Sharp, R. (2010).
+\newblock {What is a Polyfill?}
+
+\bibitem[W3c 2014a]{citeulike:13853643}
+W3c (2014a).
+\newblock {Cross-Origin Resource Sharing}.
+\newblock http://www.w3.org/TR/cors/.
+
+\bibitem[W3c 2014b]{citeulike:13853159}
+W3c (2014b).
+\newblock {HTML Templates}.
+\newblock http://www.w3.org/TR/html5/scripting-1.html\#the-template-element.
+
+\bibitem[W3c 2015a]{citeulike:13883381}
+W3c (2015a).
+\newblock {CSS Custom Properties for Cascading Variables Module Level 1}.
+\newblock http://dev.w3.org/csswg/css-variables/.
+
+\bibitem[W3c 2015b]{citeulike:13883067}
+W3c (2015b).
+\newblock {CSS Scoping Module Level 1}.
+\newblock https://drafts.csswg.org/css-scoping/.
+
+\bibitem[W3c 2015c]{citeulike:13879687}
+W3c (2015c).
+\newblock {W3C - Shadow DOM}.
+\newblock http://www.w3.org/TR/shadow-dom/.
+
+\bibitem[W3Techs und W3Techs web]{citeulike:13879575}
+W3Techs and W3Techs (web).
+\newblock {Usage Statistics of HTTP/2 for Websites, December 2015}.
+\newblock http://w3techs.com/technologies/details/ce-http2/all/all.
+
+\bibitem[Webcomponents 2014]{citeulike:13853018}
+Webcomponents (2014).
+\newblock {Introduction to the template elements}.
+\newblock http://webcomponents.org/articles/introduction-to-template-element/.
+
+\bibitem[Webcomponents 2015]{citeulike:13853700}
+Webcomponents (2015).
+\newblock {Introduction to HTML Imports}.
+\newblock http://webcomponents.org/articles/introduction-to-html-imports/.
+
+\bibitem[Webcomponents web]{citeulike:13914239}
+Webcomponents (web).
+\newblock {Polyfills}.
+
+\bibitem[Webcompontents web]{citeulike:13914238}
+Webcompontents (web).
+\newblock {webcomponentsjs}.
+
 \end{thebibliography}

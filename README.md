@@ -4,15 +4,15 @@ GitRepository meiner Bachelor Thesis "Web-Component-basierte Entwicklung mit Pol
 
 # Inhaltsverzeichnis
 
-- Kapitel 1 - [Einleitung](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-1-einleitung/1-einleitung.md) : **Clean**
+- Kapitel 1 - [Einleitung](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-1-einleitung/1-einleitung.md) : **Transferred**
 - Kapitel 2 - Web Components nach dem vorläufigen W3C Standard
-  + 2.1 [Problemlösung](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/1-problemloesung.md) : **Clean**
-  + 2.2 [Custom Elements](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/2-custom-elements.md) : **Clean**
-  + 2.3 [Shadow DOM](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/3-shadow-dom.md) : **Clean**
-  + 2.4 [HTML Templates](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/4-html-templates.md) : **Clean**
-  + 2.5 [HTML Imports](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/5-html-imports.md) : **Clean**
-  + 2.6 [Polyfills mit webcomponents.js](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/6-polyfills.md) : **Clean**
-  + 2.7 [Implementierung einer Komponente mit den nativen Web Component APIs](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/7-beispiel.md) : **Clean**
+  + 2.1 [Problemlösung](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/1-problemloesung.md) : **Transferred**
+  + 2.2 [Custom Elements](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/2-custom-elements.md) : **Transferred**
+  + 2.3 [Shadow DOM](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/3-shadow-dom.md) : **Transferred**
+  + 2.4 [HTML Templates](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/4-html-templates.md) : **Transferred**
+  + 2.5 [HTML Imports](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/5-html-imports.md) : **Transferred**
+  + 2.6 [Polyfills mit webcomponents.js](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/6-polyfills.md) : **Transferred**
+  + 2.7 [Implementierung einer Komponente mit den nativen Web Component APIs](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-2-w3c-web-components/7-beispiel.md) : **Transferred**
 - Kapitel 3 - Einführung in Polymer
   + 3.1 - [Architektur](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-3-polymer/1-polymer.md) : **Clean**
   + 3.2 - [Elemente Katalog](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-3-polymer/1-polymer.md) : **Clean**
@@ -51,7 +51,6 @@ Transferred: Der Inhalt wurde in LaTeX konvertiert, das Markdown sollte nicht me
 - Performanz -> Performance
 - zwei, drei etc. in 2, 3 etc. umwandeln
 
-- Aufbau in Einleitung
 - AngularJS App in Anhang
 
 
@@ -64,6 +63,7 @@ Transferred: Der Inhalt wurde in LaTeX konvertiert, das Markdown sollte nicht me
   + Kapitel 5 - Clean
   + Kapitel 6 - Clean
   + Kapitel 7 - Clean
+- Aufbau in Einleitung
 
 
 ## Konventionen

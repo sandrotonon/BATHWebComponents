@@ -1,18 +1,49 @@
 \BOOKMARK [0][-]{chapter*.1}{Ehrenw\366rtliche Erkl\344rung}{}% 1
-\BOOKMARK [0][-]{chapter*.3}{Abk\374rzungsverzeichnis}{}% 2
-\BOOKMARK [0][-]{chapter.1}{Grundlagen}{}% 3
-\BOOKMARK [1][-]{section.1.1}{tbd}{chapter.1}% 4
-\BOOKMARK [2][-]{subsection.1.1.1}{tbd}{section.1.1}% 5
-\BOOKMARK [0][-]{chapter.2}{Codebeispiel}{}% 6
-\BOOKMARK [1][-]{section.2.1}{tbd}{chapter.2}% 7
-\BOOKMARK [0][-]{chapter.3}{Bilder}{}% 8
-\BOOKMARK [1][-]{section.3.1}{Ein Bild ganz breit}{chapter.3}% 9
-\BOOKMARK [1][-]{section.3.2}{Zwei Bilder nebeneinander}{chapter.3}% 10
-\BOOKMARK [0][-]{chapter.4}{Tabelle}{}% 11
-\BOOKMARK [1][-]{section.4.1}{tbd}{chapter.4}% 12
-\BOOKMARK [0][-]{chapter.5}{Quellen verwenden / verwalten}{}% 13
-\BOOKMARK [1][-]{section.5.1}{Verwenden}{chapter.5}% 14
-\BOOKMARK [0][-]{chapter*.9}{Abbildungsverzeichnis}{}% 15
-\BOOKMARK [0][-]{chapter*.10}{Listings}{}% 16
-\BOOKMARK [0][-]{chapter*.11}{Tabellenverzeichnis}{}% 17
-\BOOKMARK [0][-]{chapter*.13}{Literaturverzeichnis}{}% 18
+\BOOKMARK [0][-]{chapter.1}{Einleitung}{}% 2
+\BOOKMARK [0][-]{chapter.2}{Web Components nach dem vorl\344ufigen W3C Standard}{}% 3
+\BOOKMARK [1][-]{section.2.1}{Probleml\366sung}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.2}{Custom Elements}{chapter.2}% 5
+\BOOKMARK [2][-]{subsection.2.2.1}{Neue Elemente registrieren}{section.2.2}% 6
+\BOOKMARK [2][-]{subsection.2.2.2}{Vorteile von Custom Elements}{section.2.2}% 7
+\BOOKMARK [2][-]{subsection.2.2.3}{Nachteil}{section.2.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.4}{Vorhandene Elemente erweitern \(Type Extensions\)}{section.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.5}{Eigenschaften und Methoden definieren}{section.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.6}{Custom Element Lifecycle-Callbacks}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.7}{Styling von Custom Elements}{section.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.8}{Browserunterst\374tzung}{section.2.2}% 13
+\BOOKMARK [1][-]{section.2.3}{Shadow DOM}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.3.1}{Shadow DOM nach W3C}{section.2.3}% 15
+\BOOKMARK [2][-]{subsection.2.3.2}{Content Projection}{section.2.3}% 16
+\BOOKMARK [2][-]{subsection.2.3.3}{Insertion Points}{section.2.3}% 17
+\BOOKMARK [2][-]{subsection.2.3.4}{Shadow Insertion Points}{section.2.3}% 18
+\BOOKMARK [2][-]{subsection.2.3.5}{Styling mit CSS}{section.2.3}% 19
+\BOOKMARK [2][-]{subsection.2.3.6}{Styling des Shadow DOM von au\337erhalb}{section.2.3}% 20
+\BOOKMARK [2][-]{subsection.2.3.7}{CSS-Variablen}{section.2.3}% 21
+\BOOKMARK [2][-]{subsection.2.3.8}{Beispiel eines Shadow DOMs mit Template und CSS}{section.2.3}% 22
+\BOOKMARK [2][-]{subsection.2.3.9}{Browserunterst\374tzung}{section.2.3}% 23
+\BOOKMARK [1][-]{section.2.4}{HTML Templates}{chapter.2}% 24
+\BOOKMARK [2][-]{subsection.2.4.1}{Bisherige Umsetzung von Templates im Browser}{section.2.4}% 25
+\BOOKMARK [2][-]{subsection.2.4.2}{Das <template>-Tag}{section.2.4}% 26
+\BOOKMARK [2][-]{subsection.2.4.3}{Benutzung}{section.2.4}% 27
+\BOOKMARK [2][-]{subsection.2.4.4}{Vorteile}{section.2.4}% 28
+\BOOKMARK [2][-]{subsection.2.4.5}{Browserunterst\374tzung}{section.2.4}% 29
+\BOOKMARK [1][-]{section.2.5}{HTML Imports}{chapter.2}% 30
+\BOOKMARK [2][-]{subsection.2.5.1}{HTML-Dateien importieren}{section.2.5}% 31
+\BOOKMARK [2][-]{subsection.2.5.2}{Vorteil}{section.2.5}% 32
+\BOOKMARK [2][-]{subsection.2.5.3}{HTML Imports verwenden}{section.2.5}% 33
+\BOOKMARK [2][-]{subsection.2.5.4}{Abh\344ngigkeiten verwalten}{section.2.5}% 34
+\BOOKMARK [2][-]{subsection.2.5.5}{Sub-Imports}{section.2.5}% 35
+\BOOKMARK [2][-]{subsection.2.5.6}{Performance}{section.2.5}% 36
+\BOOKMARK [2][-]{subsection.2.5.7}{HTTP/2}{section.2.5}% 37
+\BOOKMARK [2][-]{subsection.2.5.8}{Asynchrones Laden von Imports}{section.2.5}% 38
+\BOOKMARK [2][-]{subsection.2.5.9}{Request-Minimierung mit Vulcanize}{section.2.5}% 39
+\BOOKMARK [2][-]{subsection.2.5.10}{Anwendungen}{section.2.5}% 40
+\BOOKMARK [2][-]{subsection.2.5.11}{Browserunterst\374tzung}{section.2.5}% 41
+\BOOKMARK [1][-]{section.2.6}{Polyfills mit webcomponents.js}{chapter.2}% 42
+\BOOKMARK [2][-]{subsection.2.6.1}{Polyfill webcomponents.js}{section.2.6}% 43
+\BOOKMARK [2][-]{subsection.2.6.2}{Browserunterst\374zung}{section.2.6}% 44
+\BOOKMARK [2][-]{subsection.2.6.3}{Performance}{section.2.6}% 45
+\BOOKMARK [0][-]{chapter*.17}{Abk\374rzungsverzeichnis}{}% 46
+\BOOKMARK [0][-]{chapter*.18}{Abbildungsverzeichnis}{}% 47
+\BOOKMARK [0][-]{chapter*.19}{Listings}{}% 48
+\BOOKMARK [0][-]{chapter*.21}{Literaturverzeichnis}{}% 49

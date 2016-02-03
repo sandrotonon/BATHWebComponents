@@ -5,9 +5,10 @@
 		bibliography=totoc %% Quellenverzeichnis mit ins Inhaltsverzeichnis
 		]{scrreprt}	 %% KOMA Script
 
-\input{preamble/packete}
+\input{preamble/pakete}
 \input{preamble/optionen}
 \input{preamble/variablen}
+\input{preamble/listings}
 
 
 \begin{document}
@@ -24,31 +25,31 @@
 
 \tableofcontents
 
-% Literaturverzeichnis
-\input{glossary}
-
 %% Starte Paginierung
 \cleardoublepage
 \pagenumbering{arabic}
 
+\include{kapitel1/1-einleitung}
 
-\include{kapitel2/grundlagen}
+\include{kapitel2/1-problemloesung}
+\include{kapitel2/2-custom-elements}
+\include{kapitel2/3-shadow-dom}
+\include{kapitel2/4-html-templates}
+\include{kapitel2/5-html-imports}
+\include{kapitel2/6-polyfills}
 
-\include{kapitel3/thema1}
-\include{kapitel3/thema2}
-\include{kapitel3/thema3}
-\include{kapitel3/thema4}
 
+% Abkuerzungsverzeichnis
+\input{glossary}
 
 \listoffigures
 \lstlistoflistings
-\listoftables
 
 % REMOVE THIS!
 \listoftodos[TODOs]
 % REMOVE THIS!
 
-\bibliographystyle{apalike}
+\bibliographystyle{apalike-mystyle}
 \bibliography{library}
 \end{document}
 

@@ -145,7 +145,9 @@ var ButtonExtendedProto = Object.create(HTMLElement.prototype);
 ButtonExtendedProto.createdCallback = function() {...};
 ButtonExtendedProto.attachedCallback = function() {...};
 
-var ButtonExtended = document.registerElement('button-extended', {prototype: ButtonExtendedProto});
+var ButtonExtended = document.registerElement('button-extended', {
+  prototype: ButtonExtendedProto
+});
 ```
 
 

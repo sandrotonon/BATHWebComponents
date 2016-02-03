@@ -3,12 +3,34 @@ A level-1 auxiliary file: htwg/cover.aux
 A level-1 auxiliary file: htwg/title.aux
 A level-1 auxiliary file: htwg/abstract.aux
 A level-1 auxiliary file: htwg/affidavit.aux
-A level-1 auxiliary file: kapitel2/grundlagen.aux
-A level-1 auxiliary file: kapitel3/thema1.aux
-A level-1 auxiliary file: kapitel3/thema2.aux
-A level-1 auxiliary file: kapitel3/thema3.aux
-A level-1 auxiliary file: kapitel3/thema4.aux
-The style file: apalike.bst
+A level-1 auxiliary file: kapitel1/1-einleitung.aux
+A level-1 auxiliary file: kapitel2/1-problemloesung.aux
+A level-1 auxiliary file: kapitel2/2-custom-elements.aux
+A level-1 auxiliary file: kapitel2/3-shadow-dom.aux
+A level-1 auxiliary file: kapitel2/4-html-templates.aux
+A level-1 auxiliary file: kapitel2/5-html-imports.aux
+A level-1 auxiliary file: kapitel2/6-polyfills.aux
+The style file: apalike-mystyle.bst
 Database file #1: library.bib
-Warning--I didn't find a database entry for "haase"
-(There was 1 warning)
+Warning--entry type for "citeulike:13914379" isn't style-file defined
+--line 215 of file library.bib
+Warning--entry type for "citeulike:13914241" isn't style-file defined
+--line 228 of file library.bib
+Warning--entry type for "citeulike:13914239" isn't style-file defined
+--line 241 of file library.bib
+Warning--entry type for "citeulike:13914238" isn't style-file defined
+--line 252 of file library.bib
+Warning--entry type for "citeulike:13914237" isn't style-file defined
+--line 263 of file library.bib
+Warning--entry type for "citeulike:13886251" isn't style-file defined
+--line 311 of file library.bib
+Warning--entry type for "citeulike:13883407" isn't style-file defined
+--line 323 of file library.bib
+Warning--entry type for "citeulike:13853711" isn't style-file defined
+--line 471 of file library.bib
+Warning--entry type for "citeulike:13844983" isn't style-file defined
+--line 764 of file library.bib
+Warning--entry type for "citeulike:13752379" isn't style-file defined
+--line 816 of file library.bib
+Warning--empty institution in citeulike:13851253
+(There were 11 warnings)

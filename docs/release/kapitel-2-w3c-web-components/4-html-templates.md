@@ -49,12 +49,8 @@ Den Problemen der oben genannten Methoden widmet sich der `<template>`-Tag, welc
 
 ```html
 <template id="mytemplate">
-  <style>
-    /* Styles */
-  </style>
-  <script>
-    // JavaScript
-  </script>
+  <style>/* Styles */</style>
+  <script>// JavaScript</script>
   <img src="bild.jpg"> <!-- Kann zur Laufzeit dynamisch gesetzt werden -->
   <p class="text">Hier steht ein Text.</p>
 </template>
