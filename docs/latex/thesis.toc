@@ -44,7 +44,12 @@
 \contentsline {subsection}{\numberline {2.6.1}Polyfill webcomponents.js}{31}{subsection.2.6.1}
 \contentsline {subsection}{\numberline {2.6.2}Browserunterst\IeC {\"u}zung}{31}{subsection.2.6.2}
 \contentsline {subsection}{\numberline {2.6.3}Performance}{32}{subsection.2.6.3}
-\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{33}{chapter*.17}
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{34}{chapter*.18}
-\contentsline {chapter}{\nonumberline Listings}{35}{chapter*.19}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{37}{chapter*.21}
+\contentsline {section}{\numberline {2.7}Implementierung einer Komponente mit den nativen Web Component APIs}{33}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Custom Element erstellen und Eigenschaften und Funktionen definieren}{33}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Template erstellen und Styles definieren}{34}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}Template bereitstellen und Shadow DOM zur Kapselung benutzen}{35}{subsection.2.7.3}
+\contentsline {subsection}{\numberline {2.7.4}Element importieren und verwenden}{35}{subsection.2.7.4}
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{37}{chapter*.18}
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{38}{chapter*.19}
+\contentsline {chapter}{\nonumberline Listings}{39}{chapter*.20}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{41}{chapter*.22}

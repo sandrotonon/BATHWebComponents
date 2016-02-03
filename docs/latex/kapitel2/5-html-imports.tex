@@ -79,7 +79,7 @@ Importierte HTML-Dateien werden nicht nur in das Dokument eingefügt, sondern vo
 \end{Highlighting}
 \end{Shaded}
 
-\todo{Import mit ID machen (mehrere)}
+\todo{Import mit ID machen (mehrere), Code Highlighting korrigieren}
 
 
 \subsection{Abhängigkeiten verwalten}\label{abhuxe4ngigkeiten-verwalten}
@@ -141,7 +141,7 @@ Das Rendern der Seite kann unter Umständen sehr lange dauern, da das in den Imp
 
 \subsection{\texorpdfstring{Request-Minimierung mit ``Vulcanize''}{Request-Minimierung mit Vulcanize}}\label{request-minimierung-mit-vulcanize}
 
-Webseiten können viele verschiedene, modular aufgebaute Stylesheets, JavaScript-Dateien etc. beinhalten, welche die Anzahl an Requests erhöhen. Um die Anzahl an Requests zu verringern gibt es in der Webentwicklung bereits mehrere verschiedene Hilfsmittel. So werden die einzelnen Stylesheets oder auch JavaScript Dateien zu einer einzigen Datei konkateniert, sodass für das komplette Styling und JavaScript jeweils eine große Datei entsteht, welche nur einen Request an den Server benötigen. Zusätzlich können die konkatenierten Dateien noch minifiziert werden, um ihre Größe zu verringern und die Ladezeiten zu verkürzen. Selbiges Prinzip kann auch auf die HTML Imports angewendet werden. Google stellt hierfür das Tool Vulcanize \cite{citeulike:13879681} bereit, welches serverseitig ermöglicht, einzelne kleine Web Components eine einzige große Web Component zu konkatenieren. Benannt nach der Vulkanisation, werden metaphorisch die einzelnen Elemente in ein beständigere Materialien umgewandelt. Vulcanize reduziert dabei eine HTML-Datei und ihre zu importierenden HTM- Dateien in eine einzige Datei. Somit werden die unterschiedlichen Requests in nur einem einzigen Request gebündelt und Ladezeiten und Bandbreite minimiert.
+Webseiten können viele verschiedene, modular aufgebaute Stylesheets, JavaScript-Dateien etc. beinhalten, welche die Anzahl an Requests erhöhen. Um die Anzahl an Requests zu verringern gibt es in der Webentwicklung bereits mehrere verschiedene Hilfsmittel. So werden die einzelnen Stylesheets oder auch JavaScript Dateien zu einer einzigen Datei konkateniert, sodass für das komplette Styling und JavaScript jeweils eine große Datei entsteht, welche nur einen Request an den Server benötigen. Zusätzlich können die konkatenierten Dateien noch minifiziert werden, um ihre Größe zu verringern und die Ladezeiten zu verkürzen. Selbiges Prinzip kann auch auf die HTML Imports angewendet werden. Google stellt hierfür das Tool Vulcanize \cite{citeulike:13879681} bereit, welches serverseitig ermöglicht, einzelne kleine Web Components eine einzige große Web Component zu konkatenieren. Benannt nach der Vulkanisation, werden metaphorisch die einzelnen Elemente in ein beständigere Materialien umgewandelt. Vulcanize reduziert dabei eine HTML-Datei und ihre zu importierenden HTML-Dateien in eine einzige Datei. Somit werden die unterschiedlichen Requests in nur einem einzigen Request gebündelt und Ladezeiten und Bandbreite minimiert.
 
 
 \subsection{Anwendungen}\label{anwendungen}
@@ -151,7 +151,7 @@ Besonders einfach machen HTML Imports das Einbinden ganzer Web Applikationen mit
 
 \subsection{Browserunterstützung}\label{browserunterstuxfctzung}
 
-HTML Imports sind noch nicht vom W3C standardisiert, sondern befinden sich noch im Status eines ``Working Draft'' \cite{citeulike:13853711}. Sie werden deshalb bisher nur von Google Chrome ab Version 43 und Opera ab Version 33 nativ unterstützt (siehe Abbildung \ref{fig:bdhtmli}. Seitens Mozilla und dessen Browser Firefox wird es für HTML Imports auch keine Unterstützung geben, da ihrer Meinung nach der Bedarf an HTML Imports nach der Einführung von ECMAScript 6 Modules nicht mehr existiert und da Abhängigkeiten schon mit Tools wie Vulcanize aufgelöst werden können \cite{citeulike:13881144}. Auf Details zu ECMAScript 6 Modules wird an dieser Stelle nicht eingegangen, da diese den Umfang dieser Arbeit überschreiten.
+HTML Imports sind noch nicht vom W3C standardisiert, sondern befinden sich noch im Status eines ``Working Draft'' \cite{citeulike:13853711}. Sie werden deshalb bisher nur von Google Chrome ab Version 43 und Opera ab Version 33 nativ unterstützt (siehe Abbildung \ref{fig:bdhtmli}). Seitens Mozilla und dessen Browser Firefox wird es für HTML Imports auch keine Unterstützung geben, da ihrer Meinung nach der Bedarf an HTML Imports nach der Einführung von ECMAScript 6 Modules nicht mehr existiert und da Abhängigkeiten schon mit Tools wie Vulcanize aufgelöst werden können \cite{citeulike:13881144}. Auf Details zu ECMAScript 6 Modules wird an dieser Stelle nicht eingegangen, da diese den Umfang dieser Arbeit überschreiten.
 
 \begin{figure}[htbp]
  \centering
