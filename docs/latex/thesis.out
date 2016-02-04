@@ -44,7 +44,7 @@
 \BOOKMARK [2][-]{subsection.2.6.2}{Browserunterst\374zung}{section.2.6}% 44
 \BOOKMARK [2][-]{subsection.2.6.3}{Performance}{section.2.6}% 45
 \BOOKMARK [1][-]{section.2.7}{Implementierung einer Komponente mit den nativen Web Component APIs}{chapter.2}% 46
-\BOOKMARK [2][-]{subsection.2.7.1}{Custom Element erstellen und Eigenschaften und Funktionen definieren}{section.2.7}% 47
+\BOOKMARK [2][-]{subsection.2.7.1}{Custom Element mit Eigenschaften und Funktionen definieren}{section.2.7}% 47
 \BOOKMARK [2][-]{subsection.2.7.2}{Template erstellen und Styles definieren}{section.2.7}% 48
 \BOOKMARK [2][-]{subsection.2.7.3}{Template bereitstellen und Shadow DOM zur Kapselung benutzen}{section.2.7}% 49
 \BOOKMARK [2][-]{subsection.2.7.4}{Element importieren und verwenden}{section.2.7}% 50
@@ -66,12 +66,10 @@
 \BOOKMARK [2][-]{subsection.4.2.2}{DOM-Knoten automatisch finden}{section.4.2}% 66
 \BOOKMARK [2][-]{subsection.4.2.3}{Content Projection}{section.4.2}% 67
 \BOOKMARK [2][-]{subsection.4.2.4}{CSS-Styling}{section.4.2}% 68
-\BOOKMARK [1][-]{section.4.3}{Gemeinsame Styles mehrerer Komponenten}{chapter.4}% 69
-\BOOKMARK [2][-]{subsection.4.3.1}{Style Module anlegen}{section.4.3}% 70
-\BOOKMARK [2][-]{subsection.4.3.2}{Style Module benutzen}{section.4.3}% 71
-\BOOKMARK [1][-]{section.4.4}{HTML Imports}{chapter.4}% 72
-\BOOKMARK [2][-]{subsection.4.4.1}{Dynamisches Nachladen von HTML}{section.4.4}% 73
-\BOOKMARK [0][-]{chapter*.21}{Abk\374rzungsverzeichnis}{}% 74
-\BOOKMARK [0][-]{chapter*.22}{Abbildungsverzeichnis}{}% 75
-\BOOKMARK [0][-]{chapter*.23}{Listings}{}% 76
-\BOOKMARK [0][-]{chapter*.25}{Literaturverzeichnis}{}% 77
+\BOOKMARK [2][-]{subsection.4.2.5}{Gemeinsame Styles mehrerer Komponenten}{section.4.2}% 69
+\BOOKMARK [1][-]{section.4.3}{HTML Imports}{chapter.4}% 70
+\BOOKMARK [2][-]{subsection.4.3.1}{Dynamisches Nachladen von HTML}{section.4.3}% 71
+\BOOKMARK [0][-]{chapter*.21}{Abk\374rzungsverzeichnis}{}% 72
+\BOOKMARK [0][-]{chapter*.22}{Abbildungsverzeichnis}{}% 73
+\BOOKMARK [0][-]{chapter*.23}{Listings}{}% 74
+\BOOKMARK [0][-]{chapter*.25}{Literaturverzeichnis}{}% 75

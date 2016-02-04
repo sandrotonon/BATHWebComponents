@@ -10,7 +10,7 @@ Anhand der vorhergehenden Abschnitte wird in diesem Abschnitt die Implementierun
 \end{figure}
 
 
-\subsection{Custom Element erstellen und Eigenschaften und Funktionen definieren}\label{custom-element-erstellen-und-eigenschaften-und-funktionen-definieren}
+\subsection{Custom Element mit Eigenschaften und Funktionen definieren}\label{custom-element-mit-eigenschaften-und-funktionen-definieren}
 
 Um ein neues Custom Element zu registrieren, wird zunächst ein \texttt{HTMLElement} Prototyp \texttt{CustomElementProto} mittels \texttt{Object.create(HTMLElement.prototype)} erstellt. Dieser wird anschließend um die Eigenschaft \texttt{theme} und dessen Standardwert \texttt{style1} erweitert, welches das deklarativ konfigurierbare
 Attribut \texttt{theme} abbildet. Nun können die Lifecycle-Callback-Funktionen \texttt{createdCallback} und \texttt{attributeChangedCallback} der Komponente definiert werden.

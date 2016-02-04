@@ -157,12 +157,12 @@ Wobei es wie folgt von der einsetzenden Applikation verwendet werden könnte.
 ```
 
 
-## Gemeinsame Styles mehrerer Komponenten
+### Gemeinsame Styles mehrerer Komponenten
 
 Um nun Style-Regeln auf mehrere Komponenten anzuwenden, stellt Polymer die sogenannten "Style Modules" bereit. Diese ersetzen die ab Version 1.1 nicht mehr unterstützte Möglichkeit, externe Stylesheets zu verwenden. Style Modules sind dabei nichts anderes als Komponenten, welche von allen Komponenten importiert werden können, die diese Styles anwenden sollen.
 
 
-### Style Module anlegen
+**Style Module anlegen**
 
 Um eine Komponente mit geteilten Style-Regeln zu erstellen, genügt es, dass diese die Style-Regeln in einem `<dom-module>`-Tag mit einer beliebigen ID definiert. Dies wird in dem folgenden Beispiel der Datei "shared-styles.html" gezeigt. Darin wird eine Style-Regeln definiert, die den Text aller Elemente mit der Klasse `wrapper` Rot anzeigen lässt.
 
@@ -177,7 +177,7 @@ Um eine Komponente mit geteilten Style-Regeln zu erstellen, genügt es, dass die
 ```
 
 
-### Style Module benutzen
+**Style Module benutzen**
 
 Damit eine Komponente diese Styles nutzen kann, muss sie sie zunächst importieren und anschließend einen `<style>`-Tag definieren, welcher als `include`-Attribut den Namen der Komponente mit den geteilten Style-Regeln hat. Die Styles werden darin importiert und auf die gesamte Komponente angewendet. Somit wird der Text des `<div>`-Tags mit der Klasse `wrapper` rot dargestellt.
 

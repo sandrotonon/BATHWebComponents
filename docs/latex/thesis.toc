@@ -45,7 +45,7 @@
 \contentsline {subsection}{\numberline {2.6.2}Browserunterst\IeC {\"u}zung}{31}{subsection.2.6.2}
 \contentsline {subsection}{\numberline {2.6.3}Performance}{32}{subsection.2.6.3}
 \contentsline {section}{\numberline {2.7}Implementierung einer Komponente mit den nativen Web Component APIs}{33}{section.2.7}
-\contentsline {subsection}{\numberline {2.7.1}Custom Element erstellen und Eigenschaften und Funktionen definieren}{33}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.1}Custom Element mit Eigenschaften und Funktionen definieren}{33}{subsection.2.7.1}
 \contentsline {subsection}{\numberline {2.7.2}Template erstellen und Styles definieren}{34}{subsection.2.7.2}
 \contentsline {subsection}{\numberline {2.7.3}Template bereitstellen und Shadow DOM zur Kapselung benutzen}{35}{subsection.2.7.3}
 \contentsline {subsection}{\numberline {2.7.4}Element importieren und verwenden}{35}{subsection.2.7.4}
@@ -67,11 +67,9 @@
 \contentsline {subsection}{\numberline {4.2.2}DOM-Knoten automatisch finden}{44}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Content Projection}{44}{subsection.4.2.3}
 \contentsline {subsection}{\numberline {4.2.4}CSS-Styling}{45}{subsection.4.2.4}
-\contentsline {section}{\numberline {4.3}Gemeinsame Styles mehrerer Komponenten}{46}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Style Module anlegen}{47}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Style Module benutzen}{47}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}HTML Imports}{47}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Dynamisches Nachladen von HTML}{48}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.2.5}Gemeinsame Styles mehrerer Komponenten}{46}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}HTML Imports}{47}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Dynamisches Nachladen von HTML}{48}{subsection.4.3.1}
 \contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{49}{chapter*.21}
 \contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{50}{chapter*.22}
 \contentsline {chapter}{\nonumberline Listings}{51}{chapter*.23}

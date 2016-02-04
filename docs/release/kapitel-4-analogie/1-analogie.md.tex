@@ -1,4 +1,196 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{hyperref}
+\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
+\hypersetup{unicode=true,
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+\newcommand{\ImportTok}[1]{{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+\newcommand{\BuiltInTok}[1]{{#1}}
+\newcommand{\ExtensionTok}[1]{{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
 
+\date{}
+
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\begin{document}
+
+\section{Analogie zu nativen Web
+Components}\label{analogie-zu-nativen-web-components}
+
+\begin{itemize}
+\tightlist
+\item
+  TODO:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    (siehe Abschnitt X)
+  \end{itemize}
+\end{itemize}
+
+In erster Linie vereinfacht Polymer das Erstellen und den Umgang mit
+Custom Elements, wobei versucht wird die von den
+Web-Components-Standards definierten Prämissen einzuhalten und zu
+erweitern. Ebenso wie bei bei dem nativen Erzeugen einer eigenen
+Komponente, werden bei Polymer für jede Komponente einzelne HTML-Dateien
+erstellt, welche die Elemente repräsentieren. Darin werden alle
+JavaScript-, CSS- und HTML-Strukturen gesammelt und gekapselt. Man
+distanziert sich somit von der Code-Trennung, stattdessen werden alle
+Element-spezifischen Inhalte in einer Datei gebündelt. Wie das
+funktioniert und wie die Technologien mit Polymer umgesetzt werden, wird
+in diesem Kapitel dargestellt. In Abschnitt 4.1 werden dabei die Custom
+Elements erläutert, in Abschnitt 4.2 der Shadow DOM zusammen mit den
+Templates und in Abschnitt 4.3 schließlich die HTML Imports.
+
+\subsection{Custom Elements}\label{custom-elements}
+
+Die Intention der Polymer-Library ist das Erstellen eigener Komponenten
+oder Elemente, den Custom Elements. Das Erstellen, Erweitern und
+Verwalten von Custom Elements kann mit den nativen Mitteln bei
+steigender Komplexität mitunter schwierig werden. Polymer stellt hierfür
+eine Reihe an hilfreicher Funktionen bereit, welche das Arbeiten mit den
+Web-Components-Standards erleichtern und erweitern sollen
+{[}citeulike:13915080{]}.
+
+\subsubsection{Neues Element
+registrieren}\label{neues-element-registrieren}
+
+Für das Registrieren eines neuen Elements stellt Polymer die Funktion
+\texttt{Polymer(prototype);} bereit, darin werden die generellen
+Polymer-Einstellungen in Form eines Prototyp-Objektes vorgenommen. Um
+ein Element zu definieren, muss der zu übergebende Prototyp die
+Eigenschaft
+\texttt{is:\ \textquotesingle{}element-name\textquotesingle{}} haben,
+welche den HTML-Tag-Name des zu erstellenden Custom Elements angibt (in
+diesem Fall \texttt{element-name}). Der Name muss dabei als String
+übergeben werden und ebenso wie beim nativen Erzeugen eines Custom
+Elements einen Bindestrich enthalten. Die Polymer-Funktion registriert
+beim Aufruf automatisch das neue Element und gibt einen Konstruktor
+zurück, mit dem das Element instanziiert werden kann. Dies geschieht
+imperativ und deklarativ analog zu dem Erstellen und Anhängen der
+nativen Methode mit
+\texttt{var\ element\ =\ document.createElement(\textquotesingle{}element-name\textquotesingle{});}
+bzw. mit dem zurückgegebenen Konstruktor oder im HTML-Markup mit dem
+erstellten HTML-Tag
+\texttt{\textless{}element-name\textgreater{}\textless{}/element-name\textgreater{}}.
+Soll statt dem standardmäßig erstellten Konstruktor ein Konstruktor
+erstellt werden, dem Argumente übergeben werden können, so muss in dem
+Prototyp die Methode \texttt{factoryImpl} mit den entsprechenden
+Argumenten definiert werden. Diese löst nach dem Ausführen einen
+\texttt{factoryImpl}-Callback (siehe Abschnitt X) aus. Die
+\texttt{factoryImpl}-Methode wird allerdings nur aufgerufen, wenn ein
+Element mit dem zurückgegebenen Konstruktor, nicht jedoch beim Verwenden
+der \texttt{document.createElement}-Methode oder durch HTML-Markup
+erzeugt wird.
+
+\subsubsection{Elemente erweitern}\label{elemente-erweitern}
+
+Ebenso wie nativ erzeugt Custom Elements können auch mit Polymer
+erzeugte Elemente die nativen Elemente erweitern, was unter Polymer
+ebenso als ``Type Extension Custom Element'' bezeichnet wird. Jedoch
+kann ein Polymer-Element nur native Elemente erweitern, andere
+Polymer-Elemente hingegen noch nicht. Dies soll allerdings in einer
+zukünftigen Version möglich sein. Das Erweitern und Erzeugen eines
+``Type Extension Custom Elements'' funktioniert mit Polymer analog zu
+der nativen Methode. Hierzu muss im Prototyp die Eigenschaft
+\texttt{extends:\ \textquotesingle{}HTMLElement\textquotesingle{}}
+gesetzt werden, wobei das
+\texttt{\textquotesingle{}HTMLElement\textquotesingle{}} ein natives
+HTML-Element wie z.B. \texttt{input} oder \texttt{button} sein muss. Zum
+Erzeugen des Elements kann nun wieder entweder die imperative Methode
+(siehe Abschnitt 4.1.1) oder die deklarative Methode analog dem nativen
+Erstellen mit
+\texttt{\textless{}HTMLElement\ is="my-HTMLElement"\textgreater{}}
+mittels dem \texttt{is} Attribut, gewählt werden.
+
+\subsubsection{Declared Properties - Eigenschaften und Methoden
+definieren}\label{declared-properties---eigenschaften-und-methoden-definieren}
+
+Custom Elements können auch mit Hilfe von Polymer um Eigenschaften und
+Methoden erweitert werden. Hierzu bietet Polymer das
+\texttt{properties}-Objekt an, mit welchem die Eigenschaften der
+Komponente im JSON-Format definiert werden können. Im Gegensatz zu den
+nativen Methoden muss somit nicht jede Eigenschaft bzw. Property einzeln
+hinzugefügt werden. Die in diesem Objekt definierten Properties können
+beim Verwenden der Komponente im HTML-Markup konfiguriert werden.
+Dadurch ist es möglich, eine API für das Element zu erstellen, da die
+von außen konfigurierbaren Attribute ein Interface der Komponente
+bilden. Eine Property kann dabei mit folgenden Parametern spezifiziert
+werden.
 
 \begin{itemize}
 \tightlist
@@ -42,7 +234,7 @@ definiert werden. Soll also beispielsweise eine Property
 würde dies mit \texttt{properties:\ \{\ propertyName:\ String\ \}}
 erreicht werden.
 
-\subsection{Computed Properties}\label{computed-properties}
+\subsubsection{Computed Properties}\label{computed-properties}
 
 Polymer unterstützt des Weiteren zusammengesetzte, virtuelle Properties,
 welche aus anderen Properties berechnet werden. Um dies zu erreichen,
@@ -58,7 +250,7 @@ sich eine der Eigenschaften a oder b ändert und wenn keine von beiden
 undefiniert ist. Der von ihr zurückgegebene Wert wird anschließend in
 der Variable \texttt{result} gespeichert.
 
-\subsection{Property Oberserver}\label{property-oberserver}
+\subsubsection{Property Oberserver}\label{property-oberserver}
 
 Wird für eine Property der Parameter \texttt{observer} angegeben, so
 wird sie auf Änderungen überwacht. Die angegebene Funktion, welcher als
@@ -78,7 +270,8 @@ statt des neuen und des alten Werts übergeben. Mit dem
 \texttt{observers}-Array ist es auch möglich, Sub-Properties oder Arrays
 zu überwachen.
 
-\subsection{Das hostAttributes-Objekt}\label{das-hostattributes-objekt}
+\subsubsection{Das
+hostAttributes-Objekt}\label{das-hostattributes-objekt}
 
 Zusätzlich zu den Declared Properties können auch HTML-Element-Attribute
 im Polymer-Prototyp definiert werden. Hierzu bietet Polymer das
@@ -101,7 +294,7 @@ serialisiert. Boolean-Werte werden bei \texttt{false} entfernt und bei
 HTML-Element an das \texttt{hostAttributes}-Objekt zu propagieren, muss
 auf eine alternative Syntax zugegriffen werden (siehe Abschnitt 5.1.3).
 
-\subsection{Lifecycle-Callback-Funktionen}\label{lifecycle-callback-funktionen}
+\subsubsection{Lifecycle-Callback-Funktionen}\label{lifecycle-callback-funktionen}
 
 Die nativen Lifecycle-Callback-Funktionen (siehe Abschnitt 2.2.6) werden
 ebenso von Polymer unterstützt. Diese können in dem Prototyp als
@@ -122,7 +315,7 @@ So werden die Callbacks eines Elements in der Reihenfolge
 \texttt{created}, \texttt{ready}, \texttt{factoryImpl} und
 \texttt{attached} ausgeführt.
 
-\section{Shadow DOM und HTML
+\subsection{Shadow DOM und HTML
 Templates}\label{shadow-dom-und-html-templates}
 
 Die bisher gezeigten Methoden ermöglichen das Erstellen einer
@@ -165,7 +358,7 @@ innerhalb oder außerhalb des
 \texttt{\textless{}dom-module\textgreater{}}-Tags steht, solange das
 Template vor dem Polymer-Funktionsaufruf geparst wird.
 
-\subsection{Shady DOM}\label{shady-dom}
+\subsubsection{Shady DOM}\label{shady-dom}
 
 Wie in Kapitel 2.3.9 gezeigt, wird der Shadow DOM nicht von allen
 Browsern unterstützt, ebenso ist der Polyfill für diesen aufgrund dessen
@@ -202,7 +395,7 @@ profitieren. Standardmäßig benutzt Polymer jedoch immer die eigene
 Shady-DOM-API, wie das verhindert werden kann, ist in Abschnitt 6.1.2
 dargestellt.
 
-\subsection{DOM-Knoten automatisch
+\subsubsection{DOM-Knoten automatisch
 finden}\label{dom-knoten-automatisch-finden}
 
 Um das Traversieren in dem lokalen DOM zu beschleunigen, bietet Polymer
@@ -221,7 +414,7 @@ nicht. Die dynamisch hinzugefügten Knoten können mit der
 \texttt{this.\$\$(selector);} das erste Element, welches von den im
 Parameter \texttt{selector} enthaltenen CSS-Selektor selektiert wird.
 
-\subsection{Content Projection}\label{content-projection}
+\subsubsection{Content Projection}\label{content-projection}
 
 Um nun Elemente des Light DOMs in das lokalen DOM der Komponente zu
 injizieren, bietet Polymer ebenso das von den nativen Methoden bekannte
@@ -254,7 +447,7 @@ wie folgt aussehen:
 \end{Highlighting}
 \end{Shaded}
 
-\subsection{CSS-Styling}\label{css-styling}
+\subsubsection{CSS-Styling}\label{css-styling}
 
 Die in Abschnitt 2.3.5 gezeigten Regeln für das Stylen des Shadow DOM
 sind auch unter Polymer und dessen Shady DOM gültig
@@ -330,7 +523,7 @@ der Applikation verwendet werden. So kann das obige Beispiel um das
         \KeywordTok{color:} \NormalTok{var(--x-element-button-color, }\DataTypeTok{red}\NormalTok{)}\KeywordTok{;}
         \ErrorTok{@apply(--x-element);}
       \KeywordTok{\}}
-    \KeywordTok{</style>}
+    \KeywordTok{</style>} 
   \KeywordTok{</template>}
 \KeywordTok{</dom-module>}
 \end{Highlighting}
@@ -353,7 +546,7 @@ könnte.
 \end{Highlighting}
 \end{Shaded}
 
-\section{Gemeinsame Styles mehrerer
+\subsubsection{Gemeinsame Styles mehrerer
 Komponenten}\label{gemeinsame-styles-mehrerer-komponenten}
 
 Um nun Style-Regeln auf mehrere Komponenten anzuwenden, stellt Polymer
@@ -363,7 +556,7 @@ verwenden. Style Modules sind dabei nichts anderes als Komponenten,
 welche von allen Komponenten importiert werden können, die diese Styles
 anwenden sollen.
 
-\subsection{Style Module anlegen}\label{style-module-anlegen}
+\textbf{Style Module anlegen}
 
 Um eine Komponente mit geteilten Style-Regeln zu erstellen, genügt es,
 dass diese die Style-Regeln in einem
@@ -379,13 +572,13 @@ lässt.
   \KeywordTok{<template>}
     \KeywordTok{<style>}
       \FloatTok{.wrapper} \KeywordTok{\{} \KeywordTok{color:} \DataTypeTok{red}\KeywordTok{;} \KeywordTok{\}}
-    \KeywordTok{</style>}
+    \KeywordTok{</style>} 
   \KeywordTok{</template>}
 \KeywordTok{</dom-module>}
 \end{Highlighting}
 \end{Shaded}
 
-\subsection{Style Module benutzen}\label{style-module-benutzen}
+\textbf{Style Module benutzen}
 
 Damit eine Komponente diese Styles nutzen kann, muss sie sie zunächst
 importieren und anschließend einen
@@ -409,7 +602,7 @@ Komponente angewendet. Somit wird der Text des
 \end{Highlighting}
 \end{Shaded}
 
-\section{HTML Imports}\label{html-imports}
+\subsection{HTML Imports}\label{html-imports}
 
 Um mehrere Polymer Komponenten oder Komponenten innerhalb anderer
 Komponenten zu benutzen, verwendet Polymer HTML Imports. Diese
@@ -424,7 +617,7 @@ JavaScript-Methoden oder Eigenschaften, wie beispielsweise der
 \texttt{import}-Eigenschaft des importierten Elements, wird somit
 hinfällig.
 
-\subsection{Dynamisches Nachladen von
+\subsubsection{Dynamisches Nachladen von
 HTML}\label{dynamisches-nachladen-von-html}
 
 Falls HTML-Dateien dynamisch zur Laufzeit nachgeladen werden sollen,
@@ -441,3 +634,5 @@ werden kann. Wenn der Link geladen wurde, also der
 importierten HTML-Dokuments. Der Parameter \texttt{onerror} ist dabei
 eine optionale Callback-Funktion, die beim Auftreten eines Fehlers
 aufgerufen wird.
+
+\end{document}
