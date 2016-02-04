@@ -23,17 +23,17 @@ Bidelman, E. (2014).
 
 \bibitem[Can I Use - Custom Elements web]{citeulike:13844983}
 Can I Use - Custom Elements (web).
-\newblock {Can I use - Custom Elements}.
+\newblock {Custom Elements}.
 \newblock http://caniuse.com/\#feat=custom-elements.
 
 \bibitem[Can I Use - HTML Imports web]{citeulike:13853711}
 Can I Use - HTML Imports (web).
-\newblock {Can I use - HTML Imports}.
+\newblock {HTML Imports}.
 \newblock http://caniuse.com/\#search=imports.
 
 \bibitem[Can I Use - Shadow DOM web]{citeulike:13883407}
 Can I Use - Shadow DOM (web).
-\newblock {Can I use - Shadow DOM}.
+\newblock {Shadow DOM}.
 \newblock http://caniuse.com/\#search=shadow\%20dom.
 
 \bibitem[Cooney und Bidelman 2013]{citeulike:13851404}
@@ -54,53 +54,14 @@ Gasston, P. (2014).
 
 \bibitem[Glazkov 2015]{citeulike:13845061}
 Glazkov, D. (2015).
-\newblock {W3C - Custom Elements}.
+\newblock {Custom Elements}.
 \newblock http://w3c.github.io/webcomponents/spec/custom/\#concepts.
-
-\bibitem[Google weba]{citeulike:13914840}
-Google (weba).
-\newblock {Polymer Base Documentation}.
-
-\bibitem[Google webb]{citeulike:13915202}
-Google (webb).
-\newblock {Polymer DevTools Extension}.
-
-\bibitem[Google webc]{citeulike:13915080}
-Google (webc).
-\newblock {Polymer Documentation}.
-
-\bibitem[Google webd]{citeulike:13916374}
-Google (webd).
-\newblock {Polymer Element Catalog}.
-
-\bibitem[Google webe]{citeulike:13915222}
-Google (webe).
-\newblock {Polymer Gestures}.
-
-\bibitem[Google webf]{citeulike:13915079}
-Google (webf).
-\newblock {Pressed Behavior}.
-
-\bibitem[Google webg]{citeulike:13879681}
-Google (webg).
-\newblock {Vulcanize}.
-\newblock https://github.com/polymer/vulcanize.
 
 \bibitem[Grigorik 2013]{citeulike:13262776}
 Grigorik, I. (2013).
 \newblock {\em {High Performance Browser Networking: What every web developer
   should know about networking and web performance}}.
 \newblock O'Reilly Media, 1 edition.
-
-\bibitem[Group 2015]{citeulike:13851253}
-Group, W. H. A. T.~W. (2015).
-\newblock {HTML Standard}.
-\newblock Technical report.
-
-\bibitem[Hacks 2015]{citeulike:13881144}
-Hacks, M. (2015).
-\newblock {The state of Web Components}.
-\newblock https://hacks.mozilla.org/2015/06/the-state-of-web-components/.
 
 \bibitem[Hongkiat 2014]{citeulike:13853724}
 Hongkiat (2014).
@@ -117,10 +78,20 @@ Ihrig, C. (2012).
 \newblock {The Basics of the Shadow DOM}.
 \newblock http://www.sitepoint.com/the-basics-of-the-shadow-dom/.
 
-\bibitem[Kitamura 2014]{citeulike:13752379}
-Kitamura, E. (2014).
+\bibitem[Kitamura 2014a]{citeulike:13752379}
+Kitamura, E. (2014a).
 \newblock {Introduction to Custom Elements}.
 \newblock http://webcomponents.org/articles/introduction-to-custom-elements/.
+
+\bibitem[Kitamura 2014b]{citeulike:13853018}
+Kitamura, E. (2014b).
+\newblock {Introduction to the template elements}.
+\newblock http://webcomponents.org/articles/introduction-to-template-element/.
+
+\bibitem[Kitamura 2015]{citeulike:13853700}
+Kitamura, E. (2015).
+\newblock {Introduction to HTML Imports}.
+\newblock http://webcomponents.org/articles/introduction-to-html-imports/.
 
 \bibitem[Kr\"{o}ner 2014a]{citeulike:13842701}
 Kr\"{o}ner, P. (2014a).
@@ -136,27 +107,35 @@ Kr\"{o}ner, P. (2014b).
 \bibitem[Lewis 2015]{citeulike:13915203}
 Lewis, P. (2015).
 \newblock {Polymer for the Performance-obsessed}.
+\newblock https://aerotwist.com/blog/polymer-for-the-performance-obsessed/.
+
+\bibitem[{MDN} 2015a]{citeulike:13853253}
+{MDN} (2015a).
+\newblock {Same-origin policy}.
+\newblock
+  https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin\_policy.
+
+\bibitem[{MDN} 2015b]{citeulike:13852997}
+{MDN} (2015b).
+\newblock {template - HTML}.
+\newblock https://developer.mozilla.org/de/docs/Web/HTML/Element/template.
 
 \bibitem[Microsoft web]{citeulike:13914237}
 Microsoft (web).
-\newblock {Developer Resources : Microsoft Edge Dev}.
+\newblock {Developer Resources: Microsoft Edge Dev}.
+\newblock
+  https://dev.windows.com/en-us/microsoft-edge/platform/status/?filter=f3f0000bf\&search=web\%20components.
+
+\bibitem[Mozilla 2015]{citeulike:13881144}
+Mozilla (2015).
+\newblock {The state of Web Components}.
+\newblock https://hacks.mozilla.org/2015/06/the-state-of-web-components/.
 
 \bibitem[Namics 2014]{citeulike:13853015}
 Namics (2014).
 \newblock {Web Components: HTML Templates}.
 \newblock
   https://frontend.namics.com/2014/03/20/web-components-html-templates-2/.
-
-\bibitem[Network 2015a]{citeulike:13853253}
-Network, M.~D. (2015a).
-\newblock {Same-origin policy}.
-\newblock
-  https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin\_policy.
-
-\bibitem[Network 2015b]{citeulike:13852997}
-Network, M.~D. (2015b).
-\newblock {<template> - HTML}.
-\newblock https://developer.mozilla.org/de/docs/Web/HTML/Element/template.
 
 \bibitem[Overson und Strimpel 2015]{citeulike:13844975}
 Overson, J. and Strimpel, J. (2015).
@@ -170,10 +149,48 @@ Perterkroener (2014).
 \newblock
   http://www.peterkroener.de/fragen-zu-html5-und-co-beantwortet-15-web-components-performance-css-variablen-data-urls-async/.
 
+\bibitem[Polymer - Base Documentation web]{citeulike:13914840}
+Polymer - Base Documentation (web).
+\newblock {Base Documentation}.
+\newblock http://polymer.github.io/polymer/.
+
+\bibitem[Polymer - DevTools Extension web]{citeulike:13915202}
+Polymer - DevTools Extension (web).
+\newblock {DevTools Extension}.
+\newblock
+  https://chrome.google.com/webstore/detail/polymer-devtools-extensio/mmpfaamodhhlbadloaibpocmcomledcg.
+
+\bibitem[Polymer - Documentation web]{citeulike:13915080}
+Polymer - Documentation (web).
+\newblock {Documentation}.
+\newblock
+  https://www.polymer-project.org/1.0/docs/devguide/feature-overview.html.
+
+\bibitem[Polymer - Element Catalog web]{citeulike:13916374}
+Polymer - Element Catalog (web).
+\newblock {Element Catalog}.
+\newblock https://elements.polymer-project.org/.
+
+\bibitem[Polymer - Gestures web]{citeulike:13915222}
+Polymer - Gestures (web).
+\newblock {Gestures}.
+\newblock https://github.com/Polymer/polymer-gestures.
+
+\bibitem[Polymer - Pressed Behavior web]{citeulike:13915079}
+Polymer - Pressed Behavior (web).
+\newblock {Pressed Behavior}.
+\newblock
+  https://github.com/Polymer/polycasts/blob/master/ep21-behaviors/behaviors-demo/elements/pressed-behavior/pressed-behavior.html.
+
 \bibitem[Polymer - Shady DOM web]{citeulike:13886251}
 Polymer - Shady DOM (web).
 \newblock {What is shady DOM? - Polymer 1.0}.
 \newblock https://www.polymer-project.org/1.0/articles/shadydom.html.
+
+\bibitem[Polymer - Vulcanize web]{citeulike:13879681}
+Polymer - Vulcanize (web).
+\newblock {Vulcanize}.
+\newblock https://github.com/polymer/vulcanize.
 
 \bibitem[Satrom 2014]{citeulike:13914234}
 Satrom, B. (2014).
@@ -189,10 +206,13 @@ Schaffranek, R. (2014).
 \bibitem[Sharp 2010]{citeulike:13914241}
 Sharp, R. (2010).
 \newblock {What is a Polyfill?}
+\newblock https://remysharp.com/2010/10/08/what-is-a-polyfill.
 
 \bibitem[Sutton 2015]{citeulike:13915273}
 Sutton, M. (2015).
 \newblock {Notes On Client-Rendered Accessibility}.
+\newblock
+  https://www.smashingmagazine.com/2015/05/client-rendered-accessibility/.
 
 \bibitem[Tarasiewicz 2014]{citeulike:13920434}
 Tarasiewicz, R. B.~P. (2014).
@@ -205,68 +225,69 @@ Tarasiewicz, R. B.~P. (2014).
 \newblock
   https://www.chromium.org/developers/polymer-1-0\#TOC-Achieving-data-binding-nirvana.
 
-\bibitem[W3c 2008]{citeulike:13915310}
-W3c (2008).
+\bibitem[{W3C} 2008]{citeulike:13915310}
+{W3C} (2008).
 \newblock {Web Content Accessibility Guidelines (WCAG) 2.0}.
+\newblock https://www.w3.org/TR/WCAG20/.
 
-\bibitem[W3c 2014a]{citeulike:13853643}
-W3c (2014a).
+\bibitem[{W3C} 2014a]{citeulike:13853643}
+{W3C} (2014a).
 \newblock {Cross-Origin Resource Sharing}.
 \newblock http://www.w3.org/TR/cors/.
 
-\bibitem[W3c 2014b]{citeulike:13853159}
-W3c (2014b).
+\bibitem[{W3C} 2014b]{citeulike:13853159}
+{W3C} (2014b).
 \newblock {HTML Templates}.
 \newblock http://www.w3.org/TR/html5/scripting-1.html\#the-template-element.
 
-\bibitem[W3c 2014c]{citeulike:13915306}
-W3c (2014c).
-\newblock {W3C The Accessibility Tree and the DOM Tree}.
+\bibitem[{W3C} 2014c]{citeulike:13915306}
+{W3C} (2014c).
+\newblock {The Accessibility Tree and the DOM Tree}.
+\newblock http://www.w3.org/WAI/PF/aria-implementation/\#intro\_treetypes.
 
-\bibitem[W3c 2015a]{citeulike:13883381}
-W3c (2015a).
+\bibitem[{W3C} 2015a]{citeulike:13883381}
+{W3C} (2015a).
 \newblock {CSS Custom Properties for Cascading Variables Module Level 1}.
 \newblock http://dev.w3.org/csswg/css-variables/.
 
-\bibitem[W3c 2015b]{citeulike:13883067}
-W3c (2015b).
+\bibitem[{W3C} 2015b]{citeulike:13883067}
+{W3C} (2015b).
 \newblock {CSS Scoping Module Level 1}.
 \newblock https://drafts.csswg.org/css-scoping/.
 
-\bibitem[W3c 2015c]{citeulike:13879687}
-W3c (2015c).
-\newblock {W3C - Shadow DOM}.
+\bibitem[{W3C} 2015c]{citeulike:13879687}
+{W3C} (2015c).
+\newblock {Shadow DOM}.
 \newblock http://www.w3.org/TR/shadow-dom/.
 
-\bibitem[W3c web]{citeulike:13915280}
-W3c (web).
-\newblock {W3C Introduction to Web Accessibility}.
+\bibitem[{W3C} web]{citeulike:13915280}
+{W3C} (web).
+\newblock {Introduction to Web Accessibility}.
+\newblock https://www.w3.org/WAI/intro/accessibility.php.
 
-\bibitem[W3Techs und W3Techs web]{citeulike:13879575}
-W3Techs and W3Techs (web).
-\newblock {Usage Statistics of HTTP/2 for Websites, December 2015}.
+\bibitem[W3Techs 2015]{citeulike:13879575}
+W3Techs (2015).
+\newblock {Usage Statistics of HTTP/2 for Websites}.
 \newblock http://w3techs.com/technologies/details/ce-http2/all/all.
 
-\bibitem[Webcomponents 2014]{citeulike:13853018}
-Webcomponents (2014).
-\newblock {Introduction to the template elements}.
-\newblock http://webcomponents.org/articles/introduction-to-template-element/.
-
-\bibitem[Webcomponents 2015]{citeulike:13853700}
-Webcomponents (2015).
-\newblock {Introduction to HTML Imports}.
-\newblock http://webcomponents.org/articles/introduction-to-html-imports/.
-
-\bibitem[Webcomponents web]{citeulike:13914239}
-Webcomponents (web).
+\bibitem[WebComponents - Polyfills web]{citeulike:13914239}
+WebComponents - Polyfills (web).
 \newblock {Polyfills}.
+\newblock http://webcomponents.org/polyfills/.
 
-\bibitem[Webcompontents web]{citeulike:13914238}
-Webcompontents (web).
-\newblock {webcomponentsjs}.
+\bibitem[WebComponents - webcomponents.js web]{citeulike:13914238}
+WebComponents - webcomponents.js (web).
+\newblock {webcomponents.js}.
+\newblock https://github.com/webcomponents/webcomponentsjs.
+
+\bibitem[{WHATWG} web]{citeulike:13851253}
+{WHATWG} (web).
+\newblock {HTML Standard}.
+\newblock https://html.spec.whatwg.org/multipage/dom.html\#htmlunknownelement.
 
 \bibitem[Yeoman web]{citeulike:13916358}
 Yeoman (web).
 \newblock {Yeoman Website}.
+\newblock http://yeoman.io/.
 
 \end{thebibliography}

@@ -25,7 +25,7 @@
 \contentsline {lstlisting}{\numberline {4.1}Template einer Polymer-Komponente}{42}{lstlisting.4.1}
 \contentsline {lstlisting}{\numberline {4.2}\IeC {\"U}berwachung eines \texttt {contentNode}-Knotens}{44}{lstlisting.4.2}
 \contentsline {lstlisting}{\numberline {4.3}\texttt {x-element}-Komponente mit einer \ac {CSS}-Variablen}{44}{lstlisting.4.3}
-\contentsline {lstlisting}{\numberline {4.4}Definition der \ac {CSS}-Variable}{44}{lstlisting.4.4}
+\contentsline {lstlisting}{\numberline {4.4}Definition der \ac {CSS}-Variable}{45}{lstlisting.4.4}
 \contentsline {lstlisting}{\numberline {4.5}Erweiterung der Styles um ein Mixin}{45}{lstlisting.4.5}
 \contentsline {lstlisting}{\numberline {4.6}Verwendung eines Mixins einer Komponente}{45}{lstlisting.4.6}
 \contentsline {lstlisting}{\numberline {4.7}\ac {HTML}-Datei ``shared-styles.html''}{46}{lstlisting.4.7}

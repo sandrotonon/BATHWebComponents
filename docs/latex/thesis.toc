@@ -63,7 +63,7 @@
 \contentsline {subsection}{\numberline {4.1.5}Property Oberserver}{40}{subsection.4.1.5}
 \contentsline {subsection}{\numberline {4.1.6}Das hostAttributes-Objekt}{41}{subsection.4.1.6}
 \contentsline {subsection}{\numberline {4.1.7}Lifecycle-Callback-Funktionen}{41}{subsection.4.1.7}
-\contentsline {section}{\numberline {4.2}Shadow \ac {DOM} und \ac {HTML} Templates}{41}{section.4.2}
+\contentsline {section}{\numberline {4.2}Shadow \ac {DOM} und \ac {HTML} Templates}{42}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Shady \ac {DOM}}{42}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}\ac {DOM}-Knoten automatisch finden}{43}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Content Projection}{43}{subsection.4.2.3}

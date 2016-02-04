@@ -1,43 +1,45 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.20)  4 FEB 2016 20:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  4 FEB 2016 22:14
 entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **thesis.tex
-(thesis.tex
-LaTeX2e <2015/01/01> patch level 2
-Babel <3.9m> and hyphenation patterns for 69 languages loaded.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\scrreprt.cls"
-Document Class: scrreprt 2015/10/03 v3.19a KOMA-Script document class (report)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\scrkbase.sty"
-Package: scrkbase 2015/10/03 v3.19a KOMA-Script package (KOMA-Script-dependent 
+(./thesis.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/scrreprt.cls
+Document Class: scrreprt 2015/05/06 v3.17a KOMA-Script document class (report)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2015/05/06 v3.17a KOMA-Script package (KOMA-Script-dependent 
 basics and keyval usage)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\scrbase.sty"
-Package: scrbase 2015/10/03 v3.19a KOMA-Script package (KOMA-Script-independent
+(/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2015/05/06 v3.17a KOMA-Script package (KOMA-Script-independent
  basics and keyval usage)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\scrlfile.sty"
-Package: scrlfile 2015/10/03 v3.19a KOMA-Script package (loading files)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2015/05/06 v3.17a KOMA-Script package (loading files)
 
-Package scrlfile, 2015/10/03 v3.19a KOMA-Script package (loading files)
+Package scrlfile, 2015/05/06 v3.17a KOMA-Script package (loading files)
                   Copyright (C) Markus Kohm
 
-))) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\tocbasic.sty"
-Package: tocbasic 2015/10/03 v3.19a KOMA-Script package (handling toc-files)
+))) (/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2015/05/06 v3.17a KOMA-Script package (handling toc-files)
 )
 Package tocbasic Info: omitting babel extension for `toc'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `toc' on input line 125.
+(tocbasic)             for `toc' on input line 124.
 Package tocbasic Info: omitting babel extension for `lof'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lof' on input line 126.
+(tocbasic)             for `lof' on input line 125.
 Package tocbasic Info: omitting babel extension for `lot'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lot' on input line 127.
-Package tocbasic Info: defining new hook before heading of `' on input line 158
-8.
+(tocbasic)             for `lot' on input line 126.
+Package tocbasic Info: defining new hook before heading of `' on input line 155
+2.
 Package scrreprt Info: You've used standard option `11pt'.
 (scrreprt)             This is correct!
 (scrreprt)             Internally I'm using `fontsize=11pt'.
@@ -45,16 +47,16 @@ Package scrreprt Info: You've used standard option `11pt'.
 (scrreprt)             you'd have to use `fontsize=11pt' there
 (scrreprt)             instead of `11pt', too.
 Class scrreprt Info: File `scrsize11pt.clo' used to setup font sizes on input l
-ine 2248.
+ine 2149.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\scrsize11pt.clo"
-File: scrsize11pt.clo 2015/10/03 v3.19a KOMA-Script font size class option (11p
+(/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
+File: scrsize11pt.clo 2015/05/06 v3.17a KOMA-Script font size class option (11p
 t)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\typearea.sty"
-Package: typearea 2015/10/03 v3.19a KOMA-Script package (type area)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2015/05/06 v3.17a KOMA-Script package (type area)
 
-Package typearea, 2015/10/03 v3.19a KOMA-Script package (type area)
+Package typearea, 2015/05/06 v3.17a KOMA-Script package (type area)
                   Copyright (C) Frank Neukam, 1992-1994
                   Copyright (C) Markus Kohm, 1994-
 
@@ -86,7 +88,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 11.0pt
 (typearea)              \footskip       = 47.6pt
 (typearea)              \baselineskip   = 13.6pt
-(typearea)              on input line 1509.
+(typearea)              on input line 1485.
 )
 \c@part=\count80
 \c@chapter=\count81
@@ -95,35 +97,35 @@ Package typearea Info: These are the values describing the layout:
 \c@subsubsection=\count84
 \c@paragraph=\count85
 \c@subparagraph=\count86
-LaTeX Info: Redefining \textsubscript on input line 4652.
+LaTeX Info: Redefining \textsubscript on input line 4417.
 \abovecaptionskip=\skip46
 \belowcaptionskip=\skip47
 \c@pti@nb@sid@b@x=\box26
 \c@figure=\count87
 \c@table=\count88
 \bibindent=\dimen102
-) (preamble/pakete.tex
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+) (./preamble/pakete.tex
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 94.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count89
@@ -131,29 +133,29 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(C:\Users\stonon\AppData\Roaming\MiKTeX\2.9\tex\latex\ntgclass\a4.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ntgclass/a4.sty
 Package: a4 2004/04/15 v1.2g A4 based page layout
 )
-(C:\Users\stonon\AppData\Roaming\MiKTeX\2.9\tex\latex\german\german.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/german/german.sty
 v2.5e 1998-07-08
 Package: german 1998/07/08 v2.5e Support for writing german texts (br)
 \grmnU@D=\dimen105
-german -- \language number for Austrian undefined, default 23 used.
+german -- \language number for Austrian undefined, default 30 used.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
-File: t1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
@@ -302,8 +304,8 @@ File: t1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
-File: ot1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00B8 (decimal 184)
@@ -333,8 +335,8 @@ File: ot1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
-File: omsenc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -357,14 +359,14 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(C:\Users\stonon\AppData\Roaming\MiKTeX\2.9\tex\latex\acronym\acronym.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/acronym/acronym.sty
 Package: acronym 2015/03/21 v1.41 Support for acronyms (Tobias Oetiker)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bigfoot\suffix.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/bigfoot/suffix.sty
 Package: suffix 2006/07/15 1.5a Variant command support
 )
-(C:\Users\stonon\AppData\Roaming\MiKTeX\2.9\tex\latex\xstring\xstring.sty
-(C:\Users\stonon\AppData\Roaming\MiKTeX\2.9\tex\generic\xstring\xstring.tex
+(/usr/local/texlive/2015/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/xstring/xstring.tex
 \@xs@message=\write3
 \integerpart=\count90
 \decimalpart=\count91
@@ -373,28 +375,28 @@ Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
 \AC@clearlist=\toks17
 )
-(C:\Users\stonon\AppData\Roaming\MiKTeX\2.9\tex\latex\todonotes\todonotes.sty
-Package: todonotes 2015/07/09 .dtx Todonotes source and documentation.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/todonotes/todonotes.sty
+Package: todonotes 2012/07/25 .dtx Todonotes source and documentation.
 Package: todonotes 2012/07/25
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2015/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks18
 \XKV@tempa@toks=\toks19
 )
 \XKV@depth=\count92
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -408,39 +410,36 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrcs.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.te
-x"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
 \pgfutil@everybye=\toks20
 \pgfutil@tempdima=\dimen106
 \pgfutil@tempdimb=\dimen107
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common-li
-sts.tex"))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def
-"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
+sts.tex))
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box27
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfrcs.code.tex"
-Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2013/12/20 v3.0.0 (rcs-revision 1.28)
 ))
-Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgfcore.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\systemlayer\pgfsys.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys.code.tex
-"
-Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex
-"
+Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks21
 \pgfkeys@temptoks=\toks22
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.c
-ode.tex"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+ode.tex
 \pgfkeys@tmptoks=\toks23
 ))
 \pgf@x=\dimen108
@@ -461,37 +460,35 @@ ode.tex"
 \t@pgf@tokb=\toks25
 \t@pgf@tokc=\toks26
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgf.cfg"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-pdftex.d
-ef"
-File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+File: pgfsys-pdftex.def 2013/07/18  (rcs-revision 1.33)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-common-p
-df.def"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
 File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.
-code.tex"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
 \pgfsyssoftpath@smallbuffer@items=\count97
 \pgfsyssoftpath@bigbuffer@items=\count98
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.
-code.tex"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcore.code.tex
-"
-Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathcalc.code.tex"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex
-"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen116
 \pgfmath@count=\count99
 \pgfmath@box=\box28
@@ -499,29 +496,29 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 \pgfmath@stack@operand=\toks28
 \pgfmath@stack@operation=\toks29
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.code.
-tex"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.basic
-.code.tex")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.trigo
-nometric.code.tex")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.rando
-m.code.tex")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.compa
-rison.code.tex")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.base.
-code.tex")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.round
-.code.tex")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.misc.
-code.tex")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.integ
-erarithmetics.code.tex")))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)))
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count100
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.co
-de.tex"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@picminx=\dimen117
 \pgf@picmaxx=\dimen118
@@ -538,122 +535,122 @@ File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@zx=\dimen129
 \pgf@zy=\dimen130
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconst
-ruct.code.tex"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
 \pgf@path@lastx=\dimen131
 \pgf@path@lasty=\dimen132
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage
-.code.tex"
-File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
+File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
 \pgf@shorten@end@additional=\dimen133
 \pgf@shorten@start@additional=\dimen134
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.co
-de.tex"
-File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
+File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
 \pgfpic=\box29
 \pgf@hbox=\box30
 \pgf@layerbox@main=\box31
 \pgf@picture@serial@count=\count101
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicst
-ate.code.tex"
-File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
+File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
 \pgflinewidth=\dimen135
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransform
-ations.code.tex"
-File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
+File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
 \pgf@pt@x=\dimen136
 \pgf@pt@y=\dimen137
 \pgf@pt@temp=\dimen138
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.cod
-e.tex"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreobjects.c
-ode.tex"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
 File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathproce
-ssing.code.tex"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
 File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorearrows.co
-de.tex"
-File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
+File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
 \pgfarrowsep=\dimen139
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.cod
-e.tex"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen140
 \pgf@sys@shading@range@num=\count102
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.cod
-e.tex"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreexternal.
-code.tex"
-File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
+File: pgfcoreexternal.code.tex 2013/07/15  (rcs-revision 1.20)
 \pgfexternal@startupbox=\box32
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorelayers.co
-de.tex"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
 File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretranspare
-ncy.code.tex"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
 File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepatterns.
-code.tex"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
 File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 )))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleshapes.cod
-e.tex"
-File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
+File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
 \pgfnodeparttextbox=\box33
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleplot.code.
-tex"
-File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
+File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version
--0-65.sty"
-Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
 \pgf@nodesepstart=\dimen141
 \pgf@nodesepend=\dimen142
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version
--1-18.sty"
-Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgffor.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgfkeys.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"
-)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\math\pgfmath.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgffor.code.tex"
-Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex")
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen143
 \pgffor@skip=\dimen144
 \pgffor@stack=\toks30
 \pgffor@toks=\toks31
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\tikz.cod
-e.tex"
-Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothan
-dlers.code.tex"
-File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
 \pgf@plot@mark@count=\count103
 \pgfplotmarksize=\dimen145
 )
@@ -672,8 +669,8 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikznumberofcurrentchild=\count106
 \tikz@fig@count=\count107
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmodulematrix.cod
-e.tex"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 \pgfmatrixcurrentrow=\count108
 \pgfmatrixcurrentcolumn=\count109
@@ -681,15 +678,15 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 )
 \tikz@expandcount=\count111
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
-s\tikzlibrarytopaths.code.tex"
-File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
 )))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
-s\tikzlibrarypositioning.code.tex"
-File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.0 (rcs-revision 1.7)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count112
 \calc@Bcount=\count113
@@ -704,7 +701,7 @@ LaTeX Info: Redefining \addtolength on input line 81.
 )
 \c@@todonotes@numberoftodonotes=\count115
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen154
 \lightrulewidth=\dimen155
@@ -724,24 +721,24 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count119
 \@thisrulewidth=\dimen166
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks32
 \ex@=\dimen167
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen168
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count120
@@ -782,7 +779,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count132
 \lst@gtempboxa=\box40
 \lst@token=\toks37
@@ -796,19 +793,19 @@ LaTeX Info: Redefining \] on input line 2666.
 \lst@lineno=\count137
 \lst@maxwidth=\dimen179
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
-File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 \c@lstnumber=\count138
 \lst@skipnumbers=\count139
 \lst@framebox=\box41
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
-File: listings.cfg 2015/06/04 1.6 listings configuration
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/09/06 1.5e listings configuration
 ))
-Package: listings 2015/06/04 1.6 (Carsten Heinz)
+Package: listings 2014/09/06 1.5e (Carsten Heinz)
 
-(C:\Users\stonon\AppData\Roaming\MiKTeX\2.9\tex\latex\subfigure\subfigure.sty
-Package: subfigure 2002/07/30 v2.1.4 subfigure package
+(/usr/local/texlive/2015/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip54
 \subfigcapskip=\skip55
 \subfigcaptopadj=\dimen180
@@ -823,19 +820,20 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-(C:\Users\stonon\AppData\Roaming\MiKTeX\2.9\tex\latex\subfigure\subfigure.cfg)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/subfigure/subfigure.cfg)
 \subfig@top=\skip58
 \subfig@bottom=\skip59
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
-Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
-Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
@@ -866,7 +864,7 @@ Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
 Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
 Package: xcolor-patch 2011/01/30 xcolor patch
 Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
@@ -874,27 +872,27 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen182
 \Hy@linkcounter=\count144
 \Hy@pagecounter=\count145
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
 \Hy@SavedSpaceFactor=\count146
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4443.
@@ -906,7 +904,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count147
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -931,19 +929,19 @@ LaTeX Info: Redefining \pageref on input line 6369.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count152
 \c@bookmark@seq@number=\count153
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip60
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@cnth=\count154
 \Gm@cntv=\count155
@@ -957,35 +955,34 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@layouthoffset=\dimen192
 \Gm@layoutvoffset=\dimen193
 \Gm@dimlist=\toks38
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\scrhack.sty"
-Package: scrhack 2015/10/03 v3.19a KOMA-Script package 
+(/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/scrhack.sty
+Package: scrhack 2015/05/06 v3.17a KOMA-Script package 
 Package scrhack Info: hyperref hack deactivated because of
 (scrhack)             detection of hyperref version, that doesn't
-(scrhack)             need that hack, on input line 151.
-Package scrhack Info: loading listings hack on input line 172.
+(scrhack)             need that hack, on input line 139.
+Package scrhack Info: loading listings hack on input line 160.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\listings.hak"
-File: listings.hak 2015/10/03 v3.19a KOMA-Script package (hacking package listi
+(/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/listings.hak
+File: listings.hak 2015/05/06 v3.17a KOMA-Script package (hacking package listi
 ngs)
 Package tocbasic Info: setting babel extension for `lol' on input line 137.
 Package scrhack Info: redefining \lstlistoflistings on input line 137.
 )
-Package scrhack Info: loading setspace hack on input line 179.
+Package scrhack Info: loading setspace hack on input line 167.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\setspace.hak"
-File: setspace.hak 2015/10/03 v3.19a KOMA-Script package (hacking package setsp
+(/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/setspace.hak
+File: setspace.hak 2015/05/06 v3.17a KOMA-Script package (hacking package setsp
 ace)
 )))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
-Package: caption 2015/09/17 v3.3-111 Customizing captions (AR)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
-Package: caption3 2015/09/20 v1.7-115 caption3 kernel (AR)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen194
 \captionmargin@=\dimen195
@@ -1001,15 +998,18 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: subfigure package is loaded.
 )
-(preamble/listinglanguages.tex) (preamble/optionen.tex) (preamble/variablen.tex
-) (thesis.aux (htwg/cover.aux) (htwg/title.aux) (htwg/abstract.aux)
-(htwg/affidavit.aux) (kapitel1/1-einleitung.aux) (kapitel2/1-problemloesung.aux
-) (kapitel2/2-custom-elements.aux) (kapitel2/3-shadow-dom.aux)
-(kapitel2/4-html-templates.aux) (kapitel2/5-html-imports.aux)
-(kapitel2/6-polyfills.aux) (kapitel2/7-beispiel.aux) (kapitel3/1-polymer.aux)
-(kapitel4/1-analogie.aux) (kapitel5/1-additional-sugar.aux)
-(kapitel6/1-best-practices.aux) (kapitel7/1-polymer-komponente.aux)
-(kapitel7/2-angular-vergleich.aux) (kapitel8/1-zukunftsprognose.aux))
+(./preamble/listinglanguages.tex) (./preamble/optionen.tex)
+(./preamble/variablen.tex) (./thesis.aux (./htwg/cover.aux) (./htwg/title.aux)
+(./htwg/abstract.aux) (./htwg/affidavit.aux) (./kapitel1/1-einleitung.aux)
+(./kapitel2/1-problemloesung.aux) (./kapitel2/2-custom-elements.aux)
+(./kapitel2/3-shadow-dom.aux) (./kapitel2/4-html-templates.aux)
+(./kapitel2/5-html-imports.aux) (./kapitel2/6-polyfills.aux)
+(./kapitel2/7-beispiel.aux) (./kapitel3/1-polymer.aux)
+(./kapitel4/1-analogie.aux) (./kapitel5/1-additional-sugar.aux)
+(./kapitel6/1-best-practices.aux) (./kapitel7/1-polymer-komponente.aux)
+(./kapitel7/2-angular-vergleich.aux) (./kapitel8/1-zukunftsprognose.aux))
+\openout1 = `thesis.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
@@ -1025,7 +1025,7 @@ LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count158
 \scratchdimen=\dimen201
@@ -1038,15 +1038,30 @@ LaTeX Font Info:    ... okay on input line 14.
 \MPnumerator=\count162
 \makeMPintoPDFobject=\count163
 \everyMPtoPDFconversion=\toks40
-) ABD: EveryShipout initializing macros
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+ABD: EveryShipout initializing macros
 \c@lstlisting=\count164
 \AtBeginShipoutBox=\box43
 Package hyperref Info: Link coloring OFF on input line 14.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count165
@@ -1055,8 +1070,10 @@ LaTeX Info: Redefining \ref on input line 14.
 LaTeX Info: Redefining \pageref on input line 14.
 LaTeX Info: Redefining \nameref on input line 14.
 
-(thesis.out) (thesis.out)
+(./thesis.out) (./thesis.out)
 \@outlinefile=\write5
+\openout5 = `thesis.out'.
+
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1095,7 +1112,9 @@ LaTeX Info: Redefining \nameref on input line 14.
 Package scrhack Info: undefining \float@addtolists on input line 14.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-(htwg/cover.tex <htwg/htwg-logo.pdf, id=442, 1597.97pt x 174.6525pt>
+\openout2 = `htwg/cover.aux'.
+
+(./htwg/cover.tex <htwg/htwg-logo.pdf, id=445, 1597.97pt x 174.6525pt>
 File: htwg/htwg-logo.pdf Graphic file (type pdf)
 
 <use htwg/htwg-logo.pdf>
@@ -1125,8 +1144,11 @@ Class scrreprt Warning: Usage of deprecated font command `\sf'!
 
 
 
-{C:/Users/stonon/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./htwg/htw
-g-logo.pdf>]) (htwg/title.tex
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./htwg/
+htwg-logo.pdf>])
+\openout2 = `htwg/title.aux'.
+
+ (./htwg/title.tex
 Overfull \hbox (0.90353pt too wide) in paragraph at lines 26--26
 []\OT1/cmr/m/n/10.95 Bachelorkandidat:| 
  []
@@ -1139,7 +1161,10 @@ l.20 \include{htwg/title}
                           [2
 
 
-] (htwg/abstract.tex
+]
+\openout2 = `htwg/abstract.aux'.
+
+ (./htwg/abstract.tex
 Overfull \hbox (6.594pt too wide) in paragraph at lines 12--12
 []\OT1/cmr/m/n/10.95 Bachelorkandidat:| 
  []
@@ -1152,7 +1177,10 @@ l.21 \include{htwg/abstract}
                              [3
 
 
-] (htwg/affidavit.tex
+]
+\openout2 = `htwg/affidavit.aux'.
+
+ (./htwg/affidavit.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
  []
@@ -1166,7 +1194,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--21
 
 
 
-] (thesis.toc
+] (./thesis.toc
 Package acronym Info: Label `acro:DOM' newly defined as it shall be overridden
 although it is yet undefined on input line 15.
 Package acronym Info: Label `acro:W3C' newly defined as it shall be overridden
@@ -1197,8 +1225,13 @@ Package acronym Info: Label `acro:UI' newly defined as it shall be overridden
 although it is yet undefined on input line 86.
 )
 \tf@toc=\write6
- [4] [5] (kapitel1/1-einleitung.tex
-chapter 1.
+\openout6 = `thesis.toc'.
+
+ [4] [5]
+\openout2 = `kapitel1/1-einleitung.aux'.
+
+ (./kapitel1/1-einleitung.tex
+Kapitel 1.
 Package acronym Info: Label `acro:API' newly defined as it shall be overridden
 although it is yet undefined on input line 6.
 [1
@@ -1206,8 +1239,11 @@ although it is yet undefined on input line 6.
 
 
 
-]) [2] (kapitel2/1-problemloesung.tex
-chapter 2.
+]) [2]
+\openout2 = `kapitel2/1-problemloesung.aux'.
+
+ (./kapitel2/1-problemloesung.tex
+Kapitel 2.
 )
 Overfull \hbox (7.00215pt too wide) in paragraph at lines 10--34
 []\OT1/cmr/m/n/10.95 Diesem Pro-blem wid-men sich die Web Com-ponents. Sie sol-
@@ -1218,8 +1254,11 @@ len der Frontend-Entwicklung
 
 
 
-] [4] (kapitel2/2-custom-elements.tex
-<kapitel2/bilder/2-custom-elements-div-suppe.jpg, id=709, 733.23938pt x 505.137
+] [4]
+\openout2 = `kapitel2/2-custom-elements.aux'.
+
+ (./kapitel2/2-custom-elements.tex
+<kapitel2/bilder/2-custom-elements-div-suppe.jpg, id=714, 733.23938pt x 505.137
 19pt>
 File: kapitel2/bilder/2-custom-elements-div-suppe.jpg Graphic file (type jpg)
  <use kapitel2/bilder/2-custom-elements-div-suppe.jpg>
@@ -1227,16 +1266,16 @@ Package pdftex.def Info: kapitel2/bilder/2-custom-elements-div-suppe.jpg used o
 n input line 7.
 (pdftex.def)             Requested size: 418.25368pt x 288.147pt.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
-File: lstlang1.sty 2015/06/04 1.6 listings language file
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
-File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 )
-(kapitel2/listings/2-1.html
+(./kapitel2/listings/2-1.html
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 1.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
@@ -1251,6 +1290,12 @@ Overfull \hbox (67.77107pt too wide) in paragraph at lines 23--24
  []
 
 
+Overfull \hbox (6.71198pt too wide) in paragraph at lines 28--29
+\OT1/cmr/m/n/10.95 da die-ses Ele-ment das In-ter-face von \OT1/cmtt/m/n/10.95 
+HTMLUnkownElement \OT1/cmr/m/n/10.95 be-nut-zen muss [[]].
+ []
+
+
 Overfull \hbox (26.65073pt too wide) in paragraph at lines 28--29
 \OT1/cmr/m/n/10.95 Ist es je-doch de-fi-niert oder beim Brow-ser re-gi-striert 
 wor-den, bei-spiels-wei-se mit \OML/cmtt/m/n/10.95 <\OT1/cmtt/m/n/10.95 my-elem
@@ -1261,23 +1306,23 @@ ent\OML/cmtt/m/n/10.95 >\OT1/cmr/m/n/10.95 ,
 Package acronym Info: Label `acro:FOUC' newly defined as it shall be overridden
 
 although it is yet undefined on input line 33.
- (kapitel2/listings/2-2.js
+ (./kapitel2/listings/2-2.js
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 1.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1.
 )
-(kapitel2/listings/2-3.js) [7] (kapitel2/listings/2-4.html)
+(./kapitel2/listings/2-3.js) [7] (./kapitel2/listings/2-4.html)
 Overfull \hbox (1.18886pt too wide) in paragraph at lines 62--63
 \OT1/cmr/m/n/10.95 ments mit-tels \OT1/cmtt/m/n/10.95 var mybutton = document.c
 reateElement('custom-element') \OT1/cmr/m/n/10.95 er-zeugt
  []
 
-[8] (kapitel2/listings/2-5.html) (kapitel2/listings/2-6.css)
-<kapitel2/bilder/2-custom-elements-github-time-element.jpg, id=823, 532.99126pt
+[8] (./kapitel2/listings/2-5.html) (./kapitel2/listings/2-6.css)
+<kapitel2/bilder/2-custom-elements-github-time-element.jpg, id=829, 532.99126pt
  x 33.87656pt>
 File: kapitel2/bilder/2-custom-elements-github-time-element.jpg Graphic file (t
 ype jpg)
@@ -1287,7 +1332,7 @@ jpg used on input line 94.
 (pdftex.def)             Requested size: 418.25368pt x 26.58487pt.
 
 [9]
-<kapitel2/bilder/2-custom-elements-browserunterstuetzung.jpg, id=852, 945.5325p
+<kapitel2/bilder/2-custom-elements-browserunterstuetzung.jpg, id=858, 945.5325p
 t x 237.88875pt>
 File: kapitel2/bilder/2-custom-elements-browserunterstuetzung.jpg Graphic file 
 (type jpg)
@@ -1297,9 +1342,11 @@ Package pdftex.def Info: kapitel2/bilder/2-custom-elements-browserunterstuetzun
 g.jpg used on input line 108.
 (pdftex.def)             Requested size: 418.25368pt x 105.23036pt.
 ) [10 <./kapitel2/bilder/2-custom-elements-github-time-element.jpg> <./kapitel2
-/bilder/2-custom-elements-browserunterstuetzung.jpg>] (kapitel2/3-shadow-dom.te
-x
-<kapitel2/bilder/3-shadow-dom-input-type-password.jpg, id=875, 207.02344pt x 78
+/bilder/2-custom-elements-browserunterstuetzung.jpg>]
+\openout2 = `kapitel2/3-shadow-dom.aux'.
+
+ (./kapitel2/3-shadow-dom.tex
+<kapitel2/bilder/3-shadow-dom-input-type-password.jpg, id=881, 207.02344pt x 78
 .2925pt>
 File: kapitel2/bilder/3-shadow-dom-input-type-password.jpg Graphic file (type j
 pg)
@@ -1308,7 +1355,7 @@ Package pdftex.def Info: kapitel2/bilder/3-shadow-dom-input-type-password.jpg u
 sed on input line 7.
 (pdftex.def)             Requested size: 207.02292pt x 78.2923pt.
 
-<kapitel2/bilder/3-shadow-dom-shadow-boundary.png, id=878, 770.12718pt x 411.78
+<kapitel2/bilder/3-shadow-dom-shadow-boundary.png, id=884, 770.12718pt x 411.78
 844pt>
 File: kapitel2/bilder/3-shadow-dom-shadow-boundary.png Graphic file (type png)
  <use kapitel2/bilder/3-shadow-dom-shadow-boundary.png>
@@ -1322,7 +1369,7 @@ although it is yet undefined on input line 22.
 
 
  <./kapitel2/bilder/3-shadow-dom-input-type-password.jpg>] [12 <./kapitel2/bild
-er/3-shadow-dom-shadow-boundary.png>] (kapitel2/listings/3-1.html) [13] [14]
+er/3-shadow-dom-shadow-boundary.png>] (./kapitel2/listings/3-1.html) [13] [14]
 LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <10.95> not available
 (Font)              Font shape `OML/cmm/b/it' tried instead on input line 62.
 LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 74.
@@ -1334,8 +1381,8 @@ LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
 (Font)              for symbol `textbraceleft' on input line 74.
 
-[15] (kapitel2/listings/3-2.html)
-<kapitel2/bilder/3-shadow-dom-beispiel.jpg, id=1020, 104.64093pt x 51.19125pt>
+[15] (./kapitel2/listings/3-2.html)
+<kapitel2/bilder/3-shadow-dom-beispiel.jpg, id=1028, 104.64093pt x 51.19125pt>
 File: kapitel2/bilder/3-shadow-dom-beispiel.jpg Graphic file (type jpg)
 
 <use kapitel2/bilder/3-shadow-dom-beispiel.jpg>
@@ -1363,7 +1410,7 @@ or: green;
  []
 
 [16]
-<kapitel2/bilder/3-shadow-dom-browserunterstuetzung.jpg, id=1073, 946.28531pt x
+<kapitel2/bilder/3-shadow-dom-browserunterstuetzung.jpg, id=1081, 946.28531pt x
  237.13594pt>
 File: kapitel2/bilder/3-shadow-dom-browserunterstuetzung.jpg Graphic file (type
  jpg)
@@ -1373,7 +1420,10 @@ Package pdftex.def Info: kapitel2/bilder/3-shadow-dom-browserunterstuetzung.jpg
 (pdftex.def)             Requested size: 418.25368pt x 104.81052pt.
 )
 [17 <./kapitel2/bilder/3-shadow-dom-beispiel.jpg> <./kapitel2/bilder/3-shadow-d
-om-browserunterstuetzung.jpg>] (kapitel2/4-html-templates.tex
+om-browserunterstuetzung.jpg>]
+\openout2 = `kapitel2/4-html-templates.aux'.
+
+ (./kapitel2/4-html-templates.tex
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 3.
 Package acronym Info: Label `acro:MVC' newly defined as it shall be overridden
@@ -1386,23 +1436,23 @@ LaTeX Font Warning: Font shape `OML/cmtt/bx/n' undefined
 (Font)              using `OML/cmm/m/it' instead
 (Font)              for symbol `textless' on input line 18.
 
-(kapitel2/listings/4-1.html) [18
+(./kapitel2/listings/4-1.html) [18
 
 
-] (kapitel2/listings/4-2.html)
+] (./kapitel2/listings/4-2.html)
 Package acronym Info: Label `acro:XSS' newly defined as it shall be overridden
 although it is yet undefined on input line 32.
 
 Overfull \hbox (2.34752pt too wide) in paragraph at lines 32--33
 \OT1/cmr/m/n/10.95 halt nicht ge-ren-dert, da ein \OML/cmtt/bx/n/10.95 <\OT1/cm
-tt/m/n/10.95 script\OML/cmtt/bx/n/10.95 >\OT1/cmr/m/n/10.95 -Tag stan-dardm[]a
-ig die [][]-Eigenschaft \OT1/cmtt/m/n/10.95 display:
+tt/m/n/10.95 script\OML/cmtt/bx/n/10.95 >\OT1/cmr/m/n/10.95 -Tag stan-dardm[]a^
+^Yig die [][]-Eigenschaft \OT1/cmtt/m/n/10.95 display:
  []
 
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 35.
-(kapitel2/listings/4-2.html) [19] [20]
-<kapitel2/bilder/4-html-templates-browserunterstuetzung.jpg, id=1155, 952.30782
+(./kapitel2/listings/4-2.html) [19] [20]
+<kapitel2/bilder/4-html-templates-browserunterstuetzung.jpg, id=1164, 952.30782
 pt x 237.88875pt>
 File: kapitel2/bilder/4-html-templates-browserunterstuetzung.jpg Graphic file (
 type jpg)
@@ -1412,7 +1462,10 @@ Package pdftex.def Info: kapitel2/bilder/4-html-templates-browserunterstuetzung
 .jpg used on input line 59.
 (pdftex.def)             Requested size: 418.25368pt x 104.4826pt.
 ) [21 <./kapitel2/bilder/4-html-templates-browserunterstuetzung.jpg>]
-(kapitel2/5-html-imports.tex (kapitel2/listings/5-1.html)
+\openout2 = `kapitel2/5-html-imports.aux'.
+
+
+(./kapitel2/5-html-imports.tex (./kapitel2/listings/5-1.html)
 Package acronym Info: Label `acro:SOP' newly defined as it shall be overridden
 although it is yet undefined on input line 12.
 Package acronym Info: Label `acro:CORS' newly defined as it shall be overridden
@@ -1422,7 +1475,7 @@ although it is yet undefined on input line 18.
 
 
 ]
-(kapitel2/listings/5-2.html) (kapitel2/listings/5-3.html)
+(./kapitel2/listings/5-2.html) (./kapitel2/listings/5-3.html)
 Overfull \hbox (90.21777pt too wide) in paragraph at lines 44--45
 \OT1/cmr/m/n/10.95 Im-port zu-ge-grif-fen wer-den \OT1/cmtt/m/n/10.95 var conte
 nt = document.querySelector('link[rel="import"]').import;\OT1/cmr/m/n/10.95 .
@@ -1435,19 +1488,20 @@ ent \OT1/cmr/m/n/10.95 mit \OT1/cmtt/m/n/10.95 var el = content.querySelector('
 .element');
  []
 
-[23] (kapitel2/listings/5-4.html) (kapitel2/listings/5-5.html) [24]
+[23] (./kapitel2/listings/5-4.html) (./kapitel2/listings/5-5.html) [24]
 Package acronym Info: Label `acro:TCP' newly defined as it shall be overridden
 although it is yet undefined on input line 70.
 Package acronym Info: Label `acro:TLS' newly defined as it shall be overridden
 although it is yet undefined on input line 72.
- [25]
+
+[25]
 Overfull \hbox (3.96059pt too wide) in paragraph at lines 82--83
 \OT1/cmr/m/n/10.95 Webseiten k[]onnen vie-le ver-schie-de-ne, mo-du-lar auf-ge-
 bau-te Sty-les-heets, JavaScript-Dateien
  []
 
 [26]
-<kapitel2/bilder/5-html-imports-browserunterstuetzung.jpg, id=1333, 944.02687pt
+<kapitel2/bilder/5-html-imports-browserunterstuetzung.jpg, id=1344, 944.02687pt
  x 235.63031pt>
 File: kapitel2/bilder/5-html-imports-browserunterstuetzung.jpg Graphic file (ty
 pe jpg)
@@ -1456,7 +1510,10 @@ Package pdftex.def Info: kapitel2/bilder/5-html-imports-browserunterstuetzung.j
 pg used on input line 96.
 (pdftex.def)             Requested size: 418.25368pt x 104.39673pt.
 ) [27] [28 <./kapitel2/bilder/5-html-imports-browserunterstuetzung.jpg>]
-(kapitel2/6-polyfills.tex
+\openout2 = `kapitel2/6-polyfills.aux'.
+
+
+(./kapitel2/6-polyfills.tex
 Overfull \hbox (8.70554pt too wide) in paragraph at lines 3--4
 \OT1/cmr/m/n/10.95 terst[]utzung und Per-for-man-ce, und wie sie die Brow-ser-u
 n-terst[]utzung der Web-Components-
@@ -1466,7 +1523,7 @@ n-terst[]utzung der Web-Components-
 
 
 ]
-<kapitel2/bilder/6-webcomponentsjs-browserunterstuetzung.jpg, id=1371, 647.4187
+<kapitel2/bilder/6-webcomponentsjs-browserunterstuetzung.jpg, id=1382, 647.4187
 5pt x 143.78719pt>
 File: kapitel2/bilder/6-webcomponentsjs-browserunterstuetzung.jpg Graphic file 
 (type jpg)
@@ -1479,28 +1536,31 @@ g.jpg used on input line 52.
 Package acronym Info: Label `acro:XHR' newly defined as it shall be overridden
 although it is yet undefined on input line 73.
 )
-Overfull \hbox (21.31207pt too wide) in paragraph at lines 78--39
-\OT1/cmr/m/n/10.95 Das webcomponents.js-JavaScript bringt mit sei-ner Gr[]oe v
-on 116KB [[]]
+Overfull \hbox (117.2463pt too wide) in paragraph at lines 78--39
+\OT1/cmr/m/n/10.95 Das webcomponents.js-JavaScript bringt mit sei-ner Gr[]o^^Ye
+ von 116KB [[]]
  []
 
-[31] (kapitel2/7-beispiel.tex
-<kapitel2/bilder/7-beispiel.jpg, id=1407, 188.20313pt x 141.52875pt>
+[31]
+\openout2 = `kapitel2/7-beispiel.aux'.
+
+ (./kapitel2/7-beispiel.tex
+<kapitel2/bilder/7-beispiel.jpg, id=1418, 188.20313pt x 141.52875pt>
 File: kapitel2/bilder/7-beispiel.jpg Graphic file (type jpg)
 
 <use kapitel2/bilder/7-beispiel.jpg>
 Package pdftex.def Info: kapitel2/bilder/7-beispiel.jpg used on input line 7.
 (pdftex.def)             Requested size: 142.26378pt x 106.99068pt.
- (kapitel2/listings/7-1.js) [32
+ (./kapitel2/listings/7-1.js) [32
 
 
- <./kapitel2/bilder/7-beispiel.jpg>] (kapitel2/listings/7-2.js)
+ <./kapitel2/bilder/7-beispiel.jpg>] (./kapitel2/listings/7-2.js)
 Overfull \hbox (6.87553pt too wide) in paragraph at lines 25--26
 \OT1/cmtt/m/n/10.95 document.registerElement("custom-element", \OMS/cmtt/m/n/10
 .95 f \OT1/cmtt/m/n/10.95 prototype: CustomElementProto
  []
 
-(kapitel2/listings/7-3.html) (kapitel2/listings/7-4.html [33])
+(./kapitel2/listings/7-3.html) (./kapitel2/listings/7-4.html [33])
 Overfull \hbox (78.08269pt too wide) in paragraph at lines 47--48
 \OT1/cmr/m/n/10.95 wie bei-spiels-wei-se der Kon-fi-gu-ra-ti-on \OML/cmtt/bx/n/
 10.95 <\OT1/cmtt/m/n/10.95 custom-element theme="style1"\OML/cmtt/bx/n/10.95 >\
@@ -1508,9 +1568,12 @@ OT1/cmtt/m/n/10.95 Reader\OML/cmtt/bx/n/10.95 <\OT1/cmtt/m/n/10.95 /custom-elem
 ent\OML/cmtt/bx/n/10.95 >\OT1/cmr/m/n/10.95 .
  []
 
-) [34] (kapitel3/1-polymer.tex
-chapter 3.
-<kapitel3/bilder/1-architektur.png, id=1482, 803.0pt x 657.45625pt>
+) [34]
+\openout2 = `kapitel3/1-polymer.aux'.
+
+ (./kapitel3/1-polymer.tex
+Kapitel 3.
+<kapitel3/bilder/1-architektur.png, id=1494, 803.0pt x 657.45625pt>
 File: kapitel3/bilder/1-architektur.png Graphic file (type png)
 
 <use kapitel3/bilder/1-architektur.png>
@@ -1537,8 +1600,11 @@ Overfull \hbox (1.16048pt too wide) in paragraph at lines 59--60
 mr/m/n/10.95 her-an-ge-zo-gen wer-den. In die-sem sind be-reits meh-
  []
 
-) [37] (kapitel4/1-analogie.tex
-chapter 4.
+) [37]
+\openout2 = `kapitel4/1-analogie.aux'.
+
+ (./kapitel4/1-analogie.tex
+Kapitel 4.
 
 Overfull \hbox (21.57054pt too wide) in paragraph at lines 13--14
 \OT1/cmr/m/n/10.95 F[]ur das Re-gi-strie-ren ei-nes neu-en Ele-ments stellt Po-
@@ -1581,22 +1647,32 @@ Overfull \hbox (8.00597pt too wide) in paragraph at lines 56--57
 ][]-Element-Attribute im Polymer-
  []
 
-[41] (kapitel4/listings/1-1.html)
+
+Overfull \hbox (26.16423pt too wide) in paragraph at lines 66--67
+\OT1/cmr/m/n/10.95 Prototyps ha-ben muss. Der zu ver-wen-den-de [][]-Markup mus
+s dann in ei-nem \OML/cmtt/bx/n/10.95 <\OT1/cmtt/m/n/10.95 template\OML/cmtt/bx
+/n/10.95 >\OT1/cmr/m/n/10.95 -
+ []
+
+[41] (./kapitel4/listings/1-1.html)
 Overfull \hbox (56.08983pt too wide) in paragraph at lines 75--76
 [][] \OT1/cmr/m/n/10.95 mit-tels \OT1/cmtt/m/n/10.95 var children =  document.g
 etElementsByTagName("my-element")[0].children;\OT1/cmr/m/n/10.95 .
  []
 
-[42] [43] (kapitel4/listings/1-2.js) (kapitel4/listings/1-3.html)
+[42] [43] (./kapitel4/listings/1-2.js) (./kapitel4/listings/1-3.html)
 Overfull \hbox (69.99358pt too wide) in paragraph at lines 96--97
 []\OT1/cmr/m/n/10.95 Die Ap-pli-ka-ti-on, wel-che die Kom-po-nen-te be-nutzt, k
 ann nun die Va-ria-ble \OT1/cmtt/m/n/10.95 --x-element-button-color
  []
 
-(kapitel4/listings/1-4.html) [44] (kapitel4/listings/1-5.html)
-(kapitel4/listings/1-6.html) [45] (kapitel4/listings/1-7.html)
-(kapitel4/listings/1-8.html)) [46] [47] (kapitel5/1-additional-sugar.tex
-chapter 5.
+[44] (./kapitel4/listings/1-4.html) (./kapitel4/listings/1-5.html)
+(./kapitel4/listings/1-6.html) [45] (./kapitel4/listings/1-7.html)
+(./kapitel4/listings/1-8.html) [46]) [47]
+\openout2 = `kapitel5/1-additional-sugar.aux'.
+
+ (./kapitel5/1-additional-sugar.tex
+Kapitel 5.
 [48
 
 
@@ -1609,17 +1685,20 @@ OML/cmtt/bx/n/10.95 <\OT1/cmtt/m/n/10.95 div class=$"\OMS/cmtt/m/n/10.95 ff\OT1
 n/10.95 ><\OT1/cmtt/m/n/10.95 /div\OML/cmtt/bx/n/10.95 >
  []
 
-[49] (kapitel5/listings/1-1.js)
+[49] (./kapitel5/listings/1-1.js)
 Overfull \hbox (9.67886pt too wide) in paragraph at lines 47--48
 \OT1/cmr/m/n/10.95 so vie-le Be-ha-viors mit un-ter-schied-li-chen Ver-hal-tens
 -wei-sen hin-zu-gef[]ugt wer-den, wie ben[]otigt
  []
 
-(kapitel5/listings/1-2.html) [50] (kapitel5/listings/1-3.html [51])) [52]
-(kapitel6/1-best-practices.tex
-chapter 6.
+(./kapitel5/listings/1-2.html) [50] (./kapitel5/listings/1-3.html [51]))
+[52]
+\openout2 = `kapitel6/1-best-practices.aux'.
 
-<kapitel6/bilder/1-performance-user-perception-reaction-times.jpg, id=1843, 447
+ (./kapitel6/1-best-practices.tex
+Kapitel 6.
+
+<kapitel6/bilder/1-performance-user-perception-reaction-times.jpg, id=1859, 447
 .92343pt x 149.8097pt>
 File: kapitel6/bilder/1-performance-user-perception-reaction-times.jpg Graphic 
 file (type jpg)
@@ -1633,7 +1712,7 @@ Package pdftex.def Info: kapitel6/bilder/1-performance-user-perception-reaction
 
 
  <./kapitel6/bilder/1-performance-user-perception-reaction-times.jpg>]
-(kapitel6/listings/1-1.js)
+(./kapitel6/listings/1-1.js)
 Overfull \hbox (9.7854pt too wide) in paragraph at lines 31--32
 \OT1/cmr/m/n/10.95 mo-bi-len Ger[]aten ei-ne Zeit-verz[]oge-rung von 300 Mil-li
 -se-kun-den ha-ben, be-vor die-se tats[]achlich
@@ -1646,7 +1725,7 @@ Overfull \hbox (0.30884pt too wide) in paragraph at lines 43--44
 n-tiert wer-den. Da-bei h[]oren die Touch-Events
  []
 
-(kapitel6/listings/1-2.js [55])
+(./kapitel6/listings/1-2.js [55])
 Overfull \hbox (7.97491pt too wide) in paragraph at lines 50--51
 []\OT1/cmr/m/n/10.95 Das \OT1/cmtt/m/n/10.95 tap\OT1/cmr/m/n/10.95 -Event ver-b
 in-det die \OT1/cmtt/m/n/10.95 down\OT1/cmr/m/n/10.95 - und \OT1/cmtt/m/n/10.95
@@ -1668,9 +1747,12 @@ although it is yet undefined on input line 90.
 Package acronym Info: Label `acro:ARIA' newly defined as it shall be overridden
 
 although it is yet undefined on input line 90.
- [58] (kapitel6/listings/1-3.html)) [59]
-(kapitel7/1-polymer-komponente.tex
-chapter 7.
+ [58] (./kapitel6/listings/1-3.html)) [59]
+\openout2 = `kapitel7/1-polymer-komponente.aux'.
+
+
+(./kapitel7/1-polymer-komponente.tex
+Kapitel 7.
 Package acronym Info: Label `acro:SPA' newly defined as it shall be overridden
 although it is yet undefined on input line 8.
 Package acronym Info: Label `acro:CLI' newly defined as it shall be overridden
@@ -1702,7 +1784,7 @@ Overfull \hbox (1.44057pt too wide) in paragraph at lines 27--28
  []
 
 [61]
-<kapitel7/bilder/1-multi-navigation-app.jpg, id=1997, 607.51968pt x 270.25969pt
+<kapitel7/bilder/1-multi-navigation-app.jpg, id=2014, 607.51968pt x 270.25969pt
 >
 File: kapitel7/bilder/1-multi-navigation-app.jpg Graphic file (type jpg)
  <use kapitel7/bilder/1-multi-navigation-app.jpg>
@@ -1717,10 +1799,13 @@ p
  []
 
 [62 <./kapitel7/bilder/1-multi-navigation-app.jpg>] [63]
-(kapitel7/2-angular-vergleich.tex
-Overfull \hbox (21.69356pt too wide) in paragraph at lines 3--4
-\OT1/cmr/m/n/10.95 Die mit Po-ly-mer in Ab-schnitt 7.1. im-ple-men-tier-te Mult
-i-Navigation-Application-Komponente
+\openout2 = `kapitel7/2-angular-vergleich.aux'.
+
+
+(./kapitel7/2-angular-vergleich.tex
+Overfull \hbox (18.65189pt too wide) in paragraph at lines 3--4
+\OT1/cmr/m/n/10.95 Die mit Po-ly-mer in Ab-schnitt []7.1[] im-ple-men-tier-te M
+ulti-Navigation-Application-Komponente
  []
 
 
@@ -1738,7 +1823,7 @@ Overfull \hbox (7.44203pt too wide) in paragraph at lines 8--9
 -ent-sei-ti-ges Open-Source-JavaScript-
  []
 
-<kapitel7/bilder/1-model-view-viewmodel.png, id=2016, 385.44pt x 468.75125pt>
+<kapitel7/bilder/1-model-view-viewmodel.png, id=2034, 385.44pt x 468.75125pt>
 File: kapitel7/bilder/1-model-view-viewmodel.png Graphic file (type png)
 
 <use kapitel7/bilder/1-model-view-viewmodel.png>
@@ -1748,9 +1833,11 @@ ut line 12.
  [64
 
 
-] [65 <./kapitel7/bilder/1-model-view-viewmodel.png>]) [66] (kapitel8/1-zukunft
-sprognose.tex
-chapter 8.
+] [65 <./kapitel7/bilder/1-model-view-viewmodel.png>]) [66]
+\openout2 = `kapitel8/1-zukunftsprognose.aux'.
+
+ (./kapitel8/1-zukunftsprognose.tex
+Kapitel 8.
 
 Overfull \hbox (5.32928pt too wide) in paragraph at lines 7--8
 []\OT1/cmr/m/n/10.95 Neben Po-ly-mer ba-siert auch An-gu-lar ab Ver-si-on 2.0 a
@@ -1761,7 +1848,7 @@ uf den Web-Component-Standards
 
 
 
-]) [68] (glossary.tex) [69
+]) [68] (./glossary.tex) [69
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{MVC}) has bee
@@ -1776,22 +1863,26 @@ l.60 \listoffigures
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.60 \listoffigures
-                   ] (thesis.lof)
+                   ] (./thesis.lof)
 \tf@lof=\write7
+\openout7 = `thesis.lof'.
+
  [70
 
-] (thesis.lol)
+] (./thesis.lol)
 \tf@lol=\write8
+\openout8 = `thesis.lol'.
+
  [71
 
-] (thesis.tdo)
+] (./thesis.tdo)
 \tf@tdo=\write9
+\openout9 = `thesis.tdo'.
 
-(thesis.bbl [72
+
+(./thesis.bbl [72
 
 ]
-chapter without number
-
 Underfull \hbox (badness 3861) in paragraph at lines 4--8
 []\OT1/cmr/m/n/10.95 Bateman, C. (2014).  A No-Nonsense Gui-de to Web Com-
  []
@@ -1814,89 +1905,166 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--48
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 56--59
-[]\OT1/cmr/m/n/10.95 Glazkov, D. (2015).  W3C - Cu-stom Ele-ments.
+[]\OT1/cmr/m/n/10.95 Glazkov, D. (2015).  Cu-stom Ele-ments.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--80
+[]\OT1/cmr/m/n/10.95 Ihrig, C. (2012).  The Ba-sics of the Sha-dow DOM.
  []
 
 [73
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 101--104
-[]\OT1/cmr/m/n/10.95 Hacks, M. (2015).  The state of Web Com-ponents.
+Underfull \hbox (badness 5245) in paragraph at lines 82--85
+[]\OT1/cmr/m/n/10.95 Kitamura, E. (2014a).  In-tro-duc-ti-on to Cu-stom Ele-men
+ts.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--119
-[]\OT1/cmr/m/n/10.95 Ihrig, C. (2012).  The Ba-sics of the Sha-dow DOM.
+Underfull \hbox (badness 10000) in paragraph at lines 92--95
+[]\OT1/cmr/m/n/10.95 Kitamura, E. (2015).  In-tro-duc-ti-on to HTML Im-ports.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--124
-[]\OT1/cmr/m/n/10.95 Kitamura, E. (2014).  In-tro-duc-ti-on to Cu-stom Ele-ment
-s.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 126--129
+Underfull \hbox (badness 10000) in paragraph at lines 97--100
 []\OT1/cmr/m/n/10.95 Kr[]oner, P. (2014a).  Das Web der Zu-kunft.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--149
+Underfull \hbox (badness 10000) in paragraph at lines 108--111
+[]\OT1/cmr/m/n/10.95 Lewis, P. (2015).  Po-ly-mer for the Performance-obsessed.
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--122
+[]\OT1/cmr/m/n/10.95 MDN (2015b).  tem-pla-te - HTML.  htt-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--128
+[]\OT1/cmr/m/n/10.95 Microsoft (web).  De-vel-oper Re-sources: Mi-cro-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--128
+\OT1/cmr/m/n/10.95 soft Ed-ge Dev.  https://dev.windows.com/en-us/microsoft-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--133
+[]\OT1/cmr/m/n/10.95 Mozilla (2015).  The state of Web Com-ponents.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--139
 []\OT1/cmr/m/n/10.95 Namics (2014).  Web Com-ponents: HTML Tem-pla-tes.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--155
-[]\OT1/cmr/m/n/10.95 Network, M. D. (2015a).  Same-origin po-li-cy.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 157--160
-[]\OT1/cmr/m/n/10.95 Network, M. D. (2015b).  <tem-pla-te> - HTML.  htt-
- []
-
-
-Underfull \hbox (badness 2165) in paragraph at lines 167--172
+Underfull \hbox (badness 2165) in paragraph at lines 146--151
 []\OT1/cmr/m/n/10.95 Perterkroener (2014).  Fra-gen zu HTML5 und Co be-ant-
  []
 
 
-Underfull \hbox (badness 1194) in paragraph at lines 167--172
+Underfull \hbox (badness 1194) in paragraph at lines 146--151
 \OT1/cmr/m/n/10.95 Data-URLs.  http://www.peterkroener.de/fragen-zu-html5-und-c
 o-beantwortet-15-
  []
 
-[74]
-Underfull \hbox (badness 10000) in paragraph at lines 213--216
-[]\OT1/cmr/m/n/10.95 W3c (2014a).  Cross-Origin Re-sour-ce Sha-ring.
+
+Underfull \hbox (badness 1383) in paragraph at lines 158--162
+[]\OT1/cmr/m/n/10.95 Polymer - Dev-Tools Ex-ten-si-on (web).  Dev-
  []
 
 
-Overfull \hbox (1.3373pt too wide) in paragraph at lines 218--221
-[]\OT1/cmr/m/n/10.95 W3c (2014b).  HTML Tem-pla-tes.  http://www.w3.org/TR/html
+Underfull \hbox (badness 3009) in paragraph at lines 158--162
+\OT1/cmr/m/n/10.95 Tools Ex-ten-si-on.  https://chrome.google.com/webstore/deta
+il/polymer-devtools-
+ []
+
+[74]
+Underfull \hbox (badness 10000) in paragraph at lines 175--178
+[]\OT1/cmr/m/n/10.95 Polymer - Ge-stu-res (web).  Ge-stu-res.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--194
+[]\OT1/cmr/m/n/10.95 Polymer - Vul-ca-ni-ze (web).  Vul-ca-ni-ze.  htt-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--210
+[]\OT1/cmr/m/n/10.95 Sharp, R. (2010).  What is a Po-ly-fill?
+ []
+
+
+Underfull \hbox (badness 8056) in paragraph at lines 212--216
+[]\OT1/cmr/m/n/10.95 Sutton, M. (2015).  No-tes On Client-Rendered Ac-ces-si-bi
+-li-ty.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--237
+[]\OT1/cmr/m/n/10.95 W3C (2014a).  Cross-Origin Re-sour-ce Sha-ring.
+ []
+
+
+Overfull \hbox (7.41943pt too wide) in paragraph at lines 239--242
+[]\OT1/cmr/m/n/10.95 W3C (2014b).  HTML Tem-pla-tes.  http://www.w3.org/TR/html
 5/scripting-
  []
 
-
-Underfull \hbox (badness 1087) in paragraph at lines 256--259
-[]\OT1/cmr/m/n/10.95 Webcomponents (2015).  In-tro-duc-ti-on to HTML Im-ports.
+[75]
+Underfull \hbox (badness 7012) in paragraph at lines 244--247
+[]\OT1/cmr/m/n/10.95 W3C (2014c).  The Ac-ces-si-bi-li-ty Tree and the DOM Tree
+.
  []
 
-[75]) [76]
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--267
+[]\OT1/cmr/m/n/10.95 W3C (web).  In-tro-duc-ti-on to Web Ac-ces-si-bi-li-ty.  h
+tt-
+ []
+
+
+Underfull \hbox (badness 3199) in paragraph at lines 269--272
+[]\OT1/cmr/m/n/10.95 W3Techs (2015).  Usa-ge Sta-ti-stics of HTT-P/2 for Web-si
+-tes.
+ []
+
+
+Underfull \hbox (badness 7099) in paragraph at lines 274--277
+[]\OT1/cmr/m/n/10.95 WebComponents - Po-ly-fills (web).  Po-ly-fills.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--282
+[]\OT1/cmr/m/n/10.95 WebComponents - web-com-ponents.js
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 284--287
+[]\OT1/cmr/m/n/10.95 WHATWG (web).  HTML Stan-dard.  htt-
+ []
+
+) [76]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 69.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 69.
- (thesis.aux (htwg/cover.aux) (htwg/title.aux) (htwg/abstract.aux)
-(htwg/affidavit.aux) (kapitel1/1-einleitung.aux) (kapitel2/1-problemloesung.aux
-) (kapitel2/2-custom-elements.aux) (kapitel2/3-shadow-dom.aux)
-(kapitel2/4-html-templates.aux) (kapitel2/5-html-imports.aux)
-(kapitel2/6-polyfills.aux) (kapitel2/7-beispiel.aux) (kapitel3/1-polymer.aux)
-(kapitel4/1-analogie.aux) (kapitel5/1-additional-sugar.aux)
-(kapitel6/1-best-practices.aux) (kapitel7/1-polymer-komponente.aux)
-(kapitel7/2-angular-vergleich.aux) (kapitel8/1-zukunftsprognose.aux))
+ (./thesis.aux (./htwg/cover.aux) (./htwg/title.aux) (./htwg/abstract.aux) (./h
+twg/affidavit.aux) (./kapitel1/1-einleitung.aux)
+(./kapitel2/1-problemloesung.aux) (./kapitel2/2-custom-elements.aux)
+(./kapitel2/3-shadow-dom.aux) (./kapitel2/4-html-templates.aux)
+(./kapitel2/5-html-imports.aux) (./kapitel2/6-polyfills.aux)
+(./kapitel2/7-beispiel.aux) (./kapitel3/1-polymer.aux)
+(./kapitel4/1-analogie.aux) (./kapitel5/1-additional-sugar.aux)
+(./kapitel6/1-best-practices.aux) (./kapitel7/1-polymer-komponente.aux)
+(./kapitel7/2-angular-vergleich.aux) (./kapitel8/1-zukunftsprognose.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 69.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 69.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 06833FA2C0677BBED1D1C1207218BD6B;8373.
+(rerunfilecheck)             Checksum: 2037023753E5D6F239DA04A2718DEFA0;8264.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1904,35 +2072,36 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 69.
  ) 
 Here is how much of TeX's memory you used:
- 24345 strings out of 493673
- 442938 string characters out of 3141526
- 684864 words of memory out of 3000000
- 26363 multiletter control sequences out of 15000+200000
- 15766 words of font info for 56 fonts, out of 3000000 for 9000
- 1025 hyphenation exceptions out of 8191
- 76i,9n,100p,2665b,2174s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on thesis.pdf (84 pages, 2096874 bytes).
+ 24288 strings out of 493089
+ 441497 string characters out of 6134842
+ 681394 words of memory out of 5000000
+ 26436 multiletter control sequences out of 15000+600000
+ 15766 words of font info for 56 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 76i,9n,100p,2665b,2170s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on thesis.pdf (84 pages, 1843814 bytes).
 PDF statistics:
- 2357 PDF objects out of 2487 (max. 8388607)
+ 2382 PDF objects out of 2487 (max. 8388607)
+ 2219 compressed objects within 23 object streams
  655 named destinations out of 1000 (max. 500000)
  965 words of extra memory for PDF output out of 10000 (max. 10000000)
 
