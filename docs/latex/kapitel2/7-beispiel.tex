@@ -1,0 +1,92 @@
+\section{Implementierung einer Komponente mit den nativen Web Component APIs}\label{implementierung-einer-komponente-mit-den-nativen-web-component-apis}
+
+Anhand der vorhergehenden Abschnitte wird in diesem Abschnitt die Implementierung der Web Komponente \texttt{\textless{}custom-element\textgreater{}} mit den nativen HTML APIs erläutert. Diese soll dabei das Markup in einem Shadow DOM kapseln und den übergebenen Inhalt darstellen. Des Weiteren soll dessen Farbe über das Attribut \texttt{theme} optional konfiguriert werden können. Die gerenderte Komponente wird in Abbildung \ref{fig:gwkmnapis} dargestellt.
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics{kapitel2/bilder/7-beispiel}
+ \caption{Gerenderte Web Komponente mit nativen APIs}
+ \label{fig:gwkmnapis}
+\end{figure}
+
+
+\subsection{Custom Element erstellen und Eigenschaften und Funktionen definieren}\label{custom-element-erstellen-und-eigenschaften-und-funktionen-definieren}
+
+Um ein neues Custom Element zu registrieren, wird zunächst ein \texttt{HTMLElement} Prototyp \texttt{CustomElementProto} mittels \texttt{Object.create(HTMLElement.prototype)} erstellt. Dieser wird anschließend um die Eigenschaft \texttt{theme} und dessen Standardwert \texttt{style1} erweitert, welches das deklarativ konfigurierbare
+Attribut \texttt{theme} abbildet. Nun können die Lifecycle-Callback-Funktionen \texttt{createdCallback} und \texttt{attributeChangedCallback} der Komponente definiert werden.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\VariableTok{CustomElementProto}\NormalTok{.}\AttributeTok{createdCallback} \OperatorTok{=} \KeywordTok{function}\NormalTok{() }\OperatorTok{\{}
+  \ControlFlowTok{if} \NormalTok{(}\KeywordTok{this}\NormalTok{.}\AttributeTok{hasAttribute}\NormalTok{(}\StringTok{'theme'}\NormalTok{)) }\OperatorTok{\{}
+    \KeywordTok{var} \NormalTok{theme }\OperatorTok{=} \KeywordTok{this}\NormalTok{.}\AttributeTok{getAttribute}\NormalTok{(}\StringTok{'theme'}\NormalTok{)}\OperatorTok{;}
+    \KeywordTok{this}\NormalTok{.}\AttributeTok{setTheme}\NormalTok{(theme)}\OperatorTok{;}
+  \OperatorTok{\}} \ControlFlowTok{else} \OperatorTok{\{}
+    \KeywordTok{this}\NormalTok{.}\AttributeTok{setTheme}\NormalTok{(}\KeywordTok{this}\NormalTok{.}\AttributeTok{theme}\NormalTok{)}\OperatorTok{;}
+  \OperatorTok{\}}
+\OperatorTok{\};}
+
+\VariableTok{CustomElementProto}\NormalTok{.}\AttributeTok{attributeChangedCallback} \OperatorTok{=} \KeywordTok{function}\NormalTok{(attr}\OperatorTok{,} \NormalTok{oldVal}\OperatorTok{,} \NormalTok{newVal) }\OperatorTok{\{}
+  \ControlFlowTok{if} \NormalTok{(attr }\OperatorTok{===} \StringTok{'theme'}\NormalTok{) }\OperatorTok{\{}
+    \KeywordTok{this}\NormalTok{.}\AttributeTok{setTheme}\NormalTok{(newVal)}\OperatorTok{;}
+  \OperatorTok{\}}
+\OperatorTok{\};}
+\end{Highlighting}
+\end{Shaded}
+
+Die \texttt{createdCallback}-Funktion soll zunächst prüfen ob das Attribut \texttt{theme} beim Verwenden des
+\texttt{\textless{}custom-element\textgreater{}}-Tags verwendet und ein entsprechender Wert gesetzt wurde und übergibt dieses der Hilfsfunktion \texttt{setTheme}. Wird das Attribut nicht gesetzt, wird der Standardwert \texttt{style1} übergeben. Falls das \texttt{style}-Attribut von Außen geändert wird, soll die \texttt{attributeChangedCallback} Funktion gewährleisten, dass die Änderung auch von der Komponente übernommen wird, indem sie das Attribut der Hilfsfunktion \texttt{setTheme} übergibt. Um das Setzen und Ändern des \texttt{theme}-Attributs zu implementieren wird zuletzt die Hilfsfunktion \texttt{setTheme} für den Prototyp definiert.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\VariableTok{CustomElementProto}\NormalTok{.}\AttributeTok{setTheme} \OperatorTok{=} \KeywordTok{function}\NormalTok{(val) }\OperatorTok{\{}
+  \KeywordTok{this}\NormalTok{.}\AttributeTok{theme} \OperatorTok{=} \NormalTok{val}\OperatorTok{;}
+  \KeywordTok{this}\NormalTok{.}\VariableTok{outer}\NormalTok{.}\AttributeTok{className} \OperatorTok{=} \StringTok{"outer "} \OperatorTok{+} \KeywordTok{this}\NormalTok{.}\AttributeTok{theme}\OperatorTok{;}
+\OperatorTok{\};}
+\end{Highlighting}
+\end{Shaded}
+
+Diese setzt den übergebenen Parameter, das \texttt{theme}-Attribut, als Klasse auf den umschließenden Wrapper \texttt{.outer}, welche dabei den zu verwendenden Style der Komponente bestimmt. Da der Prototyp nun alle erforderlichen Eigenschaften besitzt, kann er mit \texttt{document.registerElement(\dq custom-element\dq,\ \{\ prototype:\ CustomElementProto\ \});} als HTML-Tag \texttt{custom-element} in dem importierenden Dokument verfügbar gemacht werden.
+
+
+\subsection{Template erstellen und Styles definieren}\label{template-erstellen-und-styles-definieren}
+
+Bisher ist das Custom Element zwar funktional, bietet aber noch kein gekapseltes Markup. Hierfür wird ein Template mit der ID \texttt{myElementTemplate} angelegt, welches die für die Komponente notwendige HTML Struktur beinhaltet.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{<template}\OtherTok{ id=}\StringTok{"myElementTemplate"}\KeywordTok{>}
+  \KeywordTok{<div}\OtherTok{ class=}\StringTok{"outer"}\KeywordTok{>}
+    \NormalTok{Welcome in the Web Component}
+    \KeywordTok{<div}\OtherTok{ class=}\StringTok{"name"}\KeywordTok{>}
+      \KeywordTok{<content></content>}
+    \KeywordTok{</div>}
+  \KeywordTok{</div>}
+\KeywordTok{</template>}
+\end{Highlighting}
+\end{Shaded}
+
+Das Template enthält dabei einen Insertion Point \texttt{\textless{}content\textgreater{}}, in welchem die Kind-Elemente der Komponente in das interne Markup projiziert werden. Zusätzlich werden zwei Hilfs-Wrapper und Text definiert, damit die Elemente schneller mittels JavaScript selektierbar sind und das gewünschte Aussehen erreicht wird. Um nun die verschiedenen Styles, welches mittels dem \texttt{theme}-Attribut ausgewählt werden kann, zur Verfügung zu stellen, werden diese in einem \texttt{\textless{}style\textgreater{}}-Tag in dem Template definiert. In diesem Beispiel werden zwei Optionen, \texttt{style1} und \texttt{style2} zur Verfügung gestellt, sowie weitere Styles für die gesamte Komponente definiert.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{<style>}
+  \FloatTok{.outer} \KeywordTok{\{} \CommentTok{/* Generelle Styles */} \KeywordTok{\}}
+  \FloatTok{.style1} \KeywordTok{\{} \KeywordTok{color:} \DataTypeTok{green}\KeywordTok{;} \KeywordTok{\}}
+  \FloatTok{.style2} \KeywordTok{\{} \KeywordTok{color:} \DataTypeTok{blue}\KeywordTok{;} \KeywordTok{\}}
+  \FloatTok{.name} \KeywordTok{\{} \KeywordTok{font-size:} \DataTypeTok{35pt}\KeywordTok{;} \KeywordTok{padding-top:} \DataTypeTok{0.5em}\KeywordTok{;} \KeywordTok{\}}
+\KeywordTok{</style>}
+\end{Highlighting}
+\end{Shaded}
+
+Das Template wird nun zwar schon heruntergeladen, jedoch noch nicht in den DOM eingefügt. Hierzu muss es dem Shadow Root hinzugefügt werden, was in dem nachfolgenden Abschnitt dargestellt wird.
+
+
+\subsection{Template bereitstellen und Shadow DOM zur Kapselung benutzen}\label{template-bereitstellen-und-shadow-dom-zur-kapselung-benutzen}
+
+Bevor das erstellte Template eingebunden werden kann, muss zunächst ein Shadow Root mittels \texttt{var\ shadow\ =\ this.createShadowRoot();} erzeugt werden. Hierfür wird die bereits definierte Lifecycle-Callback-Funktion \texttt{createdCallback} erweitert. Somit kann der Shadow DOM sofort initialisiert werden, wenn das Element erzeugt wurde. Nun kann der Inhalt des Templates mit der ID \texttt{myElementTemplate} mittels \texttt{var\ template\ =\ importDoc.querySelector('\#myElementTemplate').content;} importiert und mit der Anweisung \texttt{shadow.appendChild(template.cloneNode(true));} dem Shadow Root hinzugefügt werden. Die Variable \texttt{importDoc} stellt dabei die Referenz auf die importierte Komponente, also das \texttt{\textless{}custom-element\textgreater{}}-Element, dar und kann mittels der Funktion \texttt{var\ importDoc\ =\ document.currentScript.ownerDocument;} ermittelt werden. Wird dies nicht getan, so würde der \texttt{querySelector} auf das Eltern-Dokument der eingebetteten Komponente zugreifen und das Template nicht finden. Nun ist der Inhalt des Templates als Shadow DOM innerhalb des Elements gekapselt und nach Außen nicht sichtbar.
+
+\subsection{Element importieren und verwenden}\label{element-importieren-und-verwenden}
+
+Das Element ist somit vollständig und kann in einer beliebigen Webseite oder Applikation eingesetzt werden. Hierzu muss das Element mittels \texttt{\textless{}link\ rel=\dq import\dq\ href=\dq elements/custom-element.html\dq\textgreater{}} zunächst importiert werden. Es kann anschließend mit entsprechenden Attributen und Inhalt auf der Seite eingebettet werden, wie beispielsweise der Konfiguration \texttt{\textless{}custom-element\ theme=\dq style1\dq\textgreater{}Reader\textless{}/custom-element\textgreater{}}. Das vollständige Beispiel der Komponente, sowie dessen Einbindung in ein HTML-Dokument sind im Anhang zu finden.
+

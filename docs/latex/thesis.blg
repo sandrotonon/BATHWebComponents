@@ -10,8 +10,19 @@ A level-1 auxiliary file: kapitel2/3-shadow-dom.aux
 A level-1 auxiliary file: kapitel2/4-html-templates.aux
 A level-1 auxiliary file: kapitel2/5-html-imports.aux
 A level-1 auxiliary file: kapitel2/6-polyfills.aux
+A level-1 auxiliary file: kapitel2/7-beispiel.aux
+A level-1 auxiliary file: kapitel3/1-polymer.aux
+A level-1 auxiliary file: kapitel4/1-analogie.aux
 The style file: apalike-mystyle.bst
 Database file #1: library.bib
+Warning--entry type for "citeulike:13916423" isn't style-file defined
+--line 26 of file library.bib
+Warning--entry type for "citeulike:13916374" isn't style-file defined
+--line 37 of file library.bib
+Warning--entry type for "citeulike:13915080" isn't style-file defined
+--line 171 of file library.bib
+Warning--entry type for "citeulike:13914840" isn't style-file defined
+--line 204 of file library.bib
 Warning--entry type for "citeulike:13914379" isn't style-file defined
 --line 215 of file library.bib
 Warning--entry type for "citeulike:13914241" isn't style-file defined
@@ -33,4 +44,4 @@ Warning--entry type for "citeulike:13844983" isn't style-file defined
 Warning--entry type for "citeulike:13752379" isn't style-file defined
 --line 816 of file library.bib
 Warning--empty institution in citeulike:13851253
-(There were 11 warnings)
+(There were 15 warnings)

@@ -39,6 +39,10 @@ Cooney, D. and Bidelman, E. (2013).
 \newblock {Shadow DOM 101}.
 \newblock http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/.
 
+\bibitem[Customelements web]{citeulike:13916423}
+Customelements (web).
+\newblock {customelements.io}.
+
 \bibitem[Dodson 2014]{citeulike:13851334}
 Dodson, R. (2014).
 \newblock {Shadow DOM CSS Cheat Sheet}.
@@ -55,8 +59,20 @@ Glazkov, D. (2015).
 \newblock {W3C - Custom Elements}.
 \newblock http://w3c.github.io/webcomponents/spec/custom/\#concepts.
 
-\bibitem[Google web]{citeulike:13879681}
-Google (web).
+\bibitem[Google weba]{citeulike:13914840}
+Google (weba).
+\newblock {Polymer Base Documentation}.
+
+\bibitem[Google webb]{citeulike:13915080}
+Google (webb).
+\newblock {Polymer Documentation}.
+
+\bibitem[Google webc]{citeulike:13916374}
+Google (webc).
+\newblock {Polymer Element Catalog}.
+
+\bibitem[Google webd]{citeulike:13879681}
+Google (webd).
 \newblock {Vulcanize}.
 \newblock https://github.com/polymer/vulcanize.
 

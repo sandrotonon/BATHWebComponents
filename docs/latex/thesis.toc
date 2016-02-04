@@ -26,7 +26,7 @@
 \contentsline {subsection}{\numberline {2.4.2}Das \texttt {\textless {}template\textgreater {}}-Tag}{20}{subsection.2.4.2}
 \contentsline {subsection}{\numberline {2.4.3}Benutzung}{21}{subsection.2.4.3}
 \contentsline {subsection}{\numberline {2.4.4}Vorteile}{21}{subsection.2.4.4}
-\contentsline {subsection}{\numberline {2.4.5}Browserunterst\IeC {\"u}tzung}{22}{subsection.2.4.5}
+\contentsline {subsection}{\numberline {2.4.5}Browserunterst\IeC {\"u}tzung}{21}{subsection.2.4.5}
 \contentsline {section}{\numberline {2.5}HTML Imports}{23}{section.2.5}
 \contentsline {subsection}{\numberline {2.5.1}HTML-Dateien importieren}{23}{subsection.2.5.1}
 \contentsline {subsection}{\numberline {2.5.2}Vorteil}{24}{subsection.2.5.2}
@@ -44,7 +44,35 @@
 \contentsline {subsection}{\numberline {2.6.1}Polyfill webcomponents.js}{31}{subsection.2.6.1}
 \contentsline {subsection}{\numberline {2.6.2}Browserunterst\IeC {\"u}zung}{31}{subsection.2.6.2}
 \contentsline {subsection}{\numberline {2.6.3}Performance}{32}{subsection.2.6.3}
-\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{33}{chapter*.17}
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{34}{chapter*.18}
-\contentsline {chapter}{\nonumberline Listings}{35}{chapter*.19}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{37}{chapter*.21}
+\contentsline {section}{\numberline {2.7}Implementierung einer Komponente mit den nativen Web Component APIs}{33}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Custom Element erstellen und Eigenschaften und Funktionen definieren}{33}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Template erstellen und Styles definieren}{34}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}Template bereitstellen und Shadow DOM zur Kapselung benutzen}{35}{subsection.2.7.3}
+\contentsline {subsection}{\numberline {2.7.4}Element importieren und verwenden}{35}{subsection.2.7.4}
+\contentsline {chapter}{\numberline {3}Einf\IeC {\"u}hrung in Polymer}{36}{chapter.3}
+\contentsline {section}{\numberline {3.1}Architektur}{36}{section.3.1}
+\contentsline {section}{\numberline {3.2}Elemente-Katalog}{36}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Alternative Sammlung von Komponenten}{38}{subsection.3.2.1}
+\contentsline {chapter}{\numberline {4}Analogie zu nativen Web Components}{39}{chapter.4}
+\contentsline {section}{\numberline {4.1}Custom Elements}{39}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Neues Element registrieren}{39}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Elemente erweitern}{40}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Declared Properties - Eigenschaften und Methoden definieren}{40}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Computed Properties}{41}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}Property Oberserver}{41}{subsection.4.1.5}
+\contentsline {subsection}{\numberline {4.1.6}Das hostAttributes-Objekt}{42}{subsection.4.1.6}
+\contentsline {subsection}{\numberline {4.1.7}Lifecycle-Callback-Funktionen}{42}{subsection.4.1.7}
+\contentsline {section}{\numberline {4.2}Shadow DOM und HTML Templates}{42}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Shady DOM}{43}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}DOM-Knoten automatisch finden}{44}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Content Projection}{44}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}CSS-Styling}{45}{subsection.4.2.4}
+\contentsline {section}{\numberline {4.3}Gemeinsame Styles mehrerer Komponenten}{46}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Style Module anlegen}{47}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Style Module benutzen}{47}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}HTML Imports}{47}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Dynamisches Nachladen von HTML}{48}{subsection.4.4.1}
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{49}{chapter*.21}
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{50}{chapter*.22}
+\contentsline {chapter}{\nonumberline Listings}{51}{chapter*.23}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{53}{chapter*.25}
