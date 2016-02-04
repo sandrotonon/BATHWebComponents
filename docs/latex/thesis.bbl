@@ -3,6 +3,8 @@
 \bibitem[Bateman 2014]{citeulike:13914379}
 Bateman, C. (2014).
 \newblock {A No-Nonsense Guide to Web Components}.
+\newblock
+  http://cbateman.com/blog/a-no-nonsense-guide-to-web-components-part-2-practical-use/.
 
 \bibitem[Bidelman 2013a]{citeulike:13844982}
 Bidelman, E. (2013a).
@@ -38,10 +40,6 @@ Can I Use - Shadow DOM (web).
 Cooney, D. and Bidelman, E. (2013).
 \newblock {Shadow DOM 101}.
 \newblock http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/.
-
-\bibitem[Customelements web]{citeulike:13916423}
-Customelements (web).
-\newblock {customelements.io}.
 
 \bibitem[Dodson 2014]{citeulike:13851334}
 Dodson, R. (2014).
