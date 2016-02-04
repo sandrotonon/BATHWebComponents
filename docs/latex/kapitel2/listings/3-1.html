@@ -1,0 +1,13 @@
+<div id="shadow">Content</div>
+<template id="myTemplate">
+  <div class"hiddenWrapper">
+    <content></content>
+  </div>
+</template>
+
+<script type="text/javascript">
+  var shadow = document.querySelector('#shadow').createShadowRoot();
+  var template = document.querySelector('#myTemplate');
+  var clone = document.importNode(template.content, true);
+  shadow.appendChild(clone);
+</script>

@@ -3,9 +3,27 @@
 
 
 %%% Codebeispiele - Style
-\DeclareCaptionFont{white}{\color{white}}
-\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
-\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\lstdefinestyle{mystyle}{
+    basicstyle=\footnotesize,
+    aboveskip=10pt,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    belowcaptionskip=5pt,
+    keepspaces=true,
+    numbers=left,
+    numbersep=15pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    frame=single,
+    lineskip=-0.4pt,
+    framexleftmargin=0.5em,
+    xleftmargin=2.5em
+}
+\lstset{style=mystyle}
+
 
 % Entfernt Kapitel Ueberschrift
 % Bsp.
@@ -18,9 +36,12 @@
 %
 \renewcommand*\chapterheadstartvskip{\vspace{-\topskip}}
 
+
 % Hurenkind und Schusterjunge vermeiden
 \widowpenalty
 \clubpenalty
 
+
 % Alle Listen mit einem "-" statt einem Punkt
 \def\labelitemi{--}
+

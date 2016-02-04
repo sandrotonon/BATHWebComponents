@@ -1,17 +1,24 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Webseite mit semantisch nicht aussagekr\IeC {\"a}ftigem Markup\relax }}{5}{figure.caption.3}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Github Einsatz eines Custom Element\relax }}{8}{figure.caption.5}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Browserunterst\IeC {\"u}tzung von Custom Elements\relax }}{10}{figure.caption.8}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Passwort-Input-Element\relax }}{11}{figure.caption.9}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Shadow DOM und Shadow Boundary nach W3C\relax }}{12}{figure.caption.10}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Shadow DOM Beispiel\relax }}{17}{figure.caption.11}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Browserunterst\IeC {\"u}tzung des Shadow DOMs\relax }}{18}{figure.caption.12}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Browserunterst\IeC {\"u}tzung des HTML Template Tags\relax }}{22}{figure.caption.13}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Browserunterst\IeC {\"u}tzung der HTML Imports\relax }}{29}{figure.caption.15}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Browserunterst\IeC {\"u}tzung der Web Components Technologien mit webcomponents.js\relax }}{31}{figure.caption.16}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Gerenderte Web Komponente mit nativen APIs\relax }}{33}{figure.caption.17}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Webseite mit semantisch nicht aussagekr\IeC {\"a}ftigem Markup\relax }}{5}{figure.caption.10}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Github Einsatz eines Custom Element\relax }}{10}{figure.caption.12}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Browserunterst\IeC {\"u}tzung von Custom Elements\relax }}{10}{figure.caption.13}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Passwort-Input-Element\relax }}{11}{figure.caption.14}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Shadow \ac {DOM} und Shadow Boundary nach W3C\relax }}{12}{figure.caption.15}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Shadow DOM Beispiel\relax }}{17}{figure.caption.17}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Browserunterst\IeC {\"u}tzung des Shadow DOMs\relax }}{17}{figure.caption.18}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Browserunterst\IeC {\"u}tzung des HTML Template Tags\relax }}{21}{figure.caption.22}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Browserunterst\IeC {\"u}tzung der HTML Imports\relax }}{28}{figure.caption.27}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Browserunterst\IeC {\"u}tzung der Web Components Technologien mit webcomponents.js\relax }}{30}{figure.caption.28}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Gerenderte Web Komponente mit nativen APIs\relax }}{32}{figure.caption.30}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Schichtenmodell von Polymer\relax }}{37}{figure.caption.18}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Schichtenmodell von Polymer\relax }}{36}{figure.caption.31}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Verschiedene Wahrnehmung der Benutzer bei unterschiedlichen Ladezeiten\relax }}{53}{figure.caption.33}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Darstellung der multi-navigation-app-Komponente\relax }}{62}{figure.caption.38}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Darstellung der Model-View-ViewModel-Architektur von AngularJS\relax }}{65}{figure.caption.42}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

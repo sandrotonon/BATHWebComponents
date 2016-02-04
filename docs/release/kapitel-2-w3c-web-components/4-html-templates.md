@@ -39,8 +39,7 @@ Eine weitere Möglichkeit ein Template umzusetzen besteht darin, den Inhalt eine
 </script>
 ```
 
-Wie bei dem Beispiel mit einem `<div>`-Element wird auch bei dieser Methode der Inhalt nicht gerendert, da ein `<script>`-Tag standardmäßig die CSS Eigenschaft `display: none` hat. In diesem Fall werden jedoch die benötigten Ressourcen nicht geladen, somit gibt es keine zusätzlichen Performance-Einbrüche. Es besteht dennoch ein Nachteil, auf den besonders geachtet werden muss: Der Inhalt des `<script>`-Tags muss via `innerHTML` in den DOM geklont werden, was eine mögliche XSS Sicherheitslücke darstellen kann.
-Es muss also abgewägt werden, welche der Nachteile für den Entwickler am ehesten hinnehmbar sind und welche Methode verwendet werden soll.
+Wie bei dem Beispiel mit einem `<div>`-Element wird auch bei dieser Methode der Inhalt nicht gerendert, da ein `<script>`-Tag standardmäßig die CSS Eigenschaft `display: none` hat. In diesem Fall werden jedoch die benötigten Ressourcen nicht geladen, somit gibt es keine zusätzlichen Performance-Einbrüche. Es besteht dennoch ein Nachteil, auf den besonders geachtet werden muss: Der Inhalt des `<script>`-Tags muss via `innerHTML` in den DOM geklont werden, was eine mögliche XSS Sicherheitslücke darstellen kann. Es muss also abgewägt werden, welche der Nachteile für den Entwickler am ehesten hinnehmbar sind und welche Methode verwendet werden soll.
 
 
 ### `<template>`-Tag

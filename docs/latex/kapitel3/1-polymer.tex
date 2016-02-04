@@ -1,11 +1,11 @@
-\chapter{Einführung in Polymer}\label{einfuxfchrung-in-polymer}
+\chapter{Einführung in Polymer}\label{einfuehrung-in-polymer}
 
-Die Library Polymer setzt auf die in Kapitel 2 gezeigten Web-Components-Standards auf und soll den Umgang mit ihnen vereinfachen sowie deren Funktionalitäten erweitern. Dadurch will es Polymer ermöglichen, gekapselte Komponenten zu bauen, welche wiederum von Komponenten verwendet oder mit anderen Komponenten verbunden werden können, um komplexe Applikationen zu entwickeln. Der Name Polymer (``Poly'' - mehrere, ``mer'' - Teile) ist dabei eine Metapher für die Polymerisation von einzelnen Monomeren (den nativen HTML-Elementen) zu einem großen Molekül (einer Web-Komponente). In diesem Kapitel wird in Abschnitt 3.1 die Architektur der Library gezeigt, in Abschnitt 3.2 wird der darauf aufsetzende Elemente-Katalog dargestellt.
+Die Library Polymer setzt auf die in Kapitel \ref{web-components-nach-w3c} gezeigten Web-Components-Standards auf und soll den Umgang mit ihnen vereinfachen sowie deren Funktionalitäten erweitern. Dadurch will es Polymer ermöglichen, gekapselte Komponenten zu bauen, welche wiederum von Komponenten verwendet oder mit anderen Komponenten verbunden werden können, um komplexe Applikationen zu entwickeln. Der Name Polymer (``Poly'' - mehrere, ``mer'' - Teile) ist dabei eine Metapher für die Polymerisation von einzelnen Monomeren (den nativen \ac{HTML}-Elementen) zu einem großen Molekül (einer Web-Komponente). In diesem Kapitel wird in Abschnitt \ref{architektur} die Architektur der Library gezeigt, in Abschnitt \ref{elemente-katalog} wird der darauf aufsetzende Elemente-Katalog dargestellt.
 
 
 \section{Architektur}\label{architektur}
 
-Eine mit Hilfe von Polymer implementierte Komponente lässt sich in die in Abbildung \ref{fig:schimopo} dargestellten Schichten unterteilen. Die Browser-Schicht stellt die nativen APIs der Web-Technologien dar, welche von der Polyfill-Schicht, den webcomponents.js-Polyfills (siehe Abschnitt 2.6), ersetzt oder erweitert werden können, falls der Browser die notwendige Technologie nicht unterstützt. Polymer kann dabei als Konformitäts-Schicht aufgefasst werden, welche auf die nativen Technologien bzw. den Polyfills aufsetzt. Diese setzt sich wiederum aus folgenden drei Schichten zusammen \cite{citeulike:13915080}: Der \texttt{polymer-micro}-Schicht, welche die grundlegenden Funktionalitäten für das Erzeugen von Custom Elements bietet, die \texttt{polymer-mini}-Schicht, welche den Umgang mit einem lokalen DOM in einer Polymer-Komponente erweitert und erleichtert, und zuletzt der \texttt{polymer}-Schicht mit allgemeinen und zusätzlichen Funktionalitäten für den Umgang mit Web Components. Auf die Polymer-Schicht können die Polymer-Elemente aufgesetzt werden. Diese bilden eine weitere Schicht, welche durch den Elemente-Katalog \cite{citeulike:13916374} repräsentiert wird. In dem Elemente Katalog sind diverse mit Polymer umgesetzte Komponenten - sowohl für das UI als auch für Kernfunktionen zum Entwickeln von Applikationen - vorhanden.
+Eine mit Hilfe von Polymer implementierte Komponente lässt sich in die in Abbildung \ref{fig:schimopo} dargestellten Schichten unterteilen. Die Browser-Schicht stellt die nativen \ac{API}s der Web-Technologien dar, welche von der Polyfill-Schicht, den webcomponents.js-Polyfills (siehe Abschnitt \ref{polyfills-mit-webcomponents.js}), ersetzt oder erweitert werden können, falls der Browser die notwendige Technologie nicht unterstützt. Polymer kann dabei als Konformitäts-Schicht aufgefasst werden, welche auf die nativen Technologien bzw. den Polyfills aufsetzt. Diese setzt sich wiederum aus folgenden 3 Schichten zusammen \cite{citeulike:13915080}: Der \texttt{polymer-micro}-Schicht, welche die grundlegenden Funktionalitäten für das Erzeugen von Custom Elements bietet, die \texttt{polymer-mini}-Schicht, welche den Umgang mit einem lokalen \ac{DOM} in einer Polymer-Komponente erweitert und erleichtert, und zuletzt der \texttt{polymer}-Schicht mit allgemeinen und zusätzlichen Funktionalitäten für den Umgang mit Web Components. Auf die Polymer-Schicht können die Polymer-Elemente aufgesetzt werden. Diese bilden eine weitere Schicht, welche durch den Elemente-Katalog \cite{citeulike:13916374} repräsentiert wird. In dem Elemente Katalog sind diverse mit Polymer umgesetzte Komponenten - sowohl für das \ac{UI} als auch für Kernfunktionen zum Entwickeln von Applikationen - vorhanden.
 
 \begin{figure}[h]
  \centering
@@ -19,7 +19,7 @@ Eine mit Hilfe von Polymer implementierte Komponente lässt sich in die in Abbil
 
 \section{Elemente-Katalog}\label{elemente-katalog}
 
-Der von Google verwaltete Elemente-Katalog verkörpert die Polymer-Philosophie ``There is an element for that''. Sie bilden eine Sammlung an Komponenten, welche die von Google vorgeschlagenen Implementierungen als Lösungen von einfachen bis komplexen wiederkehrenden Problemen sind. Entwickler können diese in ihrer eigenen Applikation optional einsetzen, sie sind beim Einsatz von Polymer aber nicht zwingend notwendig. Es werden dabei allerlei Anwendungsmöglichkeiten angesprochen, von DOM-Rendering in Form von Animationen, über Browser-API-Interaktionen durch Push-Nachrichten, bis hin zu Remote-API-Interaktionen mittels einem XHR. Der Katalog besteht aus sieben Kategorien (Stand Januar 2016), welche die Komponenten nach Anwendungsfällen sortieren. Nachfolgend werden die Kategorien aufgelistet und erläutert.
+Der von Google verwaltete Elemente-Katalog verkörpert die Polymer-Philosophie ``There is an element for that''. Sie bilden eine Sammlung an Komponenten, welche die von Google vorgeschlagenen Implementierungen als Lösungen von einfachen bis komplexen wiederkehrenden Problemen sind. Entwickler können diese in ihrer eigenen Applikation optional einsetzen, sie sind beim Einsatz von Polymer aber nicht zwingend notwendig. Es werden dabei allerlei Anwendungsmöglichkeiten angesprochen, von \ac{DOM}-Rendering in Form von Animationen, über Browser-\ac{API}-Interaktionen durch Push-Nachrichten, bis hin zu Remote-\ac{API}-Interaktionen mittels einem \ac{XHR}. Der Katalog besteht aus 7 Kategorien (Stand Januar 2016), welche die Komponenten nach Anwendungsfällen sortieren. Nachfolgend werden die Kategorien aufgelistet und erläutert.
 
 
 \textbf{Iron Elements - Fe}
@@ -28,11 +28,11 @@ Eisen ist der Kern der Erde. Daran orientiert sich die Metapher der Iron Element
 
 \textbf{Paper Elements - Md}
 
-Die Paper Elements sind Googles-Design-Philosophie ``Material Design'' gehorchende Elemente wie Listen, Menüs, Tabs. Sie ermöglichen das Erstellen einer UI. Paper ist dabei eine Metapher für ein erweitertes Papier, es kann zusammengesteckt werden, sich transformieren oder Schatten werfen.
+Die Paper Elements sind Googles-Design-Philosophie ``Material Design'' gehorchende Elemente wie Listen, Menüs, Tabs. Sie ermöglichen das Erstellen einer \ac{UI}. Paper ist dabei eine Metapher für ein erweitertes Papier, es kann zusammengesteckt werden, sich transformieren oder Schatten werfen.
 
 \textbf{Google Web Components - Go}
 
-Um die eigenen Services leichter verwendbar zu machen, stellt Google die Google Web Components bereit. Sie kapseln diese Services und APIs in Komponenten, wodurch Google Maps oder auch Google Drive usw. in der eigenen Applikation eingebunden und verwendet werden können.
+Um die eigenen Services leichter verwendbar zu machen, stellt Google die Google Web Components bereit. Sie kapseln diese Services und \ac{API}s in Komponenten, wodurch Google Maps oder auch Google Drive usw. in der eigenen Applikation eingebunden und verwendet werden können.
 
 \textbf{Gold Elements - Au}
 
@@ -40,7 +40,7 @@ Die Gold Elements sind eine Sammlung an buchstäblich wertvollen, goldenen Eleme
 
 \textbf{Neon Elements - Ne}
 
-Die Neon Elements sind neben den Paper Elements auf UI-Ebene einsetzbar. Mit ihnen können beispielsweise Animationen erstellt werden.
+Die Neon Elements sind neben den Paper Elements auf \ac{UI}-Ebene einsetzbar. Mit ihnen können beispielsweise Animationen erstellt werden.
 
 \textbf{Platinum Elements - Pt}
 

@@ -26,19 +26,7 @@ Die Spezifikation des W3C ermöglicht nicht nur das Erstellen eigenständiger El
 
 ### Neue Elemente registrieren
 
-Um nun ein eigenes Custom Element zu definieren, muss der Name des Custom Elements laut der W3C Spezifikation zwingend einen Bindestrich enthalten, beispielsweise `my-element`. Somit ist gewährleistet, dass der Parser des Browsers die Custom Elements von den nativen Elementen unterscheiden kann [citeulike:13845061]. Ein neues Element wird mittels JavaScript mit der Funktion `var MyElement = document.registerElement('my-element');` registriert. Zusätzlich zum Namen des Elements kann optional der Prototyp des Elements angegeben werden. Dieser ist jedoch standardmäßig ein `HTMLElement`, somit also erst wichtig, wenn es darum geht, vorhandene Elemente zu erweitern, auf dieses Thema wird jedoch in Abschnitt 2.2.4 gesondert eingegangen. Durch das Registrieren des Elements wird es in die Registry des Browsers geschrieben, welche dazu verwendet wird, die Definitionen der HTML-Elemente aufzulösen. Nachdem das Element registriert wurde, muss es zunächst mittels `document.createElement(tagName)` erzeugt werden, der `tagName` ist hierbei der Name des zuvor registrierten Elements. Danach kann es per JavaScript oder HTML-Deklaration im Dokument verwendet werden [citeulike:13844979].
-
-Einbinden mit JavaScript:
-```javascript
-  document.body.appendChild(myelement);
-```
-
-Einbinden mit HTML:
-```html
-<div class="some-html">
-  <my-element><my-element>
-</div>
-```
+Um nun ein eigenes Custom Element zu definieren, muss der Name des Custom Elements laut der W3C Spezifikation zwingend einen Bindestrich enthalten, beispielsweise `my-element`. Somit ist gewährleistet, dass der Parser des Browsers die Custom Elements von den nativen Elementen unterscheiden kann [citeulike:13845061]. Ein neues Element wird mittels JavaScript mit der Funktion `var MyElement = document.registerElement('my-element');` registriert. Zusätzlich zum Namen des Elements kann optional der Prototyp des Elements angegeben werden. Dieser ist jedoch standardmäßig ein `HTMLElement`, somit also erst wichtig, wenn es darum geht, vorhandene Elemente zu erweitern, auf dieses Thema wird jedoch in Abschnitt 2.2.4 gesondert eingegangen. Durch das Registrieren des Elements wird es in die Registry des Browsers geschrieben, welche dazu verwendet wird, die Definitionen der HTML-Elemente aufzulösen. Nachdem das Element registriert wurde, muss es zunächst mittels `document.createElement(tagName)` erzeugt werden, der `tagName` ist hierbei der Name des zuvor registrierten Elements. Danach kann es per JavaScript mittels `document.body.appendChild(myelement);` oder per HTML-Deklaration mittels `<my-element><my-element>` im Dokument verwendet werden [citeulike:13844979].
 
 
 ### Vorteile von Custom Elements
@@ -49,12 +37,6 @@ Ist ein Element noch nicht definiert und nicht beim Browser registriert, steht a
 ### Nachteil
 
 Ein Custom Element, welches zwar standardkonform deklariert oder erstellt, aber noch nicht beim Browser registriert wurde, ist ein "Unresolved Element". Steht dieses Element am Anfang des DOM, wird jedoch erst später registriert, kann es nicht von CSS angesprochen werden. Dadurch kann ein FOUC entstehen, was bedeutet, dass das Element beim Laden der Seite nicht gestylt dargestellt wird, sondern das definierte Aussehen erst übernimmt, nachdem es registriert wurde. Um dies zu verhindern, sieht die HTML-Spezifikation eine neue CSS-Pseudoklasse `:unresolved` vor, welche deklarierte, aber nicht registrierte Elemente anspricht. Somit können diese Elemente initial beim Laden der Seite ausgeblendet und nach dem Registrieren wieder eingeblendet werden. Dadurch wird ein ungewolltes Anzeigen von ungestylten Inhalten verhindert [citeulike:13844984].
-
-```html
-my-element:unresolved {
-  display: none;
-}
-```
 
 
 ### Vorhandene Elemente erweitern (Type Extension)
@@ -78,14 +60,7 @@ var buttonExtended  = document.createElement('button', 'button-extended');
 var buttonExtended = new ButtonExtendedProto();
 ```
 
-Um es nun im DOM zu benutzen, muss der Name des erweiterten Elements via dem Attribut `is="elementName"` des erweiternden Elements angegeben werden.
-
-HTML:
-```html
-<div class="wrapper">
-  <button is="button-extended"></button>
-</div>
-```
+Um es nun im Dokument zu benutzen, muss der Name des erweiterten Elements via dem Attribut `is="elementName"` des erweiternden Elements angegeben werden. So wird der erweiterte Button deklarativ mittels `<button is="button-extended"></button>` in das Dokument eingebunden.
 
 
 **Verwendung bei Github**

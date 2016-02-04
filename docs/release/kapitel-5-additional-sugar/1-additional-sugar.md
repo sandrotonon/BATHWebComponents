@@ -25,9 +25,9 @@ Das Transportieren der Daten erfolgt nur von Host-Element zum Kind-Element. Hier
 Der Transport der Daten erfolgt nur von Kind-Element zu Host-Element. Hierzu müssen die `notify`- und `readOnly`-Parameter mit `true` initialisiert werden.
 
 
-### Two-Way Data-Binding
+### Two-Way-Data-Binding
 
-* Mittels dem Two-Way Data-Binding, auch "automatic Binding" genannt, können Daten von Host- zu Kind-Element und umgekehrt geschrieben werden. Hierzu ist es zwingend notwendig, den `notify`-Parameter mit `true` zu initialisieren und zusätzlich die doppelte geschweifte Klammer Syntax `{{}}` zu verwenden. Sobald eine der beiden Eigenschaften, die des Kindes oder die des Hosts, geändert werden, wird von dem jeweiligen Element ein `propertyName-changed-event` abgefeuert. Wenn nun ein anderes Element an diese Eigenschaft gebunden ist, bekommt es das Event mit und ändert daraufhin den eigenen Wert. Hierdurch ist es möglich, eine API für eine Komponente bereit zu stellen, um Daten nach außen sichtbar zu machen. Somit können Daten zwischen zwei oder mehr Komponenten ausgetauscht werden.
+Mittels dem Two-Way-Data-Binding, auch "automatic Binding" genannt, können Daten von Host- zu Kind-Element und umgekehrt geschrieben werden. Hierzu ist es zwingend notwendig, den `notify`-Parameter mit `true` zu initialisieren und zusätzlich die doppelte geschweifte Klammer Syntax `{{}}` zu verwenden. Sobald eine der beiden Eigenschaften, die des Kindes oder die des Hosts, geändert werden, wird von dem jeweiligen Element ein `propertyName-changed-event` abgefeuert. Wenn nun ein anderes Element an diese Eigenschaft gebunden ist, bekommt es das Event mit und ändert daraufhin den eigenen Wert. Hierdurch ist es möglich, eine API für eine Komponente bereit zu stellen, um Daten nach außen sichtbar zu machen. Somit können Daten zwischen zwei oder mehr Komponenten ausgetauscht werden.
 
 
 ### Binden von nativen Attributen

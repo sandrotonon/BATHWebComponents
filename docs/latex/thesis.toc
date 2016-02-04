@@ -4,73 +4,106 @@
 \contentsline {section}{\numberline {2.1}Probleml\IeC {\"o}sung}{3}{section.2.1}
 \contentsline {section}{\numberline {2.2}Custom Elements}{5}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Neue Elemente registrieren}{6}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Vorteile von Custom Elements}{7}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.2}Vorteile von Custom Elements}{6}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Nachteil}{7}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}Vorhandene Elemente erweitern (Type Extensions)}{7}{subsection.2.2.4}
 \contentsline {subsection}{\numberline {2.2.5}Eigenschaften und Methoden definieren}{8}{subsection.2.2.5}
-\contentsline {subsection}{\numberline {2.2.6}Custom Element Lifecycle-Callbacks}{9}{subsection.2.2.6}
-\contentsline {subsection}{\numberline {2.2.7}Styling von Custom Elements}{10}{subsection.2.2.7}
-\contentsline {subsection}{\numberline {2.2.8}Browserunterst\IeC {\"u}tzung}{10}{subsection.2.2.8}
-\contentsline {section}{\numberline {2.3}Shadow DOM}{11}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Shadow DOM nach W3C}{11}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.2.6}Custom Element Lifecycle-Callbacks}{8}{subsection.2.2.6}
+\contentsline {subsection}{\numberline {2.2.7}Styling von Custom Elements}{9}{subsection.2.2.7}
+\contentsline {subsection}{\numberline {2.2.8}Verwendung bei GitHub}{9}{subsection.2.2.8}
+\contentsline {subsection}{\numberline {2.2.9}Browserunterst\IeC {\"u}tzung}{10}{subsection.2.2.9}
+\contentsline {section}{\numberline {2.3}Shadow \ac {DOM}}{11}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Shadow \ac {DOM} nach \ac {W3C}}{11}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Content Projection}{12}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Insertion Points}{12}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}Shadow Insertion Points}{13}{subsection.2.3.4}
-\contentsline {subsection}{\numberline {2.3.5}Styling mit CSS}{14}{subsection.2.3.5}
-\contentsline {subsection}{\numberline {2.3.6}Styling des Shadow DOM von au\IeC {\ss }erhalb}{14}{subsection.2.3.6}
-\contentsline {subsection}{\numberline {2.3.7}CSS-Variablen}{15}{subsection.2.3.7}
-\contentsline {subsection}{\numberline {2.3.8}Beispiel eines Shadow DOMs mit Template und CSS}{16}{subsection.2.3.8}
+\contentsline {subsection}{\numberline {2.3.5}Styling mit \ac {CSS}}{14}{subsection.2.3.5}
+\contentsline {subsection}{\numberline {2.3.6}Styling des Shadow \ac {DOM} von au\IeC {\ss }erhalb}{14}{subsection.2.3.6}
+\contentsline {subsection}{\numberline {2.3.7}\ac {CSS}-Variablen}{15}{subsection.2.3.7}
+\contentsline {subsection}{\numberline {2.3.8}Beispiel eines Shadow \ac {DOM}s mit Template und \ac {CSS}}{16}{subsection.2.3.8}
 \contentsline {subsection}{\numberline {2.3.9}Browserunterst\IeC {\"u}tzung}{17}{subsection.2.3.9}
-\contentsline {section}{\numberline {2.4}HTML Templates}{19}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Bisherige Umsetzung von Templates im Browser}{19}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Das \texttt {\textless {}template\textgreater {}}-Tag}{20}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Benutzung}{21}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Vorteile}{21}{subsection.2.4.4}
+\contentsline {section}{\numberline {2.4}\ac {HTML} Templates}{18}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Bisherige Umsetzung von Templates im Browser}{18}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Das \texttt {\textless {}template\textgreater {}}-Tag}{19}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Benutzung}{20}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Vorteile}{20}{subsection.2.4.4}
 \contentsline {subsection}{\numberline {2.4.5}Browserunterst\IeC {\"u}tzung}{21}{subsection.2.4.5}
-\contentsline {section}{\numberline {2.5}HTML Imports}{23}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}HTML-Dateien importieren}{23}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Vorteil}{24}{subsection.2.5.2}
-\contentsline {subsection}{\numberline {2.5.3}HTML Imports verwenden}{24}{subsection.2.5.3}
-\contentsline {subsection}{\numberline {2.5.4}Abh\IeC {\"a}ngigkeiten verwalten}{25}{subsection.2.5.4}
-\contentsline {subsection}{\numberline {2.5.5}Sub-Imports}{26}{subsection.2.5.5}
-\contentsline {subsection}{\numberline {2.5.6}Performance}{26}{subsection.2.5.6}
-\contentsline {subsection}{\numberline {2.5.7}HTTP/2}{26}{subsection.2.5.7}
-\contentsline {subsection}{\numberline {2.5.8}Asynchrones Laden von Imports}{27}{subsection.2.5.8}
-\contentsline {subsection}{\numberline {2.5.9}Request-Minimierung mit ``Vulcanize''}{27}{subsection.2.5.9}
-\contentsline {subsection}{\numberline {2.5.10}Anwendungen}{28}{subsection.2.5.10}
-\contentsline {subsection}{\numberline {2.5.11}Browserunterst\IeC {\"u}tzung}{28}{subsection.2.5.11}
-\contentsline {section}{\numberline {2.6}Polyfills mit webcomponents.js}{30}{section.2.6}
-\contentsline {subsubsection}{\numberline {2.6.0.1}Native Browserunterst\IeC {\"u}tzung von Web Components}{30}{subsubsection.2.6.0.1}
-\contentsline {subsection}{\numberline {2.6.1}Polyfill webcomponents.js}{31}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Browserunterst\IeC {\"u}zung}{31}{subsection.2.6.2}
-\contentsline {subsection}{\numberline {2.6.3}Performance}{32}{subsection.2.6.3}
-\contentsline {section}{\numberline {2.7}Implementierung einer Komponente mit den nativen Web Component APIs}{33}{section.2.7}
-\contentsline {subsection}{\numberline {2.7.1}Custom Element mit Eigenschaften und Funktionen definieren}{33}{subsection.2.7.1}
-\contentsline {subsection}{\numberline {2.7.2}Template erstellen und Styles definieren}{34}{subsection.2.7.2}
-\contentsline {subsection}{\numberline {2.7.3}Template bereitstellen und Shadow DOM zur Kapselung benutzen}{35}{subsection.2.7.3}
-\contentsline {subsection}{\numberline {2.7.4}Element importieren und verwenden}{35}{subsection.2.7.4}
-\contentsline {chapter}{\numberline {3}Einf\IeC {\"u}hrung in Polymer}{36}{chapter.3}
-\contentsline {section}{\numberline {3.1}Architektur}{36}{section.3.1}
-\contentsline {section}{\numberline {3.2}Elemente-Katalog}{36}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Alternative Sammlung von Komponenten}{38}{subsection.3.2.1}
-\contentsline {chapter}{\numberline {4}Analogie zu nativen Web Components}{39}{chapter.4}
-\contentsline {section}{\numberline {4.1}Custom Elements}{39}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Neues Element registrieren}{39}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Elemente erweitern}{40}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Declared Properties - Eigenschaften und Methoden definieren}{40}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Computed Properties}{41}{subsection.4.1.4}
-\contentsline {subsection}{\numberline {4.1.5}Property Oberserver}{41}{subsection.4.1.5}
-\contentsline {subsection}{\numberline {4.1.6}Das hostAttributes-Objekt}{42}{subsection.4.1.6}
-\contentsline {subsection}{\numberline {4.1.7}Lifecycle-Callback-Funktionen}{42}{subsection.4.1.7}
-\contentsline {section}{\numberline {4.2}Shadow DOM und HTML Templates}{42}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Shady DOM}{43}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}DOM-Knoten automatisch finden}{44}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Content Projection}{44}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}CSS-Styling}{45}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Gemeinsame Styles mehrerer Komponenten}{46}{subsection.4.2.5}
-\contentsline {section}{\numberline {4.3}HTML Imports}{47}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Dynamisches Nachladen von HTML}{48}{subsection.4.3.1}
-\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{49}{chapter*.21}
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{50}{chapter*.22}
-\contentsline {chapter}{\nonumberline Listings}{51}{chapter*.23}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{53}{chapter*.25}
+\contentsline {section}{\numberline {2.5}\ac {HTML} Imports}{22}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}\ac {HTML}-Dateien importieren}{22}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Vorteil}{23}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}\ac {HTML} Imports verwenden}{23}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.4}Abh\IeC {\"a}ngigkeiten verwalten}{24}{subsection.2.5.4}
+\contentsline {subsection}{\numberline {2.5.5}Sub-Imports}{25}{subsection.2.5.5}
+\contentsline {subsection}{\numberline {2.5.6}Performance}{25}{subsection.2.5.6}
+\contentsline {subsection}{\numberline {2.5.7}\ac {HTTP}/2}{25}{subsection.2.5.7}
+\contentsline {subsection}{\numberline {2.5.8}Asynchrones Laden von Imports}{26}{subsection.2.5.8}
+\contentsline {subsection}{\numberline {2.5.9}Request-Minimierung mit ``Vulcanize''}{26}{subsection.2.5.9}
+\contentsline {subsection}{\numberline {2.5.10}Anwendungen}{27}{subsection.2.5.10}
+\contentsline {subsection}{\numberline {2.5.11}Browserunterst\IeC {\"u}tzung}{27}{subsection.2.5.11}
+\contentsline {section}{\numberline {2.6}Polyfills mit webcomponents.js}{29}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Native Browserunterst\IeC {\"u}tzung von Web Components}{29}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Polyfill webcomponents.js}{30}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}Browserunterst\IeC {\"u}zung}{30}{subsection.2.6.3}
+\contentsline {subsection}{\numberline {2.6.4}Performance}{31}{subsection.2.6.4}
+\contentsline {section}{\numberline {2.7}Implementierung einer Komponente mit den nativen Web Component APIs}{32}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Custom Element mit Eigenschaften und Funktionen definieren}{32}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Template erstellen und Styles definieren}{33}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}Template bereitstellen und Shadow \ac {DOM} zur Kapselung benutzen}{34}{subsection.2.7.3}
+\contentsline {subsection}{\numberline {2.7.4}Element importieren und verwenden}{34}{subsection.2.7.4}
+\contentsline {chapter}{\numberline {3}Einf\IeC {\"u}hrung in Polymer}{35}{chapter.3}
+\contentsline {section}{\numberline {3.1}Architektur}{35}{section.3.1}
+\contentsline {section}{\numberline {3.2}Elemente-Katalog}{35}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Alternative Sammlung von Komponenten}{37}{subsection.3.2.1}
+\contentsline {chapter}{\numberline {4}Analogie zu nativen Web Components}{38}{chapter.4}
+\contentsline {section}{\numberline {4.1}Custom Elements}{38}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Neues Element registrieren}{38}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Elemente erweitern}{39}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Declared Properties - Eigenschaften und Methoden definieren}{39}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Computed Properties}{40}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}Property Oberserver}{40}{subsection.4.1.5}
+\contentsline {subsection}{\numberline {4.1.6}Das hostAttributes-Objekt}{41}{subsection.4.1.6}
+\contentsline {subsection}{\numberline {4.1.7}Lifecycle-Callback-Funktionen}{41}{subsection.4.1.7}
+\contentsline {section}{\numberline {4.2}Shadow \ac {DOM} und \ac {HTML} Templates}{41}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Shady \ac {DOM}}{42}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}\ac {DOM}-Knoten automatisch finden}{43}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Content Projection}{43}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}\ac {CSS}-Styling}{44}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Gemeinsame Styles mehrerer Komponenten}{45}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}\ac {HTML} Imports}{46}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Dynamisches Nachladen von \ac {HTML}}{47}{subsection.4.3.1}
+\contentsline {chapter}{\numberline {5}Zus\IeC {\"a}tzliche Polymer Funktionalit\IeC {\"a}ten}{48}{chapter.5}
+\contentsline {section}{\numberline {5.1}One-Way- und Two-Way-Data-Binding}{48}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}One-Way-Data-Binding}{48}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Two-Way-Data-Binding}{49}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Binden von nativen Attributen}{49}{subsection.5.1.3}
+\contentsline {section}{\numberline {5.2}Behaviors}{49}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Syntax}{50}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Behaviors erweitern}{50}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Events}{51}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Deklarative Events}{51}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Selbst definierte Events}{51}{subsection.5.3.2}
+\contentsline {chapter}{\numberline {6}Best Practices beim Arbeiten mit Polymer}{53}{chapter.6}
+\contentsline {section}{\numberline {6.1}\ac {UI}-Performance-Patterns}{53}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Ladezeiten und initiales Rendern optimieren}{53}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Optimierungen f\IeC {\"u}r eine fl\IeC {\"u}ssige Applikation}{54}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Gesture-System}{55}{section.6.2}
+\contentsline {section}{\numberline {6.3}A11y - Barrierefreiheit in Polymer}{56}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Fokus / Tastatur}{57}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Semantik}{58}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Flexibles \ac {UI}}{58}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}Beispiel einer barrierefreien Komponente}{59}{subsection.6.3.4}
+\contentsline {chapter}{\numberline {7}Komponenten-Entwicklung}{60}{chapter.7}
+\contentsline {section}{\numberline {7.1}Entwicklung und Deployment einer Polymer-Komponente}{60}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Entwicklungsumgebung}{60}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Yeoman}{60}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.3}Die Multi-Navigation-App-Komponente}{61}{subsection.7.1.3}
+\contentsline {subsection}{\numberline {7.1.4}Deployment mit Bower}{62}{subsection.7.1.4}
+\contentsline {section}{\numberline {7.2}Vergleich mit Komponenten-Entwicklung in AngularJS}{64}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Einstieg in AngularJS}{64}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Vergleich der Intentionen hinter Polymer und AngularJS}{65}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}Vergleich der Technischen Features}{66}{subsection.7.2.3}
+\contentsline {chapter}{\numberline {8}Zukunftsprognose}{67}{chapter.8}
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{69}{chapter*.43}
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{70}{chapter*.44}
+\contentsline {chapter}{\nonumberline Listings}{71}{chapter*.45}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{73}{chapter*.47}

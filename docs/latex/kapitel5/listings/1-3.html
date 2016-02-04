@@ -1,0 +1,20 @@
+<dom-module id="my-element">
+  <template>
+    <button on-click="postClick">Ich bin ein Button</button>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'my-element',
+      postClick: function(e, detail) {
+        this.fire('my-event', {data: 'fired'});
+      }
+    });
+  </script>
+</dom-module>
+
+<script>
+  document.querySelector('my-element').addEventListener('my-event', function (e) {
+    alert(e.detail.data);
+  })
+</script>

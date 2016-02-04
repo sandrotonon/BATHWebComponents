@@ -1,4 +1,5 @@
 # BATHWebComponents
+
 GitRepository meiner Bachelor Thesis "Web-Component-basierte Entwicklung mit Polymer" im Rahmen des Studiums "Angewandte Informatik" an der HTWG-Konstanz in Kooperation mit der Firma Seitenbau GmbH.
 
 
@@ -17,21 +18,21 @@ GitRepository meiner Bachelor Thesis "Web-Component-basierte Entwicklung mit Pol
   + 3.1 - [Architektur](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-3-polymer/1-polymer.md) : **Transferred**
   + 3.2 - [Elemente Katalog](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-3-polymer/1-polymer.md) : **Transferred**
 - Kapitel 4 - Analogie zu nativen Web Components
-  + 4.1 [Custom Elements](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-4-analogie/1-analogie.md) : **Clean**
-  + 4.2 [Shadow DOM / Templates](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-4-analogie/1-analogie.md) : **Clean**
-  + 4.3 [HTML Imports](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-4-analogie/1-analogie.md) : **Clean**
+  + 4.1 [Custom Elements](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-4-analogie/1-analogie.md) : **Transferred**
+  + 4.2 [Shadow DOM / Templates](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-4-analogie/1-analogie.md) : **Transferred**
+  + 4.3 [HTML Imports](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-4-analogie/1-analogie.md) : **Transferred**
 - Kapitel 5 - Zusätzliche Polymer Funktionalitäten
-  + 5.1 [One-Way und Two-Way Data-Binding](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-5-additional-sugar/1-additional-sugar.md) : **Clean**
-  + 5.2 [Behaviors](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-5-additional-sugar/1-additional-sugar.md) : **Clean**
-  + 5.3 [Events](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-5-additional-sugar/1-additional-sugar.md) : **Clean**
+  + 5.1 [One-Way und Two-Way Data-Binding](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-5-additional-sugar/1-additional-sugar.md) : **Transferred**
+  + 5.2 [Behaviors](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-5-additional-sugar/1-additional-sugar.md) : **Transferred**
+  + 5.3 [Events](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-5-additional-sugar/1-additional-sugar.md) : **Transferred**
 - Kapitel 6 - Polymer Best Practices
-  + 6.1 [UI Performance Patterns](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-6-best-practices/1-best-practices.md) : **Clean**
-  + 6.2 [Gesture System](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-6-best-practices/1-best-practices.md) : **Clean**
-  + 6.3 [A11y - Barrierefreiheit in Polymer](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-6-best-practices/1-best-practices.md) : **Clean**
+  + 6.1 [UI Performance Patterns](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-6-best-practices/1-best-practices.md) : **Transferred**
+  + 6.2 [Gesture System](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-6-best-practices/1-best-practices.md) : **Transferred**
+  + 6.3 [A11y - Barrierefreiheit in Polymer](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-6-best-practices/1-best-practices.md) : **Transferred**
 - Kapitel 7 - Komponenten Entwicklung
-  + 7.1 [Entwicklung und Deployment einer Polymer Komponente](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-7-komponenten-entwicklung/1-polymer-komponente.md) : **Clean**
-  + 7.2 [Vergleich mit Komponenten-Entwicklung in AngularJS](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-7-komponenten-entwicklung/2-angular-vergleich.md) : **Clean**
-- Kapitel 8 - [Zukunftsprognose](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-8-zukunftsprognose/1-zukunftsprognose.md) : **Clean**
+  + 7.1 [Entwicklung und Deployment einer Polymer Komponente](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-7-komponenten-entwicklung/1-polymer-komponente.md) : **Transferred**
+  + 7.2 [Vergleich mit Komponenten-Entwicklung in AngularJS](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-7-komponenten-entwicklung/2-angular-vergleich.md) : **Transferred**
+- Kapitel 8 - [Zukunftsprognose](https://github.com/glur4k/BATHWebComponents/blob/master/docs/release/kapitel-8-zukunftsprognose/1-zukunftsprognose.md) : **Transferred**
 - Anhang : **In Progress**
 
 
@@ -46,12 +47,9 @@ Transferred: Der Inhalt wurde in LaTeX konvertiert, das Markdown sollte nicht me
 
 ## Sonstige TODOs
 
-- Bilder im Text referenzieren
 - HTML Templates vor Shadow DOM
-- Performanz -> Performance
-- zwei, drei etc. in 2, 3 etc. umwandeln
-
 - AngularJS App in Anhang
+- Nummerierung des Inhaltsverzeichnis
 
 
 ### Erledigt
@@ -64,6 +62,9 @@ Transferred: Der Inhalt wurde in LaTeX konvertiert, das Markdown sollte nicht me
   + Kapitel 6 - Clean
   + Kapitel 7 - Clean
 - Aufbau in Einleitung
+- Performanz -> Performance
+- zwei, drei etc. in 2, 3 etc. umwandeln
+- Bilder im Text referenzieren
 
 
 ## Konventionen

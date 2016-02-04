@@ -1,0 +1,9 @@
+/* Eigenes Custom Element */
+my-element {
+  color: black;
+}
+
+/* Erweitertes natives HTML-Element*/
+[is="button-extended"] {
+  color: black;
+}

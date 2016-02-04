@@ -1,0 +1,34 @@
+<style>
+  .styled { color: green; }
+  .content { background-color: khaki; }
+</style>
+
+<div id="hello">
+  <div>Hallo</div>
+  <div class="styled">Styled</div>
+  <p class="hidden">Inhalt, der vom Shadow DOM ueberschrieben wird.</p>
+</div>
+
+<template id="myTemplate">
+  <style>
+    .wrapper {
+      border: 2px solid black;
+      width: 120px;
+    }
+    .content { color: red; }
+  </style>
+
+  <div class="wrapper">
+    Shadow DOM
+    <div class="content">
+      <content select="div"></content>
+    </div>
+  </div>
+</template>
+
+<script>
+  var root = document.querySelector('#hello').createShadowRoot();
+  var template = document.querySelector('#myTemplate');
+  var clone = document.importNode(template.content, true);
+  root.appendChild(clone);
+</script>

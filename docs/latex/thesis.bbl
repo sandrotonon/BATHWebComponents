@@ -63,18 +63,36 @@ Glazkov, D. (2015).
 Google (weba).
 \newblock {Polymer Base Documentation}.
 
-\bibitem[Google webb]{citeulike:13915080}
+\bibitem[Google webb]{citeulike:13915202}
 Google (webb).
+\newblock {Polymer DevTools Extension}.
+
+\bibitem[Google webc]{citeulike:13915080}
+Google (webc).
 \newblock {Polymer Documentation}.
 
-\bibitem[Google webc]{citeulike:13916374}
-Google (webc).
+\bibitem[Google webd]{citeulike:13916374}
+Google (webd).
 \newblock {Polymer Element Catalog}.
 
-\bibitem[Google webd]{citeulike:13879681}
-Google (webd).
+\bibitem[Google webe]{citeulike:13915222}
+Google (webe).
+\newblock {Polymer Gestures}.
+
+\bibitem[Google webf]{citeulike:13915079}
+Google (webf).
+\newblock {Pressed Behavior}.
+
+\bibitem[Google webg]{citeulike:13879681}
+Google (webg).
 \newblock {Vulcanize}.
 \newblock https://github.com/polymer/vulcanize.
+
+\bibitem[Grigorik 2013]{citeulike:13262776}
+Grigorik, I. (2013).
+\newblock {\em {High Performance Browser Networking: What every web developer
+  should know about networking and web performance}}.
+\newblock O'Reilly Media, 1 edition.
 
 \bibitem[Group 2015]{citeulike:13851253}
 Group, W. H. A. T.~W. (2015).
@@ -90,6 +108,11 @@ Hacks, M. (2015).
 Hongkiat (2014).
 \newblock {Append And Reuse HTML Docs With HTML Import}.
 \newblock http://www.hongkiat.com/blog/html-import/.
+
+\bibitem[HTML5Rocks 2013]{citeulike:13853647}
+HTML5Rocks (2013).
+\newblock {HTML Imports: \#include for the web}.
+\newblock http://www.html5rocks.com/en/tutorials/webcomponents/imports/.
 
 \bibitem[Ihrig 2012]{citeulike:13851350}
 Ihrig, C. (2012).
@@ -111,6 +134,10 @@ Kr\"{o}ner, P. (2014b).
 \newblock {Web Components erkl\"{a}rt, Teil 1: Was sind Web Components?}
 \newblock
   http://www.peterkroener.de/web-components-erklaert-teil-1-was-sind-web-components.
+
+\bibitem[Lewis 2015]{citeulike:13915203}
+Lewis, P. (2015).
+\newblock {Polymer for the Performance-obsessed}.
 
 \bibitem[Microsoft web]{citeulike:13914237}
 Microsoft (web).
@@ -150,11 +177,6 @@ Polymer - Shady DOM (web).
 \newblock {What is shady DOM? - Polymer 1.0}.
 \newblock https://www.polymer-project.org/1.0/articles/shadydom.html.
 
-\bibitem[Rocks 2013]{citeulike:13853647}
-Rocks, H. (2013).
-\newblock {HTML Imports: \#include for the web}.
-\newblock http://www.html5rocks.com/en/tutorials/webcomponents/imports/.
-
 \bibitem[Satrom 2014]{citeulike:13914234}
 Satrom, B. (2014).
 \newblock {\em {Building Polyfills}}.
@@ -170,6 +192,25 @@ Schaffranek, R. (2014).
 Sharp, R. (2010).
 \newblock {What is a Polyfill?}
 
+\bibitem[Sutton 2015]{citeulike:13915273}
+Sutton, M. (2015).
+\newblock {Notes On Client-Rendered Accessibility}.
+
+\bibitem[Tarasiewicz 2014]{citeulike:13920434}
+Tarasiewicz, R. B.~P. (2014).
+\newblock {\em {AngularJS}}.
+\newblock Dpunkt.Verlag GmbH.
+
+\bibitem[{The Chromium Projects} web]{citeulike:13914892}
+{The Chromium Projects} (web).
+\newblock {Achieving data binding nirvana}.
+\newblock
+  https://www.chromium.org/developers/polymer-1-0\#TOC-Achieving-data-binding-nirvana.
+
+\bibitem[W3c 2008]{citeulike:13915310}
+W3c (2008).
+\newblock {Web Content Accessibility Guidelines (WCAG) 2.0}.
+
 \bibitem[W3c 2014a]{citeulike:13853643}
 W3c (2014a).
 \newblock {Cross-Origin Resource Sharing}.
@@ -179,6 +220,10 @@ W3c (2014a).
 W3c (2014b).
 \newblock {HTML Templates}.
 \newblock http://www.w3.org/TR/html5/scripting-1.html\#the-template-element.
+
+\bibitem[W3c 2014c]{citeulike:13915306}
+W3c (2014c).
+\newblock {W3C The Accessibility Tree and the DOM Tree}.
 
 \bibitem[W3c 2015a]{citeulike:13883381}
 W3c (2015a).
@@ -194,6 +239,10 @@ W3c (2015b).
 W3c (2015c).
 \newblock {W3C - Shadow DOM}.
 \newblock http://www.w3.org/TR/shadow-dom/.
+
+\bibitem[W3c web]{citeulike:13915280}
+W3c (web).
+\newblock {W3C Introduction to Web Accessibility}.
 
 \bibitem[W3Techs und W3Techs web]{citeulike:13879575}
 W3Techs and W3Techs (web).
@@ -217,5 +266,9 @@ Webcomponents (web).
 \bibitem[Webcompontents web]{citeulike:13914238}
 Webcompontents (web).
 \newblock {webcomponentsjs}.
+
+\bibitem[Yeoman web]{citeulike:13916358}
+Yeoman (web).
+\newblock {Yeoman Website}.
 
 \end{thebibliography}

@@ -13,35 +13,62 @@ A level-1 auxiliary file: kapitel2/6-polyfills.aux
 A level-1 auxiliary file: kapitel2/7-beispiel.aux
 A level-1 auxiliary file: kapitel3/1-polymer.aux
 A level-1 auxiliary file: kapitel4/1-analogie.aux
+A level-1 auxiliary file: kapitel5/1-additional-sugar.aux
+A level-1 auxiliary file: kapitel6/1-best-practices.aux
+A level-1 auxiliary file: kapitel7/1-polymer-komponente.aux
+A level-1 auxiliary file: kapitel7/2-angular-vergleich.aux
+A level-1 auxiliary file: kapitel8/1-zukunftsprognose.aux
 The style file: apalike-mystyle.bst
 Database file #1: library.bib
 Warning--entry type for "citeulike:13916423" isn't style-file defined
 --line 26 of file library.bib
 Warning--entry type for "citeulike:13916374" isn't style-file defined
 --line 37 of file library.bib
+Warning--entry type for "citeulike:13916358" isn't style-file defined
+--line 48 of file library.bib
+Warning--entry type for "citeulike:13915310" isn't style-file defined
+--line 59 of file library.bib
+Warning--entry type for "citeulike:13915306" isn't style-file defined
+--line 72 of file library.bib
+Warning--entry type for "citeulike:13915280" isn't style-file defined
+--line 85 of file library.bib
+Warning--entry type for "citeulike:13915273" isn't style-file defined
+--line 96 of file library.bib
+Warning--entry type for "citeulike:13915222" isn't style-file defined
+--line 110 of file library.bib
+Warning--entry type for "citeulike:13915203" isn't style-file defined
+--line 147 of file library.bib
+Warning--entry type for "citeulike:13915202" isn't style-file defined
+--line 160 of file library.bib
 Warning--entry type for "citeulike:13915080" isn't style-file defined
 --line 171 of file library.bib
+Warning--entry type for "citeulike:13915079" isn't style-file defined
+--line 182 of file library.bib
+Warning--entry type for "citeulike:13914892" isn't style-file defined
+--line 193 of file library.bib
 Warning--entry type for "citeulike:13914840" isn't style-file defined
---line 204 of file library.bib
+--line 205 of file library.bib
 Warning--entry type for "citeulike:13914379" isn't style-file defined
---line 215 of file library.bib
+--line 216 of file library.bib
 Warning--entry type for "citeulike:13914241" isn't style-file defined
---line 228 of file library.bib
+--line 229 of file library.bib
 Warning--entry type for "citeulike:13914239" isn't style-file defined
---line 241 of file library.bib
+--line 242 of file library.bib
 Warning--entry type for "citeulike:13914238" isn't style-file defined
---line 252 of file library.bib
+--line 253 of file library.bib
 Warning--entry type for "citeulike:13914237" isn't style-file defined
---line 263 of file library.bib
+--line 264 of file library.bib
 Warning--entry type for "citeulike:13886251" isn't style-file defined
---line 311 of file library.bib
+--line 312 of file library.bib
 Warning--entry type for "citeulike:13883407" isn't style-file defined
---line 323 of file library.bib
+--line 324 of file library.bib
 Warning--entry type for "citeulike:13853711" isn't style-file defined
---line 471 of file library.bib
+--line 472 of file library.bib
+Warning--entry type for "citeulike:13853647" isn't style-file defined
+--line 500 of file library.bib
 Warning--entry type for "citeulike:13844983" isn't style-file defined
 --line 764 of file library.bib
 Warning--entry type for "citeulike:13752379" isn't style-file defined
 --line 816 of file library.bib
 Warning--empty institution in citeulike:13851253
-(There were 15 warnings)
+(There were 26 warnings)

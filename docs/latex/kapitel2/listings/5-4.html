@@ -1,0 +1,11 @@
+<head>
+  <link rel="import" href="my-import.html" id="import1">
+  <link rel="import" href="another-import.html" id="import2">
+</head>
+<body>
+  <script>
+    var content = document.querySelector('#import1').import;
+    var el = content.querySelector('.element');
+    document.body.appendChild(el.cloneNode(true));
+  </script>
+</body>

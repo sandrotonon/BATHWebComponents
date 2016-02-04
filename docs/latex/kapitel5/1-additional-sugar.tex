@@ -1,0 +1,71 @@
+\chapter{Zusätzliche Polymer Funktionalitäten}\label{zusaetzliche-polymer-funktionalitaeten}
+
+Polymer bietet eine zusätzliche Applikations-Schicht mit einigen hilfreichen Funktionalitäten, die das Arbeiten mit den Komponenten vereinfachen. Die wichtigsten werden in diesem Kapitel dargestellt. Abschnitt \ref{one-way--und-two-way-data-binding} widmet sich dabei um das One-Way- und Two-Way-Data-Binding, Abschnitt \ref{behaviors} erläutert die Behaviors und in Abschnitt \ref{events} erklärt abschließend die Events.
+
+
+\section{One-Way- und Two-Way-Data-Binding}\label{one-way--und-two-way-data-binding}
+
+Für den Transport von Daten zwischen Komponenten sieht Polymer das One-Way- und Two-Way-Data-Binding vor. Die Daten können dabei zwischen einer Eigenschaft eines Custom Elements (Host-Element) und dessen lokalen \ac{DOM} (Kind-Element) gebunden und somit zwischen Komponenten ausgetauscht werden. Hierfür sieht Polymer das Mediator-Pattern vor, welches besagt, dass Daten zwischen 2 nebenstehenden Komponenten ihre Daten über eine übergeordnete Komponente propagieren müssen. Dies erfolgt mittels einer hierfür vorgesehenen Syntax für Attribute eines Elements, wie zum Beispiel: \texttt{\textless{}my-element\ some-property=\{\{value\}\}\textgreater{}\textless{}/my-element\textgreater{}}. Durch die doppelten Klammern kann die Eigenschaft \texttt{value} des Host Elements Daten in das Attribut \texttt{some-property} des Kind Elements weitergeben. Hierzu wird von Polymer für jede Eigenschaft eines Elements ein \texttt{propertyEffect} Objekt und ein entsprechender Setter angelegt. Wenn die Eigenschaft zur Laufzeit geändert wird, wird über das Array aus propertyEffects iteriert und bei entsprechender Eigenschaft mittels dem Setter der neue Wert gesetzt, falls dieser sich von dem alten Wert unterscheidet. Wird die Eigenschaft von einem Observer (siehe Abschnitt \ref{property-oberserver}) überwacht, so wird dieser im Setter aufgerufen, statt die Werte direkt zu ändern. Für das Binden stehen unterschiedlichen Annotationen zur Verfügung, welche nachfolgend erläutert werden \cite{citeulike:13914892}.
+
+
+\subsection{One-Way-Data-Binding}\label{one-way-data-binding}
+
+Das One-Way-Data-Binding erlaubt Attributen nur das Lesen der entsprechenden Eigenschaft seiner Komponente, ein schreibender Zugriff wird jedoch untersagt. Meist wird es verwendet, um Texte basierend auf einer Eigenschaft anzuzeigen, der Text jedoch soll nicht verändert werden oder die Eigenschaft überschreiben. Erreicht wird das One-Way-Data-Binding mit der doppelten eckigen Klammer Syntax \texttt{{[}{[}{]}{]}}. Intern legt Polymer für die Eigenschaft keinen eventListener \texttt{attributeName-changed} für das Attribut \texttt{attributeName} an, somit wird die Eigenschaft, falls das Attribut geändert werden sollte, nicht upgedatet. Beim One-Way-Data-Binding kann dabei zwischen 2 Möglichkeiten unterschieden werden.
+
+
+\textbf{Host to Child}
+
+Das Transportieren der Daten erfolgt nur von Host-Element zum Kind-Element. Hierzu muss zusätzlich der \texttt{readOnly}-Parameter (siehe Abschnitt \ref{declared-properties---eigenschaften-und-methoden-definieren}) nicht definiert oder mit \texttt{false} initialisiert werden.
+
+\textbf{Child to Host}
+
+Der Transport der Daten erfolgt nur von Kind-Element zu Host-Element. Hierzu müssen die \texttt{notify}- und \texttt{readOnly}-Parameter mit \texttt{true} initialisiert werden.
+
+
+\subsection{Two-Way-Data-Binding}\label{two-way-data-binding}
+
+Mittels dem Two-Way-Data-Binding, auch ``automatic Binding'' genannt, können Daten von Host- zu Kind-Element und umgekehrt geschrieben werden. Hierzu ist es zwingend notwendig, den \texttt{notify}-Parameter mit \texttt{true} zu initialisieren und zusätzlich die doppelte geschweifte Klammer Syntax \texttt{\{\{\}\}} zu verwenden. Sobald eine der beiden Eigenschaften, die des Kindes oder die des Hosts, geändert werden, wird von dem jeweiligen Element ein \texttt{propertyName-changed-event} abgefeuert. Wenn nun ein anderes Element an diese Eigenschaft gebunden ist, bekommt es das Event mit und ändert daraufhin den eigenen Wert. Hierdurch ist es möglich, eine \ac{API} für eine Komponente bereit zu stellen, um Daten nach außen sichtbar zu machen. Somit können Daten zwischen 2 oder mehr Komponenten ausgetauscht werden.
+
+
+\subsection{Binden von nativen Attributen}\label{binden-von-nativen-attributen}
+
+Um Werte an von \ac{HTML} reservierte Attribute, also das \texttt{hostAttributes}-Objekt (siehe Anschnitt 3.2) statt an Eigenschaften der Komponente zu binden (was mit der normalen Attribut-Binding-Syntax \texttt{=} erreicht wird), muss die hierfür vorgesehene Syntax \texttt{=\$} verwendet werden. So wird beispielsweise in dem Element \texttt{\textless{}div\ class=\$\dq \{\{myClass\}\}\dq\textgreater{}\textless{}/div\textgreater{}} die Eigenschaft \texttt{myClass} tatsächlich dem Attribut \texttt{class} statt der Eigenschaft zugewiesen. Polymer wandelt hierbei bei Verwendung der \texttt{=\$} Syntax die Zuweisung in die Anweisung \texttt{\textless{}div\textgreater{}.setAttribute('class',\ myClass);} um. Das Binden von nativen Attributen ist somit automatisch immer nur in eine Richtung von Host- zu Kind-Element. Im Allgemeinen sollte die Syntax immer dann verwendet werden, wenn die Attribute \texttt{style}, \texttt{href}, \texttt{class}, \texttt{for} oder auch \texttt{data-*} gesetzt werden sollen.
+
+
+\section{Behaviors}\label{behaviors}
+
+Auch wenn in Polymer nur ein beschränktes Vererben mit Hilfe von Type Extensions möglich ist, gibt es dennoch die Möglichkeit Komponenten mit geteilten Code-Modulen zu erweitern \cite{citeulike:13915080}. Diese Module werden innerhalb von Polymer Behaviors genannt. Behaviors erlauben es, einen Code in mehrere Komponenten einzubinden, um diese mit einem gewissen Verhalten oder mit zusätzlichen Funktionalitäten auszurüsten. Mit Hilfe der Behaviors haben Entwickler eine gute Kontrolle darüber, welche externen Codes in die eigene Komponente fließen. Sie können im Elemente-Katalog gefunden und eingesehen werden. Dort sind sie unter anderem in den Iron-Elementen mit Input-Validierungen oder in den Neon-Elementen mit Animationsverhalten auffindbar.
+
+
+\subsection{Syntax}\label{syntax}
+
+Behaviors sind globale Objekte und sollten in einem eigenem Namespace, wie z.B. mit \texttt{window.MyBehaviors\ =\ window.MyBehaviors\ \textbar{}\textbar{}\ \{\};}, definiert werden, da die von Polymer intern benutzten Behaviors im
+Polymer-Objekt verankert sind. Dadurch können Kollisionen mit zukünftigen Behaviors von Polymer verhindert werden. Behaviors haben eine starke Ähnlichkeit zu normalen Polymer-Elementen, sie besitzen ebenso Properties, Listener-Objekte und so weiter. Ein simples Behavior könnte beispielsweise wie in Listing \ref{deb} dargestellt definiert werden \cite{citeulike:13915079}.
+
+\lstinputlisting[language=JavaScript,label=deb,caption=Definition eines Behaviors]{kapitel5/listings/1-1.js}
+
+Dieses Behavior würde, falls es von einer Polymer Komponente benutzt würde, einen Alert auslösen, wenn die Komponente geklickt wird. Um das Behavior nun einer Komponente hinzuzufügen, muss es dem Behaviors-Array hinzugefügt werden \texttt{Polymer(\{\ is:\ 'super-element',\ behaviors:\ {[}HelloBehavior{]}\ \});}. In diesem Array können so viele Behaviors mit unterschiedlichen Verhaltensweisen hinzugefügt werden, wie benötigt werden.
+
+
+\subsection{Behaviors erweitern}\label{behaviors-erweitern}
+
+Wie auch Komponenten wiederum andere Komponenten erweitern können, können ebenso Behaviors erweitert werden. Somit können auch Behaviors untereinander geteilte Funktionalitäten einbinden. Um ein Behavior zu erweitern, müssen zunächst alle Behaviors importiert werden, welche das neue Behavior beinhalten soll. Anschließend wird das Verhalten des neuen Behaviors implementiert. Um das neue Behavior nun tatsächlich mit den anderen Behaviors zu erweitern, wird es als Array aus den importieren Behaviors und dem neu implementieren Behavior definiert, wie in Listing \ref{eeb} dargestellt.
+
+\lstinputlisting[language=HTML,label=eeb,caption=Erweiterung eines Behaviors]{kapitel5/listings/1-2.html}
+
+
+\section{Events}\label{events}
+
+Mit Polymer erstellte Komponenten können mit Hilfe des \texttt{listeners} Objekts auf bestimmte Interaktionen mit der Komponente reagieren {[}citeulike:13915080{]}. Hierzu wird die entsprechende Aktion mit der auszuführenden callBack Funktion in dem Objekt angegeben. Wird nun innerhalb der Komponente das angegebene Event registriert, wird die angegebene Funktion ausgeführt. Zu diesen Events zählen beispielsweise die Gesture Events, wie sie in Abschnitt \ref{gesture-system} beschrieben werden. Um nun verschiedene Aktionen mit unterschiedlichen Kind Elementen zu verknüpfen, können dem \texttt{listeners} Objekt auch Kind Elemente und dessen callBack Funktion mit der Syntax \texttt{nodeID.eventName:\ callBack()} hinzugefügt werden. Dadurch reagiert nur das angegebene Element auf das Event, statt der gesamten Komponente. So kann beim ``Tap'' auf ein Element mit der ID \texttt{nodeID} die Funktion (der Event Handler) \texttt{callBack()} aufgerufen werden.
+
+
+\subsection{Deklarative Events}\label{deklarative-events}
+
+Alternativ zur imperativen Definition von Events mittels dem \texttt{listeners} Objekt, können diese auch deklarativ im Markup des Elements im lokalen \ac{DOM} der Komponente angegeben werden. Will ein Element auf ein Event reagieren, so muss es dazu die \texttt{on-eventName} wie z.B. \texttt{\textless{}button\ on-tap=\dq handleTap\dq\textgreater{}Tap\ Button\textless{}/button\textgreater{}} Annotation benutzen, wodurch bei Tap auf den Button die Funktion \texttt{handleTap} ausgeführt wird. Dies vermischt zwar innerhalb des Templates \ac{HTML} und Javascript, jedoch muss mit dieser Methode dem Element keine ID zugewiesen werden, nur um dessen Event zu binden.
+
+
+\subsection{Selbst definierte Events}\label{selbst-definierte-events}
+
+Falls das gewünschte Event nicht existieren sollte, können von Host Elementen und dessen Kind Elementen auch selbst definierte Events ausgelöst werden. Hierfür muss von der Komponente die Hilfsfunktion \texttt{fire(eventName,\ data);} aufgerufen werden, welches wiederum von anderen Events ausgelöst werden kann. In Listing \ref{aesde} wird das Auslösen eines selbst erstellten Events mit der deklarativen Methode verdeutlicht. Der Button in Zeile 3 ruft die Funktion \texttt{postClick} auf, wenn er geklickt wird. Diese wiederum feuert mittels der Hilfsfunktion \texttt{fire} das Event \texttt{my-event}. Nun kann aus dem umschließenden Dokument, der eigenen Komponente oder aus anderen Komponenten auf das Event gehört werden, in dem die Funktion \texttt{addEventListener} (Zeile 17) auf das Event abfeuernde Element gebunden wird.
+
+\lstinputlisting[language=HTML,label=aesde,caption=Auslösen eines selbst definierten Events]{kapitel5/listings/1-3.html}
