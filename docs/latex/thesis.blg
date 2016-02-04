@@ -13,8 +13,16 @@ A level-1 auxiliary file: kapitel2/4-html-templates.aux
 A level-1 auxiliary file: kapitel2/5-html-imports.aux
 A level-1 auxiliary file: kapitel2/6-polyfills.aux
 A level-1 auxiliary file: kapitel2/7-beispiel.aux
+A level-1 auxiliary file: kapitel3/1-polymer.aux
+A level-1 auxiliary file: kapitel4/1-analogie.aux
 The style file: apalike-mystyle.bst
 Database file #1: library.bib
+Warning--entry type for "citeulike:13916423" isn't style-file defined
+--line 26 of file library.bib
+Warning--entry type for "citeulike:13916374" isn't style-file defined
+--line 37 of file library.bib
+Warning--entry type for "citeulike:13915080" isn't style-file defined
+--line 171 of file library.bib
 Warning--entry type for "citeulike:13914379" isn't style-file defined
 --line 215 of file library.bib
 Warning--entry type for "citeulike:13914241" isn't style-file defined
@@ -36,45 +44,45 @@ Warning--entry type for "citeulike:13844983" isn't style-file defined
 Warning--entry type for "citeulike:13752379" isn't style-file defined
 --line 816 of file library.bib
 Warning--empty institution in citeulike:13851253
-You've used 40 entries,
+You've used 43 entries,
             1935 wiz_defined-function locations,
-            652 strings with 8712 characters,
-and the built_in function-call counts, 9829 in all, are:
-= -- 1036
-> -- 270
-< -- 36
-+ -- 84
-- -- 78
-* -- 625
-:= -- 1923
-add.period$ -- 115
-call.type$ -- 40
-change.case$ -- 244
-chr.to.int$ -- 34
-cite$ -- 41
-duplicate$ -- 409
-empty$ -- 632
-format.name$ -- 120
-if$ -- 1828
-int.to.chr$ -- 7
+            661 strings with 8892 characters,
+and the built_in function-call counts, 10537 in all, are:
+= -- 1108
+> -- 291
+< -- 39
++ -- 92
+- -- 84
+* -- 670
+:= -- 2063
+add.period$ -- 121
+call.type$ -- 43
+change.case$ -- 262
+chr.to.int$ -- 35
+cite$ -- 44
+duplicate$ -- 439
+empty$ -- 677
+format.name$ -- 129
+if$ -- 1957
+int.to.chr$ -- 9
 int.to.str$ -- 0
 missing$ -- 4
-newline$ -- 198
-num.names$ -- 108
-pop$ -- 134
+newline$ -- 210
+num.names$ -- 117
+pop$ -- 146
 preamble$ -- 1
-purify$ -- 243
+purify$ -- 261
 quote$ -- 0
-skip$ -- 354
+skip$ -- 380
 stack$ -- 0
-substring$ -- 480
+substring$ -- 516
 swap$ -- 2
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 236
+type$ -- 254
 warning$ -- 1
-while$ -- 72
+while$ -- 78
 width$ -- 0
-write$ -- 474
-(There were 11 warnings)
+write$ -- 504
+(There were 14 warnings)

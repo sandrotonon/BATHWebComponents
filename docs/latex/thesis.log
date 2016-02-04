@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  3 FEB 2016 21:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  4 FEB 2016 01:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1037,7 +1037,12 @@ LaTeX Warning: Label `browserunterstuxfctzung' multiply defined.
 
 LaTeX Warning: Label `performance' multiply defined.
 
-) (./kapitel2/7-beispiel.aux))
+) (./kapitel2/7-beispiel.aux) (./kapitel3/1-polymer.aux)
+(./kapitel4/1-analogie.aux
+
+LaTeX Warning: Label `custom-elements' multiply defined.
+
+))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -1054,8 +1059,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
-
-(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count161
 \scratchdimen=\dimen201
@@ -1144,7 +1148,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \openout2 = `htwg/cover.aux'.
 
-(./htwg/cover.tex <htwg/htwg-logo.pdf, id=224, 1597.97pt x 174.6525pt>
+(./htwg/cover.tex <htwg/htwg-logo.pdf, id=260, 1597.97pt x 174.6525pt>
 File: htwg/htwg-logo.pdf Graphic file (type pdf)
 
 <use htwg/htwg-logo.pdf>
@@ -1264,7 +1268,7 @@ Kapitel 2.
 \openout2 = `kapitel2/2-custom-elements.aux'.
 
  (./kapitel2/2-custom-elements.tex
-<kapitel2/bilder/2-custom-elements-div-suppe.jpg, id=346, 733.23938pt x 505.137
+<kapitel2/bilder/2-custom-elements-div-suppe.jpg, id=391, 733.23938pt x 505.137
 19pt>
 File: kapitel2/bilder/2-custom-elements-div-suppe.jpg Graphic file (type jpg)
  <use kapitel2/bilder/2-custom-elements-div-suppe.jpg>
@@ -1303,7 +1307,7 @@ LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              for symbol `textbraceleft' on input line 67.
 
 [7]
-<kapitel2/bilder/2-custom-elements-github-time-element.jpg, id=376, 532.99126pt
+<kapitel2/bilder/2-custom-elements-github-time-element.jpg, id=421, 532.99126pt
  x 33.87656pt>
 File: kapitel2/bilder/2-custom-elements-github-time-element.jpg Graphic file (t
 ype jpg)
@@ -1325,7 +1329,7 @@ LaTeX Font Warning: Font shape `OMS/cmtt/bx/n' undefined
 (Font)              for symbol `textbraceleft' on input line 191.
 
 
-<kapitel2/bilder/2-custom-elements-browserunterstuetzung.jpg, id=395, 945.5325p
+<kapitel2/bilder/2-custom-elements-browserunterstuetzung.jpg, id=440, 945.5325p
 t x 237.88875pt>
 File: kapitel2/bilder/2-custom-elements-browserunterstuetzung.jpg Graphic file 
 (type jpg)
@@ -1339,7 +1343,7 @@ g.jpg used on input line 209.
 
 
 (./kapitel2/3-shadow-dom.tex
-<kapitel2/bilder/3-shadow-dom-input-type-password.jpg, id=405, 207.02344pt x 78
+<kapitel2/bilder/3-shadow-dom-input-type-password.jpg, id=450, 207.02344pt x 78
 .2925pt>
 File: kapitel2/bilder/3-shadow-dom-input-type-password.jpg Graphic file (type j
 pg)
@@ -1348,7 +1352,7 @@ Package pdftex.def Info: kapitel2/bilder/3-shadow-dom-input-type-password.jpg u
 sed on input line 7.
 (pdftex.def)             Requested size: 207.02292pt x 78.2923pt.
 
-<kapitel2/bilder/3-shadow-dom-shadow-boundary.png, id=406, 770.12718pt x 411.78
+<kapitel2/bilder/3-shadow-dom-shadow-boundary.png, id=451, 770.12718pt x 411.78
 844pt>
 File: kapitel2/bilder/3-shadow-dom-shadow-boundary.png Graphic file (type png)
  <use kapitel2/bilder/3-shadow-dom-shadow-boundary.png>
@@ -1368,7 +1372,7 @@ File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <10.95> not available
 (Font)              Font shape `OML/cmm/b/it' tried instead on input line 80.
  [15] [16]
-<kapitel2/bilder/3-shadow-dom-beispiel.jpg, id=453, 104.64093pt x 51.19125pt>
+<kapitel2/bilder/3-shadow-dom-beispiel.jpg, id=499, 104.64093pt x 51.19125pt>
 File: kapitel2/bilder/3-shadow-dom-beispiel.jpg Graphic file (type jpg)
 
 <use kapitel2/bilder/3-shadow-dom-beispiel.jpg>
@@ -1396,7 +1400,7 @@ or: green;
  []
 
 
-<kapitel2/bilder/3-shadow-dom-browserunterstuetzung.jpg, id=457, 946.28531pt x 
+<kapitel2/bilder/3-shadow-dom-browserunterstuetzung.jpg, id=503, 946.28531pt x 
 237.13594pt>
 File: kapitel2/bilder/3-shadow-dom-browserunterstuetzung.jpg Graphic file (type
  jpg)
@@ -1428,7 +1432,7 @@ tt/m/n/10.95 script\OML/cmtt/bx/n/10.95 >\OT1/cmr/m/n/10.95 -Tag stan-dardm[]a^
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 48.
 [20] [21]
-<kapitel2/bilder/4-html-templates-browserunterstuetzung.jpg, id=494, 952.30782p
+<kapitel2/bilder/4-html-templates-browserunterstuetzung.jpg, id=539, 952.30782p
 t x 237.88875pt>
 File: kapitel2/bilder/4-html-templates-browserunterstuetzung.jpg Graphic file (
 type jpg)
@@ -1464,7 +1468,7 @@ bau-te Sty-les-heets, JavaScript-Dateien
  []
 
 [27]
-<kapitel2/bilder/5-html-imports-browserunterstuetzung.jpg, id=544, 944.02687pt 
+<kapitel2/bilder/5-html-imports-browserunterstuetzung.jpg, id=589, 944.02687pt 
 x 235.63031pt>
 File: kapitel2/bilder/5-html-imports-browserunterstuetzung.jpg Graphic file (ty
 pe jpg)
@@ -1487,7 +1491,7 @@ n-terst[]utzung der Web-Components-
 
 
 ]
-<kapitel2/bilder/6-webcomponentsjs-browserunterstuetzung.jpg, id=571, 647.41875
+<kapitel2/bilder/6-webcomponentsjs-browserunterstuetzung.jpg, id=617, 647.41875
 pt x 143.78719pt>
 File: kapitel2/bilder/6-webcomponentsjs-browserunterstuetzung.jpg Graphic file 
 (type jpg)
@@ -1506,7 +1510,7 @@ Overfull \hbox (21.31207pt too wide) in paragraph at lines 78--39
 \openout2 = `kapitel2/7-beispiel.aux'.
 
  (./kapitel2/7-beispiel.tex
-<kapitel2/bilder/7-beispiel.jpg, id=591, 188.20313pt x 141.52875pt>
+<kapitel2/bilder/7-beispiel.jpg, id=636, 188.20313pt x 141.52875pt>
 File: kapitel2/bilder/7-beispiel.jpg Graphic file (type jpg)
 
 <use kapitel2/bilder/7-beispiel.jpg>
@@ -1529,27 +1533,84 @@ OT1/cmtt/m/n/10.95 Reader\OML/cmtt/bx/n/10.95 <\OT1/cmtt/m/n/10.95 /custom-elem
 ent\OML/cmtt/bx/n/10.95 >\OT1/cmr/m/n/10.95 .
  []
 
-[35]) [36] (./glossary.tex) [37
+[35]) [36]
+\openout2 = `kapitel3/1-polymer.aux'.
+
+ (./kapitel3/1-polymer.tex
+Kapitel 3.
+<kapitel3/bilder/1-architektur.png, id=657, 958.58125pt x 784.9325pt>
+File: kapitel3/bilder/1-architektur.png Graphic file (type png)
+
+<use kapitel3/bilder/1-architektur.png>
+Package pdftex.def Info: kapitel3/bilder/1-architektur.png used on input line 1
+2.
+(pdftex.def)             Requested size: 958.57892pt x 784.93057pt.
+
+Overfull \hbox (540.32524pt too wide) in paragraph at lines 12--13
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 150.24863pt on input line 15.
+
+[37
+
+
+
+] [38 <./kapitel3/bilder/1-architektur.png>]
+Overfull \hbox (8.18849pt too wide) in paragraph at lines 57--58
+\OT1/cmr/m/n/10.95 wickel-ten Kom-po-nen-ten. Als ei-ne m[]ogli-che Al-ter-na-t
+i-ve hierf[]ur kann der customelements.io-
+ []
+
+[39]) [40]
+\openout2 = `kapitel4/1-analogie.aux'.
+
+ (./kapitel4/1-analogie.tex
+Kapitel 4.
+
+Overfull \hbox (21.57054pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/n/10.95 F[]ur das Re-gi-strie-ren ei-nes neu-en Ele-ments stellt Po-
+ly-mer die Funk-ti-on \OT1/cmtt/m/n/10.95 Polymer(prototype);
+ []
+
+
+Overfull \hbox (9.19225pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/n/10.95 be-reit, dar-in wer-den die ge-ne-rel-len Polymer-Einstellun
+gen in Form ei-nes Prototyp-Objektes
+ []
+
+
+Overfull \hbox (55.87827pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/n/10.95 Anh[]angen der na-ti-ven Me-tho-de mit \OT1/cmtt/m/n/10.95 v
+ar element = document.createElement('element-name');
+ []
+
+[41
+
+
+
+]) [42] (./glossary.tex) [43
 
 
 ] (./thesis.lof)
 \tf@lof=\write8
 \openout8 = `thesis.lof'.
 
- [38
+ [44
 
 ] (./thesis.lol)
 \tf@lol=\write9
 \openout9 = `thesis.lol'.
 
- [39
+ [45
 
 ]
 (./thesis.tdo)
 \tf@tdo=\write10
 \openout10 = `thesis.tdo'.
 
- (./thesis.bbl [40
+ (./thesis.bbl [46
 
 ]
 Overfull \hbox (0.62683pt too wide) in paragraph at lines 8--11
@@ -1563,82 +1624,82 @@ Underfull \hbox (badness 2809) in paragraph at lines 18--21
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--46
+Underfull \hbox (badness 10000) in paragraph at lines 47--50
 []\OT1/cmr/m/n/10.95 Dodson, R. (2014).  Sha-dow DOM CSS Che-at Sheet.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--57
+Underfull \hbox (badness 10000) in paragraph at lines 58--61
 []\OT1/cmr/m/n/10.95 Glazkov, D. (2015).  W3C - Cu-stom Ele-ments.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--72
+Underfull \hbox (badness 10000) in paragraph at lines 81--84
 []\OT1/cmr/m/n/10.95 Hacks, M. (2015).  The state of Web Com-ponents.
  []
 
+[47
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--82
+]
+Underfull \hbox (badness 10000) in paragraph at lines 91--94
 []\OT1/cmr/m/n/10.95 Ihrig, C. (2012).  The Ba-sics of the Sha-dow DOM.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--87
+Underfull \hbox (badness 10000) in paragraph at lines 96--99
 []\OT1/cmr/m/n/10.95 Kitamura, E. (2014).  In-tro-duc-ti-on to Cu-stom Ele-ment
 s.
  []
 
-[41
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 89--92
+Underfull \hbox (badness 10000) in paragraph at lines 101--104
 []\OT1/cmr/m/n/10.95 Kr[]oner, P. (2014a).  Das Web der Zu-kunft.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--108
+Underfull \hbox (badness 10000) in paragraph at lines 116--120
 []\OT1/cmr/m/n/10.95 Namics (2014).  Web Com-ponents: HTML Tem-pla-tes.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--114
+Underfull \hbox (badness 10000) in paragraph at lines 122--126
 []\OT1/cmr/m/n/10.95 Network, M. D. (2015a).  Same-origin po-li-cy.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--119
+Underfull \hbox (badness 10000) in paragraph at lines 128--131
 []\OT1/cmr/m/n/10.95 Network, M. D. (2015b).  <tem-pla-te> - HTML.  htt-
  []
 
 
-Underfull \hbox (badness 2165) in paragraph at lines 126--131
+Underfull \hbox (badness 2165) in paragraph at lines 138--143
 []\OT1/cmr/m/n/10.95 Perterkroener (2014).  Fra-gen zu HTML5 und Co be-ant-
  []
 
 
-Underfull \hbox (badness 1194) in paragraph at lines 126--131
+Underfull \hbox (badness 1194) in paragraph at lines 138--143
 \OT1/cmr/m/n/10.95 Data-URLs.  http://www.peterkroener.de/fragen-zu-html5-und-c
 o-beantwortet-15-
  []
 
 
-Underfull \hbox (badness 8151) in paragraph at lines 138--141
+Underfull \hbox (badness 8151) in paragraph at lines 150--153
 []\OT1/cmr/m/n/10.95 Rocks, H. (2013).  HTML Im-ports: #in-clu-de for the web.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--161
+Underfull \hbox (badness 10000) in paragraph at lines 170--173
 []\OT1/cmr/m/n/10.95 W3c (2014a).  Cross-Origin Re-sour-ce Sha-ring.
  []
 
-
-Overfull \hbox (1.3373pt too wide) in paragraph at lines 163--166
+[48]
+Overfull \hbox (1.3373pt too wide) in paragraph at lines 175--178
 []\OT1/cmr/m/n/10.95 W3c (2014b).  HTML Tem-pla-tes.  http://www.w3.org/TR/html
 5/scripting-
  []
 
-[42]
-Underfull \hbox (badness 1087) in paragraph at lines 193--196
+
+Underfull \hbox (badness 1087) in paragraph at lines 205--208
 []\OT1/cmr/m/n/10.95 Webcomponents (2015).  In-tro-duc-ti-on to HTML Im-ports.
  []
 
@@ -1647,19 +1708,20 @@ Underfull \hbox (badness 1087) in paragraph at lines 193--196
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 8.
 See the caption package documentation for explanation.
 
-[43]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 55.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 55.
+[49]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 59.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 59.
  (./thesis.aux (./htwg/cover.aux) (./htwg/title.aux) (./htwg/abstract.aux)
 (./htwg/affidavit.aux) (./kapitel1/1-einleitung.aux)
 (./kapitel2/1-problemloesung.aux) (./kapitel2/2-custom-elements.aux)
 (./kapitel2/3-shadow-dom.aux) (./kapitel2/4-html-templates.aux)
 (./kapitel2/5-html-imports.aux) (./kapitel2/6-polyfills.aux)
-(./kapitel2/7-beispiel.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 55.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 55.
+(./kapitel2/7-beispiel.aux) (./kapitel3/1-polymer.aux)
+(./kapitel4/1-analogie.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 59.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 59.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: AB2798482E52FF47EAD49A8DD6405098;4081.
+(rerunfilecheck)             Checksum: F36046D5CCF1B805F3062E9EB2A45FE4;4749.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1667,16 +1729,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 55.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 59.
  ) 
 Here is how much of TeX's memory you used:
- 22954 strings out of 493089
- 420284 string characters out of 6134842
- 564409 words of memory out of 5000000
- 25784 multiletter control sequences out of 15000+600000
+ 23040 strings out of 493089
+ 422135 string characters out of 6134842
+ 567216 words of memory out of 5000000
+ 25834 multiletter control sequences out of 15000+600000
  13750 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 76i,9n,100p,1745b,703s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,9n,100p,2266b,703s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb>
@@ -1691,10 +1753,10 @@ local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr
 local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/l
 ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/lo
 cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (49 pages, 1206249 bytes).
+Output written on thesis.pdf (55 pages, 1526575 bytes).
 PDF statistics:
- 740 PDF objects out of 1000 (max. 8388607)
- 652 compressed objects within 7 object streams
- 160 named destinations out of 1000 (max. 500000)
- 505 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 828 PDF objects out of 1000 (max. 8388607)
+ 731 compressed objects within 8 object streams
+ 180 named destinations out of 1000 (max. 500000)
+ 582 words of extra memory for PDF output out of 10000 (max. 10000000)
 
