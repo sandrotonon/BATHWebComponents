@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  4 FEB 2016 22:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  4 FEB 2016 22:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1316,9 +1316,9 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1.
 )
 (./kapitel2/listings/2-3.js) [7] (./kapitel2/listings/2-4.html)
-Overfull \hbox (1.18886pt too wide) in paragraph at lines 62--63
-\OT1/cmr/m/n/10.95 ments mit-tels \OT1/cmtt/m/n/10.95 var mybutton = document.c
-reateElement('custom-element') \OT1/cmr/m/n/10.95 er-zeugt
+Overfull \hbox (64.09062pt too wide) in paragraph at lines 61--62
+\OT1/cmr/m/n/10.95 des Cu-stom Ele-ments mit-tels \OT1/cmtt/m/n/10.95 var mybut
+ton = document.createElement('custom-element')
  []
 
 [8] (./kapitel2/listings/2-5.html) (./kapitel2/listings/2-6.css)
@@ -1328,18 +1328,18 @@ File: kapitel2/bilder/2-custom-elements-github-time-element.jpg Graphic file (t
 ype jpg)
  <use kapitel2/bilder/2-custom-elements-github-time-element.jpg>
 Package pdftex.def Info: kapitel2/bilder/2-custom-elements-github-time-element.
-jpg used on input line 94.
+jpg used on input line 85.
 (pdftex.def)             Requested size: 418.25368pt x 26.58487pt.
 
 [9]
-<kapitel2/bilder/2-custom-elements-browserunterstuetzung.jpg, id=858, 945.5325p
+<kapitel2/bilder/2-custom-elements-browserunterstuetzung.jpg, id=857, 945.5325p
 t x 237.88875pt>
 File: kapitel2/bilder/2-custom-elements-browserunterstuetzung.jpg Graphic file 
 (type jpg)
 
 <use kapitel2/bilder/2-custom-elements-browserunterstuetzung.jpg>
 Package pdftex.def Info: kapitel2/bilder/2-custom-elements-browserunterstuetzun
-g.jpg used on input line 108.
+g.jpg used on input line 99.
 (pdftex.def)             Requested size: 418.25368pt x 105.23036pt.
 ) [10 <./kapitel2/bilder/2-custom-elements-github-time-element.jpg> <./kapitel2
 /bilder/2-custom-elements-browserunterstuetzung.jpg>]
@@ -2098,7 +2098,7 @@ ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on thesis.pdf (84 pages, 1843814 bytes).
+Output written on thesis.pdf (84 pages, 1843841 bytes).
 PDF statistics:
  2382 PDF objects out of 2487 (max. 8388607)
  2219 compressed objects within 23 object streams

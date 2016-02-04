@@ -57,21 +57,12 @@ Anhand des Beispiels auf GitHub wird deutlich, wie ein Custom Element eingesetzt
 
 Custom Elements bieten eine standardisierte \ac{API} an speziellen Methoden, den ``Custom Element Lifecycle-Callbacks'', welche es ermöglichen Funktionen zu unterschiedlichen Zeitpunkten - vom Registrieren bis zum Löschen eines Custom Elements - auszuführen. Diese ermöglichen es, zu bestimmen, wann und wie ein bestimmter Code des Custom Elements ausgeführt werden soll.
 
-\textbf{createdCallback}
-
-Die \texttt{createdCallback}-Funktion Wird ausgeführt, wenn eine Instanz des Custom Elements mittels \texttt{var\ mybutton\ =\ document.createElement('custom-element')} erzeugt wurde.
-
-\textbf{attachedCallback}
-
-Die \texttt{attachedCallback}-Funktion wird ausgeführt, wenn ein Custom Element dem \ac{DOM} mittels \texttt{document.body.appendChild(mybutton)} angehängt wurde.
-
-\textbf{detachedCallback}
-
-Die \texttt{detachedCallback}-Funktion wird ausgeführt, wenn ein Custom Element aus dem \ac{DOM} mittels \texttt{document.body.removeChild(mybutton)} entfernt wurde.
-
-\textbf{attributeChangedCallback}
-
-Die \texttt{attributeChangedCallback}-Funktion wird ausgeführt, wenn ein Attribut eines Custom Elements mittels \texttt{MyElement.setAttribute()} geändert wurde.
+\begin{description}
+  \item[createdCallback] Die \texttt{createdCallback}-Funktion Wird ausgeführt, wenn eine Instanz des Custom Elements mittels \texttt{var\ mybutton\ =\ document.createElement('custom-element')} erzeugt wurde.
+  \item[attachedCallback] Die \texttt{attachedCallback}-Funktion wird ausgeführt, wenn ein Custom Element dem \ac{DOM} mittels \texttt{document.body.appendChild(mybutton)} angehängt wurde.
+  \item[detachedCallback] Die \texttt{detachedCallback}-Funktion wird ausgeführt, wenn ein Custom Element aus dem \ac{DOM} mittels \texttt{document.body.removeChild(mybutton)} entfernt wurde.
+  \item[attributeChangedCallback] Die \texttt{attributeChangedCallback}-Funktion wird ausgeführt, wenn ein Attribut eines Custom Elements mittels \texttt{MyElement.setAttribute()} geändert wurde.
+\end{description}
 
 So können die Lifecycle-Callbacks für ein neues erweitertes Button-Element, wie in Listing \ref{lccdebd} dargestellt, definiert werden \cite{citeulike:13844988}.
 
