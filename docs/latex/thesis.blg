@@ -1,4 +1,6 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: htwg/cover.aux
 A level-1 auxiliary file: htwg/title.aux
 A level-1 auxiliary file: htwg/abstract.aux
@@ -83,4 +85,45 @@ Warning--entry type for "citeulike:13844983" isn't style-file defined
 --line 760 of file library.bib
 Warning--entry type for "citeulike:13752379" isn't style-file defined
 --line 812 of file library.bib
+You've used 56 entries,
+            1935 wiz_defined-function locations,
+            703 strings with 10536 characters,
+and the built_in function-call counts, 13363 in all, are:
+= -- 1436
+> -- 299
+< -- 41
++ -- 94
+- -- 86
+* -- 851
+:= -- 2547
+add.period$ -- 168
+call.type$ -- 56
+change.case$ -- 337
+chr.to.int$ -- 48
+cite$ -- 56
+duplicate$ -- 576
+empty$ -- 918
+format.name$ -- 131
+if$ -- 2534
+int.to.chr$ -- 9
+int.to.str$ -- 0
+missing$ -- 8
+newline$ -- 283
+num.names$ -- 123
+pop$ -- 172
+preamble$ -- 1
+purify$ -- 338
+quote$ -- 0
+skip$ -- 488
+stack$ -- 0
+substring$ -- 672
+swap$ -- 4
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 328
+warning$ -- 0
+while$ -- 82
+width$ -- 0
+write$ -- 677
 (There were 39 warnings)

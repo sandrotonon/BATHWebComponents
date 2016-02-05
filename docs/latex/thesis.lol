@@ -17,24 +17,23 @@
 \contentsline {lstlisting}{\numberline {2.15}Custom Element mit Eigenschaften und Funktionen definieren}{26}{lstlisting.2.15}
 \contentsline {lstlisting}{\numberline {2.16}HilfsFunktion \texttt {setTheme} definieren}{27}{lstlisting.2.16}
 \contentsline {lstlisting}{\numberline {2.17}Template erstellen und Styles definieren}{27}{lstlisting.2.17}
-\contentsline {lstlisting}{\numberline {2.18}Styles definieren}{28}{lstlisting.2.18}
+\contentsline {lstlisting}{\numberline {2.18}Styles definieren}{27}{lstlisting.2.18}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {lstlisting}{\numberline {4.1}Template einer Polymer-Komponente}{37}{lstlisting.4.1}
-\contentsline {lstlisting}{\numberline {4.2}\IeC {\"U}berwachung eines \texttt {contentNode}-Knotens}{39}{lstlisting.4.2}
-\contentsline {lstlisting}{\numberline {4.3}\texttt {x-element}-Komponente mit einer \ac {CSS}-Variablen}{39}{lstlisting.4.3}
-\contentsline {lstlisting}{\numberline {4.4}Definition der \ac {CSS}-Variable}{40}{lstlisting.4.4}
-\contentsline {lstlisting}{\numberline {4.5}Erweiterung der Styles um ein Mixin}{40}{lstlisting.4.5}
-\contentsline {lstlisting}{\numberline {4.6}Verwendung eines Mixins einer Komponente}{40}{lstlisting.4.6}
-\contentsline {lstlisting}{\numberline {4.7}\ac {HTML}-Datei ``shared-styles.html''}{41}{lstlisting.4.7}
-\contentsline {lstlisting}{\numberline {4.8}Benutzung eines Style-Moduls}{41}{lstlisting.4.8}
+\contentsline {lstlisting}{\numberline {4.1}Template einer Polymer-Komponente}{36}{lstlisting.4.1}
+\contentsline {lstlisting}{\numberline {4.2}\IeC {\"U}berwachung eines \texttt {contentNode}-Knotens}{38}{lstlisting.4.2}
+\contentsline {lstlisting}{\numberline {4.3}\texttt {x-element}-Komponente mit einer \ac {CSS}-Variablen}{38}{lstlisting.4.3}
+\contentsline {lstlisting}{\numberline {4.4}Definition der \ac {CSS}-Variable}{39}{lstlisting.4.4}
+\contentsline {lstlisting}{\numberline {4.5}Erweiterung der Styles um ein Mixin}{39}{lstlisting.4.5}
+\contentsline {lstlisting}{\numberline {4.6}Verwendung eines Mixins einer Komponente}{39}{lstlisting.4.6}
+\contentsline {lstlisting}{\numberline {4.7}\ac {HTML}-Datei ``shared-styles.html''}{40}{lstlisting.4.7}
+\contentsline {lstlisting}{\numberline {4.8}Benutzung eines Style-Moduls}{40}{lstlisting.4.8}
 \addvspace {10\p@ }
-\contentsline {lstlisting}{\numberline {5.1}Definition eines Behaviors}{45}{lstlisting.5.1}
-\contentsline {lstlisting}{\numberline {5.2}Erweiterung eines Behaviors}{45}{lstlisting.5.2}
-\contentsline {lstlisting}{\numberline {5.3}Ausl\IeC {\"o}sen eines selbst definierten Events}{46}{lstlisting.5.3}
+\contentsline {lstlisting}{\numberline {5.1}Definition eines Behaviors}{44}{lstlisting.5.1}
+\contentsline {lstlisting}{\numberline {5.2}Erweiterung eines Behaviors}{44}{lstlisting.5.2}
 \addvspace {10\p@ }
-\contentsline {lstlisting}{\numberline {6.1}Browser-Feature-Detection}{49}{lstlisting.6.1}
-\contentsline {lstlisting}{\numberline {6.2}Polymer Events \texttt {down} und \texttt {up}}{50}{lstlisting.6.2}
+\contentsline {lstlisting}{\numberline {6.1}Browser-Feature-Detection}{47}{lstlisting.6.1}
+\contentsline {lstlisting}{\numberline {6.2}Polymer Events \texttt {down} und \texttt {up}}{49}{lstlisting.6.2}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

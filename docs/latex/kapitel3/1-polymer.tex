@@ -5,7 +5,7 @@ Die Library Polymer setzt auf die in Kapitel \ref{web-components-nach-w3c} gezei
 
 \section{Architektur}\label{architektur}
 
-Eine mit Hilfe von Polymer implementierte Komponente lässt sich in die in Abbildung \ref{fig:schimopo} dargestellten Schichten unterteilen. Die Browser-Schicht stellt die nativen \ac{API}s der Web-Technologien dar, welche von der Polyfill-Schicht, den webcomponents.js-Polyfills (siehe Abschnitt \ref{polyfills-mit-webcomponents.js}), ersetzt oder erweitert werden können, falls der Browser die notwendige Technologie nicht unterstützt. Polymer kann dabei als Konformitäts-Schicht aufgefasst werden, welche auf die nativen Technologien bzw. den Polyfills aufsetzt. Diese setzt sich wiederum aus folgenden 3 Schichten zusammen \cite{citeulike:13915080}: Der \texttt{polymer-micro}-Schicht, welche die grundlegenden Funktionalitäten für das Erzeugen von Custom Elements bietet, die \texttt{polymer-mini}-Schicht, welche den Umgang mit einem lokalen \ac{DOM} in einer Polymer-Komponente erweitert und erleichtert, und zuletzt der \texttt{polymer}-Schicht mit allgemeinen und zusätzlichen Funktionalitäten für den Umgang mit Web Components. Auf die Polymer-Schicht können die Polymer-Elemente aufgesetzt werden. Diese bilden eine weitere Schicht, welche durch den Elemente-Katalog \cite{citeulike:13916374} repräsentiert wird. In dem Elemente Katalog sind diverse mit Polymer umgesetzte Komponenten - sowohl für das \ac{UI} als auch für Kernfunktionen zum Entwickeln von Applikationen - vorhanden.
+Eine mit Hilfe von Polymer implementierte Komponente lässt sich in mehrere Schichten, wie in Abbildung \ref{fig:schimopo} dargestellt, unterteilen. Die Browser-Schicht stellt die nativen \ac{API}s der Web-Technologien dar, welche von der Polyfill-Schicht, den webcomponents.js-Polyfills (siehe Abschnitt \ref{polyfills-mit-webcomponents.js}), ersetzt oder erweitert werden können, falls der Browser die notwendige Technologie nicht unterstützt. Polymer kann dabei als Konformitäts-Schicht aufgefasst werden, welche auf die nativen Technologien bzw. den Polyfills aufsetzt. Diese setzt sich wiederum aus folgenden 3 Schichten zusammen \cite{citeulike:13915080}: Der \texttt{polymer-micro}-Schicht, welche die grundlegenden Funktionalitäten für das Erzeugen von Custom Elements bietet, die \texttt{polymer-mini}-Schicht, welche den Umgang mit einem lokalen \ac{DOM} in einer Polymer-Komponente erweitert und erleichtert, und zuletzt der \texttt{polymer}-Schicht mit allgemeinen und zusätzlichen Funktionalitäten für den Umgang mit Web Components. Auf die Polymer-Schicht können die Polymer-Elemente aufgesetzt werden. Diese bilden eine weitere Schicht, welche durch den Elemente-Katalog \cite{citeulike:13916374} repräsentiert wird. In dem Elemente Katalog sind diverse mit Polymer umgesetzte Komponenten - sowohl für das \ac{UI} als auch für Kernfunktionen zum Entwickeln von Applikationen - vorhanden.
 
 \begin{figure}[h]
  \centering
@@ -13,8 +13,6 @@ Eine mit Hilfe von Polymer implementierte Komponente lässt sich in die in Abbil
  \caption{Schichtenmodell von Polymer}
  \label{fig:schimopo}
 \end{figure}
-
-\todo{bild position}
 
 
 \section{Elemente-Katalog}\label{elemente-katalog}

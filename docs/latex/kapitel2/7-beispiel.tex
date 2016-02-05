@@ -1,13 +1,6 @@
 \section{Implementierung einer Komponente mit den nativen Web-Component-APIs}\label{implementierung-einer-komponente-mit-den-nativen-web-component-apis}
 
-Anhand der vorhergehenden Abschnitte wird in diesem Abschnitt die Implementierung der Komponente \texttt{\textless{}custom-element\textgreater{}} mit den nativen \ac{HTML} APIs erläutert. Diese soll dabei das Markup in einem Shadow \ac{DOM} kapseln und den übergebenen Inhalt darstellen. Des Weiteren soll dessen Farbe über das Attribut \texttt{theme} optional konfiguriert werden können. Die gerenderte Komponente wird in Abbildung \ref{fig:gwkmnapis} dargestellt.
-
-\begin{figure}[htbp]
- \centering
- \includegraphics[width=5cm,keepaspectratio]{kapitel2/bilder/7-beispiel}
- \caption{Gerenderte Komponente mit nativen APIs}
- \label{fig:gwkmnapis}
-\end{figure}
+Anhand der vorhergehenden Abschnitte wird in diesem Abschnitt die Implementierung der Komponente \texttt{\textless{}custom-element\textgreater{}} mit den nativen \ac{HTML} APIs erläutert. Diese soll dabei das Markup in einem Shadow \ac{DOM} kapseln und den übergebenen Inhalt darstellen. Des Weiteren soll dessen Farbe über das Attribut \texttt{theme} optional konfiguriert werden können.
 
 
 \subsection{Custom Element mit Eigenschaften und Funktionen definieren}\label{custom-element-mit-eigenschaften-und-funktionen-definieren}
@@ -31,7 +24,7 @@ Bisher ist das Custom Element zwar funktional, bietet aber noch kein gekapseltes
 
 \lstinputlisting[language=HTML,label=teusd,caption=Template erstellen und Styles definieren]{kapitel2/listings/7-3.html}
 
-Das Template enthält dabei einen Insertion Point \texttt{\textless{}content\textgreater{}}, in welchem die Kind-Elemente der Komponente in das interne Markup projiziert werden. Zusätzlich werden 2 Hilfs-Wrapper und Text definiert, damit die Elemente schneller mittels JavaScript selektierbar sind und das gewünschte Aussehen erreicht wird. Um nun die verschiedenen Styles, welches mittels dem \texttt{theme}-Attribut ausgewählt werden kann, zur Verfügung zu stellen, werden diese in einem \texttt{\textless{}style\textgreater{}}-Tag in dem Template definiert. In diesem Beispiel werden 2 Optionen, \texttt{style1} und \texttt{style2} zur Verfügung gestellt, sowie weitere Styles für die gesamte Komponente definiert (siehe Listing \ref{stylesdefinieren}).
+Dieses enthält dabei einen Insertion Point \texttt{\textless{}content\textgreater{}}, in welchem die Kind-Elemente der Komponente in das interne Markup projiziert werden. Zusätzlich werden 2 Hilfs-Wrapper und Text definiert, damit die Elemente schneller mittels JavaScript selektierbar sind und das gewünschte Aussehen erreicht wird. Um nun die verschiedenen, mittels dem \texttt{theme}-Attribut konfigurierbaren, Styles zur Verfügung zu stellen, werden diese neben generellen Styles in einem \texttt{\textless{}style\textgreater{}}-Tag in dem Template definiert (siehe Listing \ref{stylesdefinieren}). In diesem Beispiel werden 2 Optionen, \texttt{style1} und \texttt{style2} zur Verfügung gestellt.
 
 \lstinputlisting[language=HTML,label=stylesdefinieren,caption=Styles definieren]{kapitel2/listings/7-4.html}
 
@@ -40,7 +33,15 @@ Das Template wird nun zwar schon heruntergeladen, jedoch noch nicht in den \ac{D
 
 \subsection{Template bereitstellen und Shadow DOM zur Kapselung benutzen}\label{template-bereitstellen-und-shadow-dom-zur-kapselung-benutzen}
 
-Bevor das erstellte Template eingebunden werden kann, muss zunächst ein Shadow Root mittels \texttt{var\ shadow\ =\ this.createShadowRoot();} erzeugt werden. Hierfür wird die bereits definierte Lifecycle-Callback-Funktion \texttt{createdCallback} erweitert. Somit kann der Shadow \ac{DOM} sofort initialisiert werden, wenn das Element erzeugt wurde. Nun kann der Inhalt des Templates mit der ID \texttt{myElementTemplate} mittels \texttt{var\ template\ =\ importDoc.querySelector('\#myElementTemplate').content;} importiert und mit der Anweisung \texttt{shadow.appendChild(template.cloneNode(true));} dem Shadow Root hinzugefügt werden. Die Variable \texttt{importDoc} stellt dabei die Referenz auf die importierte Komponente, also das \texttt{\textless{}custom-element\textgreater{}}-Element, dar und kann mittels der Funktion \texttt{var\ importDoc\ =\ document.currentScript.ownerDocument;} ermittelt werden. Wird dies nicht getan, so würde der \texttt{querySelector} auf das Eltern-Dokument der eingebetteten Komponente zugreifen und das Template nicht finden. Nun ist der Inhalt des Templates als Shadow \ac{DOM} innerhalb des Elements gekapselt und nach Außen nicht sichtbar.
+Bevor das erstellte Template eingebunden werden kann, muss zunächst ein Shadow Root mittels \texttt{var\ shadow\ =\ this.createShadowRoot();} erzeugt werden. Hierfür wird die bereits definierte Lifecycle-Callback-Funktion \texttt{createdCallback} erweitert. Somit kann der Shadow \ac{DOM} sofort initialisiert werden, wenn das Element erzeugt wurde. Nun kann der Inhalt des Templates mit der ID \texttt{myElementTemplate} mittels \texttt{var\ template\ =\ importDoc.querySelector('\#myElementTemplate').content;} importiert und mit der Anweisung \texttt{shadow.appendChild(template.cloneNode(true));} dem Shadow Root hinzugefügt werden. Die Variable \texttt{importDoc} stellt dabei die Referenz auf die importierte Komponente, also das \texttt{\textless{}custom-element\textgreater{}}-Element, dar und kann mittels der Funktion \texttt{var\ importDoc\ =\ document.currentScript.ownerDocument;} ermittelt werden. Wird dies nicht getan, so würde der \texttt{querySelector} auf das Eltern-Dokument der eingebetteten Komponente zugreifen und das Template nicht finden. Nun ist der Inhalt des Templates als Shadow \ac{DOM} innerhalb des Elements gekapselt und nach Außen nicht sichtbar. Die gerenderte Komponente wird in Abbildung \ref{fig:gwkmnapis} dargestellt.
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=5cm,keepaspectratio]{kapitel2/bilder/7-beispiel}
+ \caption{Gerenderte Komponente mit nativen APIs}
+ \label{fig:gwkmnapis}
+\end{figure}
+
 
 \subsection{Element importieren und verwenden}\label{element-importieren-und-verwenden}
 
