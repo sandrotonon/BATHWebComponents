@@ -25,7 +25,7 @@ Mittels dem Two-Way-Data-Binding, auch ``automatic Binding'' genannt, können Da
 
 \subsection{Binden von nativen Attributen}\label{binden-von-nativen-attributen}
 
-Um Werte an von \ac{HTML} reservierte Attribute, also das \texttt{hostAttributes}-Objekt (siehe Anschnitt 3.2) statt an Eigenschaften der Komponente zu binden (was mit der normalen Attribut-Binding-Syntax \texttt{=} erreicht wird), muss die hierfür vorgesehene Syntax \texttt{=\$} verwendet werden. So wird beispielsweise in dem Element \texttt{\textless{}div\ class=\$\dq \{\{myClass\}\}\dq\textgreater{}\textless{}/div\textgreater{}} die Eigenschaft \texttt{myClass} tatsächlich dem Attribut \texttt{class} statt der Eigenschaft zugewiesen. Polymer wandelt hierbei bei Verwendung der \texttt{=\$} Syntax die Zuweisung in die Anweisung \texttt{\textless{}div\textgreater{}.setAttribute('class',\ myClass);} um. Das Binden von nativen Attributen ist somit automatisch immer nur in eine Richtung von Host- zu Kind-Element. Im Allgemeinen sollte die Syntax immer dann verwendet werden, wenn die Attribute \texttt{style}, \texttt{href}, \texttt{class}, \texttt{for} oder auch \texttt{data-*} gesetzt werden sollen.
+Um Werte an von \ac{HTML} reservierte Attribute, also das \texttt{hostAttributes}-Objekt (siehe Anschnitt 3.2) statt an Eigenschaften der Komponente zu binden (was mit der normalen Attribut-Binding-Syntax \texttt{=} erreicht wird), muss die hierfür vorgesehene Syntax \texttt{=\$} verwendet werden. So wird beispielsweise in dem Element \texttt{\textless{}div\ class=\$\dq \{\{myClass\}\}\dq\textgreater{}} die Eigenschaft \texttt{myClass} tatsächlich dem Attribut \texttt{class} statt der Eigenschaft zugewiesen. Polymer wandelt hierbei bei Verwendung der \texttt{=\$} Syntax die Zuweisung in die Anweisung \texttt{\textless{}div\textgreater{}.setAttribute('class',\ myClass);} um. Das Binden von nativen Attributen ist somit automatisch immer nur in eine Richtung von Host- zu Kind-Element. Im Allgemeinen sollte die Syntax immer dann verwendet werden, wenn die Attribute \texttt{style}, \texttt{href}, \texttt{class}, \texttt{for} oder auch \texttt{data-*} gesetzt werden sollen.
 
 
 \section{Behaviors}\label{behaviors}
@@ -40,7 +40,7 @@ Polymer-Objekt verankert sind. Dadurch können Kollisionen mit zukünftigen Beha
 
 \lstinputlisting[language=JavaScript,label=deb,caption=Definition eines Behaviors]{kapitel5/listings/1-1.js}
 
-Dieses Behavior würde, falls es von einer Polymer Komponente benutzt würde, einen Alert auslösen, wenn die Komponente geklickt wird. Um das Behavior nun einer Komponente hinzuzufügen, muss es dem Behaviors-Array hinzugefügt werden \texttt{Polymer(\{\ is:\ 'super-element',\ behaviors:\ {[}HelloBehavior{]}\ \});}. In diesem Array können so viele Behaviors mit unterschiedlichen Verhaltensweisen hinzugefügt werden, wie benötigt werden.
+Dieses Behavior würde, falls es von einer Polymer Komponente benutzt würde, einen Alert auslösen, wenn die Komponente geklickt wird. Um das Behavior nun einer Komponente hinzuzufügen, muss es dem Behaviors-Array hinzugefügt werden \texttt{Polymer(\{\ is:\ 'super-element',\ behaviors:\ {[}HelloBehavior{]}\ \});}. In diesem Array können so viele Behaviors mit unterschiedlichen Verhaltensweisen hinzugefügt werden, wie be\-nö\-tigt werden.
 
 
 \subsection{Behaviors erweitern}\label{behaviors-erweitern}
