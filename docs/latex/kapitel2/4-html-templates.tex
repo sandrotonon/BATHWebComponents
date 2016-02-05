@@ -1,4 +1,4 @@
-\section{\ac{HTML} Templates}\label{html-templates}
+\section{HTML Templates}\label{html-templates}
 
 \todo{Buchquelle hinzufügen [S.101-107]}
 
@@ -7,13 +7,13 @@ Bisher gibt es ohne eine Library oder Framework keine Möglichkeit, im Browser T
 Im Kontext der Entwicklung einer \ac{MVC}-Applikation ist der Mechanismus der Darstellung der Präsentations-Schicht, auch View genannt, besonders wichtig. Bisher ist dies ohne weiteres problemlos serverseitig in PHP, Ruby oder ähnlichem möglich, da diese Sprachen für die Webentwicklung eine Syntax für die Einbettung dynamischer Inhalte in \ac{HTML} bieten, die sogenannten Templates. Im Gegensatz zu den serverseitigen Technologien, existieren Client-seitige Lösungen bisher nur als Library oder Framework, wie beispielsweise Mustache.js oder Handlebars.js \cite{citeulike:13853015}. Eine native Möglichkeit, Templates auf der Client-Seite zu benutzen, fehlt bisher hingegen. An diese Problematik setzen die \ac{HTML} Templates an, durch welche diese Technik auch Einzug in den Browser erhält.
 
 \begin{quote}
-Das \ac{HTML} template-Element <template> dient dazu, Client-seitige Inhalte zu gruppieren, die nicht gerendert werden, wenn die Seite geladen wird, sondern anschließend zur Laufzeit mittels JavaScript gerendert werden können. Template kann als Inhaltsfragment aufgefasst werden, das für eine spätere Verwendung im Dokument gespeichert wird. \cite{citeulike:13852997}
+Das \ac{HTML} template-Element \textless{}template\textgreater{} dient dazu, Client-seitige Inhalte zu gruppieren, die nicht gerendert werden, wenn die Seite geladen wird, sondern anschließend zur Laufzeit mittels JavaScript gerendert werden können. Template kann als Inhaltsfragment aufgefasst werden, das für eine spätere Verwendung im Dokument gespeichert wird. \cite{citeulike:13852997}
 \end{quote}
 
 
 \subsection{Bisherige Umsetzung von Templates im Browser}\label{bisherige-umsetzung-von-templates-im-browser}
 
-Dennoch gibt es diverse Methoden, diese Technologie im Browser zu simulieren. Diese sind jedoch eher als Hacks zu betrachten, da ihre eingesetzten Mittel nicht für dieses Problem gedacht sind. Sie bringen also einige Nachteile mit sich. Einige dieser Methoden werden nachfolgend aufgezeigt \cite{citeulike:13853018}.
+Dennoch gibt es diverse Methoden, diese Technologie im Browser zu simulieren. Diese sind jedoch eher als Hacks zu betrachten, da ihre eingesetzten Mittel nicht für dieses Problem gedacht sind. Sie bringen also einige Nachteile mit sich. Einige dieser Methoden werden nachfolgend aufgezeigt \cite{citeulike:13853018}.\\
 
 \textbf{Via verstecktem \texttt{\textless{}div\textgreater{}}-Element}
 
@@ -21,7 +21,7 @@ Das Listing \ref{uetmedb} zeigt die Umsetzung eines Templates mit Hilfe eines \t
 
 \lstinputlisting[language=HTML,label=uetmedb,caption=Umsetzung eines Templates mit einem \texttt{\textless{}div\textgreater{}}-Block]{kapitel2/listings/4-1.html}
 
-Der entscheidende Nachteil dieser Methode ist, dass alle Ressourcen, also alle verlinkten Dateien, beim Laden der Webseite auch heruntergeladen werden. Zwar werden sie nicht angezeigt, dennoch verursachen sie eine große Datenmenge, welche initial übertragen werden muss. Dies geschieht in diesem Fall selbst wenn die Ressourcen eventuell erst später oder gar nicht benötigt werden, was eine massive Einschränkung der verfügbaren Bandbreite und Browser-Performance mit sich bringen kann. Des Weiteren kann es sich als schwierig erweisen, ein solches Code-Fragment zu stylen oder gar Themes auf mehrere solcher Fragmente anzuwenden. Eine Webseite, die das Template verwendet, muss alle \ac{CSS}-Regeln für das Template mit \texttt{\#mydivtemplate} erstellen, welche sich unter Umständen auf andere Teile der Webseite auswirken können. Eine Kapselung wird hier somit nicht vorgesehen.
+Der entscheidende Nachteil dieser Methode ist, dass alle Ressourcen, also alle verlinkten Dateien, beim Laden der Webseite auch heruntergeladen werden. Zwar werden sie nicht angezeigt, dennoch verursachen sie eine große Datenmenge, welche initial übertragen werden muss. Dies geschieht in diesem Fall selbst wenn die Ressourcen eventuell erst später oder gar nicht benötigt werden, was eine massive Einschränkung der verfügbaren Bandbreite und Browser-Performance mit sich bringen kann. Des Weiteren kann es sich als schwierig erweisen, ein solches Code-Fragment zu stylen oder gar Themes auf mehrere solcher Fragmente anzuwenden. Eine Webseite, die das Template verwendet, muss alle \ac{CSS}-Regeln für das Template mit \texttt{\#mydivtemplate} erstellen, welche sich unter Umständen auf andere Teile der Webseite auswirken können. Eine Kapselung wird hier somit nicht vorgesehen.\\
 
 \textbf{Via \texttt{\textless{}script\textgreater{}}-Element:}
 

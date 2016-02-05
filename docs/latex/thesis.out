@@ -87,23 +87,26 @@
 \BOOKMARK [2][-]{subsection.6.1.1}{Ladezeiten und initiales Rendern optimieren}{section.6.1}% 87
 \BOOKMARK [2][-]{subsection.6.1.2}{Optimierungen f\374r eine fl\374ssige Applikation}{section.6.1}% 88
 \BOOKMARK [1][-]{section.6.2}{Gesture-System}{chapter.6}% 89
-\BOOKMARK [1][-]{section.6.3}{A11y - Barrierefreiheit in Polymer}{chapter.6}% 90
-\BOOKMARK [2][-]{subsection.6.3.1}{Fokus / Tastatur}{section.6.3}% 91
-\BOOKMARK [2][-]{subsection.6.3.2}{Semantik}{section.6.3}% 92
-\BOOKMARK [2][-]{subsection.6.3.3}{Flexibles UI}{section.6.3}% 93
-\BOOKMARK [2][-]{subsection.6.3.4}{Beispiel einer barrierefreien Komponente}{section.6.3}% 94
-\BOOKMARK [0][-]{chapter.7}{Komponenten-Entwicklung}{}% 95
-\BOOKMARK [1][-]{section.7.1}{Entwicklung und Deployment einer Polymer-Komponente}{chapter.7}% 96
-\BOOKMARK [2][-]{subsection.7.1.1}{Entwicklungsumgebung}{section.7.1}% 97
-\BOOKMARK [2][-]{subsection.7.1.2}{Yeoman}{section.7.1}% 98
-\BOOKMARK [2][-]{subsection.7.1.3}{Die Multi-Navigation-App-Komponente}{section.7.1}% 99
-\BOOKMARK [2][-]{subsection.7.1.4}{Deployment mit Bower}{section.7.1}% 100
-\BOOKMARK [1][-]{section.7.2}{Vergleich mit Komponenten-Entwicklung in AngularJS}{chapter.7}% 101
-\BOOKMARK [2][-]{subsection.7.2.1}{Einstieg in AngularJS}{section.7.2}% 102
-\BOOKMARK [2][-]{subsection.7.2.2}{Vergleich der Intentionen hinter Polymer und AngularJS}{section.7.2}% 103
-\BOOKMARK [2][-]{subsection.7.2.3}{Vergleich der Technischen Features}{section.7.2}% 104
-\BOOKMARK [0][-]{chapter.8}{Zukunftsprognose}{}% 105
-\BOOKMARK [0][-]{chapter*.43}{Abk\374rzungsverzeichnis}{}% 106
-\BOOKMARK [0][-]{chapter*.44}{Abbildungsverzeichnis}{}% 107
-\BOOKMARK [0][-]{chapter*.45}{Listings}{}% 108
-\BOOKMARK [0][-]{chapter*.47}{Literaturverzeichnis}{}% 109
+\BOOKMARK [2][-]{subsection.6.2.1}{Down und Up}{section.6.2}% 90
+\BOOKMARK [2][-]{subsection.6.2.2}{Tap}{section.6.2}% 91
+\BOOKMARK [2][-]{subsection.6.2.3}{Track}{section.6.2}% 92
+\BOOKMARK [1][-]{section.6.3}{A11y - Barrierefreiheit in Polymer}{chapter.6}% 93
+\BOOKMARK [2][-]{subsection.6.3.1}{Fokus / Tastatur}{section.6.3}% 94
+\BOOKMARK [2][-]{subsection.6.3.2}{Semantik}{section.6.3}% 95
+\BOOKMARK [2][-]{subsection.6.3.3}{Flexibles UI}{section.6.3}% 96
+\BOOKMARK [2][-]{subsection.6.3.4}{Beispiel einer barrierefreien Komponente}{section.6.3}% 97
+\BOOKMARK [0][-]{chapter.7}{Komponenten-Entwicklung}{}% 98
+\BOOKMARK [1][-]{section.7.1}{Entwicklung und Deployment einer Polymer-Komponente}{chapter.7}% 99
+\BOOKMARK [2][-]{subsection.7.1.1}{Entwicklungsumgebung}{section.7.1}% 100
+\BOOKMARK [2][-]{subsection.7.1.2}{Yeoman}{section.7.1}% 101
+\BOOKMARK [2][-]{subsection.7.1.3}{Die Multi-Navigation-App-Komponente}{section.7.1}% 102
+\BOOKMARK [2][-]{subsection.7.1.4}{Deployment mit Bower}{section.7.1}% 103
+\BOOKMARK [1][-]{section.7.2}{Vergleich mit Komponenten-Entwicklung in AngularJS}{chapter.7}% 104
+\BOOKMARK [2][-]{subsection.7.2.1}{Einstieg in AngularJS}{section.7.2}% 105
+\BOOKMARK [2][-]{subsection.7.2.2}{Vergleich der Intentionen hinter Polymer und AngularJS}{section.7.2}% 106
+\BOOKMARK [2][-]{subsection.7.2.3}{Vergleich der Technischen Features}{section.7.2}% 107
+\BOOKMARK [0][-]{chapter.8}{Zukunftsprognose}{}% 108
+\BOOKMARK [0][-]{chapter*.44}{Abk\374rzungsverzeichnis}{}% 109
+\BOOKMARK [0][-]{chapter*.45}{Abbildungsverzeichnis}{}% 110
+\BOOKMARK [0][-]{chapter*.46}{Listings}{}% 111
+\BOOKMARK [0][-]{chapter*.48}{Literaturverzeichnis}{}% 112

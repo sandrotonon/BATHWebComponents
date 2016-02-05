@@ -3,7 +3,7 @@
 In den vorherigen Kapiteln wurde gezeigt, welchen Mehrwert Polymer für die Entwickler bringt und wie die Library eingesetzt wird. In diesem Kapitel werden in Abschnitt \ref{ui-performance-patterns} einige \ac{UI}-Performance-Patterns für eine möglichst performante Applikation sowie in Abschnitt \ref{gesture-system} das Gesture-System erläutert. Abschnitt \ref{a11y---barrierefreiheit-in-polymer} erläutert die von Polymer bereitgestellten Mittel zum Entwickeln einer möglichst barrierefreien Applikation.
 
 
-\section{\ac{UI}-Performance-Patterns}\label{ui-performance-patterns}
+\section{UI-Performance-Patterns}\label{ui-performance-patterns}
 
 Applikationen und Webseiten in dem modernen Web müssen möglichst schnell Laden sowie ein flüssiges Arbeiten ermöglichen, damit sie von den Benutzern akzeptiert und genutzt werden. In Abbildung \ref{fig:vwdbbul} wird deutlich, dass Applikationen mit einer Ladezeit von ca. 1000 Millisekunden oder mehr sich negativ auf die Zufriedenheit der Nutzer auswirken \cite{citeulike:13262776}.
 
@@ -38,19 +38,19 @@ Darüber hinaus sollten nicht benötigte Elemente nur dann tatsächlich gerender
 Wie bereits in dem vorangegangenen Abschnitt \ref{ui-performance-patterns} angeschnitten wird, sind flüssige Reaktionen auf Aktionen der Benutzer sehr wichtig für gute Applikationen. Um den Umgang mit Input auf verschiedenen Devices zu vereinfachen, stellt Polymer das Gesture-System bereit \cite{citeulike:13915222}. Dieses vereinheitlicht die diversen Eingabemöglichkeiten von Desktops, Smartphones bzw. Tablets und Uhren, welche sich mit Maus und Touch unterschiedlich verhalten. Statt dass Entwickler beide Eingabearten gesondert implementieren müssen, kümmert sich Polymers Gesture-System automatisch darum, indem es die Events von Maus und Touch in 4 einheitliche, für alle Plattformen gleiche, vereint. Hierbei handelt es sich um die Events \texttt{down}, \texttt{up}, \texttt{tap} und \texttt{track}, welche konsistent auf Touch- und Klick-Umgebungen ausgelöst werden und statt den spezifischen Klick- und Touch-Event-Gegenstücken benutzt werden sollten. Um ein Element auf eines der Touch-Events hören zu lassen, kann entweder die imperative oder die deklarative Methode zum Hinzufügen von Events gewählt werden (siehe Abschnitt \ref{events}). Die Events können dem Polymer-Prototyp in dem \texttt{listeners}-Objekt hinzugefügt werden, wie anhand des Beispiels im folgenden Abschnitt unter \ref{beispiel-einer-barrierefreien-komponente} verdeutlicht wird.
 
 
-\textbf{Down und Up}
+\subsection{Down und Up}\label{down-und-up}
 
 Die \texttt{down}- und \texttt{up}-Events werden ausgelöst, wenn der Finger oder die Maus auf das Element drückt oder es loslässt. Sie bilden die einfachsten Gesten des Gesture-Systems, sind aber bei den meisten Anforderungen ausreichend. Diese Events können beispielsweise dazu eingesetzt werden, um zu visualisieren, welches Element gerade berührt oder geklickt wird. Ohne die \texttt{down}- und \texttt{up}-Events müssten die 4 nativen Events \texttt{touchstart}, \texttt{touchend}, \texttt{mousedown} und \texttt{mouseup} implementiert werden. Dabei hören die Touch-Events nur auf das berührte Element, die Maus-Events ändern ihr Ziel beim Bewegen des Mauszeigers, weshalb auf das gesamte Dokument gehört werden muss um auf das \texttt{mouseup}-Event zu warten, was besonders beim Scrollen zu Komplikationen führen kann. Mit Polymer sind hierfür nur die beiden Events \texttt{down} und \texttt{up} notwendig, wie in Listing \ref{pedu} dargestellt.
 
 \lstinputlisting[language=JavaScript,label=pedu,caption=Polymer Events \texttt{down} und \texttt{up}]{kapitel6/listings/1-2.js}
 
 
-\textbf{Tap}
+\subsection{Tap}\label{tap}
 
 Das \texttt{tap}-Event verbindet die \texttt{down}- und \texttt{up}-Events und stellt ein Event für das Auswählen und Drücken eines Elements auf allen Devices dar. Es funktioniert dabei gleich für Maus und Touch, wobei sich das Gesture-System intern um die Plattform-Unterschiede kümmert. Das \texttt{tap}-Event ist das am meisten benutzte Event, da die häufigsten Aktionen der Benutzer der \texttt{tap} bzw. der \texttt{click} sind.
 
 
-\textbf{Track}
+\subsection{Track}\label{track}
 
 Das \texttt{track}-Event ist eine Erweiterung des \texttt{tap}-Events und wird ausgelöst, wenn der Finger oder die Maus beim Drücken eines Elements bewegt wird. Es kommt bei allen Aktionen zum Einsatz, bei denen Drag'n'Drop benötigt wird. Drag'n'Drop kann bei der Maus auf native Weise mit der \ac{HTML}5-\ac{API} realisiert werden, jedoch haben viele Plattformen wie Smartphones oder Uhren Touch-Events, wofür die \ac{API} nicht ausgelegt ist. Dadurch wird das gewünschte Verhalten nicht immer erreicht und ist nur kompliziert manuell zu implementieren. Das \texttt{track}-Event soll hier Abhilfe schaffen und das Drag'n'Drop einfacher relaisierbar machen, wobei auf einige Punkte geachtet werden muss.
 
@@ -90,7 +90,7 @@ Der Wert \texttt{\textgreater{}\ 0} sollte allerdings im lokalen \ac{DOM} einer 
 Der zweite Punkt ist der korrekte Einsatz der \ac{HTML}-Elemente innerhalb der eigenen Komponenten. So bietet \ac{HTML} über 100 Elemente an, mit denen der Inhalt semantisch strukturiert werden kann. Benutzer mit eingeschränktem Sehvermögen benutzen häufig unterstützende Technologien wie Screenreader, welche Benutzern den Inhalt der Webseite vorlesen. Wird die Webseite nun aus nur 2 unterschiedlichen \ac{HTML}-Tags aufgebaut, z.B. dem \texttt{\textless{}div\textgreater{}}- oder \texttt{\textless{}span\textgreater{}}-Tag, kann der Benutzer sich nicht in der Webseite orientieren. Die Screenreader oder andere \ac{AT} legen hierbei für jedes Element einen Accessibility-Node im Accessibility-Tree an \cite{citeulike:13915306}. Dieser Knoten kann die \ac{ARIA}-Attribute \texttt{role}, \texttt{value}, \texttt{state} und \texttt{properties} haben, welche von Custom Elements deklarativ definiert werden sollten. Die entsprechenden Werte werden für die nativen \ac{HTML}-Elemente vom \ac{W3C} definiert. Ebenso wie der \texttt{tabindex} können die \ac{ARIA}-Attribute im \texttt{hostAttributes}-Objekt definiert werden, wie im Beispiel einer barrierefreien Komponente in Zeile 16. Wenn der Screenreader ein ihm unbekanntes Element findet und diese Attribute nicht definiert sind, wird standardmäßig die Rolle \texttt{group} angenommen, beim Vorlesen des Elements bekommt der Benutzer also nur \texttt{group} zu hören und weiß somit nicht, was das Element semantisch darstellt. Falls das Custom Element keinen Text beinhalten, keine sichtbare Beschreibung hat oder nur als Interaktions-Mittel bezüglich eines anderen Inhaltes dienen sollte, wie z.b. eine Checkbox oder ein Input-Feld, ist es wichtig, die Attribute \texttt{aria-label} oder \texttt{aria-labelledby} zu definieren, welche jenen Inhalt definiert, wie Beispiel einer barrierefreien Komponente in Zeile 9 dargestellt.
 
 
-\subsection{Flexibles \ac{UI}}\label{flexibles-ui}
+\subsection{Flexibles UI}\label{flexibles-ui}
 
 Der letzte Punkt ist das Erstellen einer \ac{UI}, welche sich flexibel an die Bedürfnisse der Benutzer anpassen lässt, oder für Benutzer mit einer Farbschwäche angepasst ist. So sollten Farben nicht als einziges Medium zum Übertragen von Informationen dienen, stattdessen sollte eine weitere farbunabhängige Darstellung gewählt werden, wie beispielsweise ein Hinweistext bei einem falsch ausgefüllten Input-Feld. Abgesehen von Farbtönen können Benutzer auch Probleme mit der Farbintensität haben, verschiedene Grautöne könnten somit nicht mehr unterschieden werden. Deshalb sollte immer ein ausreichend großer Kontrast zwischen der Darstellung der Information und dem Hintergrund gewählt werden.
 

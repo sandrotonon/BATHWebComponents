@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  4 FEB 2016 22:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  5 FEB 2016 01:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1114,7 +1114,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \openout2 = `htwg/cover.aux'.
 
-(./htwg/cover.tex <htwg/htwg-logo.pdf, id=445, 1597.97pt x 174.6525pt>
+(./htwg/cover.tex <htwg/htwg-logo.pdf, id=457, 1597.97pt x 174.6525pt>
 File: htwg/htwg-logo.pdf Graphic file (type pdf)
 
 <use htwg/htwg-logo.pdf>
@@ -1195,15 +1195,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--21
 
 
 ] (./thesis.toc
-Package acronym Info: Label `acro:DOM' newly defined as it shall be overridden
-although it is yet undefined on input line 15.
-Package acronym Info: Label `acro:W3C' newly defined as it shall be overridden
-although it is yet undefined on input line 16.
-Package acronym Info: Label `acro:CSS' newly defined as it shall be overridden
-although it is yet undefined on input line 20.
-Package acronym Info: Label `acro:HTML' newly defined as it shall be overridden
-
-although it is yet undefined on input line 25.
 LaTeX Font Info:    Try loading font information for OML+cmtt on input line 27.
 
 LaTeX Font Info:    No file OMLcmtt.fd. on input line 27.
@@ -1216,22 +1207,24 @@ LaTeX Font Warning: Font shape `OML/cmtt/m/n' undefined
 [2
 
 
-]
-Package acronym Info: Label `acro:HTTP' newly defined as it shall be overridden
-
-although it is yet undefined on input line 38.
- [3]
-Package acronym Info: Label `acro:UI' newly defined as it shall be overridden
-although it is yet undefined on input line 86.
-)
+] [3] [4])
 \tf@toc=\write6
 \openout6 = `thesis.toc'.
 
- [4] [5]
+ [5]
 \openout2 = `kapitel1/1-einleitung.aux'.
 
  (./kapitel1/1-einleitung.tex
 Kapitel 1.
+Package acronym Info: Label `acro:HTML' newly defined as it shall be overridden
+
+although it is yet undefined on input line 3.
+Package acronym Info: Label `acro:W3C' newly defined as it shall be overridden
+although it is yet undefined on input line 3.
+Package acronym Info: Label `acro:DOM' newly defined as it shall be overridden
+although it is yet undefined on input line 3.
+Package acronym Info: Label `acro:CSS' newly defined as it shall be overridden
+although it is yet undefined on input line 3.
 Package acronym Info: Label `acro:API' newly defined as it shall be overridden
 although it is yet undefined on input line 6.
 [1
@@ -1258,13 +1251,13 @@ len der Frontend-Entwicklung
 \openout2 = `kapitel2/2-custom-elements.aux'.
 
  (./kapitel2/2-custom-elements.tex
-<kapitel2/bilder/2-custom-elements-div-suppe.jpg, id=714, 733.23938pt x 505.137
-19pt>
+<kapitel2/bilder/2-custom-elements-div-suppe.jpg, id=702, 733.23938pt x 364.361
+25pt>
 File: kapitel2/bilder/2-custom-elements-div-suppe.jpg Graphic file (type jpg)
  <use kapitel2/bilder/2-custom-elements-div-suppe.jpg>
 Package pdftex.def Info: kapitel2/bilder/2-custom-elements-div-suppe.jpg used o
 n input line 7.
-(pdftex.def)             Requested size: 418.25368pt x 288.147pt.
+(pdftex.def)             Requested size: 418.25368pt x 207.84373pt.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
@@ -1302,11 +1295,10 @@ wor-den, bei-spiels-wei-se mit \OML/cmtt/m/n/10.95 <\OT1/cmtt/m/n/10.95 my-elem
 ent\OML/cmtt/m/n/10.95 >\OT1/cmr/m/n/10.95 ,
  []
 
-[6]
 Package acronym Info: Label `acro:FOUC' newly defined as it shall be overridden
 
 although it is yet undefined on input line 33.
- (./kapitel2/listings/2-2.js
+[6] (./kapitel2/listings/2-2.js
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 1.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
@@ -1315,14 +1307,9 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1.
 )
-(./kapitel2/listings/2-3.js) [7] (./kapitel2/listings/2-4.html)
-Overfull \hbox (64.09062pt too wide) in paragraph at lines 61--62
-\OT1/cmr/m/n/10.95 des Cu-stom Ele-ments mit-tels \OT1/cmtt/m/n/10.95 var mybut
-ton = document.createElement('custom-element')
- []
-
-[8] (./kapitel2/listings/2-5.html) (./kapitel2/listings/2-6.css)
-<kapitel2/bilder/2-custom-elements-github-time-element.jpg, id=829, 532.99126pt
+(./kapitel2/listings/2-3.js) [7] (./kapitel2/listings/2-4.html) [8]
+(./kapitel2/listings/2-5.html) (./kapitel2/listings/2-6.css)
+<kapitel2/bilder/2-custom-elements-github-time-element.jpg, id=816, 532.99126pt
  x 33.87656pt>
 File: kapitel2/bilder/2-custom-elements-github-time-element.jpg Graphic file (t
 ype jpg)
@@ -1331,8 +1318,8 @@ Package pdftex.def Info: kapitel2/bilder/2-custom-elements-github-time-element.
 jpg used on input line 85.
 (pdftex.def)             Requested size: 418.25368pt x 26.58487pt.
 
-[9]
-<kapitel2/bilder/2-custom-elements-browserunterstuetzung.jpg, id=857, 945.5325p
+[9 <./kapitel2/bilder/2-custom-elements-github-time-element.jpg>]
+<kapitel2/bilder/2-custom-elements-browserunterstuetzung.jpg, id=845, 945.5325p
 t x 237.88875pt>
 File: kapitel2/bilder/2-custom-elements-browserunterstuetzung.jpg Graphic file 
 (type jpg)
@@ -1341,12 +1328,12 @@ File: kapitel2/bilder/2-custom-elements-browserunterstuetzung.jpg Graphic file
 Package pdftex.def Info: kapitel2/bilder/2-custom-elements-browserunterstuetzun
 g.jpg used on input line 99.
 (pdftex.def)             Requested size: 418.25368pt x 105.23036pt.
-) [10 <./kapitel2/bilder/2-custom-elements-github-time-element.jpg> <./kapitel2
-/bilder/2-custom-elements-browserunterstuetzung.jpg>]
+) [10 <./kapitel2/bilder/2-custom-elements-browserunterstuetzung.jpg>]
 \openout2 = `kapitel2/3-shadow-dom.aux'.
 
- (./kapitel2/3-shadow-dom.tex
-<kapitel2/bilder/3-shadow-dom-input-type-password.jpg, id=881, 207.02344pt x 78
+
+(./kapitel2/3-shadow-dom.tex
+<kapitel2/bilder/3-shadow-dom-input-type-password.jpg, id=867, 207.02344pt x 78
 .2925pt>
 File: kapitel2/bilder/3-shadow-dom-input-type-password.jpg Graphic file (type j
 pg)
@@ -1355,7 +1342,7 @@ Package pdftex.def Info: kapitel2/bilder/3-shadow-dom-input-type-password.jpg u
 sed on input line 7.
 (pdftex.def)             Requested size: 207.02292pt x 78.2923pt.
 
-<kapitel2/bilder/3-shadow-dom-shadow-boundary.png, id=884, 770.12718pt x 411.78
+<kapitel2/bilder/3-shadow-dom-shadow-boundary.png, id=868, 770.12718pt x 411.78
 844pt>
 File: kapitel2/bilder/3-shadow-dom-shadow-boundary.png Graphic file (type png)
  <use kapitel2/bilder/3-shadow-dom-shadow-boundary.png>
@@ -1370,53 +1357,59 @@ although it is yet undefined on input line 22.
 
  <./kapitel2/bilder/3-shadow-dom-input-type-password.jpg>] [12 <./kapitel2/bild
 er/3-shadow-dom-shadow-boundary.png>] (./kapitel2/listings/3-1.html) [13] [14]
-LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/b/it' tried instead on input line 62.
-LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 74.
+LaTeX Font Info:    Try loading font information for OML+cmss on input line 57.
 
-LaTeX Font Info:    No file OMScmtt.fd. on input line 74.
+LaTeX Font Info:    No file OMLcmss.fd. on input line 57.
 
+
+LaTeX Font Warning: Font shape `OML/cmss/bx/n' undefined
+(Font)              using `OML/cmm/m/it' instead
+(Font)              for symbol `textgreater' on input line 57.
+
+LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 66.
+
+LaTeX Font Info:    No file OMScmtt.fd. on input line 66.
 
 LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 74.
+(Font)              for symbol `textbraceleft' on input line 66.
 
 [15] (./kapitel2/listings/3-2.html)
-<kapitel2/bilder/3-shadow-dom-beispiel.jpg, id=1028, 104.64093pt x 51.19125pt>
+<kapitel2/bilder/3-shadow-dom-beispiel.jpg, id=1006, 104.64093pt x 51.19125pt>
 File: kapitel2/bilder/3-shadow-dom-beispiel.jpg Graphic file (type jpg)
 
 <use kapitel2/bilder/3-shadow-dom-beispiel.jpg>
 Package pdftex.def Info: kapitel2/bilder/3-shadow-dom-beispiel.jpg used on inpu
-t line 86.
+t line 78.
 (pdftex.def)             Requested size: 104.64066pt x 51.19112pt.
 
-Overfull \hbox (84.68217pt too wide) in paragraph at lines 91--92
+Overfull \hbox (84.68217pt too wide) in paragraph at lines 83--84
 \OT1/cmr/m/n/10.95 dem Sha-dow Root, wel-cher per \OT1/cmtt/m/n/10.95 var root 
 = document.querySelector('#hello').createShadowRoot()
  []
 
 
-Overfull \hbox (5.4791pt too wide) in paragraph at lines 91--92
+Overfull \hbox (5.4791pt too wide) in paragraph at lines 83--84
 \OT1/cmr/m/n/10.95 da er nicht im \OT1/cmtt/m/n/10.95 select \OT1/cmr/m/n/10.95
  mit in-be-grif-fen ist. Die [][]-Regel \OT1/cmtt/m/n/10.95 .content \OMS/cmtt/
 m/n/10.95 f \OT1/cmtt/m/n/10.95 background-color:
  []
 
 
-Overfull \hbox (3.56363pt too wide) in paragraph at lines 91--92
+Overfull \hbox (3.56363pt too wide) in paragraph at lines 83--84
 \OT1/cmr/m/n/10.95 durch die Sha-dow Boun-da-ry ge-kap-selt wer-den. Die [][] R
 e-gel \OT1/cmtt/m/n/10.95 .styled \OMS/cmtt/m/n/10.95 f \OT1/cmtt/m/n/10.95 col
 or: green;
  []
 
 [16]
-<kapitel2/bilder/3-shadow-dom-browserunterstuetzung.jpg, id=1081, 946.28531pt x
+<kapitel2/bilder/3-shadow-dom-browserunterstuetzung.jpg, id=1059, 946.28531pt x
  237.13594pt>
 File: kapitel2/bilder/3-shadow-dom-browserunterstuetzung.jpg Graphic file (type
  jpg)
  <use kapitel2/bilder/3-shadow-dom-browserunterstuetzung.jpg>
 Package pdftex.def Info: kapitel2/bilder/3-shadow-dom-browserunterstuetzung.jpg
- used on input line 100.
+ used on input line 92.
 (pdftex.def)             Requested size: 418.25368pt x 104.81052pt.
 )
 [17 <./kapitel2/bilder/3-shadow-dom-beispiel.jpg> <./kapitel2/bilder/3-shadow-d
@@ -1428,15 +1421,26 @@ Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 3.
 Package acronym Info: Label `acro:MVC' newly defined as it shall be overridden
 although it is yet undefined on input line 7.
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 10.
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 18.
-
 
 LaTeX Font Warning: Font shape `OML/cmtt/bx/n' undefined
 (Font)              using `OML/cmm/m/it' instead
 (Font)              for symbol `textless' on input line 18.
 
-(./kapitel2/listings/4-1.html) [18
+(./kapitel2/listings/4-1.html)
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
+[18
 
 
 ] (./kapitel2/listings/4-2.html)
@@ -1451,8 +1455,8 @@ tt/m/n/10.95 script\OML/cmtt/bx/n/10.95 >\OT1/cmr/m/n/10.95 -Tag stan-dardm[]a^
 
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 35.
-(./kapitel2/listings/4-2.html) [19] [20]
-<kapitel2/bilder/4-html-templates-browserunterstuetzung.jpg, id=1164, 952.30782
+(./kapitel2/listings/4-2.html [19]) [20]
+<kapitel2/bilder/4-html-templates-browserunterstuetzung.jpg, id=1141, 952.30782
 pt x 237.88875pt>
 File: kapitel2/bilder/4-html-templates-browserunterstuetzung.jpg Graphic file (
 type jpg)
@@ -1471,45 +1475,48 @@ although it is yet undefined on input line 12.
 Package acronym Info: Label `acro:CORS' newly defined as it shall be overridden
 
 although it is yet undefined on input line 18.
+Package acronym Info: Label `acro:HTTP' newly defined as it shall be overridden
+
+although it is yet undefined on input line 21.
  [22
 
 
 ]
-(./kapitel2/listings/5-2.html) (./kapitel2/listings/5-3.html)
-Overfull \hbox (90.21777pt too wide) in paragraph at lines 44--45
+(./kapitel2/listings/5-2.html)
+Overfull \hbox (90.21777pt too wide) in paragraph at lines 42--43
 \OT1/cmr/m/n/10.95 Im-port zu-ge-grif-fen wer-den \OT1/cmtt/m/n/10.95 var conte
 nt = document.querySelector('link[rel="import"]').import;\OT1/cmr/m/n/10.95 .
  []
 
 
-Overfull \hbox (43.2251pt too wide) in paragraph at lines 44--45
+Overfull \hbox (43.2251pt too wide) in paragraph at lines 42--43
 \OT1/cmr/m/n/10.95 hal-te-nes Ele-ment mit der Klas-se \OT1/cmtt/m/n/10.95 elem
 ent \OT1/cmr/m/n/10.95 mit \OT1/cmtt/m/n/10.95 var el = content.querySelector('
 .element');
  []
 
-[23] (./kapitel2/listings/5-4.html) (./kapitel2/listings/5-5.html) [24]
+[23] (./kapitel2/listings/5-3.html) (./kapitel2/listings/5-4.html) [24]
 Package acronym Info: Label `acro:TCP' newly defined as it shall be overridden
-although it is yet undefined on input line 70.
+although it is yet undefined on input line 68.
 Package acronym Info: Label `acro:TLS' newly defined as it shall be overridden
-although it is yet undefined on input line 72.
+although it is yet undefined on input line 70.
 
 [25]
-Overfull \hbox (3.96059pt too wide) in paragraph at lines 82--83
+Overfull \hbox (3.96059pt too wide) in paragraph at lines 80--81
 \OT1/cmr/m/n/10.95 Webseiten k[]onnen vie-le ver-schie-de-ne, mo-du-lar auf-ge-
 bau-te Sty-les-heets, JavaScript-Dateien
  []
 
 [26]
-<kapitel2/bilder/5-html-imports-browserunterstuetzung.jpg, id=1344, 944.02687pt
+<kapitel2/bilder/5-html-imports-browserunterstuetzung.jpg, id=1312, 944.02687pt
  x 235.63031pt>
 File: kapitel2/bilder/5-html-imports-browserunterstuetzung.jpg Graphic file (ty
 pe jpg)
  <use kapitel2/bilder/5-html-imports-browserunterstuetzung.jpg>
 Package pdftex.def Info: kapitel2/bilder/5-html-imports-browserunterstuetzung.j
-pg used on input line 96.
+pg used on input line 94.
 (pdftex.def)             Requested size: 418.25368pt x 104.39673pt.
-) [27] [28 <./kapitel2/bilder/5-html-imports-browserunterstuetzung.jpg>]
+) [27 <./kapitel2/bilder/5-html-imports-browserunterstuetzung.jpg>]
 \openout2 = `kapitel2/6-polyfills.aux'.
 
 
@@ -1519,39 +1526,50 @@ Overfull \hbox (8.70554pt too wide) in paragraph at lines 3--4
 n-terst[]utzung der Web-Components-
  []
 
-[29
+
+Overfull \hbox (15.24345pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/n/10.95 zwar im-ple-men-tiert, m[]ussen aber ma-nu-ell mit dem Flag 
+\OT1/cmtt/m/n/10.95 dom.webcomponents.enabled
+ []
+
+[28
 
 
 ]
-<kapitel2/bilder/6-webcomponentsjs-browserunterstuetzung.jpg, id=1382, 647.4187
+<kapitel2/bilder/6-webcomponentsjs-browserunterstuetzung.jpg, id=1345, 647.4187
 5pt x 143.78719pt>
 File: kapitel2/bilder/6-webcomponentsjs-browserunterstuetzung.jpg Graphic file 
 (type jpg)
 
 <use kapitel2/bilder/6-webcomponentsjs-browserunterstuetzung.jpg>
 Package pdftex.def Info: kapitel2/bilder/6-webcomponentsjs-browserunterstuetzun
-g.jpg used on input line 52.
+g.jpg used on input line 37.
 (pdftex.def)             Requested size: 418.25368pt x 92.8923pt.
- [30 <./kapitel2/bilder/6-webcomponentsjs-browserunterstuetzung.jpg>]
+ [29 <./kapitel2/bilder/6-webcomponentsjs-browserunterstuetzung.jpg>]
 Package acronym Info: Label `acro:XHR' newly defined as it shall be overridden
-although it is yet undefined on input line 73.
-)
-Overfull \hbox (117.2463pt too wide) in paragraph at lines 78--39
-\OT1/cmr/m/n/10.95 Das webcomponents.js-JavaScript bringt mit sei-ner Gr[]o^^Ye
- von 116KB [[]]
+although it is yet undefined on input line 50.
+
+Overfull \hbox (18.38744pt too wide) in paragraph at lines 50--51
+[]\OT1/cmr/m/n/10.95 Die zu im-por-tie-ren-den [][]-Dateien wer-den mit ei-nem 
+[][][]XMLHttpRequest
  []
 
-[31]
+)
+Overfull \hbox (1.61838pt too wide) in paragraph at lines 56--39
+\OT1/cmr/m/n/10.95 Das webcomponents.js-JavaScript [[]] bringt mit
+ []
+
+[30]
 \openout2 = `kapitel2/7-beispiel.aux'.
 
  (./kapitel2/7-beispiel.tex
-<kapitel2/bilder/7-beispiel.jpg, id=1418, 188.20313pt x 141.52875pt>
+<kapitel2/bilder/7-beispiel.jpg, id=1382, 188.20313pt x 141.52875pt>
 File: kapitel2/bilder/7-beispiel.jpg Graphic file (type jpg)
 
 <use kapitel2/bilder/7-beispiel.jpg>
 Package pdftex.def Info: kapitel2/bilder/7-beispiel.jpg used on input line 7.
 (pdftex.def)             Requested size: 142.26378pt x 106.99068pt.
- (./kapitel2/listings/7-1.js) [32
+ (./kapitel2/listings/7-1.js) [31
 
 
  <./kapitel2/bilder/7-beispiel.jpg>] (./kapitel2/listings/7-2.js)
@@ -1560,7 +1578,7 @@ Overfull \hbox (6.87553pt too wide) in paragraph at lines 25--26
 .95 f \OT1/cmtt/m/n/10.95 prototype: CustomElementProto
  []
 
-(./kapitel2/listings/7-3.html) (./kapitel2/listings/7-4.html [33])
+(./kapitel2/listings/7-3.html) (./kapitel2/listings/7-4.html [32])
 Overfull \hbox (78.08269pt too wide) in paragraph at lines 47--48
 \OT1/cmr/m/n/10.95 wie bei-spiels-wei-se der Kon-fi-gu-ra-ti-on \OML/cmtt/bx/n/
 10.95 <\OT1/cmtt/m/n/10.95 custom-element theme="style1"\OML/cmtt/bx/n/10.95 >\
@@ -1568,12 +1586,14 @@ OT1/cmtt/m/n/10.95 Reader\OML/cmtt/bx/n/10.95 <\OT1/cmtt/m/n/10.95 /custom-elem
 ent\OML/cmtt/bx/n/10.95 >\OT1/cmr/m/n/10.95 .
  []
 
-) [34]
+) [33]
 \openout2 = `kapitel3/1-polymer.aux'.
 
  (./kapitel3/1-polymer.tex
 Kapitel 3.
-<kapitel3/bilder/1-architektur.png, id=1494, 803.0pt x 657.45625pt>
+Package acronym Info: Label `acro:UI' newly defined as it shall be overridden
+although it is yet undefined on input line 8.
+<kapitel3/bilder/1-architektur.png, id=1458, 803.0pt x 657.45625pt>
 File: kapitel3/bilder/1-architektur.png Graphic file (type png)
 
 <use kapitel3/bilder/1-architektur.png>
@@ -1584,23 +1604,35 @@ Package pdftex.def Info: kapitel3/bilder/1-architektur.png used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[35
+[34
 
 
 
-] [36 <./kapitel3/bilder/1-architektur.png>]
-Overfull \hbox (8.18849pt too wide) in paragraph at lines 59--60
+]
+Overfull \hbox (9.77025pt too wide) in paragraph at lines 32--33
+\OT1/cmr/m/n/10.95 son-dern f[]ur im Hin-ter-grund lau-fen-de Ser-vices wie Pus
+h- oder Offline-Funktionalit[]aten
+ []
+
+[35 <./kapitel3/bilder/1-architektur.png>]
+Overfull \hbox (15.75635pt too wide) in paragraph at lines 33--34
+[]\OT1/cmr/m/n/10.95 Die Mo-le-cu-les sind wei-te-re Ele-men-te als Wrap-per f[
+]ur third-party-Libraries. 
+ []
+
+
+Overfull \hbox (8.18849pt too wide) in paragraph at lines 40--41
 \OT1/cmr/m/n/10.95 wickel-ten Kom-po-nen-ten. Als ei-ne m[]ogli-che Al-ter-na-t
 i-ve hierf[]ur kann der customelements.io-
  []
 
 
-Overfull \hbox (1.16048pt too wide) in paragraph at lines 59--60
+Overfull \hbox (1.16048pt too wide) in paragraph at lines 40--41
 \OT1/cmr/m/n/10.95 Katalog \OT1/cmtt/m/n/10.95 http://customelements.io/ \OT1/c
 mr/m/n/10.95 her-an-ge-zo-gen wer-den. In die-sem sind be-reits meh-
  []
 
-) [37]
+) [36]
 \openout2 = `kapitel4/1-analogie.aux'.
 
  (./kapitel4/1-analogie.tex
@@ -1623,82 +1655,86 @@ Overfull \hbox (55.87827pt too wide) in paragraph at lines 13--14
 ar element = document.createElement('element-name');
  []
 
-[38
+[37
 
 
 
-] [39]
-Overfull \hbox (27.13669pt too wide) in paragraph at lines 35--37
-\OT1/cmr/m/n/10.95 schnitt []5.1[]) verf[]ugbar, falls true ge-setzt ist. Zus[]
-atz-lich wird ein \OT1/cmtt/m/n/10.95 property-name-changed\OT1/cmr/m/n/10.95 -
-
+]
+Overfull \hbox (4.74901pt too wide) in paragraph at lines 28--29
+\OT1/cmtt/m/n/10.95 this.setAttribute(property, value); \OT1/cmr/m/n/10.95 ist.
+ Der Na-me des [][]-Attributs muss
  []
 
-
-Overfull \hbox (0.70355pt too wide) in paragraph at lines 47--48
+[38]
+Overfull \hbox (0.70355pt too wide) in paragraph at lines 40--41
 \OT1/cmtt/m/n/10.95 computeResult: function(a, b) \OMS/cmtt/m/n/10.95 f \OT1/cm
 tt/m/n/10.95 ... \OMS/cmtt/m/n/10.95 g \OT1/cmr/m/n/10.95 im Polymer-Prototyp d
 e-fi-niert wer-den. Die-
  []
 
-[40]
-Overfull \hbox (8.00597pt too wide) in paragraph at lines 56--57
+[39]
+Overfull \hbox (8.00597pt too wide) in paragraph at lines 49--50
 \OT1/cmr/m/n/10.95 Zus[]atz-lich zu den De-cla-red Pro-per-ties k[]onnen auch [
 ][]-Element-Attribute im Polymer-
  []
 
 
-Overfull \hbox (26.16423pt too wide) in paragraph at lines 66--67
+Overfull \hbox (26.16423pt too wide) in paragraph at lines 59--60
 \OT1/cmr/m/n/10.95 Prototyps ha-ben muss. Der zu ver-wen-den-de [][]-Markup mus
 s dann in ei-nem \OML/cmtt/bx/n/10.95 <\OT1/cmtt/m/n/10.95 template\OML/cmtt/bx
 /n/10.95 >\OT1/cmr/m/n/10.95 -
  []
 
-[41] (./kapitel4/listings/1-1.html)
-Overfull \hbox (56.08983pt too wide) in paragraph at lines 75--76
+[40] (./kapitel4/listings/1-1.html)
+Overfull \hbox (56.08983pt too wide) in paragraph at lines 68--69
 [][] \OT1/cmr/m/n/10.95 mit-tels \OT1/cmtt/m/n/10.95 var children =  document.g
 etElementsByTagName("my-element")[0].children;\OT1/cmr/m/n/10.95 .
  []
 
-[42] [43] (./kapitel4/listings/1-2.js) (./kapitel4/listings/1-3.html)
-Overfull \hbox (69.99358pt too wide) in paragraph at lines 96--97
+[41] [42] (./kapitel4/listings/1-2.js) (./kapitel4/listings/1-3.html)
+Overfull \hbox (69.99358pt too wide) in paragraph at lines 89--90
 []\OT1/cmr/m/n/10.95 Die Ap-pli-ka-ti-on, wel-che die Kom-po-nen-te be-nutzt, k
 ann nun die Va-ria-ble \OT1/cmtt/m/n/10.95 --x-element-button-color
  []
 
-[44] (./kapitel4/listings/1-4.html) (./kapitel4/listings/1-5.html)
-(./kapitel4/listings/1-6.html) [45] (./kapitel4/listings/1-7.html)
-(./kapitel4/listings/1-8.html) [46]) [47]
+[43] (./kapitel4/listings/1-4.html) (./kapitel4/listings/1-5.html)
+(./kapitel4/listings/1-6.html)
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+
+ []
+
+[44] (./kapitel4/listings/1-7.html) (./kapitel4/listings/1-8.html) [45])
+[46]
 \openout2 = `kapitel5/1-additional-sugar.aux'.
 
  (./kapitel5/1-additional-sugar.tex
 Kapitel 5.
-[48
+[47
 
 
 
 ]
-Overfull \hbox (31.88144pt too wide) in paragraph at lines 32--33
+Overfull \hbox (31.88144pt too wide) in paragraph at lines 28--29
 \OT1/cmr/m/n/10.95 wen-det wer-den. So wird bei-spiels-wei-se in dem Ele-ment \
 OML/cmtt/bx/n/10.95 <\OT1/cmtt/m/n/10.95 div class=$"\OMS/cmtt/m/n/10.95 ff\OT1
 /cmtt/m/n/10.95 myClass\OMS/cmtt/m/n/10.95 gg\OT1/cmtt/m/n/10.95 "\OML/cmtt/bx/
 n/10.95 ><\OT1/cmtt/m/n/10.95 /div\OML/cmtt/bx/n/10.95 >
  []
 
-[49] (./kapitel5/listings/1-1.js)
-Overfull \hbox (9.67886pt too wide) in paragraph at lines 47--48
+[48] (./kapitel5/listings/1-1.js)
+Overfull \hbox (9.67886pt too wide) in paragraph at lines 43--44
 \OT1/cmr/m/n/10.95 so vie-le Be-ha-viors mit un-ter-schied-li-chen Ver-hal-tens
 -wei-sen hin-zu-gef[]ugt wer-den, wie ben[]otigt
  []
 
-(./kapitel5/listings/1-2.html) [50] (./kapitel5/listings/1-3.html [51]))
-[52]
+(./kapitel5/listings/1-2.html) [49] (./kapitel5/listings/1-3.html [50]))
+[51]
 \openout2 = `kapitel6/1-best-practices.aux'.
 
  (./kapitel6/1-best-practices.tex
 Kapitel 6.
 
-<kapitel6/bilder/1-performance-user-perception-reaction-times.jpg, id=1859, 447
+<kapitel6/bilder/1-performance-user-perception-reaction-times.jpg, id=1816, 447
 .92343pt x 149.8097pt>
 File: kapitel6/bilder/1-performance-user-perception-reaction-times.jpg Graphic 
 file (type jpg)
@@ -1707,7 +1743,7 @@ file (type jpg)
 Package pdftex.def Info: kapitel6/bilder/1-performance-user-perception-reaction
 -times.jpg used on input line 12.
 (pdftex.def)             Requested size: 312.9803pt x 104.6809pt.
- [53
+ [52
 
 
 
@@ -1718,36 +1754,26 @@ Overfull \hbox (9.7854pt too wide) in paragraph at lines 31--32
 -se-kun-den ha-ben, be-vor die-se tats[]achlich
  []
 
-[54]
+[53]
 Overfull \hbox (0.30884pt too wide) in paragraph at lines 43--44
 \OT1/cmtt/m/n/10.95 touchend\OT1/cmr/m/n/10.95 , \OT1/cmtt/m/n/10.95 mousedown 
 \OT1/cmr/m/n/10.95 und \OT1/cmtt/m/n/10.95 mouseup \OT1/cmr/m/n/10.95 im-ple-me
 n-tiert wer-den. Da-bei h[]oren die Touch-Events
  []
 
-(./kapitel6/listings/1-2.js [55])
-Overfull \hbox (7.97491pt too wide) in paragraph at lines 50--51
-[]\OT1/cmr/m/n/10.95 Das \OT1/cmtt/m/n/10.95 tap\OT1/cmr/m/n/10.95 -Event ver-b
-in-det die \OT1/cmtt/m/n/10.95 down\OT1/cmr/m/n/10.95 - und \OT1/cmtt/m/n/10.95
- up\OT1/cmr/m/n/10.95 -Events und stellt ein Event f[]ur das Ausw[]ahlen
- []
-
-
+(./kapitel6/listings/1-2.js [54])
 Overfull \hbox (3.95775pt too wide) in paragraph at lines 57--58
 \OT1/cmr/m/n/10.95 Funktion mit-tels \OT1/cmtt/m/n/10.95 this.setScrollDirectio
 n(direction, node); \OT1/cmr/m/n/10.95 wie-der-her-ge-stellt wer-
  []
 
-[56]
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 81.
- [57]
+[55] [56]
 Package acronym Info: Label `acro:AT' newly defined as it shall be overridden
 although it is yet undefined on input line 90.
 Package acronym Info: Label `acro:ARIA' newly defined as it shall be overridden
 
 although it is yet undefined on input line 90.
- [58] (./kapitel6/listings/1-3.html)) [59]
+ [57] (./kapitel6/listings/1-3.html)) [58]
 \openout2 = `kapitel7/1-polymer-komponente.aux'.
 
 
@@ -1766,7 +1792,7 @@ per-button\OT1/cmr/m/n/10.95 , \OT1/cmtt/m/n/10.95 paper-icon-button\OT1/cmr/m/
 n/10.95 ,
  []
 
-[60
+[59
 
 
 
@@ -1783,8 +1809,8 @@ Overfull \hbox (1.44057pt too wide) in paragraph at lines 27--28
 . Die []\OT1/cmtt/m/n/10.95 countLinks\OT1/cmr/m/n/10.95 -Methode
  []
 
-[61]
-<kapitel7/bilder/1-multi-navigation-app.jpg, id=2014, 607.51968pt x 270.25969pt
+[60]
+<kapitel7/bilder/1-multi-navigation-app.jpg, id=1971, 607.51968pt x 270.25969pt
 >
 File: kapitel7/bilder/1-multi-navigation-app.jpg Graphic file (type jpg)
  <use kapitel7/bilder/1-multi-navigation-app.jpg>
@@ -1798,7 +1824,7 @@ Overfull \hbox (162.36757pt too wide) in paragraph at lines 41--50
 p
  []
 
-[62 <./kapitel7/bilder/1-multi-navigation-app.jpg>] [63]
+[61 <./kapitel7/bilder/1-multi-navigation-app.jpg>] [62]
 \openout2 = `kapitel7/2-angular-vergleich.aux'.
 
 
@@ -1823,17 +1849,17 @@ Overfull \hbox (7.44203pt too wide) in paragraph at lines 8--9
 -ent-sei-ti-ges Open-Source-JavaScript-
  []
 
-<kapitel7/bilder/1-model-view-viewmodel.png, id=2034, 385.44pt x 468.75125pt>
+<kapitel7/bilder/1-model-view-viewmodel.png, id=1991, 385.44pt x 468.75125pt>
 File: kapitel7/bilder/1-model-view-viewmodel.png Graphic file (type png)
 
 <use kapitel7/bilder/1-model-view-viewmodel.png>
 Package pdftex.def Info: kapitel7/bilder/1-model-view-viewmodel.png used on inp
 ut line 12.
 (pdftex.def)             Requested size: 227.62204pt x 276.81833pt.
- [64
+ [63
 
 
-] [65 <./kapitel7/bilder/1-model-view-viewmodel.png>]) [66]
+] [64 <./kapitel7/bilder/1-model-view-viewmodel.png>]) [65]
 \openout2 = `kapitel8/1-zukunftsprognose.aux'.
 
  (./kapitel8/1-zukunftsprognose.tex
@@ -1844,11 +1870,11 @@ Overfull \hbox (5.32928pt too wide) in paragraph at lines 7--8
 uf den Web-Component-Standards
  []
 
-[67
+[66
 
 
 
-]) [68] (./glossary.tex) [69
+]) [67] (./glossary.tex) [68
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{MVC}) has bee
@@ -1867,20 +1893,20 @@ l.60 \listoffigures
 \tf@lof=\write7
 \openout7 = `thesis.lof'.
 
- [70
+ [69
 
 ] (./thesis.lol)
 \tf@lol=\write8
 \openout8 = `thesis.lol'.
 
- [71
+ [70
 
 ] (./thesis.tdo)
 \tf@tdo=\write9
 \openout9 = `thesis.tdo'.
 
 
-(./thesis.bbl [72
+(./thesis.bbl [71
 
 ]
 Underfull \hbox (badness 3861) in paragraph at lines 4--8
@@ -1913,7 +1939,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--80
 []\OT1/cmr/m/n/10.95 Ihrig, C. (2012).  The Ba-sics of the Sha-dow DOM.
  []
 
-[73
+[72
 
 ]
 Underfull \hbox (badness 5245) in paragraph at lines 82--85
@@ -1984,7 +2010,7 @@ Underfull \hbox (badness 3009) in paragraph at lines 158--162
 il/polymer-devtools-
  []
 
-[74]
+[73]
 Underfull \hbox (badness 10000) in paragraph at lines 175--178
 []\OT1/cmr/m/n/10.95 Polymer - Ge-stu-res (web).  Ge-stu-res.
  []
@@ -2016,7 +2042,7 @@ Overfull \hbox (7.41943pt too wide) in paragraph at lines 239--242
 5/scripting-
  []
 
-[75]
+[74]
 Underfull \hbox (badness 7012) in paragraph at lines 244--247
 []\OT1/cmr/m/n/10.95 W3C (2014c).  The Ac-ces-si-bi-li-ty Tree and the DOM Tree
 .
@@ -2049,7 +2075,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 284--287
 []\OT1/cmr/m/n/10.95 WHATWG (web).  HTML Stan-dard.  htt-
  []
 
-) [76]
+) [75]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 69.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 69.
  (./thesis.aux (./htwg/cover.aux) (./htwg/title.aux) (./htwg/abstract.aux) (./h
@@ -2064,7 +2090,7 @@ twg/affidavit.aux) (./kapitel1/1-einleitung.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 69.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 69.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 2037023753E5D6F239DA04A2718DEFA0;8264.
+(rerunfilecheck)             Checksum: DB2CC160B39BAD4ED7DB8F54C5BBDD74;8448.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2072,20 +2098,19 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 69.
  ) 
 Here is how much of TeX's memory you used:
- 24288 strings out of 493089
- 441497 string characters out of 6134842
- 681394 words of memory out of 5000000
- 26436 multiletter control sequences out of 15000+600000
- 15766 words of font info for 56 fonts, out of 8000000 for 9000
+ 24299 strings out of 493089
+ 441619 string characters out of 6134842
+ 680480 words of memory out of 5000000
+ 26450 multiletter control sequences out of 15000+600000
+ 15408 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 76i,9n,100p,2665b,2170s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,9n,100p,2665b,2172s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
 usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
 sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
 r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/
 local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
 cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local
 /texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/
@@ -2098,10 +2123,10 @@ ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on thesis.pdf (84 pages, 1843841 bytes).
+Output written on thesis.pdf (83 pages, 1753175 bytes).
 PDF statistics:
- 2382 PDF objects out of 2487 (max. 8388607)
- 2219 compressed objects within 23 object streams
- 655 named destinations out of 1000 (max. 500000)
- 965 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2333 PDF objects out of 2487 (max. 8388607)
+ 2174 compressed objects within 22 object streams
+ 654 named destinations out of 1000 (max. 500000)
+ 989 words of extra memory for PDF output out of 10000 (max. 10000000)
 

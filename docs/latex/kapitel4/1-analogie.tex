@@ -22,22 +22,15 @@ Ebenso wie nativ erzeugt Custom Elements können auch mit Polymer erzeugte Eleme
 
 Custom Elements können auch mit Hilfe von Polymer um Eigenschaften und Methoden erweitert werden. Hierzu bietet Polymer das \texttt{properties}-Objekt an, mit welchem die Eigenschaften der Komponente im JSON-Format definiert werden können. Im Gegensatz zu den nativen Methoden muss somit nicht jede Eigenschaft bzw. Property einzeln hinzugefügt werden. Die in diesem Objekt definierten Properties können beim Verwenden der Komponente im \ac{HTML}-Markup konfiguriert werden. Dadurch ist es möglich, eine \ac{API} für das Element zu erstellen, da die von außen konfigurierbaren Attribute ein Interface der Komponente bilden. Eine Property kann dabei mit folgenden Parametern spezifiziert werden.
 
-\begin{itemize}
-\item
-  \texttt{type}: Konstruktor-Typ der Property, er kann ein Boolean, Date, Number, String, Array oder Object sein.
-\item
-  \texttt{value}: Standardwert der Property, der Wert muss boolean, number, string oder eine Funktion sein.
-\item
-  \texttt{reflectToAttribute}: Boolean-Wert, gibt an ob die Property mit dem \ac{HTML}-Attribut synchronisiert werden soll. Das bedeutet, dass falls die Property geändert wird, das zugehörige \ac{HTML}-Attribut des Elements geändert wird, was äquivalent zu \texttt{this.setAttribute(property,\ value);} ist. Der Name des \ac{HTML}-Attributs muss dabei in dem Properties-Objekt kleingeschrieben werden. Enthält der Name zusätzlich Bindestriche, so muss die Property kleingeschrieben und die Bindestriche entfernt werden, wobei jedes Wort nach einem Bindestrich groß geschrieben werden muss.
-\item
-  \texttt{readOnly}: Boolean-Wert, gibt an ob die Property nur gelesen oder auch geschrieben werden soll (siehe Abschnitt \ref{one-way--und-two-way-data-binding}).
-\item
-  \texttt{notify}: Boolean-Wert, die Property ist für Two-Way-Data-Binding (siehe Abschnitt \ref{one-way--und-two-way-data-binding}) verfügbar, falls true gesetzt ist. Zusätzlich wird ein \texttt{property-name-changed}-Event ausgelöst, wenn sich die Property ändert.
-\item
-  \texttt{computed}: Name der Funktion als String, welche den Wert der Property berechnen soll (siehe Abschnitt \ref{computed-properties}).
-\item
-  \texttt{observer}: Name der Funktion als String, welche aufgerufen wird, wenn der Wert der Property geändert wird (siehe Abschnitt \ref{property-oberserver}).
-\end{itemize}
+\begin{description}
+  \item[type] Konstruktor-Typ der Property, er kann ein Boolean, Date, Number, String, Array oder Object sein.
+  \item[value] Standardwert der Property, der Wert muss boolean, number, string oder eine Funktion sein.
+  \item[reflectToAttribute] Boolean-Wert, gibt an ob die Property mit dem \ac{HTML}-Attribut synchronisiert werden soll. Das bedeutet, dass falls die Property geändert wird, das zugehörige \ac{HTML}-Attribut des Elements geändert wird, was äquivalent zu \texttt{this.setAttribute(property,\ value);} ist. Der Name des \ac{HTML}-Attributs muss dabei in dem Properties-Objekt kleingeschrieben werden. Enthält der Name zusätzlich Bindestriche, so muss die Property kleingeschrieben und die Bindestriche entfernt werden, wobei jedes Wort nach einem Bindestrich groß geschrieben werden muss.
+  \item[readOnly] Boolean-Wert, gibt an ob die Property nur gelesen oder auch geschrieben werden soll (siehe Abschnitt \ref{one-way--und-two-way-data-binding}).
+  \item[notify] Boolean-Wert, die Property ist für Two-Way-Data-Binding (siehe Abschnitt \ref{one-way--und-two-way-data-binding}) verfügbar, falls true gesetzt ist. Zusätzlich wird ein \texttt{property-name-changed}-Event ausgelöst, wenn sich die Property ändert.
+  \item[computed] Name der Funktion als String, welche den Wert der Property berechnen soll (siehe Abschnitt \ref{computed-properties}).
+  \item[observer] Name der Funktion als String, welche aufgerufen wird, wenn der Wert der Property geändert wird (siehe Abschnitt \ref{property-oberserver}).
+\end{description}
 
 Die genannten Parameter sind alle optional anzugeben. Wird keine der Parameter definiert, so kann die Property direkt mit dem \texttt{type} definiert werden. Soll also beispielsweise eine Property \texttt{propertyName} als String und ohne Parameter angegeben werden, so würde dies mit \texttt{properties:\ \{\ propertyName:\ String\ \}} erreicht werden.
 
@@ -61,7 +54,7 @@ Zusätzlich zu den Declared Properties können auch \ac{HTML}-Element-Attribute 
 Die nativen Lifecycle-Callback-Funktionen (siehe Abschnitt \ref{custom-element-lifecycle-callbacks}) werden ebenso von Polymer unterstützt. Diese können in dem Prototyp als Attribut bei ihrem normalen Namen oder in verkürzter Form angegeben werden, so heißt die \texttt{createdCallback}-Methode \texttt{created}, die \texttt{attachedCallback}-Methode heißt \texttt{attached} etc.. Soll beispielsweise die \texttt{created}-Methode definiert werden, so kann diese mit \texttt{created:\ function\ \{\ ...\ \}} in dem Prototyp angegeben werden. Zusätzlich bietet Polymer einen \texttt{readyCallback}, welcher aufgerufen wird, nachdem Polymer das Element erstellt und den lokalen \ac{DOM} initialisiert hat, also nachdem alle im lokalen \ac{DOM} befindlichen Elemente konfiguriert wurden und jeweils ihre \texttt{ready}-Methode aufgerufen haben. Sie ist besonders hilfreich, wenn nach dem Laden der Komponente dessen \ac{DOM} nachträglich manipuliert werden soll. Falls mit den Lifecycle-Callbacks gearbeitet wird, muss auf die richtige Anwendung der Reihenfolge geachtet werden. So werden die Callbacks eines Elements in der Reihenfolge \texttt{created}, \texttt{ready}, \texttt{factoryImpl} und \texttt{attached} ausgeführt.
 
 
-\section{Shadow \ac{DOM} und \ac{HTML} Templates}\label{shadow-dom-und-html-templates}
+\section{Shadow DOM und HTML Templates}\label{shadow-dom-und-html-templates}
 
 Die bisher gezeigten Methoden ermöglichen das Erstellen einer Polymer-Komponente, die jedoch noch kein internes Markup beinhaltet. Wie bei den nativen Technologien können auch mit Polymer erzeugte Custom Elements um \ac{HTML}-Markup, das lokalen \ac{DOM}, erweitert werden \cite{citeulike:13915080}. Hierzu dient das Polymer \texttt{\textless{}dom-module\textgreater{}}-Element, welches als ID den Wert der \texttt{is}-Property des Polymer-Prototyps haben muss. Der zu verwendende \ac{HTML}-Markup muss dann in einem \texttt{\textless{}template\textgreater{}}-Tag dem \texttt{\textless{}dom-module\textgreater{}} hinzugefügt werden. Auf das Klonen des Inhalts des Templates mittels der \texttt{importNode}-Funktion (siehe Abschnitt \ref{benutzung}) kann hierbei verzichtet werden, da Polymer diesen automatisch in den lokalen \ac{DOM} des Elements klont. Soll also der lokale \ac{DOM} des \texttt{\textless{}element-name\textgreater{}}-Tags deklariert werden, so wird dies wie in Listing \ref{tepk} dargestellt erreicht:
 
@@ -70,12 +63,12 @@ Die bisher gezeigten Methoden ermöglichen das Erstellen einer Polymer-Komponent
 Der deklarative Teil des Elements, das \texttt{\textless{}dom-module\textgreater{}} und dessen Inhalte, sowie der Imperative Teil mit dem \texttt{Polymer(\{\ ...\ \})}-Aufruf können entweder in derselben oder in getrennten \ac{HTML}-Dateien stehen. Hierbei spielt es jedoch keine Rolle, ob das \texttt{\textless{}script}-Tag innerhalb oder außerhalb des \texttt{\textless{}dom-module\textgreater{}}-Tags steht, solange das Template vor dem Polymer-Funktionsaufruf geparst wird.
 
 
-\subsection{Shady \ac{DOM}}\label{shady-dom}
+\subsection{Shady DOM}\label{shady-dom}
 
 Wie in Abschnitt \ref{shadow-dom-browserunterstuetzung} gezeigt, wird der Shadow \ac{DOM} nicht von allen Browsern unterstützt, ebenso ist der Polyfill für diesen aufgrund dessen schlechter Performance (siehe Abschnitt \ref{performance}) nur als allerletzte Instanz zu sehen. Aus diesen Gründen ist in Polymer der sogenannte ``Shady \ac{DOM}'' implementiert \cite{citeulike:13886251}. Dieser bietet einen dem Shadow \ac{DOM} ähnlichen Scope für den \ac{DOM}-Tree. dabei rendert er den \ac{DOM}, als wenn kein Shadow \ac{DOM} in dem Element vorhanden wäre. Dies bringt wiederum auch die dadurch entstehenden Nachteile mit sich, wie dass internes Markup nach außen sichtbar ist oder keine Shadow Boundary verfügbar ist. Der Vorteil ist jedoch, dass der Shady \ac{DOM} genug Methoden für seinen Scope bereitstellt, um sich wie ein Shadow \ac{DOM} verhalten zu können, ohne die Performance zu mindern. Hierzu ist es jedoch zwingend notwendig, die eigens entwickelte Shady-\ac{DOM}-\ac{API} im Umgang mit dem \ac{DOM} zu benutzen, was mit der \texttt{Polymer.dom(node)}-Funktion erreicht wird. Will man beispielsweise alle Kinder mit der \texttt{children}-Eigenschaft des Shadow-Host-Elements \texttt{\textless{}my-element\textgreater{}} selektieren, so erfolgt dies mit der Shady-\ac{DOM}-\ac{API} mittels \texttt{var\ children\ =\ Polymer.dom(my-element).children;} statt mit der normalen \ac{DOM}-\ac{API} mittels \texttt{var\ children\ =\ \ document.getElementsByTagName(\dq my-element\dq){[}0{]}.children;}. Diese gibt dann nur die von außen übergebenen (Light-\ac{DOM}-)Elemente zurück, ohne die Elemente des internen Markups des Templates zu berücksichtigen. Die Shady-\ac{DOM}-\ac{API} bildet dabei alle Funktionen der nativen \ac{DOM}-\ac{API} ab und ist performanter als der Shadow-\ac{DOM}-Polyfill, da nicht dessen Verhalten, sondern nur ein eigener \ac{DOM}-Scope implementiert ist. Jedoch beschränkt sich Polymer nicht nur auf den eigenen Shady \ac{DOM}, vielmehr ist es mit dem nativen Shadow \ac{DOM} kompatibel, sodass die Shady-\ac{DOM}-\ac{API} auf das native Shadow \ac{DOM} zugreifen kann, falls dieses von dem Browser unterstützt wird. Dadurch kann eine Applikation implementiert werden, die auf allen Plattformen mit einer verbesserten Performance ausgeführt wird, wovon besonders die mobilen Plattformen profitieren. Standardmäßig benutzt Polymer jedoch immer die eigene Shady-\ac{DOM}-\ac{API}, wie das verhindert werden kann, ist in Abschnitt \ref{optimierungen-fuxfcr-eine-fluxfcssige-applikation} dargestellt.
 
 
-\subsection{\ac{DOM}-Knoten automatisch finden}\label{dom-knoten-automatisch-finden}
+\subsection{DOM-Knoten automatisch finden}\label{dom-knoten-automatisch-finden}
 
 Um das Traversieren in dem lokalen \ac{DOM} zu beschleunigen, bietet Polymer eine Hilfsfunktion für das automatische Finden eines Elements oder auch ``Automatic Node Finding'' an. Hierzu wird intern ein Mapping zu den statisch erzeugten \ac{DOM}-Elementen erzeugt indem jedes Element des lokalen \ac{DOM}-Templates, für welches eine ID definiert wurde, in dem \texttt{this.\$}-Hash gespeichert wird. Hat nun also das Element \texttt{\textless{}div\ id=\dq wrapper\dq\textgreater{}\textless{}/div\textgreater{}} in dem Template die ID \texttt{wrapper}, so kann es in Polymer mittels \texttt{this.\$.wrapper} selektiert werden. Jedoch werden dem Hash nur die statisch erzeugten \ac{DOM}-Knoten hinzugefügt, dynamisch mittels \texttt{dom-repeat} oder \texttt{dom-if} hinzugefügte Knoten allerdings nicht. Die dynamisch hinzugefügten Knoten können mit der \texttt{this.\$\$}-Funktion selektiert werden. So liefert die Funktion \texttt{this.\$\$(selector);} das erste Element, welches von den im Parameter \texttt{selector} enthaltenen \ac{CSS}-Selektor selektiert wird.
 
@@ -87,7 +80,7 @@ Um nun Elemente des Light \ac{DOM}s in das lokale \ac{DOM} der Komponente zu inj
 \lstinputlisting[language=JavaScript,label=uebecnk,caption=Überwachung eines \texttt{contentNode}-Knotens]{kapitel4/listings/1-2.js}
 
 
-\subsection{\ac{CSS}-Styling}\label{css-styling}
+\subsection{CSS-Styling}\label{css-styling}
 
 Die in Abschnitt \ref{styling-mit-css} gezeigten Regeln für das Stylen des Shadow \ac{DOM}s sind auch unter Polymer und dessen Shady \ac{DOM} gültig \cite{citeulike:13915080}. Zusätzlich können Komponenten \ac{CSS}-Properties (also Variablen) nach außen sichtbar machen, damit diese von außerhalb der Komponente gesetzt werden können, um somit das \ac{CSS} in einer gekapselten Komponente zu bestimmen. Hierbei können auch Standardangaben gemacht werden, die von der Komponente übernommen werden, wenn die Variable nicht definiert wird. Um eine Variable bereitzustellen, muss diese der entsprechenden Eigenschaft mit der Syntax \texttt{var(-\/-variable-name,\ default)} in den Style-Regeln der Komponente angegeben werden. Das Beispiel in Listing \ref{xelementkmcssv} zeigt den \ac{DOM} eines \texttt{x-element}, welches die \ac{CSS}-Variable \texttt{x-element-button-color} und dem zugewiesenen Standardwert \texttt{red} für einen Button in einem \texttt{\textless{}div\textgreater{}}-Tag mit der Klasse \texttt{x-element-container} bereitstellt.
 
@@ -108,7 +101,7 @@ Wobei es wie in Listing \ref{vemek} dargestellt von der einsetzenden Applikation
 
 \subsection{Gemeinsame Styles mehrerer Komponenten}\label{gemeinsame-styles-mehrerer-komponenten}
 
-Um nun Style-Regeln auf mehrere Komponenten anzuwenden, stellt Polymer die sogenannten ``Style Modules'' bereit. Diese ersetzen die ab Version 1.1 nicht mehr unterstützte Möglichkeit, externe Stylesheets zu verwenden. Style Modules sind dabei nichts anderes als Komponenten, welche von allen Komponenten importiert werden können, die diese Styles anwenden sollen.
+Um nun Style-Regeln auf mehrere Komponenten anzuwenden, stellt Polymer die sogenannten ``Style Modules'' bereit. Diese ersetzen die ab Version 1.1 nicht mehr unterstützte Möglichkeit, externe Stylesheets zu verwenden. Style Modules sind dabei nichts anderes als Komponenten, welche von allen Komponenten importiert werden können, die diese Styles anwenden sollen. \\
 
 
 \textbf{Style Module anlegen}
@@ -125,10 +118,10 @@ Damit eine Komponente diese Styles nutzen kann, muss sie sie zunächst importier
 \lstinputlisting[language=HTML,label=besm,caption=Benutzung eines Style-Moduls]{kapitel4/listings/1-8.html}
 
 
-\section{\ac{HTML} Imports}\label{polymer-html-imports}
+\section{HTML Imports}\label{polymer-html-imports}
 
 Um mehrere Polymer Komponenten oder Komponenten innerhalb anderer Komponenten zu benutzen, verwendet Polymer \ac{HTML} Imports. Diese funktionieren analog zu der Verwendung mit der nativen \ac{HTML} Imports Technologie (siehe Abschnitt \ref{html-imports}), wobei die selben Vor- und Nachteile auftreten. Polymer kümmert sich dabei lediglich automatisch im Hintergrund um die korrekte Einbindung der \ac{HTML}-Dateien und dessen Bereitstellung im Dokument, falls ein \texttt{\textless{}link\ rel=\dq import\dq\textgreater{}} in einer Komponente enthalten ist. Das manuelle Einbinden mittels der speziellen JavaScript-Methoden oder Eigenschaften, wie beispielsweise der \texttt{import}-Eigenschaft des importierten Elements, wird somit hinfällig.
 
-\subsection{Dynamisches Nachladen von \ac{HTML}}\label{dynamisches-nachladen-von-html}
+\subsection{Dynamisches Nachladen von HTML}\label{dynamisches-nachladen-von-html}
 
 Falls \ac{HTML}-Dateien dynamisch zur Laufzeit nachgeladen werden sollen, bietet Polymer zusätzlich eine Hilfsfunktion an, mit der \ac{HTML} Imports nachträglich ausgeführt werden können \cite{citeulike:13914840}. Die hierfür bereitgestellte Funktion \texttt{importHref(url,\ onload,\ onerror);} importiert beim Aufruf dynamisch die angegebene \ac{HTML}-Datei in das Dokument. Sie erstellt dabei ein \texttt{\textless{}link\ rel=\dq import\dq\textgreater{}}-Element mit der angegeben URL und fügt es dem Dokument hinzu, sodass dieser ausgeführt werden kann. Wenn der Link geladen wurde, also der \texttt{onload}-Callback aufgerufen wird, ist die \texttt{import}-Eigenschaft des Links der Inhalt des  urückgegebenen, importierten \ac{HTML}-Dokuments. Der Parameter \texttt{onerror} ist dabei eine optionale Callback-Funktion, die beim Auftreten eines Fehlers aufgerufen wird.

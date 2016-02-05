@@ -1,9 +1,9 @@
-\section{\ac{HTML} Imports}\label{html-imports}
+\section{HTML Imports}\label{html-imports}
 
 Bisher erlauben es praktisch alle Plattformen, Codeteile zu Importieren und zu verwenden, nur nicht das Web, bzw. \ac{HTML}. Das heutige \ac{HTML} ermöglicht es externe Stylesheets, JavaScript Dateien, Bilder etc. in ein \ac{HTML} Dokument zu importieren, \ac{HTML}-Dateien selbst können jedoch nicht importiert werden. Auch ist es nicht möglich, alle benötigten Dateien in einer Ressource zu bündeln und als einzige Abhängigkeit zu importieren. \ac{HTML} Imports versuchen eben dieses Problem zu lösen. So soll es möglich sein, \ac{HTML}-Dateien und wiederum \ac{HTML}-Dateien in \ac{HTML}-Dateien zu importieren. So können auch verschiedene benötigte Dateien in einer \ac{HTML}-Datei gesammelt und mit nur einem Import in die Seite eingebunden werden. Doppelte Abhängigkeiten sollen dadurch automatisch aufgelöst werden, sodass Dateien, die mehrmals eingebunden werden sollten, automatisch effektiv nur einmal heruntergeladen werden.
 
 
-\subsection{\ac{HTML}-Dateien importieren}\label{html-dateien-importieren}
+\subsection{HTML-Dateien importieren}\label{html-dateien-importieren}
 
 Imports von \ac{HTML}-Dateien werden, wie andere Imports auch, per \texttt{\textless{}link\textgreater{}}-Tag deklariert. Neu ist jedoch der Wert des \texttt{rel}-Attributes, welches auf \texttt{import} gesetzt wird (siehe Listing \ref{iehtmld}) \cite[S. 139-147]{citeulike:13844975}.
 
@@ -32,25 +32,23 @@ Using only one URL, you can package together a single relocatable bundle of web 
 
 So kann beispielsweise das Bootstrap-Framework statt wie bisher mit mehreren Imports mit nur einem Import eingebunden werden. Bisher könnte die Einbindung unter Berücksichtigung der Abhängigkeiten wie in Listing \ref{evbohtmli} aussehen.
 
-\lstinputlisting[language=HTML,label=evbohtmli,caption=Eindindung von Bootstrap ohne \ac{HTML} Imports]{kapitel2/listings/5-2.html}
+\lstinputlisting[language=HTML,label=evbohtmli,caption=Einbindung von Bootstrap ohne \ac{HTML} Imports]{kapitel2/listings/5-2.html}
 
-Stattdessen kann dieses Markup nun in ein einziges \ac{HTML} Dokument, welches alle Abhängigkeiten verwaltet, geschrieben werden. Dieses wird dann mit einem einzigen Import in das eigene \ac{HTML} Dokument importiert (siehe Listing \ref{evbmhehtmli}).
-
-\lstinputlisting[language=HTML,label=evbmhehtmli,caption=Eindindung von Bootstrap mit Hilfe eines \ac{HTML} Imports]{kapitel2/listings/5-3.html}
+Stattdessen kann dieses Markup nun in ein einziges \ac{HTML} Dokument, welches alle Abhängigkeiten verwaltet, geschrieben werden. Dieses wird dann mit einem einzigen Import \texttt{\textless{}link\ rel=\dq import\dq\ href=\dq bootstrap.html\dq\textgreater{}} in das eigene \ac{HTML} Dokument importiert.
 
 
-\subsection{\ac{HTML} Imports verwenden}\label{html-imports-verwenden}
+\subsection{HTML Imports verwenden}\label{html-imports-verwenden}
 
 Importierte \ac{HTML}-Dateien werden nicht nur in das Dokument eingefügt, sondern vom Parser verarbeitet, das bedeutet, dass mit JavaScript auf das \ac{DOM} des Imports zugegriffen werden kann. Wenn sie vom Parser verarbeitet worden sind, sind sie zwar verfügbar, allerdings werden die Inhalte nicht angezeigt bis sie mittels JavaScript in das \ac{DOM} eingefügt werden. Ihre enthaltenen Scripte werden also ausgeführt, Styles und \ac{HTML}-Knoten werden jedoch ignoriert. Um nun die Inhalte eines Imports auf der Seite einzubinden und auf sie zuzugreifen muss auf die \texttt{.import} Eigenschaft des \texttt{\textless{}link\textgreater{}}-Tags mit dem Import zugegriffen werden \texttt{var\ content\ =\ document.querySelector('link{[}rel=\dq import\dq{]}').import;}. Nun kann mit auf das \ac{DOM} des Imports zugegriffen werden. Beispielsweise kann ein enthaltenes Element mit der Klasse \texttt{element} mit \texttt{var\ el\ =\ content.querySelector('.element');} geklont und anschließend durch \texttt{document.body.appendChild(el.cloneNode(true));} in das eigene \ac{DOM} eingefügt werden. Falls es nun jedoch mehrere Imports geben sollte, können den Imports IDs zugewiesen werden, anhand derer die Imports voneinander unterschieden werden können \cite{citeulike:13853724}. Der komplette Prozess wird in Listing \ref{euvvhtmli} skizziert.
 
-\lstinputlisting[language=HTML,label=euvvhtmli,caption=Einbinden und Verwenden von \ac{HTML} Imports]{kapitel2/listings/5-4.html}
+\lstinputlisting[language=HTML,label=euvvhtmli,caption=Einbinden und Verwenden von \ac{HTML} Imports]{kapitel2/listings/5-3.html}
 
 
 \subsection{Abhängigkeiten verwalten}\label{abhuxe4ngigkeiten-verwalten}
 
 Doch wie sieht es nun mit Abhängigkeiten von Imports aus? So kommt es des öfteren vor, dass verschiedene Bibliotheken, welche auf der Seite eingebunden werden, die gleichen Abhängigkeiten haben und diese verwaltet werden müssen. Sollte dies nicht sauber gemacht werden, können unerwartete Fehler auftreten, die mitunter nur schwer zu identifizieren sind. \ac{HTML} Imports verwalten diese automatisch. Um das zu erreichen, wird jede Abhängigkeit in eine zu importierende \ac{HTML}-Datei geschrieben, welche diese bündelt. Haben nun mehrere solcher Imports die gleichen Abhängigkeiten, werden diese vom Browser erkannt und nur einmal heruntergeladen und eingebunden. Mehrfachdownloads und Konflikte der Abhängigkeiten werden so verhindert. Das Listing \ref{ahvmhtmli} nach \cite{citeulike:13853700} verdeutlicht dieses Szenario.
 
-\lstinputlisting[language=HTML,label=ahvmhtmli,caption=Abhängigkeitsverwaltung mit \ac{HTML} Imports]{kapitel2/listings/5-5.html}
+\lstinputlisting[language=HTML,label=ahvmhtmli,caption=Abhängigkeitsverwaltung mit \ac{HTML} Imports]{kapitel2/listings/5-4.html}
 
 Selbst wenn die jQuery-Library in mehreren Dateien eingebunden wird, wird hier sie dennoch nur einmal übertragen. Wenn nun fremde \ac{HTML}-Dateien eingebunden werden muss auch nicht auf die auf die Reihenfolge der Imports geachtet werden, da diese selbst ihre Abhängigkeiten beinhalten.
 
@@ -65,7 +63,7 @@ Das obige Beispiel zeigt, dass \ac{HTML} Imports selbst wiederum auch \ac{HTML} 
 Ein signifikantes Problem der \ac{HTML} Imports ist die Performance, welche bei komplexen Anwendungen schnell abfallen kann. Werden auf einer Seite mehrere Imports eingebunden, die selbst wiederum Imports beinhalten können, so steigt die Anzahl an Requests an den Server schnell exponentiell an, was die Webseite stark verlangsamen kann. Auch das vorkommen von doppelten Abhängigkeiten kann die Anzahl an Requests in die Höhe treiben, doch da Browser die Abhängigkeiten nativ schon selbst de-duplizieren, kann dieses Problem in diesem Zusammenhang ignoriert werden \cite{citeulike:13853714}.
 
 
-\subsection{\ac{HTTP}/2}\label{http2}
+\subsection{HTTP/2}\label{http2}
 
 Dennoch sind viele Einzel-Requests ein gewünschtes Verhalten von Web Components, sie sind also ein Feature und kein Bug. Dieses Feature kommt jedoch erst zum Tragen, wenn \ac{HTTP} in Version Zwei in allen Browsern Standard ist. \ac{HTTP}/2 bietet eine Reihe an Vorteilen gegenüber dem heute benutzen \ac{HTTP}/1.1. So können mehrere Requests in einer \ac{TCP}-Verbindung übertragen werden, wobei die Reihenfolge der Antworten auf die Requests keine Rolle spielt. Des Weiteren kann der Client, also der Absender der Requests, die Priorität der angeforderten Dateien bestimmen, somit kann der Server Dateien mit einer hohen Priorität vor Dateien mit niedrigerer Priorität schicken. Um die Größe der zu sendenden Pakete zu reduzieren, setzt \ac{HTTP}/2 eine drastische Header-Kompression ein, welche die Bruttogröße der zu übertragenden Pakete verkleinert. Neu sind außerdem die sogenannten ``Server Pushes'', welche es dem Server ermöglichen, Nachrichten an den Client zu schicken, ohne dass dieser sie anfordern muss.
 

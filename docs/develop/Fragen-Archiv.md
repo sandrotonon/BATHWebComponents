@@ -11,3 +11,10 @@
 - links zu repos in text? -> Links in text
 - Angular Implementierung in Anhang?
   -> Controller, Direktive, Views (Controller & Direktive) Ja
+- Aufzählungen wie in Kapitel 2.2.6 immer als Liste?
+  -> 
+  \begin{description}
+    \item[First] The first item
+    \item[Second] The second item
+    \item[Third] The third etc
+  \end{description}

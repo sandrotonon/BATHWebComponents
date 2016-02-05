@@ -12,14 +12,10 @@ Für den Transport von Daten zwischen Komponenten sieht Polymer das One-Way- und
 
 Das One-Way-Data-Binding erlaubt Attributen nur das Lesen der entsprechenden Eigenschaft seiner Komponente, ein schreibender Zugriff wird jedoch untersagt. Meist wird es verwendet, um Texte basierend auf einer Eigenschaft anzuzeigen, der Text jedoch soll nicht verändert werden oder die Eigenschaft überschreiben. Erreicht wird das One-Way-Data-Binding mit der doppelten eckigen Klammer Syntax \texttt{{[}{[}{]}{]}}. Intern legt Polymer für die Eigenschaft keinen eventListener \texttt{attributeName-changed} für das Attribut \texttt{attributeName} an, somit wird die Eigenschaft, falls das Attribut geändert werden sollte, nicht upgedatet. Beim One-Way-Data-Binding kann dabei zwischen 2 Möglichkeiten unterschieden werden.
 
-
-\textbf{Host to Child}
-
-Das Transportieren der Daten erfolgt nur von Host-Element zum Kind-Element. Hierzu muss zusätzlich der \texttt{readOnly}-Parameter (siehe Abschnitt \ref{declared-properties---eigenschaften-und-methoden-definieren}) nicht definiert oder mit \texttt{false} initialisiert werden.
-
-\textbf{Child to Host}
-
-Der Transport der Daten erfolgt nur von Kind-Element zu Host-Element. Hierzu müssen die \texttt{notify}- und \texttt{readOnly}-Parameter mit \texttt{true} initialisiert werden.
+\begin{description}
+  \item[Host to Child] Das Transportieren der Daten erfolgt nur von Host-Element zum Kind-Element. Hierzu muss zusätzlich der \texttt{readOnly}-Parameter (siehe Abschnitt \ref{declared-properties---eigenschaften-und-methoden-definieren}) nicht definiert oder mit \texttt{false} initialisiert werden.
+  \item[Child to Host] Der Transport der Daten erfolgt nur von Kind-Element zu Host-Element. Hierzu müssen die \texttt{notify}- und \texttt{readOnly}-Parameter mit \texttt{true} initialisiert werden.
+\end{description}
 
 
 \subsection{Two-Way-Data-Binding}\label{two-way-data-binding}

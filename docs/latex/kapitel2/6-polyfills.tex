@@ -7,29 +7,14 @@ In den Abschnitten \ref{custom-elements} bis \ref{html-imports} wurde gezeigt, w
 
 In den einzelnen Unterkapiteln zu den Technologien wurde jeweils kurz gezeigt, ob sie von den Browsern unterstützt wird oder nicht. Es wurde deutlich, dass Chrome und Opera bisher die einzigen Vorreiter sind. Bis auf \ac{HTML} Templates, welche von allen modernen Browsern unterstützt werden, unterstützen sie als einzige alle Technologien. \cite{citeulike:13914379}
 
-\textbf{Chrome}
-
-Hat alle Spezifikationen der Web-Component-Standards ab Version 43 komplett implementiert.
-
-\textbf{Firefox}
-
-Unterstützt nativ \ac{HTML} Templates. Custom Elements und Shadow \ac{DOM} sind zwar implementiert, müssen aber manuell mit dem Flag \texttt{dom.webcomponents.enabled} in den Entwicklereinstellungen aktiviert werden. \ac{HTML} Imports werden, wie in Kapitel \ref{html-imports} erwähnt, bis auf weiteres nicht unterstützt.
-
-\textbf{Safari}
-
-\ac{HTML} Templates werden ab Version 8 unterstützt, Custom Elements und Shadow \ac{DOM} befinden sich in der Entwicklung (Stand Januar 2016), \ac{HTML} Imports werden jedoch nicht unterstützt.
-
-\textbf{Internet Explorer}
-
-Als einziger Browser unterstützt der Internet Explorer keine der Web-Components-Technologien. Die Unterstützung wird - auf Grund der Einstellung der Entwicklung und des Wechsels zu Microsoft Edge - auch nicht nachträglich implementiert werden.
-
-\textbf{Microsoft Edge}
-
-Templates werden ab Version 13 unterstützt, über die Entwicklung der restlichen Technologien kann allerdings abgestimmt werden \cite{citeulike:13914237}.
-
-\textbf{Mobile Browser}
-
-Alle Technologien werden bisher nur auf Android in den Browsern Chrome für Android, Opera und Android Browser unterstützt.
+\begin{description}
+  \item[Chrome] Hat alle Spezifikationen der Web-Component-Standards ab Version 43 komplett implementiert.
+  \item[Firefox] Unterstützt nativ \ac{HTML} Templates. Custom Elements und Shadow \ac{DOM} sind zwar implementiert, müssen aber manuell mit dem Flag \texttt{dom.webcomponents.enabled} in den Entwicklereinstellungen aktiviert werden. \ac{HTML} Imports werden, wie in Kapitel \ref{html-imports} erwähnt, bis auf weiteres nicht unterstützt.
+  \item[Safari] \ac{HTML} Templates werden ab Version 8 unterstützt, Custom Elements und Shadow \ac{DOM} befinden sich in der Entwicklung (Stand Januar 2016), \ac{HTML} Imports werden jedoch nicht unterstützt.
+  \item[Internet Explorer] Als einziger Browser unterstützt der Internet Explorer keine der Web-Components-Technologien. Die Unterstützung wird - auf Grund der Einstellung der Entwicklung und des Wechsels zu Microsoft Edge - auch nicht nachträglich implementiert werden.
+  \item[Microsoft Edge] Templates werden ab Version 13 unterstützt, über die Entwicklung der restlichen Technologien kann allerdings abgestimmt werden \cite{citeulike:13914237}.
+  \item[Mobile Browser] Alle Technologien werden bisher nur auf Android in den Browsern Chrome für Android, Opera und Android Browser unterstützt.
+\end{description}
 
 Die Unterstützung der modernen Browser ist also noch verhalten, wird sich aber stark verbessern. Das bedeutet jedoch nicht, dass die Web Components noch nicht verwendet werden können. Mittels JavaScript besteht die Möglichkeit, deren Funktionalitäten den aktuellen Browsern, welche Web Components nicht unterstützen, sowie noch älteren Browsern beizubringen. Das hierfür benutzte JavaScript wird Polyfill genannt, mit dessen Hilfe können die Funktionen auf alle relevanten Browser portiert werden.
 
@@ -56,23 +41,16 @@ Mit dem Einsatz der webcomponents.js Polyfills werden die Web Components auch au
 
 Jedoch werden auch trotz Einsatz des Polyfills nur die aktuelleren Versionen des jeweiligen Browsers unterstützt. Darunter fallen weiterhin nicht beispielsweise der Internet Explorer in Version 8 und 9. Des Weiteren werden einige Technologien auf Grund der Komplexität nicht komplett simuliert. Hier muss bei einigen Technologien auf folgende Punkte geachtet werden.
 
-\textbf{Custom Elements}
 
-Die \ac{CSS}-Pseudoklasse \texttt{:unresolved} wird nicht unterstützt.
 
-\textbf{Shadow \ac{DOM}}
-
-Das Shadow \ac{DOM} kann auf Grund der Kapselung nicht komplett künstlich simuliert werden, dennoch versucht das webcomponents.js Polyfill einige der Features zu simulieren. So sprechen definierte \ac{CSS}-Regeln alle Elemente in einem künstlichen Shadow Root an - Als würde man den \texttt{\textgreater{}\textgreater{}\textgreater{}} Selektor benutzen - auch die \texttt{::shadow} und \texttt{::content} Pseudoelemente verhalten sich so.
-
-\textbf{\ac{HTML} Templates}
-
-Templates, welche mit einem Polyfill erzeugt werden, sind nicht unsichtbar für den Browser, ihre enthaltenen Ressourcen werden also schon beim initialen Laden der Seite heruntergeladen.
-
-\textbf{\ac{HTML} Imports}
-
-Die zu importierenden \ac{HTML}-Dateien werden mit einem \ac{XHR}, und somit asynchron heruntergeladen, selbst wenn das \texttt{async}-Attribut (siehe Abschnitt \ref{asynchrones-laden-von-imports}) nicht gesetzt ist.
+\begin{description}
+  \item[Custom Elements] Die \ac{CSS}-Pseudoklasse \texttt{:unresolved} wird nicht unterstützt.
+  \item[Shadow \ac{DOM}] Das Shadow \ac{DOM} kann auf Grund der Kapselung nicht komplett künstlich simuliert werden, dennoch versucht das webcomponents.js Polyfill einige der Features zu simulieren. So sprechen definierte \ac{CSS}-Regeln alle Elemente in einem künstlichen Shadow Root an - Als würde man den \texttt{\textgreater{}\textgreater{}\textgreater{}} Selektor benutzen - auch die \texttt{::shadow} und \texttt{::content} Pseudoelemente verhalten sich so.
+  \item[\ac{HTML} Templates] Templates, welche mit einem Polyfill erzeugt werden, sind nicht unsichtbar für den Browser, ihre enthaltenen Ressourcen werden also schon beim initialen Laden der Seite heruntergeladen.
+  \item[\ac{HTML} Imports] Die zu importierenden \ac{HTML}-Dateien werden mit einem \ac{XHR}, und somit asynchron heruntergeladen, selbst wenn das \texttt{async}-Attribut (siehe Abschnitt \ref{asynchrones-laden-von-imports}) nicht gesetzt ist.
+\end{description}
 
 
 \subsection{Performance}\label{performance}
 
-Das webcomponents.js-JavaScript bringt mit seiner Größe von 116KB \cite{citeulike:13914238} einen großen Umfang mit, was sich negativ auf die Ladezeiten der Webseite auswirkt. Des Weiteren müssen die von den Browsern nicht unterstützten und ignorierten \ac{CSS}-Regeln - wie \texttt{::shadow} oder \texttt{::slotted} - mit Regular Expressions nachgebaut werden, was momentan 40 Stück sind. Das macht die Polyfills extrem komplex und träge. Die Funktionen zum Traversieren des \ac{DOM}s müssen angepasst werden, damit nur die richtigen Elemente angezeigt werden und eine Shadow Boundary simuliert wird. Diese werden mit 42 Wrappern umgesetzt, was wie die Regular Expressions zur Simulation der \ac{CSS}-Regeln sehr aufwändig ist. Allerdings können einige Funktionen wie \texttt{window.document} schlichtweg nicht überschrieben werden. Im Allgemeinen wird die \ac{DOM}-\ac{API} stark verlangsamt, wodurch die Performance - speziell auf mobilen Browsern - drastisch sinkt und mitunter nicht tolerierbar ist \cite{citeulike:13886251}.
+Das webcomponents.js-JavaScript \cite{citeulike:13914238} bringt mit seiner Größe von 116KB einen großen Umfang mit, was sich negativ auf die Ladezeiten der Webseite auswirkt. Des Weiteren müssen die von den Browsern nicht unterstützten und ignorierten \ac{CSS}-Regeln - wie \texttt{::shadow} oder \texttt{::slotted} - mit Regular Expressions nachgebaut werden, was momentan 40 Stück sind. Das macht die Polyfills extrem komplex und träge. Die Funktionen zum Traversieren des \ac{DOM}s müssen angepasst werden, damit nur die richtigen Elemente angezeigt werden und eine Shadow Boundary simuliert wird. Diese werden mit 42 Wrappern umgesetzt, was wie die Regular Expressions zur Simulation der \ac{CSS}-Regeln sehr aufwändig ist. Allerdings können einige Funktionen wie \texttt{window.document} schlichtweg nicht überschrieben werden. Im Allgemeinen wird die \ac{DOM}-\ac{API} stark verlangsamt, wodurch die Performance - speziell auf mobilen Browsern - drastisch sinkt und mitunter nicht tolerierbar ist \cite{citeulike:13886251}.
