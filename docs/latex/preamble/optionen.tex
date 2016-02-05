@@ -1,5 +1,5 @@
 \setcounter{tocdepth}{2}  %% Uebreschriften bis subsectionw ins Inhaltsverzeichnis
-\setcounter{secnumdepth}{3}  %% Nummerierung bis subsection
+\setcounter{secnumdepth}{2}  %% Nummerierung bis subsection
 
 
 %%% Codebeispiele - Style
@@ -38,8 +38,8 @@
 
 
 % Hurenkind und Schusterjunge vermeiden
-\widowpenalty
-\clubpenalty
+\clubpenalty = 10000 % schliesst Schusterjungen aus
+\widowpenalty = 10000 \displaywidowpenalty = 10000% schliesst Hurenkinder aus
 
 
 % Alle Listen mit einem "-" statt einem Punkt

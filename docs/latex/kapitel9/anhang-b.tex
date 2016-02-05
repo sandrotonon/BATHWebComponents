@@ -1,0 +1,332 @@
+\chapter*{Anhang B - Polymer Web Komponente}\label{anhang-b---polymer-web-komponente}
+\addcontentsline{toc}{chapter}{Anhang B - Polymer Web Komponente}
+
+\section*{Polymer Seed-Element}\label{polymer-seed-element}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{<!--}
+\CommentTok{@license}
+\CommentTok{Copyright (c) 2015 The Polymer Project Authors. All rights reserved.}
+\CommentTok{This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt}
+\CommentTok{The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt}
+\CommentTok{The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt}
+\CommentTok{Code distributed by Google as part of the polymer project is also}
+\CommentTok{subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt}
+\CommentTok{-->}
+\KeywordTok{<link}\OtherTok{ rel=}\StringTok{"import"}\OtherTok{ href=}\StringTok{"../polymer/polymer.html"}\KeywordTok{>}
+
+\CommentTok{<!--}
+\CommentTok{An element providing a solution to no problem in particular.}
+
+\CommentTok{Example:}
+
+\CommentTok{    <my-element></my-element>}
+
+\CommentTok{@group Seed Elements}
+\CommentTok{@element my-element}
+\CommentTok{@demo demo/index.html}
+\CommentTok{@hero hero.svg}
+\CommentTok{-->}
+\KeywordTok{<dom-module}\OtherTok{ id=}\StringTok{"my-element"}\KeywordTok{>}
+
+  \KeywordTok{<template>}
+    \KeywordTok{<style>}
+\ErrorTok{      :host \{}
+        \NormalTok{display}\DecValTok{:} \NormalTok{block;}
+        \NormalTok{box-sizing}\DecValTok{:} \NormalTok{border-box;}
+      \NormalTok{\}}
+
+      \FloatTok{.author} \NormalTok{img }\KeywordTok{\{}
+        \KeywordTok{display:} \DataTypeTok{block}\KeywordTok{;}
+        \KeywordTok{float:} \DataTypeTok{left}\KeywordTok{;}
+        \KeywordTok{margin-right:} \DataTypeTok{5px}\KeywordTok{;}
+        \KeywordTok{max-height:} \DataTypeTok{100px}\KeywordTok{;}
+        \KeywordTok{max-width:} \DataTypeTok{100px}\KeywordTok{;}
+      \KeywordTok{\}}
+    \KeywordTok{</style>}
+    \KeywordTok{<h1>}\DecValTok{&lt;}\NormalTok{my-element}\DecValTok{&gt;}\KeywordTok{</h1>}
+    \KeywordTok{<content></content>}
+    \KeywordTok{<p}\OtherTok{ class=}\StringTok{"author"}\KeywordTok{>}
+      \KeywordTok{<img}\OtherTok{ src=}\StringTok{"\{\{author.image\}\}"}\KeywordTok{>}
+      \NormalTok{Cheers,}\KeywordTok{<br/>}
+      \KeywordTok{<span}\OtherTok{ class=}\StringTok{"name"}\KeywordTok{>}\NormalTok{\{\{author.name\}\}}\KeywordTok{</span>}
+    \KeywordTok{</p>}
+  \KeywordTok{</template>}
+
+\KeywordTok{</dom-module>}
+
+\KeywordTok{<script>}
+
+  \AttributeTok{Polymer}\NormalTok{(}\OperatorTok{\{}
+
+    \DataTypeTok{is}\OperatorTok{:} \StringTok{'my-element'}\OperatorTok{,}
+
+    \DataTypeTok{properties}\OperatorTok{:} \OperatorTok{\{}
+
+      \CommentTok{/**}
+\CommentTok{       * `fancy` indicates that the element should don a monocle and tophat,}
+\CommentTok{       * while checking its pocket watch.}
+\CommentTok{       */}
+      \DataTypeTok{fancy}\OperatorTok{:} \NormalTok{Boolean}\OperatorTok{,}
+
+      \CommentTok{/**}
+\CommentTok{       * Describes the author of the element, but is really just an excuse to}
+\CommentTok{       * show off JSDoc annotations.}
+\CommentTok{       *}
+\CommentTok{       * }\NormalTok{@type}\CommentTok{ \{\{name: string, image: string\}\}}
+\CommentTok{       */}
+      \DataTypeTok{author}\OperatorTok{:} \OperatorTok{\{}
+        \DataTypeTok{type}\OperatorTok{:} \NormalTok{Object}\OperatorTok{,}
+        \CommentTok{// Use `value` to provide a default value for a property, by setting it}
+        \CommentTok{// on your element's prototype.}
+        \CommentTok{//}
+        \CommentTok{// If you provide a function, as we do here, Polymer will call that}
+        \CommentTok{// _per element instance_.}
+        \CommentTok{//}
+        \CommentTok{// We do that to ensure that each element gets its own copy of the}
+        \CommentTok{// value, rather than having it shared across all instances (via the}
+        \CommentTok{// prototype).}
+        \DataTypeTok{value}\OperatorTok{:} \KeywordTok{function}\NormalTok{() }\OperatorTok{\{}
+          \ControlFlowTok{return} \OperatorTok{\{}
+            \DataTypeTok{name}\OperatorTok{:}  \StringTok{'Dimitri Glazkov'}\OperatorTok{,}
+            \DataTypeTok{image}\OperatorTok{:} \StringTok{'http://addyosmani.com/blog/wp-content/uploads/2013/04/unicorn.jpg'}\OperatorTok{,}
+          \OperatorTok{\};}
+        \OperatorTok{\}}
+      \OperatorTok{\},}
+
+    \OperatorTok{\},}
+
+    \CommentTok{// Element Lifecycle}
+
+    \DataTypeTok{ready}\OperatorTok{:} \KeywordTok{function}\NormalTok{() }\OperatorTok{\{}
+      \CommentTok{// `ready` is called after all elements have been configured, but}
+      \CommentTok{// propagates bottom-up. This element's children are ready, but parents}
+      \CommentTok{// are not.}
+      \CommentTok{//}
+      \CommentTok{// This is the point where you should make modifications to the DOM (when}
+      \CommentTok{// necessary), or kick off any processes the element wants to perform.}
+    \OperatorTok{\},}
+
+    \DataTypeTok{attached}\OperatorTok{:} \KeywordTok{function}\NormalTok{() }\OperatorTok{\{}
+      \CommentTok{// `attached` fires once the element and its parents have been inserted}
+      \CommentTok{// into a document.}
+      \CommentTok{//}
+      \CommentTok{// This is a good place to perform any work related to your element's}
+      \CommentTok{// visual state or active behavior (measuring sizes, beginning animations,}
+      \CommentTok{// loading resources, etc).}
+    \OperatorTok{\},}
+
+    \DataTypeTok{detached}\OperatorTok{:} \KeywordTok{function}\NormalTok{() }\OperatorTok{\{}
+      \CommentTok{// The analog to `attached`, `detached` fires when the element has been}
+      \CommentTok{// removed from a document.}
+      \CommentTok{//}
+      \CommentTok{// Use this to clean up anything you did in `attached`.}
+    \OperatorTok{\},}
+
+    \CommentTok{// Element Behavior}
+
+    \CommentTok{/**}
+\CommentTok{     * The `my-element-lasers` event is fired whenever `fireLasers` is called.}
+\CommentTok{     *}
+\CommentTok{     * }\NormalTok{@event}\CommentTok{ my-element-lasers}
+\CommentTok{     * }\NormalTok{@detail}\CommentTok{ \{\{sound: String\}\}}
+\CommentTok{     */}
+
+    \CommentTok{/**}
+\CommentTok{     * Sometimes it's just nice to say hi.}
+\CommentTok{     *}
+\CommentTok{     * }\KeywordTok{@param}\CommentTok{ }\KeywordTok{\{string\}}\CommentTok{ greeting A positive greeting.}
+\CommentTok{     * }\KeywordTok{@return}\CommentTok{ \{string\} The full greeting.}
+\CommentTok{     */}
+    \DataTypeTok{sayHello}\OperatorTok{:} \KeywordTok{function}\NormalTok{(greeting) }\OperatorTok{\{}
+      \KeywordTok{var} \NormalTok{response }\OperatorTok{=} \NormalTok{greeting }\OperatorTok{||} \StringTok{'Hello World!'}\OperatorTok{;}
+      \ControlFlowTok{return} \StringTok{'my-element says, '} \OperatorTok{+} \NormalTok{response}\OperatorTok{;}
+    \OperatorTok{\},}
+
+    \CommentTok{/**}
+\CommentTok{     * Attempt to destroy this element's enemies with a beam of light!}
+\CommentTok{     *}
+\CommentTok{     * Or, at least, dispatch an event in the vain hope that someone else will}
+\CommentTok{     * do the zapping.}
+\CommentTok{     */}
+    \DataTypeTok{fireLasers}\OperatorTok{:} \KeywordTok{function}\NormalTok{() }\OperatorTok{\{}
+      \KeywordTok{this}\NormalTok{.}\AttributeTok{fire}\NormalTok{(}\StringTok{'my-element-lasers'}\OperatorTok{,} \OperatorTok{\{}\DataTypeTok{sound}\OperatorTok{:} \StringTok{'Pew pew!'}\OperatorTok{\}}\NormalTok{)}\OperatorTok{;}
+    \OperatorTok{\}}
+
+  \OperatorTok{\}}\NormalTok{)}\OperatorTok{;}
+
+\KeywordTok{</script>}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{Implementierung der Polymer Komponente Multi-Navigation-App}\label{implementierung-der-polymer-komponente-multi-navigation-app}
+
+\textbf{multi-navigation-app.html}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{<!--}
+\CommentTok{@license}
+\CommentTok{Copyright (c) 2015 The Polymer Project Authors. All rights reserved.}
+\CommentTok{This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt}
+\CommentTok{The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt}
+\CommentTok{The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt}
+\CommentTok{Code distributed by Google as part of the polymer project is also}
+\CommentTok{subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt}
+\CommentTok{-->}
+
+\KeywordTok{<link}\OtherTok{ rel=}\StringTok{"import"}\OtherTok{ href=}\StringTok{"../paper-tabs/paper-tabs.html"}\KeywordTok{>}
+\KeywordTok{<link}\OtherTok{ rel=}\StringTok{"import"}\OtherTok{ href=}\StringTok{"../paper-toolbar/paper-toolbar.html"}\KeywordTok{>}
+\KeywordTok{<link}\OtherTok{ rel=}\StringTok{"import"}\OtherTok{ href=}\StringTok{"../iron-pages/iron-pages.html"}\KeywordTok{>}
+\KeywordTok{<link}\OtherTok{ rel=}\StringTok{"import"}\OtherTok{ href=}\StringTok{"../paper-drawer-panel/paper-drawer-panel.html"}\KeywordTok{>}
+\KeywordTok{<link}\OtherTok{ rel=}\StringTok{"import"}\OtherTok{ href=}\StringTok{"../paper-button/paper-button.html"}\KeywordTok{>}
+\KeywordTok{<link}\OtherTok{ rel=}\StringTok{"import"}\OtherTok{ href=}\StringTok{"../paper-icon-button/paper-icon-button.html"}\KeywordTok{>}
+\KeywordTok{<link}\OtherTok{ rel=}\StringTok{"import"}\OtherTok{ href=}\StringTok{"../paper-card/paper-card.html"}\KeywordTok{>}
+\KeywordTok{<link}\OtherTok{ rel=}\StringTok{"import"}\OtherTok{ href=}\StringTok{"../iron-icons/iron-icons.html"}\KeywordTok{>}
+
+\KeywordTok{<dom-module}\OtherTok{ id=}\StringTok{"multi-navigation-app"}\KeywordTok{>}
+  \KeywordTok{<template>}
+    \KeywordTok{<style>}
+\ErrorTok{      :host \{}
+        \NormalTok{display}\DecValTok{:} \NormalTok{block;}
+        \NormalTok{box-sizing}\DecValTok{:} \NormalTok{border-box;}
+      \NormalTok{\}}
+      \NormalTok{paper-tabs }\KeywordTok{\{}
+        \KeywordTok{color:} \DataTypeTok{#fff}\KeywordTok{;}
+        \KeywordTok{height:} \DataTypeTok{100%}\KeywordTok{;}
+        \KeywordTok{margin:} \DataTypeTok{auto} \DataTypeTok{-16px}\KeywordTok{;}
+      \KeywordTok{\}}
+\ErrorTok{      #topnavi ::content paper-tab \{}
+        \NormalTok{min-width}\DecValTok{:} \NormalTok{50px;}
+      \NormalTok{\}}
+      \DecValTok{@media} \DecValTok{only all and (min-width: }\DataTypeTok{600px}\DecValTok{) \{}
+        \FloatTok{#topnavi} \DecValTok{::}\NormalTok{content paper-tab }\KeywordTok{\{}
+          \KeywordTok{min-width:} \DataTypeTok{80px}\KeywordTok{;}
+        \KeywordTok{\}}
+      \DecValTok{\}}
+\ErrorTok{      #leftnavi ::content paper-button \{}
+        \NormalTok{margin}\DecValTok{:} \NormalTok{0;}
+        \NormalTok{width}\DecValTok{:} \NormalTok{100%;}
+        \NormalTok{text-align}\DecValTok{:} \NormalTok{left;}
+        \NormalTok{color}\DecValTok{:} \NormalTok{#3f51b5;}
+        \NormalTok{text-transform}\DecValTok{:} \NormalTok{none;}
+      \NormalTok{\}}
+\ErrorTok{      #leftnavi ::content paper-button.iron-selected \{}
+        \NormalTok{font-weight}\DecValTok{:} \NormalTok{bold;}
+      \NormalTok{\}}
+      \NormalTok{iron-pages }\KeywordTok{\{}
+        \KeywordTok{position:} \DataTypeTok{relative}\KeywordTok{;}
+      \KeywordTok{\}}
+      \FloatTok{#paperDrawerPanel} \CharTok{[drawer]}\DecValTok{:not}\NormalTok{(}\CharTok{[style-scope]}\NormalTok{)}\DecValTok{:not}\NormalTok{(}\FloatTok{.style-scope}\NormalTok{) }\KeywordTok{\{}
+        \KeywordTok{border-right:} \DataTypeTok{1px} \DataTypeTok{solid} \DataTypeTok{#e0e0e0}\KeywordTok{;}
+      \KeywordTok{\}}
+      \NormalTok{paper-drawer-panel }\KeywordTok{\{}
+        \KeywordTok{--paper-drawer-panel-main-container:} \NormalTok{\{}
+          \NormalTok{background-color: }\DataTypeTok{#f5f5f5}\KeywordTok{;}
+        \KeywordTok{\}}\NormalTok{;}
+        \NormalTok{--paper-drawer-panel-left-drawer-container}\DecValTok{:} \KeywordTok{\{}
+          \KeywordTok{border-right:} \DataTypeTok{1px} \DataTypeTok{solid} \DataTypeTok{#e5e5e5}\KeywordTok{;}
+        \KeywordTok{\}}\NormalTok{;}
+      \NormalTok{\}}
+\ErrorTok{      #contents ::content paper-card \{}
+        \NormalTok{margin}\DecValTok{:} \NormalTok{0 10%;}
+        \NormalTok{width}\DecValTok{:} \NormalTok{80%;}
+      \NormalTok{\}}
+    \KeywordTok{</style>}
+
+    \KeywordTok{<paper-drawer-panel>}
+      \KeywordTok{<paper-header-panel}\OtherTok{ drawer}\KeywordTok{>}
+        \KeywordTok{<paper-toolbar></paper-toolbar>}
+
+        \CommentTok{<!-- Left Navigation -->}
+        \KeywordTok{<iron-pages}\OtherTok{ id=}\StringTok{"leftnavi"}\KeywordTok{>}
+          \KeywordTok{<content}\OtherTok{ select=}\StringTok{"iron-selector"}\KeywordTok{></content>}
+        \KeywordTok{</iron-pages>}
+      \KeywordTok{</paper-header-panel>}
+
+      \KeywordTok{<paper-header-panel}\OtherTok{ main}\KeywordTok{>}
+        \KeywordTok{<paper-toolbar>}
+          \KeywordTok{<paper-icon-button}\OtherTok{ icon=}\StringTok{"menu"}\OtherTok{ paper-drawer-toggle}\KeywordTok{></paper-icon-button>}
+
+          \CommentTok{<!-- Top Navigation -->}
+          \KeywordTok{<paper-tabs}\OtherTok{ id=}\StringTok{"topnavi"}\OtherTok{ selected=}\StringTok{"\{\{selectedTop\}\}"}\KeywordTok{>}
+            \KeywordTok{<content}\OtherTok{ select=}\StringTok{"paper-tab"}\KeywordTok{></content>}
+          \KeywordTok{</paper-tabs>}
+        \KeywordTok{</paper-toolbar>}
+
+        \CommentTok{<!-- Main Content -->}
+        \KeywordTok{<iron-pages}\OtherTok{ id=}\StringTok{"contents"}\OtherTok{ selected=}\StringTok{"\{\{selectedContent\}\}"}\KeywordTok{>}
+          \KeywordTok{<content}\OtherTok{ select=}\StringTok{".main"}\KeywordTok{></content>}
+        \KeywordTok{</iron-pages>}
+      \KeywordTok{</paper-header-panel>}
+    \KeywordTok{</paper-drawer-panel>}
+
+  \KeywordTok{</template>}
+\KeywordTok{</dom-module>}
+
+\KeywordTok{<script>}
+  \AttributeTok{Polymer}\NormalTok{(}\OperatorTok{\{}
+    \DataTypeTok{is}\OperatorTok{:} \StringTok{'multi-navigation-app'}\OperatorTok{,}
+
+    \DataTypeTok{properties}\OperatorTok{:} \OperatorTok{\{}
+      \DataTypeTok{selectedTop}\OperatorTok{:} \OperatorTok{\{}
+        \DataTypeTok{type}\OperatorTok{:} \NormalTok{Number}\OperatorTok{,}
+        \DataTypeTok{value}\OperatorTok{:} \DecValTok{0}
+      \OperatorTok{\},}
+      \DataTypeTok{selectedContent}\OperatorTok{:} \OperatorTok{\{}
+        \DataTypeTok{type}\OperatorTok{:} \NormalTok{Number}\OperatorTok{,}
+        \DataTypeTok{value}\OperatorTok{:} \DecValTok{0}
+      \OperatorTok{\}}
+    \OperatorTok{\},}
+
+    \CommentTok{// Element Behavior}
+    \DataTypeTok{_countLinks}\OperatorTok{:} \KeywordTok{function}\NormalTok{() }\OperatorTok{\{}
+      \KeywordTok{var} \NormalTok{count }\OperatorTok{=} \DecValTok{0}\OperatorTok{;}
+      \KeywordTok{this}\NormalTok{.}\VariableTok{$}\NormalTok{.}\VariableTok{leftnavi}\NormalTok{.}\AttributeTok{getContentChildren}\NormalTok{().}\AttributeTok{forEach}\NormalTok{(}\KeywordTok{function} \NormalTok{(value}\OperatorTok{,} \NormalTok{i) }\OperatorTok{\{}
+        \KeywordTok{var} \NormalTok{links }\OperatorTok{=} \VariableTok{value}\NormalTok{.}\AttributeTok{children}\OperatorTok{;}
+        \ControlFlowTok{for} \NormalTok{(j }\OperatorTok{=} \DecValTok{0}\OperatorTok{;} \NormalTok{j }\OperatorTok{<} \VariableTok{links}\NormalTok{.}\AttributeTok{length}\OperatorTok{;} \NormalTok{j}\OperatorTok{++}\NormalTok{) }\OperatorTok{\{}
+          \NormalTok{count}\OperatorTok{++;}
+          \NormalTok{links[j].}\AttributeTok{linkNum} \OperatorTok{=} \NormalTok{(count }\OperatorTok{-} \DecValTok{1}\NormalTok{)}\OperatorTok{;}
+        \OperatorTok{\}}
+      \OperatorTok{\}}\NormalTok{)}\OperatorTok{;}
+    \OperatorTok{\},}
+
+    \DataTypeTok{_getSelectedContent}\OperatorTok{:} \KeywordTok{function}\NormalTok{() }\OperatorTok{\{}
+      \ControlFlowTok{return} \KeywordTok{this}\NormalTok{.}\VariableTok{$}\NormalTok{.}\VariableTok{leftnavi}\NormalTok{.}\AttributeTok{getContentChildren}\NormalTok{()[}\KeywordTok{this}\NormalTok{.}\VariableTok{$}\NormalTok{.}\VariableTok{topnavi}\NormalTok{.}\AttributeTok{selected}\NormalTok{].}\VariableTok{selectedItem}\NormalTok{.}\AttributeTok{linkNum}\OperatorTok{;}
+    \OperatorTok{\},}
+
+    \DataTypeTok{_addSelectedHandler}\OperatorTok{:} \KeywordTok{function}\NormalTok{() }\OperatorTok{\{}
+      \KeywordTok{var} \NormalTok{topNaviItems }\OperatorTok{=} \KeywordTok{this}\NormalTok{.}\VariableTok{$}\NormalTok{.}\AttributeTok{topnavi}\OperatorTok{;}
+      \KeywordTok{var} \NormalTok{leftNaviItems }\OperatorTok{=} \KeywordTok{this}\NormalTok{.}\VariableTok{$}\NormalTok{.}\AttributeTok{leftnavi}\OperatorTok{;}
+      \KeywordTok{var} \NormalTok{contents }\OperatorTok{=} \KeywordTok{this}\NormalTok{.}\VariableTok{$}\NormalTok{.}\AttributeTok{contents}\OperatorTok{;}
+      \KeywordTok{var} \NormalTok{that }\OperatorTok{=} \KeywordTok{this}\OperatorTok{;}
+
+      \VariableTok{topNaviItems}\NormalTok{.}\AttributeTok{addEventListener}\NormalTok{(}\StringTok{'iron-select'}\OperatorTok{,} \KeywordTok{function}\NormalTok{() }\OperatorTok{\{}
+        \CommentTok{// init first selected}
+        \VariableTok{leftNaviItems}\NormalTok{.}\AttributeTok{select}\NormalTok{(}\VariableTok{that}\NormalTok{.}\AttributeTok{selectedTop}\NormalTok{)}\OperatorTok{;}
+        \KeywordTok{var} \NormalTok{leftSelected }\OperatorTok{=} \VariableTok{leftNaviItems}\NormalTok{.}\AttributeTok{getContentChildren}\NormalTok{()[}\VariableTok{that}\NormalTok{.}\AttributeTok{selectedTop}\NormalTok{].}\AttributeTok{selectedItem}\OperatorTok{;}
+        \ControlFlowTok{if} \NormalTok{(}\KeywordTok{typeof} \NormalTok{leftSelected }\OperatorTok{==} \StringTok{'undefined'}\NormalTok{) }\OperatorTok{\{}
+          \VariableTok{leftNaviItems}\NormalTok{.}\AttributeTok{getContentChildren}\NormalTok{()[}\VariableTok{that}\NormalTok{.}\AttributeTok{selectedTop}\NormalTok{].}\AttributeTok{select}\NormalTok{(}\DecValTok{0}\NormalTok{)}
+        \OperatorTok{\}}
+
+        \VariableTok{contents}\NormalTok{.}\AttributeTok{select}\NormalTok{(}\VariableTok{that}\NormalTok{.}\AttributeTok{_getSelectedContent}\NormalTok{())}\OperatorTok{;}
+      \OperatorTok{\}}\NormalTok{)}\OperatorTok{;}
+
+      \VariableTok{leftNaviItems}\NormalTok{.}\AttributeTok{getContentChildren}\NormalTok{().}\AttributeTok{forEach}\NormalTok{(}\KeywordTok{function} \NormalTok{(value}\OperatorTok{,} \NormalTok{i) }\OperatorTok{\{}
+        \VariableTok{value}\NormalTok{.}\AttributeTok{addEventListener}\NormalTok{(}\StringTok{'iron-select'}\OperatorTok{,} \KeywordTok{function} \NormalTok{(e) }\OperatorTok{\{}
+          \VariableTok{contents}\NormalTok{.}\AttributeTok{select}\NormalTok{(}\VariableTok{that}\NormalTok{.}\AttributeTok{_getSelectedContent}\NormalTok{())}\OperatorTok{;}
+        \OperatorTok{\}}\NormalTok{)}\OperatorTok{;}
+      \OperatorTok{\}}\NormalTok{)}\OperatorTok{;}
+    \OperatorTok{\},}
+  \OperatorTok{\}}\NormalTok{)}\OperatorTok{;}
+\OperatorTok{<}\SpecialStringTok{/script>}
+\end{Highlighting}
+\end{Shaded}
+
+\emph{Diese Komponente kann auch auf GitHub unter
+https://github.com/glur4k/multi-navigation-app und in dem
+customelements.io Elemente Katalog unter
+https://customelements.io/glur4k/multi-navigation-app/. Sie kann
+ebenfalls mit Bower \texttt{bower\ install\ multi-navigation-app}
+heruntergeladen werden.}

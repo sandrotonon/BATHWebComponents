@@ -1,4 +1,4 @@
-\section{Implementierung einer Komponente mit den nativen Web Component APIs}\label{implementierung-einer-komponente-mit-den-nativen-web-component-apis}
+\section{Implementierung einer Komponente mit den nativen Web-Component-APIs}\label{implementierung-einer-komponente-mit-den-nativen-web-component-apis}
 
 Anhand der vorhergehenden Abschnitte wird in diesem Abschnitt die Implementierung der Web Komponente \texttt{\textless{}custom-element\textgreater{}} mit den nativen \ac{HTML} APIs erläutert. Diese soll dabei das Markup in einem Shadow \ac{DOM} kapseln und den übergebenen Inhalt darstellen. Des Weiteren soll dessen Farbe über das Attribut \texttt{theme} optional konfiguriert werden können. Die gerenderte Komponente wird in Abbildung \ref{fig:gwkmnapis} dargestellt.
 
@@ -44,5 +44,5 @@ Bevor das erstellte Template eingebunden werden kann, muss zunächst ein Shadow 
 
 \subsection{Element importieren und verwenden}\label{element-importieren-und-verwenden}
 
-Das Element ist somit vollständig und kann in einer beliebigen Webseite oder Applikation eingesetzt werden. Hierzu muss das Element mittels \texttt{\textless{}link\ rel=\dq import\dq\ href=\dq elements/custom-element.html\dq\textgreater{}} zunächst importiert werden. Es kann anschließend mit entsprechenden Attributen und Inhalt auf der Seite eingebettet werden, wie beispielsweise der Konfiguration \texttt{\textless{}custom-element\ theme=\dq style1\dq\textgreater{}Reader\textless{}/custom-element\textgreater{}}. Das vollständige Beispiel der Komponente, sowie dessen Einbindung in ein \ac{HTML}-Dokument sind im Anhang zu finden. \todo{referenz}
+Das Element ist somit vollständig und kann in einer beliebigen Webseite oder Applikation eingesetzt werden. Hierzu muss das Element mittels \texttt{\textless{}link\ rel=\dq import\dq\ href=\dq elements/custom-element.html\dq\textgreater{}} zunächst importiert werden. Es kann anschließend mit entsprechenden Attributen und Inhalt auf der Seite eingebettet werden, wie beispielsweise der Konfiguration \texttt{\textless{}custom-element\ theme=\dq style1\dq\textgreater{}Light DOM\textless{}/custom-element\textgreater{}}. Das vollständige Beispiel der Komponente, sowie dessen Einbindung in ein \ac{HTML}-Dokument sind im Anhang zu finden. \todo{referenz}
 

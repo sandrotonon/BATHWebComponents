@@ -1,6 +1,11 @@
-<link rel="stylesheet" href="bootstrap.css">
-<link rel="stylesheet" href="fonts.css">
-<script src="jquery.js"></script>
-<script src="bootstrap.js"></script>
-<script src="bootstrap-tooltip.js"></script>
-<script src="bootstrap-dropdown.js"></script>
+<head>
+  <link rel="import" href="my-import.html" id="import1">
+  <link rel="import" href="another-import.html" id="import2">
+</head>
+<body>
+  <script>
+    var content = document.querySelector('#import1').import;
+    var el = content.querySelector('.element');
+    document.body.appendChild(el.cloneNode(true));
+  </script>
+</body>

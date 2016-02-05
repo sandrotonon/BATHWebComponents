@@ -1,0 +1,106 @@
+\chapter*{Anhang A - Native Web Komponente}\label{anhang-a---native-web-komponente}
+\addcontentsline{toc}{chapter}{Anhang A - Native Web Komponente}
+
+\section*{HTML Struktur zum Benutzen einer Web Komponente mit den nativen APIs}\label{html-struktur-zum-benutzen-einer-web-komponente-mit-den-nativen-apis}
+
+\textbf{index.html:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DataTypeTok{<!DOCTYPE }\NormalTok{html}\DataTypeTok{>}
+\KeywordTok{<html}\OtherTok{ lang=}\StringTok{"en"}\KeywordTok{>}
+\KeywordTok{<head>}
+  \KeywordTok{<meta}\OtherTok{ charset=}\StringTok{"UTF-8"}\KeywordTok{>}
+  \KeywordTok{<title>}\NormalTok{Demo of a Custom Element}\KeywordTok{</title>}
+
+  \CommentTok{<!-- Import the web component -->}
+  \KeywordTok{<link}\OtherTok{ rel=}\StringTok{"import"}\OtherTok{ href=}\StringTok{"elements/custom-element.html"}\KeywordTok{>}
+\KeywordTok{</head>}
+\KeywordTok{<body>}
+
+  \CommentTok{<!-- Use the web component -->}
+  \KeywordTok{<custom-element}\OtherTok{ theme=}\StringTok{"style1"}\KeywordTok{>}\NormalTok{Reader}\KeywordTok{</custom-element>}
+
+\KeywordTok{</body>}
+\KeywordTok{</html>}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{Implementierung einer Web Komponente mit den nativen
+APIs}\label{implementierung-einer-web-komponente-mit-den-nativen-apis}
+
+\textbf{custom-element.html:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{<template}\OtherTok{ id=}\StringTok{"myElementTemplate"}\KeywordTok{>}
+  \KeywordTok{<style>}
+    \FloatTok{.outer} \KeywordTok{\{} \ErrorTok{...} \KeywordTok{\}}
+    \FloatTok{.style1} \KeywordTok{\{} \KeywordTok{color:} \DataTypeTok{green}\KeywordTok{;} \KeywordTok{\}}
+    \FloatTok{.style2} \KeywordTok{\{} \KeywordTok{color:} \DataTypeTok{blue}\KeywordTok{;} \KeywordTok{\}}
+    \FloatTok{.name} \KeywordTok{\{} \KeywordTok{font-size:} \DataTypeTok{35pt}\KeywordTok{;} \KeywordTok{padding-top:} \DataTypeTok{0.5em}\KeywordTok{;} \KeywordTok{\}}
+  \KeywordTok{</style>}
+
+  \KeywordTok{<div}\OtherTok{ class=}\StringTok{"outer"}\KeywordTok{>}
+    \NormalTok{Welcome in the Web Component}
+    \KeywordTok{<div}\OtherTok{ class=}\StringTok{"name"}\KeywordTok{>}
+      \KeywordTok{<content></content>}
+    \KeywordTok{</div>}
+  \KeywordTok{</div>}
+\KeywordTok{</template>}
+
+\KeywordTok{<script>}
+  \CommentTok{// Refers to the "importee", which is index.html}
+  \KeywordTok{var} \NormalTok{importDoc }\OperatorTok{=} \VariableTok{document}\NormalTok{.}\VariableTok{currentScript}\NormalTok{.}\AttributeTok{ownerDocument}\OperatorTok{;}
+
+  \CommentTok{// Creates an object based in the HTML Element prototype}
+  \KeywordTok{var} \NormalTok{CustomElementProto }\OperatorTok{=} \VariableTok{Object}\NormalTok{.}\AttributeTok{create}\NormalTok{(}\VariableTok{HTMLElement}\NormalTok{.}\AttributeTok{prototype}\NormalTok{)}\OperatorTok{;}
+
+  \CommentTok{// Creates the "theme" attribute and sets a default value}
+  \VariableTok{CustomElementProto}\NormalTok{.}\AttributeTok{theme} \OperatorTok{=} \StringTok{'style1'}\OperatorTok{;}
+
+  \CommentTok{// Fires when an instance of the element is created}
+  \VariableTok{CustomElementProto}\NormalTok{.}\AttributeTok{createdCallback} \OperatorTok{=} \KeywordTok{function}\NormalTok{() }\OperatorTok{\{}
+
+    \CommentTok{// Creates the shadow root}
+    \KeywordTok{var} \NormalTok{shadow }\OperatorTok{=} \KeywordTok{this}\NormalTok{.}\AttributeTok{createShadowRoot}\NormalTok{()}\OperatorTok{;}
+
+    \CommentTok{// Gets content from <template>}
+    \KeywordTok{var} \NormalTok{template }\OperatorTok{=} \VariableTok{importDoc}\NormalTok{.}\AttributeTok{querySelector}\NormalTok{(}\StringTok{'#myElementTemplate'}\NormalTok{).}\AttributeTok{content}\OperatorTok{;}
+
+    \CommentTok{// Adds a template clone into shadow root}
+    \VariableTok{shadow}\NormalTok{.}\AttributeTok{appendChild}\NormalTok{(}\VariableTok{template}\NormalTok{.}\AttributeTok{cloneNode}\NormalTok{(}\KeywordTok{true}\NormalTok{))}\OperatorTok{;}
+
+    \CommentTok{// Caches .outer DOM query}
+    \KeywordTok{this}\NormalTok{.}\AttributeTok{outer} \OperatorTok{=} \VariableTok{shadow}\NormalTok{.}\AttributeTok{querySelector}\NormalTok{(}\StringTok{'.outer'}\NormalTok{)}\OperatorTok{;}
+
+    \CommentTok{// Checks if the "theme" attribute has been overwritten}
+    \ControlFlowTok{if} \NormalTok{(}\KeywordTok{this}\NormalTok{.}\AttributeTok{hasAttribute}\NormalTok{(}\StringTok{'theme'}\NormalTok{)) }\OperatorTok{\{}
+      \KeywordTok{var} \NormalTok{theme }\OperatorTok{=} \KeywordTok{this}\NormalTok{.}\AttributeTok{getAttribute}\NormalTok{(}\StringTok{'theme'}\NormalTok{)}\OperatorTok{;}
+      \KeywordTok{this}\NormalTok{.}\AttributeTok{setTheme}\NormalTok{(theme)}\OperatorTok{;}
+    \OperatorTok{\}} \ControlFlowTok{else} \OperatorTok{\{}
+      \KeywordTok{this}\NormalTok{.}\AttributeTok{setTheme}\NormalTok{(}\KeywordTok{this}\NormalTok{.}\AttributeTok{theme}\NormalTok{)}\OperatorTok{;}
+    \OperatorTok{\}}
+  \OperatorTok{\};}
+
+  \CommentTok{// Fires when an attribute was added, removed, or updated}
+  \VariableTok{CustomElementProto}\NormalTok{.}\AttributeTok{attributeChangedCallback} \OperatorTok{=} \KeywordTok{function}\NormalTok{(attr}\OperatorTok{,} \NormalTok{oldVal}\OperatorTok{,} \NormalTok{newVal) }\OperatorTok{\{}
+    \ControlFlowTok{if} \NormalTok{(attr }\OperatorTok{===} \StringTok{'theme'}\NormalTok{) }\OperatorTok{\{}
+      \KeywordTok{this}\NormalTok{.}\AttributeTok{setTheme}\NormalTok{(newVal)}\OperatorTok{;}
+    \OperatorTok{\}}
+  \OperatorTok{\};}
+
+  \CommentTok{// Sets new value to "theme" attribute}
+  \VariableTok{CustomElementProto}\NormalTok{.}\AttributeTok{setTheme} \OperatorTok{=} \KeywordTok{function}\NormalTok{(val) }\OperatorTok{\{}
+    \KeywordTok{this}\NormalTok{.}\AttributeTok{theme} \OperatorTok{=} \NormalTok{val}\OperatorTok{;}
+    \KeywordTok{this}\NormalTok{.}\VariableTok{outer}\NormalTok{.}\AttributeTok{className} \OperatorTok{=} \StringTok{"outer "} \OperatorTok{+} \KeywordTok{this}\NormalTok{.}\AttributeTok{theme}\OperatorTok{;}
+  \OperatorTok{\};}
+
+  \CommentTok{// Registers <custom-element> in the main document}
+  \VariableTok{document}\NormalTok{.}\AttributeTok{registerElement}\NormalTok{(}\StringTok{"custom-element"}\OperatorTok{,} \OperatorTok{\{}
+    \DataTypeTok{prototype}\OperatorTok{:} \NormalTok{CustomElementProto}
+  \OperatorTok{\}}\NormalTok{)}\OperatorTok{;}
+\KeywordTok{</script>}
+\end{Highlighting}
+\end{Shaded}
+

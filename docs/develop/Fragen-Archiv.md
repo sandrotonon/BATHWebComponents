@@ -18,3 +18,9 @@
     \item[Second] The second item
     \item[Third] The third etc
   \end{description}
+- Die Codeschnipsel im Anhang auch als Listings? -> Pandoc generieren und nicht als listing
+- Liste wie in 6.3.1? -> description list
+- description liste wie in 2.2.6 und 2.3.5? -> check
+- unterabschnitte wi in 2.4.1 ok? -> check
+- Abschnitt 3.2.1 (Link)? -> als Quelle
+

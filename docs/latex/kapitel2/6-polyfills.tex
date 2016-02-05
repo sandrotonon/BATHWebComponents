@@ -1,4 +1,4 @@
-\section{Polyfills mit webcomponents.js}\label{polyfills-mit-webcomponents.js}
+\section{Polyfills}\label{polyfills-mit-webcomponents.js}
 
 In den Abschnitten \ref{custom-elements} bis \ref{html-imports} wurde gezeigt, wie die Web-Components-Technologien funktionieren und ob diese bereits in allen Browsern unterstützt werden. In diesem Abschnitt wird genauer darauf eingegangen, was Polyfills sind, sowie deren Browserunterstützung und Performance, und wie sie die Browserunterstützung der Web-Components-Technologien verbessern.
 
@@ -28,7 +28,7 @@ A polyfill, or polyfiller, is a piece of code (or plugin) that provides the tech
 Mit Hilfe von JavaScript kann eine Technologie also auch in Browsern benutzt werden, welche die Technologie nicht unterstützen. Mit Hilfe von Polyfills können Technologie-Lücken in Browsern auf mehrere, unterschiedliche Arten (``Poly'') gefüllt (``fill'') werden \cite{citeulike:13914234}. Eine Sammlung an Polyfills für die verschiedenen Technologien der Web Components bildet das JavaScript webcomponents.js. Es wurde von Google im Rahmen von Polymer entwickelt und hat eine dermaßen weite Verbreitung erfahren, dass entschlossen wurde, es auszugliedern, damit es auch unabhängig von der Benutzung von Polymer eingesetzt werden kann \cite{citeulike:13914239}.
 
 
-\subsection{Browserunterstüzung}\label{polyfills-browserunterstuetzung}
+\subsection{Browserunterstützung}\label{polyfills-browserunterstuetzung}
 
 Mit dem Einsatz der webcomponents.js Polyfills werden die Web Components auch auf den Internet Explorer, Firefox sowie Safari portiert. Eine detaillierte Matrix der Browserunterstützung der Web Components mit Einsatz der Polyfills ist in Abbildung \ref{fig:bdwctmwcjs} \cite{citeulike:13914238} dargestellt.
 
@@ -54,3 +54,9 @@ Jedoch werden auch trotz Einsatz des Polyfills nur die aktuelleren Versionen des
 \subsection{Performance}\label{performance}
 
 Das webcomponents.js-JavaScript \cite{citeulike:13914238} bringt mit seiner Größe von 116KB einen großen Umfang mit, was sich negativ auf die Ladezeiten der Webseite auswirkt. Des Weiteren müssen die von den Browsern nicht unterstützten und ignorierten \ac{CSS}-Regeln - wie \texttt{::shadow} oder \texttt{::slotted} - mit Regular Expressions nachgebaut werden, was momentan 40 Stück sind. Das macht die Polyfills extrem komplex und träge. Die Funktionen zum Traversieren des \ac{DOM}s müssen angepasst werden, damit nur die richtigen Elemente angezeigt werden und eine Shadow Boundary simuliert wird. Diese werden mit 42 Wrappern umgesetzt, was wie die Regular Expressions zur Simulation der \ac{CSS}-Regeln sehr aufwändig ist. Allerdings können einige Funktionen wie \texttt{window.document} schlichtweg nicht überschrieben werden. Im Allgemeinen wird die \ac{DOM}-\ac{API} stark verlangsamt, wodurch die Performance - speziell auf mobilen Browsern - drastisch sinkt und mitunter nicht tolerierbar ist \cite{citeulike:13886251}.
+
+
+\subsection{\texorpdfstring{Request-Minimierung mit ``Vulcanize''}{Request-Minimierung mit Vulcanize}}\label{request-minimierung-mit-vulcanize}
+
+Webseiten können viele verschiedene, modular aufgebaute Stylesheets, JavaScript-Dateien etc. beinhalten, welche die Anzahl an Requests erhöhen. Um die Anzahl an Requests zu verringern gibt es in der Webentwicklung bereits mehrere verschiedene Hilfsmittel. So werden die einzelnen Stylesheets oder auch JavaScript Dateien zu einer einzigen Datei konkateniert, sodass für das komplette Styling und JavaScript jeweils eine große Datei entsteht, welche nur einen Request an den Server benötigen. Zusätzlich können die konkatenierten Dateien noch minifiziert werden, um ihre Größe zu verringern und die Ladezeiten zu verkürzen. Selbiges Prinzip kann auch auf die \ac{HTML} Imports angewendet werden. Google stellt hierfür das Tool Vulcanize \cite{citeulike:13879681} bereit, welches serverseitig ermöglicht, einzelne kleine Web Components eine einzige große Web Component zu konkatenieren. Benannt nach der Vulkanisation, werden metaphorisch die einzelnen Elemente in ein beständigere Materialien umgewandelt. Vulcanize reduziert dabei eine \ac{HTML}-Datei und ihre zu importierenden \ac{HTML}-Dateien in eine einzige Datei. Somit werden die unterschiedlichen Requests in nur einem einzigen Request gebündelt und Ladezeiten und Bandbreite minimiert.
+

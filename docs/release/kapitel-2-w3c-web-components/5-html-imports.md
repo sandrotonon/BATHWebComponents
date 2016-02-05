@@ -6,14 +6,7 @@ Bisher erlauben es praktisch alle Plattformen, Codeteile zu Importieren und zu v
 ### HTML-Dateien importieren
 
 Imports von HTML-Dateien werden, wie andere Imports auch, per `<link>`-Tag deklariert. Neu ist jedoch der Wert des `rel`-Attributes, welches auf `import` gesetzt wird. \cite[S. 139-147]{citeulike:13844975}
-
-```html
-<head>
-  <link rel="import" href="/my-import.html">
-</head>
-```
-
-Sollte nun ein HTML Import mehrfach aufgeführt sein, oder eine HTML-Datei anfordern, die schon geladen wurde, so wird die Abhängigkeit automatisch ignoriert und die Datei nur ein einziges Mal übertragen. Dadurch wird eventuell in den HTML-Dateien enthaltenes JavaScript auch nur ein mal ausgeführt. Es ist jedoch zu beachten, dass HTML Imports nur auf Ressourcen der gleichen Quelle, also dem gleichen Host, respektive der gleichen Domain zugreifen können. Imports von HTML-Dateien von verschiedenen Quellen stellen eine Sicherheitslücke dar, da Webbrowser die SOP verfolgen. 
+Somit kann nun beispielsweise mittels `<link rel="import" href="my-import.html">` die HTML-Datei `my-import.html` importiert werden. Sollte nun ein HTML Import mehrfach aufgeführt sein, oder eine HTML-Datei anfordern, die schon geladen wurde, so wird die Abhängigkeit automatisch ignoriert und die Datei nur ein einziges Mal übertragen. Dadurch wird eventuell in den HTML-Dateien enthaltenes JavaScript auch nur ein mal ausgeführt. Es ist jedoch zu beachten, dass HTML Imports nur auf Ressourcen der gleichen Quelle, also dem gleichen Host, respektive der gleichen Domain zugreifen können. Imports von HTML-Dateien von verschiedenen Quellen stellen eine Sicherheitslücke dar, da Webbrowser die SOP verfolgen. 
 
 > The same-origin policy restricts how a document or script loaded from one origin can interact with a resource from another origin. It is a critical security mechanism for isolating potentially malicious documents. [citeulike:13853253]
 

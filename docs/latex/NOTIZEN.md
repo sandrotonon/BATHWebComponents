@@ -18,6 +18,8 @@ Lösung:
     + Blockzitat: Quelle als BibVerweis an das Ende des Zitats
     + Bild: Im Text auf das Bild verweisen und die Quelle im Text angeben (siehe Abbildung X [Quelle])
 
+- Floating listings:
+  float,floatplacement=H
 
 - Bilder:
     + Immer im Text auf Bilder verweisen!
@@ -26,6 +28,10 @@ Lösung:
 
 - Abschnittsverweise: 
     + Mit Labels
+
+
+- Zeilenumbrüche in texttt:
+  \texttt{Work\allowbreak flow}
 
 
 - Drucken:

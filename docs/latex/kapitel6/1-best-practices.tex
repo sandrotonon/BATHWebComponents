@@ -70,19 +70,13 @@ Barrierefreiheit ist besonders im öffentlichen Sektor sehr wichtig, weshalb sie
 
 Der erste Punkt, der eine barrierefreie Applikation auszeichnet, ist deren Bedienbarkeit mit einer Tastatur. So müssen alle Elemente, die eine Interaktion erlauben, mit der Tastatur mittels der Tab- oder den Pfeil-Tasten erreichbar sein. Dies muss gewährleistet werden, falls die Benutzer nicht in der Lage sind eine Maus zu benutzen, oder falls sie nur eine Tastatur benutzen wollen. Um dies zu erreichen, kann das \texttt{tabindex}-Attribut deklarativ für die Elemente definiert werden. Es kann dabei 3 verschiedene Werte annehmen:
 
-\begin{itemize}
-\item
-  -1, es kann fokussiert werden, aber nicht in einer speziellen
-  Reihenfolge im Kontext der umliegenden Elemente
-\item
-  0, das Element kann in der normalen Reihenfolge des \ac{DOM}s fokussiert
-  werden
-\item
-  \textgreater{} 0, das Element kann in einer selbst definierten Reihenfolge fokussiert
-  werden
-\end{itemize}
+\begin{description}
+  \item[-1] Es kann fokussiert werden, aber nicht in einer speziellen Reihenfolge im Kontext der umliegenden Elemente.
+  \item[0] Es kann in der normalen Reihenfolge des \ac{DOM}s fokussiert werden.
+  \item[\textgreater{} 0] Es kann in einer selbst definierten Reihenfolge fokussiert werden.
+\end{description}
 
-Der Wert \texttt{\textgreater{}\ 0} sollte allerdings im lokalen \ac{DOM} einer Komponente vermieden werden, da nicht vorhersehbar ist, in welcher Reihenfolge das Element auf der einbindenden Webseite zum Einsatz kommt. Alternativ zu der deklarativen Definition des \texttt{tabindex}-Attributs kann es auch in Polymers \texttt{hostAttributes}-Objekt definiert werden, wie im Beispiel einer barrierefreien Komponente in Zeile 15 dargestellt. Nachdem gewährleistet wird, dass das Element mit der Tastatur erreichbar ist, muss dies visuell dargestellt werden. Hierfür kann in den Styles des Elements die Pseudoklasse \texttt{:focus} definiert werden, wie im Beispiel einer barrierefreien Komponente in Zeile 5, oder alternativ das Behavior \texttt{PaperInkyFocusBehavior} dem Element hinzugefügt werden. Muss das Element nun eine Interaktion mit einer bestimmten Taste bereitstellen, so bietet Polymer hierfür das Iron Element \texttt{iron-a11y-keys-behavior} an, welches ein Mixin für Tastatur-Interaktionen darstellt. Es abstrahiert mit einer einfachen Syntax die Unterschiede der Implementierungen von Tastatureingaben der verschiedenen Browser.
+Der Wert \texttt{\textgreater{}\ 0} sollte allerdings im lokalen \ac{DOM} einer Komponente vermieden werden, da nicht vorhersehbar ist, in welcher Reihenfolge das Element auf der einbindenden Webseite zum Einsatz kommt. Alternativ zu der deklarativen Definition des \texttt{tabindex}-Attributs kann es auch in Polymers \texttt{hostAttributes}-Objekt definiert werden, wie im Beispiel einer barrierefreien Komponente (siehe Abschnitt \ref{beispiel-einer-barrierefreien-komponente}) in Zeile 15 dargestellt. Nachdem gewährleistet wird, dass das Element mit der Tastatur erreichbar ist, muss dies visuell dargestellt werden. Hierfür kann in den Styles des Elements die Pseudoklasse \texttt{:focus} definiert werden, wie im Beispiel einer barrierefreien Komponente in Zeile 5, oder alternativ das Behavior \texttt{PaperInkyFocusBehavior} dem Element hinzugefügt werden. Muss das Element nun eine Interaktion mit einer bestimmten Taste bereitstellen, so bietet Polymer hierfür das Iron Element \texttt{iron-a11y-keys-behavior} an, welches ein Mixin für Tastatur-Interaktionen darstellt. Es abstrahiert mit einer einfachen Syntax die Unterschiede der Implementierungen von Tastatureingaben der verschiedenen Browser.
 
 
 \subsection{Semantik}\label{semantik}

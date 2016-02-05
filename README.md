@@ -47,9 +47,8 @@ Transferred: Der Inhalt wurde in LaTeX konvertiert, das Markdown sollte nicht me
 
 ## Sonstige TODOs
 
-- HTML Templates vor Shadow DOM
 - AngularJS App in Anhang
-- Nummerierung des Inhaltsverzeichnis
+- Kapitel 7.1.3 Auflistung der Elemente zu breit
 
 
 ### Erledigt
@@ -65,6 +64,8 @@ Transferred: Der Inhalt wurde in LaTeX konvertiert, das Markdown sollte nicht me
 - Performanz -> Performance
 - zwei, drei etc. in 2, 3 etc. umwandeln
 - Bilder im Text referenzieren
+- HTML Templates vor Shadow DOM
+- Nummerierung des Inhaltsverzeichnis
 
 
 ## Konventionen

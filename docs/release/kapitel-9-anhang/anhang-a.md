@@ -1,23 +1,38 @@
+# Anhang A - Native Web Komponente
+
+## HTML Struktur zum Benutzen einer Web Komponente mit den nativen APIs
+
+**index.html**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo of a Custom Element</title>
+
+  <!-- Import the web component -->
+  <link rel="import" href="elements/custom-element.html">
+</head>
+<body>
+
+  <!-- Use the web component -->
+  <custom-element theme="style1">Reader</custom-element>
+
+</body>
+</html>
+```
+
+
+## Implementierung einer Web Komponente mit den nativen APIs
+
+**custom-element.html**
+```html
 <template id="myElementTemplate">
   <style>
-    .outer {
-      border: 2px solid black;
-      font-size: 16pt;
-      width: 10em;
-      height: 6em;
-      text-align: center;
-      padding: 10pt;
-    }
-    .style1 {
-      color: green;
-    }
-    .style2 {
-      color: blue;
-    }
-    .name {
-      font-size: 30pt;
-      padding-top: 0.5em;
-    }
+    .outer { ... }
+    .style1 { color: green; }
+    .style2 { color: blue; }
+    .name { font-size: 35pt; padding-top: 0.5em; }
   </style>
 
   <div class="outer">
@@ -45,10 +60,10 @@
     var shadow = this.createShadowRoot();
 
     // Gets content from <template>
-    var content = importDoc.querySelector('#myElementTemplate').content;
+    var template = importDoc.querySelector('#myElementTemplate').content;
 
     // Adds a template clone into shadow root
-    shadow.appendChild(content.cloneNode(true));
+    shadow.appendChild(template.cloneNode(true));
 
     // Caches .outer DOM query
     this.outer = shadow.querySelector('.outer');
@@ -57,8 +72,7 @@
     if (this.hasAttribute('theme')) {
       var theme = this.getAttribute('theme');
       this.setTheme(theme);
-    }
-    else {
+    } else {
       this.setTheme(this.theme);
     }
   };
@@ -73,16 +87,12 @@
   // Sets new value to "theme" attribute
   CustomElementProto.setTheme = function(val) {
     this.theme = val;
-    // Sets "theme" value to the .outer element
-    console.log("setting to: " + this.theme);
-    this.outer.className = this.outer.className + " " + this.theme;
+    this.outer.className = "outer " + this.theme;
   };
 
   // Registers <custom-element> in the main document
   document.registerElement("custom-element", {
     prototype: CustomElementProto
   });
-
-  // Quellen: https://github.com/webcomponents/hello-world-element/blob/master/hello-world.html
-  //          https://teamgaslight.com/blog/roll-your-own-html5-web-components-with-vanilla-js
 </script>
+```
