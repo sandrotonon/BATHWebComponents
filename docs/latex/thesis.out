@@ -15,7 +15,7 @@
 \BOOKMARK [2][-]{subsection.2.3.1}{Bisherige Umsetzung von Templates im Browser}{section.2.3}% 15
 \BOOKMARK [2][-]{subsection.2.3.2}{Das <template>-Tag}{section.2.3}% 16
 \BOOKMARK [2][-]{subsection.2.3.3}{Benutzung}{section.2.3}% 17
-\BOOKMARK [2][-]{subsection.2.3.4}{Vorteile}{section.2.3}% 18
+\BOOKMARK [2][-]{subsection.2.3.4}{Vorteile von HTML Templates}{section.2.3}% 18
 \BOOKMARK [2][-]{subsection.2.3.5}{Browserunterst\374tzung}{section.2.3}% 19
 \BOOKMARK [1][-]{section.2.4}{Shadow DOM}{chapter.2}% 20
 \BOOKMARK [2][-]{subsection.2.4.1}{Shadow DOM nach W3C}{section.2.4}% 21
@@ -29,7 +29,7 @@
 \BOOKMARK [2][-]{subsection.2.4.9}{Browserunterst\374tzung}{section.2.4}% 29
 \BOOKMARK [1][-]{section.2.5}{HTML Imports}{chapter.2}% 30
 \BOOKMARK [2][-]{subsection.2.5.1}{HTML-Dateien importieren}{section.2.5}% 31
-\BOOKMARK [2][-]{subsection.2.5.2}{Vorteil}{section.2.5}% 32
+\BOOKMARK [2][-]{subsection.2.5.2}{Vorteile von HTML Imports}{section.2.5}% 32
 \BOOKMARK [2][-]{subsection.2.5.3}{HTML Imports verwenden}{section.2.5}% 33
 \BOOKMARK [2][-]{subsection.2.5.4}{Abh\344ngigkeiten verwalten}{section.2.5}% 34
 \BOOKMARK [2][-]{subsection.2.5.5}{Sub-Imports}{section.2.5}% 35
@@ -105,9 +105,9 @@
 \BOOKMARK [2][-]{subsection.7.2.2}{Vergleich der Intentionen hinter Polymer und AngularJS}{section.7.2}% 105
 \BOOKMARK [2][-]{subsection.7.2.3}{Vergleich der Technischen Features}{section.7.2}% 106
 \BOOKMARK [0][-]{chapter.8}{Zukunftsprognose}{}% 107
-\BOOKMARK [0][-]{chapter*.48}{Anhang A - Native Web Komponente}{}% 108
-\BOOKMARK [0][-]{chapter*.51}{Anhang B - Polymer Web Komponente}{}% 109
-\BOOKMARK [0][-]{chapter*.54}{Abk\374rzungsverzeichnis}{}% 110
-\BOOKMARK [0][-]{chapter*.55}{Abbildungsverzeichnis}{}% 111
-\BOOKMARK [0][-]{chapter*.56}{Listings}{}% 112
-\BOOKMARK [0][-]{chapter*.58}{Literaturverzeichnis}{}% 113
+\BOOKMARK [0][-]{chapter*.47}{Anhang A - Native Web Komponente}{}% 108
+\BOOKMARK [0][-]{chapter*.50}{Anhang B - Polymer Web Komponente}{}% 109
+\BOOKMARK [0][-]{chapter*.53}{Abk\374rzungsverzeichnis}{}% 110
+\BOOKMARK [0][-]{chapter*.54}{Abbildungsverzeichnis}{}% 111
+\BOOKMARK [0][-]{chapter*.55}{Listings}{}% 112
+\BOOKMARK [0][-]{chapter*.57}{Literaturverzeichnis}{}% 113

@@ -4,23 +4,23 @@ Webseiten werden mit sogenannten Elementen, oder auch Tags, aufgebaut. Das Set a
 
 \begin{figure}[htbp]
  \centering
- \includegraphics[width=\linewidth]{kapitel2/bilder/2-custom-elements-div-suppe}
- \caption{Webseite mit semantisch nicht aussagekräftigem Markup}
+ \includegraphics[width=14cm]{kapitel2/bilder/2-custom-elements-div-suppe}
+ \caption{Screenshot des DOMs der Applikation Google Mail}
  \label{fig:cusel}
 \end{figure}
 
-Sie besteht aus vielen geschachtelten \texttt{\textless{}div\textgreater{}}-Elementen. Die Probleme dieser Struktur sind deutlich: Es ist sehr schwer zu erkennen, welches Element was darstellt und welche Funktion hat. Abgesehen von der fehlenden schnell ersichtlichen Semantik - also der Zuordnung der Bedeutung zu einem Element - ist die Applikation nur schwer wartbar.
+Sie besteht aus vielen geschachtelten \texttt{\textless{}div\textgreater{}}-Elementen und macht folgende strukturelle Probleme deutlich: Die Semantik der Elemente fehlt vollständig und es ist nicht ersichtlich was es darstellt und welche Funkionen es hat, wodurch die Applikation nur sehr schwer wartbar ist.
 
-Dieser Problematik widmen sich die Custom Elements. Sie bieten eine neue \ac{API}, welche es ermöglicht, eigene, semantisch aussagekräftige \ac{HTML}-Elemente sowie deren Eigenschaften und Funktionen zu definieren. Würde das obige Beispiel nun also mit Hilfe von Custom Elements umgesetzt werden, so könnte das zugehörige \ac{DOM} wie in Listing \ref{beamwc} dargestellt aussehen \cite{citeulike:13844982}.
+Dieser Problematik widmen sich die Custom Elements. Sie bieten eine neue \ac{API}, welche es ermöglicht, eigene, semantisch aussagekräftige \ac{HTML}-Elemente mit Eigenschaften und Funktionen zu definieren. Wird das obige Beispiel nun also mit Hilfe von Custom Elements umgesetzt, so könnte das zugehörige \ac{DOM} wie in Listing \ref{beamwc} dargestellt aussehen \cite{citeulike:13844982}.
 
-\lstinputlisting[float,floatplacement=H,language=HTML,label=beamwc,caption=Beispiel einer Applikation mit Web Components]{kapitel2/listings/2-1.html}
+\lstinputlisting[language=HTML,label=beamwc,caption=Beispiel einer Applikation mit Web Components]{kapitel2/listings/2-1.html}
 
 Die Spezifikation des \ac{W3C} ermöglicht nicht nur das Erstellen eigenständiger Elemente, sondern auch das Erstellen von Elementen, welche native Elemente erweitern. Somit können die \ac{API}s von nativen \ac{HTML}-Elementen um eigene Eigenschaften und Funktionen erweitert werden.
 
 
 \subsection{Neue Elemente registrieren}\label{neue-elemente-registrieren}
 
-Um nun ein eigenes Custom Element zu definieren, muss der Name des Custom Elements laut der \ac{W3C} Spezifikation zwingend einen Bindestrich enthalten, beispielsweise \texttt{my-element}. Somit ist gewährleistet, dass der Parser des Browsers die Custom Elements von den nativen Elementen unterscheiden kann \cite{citeulike:13845061}. Ein neues Element wird mittels JavaScript mit der Funktion \texttt{var\ MyElement\ =\ document.registerElement('my-element');} registriert. Zusätzlich zum Namen des Elements kann optional der Prototyp des Elements angegeben werden. Dieser ist jedoch standardmäßig ein \texttt{HTMLElement}, somit also erst wichtig, wenn es darum geht, vorhandene Elemente zu erweitern, auf dieses Thema wird jedoch in Abschnitt \ref{vorhandene-elemente-erweitern-type-extensions} gesondert eingegangen. Durch das Registrieren des Elements wird es in die Registry des Browsers geschrieben, welche dazu verwendet wird, die Definitionen der \ac{HTML}-Elemente aufzulösen. Nachdem das Element registriert wurde, muss es zunächst mittels \texttt{document.createElement(tagName)} erzeugt werden, der \texttt{tagName} ist hierbei der Name des zuvor registrierten Elements. Danach kann es per JavaScript mittels \texttt{document.body.appendChild(myelement);} oder per \ac{HTML}-Deklaration mittels \texttt{\textless{}my-element\textgreater{}\textless{}my-element\textgreater{}} im Dokument verwendet werden \cite[S. 127-138]{citeulike:13844975}.
+Um nun ein eigenes Custom Element zu definieren, muss der Name des Custom Elements laut der \ac{W3C} Spezifikation zwingend einen Bindestrich enthalten, beispielsweise \texttt{my-element}. Somit ist gewährleistet, dass der Parser des Browsers die Custom Elements von den nativen Elementen unterscheiden kann \cite{citeulike:13845061}. Ein neues Element wird mittels JavaScript mit der Funktion \texttt{var\ MyElement\ =\ document.registerElement('my-element');} registriert. Zusätzlich zum Namen des Elements kann optional der Prototyp des Elements angegeben werden. Dieser ist jedoch standardmäßig ein \texttt{HTMLElement}, somit also erst wichtig, wenn es darum geht, vorhandene Elemente zu erweitern (siehe Abschnitt \ref{vorhandene-elemente-erweitern-type-extensions}). Durch das Registrieren des Elements wird es in die Registry des Browsers geschrieben, welche dazu verwendet wird, die Definitionen der \ac{HTML}-Elemente aufzulösen. Nachdem das Element registriert wurde, muss es zunächst mittels \texttt{document.createElement(tagName)} erzeugt werden, der \texttt{tagName} ist hierbei der Name des zuvor registrierten Elements. Danach kann es per JavaScript mittels \texttt{document.body.appendChild(myelement);} oder per \ac{HTML}-Deklaration mittels \texttt{\textless{}my-element\textgreater{}\textless{}my-element\textgreater{}} im Dokument verwendet werden \cite[S. 127-138]{citeulike:13844975}.
 
 
 \subsection{Vorteile von Custom Elements}\label{vorteile-von-custom-elements}
@@ -30,7 +30,7 @@ Ist ein Element noch nicht definiert und nicht beim Browser registriert, steht a
 
 \subsection{Nachteile von Custom Elements}\label{nachteile-von-custom-elements}
 
-Ein Custom Element, welches zwar standardkonform deklariert oder erstellt, aber noch nicht beim Browser registriert wurde, ist ein ``Unresolved Element''. Steht dieses Element am Anfang des \ac{DOM}, wird jedoch erst später registriert, kann es nicht von \ac{CSS} angesprochen werden. Dadurch kann ein \ac{FOUC} entstehen, was bedeutet, dass das Element beim Laden der Seite nicht gestylt dargestellt wird, sondern das definierte Aussehen erst übernimmt, nachdem es registriert wurde. Um dies zu verhindern, sieht die \ac{HTML}-Spezifikation eine neue \ac{CSS}-Pseudoklasse \texttt{:unresolved} vor, welche deklarierte, aber nicht registrierte Elemente anspricht. Somit können diese Elemente initial beim Laden der Seite ausgeblendet und nach dem Registrieren wieder eingeblendet werden. Dadurch wird ein ungewolltes Anzeigen von ungestylten Inhalten verhindert \cite{citeulike:13844984}.
+Ein Custom Element, welches zwar standardkonform deklariert oder erstellt, aber noch nicht beim Browser registriert wurde, ist ein ``Unresolved Element''. Steht dieses Element am Anfang des \ac{DOM}, wird jedoch erst später registriert, kann es nicht von \ac{CSS} angesprochen werden. Dadurch kann ein \ac{FOUC} entstehen, was bedeutet, dass das Element beim Laden der Seite nicht gestylt dargestellt wird, sondern das definierte Aussehen erst übernimmt, nachdem es registriert wurde. Um dies zu verhindern, sieht die \ac{HTML}-Spezifikation eine neue \ac{CSS}-Pseudoklasse \texttt{:unresolved} vor, welche deklarierte, aber nicht registrierte Elemente anspricht. Somit können diese Elemente initial beim Laden der Seite ausgeblendet und nach dem Registrieren wieder eingeblendet werden \cite{citeulike:13844984}.
 
 
 \subsection{Vorhandene Elemente erweitern (Type Extensions)}\label{vorhandene-elemente-erweitern-type-extensions}
