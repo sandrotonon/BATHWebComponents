@@ -1,23 +1,23 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Screenshot des DOMs der Applikation Google Mail\relax }}{4}{figure.caption.8}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Browserunterst\IeC {\"u}tzung von Custom Elements\relax }}{8}{figure.caption.10}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Browserunterst\IeC {\"u}tzung des HTML Template Tags\relax }}{12}{figure.caption.16}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Passwort-Input-Element\relax }}{13}{figure.caption.17}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Shadow \ac {DOM} und Shadow Boundary nach W3C\relax }}{14}{figure.caption.18}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Shadow DOM Beispiel\relax }}{19}{figure.caption.20}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Browserunterst\IeC {\"u}tzung des Shadow DOMs\relax }}{19}{figure.caption.21}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Browserunterst\IeC {\"u}tzung der HTML Imports\relax }}{25}{figure.caption.27}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Browserunterst\IeC {\"u}tzung der Web Components Technologien mit webcomponents.js\relax }}{27}{figure.caption.28}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Gerenderte Web Komponente mit nativen APIs\relax }}{29}{figure.caption.30}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Screenshot des DOMs der Applikation Google Mail\relax }}{4}{figure.caption.7}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Browserunterst\IeC {\"u}tzung von Custom Elements\relax }}{8}{figure.caption.9}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Browserunterst\IeC {\"u}tzung des HTML Template Tags\relax }}{11}{figure.caption.15}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Passwort-Input-Element\relax }}{12}{figure.caption.16}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Shadow \ac {DOM} und Shadow Boundary nach W3C\relax }}{12}{figure.caption.17}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Shadow DOM Beispiel\relax }}{17}{figure.caption.20}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Browserunterst\IeC {\"u}tzung des Shadow DOMs\relax }}{18}{figure.caption.21}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Browserunterst\IeC {\"u}tzung der HTML Imports\relax }}{23}{figure.caption.27}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Browserunterst\IeC {\"u}tzung der Web Components Technologien mit webcomponents.js\relax }}{24}{figure.caption.28}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Gerenderte Komponente mit nativen APIs\relax }}{26}{figure.caption.30}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Schichtenmodell von Polymer\relax }}{33}{figure.caption.33}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Schichtenmodell von Polymer\relax }}{31}{figure.caption.33}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Wahrnehmungen der Benutzer bei unterschiedlichen Ladezeiten\relax }}{50}{figure.caption.35}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Wahrnehmungen der Benutzer bei unterschiedlichen Ladezeiten\relax }}{48}{figure.caption.35}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Darstellung der multi-navigation-app-Komponente\relax }}{59}{figure.caption.41}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Darstellung der Model-View-ViewModel-Architektur von AngularJS\relax }}{61}{figure.caption.45}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Darstellung der multi-navigation-app-Komponente\relax }}{56}{figure.caption.41}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Darstellung der Model-View-ViewModel-Architektur von AngularJS\relax }}{58}{figure.caption.45}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

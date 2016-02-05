@@ -47,8 +47,9 @@ Transferred: Der Inhalt wurde in LaTeX konvertiert, das Markdown sollte nicht me
 
 ## Sonstige TODOs
 
-- AngularJS App in Anhang
+- Anhang! Inhalt + Verweise
 - Kapitel 7.1.3 Auflistung der Elemente zu breit
+- Fazit für Seitenbau
 
 
 ### Erledigt

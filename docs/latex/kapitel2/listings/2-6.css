@@ -7,3 +7,8 @@ my-element {
 [is="button-extended"] {
   color: black;
 }
+
+/* Unregistrierte Custom Elements */
+:unresolved {
+  display: none;
+}

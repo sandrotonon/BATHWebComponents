@@ -3,23 +3,6 @@ A level-1 auxiliary file: htwg/cover.aux
 A level-1 auxiliary file: htwg/title.aux
 A level-1 auxiliary file: htwg/abstract.aux
 A level-1 auxiliary file: htwg/affidavit.aux
-A level-1 auxiliary file: kapitel1/1-einleitung.aux
-A level-1 auxiliary file: kapitel2/1-problemloesung.aux
-A level-1 auxiliary file: kapitel2/2-custom-elements.aux
-A level-1 auxiliary file: kapitel2/3-html-templates.aux
-A level-1 auxiliary file: kapitel2/4-shadow-dom.aux
-A level-1 auxiliary file: kapitel2/5-html-imports.aux
-A level-1 auxiliary file: kapitel2/6-polyfills.aux
-A level-1 auxiliary file: kapitel2/7-beispiel.aux
-A level-1 auxiliary file: kapitel3/1-polymer.aux
-A level-1 auxiliary file: kapitel4/1-analogie.aux
-A level-1 auxiliary file: kapitel5/1-additional-sugar.aux
-A level-1 auxiliary file: kapitel6/1-best-practices.aux
-A level-1 auxiliary file: kapitel7/1-polymer-komponente.aux
-A level-1 auxiliary file: kapitel7/2-angular-vergleich.aux
-A level-1 auxiliary file: kapitel8/1-zukunftsprognose.aux
-A level-1 auxiliary file: kapitel9/anhang-a.aux
-A level-1 auxiliary file: kapitel9/anhang-b.aux
 The style file: apalike-mystyle.bst
 Database file #1: library.bib
 Warning--entry type for "citeulike:13926020" isn't style-file defined
