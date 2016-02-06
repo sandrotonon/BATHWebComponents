@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  6 FEB 2016 00:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  6 FEB 2016 01:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1497,7 +1497,7 @@ Package pdftex.def Info: kapitel2/bilder/7-beispiel.jpg used on input line 40.
 Kapitel 3.
 Package acronym Info: Label `acro:UI' newly defined as it shall be overridden
 although it is yet undefined on input line 8.
-<kapitel3/bilder/1-architektur.png, id=1386, 803.0pt x 657.45625pt>
+<kapitel3/bilder/1-architektur.png, id=1385, 803.0pt x 657.45625pt>
 File: kapitel3/bilder/1-architektur.png Graphic file (type png)
 
 <use kapitel3/bilder/1-architektur.png>
@@ -1537,7 +1537,7 @@ Kapitel 5.
 (./kapitel6/1-best-practices.tex [45]
 Kapitel 6.
 
-<kapitel6/bilder/1-performance-user-perception-reaction-times.jpg, id=1720, 447
+<kapitel6/bilder/1-performance-user-perception-reaction-times.jpg, id=1719, 447
 .92343pt x 149.8097pt>
 File: kapitel6/bilder/1-performance-user-perception-reaction-times.jpg Graphic 
 file (type jpg)
@@ -1575,7 +1575,7 @@ although it is yet undefined on input line 18.
 [52
 
 ] [53]
-<kapitel7/bilder/1-multi-navigation-app.jpg, id=1845, 607.51968pt x 270.25969pt
+<kapitel7/bilder/1-multi-navigation-app.jpg, id=1843, 607.51968pt x 270.25969pt
 >
 File: kapitel7/bilder/1-multi-navigation-app.jpg Graphic file (type jpg)
  <use kapitel7/bilder/1-multi-navigation-app.jpg>
@@ -1594,7 +1594,7 @@ Overfull \hbox (7.44203pt too wide) in paragraph at lines 8--9
 -ent-sei-ti-ges Open-Source-JavaScript-
  []
 
-<kapitel7/bilder/1-model-view-viewmodel.png, id=1862, 385.44pt x 468.75125pt>
+<kapitel7/bilder/1-model-view-viewmodel.png, id=1859, 385.44pt x 468.75125pt>
 File: kapitel7/bilder/1-model-view-viewmodel.png Graphic file (type png)
 
 <use kapitel7/bilder/1-model-view-viewmodel.png>
@@ -1623,12 +1623,12 @@ LaTeX Font Warning: Font shape `OMS/cmtt/bx/n' undefined
 
 LaTeX Font Warning: Font shape `OMS/cmtt/m/it' undefined
 (Font)              using `OMS/cmtt/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 68.
+(Font)              for symbol `textbraceleft' on input line 70.
 
-[63] [64] [65] [66]) (./kapitel9/anhang-c.tex [67]) [68
+[63] [64] [65] [66]) (./kapitel9/anhang-c.tex [67] [68
 
-] (./glossary.tex)
-(./thesis.lof [6
+] [69]) [70]
+(./glossary.tex) (./thesis.lof [6
 
 pdfTeX warning (ext4): destination with the same identifier (name{MVC}) has bee
 n already used, duplicate ignored
@@ -1835,7 +1835,7 @@ twg/affidavit.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 76.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 76.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 079B4C5A782C2275C045F83E10D7867F;8075.
+(rerunfilecheck)             Checksum: C39D2F2806E0CB28B25DB67DCC52BFFB;8081.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1846,10 +1846,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 76.
  ) 
 Here is how much of TeX's memory you used:
- 24105 strings out of 493089
- 439924 string characters out of 6134842
- 674153 words of memory out of 5000000
- 26366 multiletter control sequences out of 15000+600000
+ 24095 strings out of 493089
+ 439848 string characters out of 6134842
+ 674256 words of memory out of 5000000
+ 26354 multiletter control sequences out of 15000+600000
  15125 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  76i,9n,100p,2663b,1613s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1872,10 +1872,10 @@ ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on thesis.pdf (83 pages, 1638385 bytes).
+Output written on thesis.pdf (85 pages, 1640320 bytes).
 PDF statistics:
- 2236 PDF objects out of 2487 (max. 8388607)
- 2079 compressed objects within 21 object streams
- 612 named destinations out of 1000 (max. 500000)
+ 2243 PDF objects out of 2487 (max. 8388607)
+ 2084 compressed objects within 21 object streams
+ 614 named destinations out of 1000 (max. 500000)
  944 words of extra memory for PDF output out of 10000 (max. 10000000)
 

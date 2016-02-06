@@ -229,4 +229,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </script>
 ```
 
-*Diese Komponente kann auch auf GitHub unter https://github.com/glur4k/multi-navigation-app und in dem customelements.io Elemente Katalog unter https://customelements.io/glur4k/multi-navigation-app/. Sie kann ebenfalls mit Bower `bower install multi-navigation-app` heruntergeladen werden.*
+*Diese Komponente ist ebenfalls zu finden auf:*
+
+GitHub: https://github.com/glur4k/multi-navigation-app
+customelements.is Elemente-Katalog: https://customelements.io/glur4k/multi-navigation-app/
+
+*Sie kann ebenfalls mit Bower `bower install multi-navigation-app` heruntergeladen werden.*
+

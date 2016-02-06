@@ -1,7 +1,9 @@
 \chapter*{Anhang B - Polymer Web Component}\label{anhang-b---polymer-web-component}
 \addcontentsline{toc}{chapter}{Anhang B - Polymer Web Component}
 
-\section*{Polymer Seed-Element:}\label{polymer-seed-element}
+\section*{Polymer Seed-Element}\label{polymer-seed-element}
+
+\textbf{my-element.html:}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -81,7 +83,7 @@
         \DataTypeTok{value}\OperatorTok{:} \KeywordTok{function}\NormalTok{() }\OperatorTok{\{}
           \ControlFlowTok{return} \OperatorTok{\{}
             \DataTypeTok{name}\OperatorTok{:}  \StringTok{'Dimitri Glazkov'}\OperatorTok{,}
-            \DataTypeTok{image}\OperatorTok{:} \StringTok{'http://addyosmani.com/blog/wp-content/uploads/2013/04/unicorn.jpg'}\OperatorTok{,}
+            \DataTypeTok{image}\OperatorTok{:} \StringTok{'http://addyosmani.com/unicorn.jpg'}\OperatorTok{,}
           \OperatorTok{\};}
         \OperatorTok{\}}
       \OperatorTok{\},}
@@ -230,7 +232,8 @@
 
       \KeywordTok{<paper-header-panel}\OtherTok{ main}\KeywordTok{>}
         \KeywordTok{<paper-toolbar>}
-          \KeywordTok{<paper-icon-button}\OtherTok{ icon=}\StringTok{"menu"}\OtherTok{ paper-drawer-toggle}\KeywordTok{></paper-icon-button>}
+          \KeywordTok{<paper-icon-button}\OtherTok{ icon=}\StringTok{"menu"}\OtherTok{ paper-drawer-toggle}\KeywordTok{>}
+          \KeywordTok{</paper-icon-button>}
 
           \CommentTok{<!-- Top Navigation -->}
           \KeywordTok{<paper-tabs}\OtherTok{ id=}\StringTok{"topnavi"}\OtherTok{ selected=}\StringTok{"\{\{selectedTop\}\}"}\KeywordTok{>}
@@ -275,11 +278,12 @@
       \OperatorTok{\}}\NormalTok{)}\OperatorTok{;}
     \OperatorTok{\},}
 
-    \DataTypeTok{_getSelectedContent}\OperatorTok{:} \KeywordTok{function}\NormalTok{() }\OperatorTok{\{}
-      \ControlFlowTok{return} \KeywordTok{this}\NormalTok{.}\VariableTok{$}\NormalTok{.}\VariableTok{leftnavi}\NormalTok{.}\AttributeTok{getContentChildren}\NormalTok{()[}\KeywordTok{this}\NormalTok{.}\VariableTok{$}\NormalTok{.}\VariableTok{topnavi}\NormalTok{.}\AttributeTok{selected}\NormalTok{].}\VariableTok{selectedItem}\NormalTok{.}\AttributeTok{linkNum}\OperatorTok{;}
+    \NormalTok{_getSelectedContent}\OperatorTok{:} \KeywordTok{function}\NormalTok{() }\OperatorTok{\{}
+      \ControlFlowTok{return} \KeywordTok{this}\NormalTok{.}\VariableTok{$}\NormalTok{.}\VariableTok{leftnavi}\NormalTok{.}\AttributeTok{getContentChildren}\NormalTok{()[}\KeywordTok{this}\NormalTok{.}\VariableTok{$}\NormalTok{.}\VariableTok{topnavi}\NormalTok{.}\AttributeTok{selected}\NormalTok{]}
+        \NormalTok{.}\VariableTok{selectedItem}\NormalTok{.}\AttributeTok{linkNum}\OperatorTok{;}
     \OperatorTok{\},}
 
-    \DataTypeTok{_addSelectedHandler}\OperatorTok{:} \KeywordTok{function}\NormalTok{() }\OperatorTok{\{}
+    \NormalTok{_addSelectedHandler}\OperatorTok{:} \KeywordTok{function}\NormalTok{() }\OperatorTok{\{}
       \KeywordTok{var} \NormalTok{topNaviItems }\OperatorTok{=} \KeywordTok{this}\NormalTok{.}\VariableTok{$}\NormalTok{.}\AttributeTok{topnavi}\OperatorTok{;}
       \KeywordTok{var} \NormalTok{leftNaviItems }\OperatorTok{=} \KeywordTok{this}\NormalTok{.}\VariableTok{$}\NormalTok{.}\AttributeTok{leftnavi}\OperatorTok{;}
       \KeywordTok{var} \NormalTok{contents }\OperatorTok{=} \KeywordTok{this}\NormalTok{.}\VariableTok{$}\NormalTok{.}\AttributeTok{contents}\OperatorTok{;}
@@ -288,7 +292,8 @@
       \VariableTok{topNaviItems}\NormalTok{.}\AttributeTok{addEventListener}\NormalTok{(}\StringTok{'iron-select'}\OperatorTok{,} \KeywordTok{function}\NormalTok{() }\OperatorTok{\{}
         \CommentTok{// init first selected}
         \VariableTok{leftNaviItems}\NormalTok{.}\AttributeTok{select}\NormalTok{(}\VariableTok{that}\NormalTok{.}\AttributeTok{selectedTop}\NormalTok{)}\OperatorTok{;}
-        \KeywordTok{var} \NormalTok{leftSelected }\OperatorTok{=} \VariableTok{leftNaviItems}\NormalTok{.}\AttributeTok{getContentChildren}\NormalTok{()[}\VariableTok{that}\NormalTok{.}\AttributeTok{selectedTop}\NormalTok{].}\AttributeTok{selectedItem}\OperatorTok{;}
+        \KeywordTok{var} \NormalTok{leftSelected }\OperatorTok{=} \VariableTok{leftNaviItems}\NormalTok{.}\AttributeTok{getContentChildren}\NormalTok{()[that}
+          \NormalTok{.}\AttributeTok{selectedTop}\NormalTok{].}\AttributeTok{selectedItem}\OperatorTok{;}
         \ControlFlowTok{if} \NormalTok{(}\KeywordTok{typeof} \NormalTok{leftSelected }\OperatorTok{==} \StringTok{'undefined'}\NormalTok{) }\OperatorTok{\{}
           \VariableTok{leftNaviItems}\NormalTok{.}\AttributeTok{getContentChildren}\NormalTok{()[}\VariableTok{that}\NormalTok{.}\AttributeTok{selectedTop}\NormalTok{].}\AttributeTok{select}\NormalTok{(}\DecValTok{0}\NormalTok{)}
         \OperatorTok{\}}
@@ -303,6 +308,6 @@
       \OperatorTok{\}}\NormalTok{)}\OperatorTok{;}
     \OperatorTok{\},}
   \OperatorTok{\}}\NormalTok{)}\OperatorTok{;}
-\OperatorTok{<}\SpecialStringTok{/script>}
+\KeywordTok{</script>}
 \end{Highlighting}
 \end{Shaded}

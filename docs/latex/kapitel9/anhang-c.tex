@@ -1,2 +1,168 @@
-\chapter*{Anhang C - Angular Directive}\label{anhang-C---angular-directive}
-\addcontentsline{toc}{chapter}{Anhang C - Angular Directive}
+\chapter*{Anhang C - AngularJS Web Component}\label{anhang-c---angularjs-web-component}
+\addcontentsline{toc}{chapter}{Anhang C - AngularJS Web Component}
+
+\section*{Controller der AnngularJS-Applikation angular-multi-navigation-application}\label{controller-der-angular-multi-navigation-application}
+
+\textbf{main.js:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\StringTok{'use strict'}\OperatorTok{;}
+
+\CommentTok{/**}
+\CommentTok{ * }\NormalTok{@ngdoc}\CommentTok{ function}
+\CommentTok{ * }\KeywordTok{@name}\CommentTok{ }\StringTok{multiNavigationApp.controller:MainCtrl}
+\CommentTok{ * }\NormalTok{@description}
+\CommentTok{ * # MainCtrl}
+\CommentTok{ * Controller of the multiNavigationApp}
+\CommentTok{ */}
+\VariableTok{angular}\NormalTok{.}\AttributeTok{module}\NormalTok{(}\StringTok{'multiNavigationApp'}\NormalTok{)}
+  \NormalTok{.}\AttributeTok{controller}\NormalTok{(}\StringTok{'MainCtrl'}\OperatorTok{,} \KeywordTok{function} \NormalTok{($scope) }\OperatorTok{\{}
+    \VariableTok{$scope}\NormalTok{.}\AttributeTok{sections} \OperatorTok{=} \NormalTok{[}\OperatorTok{\{}
+      \DataTypeTok{title}\OperatorTok{:} \StringTok{'Nav 1'}\OperatorTok{,}
+      \DataTypeTok{subSections}\OperatorTok{:} \NormalTok{[}\OperatorTok{\{}
+        \DataTypeTok{title}\OperatorTok{:} \StringTok{'Sub-Nav 1.1'}\OperatorTok{,}
+        \DataTypeTok{content}\OperatorTok{:} \StringTok{'Content 1.1'}
+      \OperatorTok{\},} \OperatorTok{\{}
+        \DataTypeTok{title}\OperatorTok{:} \StringTok{'Sub-Nav 1.2'}\OperatorTok{,}
+        \DataTypeTok{content}\OperatorTok{:} \StringTok{'Content 1.2'}
+      \OperatorTok{\},} \OperatorTok{\{}
+        \DataTypeTok{title}\OperatorTok{:} \StringTok{'Sub-Nav 1.3'}\OperatorTok{,}
+        \DataTypeTok{content}\OperatorTok{:} \StringTok{'Content 1.3'}
+      \OperatorTok{\},} \OperatorTok{\{}
+        \DataTypeTok{title}\OperatorTok{:} \StringTok{'Sub-Nav 1.4'}\OperatorTok{,}
+        \DataTypeTok{content}\OperatorTok{:} \StringTok{'Content 1.4'}
+      \OperatorTok{\}}\NormalTok{]}
+    \OperatorTok{\},} \OperatorTok{\{}
+      \DataTypeTok{title}\OperatorTok{:} \StringTok{'Nav 2'}\OperatorTok{,}
+      \DataTypeTok{subSections}\OperatorTok{:} \NormalTok{[}\OperatorTok{\{}
+        \DataTypeTok{title}\OperatorTok{:} \StringTok{'Sub-Nav 2.1'}\OperatorTok{,}
+        \DataTypeTok{content}\OperatorTok{:} \StringTok{'Content 2.1'}
+      \OperatorTok{\},} \OperatorTok{\{}
+        \DataTypeTok{title}\OperatorTok{:} \StringTok{'Sub-Nav 2.2'}\OperatorTok{,}
+        \DataTypeTok{content}\OperatorTok{:} \StringTok{'Content 2.2'}
+      \OperatorTok{\},} \OperatorTok{\{}
+        \DataTypeTok{title}\OperatorTok{:} \StringTok{'Sub-Nav 2.3'}\OperatorTok{,}
+        \DataTypeTok{content}\OperatorTok{:} \StringTok{'Content 2.3'}
+      \OperatorTok{\},} \OperatorTok{\{}
+        \DataTypeTok{title}\OperatorTok{:} \StringTok{'Sub-Nav 2.4'}\OperatorTok{,}
+        \DataTypeTok{content}\OperatorTok{:} \StringTok{'Content 2.4'}
+      \OperatorTok{\}}\NormalTok{]}
+    \OperatorTok{\},} \OperatorTok{\{}
+      \DataTypeTok{title}\OperatorTok{:} \StringTok{'Nav 3'}\OperatorTok{,}
+      \DataTypeTok{subSections}\OperatorTok{:} \NormalTok{[}\OperatorTok{\{}
+        \DataTypeTok{title}\OperatorTok{:} \StringTok{'Sub-Nav 3.1'}\OperatorTok{,}
+        \DataTypeTok{content}\OperatorTok{:} \StringTok{'Content 3.1'}
+      \OperatorTok{\},} \OperatorTok{\{}
+        \DataTypeTok{title}\OperatorTok{:} \StringTok{'Sub-Nav 3.2'}\OperatorTok{,}
+        \DataTypeTok{content}\OperatorTok{:} \StringTok{'Content 3.2'}
+      \OperatorTok{\},} \OperatorTok{\{}
+        \DataTypeTok{title}\OperatorTok{:} \StringTok{'Sub-Nav 3.3'}\OperatorTok{,}
+        \DataTypeTok{content}\OperatorTok{:} \StringTok{'Content 3.3'}
+      \OperatorTok{\},} \OperatorTok{\{}
+        \DataTypeTok{title}\OperatorTok{:} \StringTok{'Sub-Nav 3.4'}\OperatorTok{,}
+        \DataTypeTok{content}\OperatorTok{:} \StringTok{'Content 3.4'}
+      \OperatorTok{\}}\NormalTok{]}
+    \OperatorTok{\}}\NormalTok{]}\OperatorTok{;}
+  \OperatorTok{\}}\NormalTok{)}\OperatorTok{;}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{Direktive der AnngularJS-Applikation angular-multi-navigation-application}\label{direktive-der-angular-multi-navigation-application}
+
+\textbf{multi-navigation.js:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\StringTok{'use strict'}\OperatorTok{;}
+
+\CommentTok{/**}
+\CommentTok{ * }\NormalTok{@ngdoc}\CommentTok{ directive}
+\CommentTok{ * }\KeywordTok{@name}\CommentTok{ }\StringTok{multiNavigationApp.directive:multiNavigation}
+\CommentTok{ * }\NormalTok{@description}
+\CommentTok{ * # multiNavigation}
+\CommentTok{ */}
+\VariableTok{angular}\NormalTok{.}\AttributeTok{module}\NormalTok{(}\StringTok{'multiNavigationApp'}\NormalTok{)}
+  \NormalTok{.}\AttributeTok{directive}\NormalTok{(}\StringTok{'multiNavigation'}\OperatorTok{,} \KeywordTok{function} \NormalTok{() }\OperatorTok{\{}
+    \ControlFlowTok{return} \OperatorTok{\{}
+      \DataTypeTok{scope}\OperatorTok{:} \OperatorTok{\{}
+        \DataTypeTok{sections}\OperatorTok{:} \StringTok{'='}
+      \OperatorTok{\},}
+      \DataTypeTok{link}\OperatorTok{:} \KeywordTok{function} \NormalTok{($scope) }\OperatorTok{\{}
+        \VariableTok{$scope}\NormalTok{.}\AttributeTok{selectSection} \OperatorTok{=} \KeywordTok{function} \NormalTok{(section) }\OperatorTok{\{}
+          \VariableTok{$scope}\NormalTok{.}\AttributeTok{selectedSection} \OperatorTok{=} \NormalTok{section}\OperatorTok{;}
+          \VariableTok{$scope}\NormalTok{.}\AttributeTok{selectedSubSection} \OperatorTok{=} \VariableTok{section}\NormalTok{.}\AttributeTok{lastSelected} \OperatorTok{||}
+            \VariableTok{section}\NormalTok{.}\AttributeTok{subSections}\NormalTok{[}\DecValTok{0}\NormalTok{]}\OperatorTok{;}
+        \OperatorTok{\};}
+        \VariableTok{$scope}\NormalTok{.}\AttributeTok{selectSubSection} \OperatorTok{=} \KeywordTok{function} \NormalTok{(subSection) }\OperatorTok{\{}
+          \VariableTok{$scope}\NormalTok{.}\AttributeTok{selectedSubSection} \OperatorTok{=} \NormalTok{subSection}\OperatorTok{;}
+          \VariableTok{$scope}\NormalTok{.}\VariableTok{selectedSection}\NormalTok{.}\AttributeTok{lastSelected} \OperatorTok{=} \NormalTok{subSection}\OperatorTok{;}
+        \OperatorTok{\};}
+        \VariableTok{$scope}\NormalTok{.}\AttributeTok{selectedSection} \OperatorTok{=} \VariableTok{$scope}\NormalTok{.}\AttributeTok{sections}\NormalTok{[}\DecValTok{0}\NormalTok{]}\OperatorTok{;}
+        \VariableTok{$scope}\NormalTok{.}\AttributeTok{selectedSubSection} \OperatorTok{=} \VariableTok{$scope}\NormalTok{.}\VariableTok{selectedSection}\NormalTok{.}\AttributeTok{subSections}\NormalTok{[}\DecValTok{0}\NormalTok{]}\OperatorTok{;}
+      \OperatorTok{\},}
+      \DataTypeTok{templateUrl}\OperatorTok{:} \StringTok{'views/multi-navigation.html'}
+    \OperatorTok{\};}
+  \OperatorTok{\}}\NormalTok{)}\OperatorTok{;}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{View des Controllers der AnngularJS-Applikation angular-multi-navigation-application}\label{view-des-controllers-der-angular-multi-navigation-application}
+
+\textbf{main.html:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{<div}\OtherTok{ layout=}\StringTok{"column"}\OtherTok{ layout-fill}\KeywordTok{>}
+  \KeywordTok{<md-toolbar}\OtherTok{ class=}\StringTok{"md-hue-3"}\KeywordTok{>}
+    \KeywordTok{<div}\OtherTok{ class=}\StringTok{"md-toolbar-tools"}\KeywordTok{>}
+      \KeywordTok{<span>}\NormalTok{multi-navigation-app angular}\KeywordTok{</span>}
+      \CommentTok{<!-- fill up the space between left and right area -->}
+      \KeywordTok{<span}\OtherTok{ flex}\KeywordTok{></span>}
+    \KeywordTok{</div>}
+  \KeywordTok{</md-toolbar>}
+  \KeywordTok{<md-content>}
+      \KeywordTok{<multi-navigation}\OtherTok{ sections=}\StringTok{"sections"}\KeywordTok{></multi-navigation>}
+  \KeywordTok{</md-content>}
+\KeywordTok{</div>}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{View der Direktive der AnngularJS-Applikation angular-multi-navigation-application}\label{view-der-direktive-der-angular-multi-navigation-application}
+
+\textbf{multi-navigation.html:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{<div}\OtherTok{ layout=}\StringTok{"row"}\KeywordTok{>}
+  \KeywordTok{<md-sidenav}\OtherTok{ md-component-id=}\StringTok{"left"}\OtherTok{ md-is-locked-open=}\StringTok{"true"}
+\OtherTok{    class=}\StringTok{"md-sidenav-left"}\KeywordTok{>}
+    \KeywordTok{<md-toolbar></md-toolbar>}
+    \KeywordTok{<md-content}\OtherTok{ layout-padding}\KeywordTok{>}
+      \KeywordTok{<md-list}\OtherTok{ ng-if=}\StringTok{"selectedSection"}\KeywordTok{>}
+        \KeywordTok{<md-list-item}
+\OtherTok{          ng-repeat=}\StringTok{"subSection in selectedSection.subSections"}
+\OtherTok{          ng-click=}\StringTok{"selectSubSection(subSection)"}
+\OtherTok{          ng-class=}\StringTok{"\{'selected' : selectedSubSection === subSection\}"}\KeywordTok{>}
+          \NormalTok{\{\{subSection.title\}\}}
+        \KeywordTok{</md-list-item>}
+      \KeywordTok{</md-list>}
+    \KeywordTok{</md-content>}
+  \KeywordTok{</md-sidenav>}
+  \KeywordTok{<div}\OtherTok{ flex}\KeywordTok{>}
+    \KeywordTok{<md-toolbar>}
+      \KeywordTok{<md-tabs}\OtherTok{ md-selected=}\StringTok{"0"}\OtherTok{ md-border-bottom md-no-pagination}\KeywordTok{>}
+        \KeywordTok{<md-tab}
+\OtherTok{          ng-click=}\StringTok{"selectSection(section)"}
+\OtherTok{          ng-repeat=}\StringTok{"section in sections"}\OtherTok{ label=}\StringTok{"\{\{section.title\}\}"}\KeywordTok{></md-tab>}
+      \KeywordTok{</md-tabs>}
+    \KeywordTok{</md-toolbar>}
+    \KeywordTok{<md-content}\OtherTok{ layout-padding flex}\KeywordTok{>}
+      \KeywordTok{<h1>}\NormalTok{\{\{selectedSubSection.title\}\}}\KeywordTok{</h1>}
+      \NormalTok{\{\{selectedSubSection.content\}\}}
+    \KeywordTok{</md-content>}
+  \KeywordTok{</div>}
+\KeywordTok{</div>}
+\end{Highlighting}
+\end{Shaded}
+

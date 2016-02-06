@@ -23,4 +23,5 @@
 - description liste wie in 2.2.6 und 2.3.5? -> check
 - unterabschnitte wi in 2.4.1 ok? -> check
 - Abschnitt 3.2.1 (Link)? -> als Quelle
-
+- "Web Komponente" oder "Web-Komponente" -> in "Web Component"
+- Anhang Dateinamen mit Doppelpunkt? -> ja

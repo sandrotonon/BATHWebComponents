@@ -101,9 +101,9 @@
 \contentsline {subsection}{\numberline {7.2.2}Vergleich der Intentionen hinter Polymer und AngularJS}{56}{subsection.7.2.2}
 \contentsline {subsection}{\numberline {7.2.3}Vergleich der Technischen Features}{57}{subsection.7.2.3}
 \contentsline {chapter}{\numberline {8}Zukunftsprognose}{58}{chapter.8}
-\contentsline {chapter}{Anhang A - Native Web Component}{60}{chapter*.47}
-\contentsline {chapter}{Anhang B - Polymer Web Component}{62}{chapter*.50}
-\contentsline {chapter}{Anhang C - Angular Directive}{68}{chapter*.53}
+\contentsline {chapter}{Anhang A - Native Web Component}{60}{chapter*.43}
+\contentsline {chapter}{Anhang B - Polymer Web Component}{62}{chapter*.46}
+\contentsline {chapter}{Anhang C - AngularJS Web Component}{68}{chapter*.49}
 \contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{VI}{chapter*.54}
 \contentsline {chapter}{\nonumberline Listings}{VIII}{chapter*.55}
 \contentsline {chapter}{\nonumberline Literaturverzeichnis}{X}{chapter*.57}

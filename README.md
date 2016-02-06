@@ -48,8 +48,6 @@ Transferred: Der Inhalt wurde in LaTeX konvertiert, das Markdown sollte nicht me
 ## Sonstige TODOs
 
 - Anhang! Inhalt + Verweise (auch zu breite Inhalte verbessern)
-- Kapitel 7.1.3 Auflistung der Elemente zu breit
-- Textausbrüche über den Rand entfernen
 - Fazit für Seitenbau
 
 
@@ -68,6 +66,8 @@ Transferred: Der Inhalt wurde in LaTeX konvertiert, das Markdown sollte nicht me
 - Bilder im Text referenzieren
 - HTML Templates vor Shadow DOM
 - Nummerierung des Inhaltsverzeichnis
+- Kapitel 7.1.3 Auflistung der Elemente zu breit
+- Textausbrüche über den Rand entfernen
 
 
 ## Konventionen
