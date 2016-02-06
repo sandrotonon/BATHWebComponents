@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  6 FEB 2016 09:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  6 FEB 2016 09:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1650,13 +1650,7 @@ l.4 ...stom Elements\relax }}{8}{figure.caption.9}
 \openout9 = `thesis.lol'.
 
 
-[8
-
-] (./thesis.tdo)
-\tf@tdo=\write10
-\openout10 = `thesis.tdo'.
-
- (./thesis.bbl [9
+(./thesis.bbl [8
 
 ]
 Underfull \hbox (badness 3861) in paragraph at lines 4--8
@@ -1684,7 +1678,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--64
 []\OT1/cmr/m/n/10.95 Glazkov, D. (2015).  Cu-stom Ele-ments.
  []
 
-[10
+[9
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 82--85
@@ -1749,7 +1743,7 @@ Underfull \hbox (badness 1194) in paragraph at lines 151--156
 o-beantwortet-15-
  []
 
-[11]
+[10]
 Underfull \hbox (badness 1383) in paragraph at lines 163--167
 []\OT1/cmr/m/n/10.95 Polymer - Dev-Tools Ex-ten-si-on (web).  Dev-
  []
@@ -1786,7 +1780,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 239--242
 []\OT1/cmr/m/n/10.95 W3C (2014a).  Cross-Origin Re-sour-ce Sha-ring.
  []
 
-[12]
+[11]
 Overfull \hbox (7.41943pt too wide) in paragraph at lines 244--247
 []\OT1/cmr/m/n/10.95 W3C (2014b).  HTML Tem-pla-tes.  http://www.w3.org/TR/html
 5/scripting-
@@ -1825,15 +1819,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 289--292
 []\OT1/cmr/m/n/10.95 WHATWG (web).  HTML Stan-dard.  htt-
  []
 
-) [13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 76.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 76.
+) [12]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 72.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 72.
  (./thesis.aux (./htwg/cover.aux) (./htwg/title.aux) (./htwg/abstract.aux) (./h
 twg/affidavit.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 76.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 76.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 72.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 72.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: A452C77D71D796E7C117583CD1860C90;8081.
+(rerunfilecheck)             Checksum: 46F0D00815208F7ABB8BB27D1EBAF832;8081.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1841,13 +1835,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 76.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 72.
  ) 
 Here is how much of TeX's memory you used:
- 24023 strings out of 493089
- 438178 string characters out of 6134842
+ 24017 strings out of 493089
+ 438126 string characters out of 6134842
  672097 words of memory out of 5000000
- 26284 multiletter control sequences out of 15000+600000
+ 26283 multiletter control sequences out of 15000+600000
  15125 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  76i,9n,100p,2663b,1613s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1870,10 +1864,10 @@ ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on thesis.pdf (85 pages, 1639969 bytes).
+Output written on thesis.pdf (84 pages, 1639678 bytes).
 PDF statistics:
- 2238 PDF objects out of 2487 (max. 8388607)
- 2079 compressed objects within 21 object streams
- 612 named destinations out of 1000 (max. 500000)
+ 2232 PDF objects out of 2487 (max. 8388607)
+ 2074 compressed objects within 21 object streams
+ 610 named destinations out of 1000 (max. 500000)
  944 words of extra memory for PDF output out of 10000 (max. 10000000)
 

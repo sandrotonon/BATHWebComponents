@@ -106,4 +106,4 @@
 \contentsline {chapter}{Anhang C - AngularJS Web Component}{68}{chapter*.47}
 \contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{VI}{chapter*.52}
 \contentsline {chapter}{\nonumberline Listings}{VIII}{chapter*.53}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{X}{chapter*.55}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{IX}{chapter*.54}
