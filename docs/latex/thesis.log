@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  6 FEB 2016 01:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  6 FEB 2016 09:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1339,8 +1339,6 @@ g.jpg used on input line 79.
 (pdftex.def)             Requested size: 418.25368pt x 105.23036pt.
 )
 (./kapitel2/3-html-templates.tex
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 3.
 Package acronym Info: Label `acro:MVC' newly defined as it shall be overridden
 although it is yet undefined on input line 5.
  [8 <./kapitel2/bilder/2-custom-elements-browserunterstuetzung.jpg>]
@@ -1835,7 +1833,7 @@ twg/affidavit.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 76.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 76.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: C39D2F2806E0CB28B25DB67DCC52BFFB;8081.
+(rerunfilecheck)             Checksum: A452C77D71D796E7C117583CD1860C90;8081.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1846,10 +1844,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 76.
  ) 
 Here is how much of TeX's memory you used:
- 24095 strings out of 493089
- 439848 string characters out of 6134842
- 674256 words of memory out of 5000000
- 26354 multiletter control sequences out of 15000+600000
+ 24023 strings out of 493089
+ 438178 string characters out of 6134842
+ 672097 words of memory out of 5000000
+ 26284 multiletter control sequences out of 15000+600000
  15125 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  76i,9n,100p,2663b,1613s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1872,10 +1870,10 @@ ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on thesis.pdf (85 pages, 1640320 bytes).
+Output written on thesis.pdf (85 pages, 1639969 bytes).
 PDF statistics:
- 2243 PDF objects out of 2487 (max. 8388607)
- 2084 compressed objects within 21 object streams
- 614 named destinations out of 1000 (max. 500000)
+ 2238 PDF objects out of 2487 (max. 8388607)
+ 2079 compressed objects within 21 object streams
+ 612 named destinations out of 1000 (max. 500000)
  944 words of extra memory for PDF output out of 10000 (max. 10000000)
 

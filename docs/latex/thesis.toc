@@ -11,8 +11,8 @@
 \contentsline {subsection}{\numberline {2.2.6}Browserunterst\IeC {\"u}tzung}{8}{subsection.2.2.6}
 \contentsline {section}{\numberline {2.3}HTML Templates}{8}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Bisherige Umsetzung von Templates im Browser}{9}{subsection.2.3.1}
-\contentsline {subsubsection}{\nonumberline Via verstecktem \texttt {\textless {}div\textgreater {}}-Element}{9}{section*.12}
-\contentsline {subsubsection}{\nonumberline Via \texttt {\textless {}script\textgreater {}}-Element}{10}{section*.13}
+\contentsline {subsubsection}{\nonumberline Via verstecktem \texttt {\textless {}div\textgreater {}}-Element}{9}{section*.11}
+\contentsline {subsubsection}{\nonumberline Via \texttt {\textless {}script\textgreater {}}-Element}{10}{section*.12}
 \contentsline {subsection}{\numberline {2.3.2}Das \texttt {\textless {}template\textgreater {}}-Tag}{10}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Benutzung}{11}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}Browserunterst\IeC {\"u}tzung}{11}{subsection.2.3.4}
@@ -101,9 +101,9 @@
 \contentsline {subsection}{\numberline {7.2.2}Vergleich der Intentionen hinter Polymer und AngularJS}{56}{subsection.7.2.2}
 \contentsline {subsection}{\numberline {7.2.3}Vergleich der Technischen Features}{57}{subsection.7.2.3}
 \contentsline {chapter}{\numberline {8}Zukunftsprognose}{58}{chapter.8}
-\contentsline {chapter}{Anhang A - Native Web Component}{60}{chapter*.43}
-\contentsline {chapter}{Anhang B - Polymer Web Component}{62}{chapter*.46}
-\contentsline {chapter}{Anhang C - AngularJS Web Component}{68}{chapter*.49}
-\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{VI}{chapter*.54}
-\contentsline {chapter}{\nonumberline Listings}{VIII}{chapter*.55}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{X}{chapter*.57}
+\contentsline {chapter}{Anhang A - Native Web Component}{60}{chapter*.41}
+\contentsline {chapter}{Anhang B - Polymer Web Component}{62}{chapter*.44}
+\contentsline {chapter}{Anhang C - AngularJS Web Component}{68}{chapter*.47}
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{VI}{chapter*.52}
+\contentsline {chapter}{\nonumberline Listings}{VIII}{chapter*.53}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{X}{chapter*.55}
