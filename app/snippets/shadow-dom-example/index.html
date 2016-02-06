@@ -15,19 +15,18 @@
   </style>
 
   <div id="hello">
-    <div>Hello</div>
-    <div class="styled">Styled</div>
-    <p class="hidden">Hidden Content</p>
+    <div>Hallo</div>
+    <div class="styled">Gestyled</div>
+    <p class="hidden">Inhalt, der vom Shadow DOM ueberschrieben wird.</p>
   </div>
+
   <template id="myTemplate">
     <style>
       .wrapper {
         border: 2px solid black;
         width: 120px;
       }
-      .content {
-        color: red;
-      }
+      .content { color: red; }
     </style>
 
     <div class="wrapper">
@@ -44,5 +43,6 @@
     var clone = document.importNode(template.content, true);
     root.appendChild(clone);
   </script>
+
 </body>
 </html>
