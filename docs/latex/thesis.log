@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  7 FEB 2016 09:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  7 FEB 2016 09:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1287,7 +1287,7 @@ File: kapitel2/bilder/2-custom-elements-div-suppe.jpg Graphic file (type jpg)
  <use kapitel2/bilder/2-custom-elements-div-suppe.jpg>
 Package pdftex.def Info: kapitel2/bilder/2-custom-elements-div-suppe.jpg used o
 n input line 7.
-(pdftex.def)             Requested size: 398.33858pt x 189.1701pt.
+(pdftex.def)             Requested size: 369.88582pt x 175.65817pt.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
@@ -1371,7 +1371,7 @@ pg)
  <use kapitel2/bilder/3-shadow-dom-input-type-password.jpg>
 Package pdftex.def Info: kapitel2/bilder/3-shadow-dom-input-type-password.jpg u
 sed on input line 9.
-(pdftex.def)             Requested size: 207.02292pt x 78.2923pt.
+(pdftex.def)             Requested size: 199.16928pt x 75.32478pt.
 
 <kapitel2/bilder/3-shadow-dom-shadow-boundary.png, id=905, 770.12718pt x 411.78
 844pt>
@@ -1405,13 +1405,13 @@ LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              for symbol `textbraceleft' on input line 68.
 
 [16] (./kapitel2/listings/3-2.html)
-<kapitel2/bilder/3-shadow-dom-beispiel.jpg, id=1045, 104.64093pt x 51.19125pt>
+<kapitel2/bilder/3-shadow-dom-beispiel.jpg, id=1045, 105.39375pt x 55.70813pt>
 File: kapitel2/bilder/3-shadow-dom-beispiel.jpg Graphic file (type jpg)
 
 <use kapitel2/bilder/3-shadow-dom-beispiel.jpg>
 Package pdftex.def Info: kapitel2/bilder/3-shadow-dom-beispiel.jpg used on inpu
 t line 82.
-(pdftex.def)             Requested size: 104.64066pt x 51.19112pt.
+(pdftex.def)             Requested size: 96.73918pt x 51.13478pt.
  [17 <./kapitel2/bilder/3-shadow-dom-beispiel.jpg>]
 <kapitel2/bilder/3-shadow-dom-browserunterstuetzung.jpg, id=1096, 946.28531pt x
  237.13594pt>
@@ -1840,7 +1840,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 72.
 Here is how much of TeX's memory you used:
  24020 strings out of 493089
  438189 string characters out of 6134842
- 673158 words of memory out of 5000000
+ 674145 words of memory out of 5000000
  26285 multiletter control sequences out of 15000+600000
  15125 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1864,7 +1864,7 @@ ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on thesis.pdf (84 pages, 1639769 bytes).
+Output written on thesis.pdf (84 pages, 1650331 bytes).
 PDF statistics:
  2234 PDF objects out of 2487 (max. 8388607)
  2076 compressed objects within 21 object streams
