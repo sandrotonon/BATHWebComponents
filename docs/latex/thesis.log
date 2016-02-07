@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  7 FEB 2016 09:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  7 FEB 2016 18:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1472,8 +1472,14 @@ Overfull \hbox (1.61838pt too wide) in paragraph at lines 54--55
 \OT1/cmr/m/n/10.95 Das webcomponents.js-JavaScript [[]] bringt mit
  []
 
-[25]) (./kapitel2/7-beispiel.tex (./kapitel2/listings/7-1.js) [26]
-(./kapitel2/listings/7-2.js)
+[25]) (./kapitel2/7-beispiel.tex (./kapitel2/listings/7-1.js)
+Overfull \hbox (14.96959pt too wide) in paragraph at lines 13--15
+[]\OT1/cmr/m/n/10.95 Die \OT1/cmtt/l/n/10.95 crea-ted-Call-back\OT1/cmr/m/n/10.
+95 -Funktion soll zun[]achst pr[]ufen ob das At-tri-but \OT1/cmtt/l/n/10.95 the
+-me \OT1/cmr/m/n/10.95 des \OML/cmss/bx/n/10.95 <\OT1/cmtt/l/n/10.95 custom-
+ []
+
+[26] (./kapitel2/listings/7-2.js)
 Overfull \hbox (1.12685pt too wide) in paragraph at lines 18--19
 \OT1/cmtt/l/n/10.95 document.registerElement("custom-element", \OMS/cmtt/m/n/10
 .95 f \OT1/cmtt/l/n/10.95 pro-to-ty-pe: Cu-sto-m-Ele-ment-Pro-
@@ -1840,7 +1846,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 72.
 Here is how much of TeX's memory you used:
  24020 strings out of 493089
  438189 string characters out of 6134842
- 674145 words of memory out of 5000000
+ 673184 words of memory out of 5000000
  26285 multiletter control sequences out of 15000+600000
  15125 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1864,7 +1870,7 @@ ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on thesis.pdf (84 pages, 1650331 bytes).
+Output written on thesis.pdf (84 pages, 1650433 bytes).
 PDF statistics:
  2234 PDF objects out of 2487 (max. 8388607)
  2076 compressed objects within 21 object streams

@@ -1,6 +1,6 @@
 \section{HTML Imports}\label{html-imports}
 
-Bisher erlauben es praktisch alle Plattformen, Codeteile zu Importieren und zu verwenden, nur nicht das Web, bzw. \ac{HTML}. Das heutige \ac{HTML} ermöglicht es externe Stylesheets, JavaScript Dateien, Bilder etc. in ein \ac{HTML} Dokument zu importieren, \ac{HTML}-Dateien selbst können jedoch nicht importiert werden. Auch ist es nicht möglich, alle benötigten Dateien in einer Ressource zu bündeln und als einzige Abhängigkeit zu importieren. \ac{HTML} Imports versuchen eben dieses Problem zu lösen. So soll es möglich sein, \ac{HTML}-Dateien und wiederum \ac{HTML}-Dateien in \ac{HTML}-Dateien zu importieren. So können auch verschiedene benötigte Dateien in einer \ac{HTML}-Datei gesammelt und mit nur einem Import in die Seite eingebunden werden. Doppelte Abhängigkeiten sollen dadurch automatisch aufgelöst werden, sodass Dateien, die mehrmals eingebunden werden sollten, automatisch effektiv nur einmal heruntergeladen werden.
+Bisher erlauben es praktisch alle Plattformen, Codeteile zu importieren und zu verwenden, nur nicht das Web bzw. \ac{HTML}. Das heutige \ac{HTML} ermöglicht es externe Stylesheets, JavaScript Dateien, Bilder etc. in ein \ac{HTML} Dokument zu importieren, \ac{HTML}-Dateien selbst können jedoch nicht importiert werden. Auch ist es nicht möglich, alle benötigten Dateien in einer Ressource zu bündeln und als einzige Abhängigkeit zu importieren. \ac{HTML} Imports versuchen eben dieses Problem zu lösen. So soll es möglich sein, \ac{HTML}-Dateien und wiederum \ac{HTML}-Dateien in \ac{HTML}-Dateien zu importieren. So können auch verschiedene benötigte Dateien in einer \ac{HTML}-Datei gesammelt und mit nur einem Import in die Seite eingebunden werden. Doppelte Abhängigkeiten sollen dadurch automatisch aufgelöst werden, sodass Dateien, die mehrmals eingebunden werden sollten, automatisch effektiv nur einmal heruntergeladen werden.
 
 
 \subsection{HTML-Dateien importieren}\label{html-dateien-importieren}
@@ -37,7 +37,7 @@ Jedoch kann es vorkommen, dass mehrere eingebundenen Bibliotheken die gleichen A
 
 \lstinputlisting[language=HTML,label=ahvmhtmli,caption=Abhängigkeitsverwaltung mit \ac{HTML} Imports]{kapitel2/listings/5-3.html}
 
-Selbst wenn die jQuery-Library in mehreren Dateien eingebunden wird, wird hier sie dennoch nur einmal übertragen. Wenn nun fremde \ac{HTML}-Dateien eingebunden werden, muss auch nicht auf die auf die Reihenfolge der Imports geachtet werden, da diese selbst ihre Abhängigkeiten beinhalten.
+Selbst wenn die jQuery-Library in mehreren Dateien eingebunden wird, wird hier sie dennoch nur einmal übertragen. Wenn nun fremde \ac{HTML}-Dateien eingebunden werden, muss auch nicht auf die Reihenfolge der Imports geachtet werden, da diese selbst ihre Abhängigkeiten beinhalten.
 
 
 \subsection{Sub-Imports}\label{sub-imports}
@@ -61,7 +61,7 @@ Das Rendern der Seite kann unter Umständen sehr lange dauern, da das in den Imp
 
 \subsection{Anwendungen}\label{anwendungen}
 
-Besonders einfach machen \ac{HTML} Imports das Einbinden ganzer Web Applikationen mit \ac{HTML}/JavaScript/\ac{CSS}. Diese können in eine Datei geschrieben, ihre Abhängigkeiten definieren und von anderen importiert werden. Dies macht es sehr einfach, den Code zu organisieren. So können etwa einzelne Abschnitte von Anwendungen oder Code in einzelne Dateien ausgelagert werden, was Web Applikationen modular, austauschbar und wiederverwendbar macht. Falls nun ein oder mehrere Custom Elements in einem \ac{HTML} Import enthalten sind, so werden dessen Interface und Definitionen automatisch gekapselt. Auch wird die Abhängigkeitsverwaltung in Betracht auf die Performance stark verbessert, da der Browser nicht eine große JavaScript-Library, sondern einzelne kleinere JavaScript-Abschnitte parsen und ausführen muss. Diese werden durch die \ac{HTML} Imports parallel geparst, was mit einen enormen Performance-Schub einher geht \cite{citeulike:13853647}.
+Besonders einfach machen \ac{HTML} Imports das Einbinden ganzer Web Applikationen mit \ac{HTML}/JavaScript/\ac{CSS}. Diese können in eine Datei geschrieben, ihre Abhängigkeiten definieren und von anderen importiert werden. Dies macht es sehr einfach, den Code zu organisieren. So können etwa einzelne Abschnitte von Anwendungen oder Code in einzelne Dateien ausgelagert werden, was Web Applikationen modular, austauschbar und wiederverwendbar macht. Falls nun ein oder mehrere Custom Elements in einem \ac{HTML} Import enthalten sind, so werden dessen Interface und Definitionen automatisch gekapselt. Auch wird die Abhängigkeitsverwaltung in Betracht auf die Performance stark verbessert, da der Browser nicht eine große JavaScript-Library, sondern einzelne kleinere JavaScript-Abschnitte parsen und ausführen muss. Diese werden durch die \ac{HTML} Imports parallel geparst, was mit einem enormen Performance-Schub einher geht \cite{citeulike:13853647}.
 
 
 \subsection{Browserunterstützung}\label{browserunterstuxfctzung}
