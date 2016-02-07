@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  6 FEB 2016 09:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  7 FEB 2016 09:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1271,7 +1271,7 @@ although it is yet undefined on input line 3.
 Package acronym Info: Label `acro:CSS' newly defined as it shall be overridden
 although it is yet undefined on input line 3.
 Package acronym Info: Label `acro:API' newly defined as it shall be overridden
-although it is yet undefined on input line 6.
+although it is yet undefined on input line 5.
 [1
 
 
@@ -1307,13 +1307,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 1.
-) [4 <./kapitel2/bilder/2-custom-elements-div-suppe.jpg>]
-Overfull \hbox (2.10297pt too wide) in paragraph at lines 25--26
-\OT1/cmtt/l/n/10.95 ment.body.appendChild(myelement); \OT1/cmr/m/n/10.95 oder d
-e-kla-ra-tiv di-rekt im [][]-Dokument mit-
- []
-
-(./kapitel2/listings/2-2.js
+) [4 <./kapitel2/bilder/2-custom-elements-div-suppe.jpg>] (./kapitel2/listings/
+2-2.js
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 1.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
@@ -1326,7 +1321,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (./kapitel2/listings/2-5.html)
 Package acronym Info: Label `acro:FOUC' newly defined as it shall be overridden
 
-although it is yet undefined on input line 69.
+although it is yet undefined on input line 71.
  [7] (./kapitel2/listings/2-6.css)
 <kapitel2/bilder/2-custom-elements-browserunterstuetzung.jpg, id=792, 945.5325p
 t x 237.88875pt>
@@ -1335,7 +1330,7 @@ File: kapitel2/bilder/2-custom-elements-browserunterstuetzung.jpg Graphic file
 
 <use kapitel2/bilder/2-custom-elements-browserunterstuetzung.jpg>
 Package pdftex.def Info: kapitel2/bilder/2-custom-elements-browserunterstuetzun
-g.jpg used on input line 79.
+g.jpg used on input line 81.
 (pdftex.def)             Requested size: 418.25368pt x 105.23036pt.
 )
 (./kapitel2/3-html-templates.tex
@@ -1450,7 +1445,7 @@ Package acronym Info: Label `acro:TLS' newly defined as it shall be overridden
 although it is yet undefined on input line 54.
 
 [21]
-<kapitel2/bilder/5-html-imports-browserunterstuetzung.jpg, id=1237, 944.02687pt
+<kapitel2/bilder/5-html-imports-browserunterstuetzung.jpg, id=1239, 944.02687pt
  x 235.63031pt>
 File: kapitel2/bilder/5-html-imports-browserunterstuetzung.jpg Graphic file (ty
 pe jpg)
@@ -1460,7 +1455,7 @@ pg used on input line 73.
 (pdftex.def)             Requested size: 418.25368pt x 104.39673pt.
 ) (./kapitel2/6-polyfills.tex [22] [23 <./kapitel2/bilder/5-html-imports-browse
 runterstuetzung.jpg>]
-<kapitel2/bilder/6-webcomponentsjs-browserunterstuetzung.jpg, id=1268, 647.4187
+<kapitel2/bilder/6-webcomponentsjs-browserunterstuetzung.jpg, id=1270, 647.4187
 5pt x 143.78719pt>
 File: kapitel2/bilder/6-webcomponentsjs-browserunterstuetzung.jpg Graphic file 
 (type jpg)
@@ -1471,9 +1466,9 @@ g.jpg used on input line 37.
 (pdftex.def)             Requested size: 418.25368pt x 92.8923pt.
  [24 <./kapitel2/bilder/6-webcomponentsjs-browserunterstuetzung.jpg>]
 Package acronym Info: Label `acro:XHR' newly defined as it shall be overridden
-although it is yet undefined on input line 50.
+although it is yet undefined on input line 48.
 
-Overfull \hbox (1.61838pt too wide) in paragraph at lines 56--57
+Overfull \hbox (1.61838pt too wide) in paragraph at lines 54--55
 \OT1/cmr/m/n/10.95 Das webcomponents.js-JavaScript [[]] bringt mit
  []
 
@@ -1485,7 +1480,7 @@ Overfull \hbox (1.12685pt too wide) in paragraph at lines 18--19
  []
 
 (./kapitel2/listings/7-3.html) (./kapitel2/listings/7-4.html) [27]
-<kapitel2/bilder/7-beispiel.jpg, id=1367, 185.19188pt x 121.20282pt>
+<kapitel2/bilder/7-beispiel.jpg, id=1369, 185.19188pt x 121.20282pt>
 File: kapitel2/bilder/7-beispiel.jpg Graphic file (type jpg)
 
 <use kapitel2/bilder/7-beispiel.jpg>
@@ -1495,7 +1490,7 @@ Package pdftex.def Info: kapitel2/bilder/7-beispiel.jpg used on input line 40.
 Kapitel 3.
 Package acronym Info: Label `acro:UI' newly defined as it shall be overridden
 although it is yet undefined on input line 8.
-<kapitel3/bilder/1-architektur.png, id=1385, 803.0pt x 657.45625pt>
+<kapitel3/bilder/1-architektur.png, id=1387, 803.0pt x 657.45625pt>
 File: kapitel3/bilder/1-architektur.png Graphic file (type png)
 
 <use kapitel3/bilder/1-architektur.png>
@@ -1535,7 +1530,7 @@ Kapitel 5.
 (./kapitel6/1-best-practices.tex [45]
 Kapitel 6.
 
-<kapitel6/bilder/1-performance-user-perception-reaction-times.jpg, id=1719, 447
+<kapitel6/bilder/1-performance-user-perception-reaction-times.jpg, id=1721, 447
 .92343pt x 149.8097pt>
 File: kapitel6/bilder/1-performance-user-perception-reaction-times.jpg Graphic 
 file (type jpg)
@@ -1573,7 +1568,7 @@ although it is yet undefined on input line 18.
 [52
 
 ] [53]
-<kapitel7/bilder/1-multi-navigation-app.jpg, id=1843, 607.51968pt x 270.25969pt
+<kapitel7/bilder/1-multi-navigation-app.jpg, id=1845, 607.51968pt x 270.25969pt
 >
 File: kapitel7/bilder/1-multi-navigation-app.jpg Graphic file (type jpg)
  <use kapitel7/bilder/1-multi-navigation-app.jpg>
@@ -1592,7 +1587,7 @@ Overfull \hbox (7.44203pt too wide) in paragraph at lines 8--9
 -ent-sei-ti-ges Open-Source-JavaScript-
  []
 
-<kapitel7/bilder/1-model-view-viewmodel.png, id=1859, 385.44pt x 468.75125pt>
+<kapitel7/bilder/1-model-view-viewmodel.png, id=1861, 385.44pt x 468.75125pt>
 File: kapitel7/bilder/1-model-view-viewmodel.png Graphic file (type png)
 
 <use kapitel7/bilder/1-model-view-viewmodel.png>
@@ -1669,153 +1664,158 @@ Underfull \hbox (badness 2809) in paragraph at lines 20--23
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--53
+Underfull \hbox (badness 10000) in paragraph at lines 35--38
+[]\OT1/cmr/m/n/10.95 Can I Use - HTT-P/2 (web).  Htt-p/2.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--58
 []\OT1/cmr/m/n/10.95 Dodson, R. (2014).  Sha-dow DOM CSS Che-at Sheet.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--64
+Underfull \hbox (badness 10000) in paragraph at lines 66--69
 []\OT1/cmr/m/n/10.95 Glazkov, D. (2015).  Cu-stom Ele-ments.
  []
 
 [9
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 82--85
+Underfull \hbox (badness 10000) in paragraph at lines 87--90
 []\OT1/cmr/m/n/10.95 Ihrig, C. (2012).  The Ba-sics of the Sha-dow DOM.
  []
 
 
-Underfull \hbox (badness 5245) in paragraph at lines 87--90
+Underfull \hbox (badness 5245) in paragraph at lines 92--95
 []\OT1/cmr/m/n/10.95 Kitamura, E. (2014a).  In-tro-duc-ti-on to Cu-stom Ele-men
 ts.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--100
+Underfull \hbox (badness 10000) in paragraph at lines 102--105
 []\OT1/cmr/m/n/10.95 Kitamura, E. (2015).  In-tro-duc-ti-on to HTML Im-ports.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--105
+Underfull \hbox (badness 10000) in paragraph at lines 107--110
 []\OT1/cmr/m/n/10.95 Kr[]oner, P. (2014a).  Das Web der Zu-kunft.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--116
+Underfull \hbox (badness 10000) in paragraph at lines 118--121
 []\OT1/cmr/m/n/10.95 Lewis, P. (2015).  Po-ly-mer for the Performance-obsessed.
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--127
+Underfull \hbox (badness 10000) in paragraph at lines 129--132
 []\OT1/cmr/m/n/10.95 MDN (2015b).  tem-pla-te - HTML.  htt-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--133
+Underfull \hbox (badness 10000) in paragraph at lines 134--138
 []\OT1/cmr/m/n/10.95 Microsoft (web).  De-vel-oper Re-sources: Mi-cro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--133
+Underfull \hbox (badness 10000) in paragraph at lines 134--138
 \OT1/cmr/m/n/10.95 soft Ed-ge Dev.  https://dev.windows.com/en-us/microsoft-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--138
+Underfull \hbox (badness 10000) in paragraph at lines 140--143
 []\OT1/cmr/m/n/10.95 Mozilla (2015).  The state of Web Com-ponents.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--144
+Underfull \hbox (badness 10000) in paragraph at lines 145--149
 []\OT1/cmr/m/n/10.95 Namics (2014).  Web Com-ponents: HTML Tem-pla-tes.
  []
 
 
-Underfull \hbox (badness 2165) in paragraph at lines 151--156
+Underfull \hbox (badness 2165) in paragraph at lines 156--161
 []\OT1/cmr/m/n/10.95 Perterkroener (2014).  Fra-gen zu HTML5 und Co be-ant-
  []
 
 
-Underfull \hbox (badness 1194) in paragraph at lines 151--156
+Underfull \hbox (badness 1194) in paragraph at lines 156--161
 \OT1/cmr/m/n/10.95 Data-URLs.  http://www.peterkroener.de/fragen-zu-html5-und-c
 o-beantwortet-15-
  []
 
 [10]
-Underfull \hbox (badness 1383) in paragraph at lines 163--167
+Underfull \hbox (badness 1383) in paragraph at lines 168--172
 []\OT1/cmr/m/n/10.95 Polymer - Dev-Tools Ex-ten-si-on (web).  Dev-
  []
 
 
-Underfull \hbox (badness 3009) in paragraph at lines 163--167
+Underfull \hbox (badness 3009) in paragraph at lines 168--172
 \OT1/cmr/m/n/10.95 Tools Ex-ten-si-on.  https://chrome.google.com/webstore/deta
 il/polymer-devtools-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--183
+Underfull \hbox (badness 10000) in paragraph at lines 185--188
 []\OT1/cmr/m/n/10.95 Polymer - Ge-stu-res (web).  Ge-stu-res.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--199
+Underfull \hbox (badness 10000) in paragraph at lines 201--204
 []\OT1/cmr/m/n/10.95 Polymer - Vul-ca-ni-ze (web).  Vul-ca-ni-ze.  htt-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--215
+Underfull \hbox (badness 10000) in paragraph at lines 217--220
 []\OT1/cmr/m/n/10.95 Sharp, R. (2010).  What is a Po-ly-fill?
  []
 
 
-Underfull \hbox (badness 8056) in paragraph at lines 217--221
+Underfull \hbox (badness 8056) in paragraph at lines 222--226
 []\OT1/cmr/m/n/10.95 Sutton, M. (2015).  No-tes On Client-Rendered Ac-ces-si-bi
 -li-ty.
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 239--242
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 244--247
 []\OT1/cmr/m/n/10.95 W3C (2014a).  Cross-Origin Re-sour-ce Sha-ring.
  []
 
-[11]
-Overfull \hbox (7.41943pt too wide) in paragraph at lines 244--247
+
+Overfull \hbox (7.41943pt too wide) in paragraph at lines 249--252
 []\OT1/cmr/m/n/10.95 W3C (2014b).  HTML Tem-pla-tes.  http://www.w3.org/TR/html
 5/scripting-
  []
 
 
-Underfull \hbox (badness 7012) in paragraph at lines 249--252
+Underfull \hbox (badness 7012) in paragraph at lines 254--257
 []\OT1/cmr/m/n/10.95 W3C (2014c).  The Ac-ces-si-bi-li-ty Tree and the DOM Tree
 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 269--272
+Underfull \hbox (badness 10000) in paragraph at lines 274--277
 []\OT1/cmr/m/n/10.95 W3C (web).  In-tro-duc-ti-on to Web Ac-ces-si-bi-li-ty.  h
 tt-
  []
 
 
-Underfull \hbox (badness 3199) in paragraph at lines 274--277
+Underfull \hbox (badness 3199) in paragraph at lines 279--282
 []\OT1/cmr/m/n/10.95 W3Techs (2015).  Usa-ge Sta-ti-stics of HTT-P/2 for Web-si
 -tes.
  []
 
 
-Underfull \hbox (badness 7099) in paragraph at lines 279--282
+Underfull \hbox (badness 7099) in paragraph at lines 284--287
 []\OT1/cmr/m/n/10.95 WebComponents - Po-ly-fills (web).  Po-ly-fills.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--287
+Underfull \hbox (badness 10000) in paragraph at lines 289--292
 []\OT1/cmr/m/n/10.95 WebComponents - web-com-ponents.js
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--292
+Underfull \hbox (badness 10000) in paragraph at lines 294--297
 []\OT1/cmr/m/n/10.95 WHATWG (web).  HTML Stan-dard.  htt-
  []
 
@@ -1838,10 +1838,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 72.
  ) 
 Here is how much of TeX's memory you used:
- 24017 strings out of 493089
- 438126 string characters out of 6134842
- 672097 words of memory out of 5000000
- 26283 multiletter control sequences out of 15000+600000
+ 24020 strings out of 493089
+ 438189 string characters out of 6134842
+ 673158 words of memory out of 5000000
+ 26285 multiletter control sequences out of 15000+600000
  15125 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  76i,9n,100p,2663b,1613s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1864,10 +1864,10 @@ ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on thesis.pdf (84 pages, 1639678 bytes).
+Output written on thesis.pdf (84 pages, 1639769 bytes).
 PDF statistics:
- 2232 PDF objects out of 2487 (max. 8388607)
- 2074 compressed objects within 21 object streams
- 610 named destinations out of 1000 (max. 500000)
+ 2234 PDF objects out of 2487 (max. 8388607)
+ 2076 compressed objects within 21 object streams
+ 611 named destinations out of 1000 (max. 500000)
  944 words of extra memory for PDF output out of 10000 (max. 10000000)
 

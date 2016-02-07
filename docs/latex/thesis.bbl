@@ -31,6 +31,11 @@ Can I Use - HTML Imports (web).
 \newblock {HTML Imports}.
 \newblock http://caniuse.com/\#search=imports.
 
+\bibitem[Can I Use - HTTP/2 web]{citeulike:13879562}
+Can I Use - HTTP/2 (web).
+\newblock Http/2.
+\newblock http://caniuse.com/\#search=http.
+
 \bibitem[Can I Use - Shadow DOM web]{citeulike:13883407}
 Can I Use - Shadow DOM (web).
 \newblock {Shadow DOM}.

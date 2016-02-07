@@ -33,11 +33,11 @@ Importierte \ac{HTML}-Dateien werden nicht nur in das Dokument eingefügt, sonde
 
 \subsection{Abhängigkeiten verwalten}\label{abhuxe4ngigkeiten-verwalten}
 
-Jedoch kann es vor kommen, dass mehrere eingebundenen Bibliotheken die gleichen Abhängigkeiten haben und diese verwaltet werden müssen. Sollte dies nicht sorgfältig gemacht werden, können unerwartete Fehler auftreten, die mitunter nur schwer zu lokalisieren sind. \ac{HTML} Imports verwalten Abhängigkeiten automatisch. Um das zu erreichen, werden die Abhängigkeiten gebündelt und in eine zu importierende \ac{HTML}-Datei geschrieben. Haben mehrere Imports die gleichen Abhängigkeiten (siehe Listing \ref{ahvmhtmli}), werden diese vom Browser erkannt und nur einmal heruntergeladen. Mehrfachdownloads und Konflikte der Abhängigkeiten werden so verhindert \cite{citeulike:13853700}.
+Jedoch kann es vorkommen, dass mehrere eingebundenen Bibliotheken die gleichen Abhängigkeiten haben und diese verwaltet werden müssen. Sollte dies nicht sorgfältig gemacht werden, können unerwartete Fehler auftreten, die mitunter nur schwer zu lokalisieren sind. \ac{HTML} Imports verwalten Abhängigkeiten automatisch. Um das zu erreichen, werden die Abhängigkeiten gebündelt und in eine zu importierende \ac{HTML}-Datei geschrieben. Haben mehrere Imports die gleichen Abhängigkeiten (siehe Listing \ref{ahvmhtmli}), werden diese vom Browser erkannt und nur einmal heruntergeladen. Mehrfachdownloads und Konflikte der Abhängigkeiten werden so verhindert \cite{citeulike:13853700}.
 
 \lstinputlisting[language=HTML,label=ahvmhtmli,caption=Abhängigkeitsverwaltung mit \ac{HTML} Imports]{kapitel2/listings/5-3.html}
 
-Selbst wenn die jQuery-Library in mehreren Dateien eingebunden wird, wird hier sie dennoch nur einmal übertragen. Wenn nun fremde \ac{HTML}-Dateien eingebunden werden muss auch nicht auf die auf die Reihenfolge der Imports geachtet werden, da diese selbst ihre Abhängigkeiten beinhalten.
+Selbst wenn die jQuery-Library in mehreren Dateien eingebunden wird, wird hier sie dennoch nur einmal übertragen. Wenn nun fremde \ac{HTML}-Dateien eingebunden werden, muss auch nicht auf die auf die Reihenfolge der Imports geachtet werden, da diese selbst ihre Abhängigkeiten beinhalten.
 
 
 \subsection{Sub-Imports}\label{sub-imports}
@@ -47,11 +47,11 @@ Das obige Beispiel zeigt, dass \ac{HTML} Imports selbst wiederum auch \ac{HTML} 
 
 \subsection{Performance}\label{html-import-performance}
 
-Ein signifikantes Problem der \ac{HTML} Imports ist die Performance, welche bei komplexen Anwendungen schnell abfallen kann. Werden auf einer Seite mehrere Imports eingebunden, die selbst wiederum Imports beinhalten können, so steigt die Anzahl an Requests an den Server schnell exponentiell an, was die Webseite stark verlangsamen kann. Auch das vorkommen von doppelten Abhängigkeiten kann die Anzahl an Requests in die Höhe treiben, doch da Browser die Abhängigkeiten nativ schon selbst de-duplizieren, kann dieses Problem in diesem Zusammenhang ignoriert werden \cite{citeulike:13853714}.
+Ein signifikantes Problem der \ac{HTML} Imports ist die Performance, welche bei komplexen Anwendungen schnell abfallen kann. Werden auf einer Seite mehrere Imports eingebunden, die selbst wiederum Imports beinhalten können, so steigt die Anzahl an Requests an den Server schnell exponentiell an, was die Webseite stark verlangsamen kann. Auch das Vorkommen von doppelten Abhängigkeiten kann die Anzahl an Requests in die Höhe treiben, doch da Browser die Abhängigkeiten nativ schon selbst de-duplizieren, kann dieses Problem in diesem Zusammenhang ignoriert werden \cite{citeulike:13853714}.
 
 Dennoch sind viele Einzel-Requests ein gewünschtes Verhalten von Web Components, da sie bereits mit Blick auf Version 2 des \ac{HTTP}-Protokolls entwickelt wurden. In diesem können mehrere Requests in einer \ac{TCP}-Verbindung übertragen werden. Des Weiteren kann der Client die Priorität der angeforderten Dateien bestimmen, um Dateien mit einer hohen Priorität vor Dateien mit niedrigerer Priorität zu erhalten. Ebenso wird mit einer neuen Header-Kompression die zu übertragende Datenmenge verkleinert. Neu sind außerdem die sogenannten ``Server Pushes'', welche es dem Server ermöglichen, Nachrichten an den Client zu schicken, ohne dass dieser sie anfordern muss.
 
-Voraussetzung hierfür ist jedoch die Unterstützung des neuen Protokolls seitens des Browsers. Bis auf den Internet Explorer und Safari unterstützen jedoch alle Browser \ac{HTTP}/2 schon ab frühen Versionen, allerdings nur bei mittels \ac{TLS} verschlüsselten Webseiten [citeulike:13879562]. Der Anteil der über \ac{HTTP}/2 ausgelieferten Webseiten liegt momentan bei circa 3\% \cite{citeulike:13879575}.
+Voraussetzung hierfür ist jedoch die Unterstützung des neuen Protokolls seitens des Browsers. Bis auf den Internet Explorer und Safari unterstützen jedoch alle Browser \ac{HTTP}/2 schon ab frühen Versionen, allerdings nur bei mittels \ac{TLS} verschlüsselten Webseiten \cite{citeulike:13879562}. Der Anteil der über \ac{HTTP}/2 ausgelieferten Webseiten liegt momentan bei circa 3\% \cite{citeulike:13879575}.
 
 
 \subsection{Asynchrones Laden von Imports}\label{asynchrones-laden-von-imports}
@@ -61,7 +61,7 @@ Das Rendern der Seite kann unter Umständen sehr lange dauern, da das in den Imp
 
 \subsection{Anwendungen}\label{anwendungen}
 
-Besonders einfach machen \ac{HTML} Imports das Einbinden ganzer Web Applikationen mit \ac{HTML}/JavaScript/\ac{CSS}. Diese können in eine Datei geschrieben, ihre Abhängigkeiten definieren und von anderen importiert werden. Dies macht es sehr einfach, den Code zu organisieren, so können etwa einzelne Abschnitte einer Anwendung oder von Code in einzelne Dateien ausgelagert werden, was Web Applikationen modular, austauschbar und wiederverwendbar macht. Falls nun ein oder mehrere Custom Elements in einem \ac{HTML} Import enthalten sind, so werden dessen Interface und Definitionen automatisch gekapselt. Auch wird die Abhängigkeitsverwaltung in Betracht auf die Performance stark verbessert, da der Browser nicht eine große JavaScript-Library, sondern einzelne kleinere JavaScript-Abschnitte parsen und ausführen muss. Diese werden durch die \ac{HTML} Imports parallel geparst, was mit einen enormen Performance-Schub einher geht \cite{citeulike:13853647}.
+Besonders einfach machen \ac{HTML} Imports das Einbinden ganzer Web Applikationen mit \ac{HTML}/JavaScript/\ac{CSS}. Diese können in eine Datei geschrieben, ihre Abhängigkeiten definieren und von anderen importiert werden. Dies macht es sehr einfach, den Code zu organisieren. So können etwa einzelne Abschnitte von Anwendungen oder Code in einzelne Dateien ausgelagert werden, was Web Applikationen modular, austauschbar und wiederverwendbar macht. Falls nun ein oder mehrere Custom Elements in einem \ac{HTML} Import enthalten sind, so werden dessen Interface und Definitionen automatisch gekapselt. Auch wird die Abhängigkeitsverwaltung in Betracht auf die Performance stark verbessert, da der Browser nicht eine große JavaScript-Library, sondern einzelne kleinere JavaScript-Abschnitte parsen und ausführen muss. Diese werden durch die \ac{HTML} Imports parallel geparst, was mit einen enormen Performance-Schub einher geht \cite{citeulike:13853647}.
 
 
 \subsection{Browserunterstützung}\label{browserunterstuxfctzung}
