@@ -65,7 +65,9 @@
 \contentsline {subsection}{\numberline {4.2.3}Content Projection}{37}{subsection.4.2.3}
 \contentsline {subsection}{\numberline {4.2.4}CSS-Styling}{38}{subsection.4.2.4}
 \contentsline {subsection}{\numberline {4.2.5}Gemeinsame Styles mehrerer Komponenten}{40}{subsection.4.2.5}
-\contentsline {section}{\numberline {4.3}HTML Imports}{40}{section.4.3}
+\contentsline {subsubsection}{\nonumberline Style Module anlegen}{40}{section*.32}
+\contentsline {subsubsection}{\nonumberline Style Module benutzen}{40}{section*.33}
+\contentsline {section}{\numberline {4.3}HTML Imports}{41}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Dynamisches Nachladen von HTML}{41}{subsection.4.3.1}
 \contentsline {chapter}{\numberline {5}Zus\IeC {\"a}tzliche Polymer-Funktionalit\IeC {\"a}ten}{42}{chapter.5}
 \contentsline {section}{\numberline {5.1}One-Way- und Two-Way-Data-Binding}{42}{section.5.1}
@@ -101,9 +103,9 @@
 \contentsline {subsection}{\numberline {7.2.2}Vergleich der Intentionen hinter Polymer und AngularJS}{56}{subsection.7.2.2}
 \contentsline {subsection}{\numberline {7.2.3}Vergleich der Technischen Features}{57}{subsection.7.2.3}
 \contentsline {chapter}{\numberline {8}Zukunftsprognose}{58}{chapter.8}
-\contentsline {chapter}{Anhang A - Native Web Component}{60}{chapter*.41}
-\contentsline {chapter}{Anhang B - Polymer Web Component}{62}{chapter*.44}
-\contentsline {chapter}{Anhang C - AngularJS Web Component}{68}{chapter*.47}
-\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{VI}{chapter*.52}
-\contentsline {chapter}{\nonumberline Listings}{VIII}{chapter*.53}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{IX}{chapter*.54}
+\contentsline {chapter}{Anhang A - Native Web Component}{60}{chapter*.43}
+\contentsline {chapter}{Anhang B - Polymer Web Component}{62}{chapter*.46}
+\contentsline {chapter}{Anhang C - AngularJS Web Component}{68}{chapter*.49}
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{VI}{chapter*.54}
+\contentsline {chapter}{\nonumberline Listings}{VIII}{chapter*.55}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{IX}{chapter*.56}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  7 FEB 2016 18:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  10 FEB 2016 21:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1522,13 +1522,9 @@ ann nun die Va-ria-ble \OT1/cmtt/l/n/10.95 --x-element-
  []
 
 [38] (./kapitel4/listings/1-4.html) (./kapitel4/listings/1-5.html)
-(./kapitel4/listings/1-6.html)
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
-
- []
-
-[39] (./kapitel4/listings/1-7.html) (./kapitel4/listings/1-8.html) [40])
-(./kapitel5/1-additional-sugar.tex [41]
+(./kapitel4/listings/1-6.html) [39] (./kapitel4/listings/1-7.html)
+(./kapitel4/listings/1-8.html) [40]) (./kapitel5/1-additional-sugar.tex
+[41]
 Kapitel 5.
 [42
 
@@ -1536,7 +1532,7 @@ Kapitel 5.
 (./kapitel6/1-best-practices.tex [45]
 Kapitel 6.
 
-<kapitel6/bilder/1-performance-user-perception-reaction-times.jpg, id=1721, 447
+<kapitel6/bilder/1-performance-user-perception-reaction-times.jpg, id=1725, 447
 .92343pt x 149.8097pt>
 File: kapitel6/bilder/1-performance-user-perception-reaction-times.jpg Graphic 
 file (type jpg)
@@ -1574,7 +1570,7 @@ although it is yet undefined on input line 18.
 [52
 
 ] [53]
-<kapitel7/bilder/1-multi-navigation-app.jpg, id=1845, 607.51968pt x 270.25969pt
+<kapitel7/bilder/1-multi-navigation-app.jpg, id=1849, 607.51968pt x 270.25969pt
 >
 File: kapitel7/bilder/1-multi-navigation-app.jpg Graphic file (type jpg)
  <use kapitel7/bilder/1-multi-navigation-app.jpg>
@@ -1593,7 +1589,7 @@ Overfull \hbox (7.44203pt too wide) in paragraph at lines 8--9
 -ent-sei-ti-ges Open-Source-JavaScript-
  []
 
-<kapitel7/bilder/1-model-view-viewmodel.png, id=1861, 385.44pt x 468.75125pt>
+<kapitel7/bilder/1-model-view-viewmodel.png, id=1865, 385.44pt x 468.75125pt>
 File: kapitel7/bilder/1-model-view-viewmodel.png Graphic file (type png)
 
 <use kapitel7/bilder/1-model-view-viewmodel.png>
@@ -1771,57 +1767,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 201--204
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--220
+Underfull \hbox (badness 10000) in paragraph at lines 223--226
 []\OT1/cmr/m/n/10.95 Sharp, R. (2010).  What is a Po-ly-fill?
  []
 
 
-Underfull \hbox (badness 8056) in paragraph at lines 222--226
+Underfull \hbox (badness 8056) in paragraph at lines 228--232
 []\OT1/cmr/m/n/10.95 Sutton, M. (2015).  No-tes On Client-Rendered Ac-ces-si-bi
 -li-ty.
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 244--247
+Underfull \hbox (badness 10000) in paragraph at lines 250--253
 []\OT1/cmr/m/n/10.95 W3C (2014a).  Cross-Origin Re-sour-ce Sha-ring.
  []
 
 
-Overfull \hbox (7.41943pt too wide) in paragraph at lines 249--252
+Overfull \hbox (7.41943pt too wide) in paragraph at lines 255--258
 []\OT1/cmr/m/n/10.95 W3C (2014b).  HTML Tem-pla-tes.  http://www.w3.org/TR/html
 5/scripting-
  []
 
 
-Underfull \hbox (badness 7012) in paragraph at lines 254--257
+Underfull \hbox (badness 7012) in paragraph at lines 260--263
 []\OT1/cmr/m/n/10.95 W3C (2014c).  The Ac-ces-si-bi-li-ty Tree and the DOM Tree
 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--277
+Underfull \hbox (badness 10000) in paragraph at lines 280--283
 []\OT1/cmr/m/n/10.95 W3C (web).  In-tro-duc-ti-on to Web Ac-ces-si-bi-li-ty.  h
 tt-
  []
 
 
-Underfull \hbox (badness 3199) in paragraph at lines 279--282
+Underfull \hbox (badness 3199) in paragraph at lines 285--288
 []\OT1/cmr/m/n/10.95 W3Techs (2015).  Usa-ge Sta-ti-stics of HTT-P/2 for Web-si
 -tes.
  []
 
 
-Underfull \hbox (badness 7099) in paragraph at lines 284--287
+Underfull \hbox (badness 7099) in paragraph at lines 290--293
 []\OT1/cmr/m/n/10.95 WebComponents - Po-ly-fills (web).  Po-ly-fills.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--292
+Underfull \hbox (badness 10000) in paragraph at lines 295--298
 []\OT1/cmr/m/n/10.95 WebComponents - web-com-ponents.js
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 294--297
+Underfull \hbox (badness 10000) in paragraph at lines 300--303
 []\OT1/cmr/m/n/10.95 WHATWG (web).  HTML Stan-dard.  htt-
  []
 
@@ -1833,7 +1829,7 @@ twg/affidavit.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 72.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 72.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 46F0D00815208F7ABB8BB27D1EBAF832;8081.
+(rerunfilecheck)             Checksum: 1595705CE11F9F06C1148DB81CEDED32;8081.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1844,10 +1840,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 72.
  ) 
 Here is how much of TeX's memory you used:
- 24020 strings out of 493089
- 438189 string characters out of 6134842
- 673184 words of memory out of 5000000
- 26285 multiletter control sequences out of 15000+600000
+ 24025 strings out of 493089
+ 438274 string characters out of 6134842
+ 673234 words of memory out of 5000000
+ 26287 multiletter control sequences out of 15000+600000
  15125 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  76i,9n,100p,2663b,1613s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1870,10 +1866,10 @@ ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on thesis.pdf (84 pages, 1650433 bytes).
+Output written on thesis.pdf (84 pages, 1650323 bytes).
 PDF statistics:
- 2234 PDF objects out of 2487 (max. 8388607)
- 2076 compressed objects within 21 object streams
- 611 named destinations out of 1000 (max. 500000)
+ 2240 PDF objects out of 2487 (max. 8388607)
+ 2082 compressed objects within 21 object streams
+ 614 named destinations out of 1000 (max. 500000)
  944 words of extra memory for PDF output out of 10000 (max. 10000000)
 
