@@ -24,7 +24,7 @@ Um nun ein eigenes Custom Element zu definieren, muss der Name des Custom Elemen
 
 Nachdem das Element beim Browser registriert wurde, muss es zunächst mittels der Anweisung \texttt{document.createElement(tagName);} erzeugt werden, der \texttt{tagName} ist hierbei der Name des zuvor registrierten Elements. Danach kann es imperativ per JavaScript mittels \texttt{document.body.appendChild(myelement);} oder deklarativ direkt im \ac{HTML}-Dokument mittels \texttt{\textless{}my-element\textgreater{}\textless{}my-element\textgreater{}} verwendet werden.
 
-\noindent \cite[S. 127-138]{citeulike:13844975}
+\noindent \cite[S. 127--138]{citeulike:13844975}
 
 
 \subsection{Vorhandene Elemente erweitern (Type Extensions)}\label{vorhandene-elemente-erweitern-type-extensions}
@@ -49,7 +49,7 @@ Anhand des obigen Beispiels wird deutlich, wie ein Custom Element eingesetzt wer
 
 \subsection{Custom Element Lifecycle-Callbacks}\label{custom-element-lifecycle-callbacks}
 
-Custom Elements bieten eine standardisierte \ac{API} an speziellen Methoden, den ``Custom Element Lifecycle-Callbacks'', welche es ermöglichen Funktionen zu unterschiedlichen Zeitpunkten - vom Registrieren bis zum Löschen eines Custom Elements - auszuführen. Diese ermöglichen es, zu bestimmen, wann und wie ein bestimmter Code des Custom Elements ausgeführt werden soll.
+Custom Elements bieten eine standardisierte \ac{API} an speziellen Methoden, den ``Custom Element Lifecycle-Callbacks'', welche es ermöglichen Funktionen zu unterschiedlichen Zeitpunkten -- vom Registrieren bis zum Löschen eines Custom Elements -- auszuführen. Diese ermöglichen es, zu bestimmen, wann und wie ein bestimmter Code des Custom Elements ausgeführt werden soll.
 
 \begin{description}
   \item[createdCallback] Wird ausgeführt, wenn eine Instanz des Custom Elements mittels \texttt{var\ mybutton\ =\ document.createElement('custom-element')} erzeugt wurde.
@@ -65,7 +65,7 @@ So können die Lifecycle-Callbacks für ein neues erweitertes Button-Element, wi
 
 \subsection{Styling von Custom Elements}\label{styling-von-custom-elements}
 
-Das Styling von eigenen Custom Elements funktioniert analog dem Styling von nativen \ac{HTML}-Elementen indem der Name des Elements als \ac{CSS}-Selektor angegeben wird (siehe Listing \ref{seceudeb}). Erweiterte Elemente können mittels dem Attribut-Selektor in \ac{CSS} angesprochen werden \cite[S. 127-138]{citeulike:13844975}.
+Das Styling von eigenen Custom Elements funktioniert analog dem Styling von nativen \ac{HTML}-Elementen indem der Name des Elements als \ac{CSS}-Selektor angegeben wird (siehe Listing \ref{seceudeb}). Erweiterte Elemente können mittels dem Attribut-Selektor in \ac{CSS} angesprochen werden \cite[S. 127--138]{citeulike:13844975}.
 
 
 Ein Custom Element, welches zwar standardkonform deklariert oder erstellt, aber noch nicht beim Browser registriert wurde, ist ein ``Unresolved Element''. Steht dieses Element am Anfang des \ac{DOM}, wird jedoch erst später registriert, kann es nicht von \ac{CSS} angesprochen werden. Dadurch kann ein \ac{FOUC} entstehen, was bedeutet, dass das Element beim Laden der Seite nicht gestylt dargestellt wird, sondern das definierte Aussehen erst übernimmt, nachdem es registriert wurde. Um dies zu verhindern, sieht die \ac{HTML}-Spezifikation eine neue \ac{CSS}-Pseudoklasse \texttt{:unresolved} (siehe Listing \ref{seceudeb}) vor, welche deklarierte, aber nicht registrierte Elemente anspricht. Somit können diese Elemente initial beim Laden der Seite ausgeblendet und nach dem Registrieren wieder eingeblendet werden \cite{citeulike:13844984}.

@@ -25,3 +25,9 @@
 - Abschnitt 3.2.1 (Link)? -> als Quelle
 - "Web Komponente" oder "Web-Komponente" -> in "Web Component"
 - Anhang Dateinamen mit Doppelpunkt? -> ja
+- Seitenbau-Abschnitt in der Einleitung als Zitat? Nicht selbst formuliert sondern von Seitenbau bekommen.
+- Quelle in 2.2.1 so okay? In neuer Zeile da sie sonst nicht umbricht -> ok
+- Kapitel 2.2.4 und 2.6.3 description lists ausrichten? -> passt
+- Kapitel 2.2.5 Schusterjunge, auch wenn noch ein Satz danach folgt? -> passt
+- Shadow DOM Wurzel oder Shadow-DOM-Wurzel? check
+- Seite 12-13 (Abschnitt 2.4.1) Hurenkind? -> passt

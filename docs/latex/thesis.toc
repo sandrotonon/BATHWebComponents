@@ -22,7 +22,7 @@
 \contentsline {subsection}{\numberline {2.4.3}Insertion Points}{13}{subsection.2.4.3}
 \contentsline {subsection}{\numberline {2.4.4}Shadow Insertion Points}{14}{subsection.2.4.4}
 \contentsline {subsection}{\numberline {2.4.5}Styling mit CSS}{14}{subsection.2.4.5}
-\contentsline {subsection}{\numberline {2.4.6}Styling des Shadow DOM von au\IeC {\ss }erhalb}{15}{subsection.2.4.6}
+\contentsline {subsection}{\numberline {2.4.6}Styling des Shadow DOMs von au\IeC {\ss }erhalb}{15}{subsection.2.4.6}
 \contentsline {subsection}{\numberline {2.4.7}CSS-Variablen}{16}{subsection.2.4.7}
 \contentsline {subsection}{\numberline {2.4.8}Beispiel eines Shadow DOMs mit Template und CSS}{17}{subsection.2.4.8}
 \contentsline {subsection}{\numberline {2.4.9}Browserunterst\IeC {\"u}tzung}{18}{subsection.2.4.9}
@@ -54,7 +54,7 @@
 \contentsline {section}{\numberline {4.1}Custom Elements}{32}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Neues Element registrieren}{32}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}Elemente erweitern}{33}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Declared Properties - Eigenschaften und Methoden definieren}{33}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.3}Declared Properties -- Eigenschaften und Methoden definieren}{33}{subsection.4.1.3}
 \contentsline {subsection}{\numberline {4.1.4}Computed Properties}{34}{subsection.4.1.4}
 \contentsline {subsection}{\numberline {4.1.5}Property Oberserver}{34}{subsection.4.1.5}
 \contentsline {subsection}{\numberline {4.1.6}Das hostAttributes-Objekt}{35}{subsection.4.1.6}
@@ -88,7 +88,7 @@
 \contentsline {subsection}{\numberline {6.2.1}Down und Up}{48}{subsection.6.2.1}
 \contentsline {subsection}{\numberline {6.2.2}Tap}{49}{subsection.6.2.2}
 \contentsline {subsection}{\numberline {6.2.3}Track}{49}{subsection.6.2.3}
-\contentsline {section}{\numberline {6.3}A11y - Barrierefreiheit in Polymer}{50}{section.6.3}
+\contentsline {section}{\numberline {6.3}A11y -- Barrierefreiheit in Polymer}{50}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}Fokus / Tastatur}{50}{subsection.6.3.1}
 \contentsline {subsection}{\numberline {6.3.2}Semantik}{51}{subsection.6.3.2}
 \contentsline {subsection}{\numberline {6.3.3}Flexibles UI}{51}{subsection.6.3.3}
@@ -103,9 +103,10 @@
 \contentsline {subsection}{\numberline {7.2.2}Vergleich der Intentionen hinter Polymer und AngularJS}{56}{subsection.7.2.2}
 \contentsline {subsection}{\numberline {7.2.3}Vergleich der Technischen Features}{57}{subsection.7.2.3}
 \contentsline {chapter}{\numberline {8}Zukunftsprognose}{58}{chapter.8}
-\contentsline {chapter}{Anhang A - Native Web Component}{60}{chapter*.43}
-\contentsline {chapter}{Anhang B - Polymer Web Component}{62}{chapter*.46}
-\contentsline {chapter}{Anhang C - AngularJS Web Component}{68}{chapter*.49}
+\contentsline {chapter}{Anhang A -- Native Web Component}{60}{chapter*.43}
+\contentsline {chapter}{Anhang B -- Polymer Web Component}{62}{chapter*.46}
+\contentsline {chapter}{Anhang C -- AngularJS-Direktive}{68}{chapter*.49}
 \contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{VI}{chapter*.54}
+\contentsline {chapter}{Abbildungsverzeichnis}{VI}{chapter*.54}
 \contentsline {chapter}{\nonumberline Listings}{VIII}{chapter*.55}
 \contentsline {chapter}{\nonumberline Literaturverzeichnis}{IX}{chapter*.56}

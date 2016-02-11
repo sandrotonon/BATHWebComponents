@@ -10,8 +10,8 @@ Attribut \texttt{theme} abbildet. Nun können die Lifecycle-Callback-Funktionen 
 
 \lstinputlisting[language=JavaScript,label=cemeufd,caption=Custom Element mit Eigenschaften und Funktionen definieren]{kapitel2/listings/7-1.js}
 
-Die \texttt{createdCallback}-Funktion soll zunächst prüfen ob das Attribut \texttt{theme} des
-\texttt{\textless{}custom-element\textgreater{}}-Tags verwendet und ein entsprechender Wert gesetzt wurde und übergibt dieses der Hilfsfunktion \texttt{setTheme}. Wird das Attribut nicht gesetzt, wird der Standardwert \texttt{style1} übergeben. Falls das \texttt{style}-Attribut von Außen geändert wird, soll die \texttt{attributeChangedCallback} Funktion gewährleisten, dass die Änderung auch von der Komponente übernommen wird, indem sie das Attribut der Hilfsfunktion \texttt{setTheme} übergibt. Um das Setzen und Ändern des \texttt{theme}-Attributs zu implementieren wird zuletzt die Hilfsfunktion \texttt{setTheme} für den Prototyp definiert (siehe Listing \ref{hsetthemed}).
+Die \texttt{createdCallback}-Funktion soll zunächst prüfen, ob das Attribut \texttt{theme} der Komponente
+\texttt{\textless{}custom-element\textgreater{}} verwendet und ein entsprechender Wert konfiguriert wurde und übergibt dieses der Hilfsfunktion \texttt{setTheme}. Wird das Attribut nicht gesetzt, wird der Standardwert \texttt{style1} übergeben. Falls das \texttt{style}-Attribut von Außen geändert wird, soll die \texttt{attributeChangedCallback} Funktion gewährleisten, dass die Änderung auch von der Komponente übernommen wird, indem sie das Attribut der Hilfsfunktion \texttt{setTheme} übergibt. Um das Setzen und Ändern des \texttt{theme}-Attributs zu implementieren wird zuletzt die Hilfsfunktion \texttt{setTheme} für den Prototyp definiert (siehe Listing \ref{hsetthemed}).
 
 \lstinputlisting[language=JavaScript,label=hsetthemed,caption=HilfsFunktion \texttt{setTheme} definieren]{kapitel2/listings/7-2.js}
 

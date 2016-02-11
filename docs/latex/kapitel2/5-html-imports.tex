@@ -5,7 +5,7 @@ Bisher erlauben es praktisch alle Plattformen, Codeteile zu importieren und zu v
 
 \subsection{HTML-Dateien importieren}\label{html-dateien-importieren}
 
-Imports von \ac{HTML}-Dateien werden, wie andere Imports auch, per \texttt{\textless{}link\textgreater{}}-Tag deklariert. Neu ist jedoch der Wert des \texttt{rel}-Attributes, welches auf \texttt{import} gesetzt wird \cite[S. 139-147]{citeulike:13844975}. So kann beispielsweise das Bootstrap-Frame\-work statt wie bisher mit mehreren Imports mit nur einem Import eingebunden werden. Bisher könnte die Einbindung unter Berücksichtigung der Abhängigkeiten wie in Listing \ref{evbohtmli} aussehen.
+Imports von \ac{HTML}-Dateien werden, wie andere Imports auch, per \texttt{\textless{}link\textgreater{}}-Tag deklariert. Neu ist jedoch der Wert des \texttt{rel}-Attributes, welches auf \texttt{import} gesetzt wird \cite[S. 139--147]{citeulike:13844975}. So kann beispielsweise das Bootstrap-Frame\-work statt wie bisher mit mehreren Imports mit nur einem Import eingebunden werden. Bisher könnte die Einbindung unter Berücksichtigung der Abhängigkeiten wie in Listing \ref{evbohtmli} aussehen.
 
 \lstinputlisting[language=HTML,label=evbohtmli,caption=Einbindung von Bootstrap ohne \ac{HTML} Imports]{kapitel2/listings/5-1.html}
 
@@ -66,7 +66,7 @@ Besonders einfach machen \ac{HTML} Imports das Einbinden ganzer Web Applikatione
 
 \subsection{Browserunterstützung}\label{browserunterstuxfctzung}
 
-\ac{HTML} Imports sind noch nicht vom \ac{W3C} standardisiert, sondern befinden sich noch im Status eines ``Working Draft'' \cite{citeulike:13853711}. Sie werden deshalb bisher nur von Google Chrome ab Version 43 und Opera ab Version 33 nativ unterstützt (siehe Abbildung \ref{fig:bdhtmli}). Seitens Mozilla und dessen Browser Firefox wird es für \ac{HTML} Imports auch keine Unterstützung geben, da ihrer Meinung nach der Bedarf an \ac{HTML} Imports nach der Einführung von ECMAScript 6 Modules nicht mehr existiert und da Abhängigkeiten schon mit Tools wie Vulcanize aufgelöst werden können \cite{citeulike:13881144}. Auf Details zu ECMAScript 6 Modules wird an dieser Stelle nicht eingegangen, da diese den Umfang dieser Arbeit überschreiten.
+\ac{HTML} Imports sind noch nicht vom \ac{W3C} standardisiert, sondern befinden sich noch im Status eines ``Working Draft''. Sie werden deshalb bisher nur von Google Chrome ab Version 43 und Opera ab Version 33 nativ unterstützt (siehe Abbildung \ref{fig:bdhtmli}) \cite{citeulike:13853711}. Seitens Mozilla und dessen Browser Firefox wird es für \ac{HTML} Imports auch keine Unterstützung geben, da ihrer Meinung nach der Bedarf an \ac{HTML} Imports nach der Einführung von ECMAScript 6 Modules nicht mehr existiert und da Abhängigkeiten schon mit Tools wie Vulcanize aufgelöst werden können \cite{citeulike:13881144}. Auf Details zu ECMAScript 6 Modules wird an dieser Stelle nicht eingegangen, da diese den Umfang dieser Arbeit überschreiten.
 
 \begin{figure}[htbp]
  \centering

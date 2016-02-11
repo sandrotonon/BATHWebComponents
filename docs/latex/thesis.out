@@ -20,7 +20,7 @@
 \BOOKMARK [2][-]{subsection.2.4.3}{Insertion Points}{section.2.4}% 20
 \BOOKMARK [2][-]{subsection.2.4.4}{Shadow Insertion Points}{section.2.4}% 21
 \BOOKMARK [2][-]{subsection.2.4.5}{Styling mit CSS}{section.2.4}% 22
-\BOOKMARK [2][-]{subsection.2.4.6}{Styling des Shadow DOM von au\337erhalb}{section.2.4}% 23
+\BOOKMARK [2][-]{subsection.2.4.6}{Styling des Shadow DOMs von au\337erhalb}{section.2.4}% 23
 \BOOKMARK [2][-]{subsection.2.4.7}{CSS-Variablen}{section.2.4}% 24
 \BOOKMARK [2][-]{subsection.2.4.8}{Beispiel eines Shadow DOMs mit Template und CSS}{section.2.4}% 25
 \BOOKMARK [2][-]{subsection.2.4.9}{Browserunterst\374tzung}{section.2.4}% 26
@@ -52,7 +52,7 @@
 \BOOKMARK [1][-]{section.4.1}{Custom Elements}{chapter.4}% 52
 \BOOKMARK [2][-]{subsection.4.1.1}{Neues Element registrieren}{section.4.1}% 53
 \BOOKMARK [2][-]{subsection.4.1.2}{Elemente erweitern}{section.4.1}% 54
-\BOOKMARK [2][-]{subsection.4.1.3}{Declared Properties - Eigenschaften und Methoden definieren}{section.4.1}% 55
+\BOOKMARK [2][-]{subsection.4.1.3}{Declared Properties \205 Eigenschaften und Methoden definieren}{section.4.1}% 55
 \BOOKMARK [2][-]{subsection.4.1.4}{Computed Properties}{section.4.1}% 56
 \BOOKMARK [2][-]{subsection.4.1.5}{Property Oberserver}{section.4.1}% 57
 \BOOKMARK [2][-]{subsection.4.1.6}{Das hostAttributes-Objekt}{section.4.1}% 58
@@ -84,7 +84,7 @@
 \BOOKMARK [2][-]{subsection.6.2.1}{Down und Up}{section.6.2}% 84
 \BOOKMARK [2][-]{subsection.6.2.2}{Tap}{section.6.2}% 85
 \BOOKMARK [2][-]{subsection.6.2.3}{Track}{section.6.2}% 86
-\BOOKMARK [1][-]{section.6.3}{A11y - Barrierefreiheit in Polymer}{chapter.6}% 87
+\BOOKMARK [1][-]{section.6.3}{A11y \205 Barrierefreiheit in Polymer}{chapter.6}% 87
 \BOOKMARK [2][-]{subsection.6.3.1}{Fokus / Tastatur}{section.6.3}% 88
 \BOOKMARK [2][-]{subsection.6.3.2}{Semantik}{section.6.3}% 89
 \BOOKMARK [2][-]{subsection.6.3.3}{Flexibles UI}{section.6.3}% 90
@@ -99,9 +99,10 @@
 \BOOKMARK [2][-]{subsection.7.2.2}{Vergleich der Intentionen hinter Polymer und AngularJS}{section.7.2}% 99
 \BOOKMARK [2][-]{subsection.7.2.3}{Vergleich der Technischen Features}{section.7.2}% 100
 \BOOKMARK [0][-]{chapter.8}{Zukunftsprognose}{}% 101
-\BOOKMARK [0][-]{chapter*.43}{Anhang A - Native Web Component}{}% 102
-\BOOKMARK [0][-]{chapter*.46}{Anhang B - Polymer Web Component}{}% 103
-\BOOKMARK [0][-]{chapter*.49}{Anhang C - AngularJS Web Component}{}% 104
+\BOOKMARK [0][-]{chapter*.43}{Anhang A \205 Native Web Component}{}% 102
+\BOOKMARK [0][-]{chapter*.46}{Anhang B \205 Polymer Web Component}{}% 103
+\BOOKMARK [0][-]{chapter*.49}{Anhang C \205 AngularJS-Direktive}{}% 104
 \BOOKMARK [0][-]{chapter*.54}{Abk\374rzungsverzeichnis}{}% 105
-\BOOKMARK [0][-]{chapter*.55}{Listings}{}% 106
-\BOOKMARK [0][-]{chapter*.56}{Literaturverzeichnis}{}% 107
+\BOOKMARK [0][-]{chapter*.54}{Abbildungsverzeichnis}{}% 106
+\BOOKMARK [0][-]{chapter*.55}{Listings}{}% 107
+\BOOKMARK [0][-]{chapter*.56}{Literaturverzeichnis}{}% 108
