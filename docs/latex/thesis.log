@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.20)  11 FEB 2016 10:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.20)  11 FEB 2016 13:51
 entering extended mode
 **thesis.tex
 (thesis.tex
@@ -858,20 +858,28 @@ Package hyphenat Warning: *******************************
 
 \langwohyphens=\language70
 LaTeX Info: Redefining \_ on input line 43.
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip52
+\enit@outerparindent=\dimen162
+\enit@toks=\toks33
+\enit@inbox=\box40
+\enitdp@description=\count134
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count134
-\Gm@cntv=\count135
-\c@Gm@tempcnt=\count136
-\Gm@bindingoffset=\dimen162
-\Gm@wd@mp=\dimen163
-\Gm@odd@mp=\dimen164
-\Gm@even@mp=\dimen165
-\Gm@layoutwidth=\dimen166
-\Gm@layoutheight=\dimen167
-\Gm@layouthoffset=\dimen168
-\Gm@layoutvoffset=\dimen169
-\Gm@dimlist=\toks33
+\Gm@cnth=\count135
+\Gm@cntv=\count136
+\c@Gm@tempcnt=\count137
+\Gm@bindingoffset=\dimen163
+\Gm@wd@mp=\dimen164
+\Gm@odd@mp=\dimen165
+\Gm@even@mp=\dimen166
+\Gm@layoutwidth=\dimen167
+\Gm@layoutheight=\dimen168
+\Gm@layouthoffset=\dimen169
+\Gm@layoutvoffset=\dimen170
+\Gm@dimlist=\toks34
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
@@ -902,58 +910,58 @@ Package: caption 2015/09/17 v3.3-111 Customizing captions (AR)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2015/09/20 v1.7-115 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen170
-\captionmargin@=\dimen171
-\captionwidth=\dimen172
-\caption@tempdima=\dimen173
-\caption@indent=\dimen174
-\caption@parindent=\dimen175
-\caption@hangindent=\dimen176
+\captionmargin=\dimen171
+\captionmargin@=\dimen172
+\captionwidth=\dimen173
+\caption@tempdima=\dimen174
+\caption@indent=\dimen175
+\caption@parindent=\dimen176
+\caption@hangindent=\dimen177
 )
 Package caption Info: KOMA-Script document class.
-\c@ContinuedFloat=\count137
+\c@ContinuedFloat=\count138
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 )
 (C:\Users\stonon\AppData\Roaming\MiKTeX\2.9\tex\latex\tocloft\tocloft.sty
 Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 44.
-\cftparskip=\skip52
-\cftbeforetoctitleskip=\skip53
-\cftaftertoctitleskip=\skip54
-\cftbeforepartskip=\skip55
-\cftpartnumwidth=\skip56
-\cftpartindent=\skip57
-\cftbeforechapskip=\skip58
-\cftchapindent=\skip59
-\cftchapnumwidth=\skip60
-\cftbeforesecskip=\skip61
-\cftsecindent=\skip62
-\cftsecnumwidth=\skip63
-\cftbeforesubsecskip=\skip64
-\cftsubsecindent=\skip65
-\cftsubsecnumwidth=\skip66
-\cftbeforesubsubsecskip=\skip67
-\cftsubsubsecindent=\skip68
-\cftsubsubsecnumwidth=\skip69
-\cftbeforeparaskip=\skip70
-\cftparaindent=\skip71
-\cftparanumwidth=\skip72
-\cftbeforesubparaskip=\skip73
-\cftsubparaindent=\skip74
-\cftsubparanumwidth=\skip75
-\cftbeforeloftitleskip=\skip76
-\cftafterloftitleskip=\skip77
-\cftbeforefigskip=\skip78
-\cftfigindent=\skip79
-\cftfignumwidth=\skip80
-\c@lofdepth=\count138
-\c@lotdepth=\count139
-\cftbeforelottitleskip=\skip81
-\cftafterlottitleskip=\skip82
-\cftbeforetabskip=\skip83
-\cfttabindent=\skip84
-\cfttabnumwidth=\skip85
+\cftparskip=\skip53
+\cftbeforetoctitleskip=\skip54
+\cftaftertoctitleskip=\skip55
+\cftbeforepartskip=\skip56
+\cftpartnumwidth=\skip57
+\cftpartindent=\skip58
+\cftbeforechapskip=\skip59
+\cftchapindent=\skip60
+\cftchapnumwidth=\skip61
+\cftbeforesecskip=\skip62
+\cftsecindent=\skip63
+\cftsecnumwidth=\skip64
+\cftbeforesubsecskip=\skip65
+\cftsubsecindent=\skip66
+\cftsubsecnumwidth=\skip67
+\cftbeforesubsubsecskip=\skip68
+\cftsubsubsecindent=\skip69
+\cftsubsubsecnumwidth=\skip70
+\cftbeforeparaskip=\skip71
+\cftparaindent=\skip72
+\cftparanumwidth=\skip73
+\cftbeforesubparaskip=\skip74
+\cftsubparaindent=\skip75
+\cftsubparanumwidth=\skip76
+\cftbeforeloftitleskip=\skip77
+\cftafterloftitleskip=\skip78
+\cftbeforefigskip=\skip79
+\cftfigindent=\skip80
+\cftfignumwidth=\skip81
+\c@lofdepth=\count139
+\c@lotdepth=\count140
+\cftbeforelottitleskip=\skip82
+\cftafterlottitleskip=\skip83
+\cftbeforetabskip=\skip84
+\cfttabindent=\skip85
+\cfttabnumwidth=\skip86
 ))
 (preamble/settingslistings.tex
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyvrb\fancyvrb.sty"
@@ -961,11 +969,11 @@ Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
 <2008/02/07> (tvz)
-\FV@CodeLineNo=\count140
+\FV@CodeLineNo=\count141
 \FV@InFile=\read2
-\FV@TabBox=\box40
-\c@FancyVerbLine=\count141
-\FV@StepNumber=\count142
+\FV@TabBox=\box41
+\c@FancyVerbLine=\count142
+\FV@StepNumber=\count143
 \FV@OutFile=\write5
 )) (preamble/listinglanguages.tex) (preamble/optionen.tex)
 (preamble/variablen.tex) (thesis.aux (htwg/cover.aux) (htwg/title.aux)
@@ -987,20 +995,20 @@ LaTeX Font Info:    ... okay on input line 15.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count143
-\scratchdimen=\dimen177
-\scratchbox=\box41
-\nofMPsegments=\count144
-\nofMParguments=\count145
-\everyMPshowfont=\toks34
-\MPscratchCnt=\count146
-\MPscratchDim=\dimen178
-\MPnumerator=\count147
-\makeMPintoPDFobject=\count148
-\everyMPtoPDFconversion=\toks35
+\scratchcounter=\count144
+\scratchdimen=\dimen178
+\scratchbox=\box42
+\nofMPsegments=\count145
+\nofMParguments=\count146
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count147
+\MPscratchDim=\dimen179
+\MPnumerator=\count148
+\makeMPintoPDFobject=\count149
+\everyMPtoPDFconversion=\toks36
 ) ABD: EveryShipout initializing macros
-\c@lstlisting=\count149
-\AtBeginShipoutBox=\box42
+\c@lstlisting=\count150
+\AtBeginShipoutBox=\box43
 Package hyperref Info: Link coloring OFF on input line 15.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
@@ -1009,7 +1017,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count150
+\c@section@level=\count151
 )
 LaTeX Info: Redefining \ref on input line 15.
 LaTeX Info: Redefining \pageref on input line 15.
@@ -1498,8 +1506,13 @@ Overfull \hbox (0.28012pt too wide) in paragraph at lines 104--105
 chapter 5.
 [42
 
-] [43] (kapitel5/listings/1-1.js) (kapitel5/listings/1-2.html) [44])
-(kapitel6/1-best-practices.tex [45]
+] [43] (kapitel5/listings/1-1.js) (kapitel5/listings/1-2.html) [44]
+Overfull \hbox (0.82713pt too wide) in paragraph at lines 60--61
+\OT1/cmr/m/n/10.95 Alternativ zur im-pe-ra-ti-ven De-fi-ni-ti-on von Events mit
+-tels dem \OT1/cmtt/l/n/10.95 li-ste-ners\OT1/cmr/m/n/10.95 -Objekt, k[]onnen
+ []
+
+) (kapitel6/1-best-practices.tex [45]
 chapter 6.
 
 <kapitel6/bilder/1-performance-user-perception-reaction-times.jpg, id=1715, 447
@@ -1514,19 +1527,14 @@ Package pdftex.def Info: kapitel6/bilder/1-performance-user-perception-reaction
  [46
 
  <./kapitel6/bilder/1-performance-user-perception-reaction-times.jpg>]
-(kapitel6/listings/1-1.js) [47]
-
-LaTeX Warning: Reference `beispiel-einer-barrierefreien-komponente' on page 48 
-undefined on input line 38.
-
-(kapitel6/listings/1-2.js) [48] [49]
+(kapitel6/listings/1-1.js) [47] (kapitel6/listings/1-2.js) [48] [49]
 Package acronym Info: Label `acro:AT' newly defined as it shall be overridden
 although it is yet undefined on input line 78.
 Package acronym Info: Label `acro:ARIA' newly defined as it shall be overridden
 
 although it is yet undefined on input line 78.
- [50]) (kapitel7/1-polymer-komponente.tex
-[51]
+ [50])
+(kapitel7/1-polymer-komponente.tex [51]
 chapter 7.
 Package acronym Info: Label `acro:SPA' newly defined as it shall be overridden
 although it is yet undefined on input line 8.
@@ -1535,7 +1543,7 @@ although it is yet undefined on input line 18.
 [52
 
 ] [53]
-<kapitel7/bilder/1-multi-navigation-app.jpg, id=1837, 607.51968pt x 270.25969pt
+<kapitel7/bilder/1-multi-navigation-app.jpg, id=1838, 607.51968pt x 270.25969pt
 >
 File: kapitel7/bilder/1-multi-navigation-app.jpg Graphic file (type jpg)
  <use kapitel7/bilder/1-multi-navigation-app.jpg>
@@ -1554,7 +1562,7 @@ Overfull \hbox (6.15039pt too wide) in paragraph at lines 10--11
 es dar, wo-bei die Controller-
  []
 
-<kapitel7/bilder/1-model-view-viewmodel.png, id=1853, 385.44pt x 468.75125pt>
+<kapitel7/bilder/1-model-view-viewmodel.png, id=1854, 385.44pt x 468.75125pt>
 File: kapitel7/bilder/1-model-view-viewmodel.png Graphic file (type png)
 
 <use kapitel7/bilder/1-model-view-viewmodel.png>
@@ -1585,9 +1593,16 @@ LaTeX Font Warning: Font shape `OMS/cmtt/m/it' undefined
 (Font)              using `OMS/cmtt/m/n' instead
 (Font)              for symbol `textbraceleft' on input line 70.
 
-[63] [64] [65] [66]) (kapitel9/anhang-c.tex [67] [68
+[63] [64] [65] [66]
+Overfull \hbox (14.69183pt too wide) in paragraph at lines 322--323
+\OT1/cmr/m/it/10.95 und kann mit-tels Bower \OT1/cmtt/l/n/10.95 bower in-stall 
+multi-navigation-app` \OT1/cmr/m/it/10.95 her-un-ter-ge-la-den []. 
+ []
 
-] [69]) [70] (glossary.tex) (thesis.lof [6
+) (kapitel9/anhang-c.tex [67] [68
+
+] [69]) [70] (glossary.tex) (thesis.lof
+[6
 
 pdfTeX warning (ext4): destination with the same identifier (name{MVC}) has bee
 n already used, duplicate ignored
@@ -1796,19 +1811,16 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 72.
  ) 
 Here is how much of TeX's memory you used:
- 24051 strings out of 493673
- 439261 string characters out of 3141526
- 676895 words of memory out of 3000000
- 26183 multiletter control sequences out of 15000+200000
+ 24338 strings out of 493673
+ 444233 string characters out of 3141526
+ 682982 words of memory out of 3000000
+ 26466 multiletter control sequences out of 15000+200000
  15125 words of font info for 55 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 76i,9n,100p,2663b,1613s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 76i,9n,100p,2676b,1613s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/P
@@ -1828,9 +1840,9 @@ X 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on thesis.pdf (84 pages, 1888718 bytes).
+Output written on thesis.pdf (84 pages, 1889860 bytes).
 PDF statistics:
- 2222 PDF objects out of 2487 (max. 8388607)
+ 2223 PDF objects out of 2487 (max. 8388607)
  614 named destinations out of 1000 (max. 500000)
  952 words of extra memory for PDF output out of 10000 (max. 10000000)
 

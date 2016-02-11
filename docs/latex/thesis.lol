@@ -5,7 +5,7 @@
 \contentsline {lstlisting}{\numberline {2.3}Erzeugen eines erweiterten Button-Elements}{6}{lstlisting.2.3}
 \contentsline {lstlisting}{\numberline {2.4}Eigenschaften und Methoden definieren und konfigurieren}{6}{lstlisting.2.4}
 \contentsline {lstlisting}{\numberline {2.5}Lifecycle-Callbacks des erweiterten Buttons definieren}{7}{lstlisting.2.5}
-\contentsline {lstlisting}{\numberline {2.6}Styling eines Custom Element und des erweiterten Button}{8}{lstlisting.2.6}
+\contentsline {lstlisting}{\numberline {2.6}Styling eines Custom Element und des erweiterten Buttons}{8}{lstlisting.2.6}
 \contentsline {lstlisting}{\numberline {2.7}Umsetzung eines Templates mit einem \texttt {\textless {}div\textgreater {}}-Block}{9}{lstlisting.2.7}
 \contentsline {lstlisting}{\numberline {2.8}Umsetzung eines Templates mit einem \texttt {\textless {}script\textgreater {}}-Element}{10}{lstlisting.2.8}
 \contentsline {lstlisting}{\numberline {2.9}Grobe Struktur eines Templates mit \ac {CSS} und JavaScript}{10}{lstlisting.2.9}
@@ -15,9 +15,9 @@
 \contentsline {lstlisting}{\numberline {2.13}Einbinden und Verwenden von \ac {HTML} Imports}{20}{lstlisting.2.13}
 \contentsline {lstlisting}{\numberline {2.14}Abh\IeC {\"a}ngigkeitsverwaltung mit \ac {HTML} Imports}{20}{lstlisting.2.14}
 \contentsline {lstlisting}{\numberline {2.15}Custom Element mit Eigenschaften und Funktionen definieren}{26}{lstlisting.2.15}
-\contentsline {lstlisting}{\numberline {2.16}HilfsFunktion \texttt {setTheme} definieren}{27}{lstlisting.2.16}
-\contentsline {lstlisting}{\numberline {2.17}Template erstellen und Styles definieren}{27}{lstlisting.2.17}
-\contentsline {lstlisting}{\numberline {2.18}Styles definieren}{27}{lstlisting.2.18}
+\contentsline {lstlisting}{\numberline {2.16}Hilfsfunktion \texttt {setTheme} definieren}{27}{lstlisting.2.16}
+\contentsline {lstlisting}{\numberline {2.17}Template der Komponente}{27}{lstlisting.2.17}
+\contentsline {lstlisting}{\numberline {2.18}Stylesder Komponente definieren}{27}{lstlisting.2.18}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {lstlisting}{\numberline {4.1}Template einer Polymer-Komponente}{36}{lstlisting.4.1}
