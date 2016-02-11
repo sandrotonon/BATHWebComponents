@@ -17,7 +17,7 @@
 \contentsline {lstlisting}{\numberline {2.15}Custom Element mit Eigenschaften und Funktionen definieren}{26}{lstlisting.2.15}
 \contentsline {lstlisting}{\numberline {2.16}Hilfsfunktion \texttt {setTheme} definieren}{27}{lstlisting.2.16}
 \contentsline {lstlisting}{\numberline {2.17}Template der Komponente}{27}{lstlisting.2.17}
-\contentsline {lstlisting}{\numberline {2.18}Stylesder Komponente definieren}{27}{lstlisting.2.18}
+\contentsline {lstlisting}{\numberline {2.18}Styles der Komponente definieren}{27}{lstlisting.2.18}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {lstlisting}{\numberline {4.1}Template einer Polymer-Komponente}{36}{lstlisting.4.1}

@@ -1,6 +1,6 @@
 \section{Implementierung einer Komponente mit den nativen Web-Component-APIs}\label{implementierung-einer-komponente-mit-den-nativen-web-component-apis}
 
-Anhand der vorhergehenden Abschnitte wird in diesem Abschnitt die Implementierung der Komponente \texttt{\textless{}custom-element\textgreater{}} mit den nativen \ac{HTML} APIs erläutert. Diese soll dabei das Markup in einem Shadow \ac{DOM} kapseln und den übergebenen Inhalt darstellen. Des Weiteren soll dessen Farbe über das Attribut \texttt{theme} optional konfiguriert werden können.
+Anhand der vorhergehenden Abschnitte wird in diesem Abschnitt die Implementierung der Komponente \texttt{\textless{}custom-element\textgreater{}} mit den nativen \ac{HTML}-APIs erläutert. Diese soll dabei das Markup in einem Shadow \ac{DOM} kapseln und den übergebenen Inhalt darstellen. Des Weiteren soll dessen Farbe über das Attribut \texttt{theme} optional konfiguriert werden können.
 
 
 \subsection{Custom Element mit Eigenschaften und Funktionen definieren}\label{custom-element-mit-eigenschaften-und-funktionen-definieren}
@@ -20,13 +20,13 @@ Diese setzt den übergebenen Parameter, das \texttt{theme}-Attribut, als Klasse 
 
 \subsection{Template erstellen und Styles definieren}\label{template-erstellen-und-styles-definieren}
 
-Bisher ist das Custom Element zwar funktional, bietet aber noch kein gekapseltes Markup. Hierfür wird ein Template mit der ID \texttt{myElementTemplate} angelegt (siehe Listing \ref{teusd}), welches die für die Komponente notwendige \ac{HTML} Struktur beinhaltet.
+Bisher ist das Custom Element zwar funktional, bietet aber noch kein gekapseltes Markup. Hierfür wird ein Template mit der ID \texttt{myElementTemplate} angelegt (siehe Listing \ref{teusd}), welches die für die Komponente notwendige \ac{HTML}-Struktur beinhaltet.
 
 \lstinputlisting[language=HTML,label=teusd,caption=Template der Komponente]{kapitel2/listings/7-3.html}
 
 Dieses enthält dabei einen Insertion Point \texttt{\textless{}content\textgreater{}}, in welchem die Kind-Elemente der Komponente in das interne Markup projiziert werden. Zusätzlich werden zwei Hilfs-Wrapper und Text definiert, damit die Elemente schneller mittels JavaScript selektierbar sind und das gewünschte Aussehen erreicht wird. Um nun die verschiedenen, mittels dem \texttt{theme}-Attribut konfigurierbaren, Styles zur Verfügung zu stellen, werden diese, neben generellen Styles, in einem \texttt{\textless{}style\textgreater{}}-Tag innerhalb des Templates definiert (siehe Listing \ref{stylesdefinieren}). In diesem Beispiel werden die Optionen \texttt{style1} und \texttt{style2} zur Verfügung gestellt.
 
-\lstinputlisting[language=HTML,label=stylesdefinieren,caption=Stylesder Komponente definieren]{kapitel2/listings/7-4.html}
+\lstinputlisting[language=HTML,label=stylesdefinieren,caption=Styles der Komponente definieren]{kapitel2/listings/7-4.html}
 
 Das Template wird nun zwar schon heruntergeladen, jedoch noch nicht in das \ac{DOM} eingefügt. Hierzu muss es dem Shadow Root hinzugefügt werden, was in dem nachfolgenden Abschnitt \ref{template-bereitstellen-und-shadow-dom-zur-kapselung-benutzen} dargestellt wird.
 
