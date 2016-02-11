@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.20)  11 FEB 2016 13:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.20)  11 FEB 2016 15:07
 entering extended mode
 **thesis.tex
 (thesis.tex
@@ -1469,7 +1469,7 @@ Package pdftex.def Info: kapitel2/bilder/7-beispiel.jpg used on input line 40.
 chapter 3.
 Package acronym Info: Label `acro:UI' newly defined as it shall be overridden
 although it is yet undefined on input line 8.
-<kapitel3/bilder/1-architektur.png, id=1379, 803.0pt x 657.45625pt>
+<kapitel3/bilder/1-architektur.png, id=1380, 803.0pt x 657.45625pt>
 File: kapitel3/bilder/1-architektur.png Graphic file (type png)
 
 <use kapitel3/bilder/1-architektur.png>
@@ -1515,7 +1515,7 @@ Overfull \hbox (0.82713pt too wide) in paragraph at lines 60--61
 ) (kapitel6/1-best-practices.tex [45]
 chapter 6.
 
-<kapitel6/bilder/1-performance-user-perception-reaction-times.jpg, id=1715, 447
+<kapitel6/bilder/1-performance-user-perception-reaction-times.jpg, id=1717, 447
 .92343pt x 149.8097pt>
 File: kapitel6/bilder/1-performance-user-perception-reaction-times.jpg Graphic 
 file (type jpg)
@@ -1543,7 +1543,7 @@ although it is yet undefined on input line 18.
 [52
 
 ] [53]
-<kapitel7/bilder/1-multi-navigation-app.jpg, id=1838, 607.51968pt x 270.25969pt
+<kapitel7/bilder/1-multi-navigation-app.jpg, id=1840, 607.51968pt x 270.25969pt
 >
 File: kapitel7/bilder/1-multi-navigation-app.jpg Graphic file (type jpg)
  <use kapitel7/bilder/1-multi-navigation-app.jpg>
@@ -1562,7 +1562,7 @@ Overfull \hbox (6.15039pt too wide) in paragraph at lines 10--11
 es dar, wo-bei die Controller-
  []
 
-<kapitel7/bilder/1-model-view-viewmodel.png, id=1854, 385.44pt x 468.75125pt>
+<kapitel7/bilder/1-model-view-viewmodel.png, id=1856, 385.44pt x 468.75125pt>
 File: kapitel7/bilder/1-model-view-viewmodel.png Graphic file (type png)
 
 <use kapitel7/bilder/1-model-view-viewmodel.png>
@@ -1574,35 +1574,7 @@ prognose.tex [57]
 chapter 8.
 [58
 
-]) (kapitel9/anhang-a.tex [59]
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 11.
-
-
-LaTeX Font Warning: Font shape `OMS/cmtt/bx/n' undefined
-(Font)              using `OMS/cmtt/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 37.
-
-[60
-
-]) (kapitel9/anhang-b.tex [61] [62
-
-]
-
-LaTeX Font Warning: Font shape `OMS/cmtt/m/it' undefined
-(Font)              using `OMS/cmtt/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 70.
-
-[63] [64] [65] [66]
-Overfull \hbox (14.69183pt too wide) in paragraph at lines 322--323
-\OT1/cmr/m/it/10.95 und kann mit-tels Bower \OT1/cmtt/l/n/10.95 bower in-stall 
-multi-navigation-app` \OT1/cmr/m/it/10.95 her-un-ter-ge-la-den []. 
- []
-
-) (kapitel9/anhang-c.tex [67] [68
-
-] [69]) [70] (glossary.tex) (thesis.lof
-[6
+]) (glossary.tex [59]) (thesis.lof [60
 
 pdfTeX warning (ext4): destination with the same identifier (name{MVC}) has bee
 n already used, duplicate ignored
@@ -1619,10 +1591,10 @@ nored
 l.4 ...stom Elements\relax }}{8}{figure.caption.9}
                                                   ])
 \tf@lof=\write8
- [7] (thesis.lol)
+ [61] (thesis.lol)
 \tf@lol=\write9
 
-(thesis.bbl [8
+(thesis.bbl [62
 
 ]
 chapter without number
@@ -1657,7 +1629,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--69
 []\OT1/cmr/m/n/10.95 Glazkov, D. (2015).  Cu-stom Ele-ments.
  []
 
-[9
+[63
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 87--90
@@ -1722,7 +1694,7 @@ Underfull \hbox (badness 1194) in paragraph at lines 156--161
 o-beantwortet-15-
  []
 
-[10]
+[64]
 Underfull \hbox (badness 1383) in paragraph at lines 168--172
 []\OT1/cmr/m/n/10.95 Polymer - Dev-Tools Ex-ten-si-on (web).  Dev-
  []
@@ -1754,70 +1726,102 @@ Underfull \hbox (badness 8056) in paragraph at lines 228--232
 -li-ty.
  []
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 250--253
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--237
+[]\OT1/cmr/m/n/10.95 Tani, H. (web).  Bu-li-ding and Sty-ling Web Com-ponents.
+ []
+
+[65]
+Underfull \hbox (badness 10000) in paragraph at lines 255--258
 []\OT1/cmr/m/n/10.95 W3C (2014a).  Cross-Origin Re-sour-ce Sha-ring.
  []
 
 
-Overfull \hbox (7.41943pt too wide) in paragraph at lines 255--258
+Overfull \hbox (7.41943pt too wide) in paragraph at lines 260--263
 []\OT1/cmr/m/n/10.95 W3C (2014b).  HTML Tem-pla-tes.  http://www.w3.org/TR/html
 5/scripting-
  []
 
 
-Underfull \hbox (badness 7012) in paragraph at lines 260--263
+Underfull \hbox (badness 7012) in paragraph at lines 265--268
 []\OT1/cmr/m/n/10.95 W3C (2014c).  The Ac-ces-si-bi-li-ty Tree and the DOM Tree
 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--283
+Underfull \hbox (badness 10000) in paragraph at lines 285--288
 []\OT1/cmr/m/n/10.95 W3C (web).  In-tro-duc-ti-on to Web Ac-ces-si-bi-li-ty.  h
 tt-
  []
 
 
-Underfull \hbox (badness 3199) in paragraph at lines 285--288
+Underfull \hbox (badness 3199) in paragraph at lines 290--293
 []\OT1/cmr/m/n/10.95 W3Techs (2015).  Usa-ge Sta-ti-stics of HTT-P/2 for Web-si
 -tes.
  []
 
 
-Underfull \hbox (badness 7099) in paragraph at lines 290--293
+Underfull \hbox (badness 7099) in paragraph at lines 295--298
 []\OT1/cmr/m/n/10.95 WebComponents - Po-ly-fills (web).  Po-ly-fills.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--298
+Underfull \hbox (badness 10000) in paragraph at lines 300--303
 []\OT1/cmr/m/n/10.95 WebComponents - web-com-ponents.js
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--303
+Underfull \hbox (badness 10000) in paragraph at lines 305--308
 []\OT1/cmr/m/n/10.95 WHATWG (web).  HTML Stan-dard.  htt-
  []
 
-) [12]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 72.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 72.
- (thesis.aux (htwg/cover.aux) (htwg/title.aux) (htwg/abstract.aux)
-(htwg/affidavit.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 72.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 72.
+) (kapitel9/anhang-a.tex [66]
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 11.
+
+
+LaTeX Font Warning: Font shape `OMS/cmtt/bx/n' undefined
+(Font)              using `OMS/cmtt/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 37.
+
+[67
+
+]) (kapitel9/anhang-b.tex [68] [69
+
+]
+
+LaTeX Font Warning: Font shape `OMS/cmtt/m/it' undefined
+(Font)              using `OMS/cmtt/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 70.
+
+[70] [71] [72] [73]
+Overfull \hbox (14.69183pt too wide) in paragraph at lines 322--323
+\OT1/cmr/m/it/10.95 und kann mit-tels Bower \OT1/cmtt/l/n/10.95 bower in-stall 
+multi-navigation-app` \OT1/cmr/m/it/10.95 her-un-ter-ge-la-den []. 
+ []
+
+) (kapitel9/anhang-c.tex [74] [75
+
+] [76]) [77]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 71.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
+ (thesis.aux (htwg/cover.aux)
+(htwg/title.aux) (htwg/abstract.aux) (htwg/affidavit.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 71.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 71.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 3F5A1F89409BC404E57C9D3DF65DA907;8261.
+(rerunfilecheck)             Checksum: 6F2C6DB538C097290919BC4A328F42EC;8261.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 72.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 71.
  ) 
 Here is how much of TeX's memory you used:
- 24338 strings out of 493673
- 444233 string characters out of 3141526
- 682982 words of memory out of 3000000
- 26466 multiletter control sequences out of 15000+200000
+ 24341 strings out of 493673
+ 444293 string characters out of 3141526
+ 683031 words of memory out of 3000000
+ 26468 multiletter control sequences out of 15000+200000
  15125 words of font info for 55 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  76i,9n,100p,2676b,1613s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1840,9 +1844,9 @@ X 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on thesis.pdf (84 pages, 1889860 bytes).
+Output written on thesis.pdf (84 pages, 1890045 bytes).
 PDF statistics:
- 2223 PDF objects out of 2487 (max. 8388607)
- 614 named destinations out of 1000 (max. 500000)
+ 2225 PDF objects out of 2487 (max. 8388607)
+ 615 named destinations out of 1000 (max. 500000)
  952 words of extra memory for PDF output out of 10000 (max. 10000000)
 

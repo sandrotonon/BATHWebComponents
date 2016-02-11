@@ -31,3 +31,5 @@
 - Kapitel 2.2.5 Schusterjunge, auch wenn noch ein Satz danach folgt? -> passt
 - Shadow DOM Wurzel oder Shadow-DOM-Wurzel? check
 - Seite 12-13 (Abschnitt 2.4.1) Hurenkind? -> passt
+- Anhang nach Abbildungsverzeichnis etc.? -> ja
+- Polymer-Komponente im Anhang mit Verweis auf GitHub und customelements.io -> ok

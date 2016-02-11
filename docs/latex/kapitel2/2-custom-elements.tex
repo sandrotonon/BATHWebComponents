@@ -1,6 +1,6 @@
 \section{Custom Elements}\label{custom-elements}
 
-Webseiten werden mit sogenannten Elementen, oder auch Tags, aufgebaut. Das Set an verfügbaren Elementen wird vom \ac{W3C} definiert und standardisiert. Somit ist die Auswahl an den verfügbaren Elementen stark begrenzt und nicht von Entwicklern erweiterbar, sodass diese nicht ihre eigenen, von ihrer Applikation benötigten Elemente, definieren können. Betrachtet man in Abbildung \ref{fig:cusel} den Quelltext einer populären Web-Applikation Google Mail, wird schnell deutlich, worin das Problem liegt.
+Webseiten werden mit sogenannten Elementen, oder auch Tags, aufgebaut. Das Set an verfügbaren Elementen wird vom \ac{W3C} definiert und standardisiert. Somit ist die Auswahl an den verfügbaren Elementen stark begrenzt und nicht von Entwicklern erweiterbar, sodass diese nicht ihre eigenen, von ihrer Applikation benötigten Elemente definieren können. Betrachtet man in Abbildung \ref{fig:cusel} den Quelltext der populären Web-Applikation Google Mail, wird schnell deutlich, worin das Problem liegt.
 
 \begin{figure}[htbp]
  \centering
@@ -9,7 +9,7 @@ Webseiten werden mit sogenannten Elementen, oder auch Tags, aufgebaut. Das Set a
  \label{fig:cusel}
 \end{figure}
 
-Sie besteht aus vielen geschachtelten \texttt{\textless{}div\textgreater{}}-Elementen und macht folgende strukturelle Probleme deutlich: Die Semantik der Elemente fehlt vollständig und es ist nicht ersichtlich was es darstellt und welche Funkionen es hat, wodurch die Applikation nur sehr schwer wartbar ist.
+Sie besteht aus vielen geschachtelten \texttt{\textless{}div\textgreater{}}-Elementen und macht folgende strukturelle Probleme deutlich: Die Semantik der Elemente fehlt vollständig und es ist nicht ersichtlich, was es darstellt und welche Funkionen es hat, wodurch die Applikation nur sehr schwer wartbar ist.
 
 Dieser Problematik widmen sich die Custom Elements. Sie bieten eine neue \ac{API}, welche es ermöglicht, eigene, semantisch aussagekräftige \ac{HTML}-Elemente mit Eigenschaften und Funktionen zu definieren. Wird das obige Beispiel nun also mit Hilfe von Custom Elements umgesetzt, so könnte das zugehörige \ac{DOM} wie in Listing \ref{beamwc} dargestellt aussehen \cite{citeulike:13844982}.
 
@@ -37,19 +37,19 @@ Anschließend kann es mit dem Namen des zu erweiternden Elements als erstem Para
 
 \lstinputlisting[language=HTML,label=eeebe,caption=Erzeugen eines erweiterten Button-Elements]{kapitel2/listings/2-3.js}
 
-Um es nun im \ac{DOM} zu benutzen, muss der Name des erweiterten Elements via dem Attribut \texttt{is=\dq elementName\dq} des erweiternden Elements angegeben werden. So wird der erweiterte Button deklarativ mittels \texttt{\textless{}button\ is=\dq button-extended\dq\textgreater{}\textless{}/button\textgreater{}} in das Dokument eingebunden.
+Um es nun im \ac{DOM} zu benutzen, muss der Name des erweiterten Elements via dem Attribut \texttt{is=\dq elementName\dq} dem zu erweiternden Element zugewiesen werden. So wird der erweiterte Button deklarativ mittels \texttt{\textless{}button\ is=\dq button-extended\dq\textgreater{}\textless{}/button\textgreater{}} in das Dokument eingebunden.
 
 
 \subsection{Eigenschaften und Methoden definieren}\label{eigenschaften-und-methoden-definieren}
 
-Anhand des obigen Beispiels wird deutlich, wie ein Custom Element eingesetzt werden kann, jedoch sind die internen JavaScript-Mechanismen nicht ersichtlich. Custom Elements entfalten ihr vollständiges Potential jedoch erst, wenn man für diese auch eigene Eigenschaften und Methoden definiert. Wie bei nativen \ac{HTML}-Elementen ist das auch bei Custom Elements auf analoge Weise möglich \cite[S. 127-138]{citeulike:13844975}. So kann einem Element eine Funktion zugewiesen werden, in dem diese dessen Prototyp mittels einem nicht reservierten Namen angegeben wird. Selbiges gilt für eine neue Eigenschaft. Die Eigenschaften können, nachdem sie im Prototyp definiert wurden, im \ac{HTML}-Markup deklarativ konfiguriert werden (siehe Listing \ref{eumduk}). Eigene Elemente mit einem spezifischen Eigenverhalten und Aussehen, wie beispielsweise ein neuer Video-Player, sind dadurch mit einem Tag statt mit einem Gerüst aus \texttt{\textless{}div\textgreater{}}-Tags oder Ähnlichem umsetzbar.
+Anhand des obigen Beispiels wird deutlich, wie ein Custom Element eingesetzt werden kann, jedoch sind die internen JavaScript-Mechanismen nicht ersichtlich. Custom Elements entfalten ihr vollständiges Potential jedoch erst, wenn man für diese auch eigene Eigenschaften und Methoden definiert. Wie bei nativen \ac{HTML}-Elementen ist das auch bei Custom Elements auf analoge Weise möglich \cite[S. 127-138]{citeulike:13844975}. So kann einem Element eine Funktion zugewiesen werden, indem diese dessen Prototyp mittels eines nicht reservierten Namens hinzugefügt wird. Selbiges gilt für eine neue Eigenschaft. Die Eigenschaften können, nachdem sie im Prototyp definiert wurden, im \ac{HTML}-Markup deklarativ konfiguriert werden (siehe Listing \ref{eumduk}). Eigene Elemente mit einem spezifischen Eigenverhalten und Aussehen, wie beispielsweise ein neuer Video-Player, sind dadurch mit einem Tag statt mit einem Gerüst aus \texttt{\textless{}div\textgreater{}}-Tags oder Ähnlichem umsetzbar.
 
 \lstinputlisting[language=HTML,label=eumduk,caption=Eigenschaften und Methoden definieren und konfigurieren]{kapitel2/listings/2-4.html}
 
 
 \subsection{Custom Element Lifecycle-Callbacks}\label{custom-element-lifecycle-callbacks}
 
-Custom Elements bieten eine standardisierte \ac{API} an speziellen Methoden, den ``Custom Element Lifecycle-Callbacks'', welche es ermöglichen Funktionen zu unterschiedlichen Zeitpunkten -- vom Registrieren bis zum Löschen eines Custom Elements -- auszuführen. Diese ermöglichen es, zu bestimmen, wann und wie ein bestimmter Code des Custom Elements ausgeführt werden soll.
+Custom Elements bieten eine standardisierte \ac{API} an speziellen Methoden, den ``Custom Element Lifecycle-Callbacks'', welche es ermöglichen, Funktionen zu unterschiedlichen Zeitpunkten -- vom Registrieren bis zum Löschen eines Custom Elements -- auszuführen. Diese ermöglichen es, zu bestimmen, wann und wie ein bestimmter Code des Custom Elements ausgeführt werden soll.
 
 \begin{description}
   \item[createdCallback] Wird ausgeführt, wenn eine Instanz des Custom Elements mittels \texttt{var\ mybutton\ =\ document.createElement('custom-element')} erzeugt wurde.

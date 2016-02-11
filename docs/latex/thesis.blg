@@ -5,86 +5,88 @@ A level-1 auxiliary file: htwg/abstract.aux
 A level-1 auxiliary file: htwg/affidavit.aux
 The style file: apalike-mystyle.bst
 Database file #1: library.bib
-Warning--entry type for "citeulike:13930590" isn't style-file defined
+Warning--entry type for "citeulike:13931267" isn't style-file defined
 --line 1 of file library.bib
+Warning--entry type for "citeulike:13930590" isn't style-file defined
+--line 13 of file library.bib
 Warning--entry type for "citeulike:13926020" isn't style-file defined
---line 16 of file library.bib
+--line 28 of file library.bib
 Warning--entry type for "citeulike:13916374" isn't style-file defined
---line 53 of file library.bib
-Warning--entry type for "citeulike:13916358" isn't style-file defined
 --line 65 of file library.bib
-Warning--entry type for "citeulike:13915310" isn't style-file defined
+Warning--entry type for "citeulike:13916358" isn't style-file defined
 --line 77 of file library.bib
+Warning--entry type for "citeulike:13915310" isn't style-file defined
+--line 89 of file library.bib
 Warning--entry type for "citeulike:13915306" isn't style-file defined
---line 91 of file library.bib
+--line 103 of file library.bib
 Warning--entry type for "citeulike:13915280" isn't style-file defined
---line 106 of file library.bib
-Warning--entry type for "citeulike:13915273" isn't style-file defined
 --line 118 of file library.bib
+Warning--entry type for "citeulike:13915273" isn't style-file defined
+--line 130 of file library.bib
 Warning--entry type for "citeulike:13915222" isn't style-file defined
---line 133 of file library.bib
+--line 145 of file library.bib
 Warning--entry type for "citeulike:13915203" isn't style-file defined
---line 171 of file library.bib
+--line 183 of file library.bib
 Warning--entry type for "citeulike:13915202" isn't style-file defined
---line 185 of file library.bib
-Warning--entry type for "citeulike:13915080" isn't style-file defined
 --line 197 of file library.bib
-Warning--entry type for "citeulike:13915079" isn't style-file defined
+Warning--entry type for "citeulike:13915080" isn't style-file defined
 --line 209 of file library.bib
-Warning--entry type for "citeulike:13914892" isn't style-file defined
+Warning--entry type for "citeulike:13915079" isn't style-file defined
 --line 221 of file library.bib
-Warning--entry type for "citeulike:13914840" isn't style-file defined
+Warning--entry type for "citeulike:13914892" isn't style-file defined
 --line 233 of file library.bib
-Warning--entry type for "citeulike:13914379" isn't style-file defined
+Warning--entry type for "citeulike:13914840" isn't style-file defined
 --line 245 of file library.bib
+Warning--entry type for "citeulike:13914379" isn't style-file defined
+--line 257 of file library.bib
 Warning--entry type for "citeulike:13914241" isn't style-file defined
---line 259 of file library.bib
+--line 271 of file library.bib
 Warning--entry type for "citeulike:13914239" isn't style-file defined
---line 273 of file library.bib
-Warning--entry type for "citeulike:13914238" isn't style-file defined
 --line 285 of file library.bib
-Warning--entry type for "citeulike:13914237" isn't style-file defined
+Warning--entry type for "citeulike:13914238" isn't style-file defined
 --line 297 of file library.bib
+Warning--entry type for "citeulike:13914237" isn't style-file defined
+--line 309 of file library.bib
 Warning--entry type for "citeulike:13886251" isn't style-file defined
---line 346 of file library.bib
-Warning--entry type for "citeulike:13883407" isn't style-file defined
 --line 358 of file library.bib
-Warning--entry type for "citeulike:13883381" isn't style-file defined
+Warning--entry type for "citeulike:13883407" isn't style-file defined
 --line 370 of file library.bib
+Warning--entry type for "citeulike:13883381" isn't style-file defined
+--line 382 of file library.bib
 Warning--entry type for "citeulike:13883067" isn't style-file defined
---line 385 of file library.bib
+--line 397 of file library.bib
 Warning--entry type for "citeulike:13881144" isn't style-file defined
---line 400 of file library.bib
+--line 412 of file library.bib
 Warning--entry type for "citeulike:13879687" isn't style-file defined
---line 415 of file library.bib
+--line 427 of file library.bib
 Warning--entry type for "citeulike:13879681" isn't style-file defined
---line 430 of file library.bib
-Warning--entry type for "citeulike:13879575" isn't style-file defined
 --line 442 of file library.bib
+Warning--entry type for "citeulike:13879575" isn't style-file defined
+--line 454 of file library.bib
 Warning--entry type for "citeulike:13879562" isn't style-file defined
---line 455 of file library.bib
+--line 467 of file library.bib
 Warning--entry type for "citeulike:13853711" isn't style-file defined
---line 497 of file library.bib
-Warning--entry type for "citeulike:13853700" isn't style-file defined
 --line 509 of file library.bib
+Warning--entry type for "citeulike:13853700" isn't style-file defined
+--line 521 of file library.bib
 Warning--entry type for "citeulike:13853647" isn't style-file defined
---line 523 of file library.bib
+--line 535 of file library.bib
 Warning--entry type for "citeulike:13853643" isn't style-file defined
---line 538 of file library.bib
+--line 550 of file library.bib
 Warning--entry type for "citeulike:13853253" isn't style-file defined
---line 553 of file library.bib
+--line 565 of file library.bib
 Warning--entry type for "citeulike:13853159" isn't style-file defined
---line 568 of file library.bib
+--line 580 of file library.bib
 Warning--entry type for "citeulike:13853018" isn't style-file defined
---line 583 of file library.bib
+--line 595 of file library.bib
 Warning--entry type for "citeulike:13852997" isn't style-file defined
---line 628 of file library.bib
+--line 640 of file library.bib
 Warning--entry type for "citeulike:13851253" isn't style-file defined
---line 717 of file library.bib
+--line 729 of file library.bib
 Warning--entry type for "citeulike:13845061" isn't style-file defined
---line 731 of file library.bib
+--line 743 of file library.bib
 Warning--entry type for "citeulike:13844983" isn't style-file defined
---line 775 of file library.bib
+--line 787 of file library.bib
 Warning--entry type for "citeulike:13752379" isn't style-file defined
---line 827 of file library.bib
-(There were 41 warnings)
+--line 839 of file library.bib
+(There were 42 warnings)
