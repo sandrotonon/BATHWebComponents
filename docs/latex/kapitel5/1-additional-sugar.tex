@@ -36,7 +36,7 @@ Auch wenn in Polymer nur ein beschränktes Vererben mit Hilfe von Type Extension
 \subsection{Syntax}\label{syntax}
 
 Behaviors sind globale Objekte und sollten in einem eigenem Namespace, wie z.B. mit \texttt{window.MyBehaviors\ =\ window.MyBehaviors\ \textbar{}\textbar{}\ \{\};}, definiert werden, da die von Polymer intern benutzten Behaviors im
-Polymer-Objekt verankert sind. Dadurch können Kollisionen mit zukünftigen Behaviors von Polymer verhindert werden. Behaviors haben eine starke Ähnlichkeit zu normalen Polymer-Elementen, sie besitzen ebenso Properties, Listener-Objekte und so weiter. Ein simples Behavior könnte beispielsweise wie in Listing \ref{deb} dargestellt definiert werden \cite{citeulike:13915079}.
+Polymer-Objekt verankert sind. Dadurch können Kollisionen mit zukünftigen Behaviors von Polymer verhindert werden. Behaviors haben eine starke Ähnlichkeit zu normalen Polymer-Elementen, sie besitzen ebenso Properties, Listener-Objekte und so weiter. Ein simples Behavior könnte beispielsweise, wie in Listing \ref{deb} dargestellt, definiert werden \cite{citeulike:13915079}.
 
 \lstinputlisting[language=JavaScript,label=deb,caption=Definition eines Behaviors]{kapitel5/listings/1-1.js}
 
@@ -52,7 +52,7 @@ Wie auch Komponenten wiederum andere Komponenten erweitern können, können eben
 
 \section{Events}\label{events}
 
-Mit Polymer erstellte Komponenten können mit Hilfe des \texttt{listeners} Objekts auf bestimmte Interaktionen mit der Komponente reagieren {[}citeulike:13915080{]}. Hierzu wird die entsprechende Aktion mit der auszuführenden callBack Funktion in dem Objekt angegeben. Wird nun innerhalb der Komponente das angegebene Event registriert, wird die angegebene Funktion ausgeführt. Zu diesen Events zählen beispielsweise die Gesture Events, wie sie in Abschnitt \ref{gesture-system} beschrieben werden. Um nun verschiedene Aktionen mit unterschiedlichen Kind Elementen zu verknüpfen, können dem \texttt{listeners} Objekt auch Kind Elemente und dessen callBack Funktion mit der Syntax \texttt{nodeID.eventName:\ callBack()} hinzugefügt werden. Dadurch reagiert nur das angegebene Element auf das Event, statt der gesamten Komponente. So kann beim ``Tap'' auf ein Element mit der ID \texttt{nodeID} die Funktion (der Event Handler) \texttt{callBack()} aufgerufen werden.
+Mit Polymer erstellte Komponenten können mit Hilfe des \texttt{listeners}-Objekts auf bestimmte Interaktionen mit der Komponente reagieren \cite{citeulike:13915080}. Hierzu wird die entsprechende Aktion mit der auszuführenden CallBack-Funktion in dem Objekt angegeben. Wird nun innerhalb der Komponente das angegebene Event registriert, wird die angegebene Funktion ausgeführt. Zu diesen Events zählen beispielsweise die Gesture Events, wie sie in Abschnitt \ref{gesture-system} beschrieben werden. Um nun verschiedene Aktionen mit unterschiedlichen Kind-Elementen zu verknüpfen, können dem \texttt{listeners}-Objekt auch Kind-Elemente und dessen callBack Funktion mit der Syntax \texttt{nodeID.eventName:\ callBack()} hinzugefügt werden. Dadurch reagiert nur das angegebene Element auf das Event, statt der gesamten Komponente. So kann beim ``Tap'' auf ein Element mit der ID \texttt{nodeID} die Funktion (der Event Handler) \texttt{callBack()} aufgerufen werden.
 
 
 \subsection{Deklarative Events}\label{deklarative-events}

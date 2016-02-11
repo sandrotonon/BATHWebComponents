@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.20)  11 FEB 2016 09:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.20)  11 FEB 2016 09:39
 entering extended mode
 **thesis.tex
 (thesis.tex
@@ -1508,7 +1508,7 @@ chapter 5.
 (kapitel6/1-best-practices.tex [45]
 chapter 6.
 
-<kapitel6/bilder/1-performance-user-perception-reaction-times.jpg, id=1711, 447
+<kapitel6/bilder/1-performance-user-perception-reaction-times.jpg, id=1712, 447
 .92343pt x 149.8097pt>
 File: kapitel6/bilder/1-performance-user-perception-reaction-times.jpg Graphic 
 file (type jpg)
@@ -1541,7 +1541,7 @@ although it is yet undefined on input line 18.
 [52
 
 ] [53]
-<kapitel7/bilder/1-multi-navigation-app.jpg, id=1833, 607.51968pt x 270.25969pt
+<kapitel7/bilder/1-multi-navigation-app.jpg, id=1834, 607.51968pt x 270.25969pt
 >
 File: kapitel7/bilder/1-multi-navigation-app.jpg Graphic file (type jpg)
  <use kapitel7/bilder/1-multi-navigation-app.jpg>
@@ -1560,7 +1560,7 @@ Overfull \hbox (7.44203pt too wide) in paragraph at lines 8--9
 -ent-sei-ti-ges Open-Source-JavaScript-
  []
 
-<kapitel7/bilder/1-model-view-viewmodel.png, id=1849, 385.44pt x 468.75125pt>
+<kapitel7/bilder/1-model-view-viewmodel.png, id=1850, 385.44pt x 468.75125pt>
 File: kapitel7/bilder/1-model-view-viewmodel.png Graphic file (type png)
 
 <use kapitel7/bilder/1-model-view-viewmodel.png>
@@ -1810,7 +1810,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 72.
 Here is how much of TeX's memory you used:
  24051 strings out of 493673
  439261 string characters out of 3141526
- 677896 words of memory out of 3000000
+ 676896 words of memory out of 3000000
  26183 multiletter control sequences out of 15000+200000
  15125 words of font info for 55 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -1834,9 +1834,9 @@ X 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on thesis.pdf (84 pages, 1888112 bytes).
+Output written on thesis.pdf (84 pages, 1888381 bytes).
 PDF statistics:
- 2218 PDF objects out of 2487 (max. 8388607)
+ 2219 PDF objects out of 2487 (max. 8388607)
  614 named destinations out of 1000 (max. 500000)
  944 words of extra memory for PDF output out of 10000 (max. 10000000)
 
